@@ -352,17 +352,22 @@ def meta_desc(text, limit=155):
 # court masque un terme long). Le slug doit correspondre à une ancre du
 # glossaire (id="g-…"), cf. GLOSSAIRE / slugify().
 GLOSS_TERMS = [
+    ("agrégation non compensatoire", "agregation-non-compensatoire"),
     ("libération des terres", "liberation-des-terres"),
     ("indice de libération", "indice-de-liberation"),
+    ("intégrité du montage", "integrite-du-montage"),
     ("bail emphytéotique", "bail-emphyteotique"),
     ("fonds de dotation", "fonds-de-dotation"),
     ("utilité publique", "utilite-publique"),
+    ("commun citoyen", "commun"),
     ("intérêt général", "interet-general"),
     ("fondation RUP", "fondation-rup"),
     ("nue-propriété", "nue-propriete"),
     ("démembrement", "demembrement"),
     ("bail rural", "bail-rural"),
+    ("faux ami", "faux-ami"),
     ("usufruit", "usufruit"),
+    ("chaîne", "chaine"),
 ]
 
 
@@ -375,6 +380,7 @@ def link_glossary(body, up):
     # et on saute entièrement les zones <a …>…</a>, <h1>…</h6>, <script>, <svg>.
     skip_pat = re.compile(
         r'<a\b[^>]*>.*?</a>|<h[1-6]\b[^>]*>.*?</h[1-6]>'
+        r'|<select\b[^>]*>.*?</select>'
         r'|<script\b[^>]*>.*?</script>|<svg\b[^>]*>.*?</svg>'
         r'|<style\b[^>]*>.*?</style>|<[^>]+>',
         re.S)
@@ -539,7 +545,7 @@ def page(title, body, active, depth=0, project=None, description="",
     <p class="foot-links"><a href="{up}methode.html">Méthode</a> ·
     <a href="{up}themes.html">Thèmes</a> ·
     <a href="{up}comparer.html">Comparer</a> ·
-    <a href="{up}regimes.html">Trois régimes</a> ·
+    <a href="{up}regimes.html">Régimes et pôles</a> ·
     <a href="{up}grilles.html">Grilles d'analyse</a> ·
     <a href="{up}modeles.html">Modèles voisins</a> ·
     <a href="{up}glossaire.html">Glossaire</a> ·
@@ -688,10 +694,16 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
         for ax in axes_cfg)
     vb = f"0 0 {size} {size}"
 
+    # profil dégénéré : à partir de 2 axes non renseignés, plusieurs sommets se
+    # confondent au centre et le polygone devient auto-sécant. On ne trace alors
+    # pas la zone remplie — seulement le cadre et une mention « profil
+    # incomplet ». Les barres d'axe chiffrées, elles, restent inchangées.
+    degenere = len(missing) >= 2
+
     # arêtes du polygone : hachurer celles qui touchent un sommet absent (None)
     # pour signaler une donnée indéterminée plutôt qu'un score nul.
     edge_lines = ""
-    if missing:
+    if missing and not degenere:
         n = len(axes_cfg)
         for i, ax in enumerate(axes_cfg):
             a = ax["id"]
@@ -705,6 +717,14 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
     if compact:
         # décoratif : la carte porte nom + palier + anneau ; le détail chiffré
         # est sur la fiche liée. <use> du cadre commun, polygone variable seul.
+        # Profil dégénéré : cadre seul + libellé « profil incomplet ».
+        if degenere:
+            return (f'<svg class="tri compact tri-incomplet" viewBox="{vb}" '
+                    f'role="img" focusable="false" aria-label="{e(label)} '
+                    f'— profil incomplet">'
+                    f'<use href="#tri-base"/>'
+                    f'<text class="tri-incomplet-txt" x="{gx:.1f}" y="{gy:.1f}">'
+                    f'profil incomplet</text></svg>')
         return (f'<svg class="tri compact" viewBox="{vb}" '
                 f'role="img" focusable="false" aria-label="{e(label)}">'
                 f'<use href="#tri-base"/>'
@@ -729,12 +749,21 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
     a1x, a1y = verts[axes_cfg[0]["id"]]
     scale = (f'<text class="tri-scale" x="{a1x:.1f}" y="{a1y - 6:.1f}">100</text>'
              f'<text class="tri-scale" x="{gx:.1f}" y="{gy + 9:.1f}">0</text>')
+    # profil dégénéré : cadre + sommets + repère, mais ni zone remplie ni
+    # arêtes hachurées — le polygone serait auto-sécant. Mention explicite.
+    fill = ("" if degenere
+            else f'<polygon class="tri-fill" points="{" ".join(pts)}"/>')
+    incomplet = ""
+    if degenere:
+        incomplet = (f'<text class="tri-incomplet-txt" x="{gx:.1f}" '
+                     f'y="{gy:.1f}">profil incomplet</text>')
+    aria = e(label) + (" — profil incomplet" if degenere else "")
     return (f'<svg class="tri" viewBox="{vb}" '
-            f'role="img" aria-label="{e(label)}">'
+            f'role="img" aria-label="{aria}">'
             f'<polygon class="tri-frame" points="{frame}"/>'
             f'<polygon class="tri-grid" points="{mid}"/>'
-            f'<polygon class="tri-fill" points="{" ".join(pts)}"/>'
-            f'{edge_lines}{dots}{scale}</svg>')
+            f'{fill}'
+            f'{edge_lines}{dots}{scale}{incomplet}</svg>')
 
 
 # ── Badge d'Indice : anneau de progression SVG ───────────────────────────────
@@ -956,41 +985,87 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
 
     # bloc score — triangle de profil + barres chiffrées + jauge linéaire
     flabel, fcls = fiabilite_label(sc["completude"], ranking)
+    # écart indice intrinsèque / effectif — chaîne (porteurs et usufruitiers).
+    axe_name = {a["id"]: a["label"] for a in axes_cfg}
+    idl_intr = sc.get("idl_intr")
+    n_chaine = len(sc.get("chaine_uids", []) or [])
+    # une chaîne contamine si elle abaisse au moins un axe (intrinsèque → effectif)
+    contamine = (cat in ("porteur", "usufruitier") and idl_intr is not None
+                 and sc["idl"] is not None and n_chaine > 0
+                 and sc["idl"] != idl_intr)
+
+    def _lien_pluriel(n):
+        return f"{n} lieu relié" if n == 1 else f"{n} lieux reliés"
+
+    # complétude — la mention de pénalité n'est portée ici que SANS contamination,
+    # pour ne pas la dupliquer avec la chaîne consolidée plus bas.
     comp = ""
     if sc["completude"] is not None:
         comp = (f'<p class="completude">Grille renseignée à '
                 f'{round(sc["completude"] * 100)} %.')
-        if sc.get("idl_brut") is not None and sc["idl_brut"] != sc["idl"]:
+        if not contamine and sc.get("idl_brut") is not None \
+                and sc["idl_brut"] != sc["idl"]:
             comp += (f' Indice brut {sc["idl_brut"]}, ramené à {sc["idl"]} '
                      f'après pénalité de complétude.')
         comp += "</p>"
-    # écart indice intrinsèque / effectif — chaîne (porteurs et usufruitiers).
+
+    # note de chaîne — une seule chaîne causale : intrinsèque → axes contaminés
+    # par les lieux reliés → effectif (la pénalité de complétude mentionnée une
+    # fois ici en cas de contamination).
     chaine_html = ""
-    idl_intr = sc.get("idl_intr")
-    n_chaine = len(sc.get("chaine_uids", []) or [])
     if cat in ("porteur", "usufruitier") and idl_intr is not None \
             and sc["idl"] is not None:
+        renvoi = (' <a class="chaine-renvoi" href="../methode.html#chaine">'
+                  'La chaîne et le domiciliage des axes →</a>')
         if n_chaine == 0:
             chaine_html = ('<p class="chaine-note">Aucun lieu relié dans '
                            'l\'annuaire : l\'indice effectif égale l\'indice '
-                           'intrinsèque.</p>')
-        elif sc["idl"] == idl_intr:
+                           'intrinsèque.' + renvoi + '</p>')
+        elif not contamine:
             chaine_html = (f'<p class="chaine-note">Indice intrinsèque et '
                            f'effectif identiques ({sc["idl"]}) : les '
-                           f'{n_chaine} lieu(x) relié(s) ne contaminent aucun '
-                           f'axe.</p>')
+                           f'{_lien_pluriel(n_chaine)} ne contaminent aucun '
+                           f'axe.{renvoi}</p>')
         else:
+            # axes réellement abaissés : comparaison intrinsèque / effectif
+            axes_intr = sc.get("axes_intr", {}) or {}
+            baisses = []
+            for aid in (a["id"] for a in axes_cfg):
+                vi = axes_intr.get(aid)
+                ve = sc["axes"].get(aid)
+                if vi is not None and ve is not None and ve < vi:
+                    baisses.append(f"l'axe {aid} ({axe_name[aid].lower()}) "
+                                   f"est ramené de {vi} à {ve}")
+            if len(baisses) == 1:
+                axes_phrase = baisses[0]
+            else:
+                axes_phrase = (", ".join(baisses[:-1]) + " et " + baisses[-1])
+            comp_phrase = ""
+            if sc.get("idl_brut") is not None and sc["idl_brut"] != sc["idl"]:
+                comp_phrase = (" L'indice effectif intègre aussi la pénalité de "
+                               "complétude.")
             chaine_html = (f'<p class="chaine-note">Indice intrinsèque '
                            f'{idl_intr}, ramené à <strong>{sc["idl"]}</strong> '
-                           f'(indice effectif) : les {n_chaine} lieu(x) '
-                           f'relié(s) plafonnent un ou plusieurs axes '
-                           f'contaminables (structure, finalité, usage).</p>')
+                           f'(indice effectif) : par les {_lien_pluriel(n_chaine)}, '
+                           f'{axes_phrase}.{comp_phrase}{renvoi}</p>')
+
+    # nombre d'axes effectivement renseignés : l'Indice est leur moyenne
+    # géométrique. En deçà de 5, on le signale — information distincte de la
+    # complétude des critères.
+    n_axes = len(axes_cfg)
+    n_axes_calc = sum(1 for a in axes_cfg if sc["axes"].get(a["id"]) is not None)
+    axes_note = ""
+    if 0 < n_axes_calc < n_axes:
+        axes_note = (f'<p class="axes-calc">Indice calculé sur {n_axes_calc} '
+                     f'axes sur {n_axes} — les autres sont entièrement '
+                     f'« inconnu ».</p>')
 
     pal_col = sc["palier"]["couleur"] if sc["palier"] else "var(--green)"
     score_block = f"""<section class="score-panel" style="--pal:{pal_col}">
   <div class="score-main">
-    <p class="score-cap">Indice de libération</p>
+    <p class="score-cap"><a href="../methode.html#indice">Indice de libération</a></p>
     {idl_badge(sc, big=True)}
+    {axes_note}
     {axis_triangle(axes_cfg, sc['axes'])}
   </div>
   <div class="score-axes">
@@ -1046,7 +1121,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         plab, psens = integrite_label(im["niveau"], ranking)
         rows.append(("Intégrité du montage",
                      f'<span title="{e(psens)}">'
-                     f'<a href="../regimes.html">{e(plab)}</a></span>'))
+                     f'<a href="../regimes.html#poles">{e(plab)}</a></span>'))
     if fiche.get("url"):
         rows.append(("Site", f'<a href="{e(fiche["url"])}" rel="noopener" '
                              f'target="_blank">{e(fiche["url"])}</a>'))
@@ -1185,7 +1260,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     # compact, c'est-à-dire si elle a des chips reliés (audit fonctionnel C, M2).
     defs = tri_defs(axes_cfg) if chips else ""
     body = (defs + head + score_block + lecture + enbref + resume
-            + montage_html + grille_html + analyse_html + liens_html + fiab
+            + montage_html + liens_html + grille_html + analyse_html + fiab
             + sources_html + backlink)
 
     # données structurées : fil d'Ariane + entité principale
@@ -1492,9 +1567,12 @@ rattaché à un axe du classement et pondéré — et une <strong>lecture
 stratégique</strong> qui cadre les enjeux, forces, fragilités et leviers
 propres à la catégorie. Toute fiche évalue ces critères (oui · partiel · non ·
 inconnu) ; le score en découle directement.
-<a href="regimes.html">Le cadre des trois régimes du sol →</a></p>
+<a href="regimes.html">Le cadre des régimes et des pôles du sol →</a></p>
 <p class="axe-legend">{axe_legend(axes_cfg, "Cinq axes : ")}</p>
-{''.join(blocks)}"""
+{''.join(blocks)}
+<p class="linkrow"><a href="methode.html">La méthode et le calcul de l'Indice →</a> ·
+<a href="regimes.html">Régimes et pôles du sol →</a> ·
+<a href="glossaire.html">Glossaire des termes →</a></p>"""
     return page("Grilles", body, "grilles.html", project=project,
                 description="Les trois grilles de lecture et d'analyse stratégique de l'annuaire.",
                 path="grilles.html")
@@ -1526,7 +1604,7 @@ def render_regimes(cfg):
          "Démembrement, fondation, fonds de dotation, bail long, association, SCIC",
          "Société commerciale, parts ou actions cessibles",
          "Pleine propriété individuelle (art. 544 C. civ.)"),
-        ("But poursuivi",
+        ("Finalité",
          "Usage collectif d'intérêt général",
          "Profit, valorisation du capital",
          "Jouissance et transmission privées"),
@@ -1601,13 +1679,18 @@ sept critères.</caption>
   <li><strong>Posture.</strong> {e(clean(registres.get('posture','')))}</li>
   <li><strong>Modèle économique.</strong> {e(clean(registres.get('modele_economique','')))}</li>
 </ul>"""
-        poles_html = f"""<section><h2 class="sec">Les cinq pôles</h2>
+        poles_html = f"""<section><h2 class="sec" id="poles">Les cinq pôles</h2>
+<p class="prose">Ces trois régimes se précisent en cinq pôles : ils dédoublent
+les deux régimes où la qualification se joue — le droit civil d'intérêt général
+se scinde entre le commun citoyen et l'intérêt général institué, le droit
+commercial entre le mutualisme d'usagers et l'économie sociale marchande — la
+propriété privée demeurant un pôle unique.</p>
 <p class="prose">{e(clean(poles.get('chapeau','')))}</p>
 <div class="pole-grid">{pole_cards}</div>
 {reg_html}
 </section>"""
 
-    body = f"""<h1>Trois régimes du sol</h1>
+    body = f"""<h1>Régimes et pôles du sol</h1>
 <p class="lead">{e(clean(reg.get('chapeau','')))}</p>
 
 <section><h2 class="sec">Les trois régimes</h2>
@@ -1625,13 +1708,14 @@ sept critères.</caption>
 
 <p class="prose">La grille de notation traduit ce cadre en critères, répartis
 sur cinq axes : voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul
-de l'Indice est détaillé dans la <a href="methode.html">méthode</a>.</p>"""
+de l'Indice est détaillé dans la <a href="methode.html">méthode</a> ; les termes
+pivots sont définis au <a href="glossaire.html">glossaire</a>.</p>"""
     # données structurées : les trois régimes en DefinedTermSet, bâti depuis la
     # même source que le HTML (audit SEO C, I1).
     termset = {
         "@context": "https://schema.org",
         "@type": "DefinedTermSet",
-        "name": "Trois régimes du sol",
+        "name": "Régimes et pôles du sol",
         "description": meta_desc(reg.get("chapeau", "")),
         "inLanguage": "fr",
         "url": canonical_url("regimes.html"),
@@ -1642,10 +1726,10 @@ de l'Indice est détaillé dans la <a href="methode.html">méthode</a>.</p>"""
             for r in liste
         ],
     }
-    return page("Trois régimes du sol", body, "regimes.html", project=project,
-                description="Les trois régimes juridiques du foncier : droit "
-                            "civil d'intérêt général, droit commercial, "
-                            "propriété privée classique.",
+    return page("Régimes et pôles du sol", body, "regimes.html", project=project,
+                description="Les trois régimes juridiques du foncier et les cinq "
+                            "pôles : droit civil d'intérêt général, droit "
+                            "commercial, propriété privée classique.",
                 path="regimes.html", jsonld=[termset])
 
 
@@ -1704,13 +1788,19 @@ l'usage. {e(clean(cc['definition']))}</p>
 
 <section id="indice"><h2 class="sec">L'Indice de libération</h2>
 <p class="prose">Chaque entrée est notée de 0 à 100 sur <strong>cinq axes</strong>
-— cinq facettes indépendantes, du sol vers les gens puis vers le temps. Pour
+— cinq axes indépendants, du sol vers les gens puis vers le temps. Pour
 une fiche, le score d'un axe est la somme pondérée des critères remplis, ramenée
 à 100 : <code>score = Σ(poids × facteur) / Σ(poids) × 100</code>. Le facteur
 vaut 1 pour « oui », 0,5 pour « partiel », 0 pour « non ». Les critères
 « inconnu » sont <strong>exclus du calcul</strong> — ils ne pénalisent pas la
 note mais abaissent la complétude affichée de la fiche.</p>
 <div class="axe-cards">{axes_html}</div>
+<p class="prose"><strong>Cinq axes orthogonaux.</strong> Les cinq axes sont
+indépendants les uns des autres : un montage peut être haut sur l'un et bas sur
+un autre — propriété solidement verrouillée mais gouvernance fermée, ou
+l'inverse. Aucun axe ne se déduit d'un autre. C'est cette indépendance qui rend
+le profil à cinq axes informatif : il décompose la qualité du montage au lieu
+de la résumer d'un seul chiffre.</p>
 <p class="prose"><strong>Une agrégation non compensatoire.</strong> L'Indice
 global n'est pas la moyenne arithmétique des axes : c'est leur
 <strong>moyenne géométrique</strong> —
@@ -1755,6 +1845,16 @@ chaîne ne le rehausse jamais au-delà du plafond intrinsèque. C'est l'indice
 effectif qui sert au badge et au classement ; l'écart avec l'intrinsèque est
 toujours affiché et annoté sur la fiche. Faute de lieu relié, l'indice effectif
 égale l'indice intrinsèque.</p>
+<p class="prose"><strong>Lire le motif, pas l'instance.</strong> La
+contamination lit une <em>distribution</em> de chaînes, non un cas isolé : une
+mauvaise chaîne sur dix n'équivaut pas à huit sur dix. Un bon porteur affecté
+d'un locataire problématique unique n'est pas plombé comme un porteur
+systématiquement rentier.</p>
+<p class="prose"><strong>Lire la trajectoire, pas l'instantané.</strong> Une
+chaîne en cours de dé-précarisation active — bail renégocié, usufruitier en
+transition — compte comme l'entité faisant son travail, non comme un échec.
+Sans cela, le modèle créerait une incitation perverse : refuser les cas
+difficiles pour protéger son score.</p>
 </section>
 
 <section id="integrite"><h2 class="sec">L'intégrité du montage</h2>
@@ -1763,8 +1863,8 @@ toujours affiché et annoté sur la fiche. Faute de lieu relié, l'indice effect
 Cet indicateur complémentaire n'entre pas dans l'Indice : il
 <strong>situe</strong> le montage parmi les cinq pôles sans les hiérarchiser.
 La protection effective du foncier est mesurée par l'axe 1, la nature du
-montage par l'axe 2. Le cadre des régimes et des pôles est exposé sur la page
-<a href="regimes.html">Trois régimes du sol</a>.</p>
+montage par l'axe 2. Le cadre des régimes et des cinq pôles est exposé sur la
+page <a href="regimes.html#poles">Régimes et pôles du sol</a>.</p>
 </section>
 
 <section id="limites"><h2 class="sec">Limites</h2>
@@ -1809,9 +1909,10 @@ d'exclusion.</p>
 </section>
 
 <section><h2 class="sec">Aller plus loin</h2>
-<p class="prose">Pour le détail du cadre et des grilles : les
-<a href="regimes.html">trois régimes du sol</a> exposent l'opposition droit
-civil d'intérêt général / droit commercial / propriété privée ; les
+<p class="prose">Pour le détail du cadre et des grilles : la page
+<a href="regimes.html">Régimes et pôles du sol</a> expose l'opposition droit
+civil d'intérêt général / droit commercial / propriété privée et la décline en
+cinq pôles ; les
 <a href="grilles.html">grilles d'analyse</a> détaillent les critères de chaque
 catégorie ; le <a href="glossaire.html">glossaire</a> définit les termes
 pivots ; les <a href="modeles.html">modèles voisins</a> servent de points de
@@ -1874,9 +1975,66 @@ GLOSSAIRE = [
      "doté de la personnalité morale par décret, voué à une mission d'intérêt "
      "général et soumis à un contrôle de l'État."),
     ("Intérêt général",
-     "Caractère d'une activité non lucrative, à gestion désintéressée, "
-     "ouverte et qui ne profite pas à un cercle restreint de personnes. "
-     "Condition centrale de plusieurs montages de l'annuaire."),
+     "Catégorie juridique octroyée par l'État : reconnaissance d'utilité "
+     "publique, agrément, qualification fiscale. Caractère d'une activité non "
+     "lucrative, à gestion désintéressée, ouverte, qui ne profite pas à un "
+     "cercle restreint. Condition centrale de plusieurs montages de l'annuaire — "
+     "mais à distinguer du commun : l'intérêt général est institué par l'État, "
+     "le commun se définit par la gouvernance citoyenne, ni étatique ni "
+     "marchande."),
+    ("Intérêt général d'initiative citoyenne",
+     "Finalité d'intérêt général affirmée par la nature et la posture d'un "
+     "collectif citoyen, avant et indépendamment de toute reconnaissance "
+     "étatique. C'est le repère du projet : non l'intérêt général institué par "
+     "l'État, mais la gouvernance citoyenne tournée vers le bien commun."),
+    ("Commun",
+     "Mode d'organisation d'une ressource qui n'est ni étatique ni marchand : "
+     "gouvernance collective des usagers, finalité ouverte. Troisième pôle, "
+     "distinct de l'intérêt général institué comme de la propriété privée."),
+    ("Agrégation non compensatoire",
+     "Mode de calcul de l'indice de synthèse où l'axe le plus faible pèse "
+     "lourd — moyenne géométrique ou équivalent — interdisant qu'une force "
+     "rachète une faiblesse. Un montage solide sur quatre axes mais effondré "
+     "sur le cinquième ne peut afficher un indice élevé."),
+    ("Chaîne",
+     "Un montage de libération des terres n'est pas une entité isolée mais une "
+     "chaîne : un lieu, son porteur de nue-propriété, son organisme "
+     "usufruitier. La qualité d'un porteur ou d'un usufruitier se lit à travers "
+     "les montages qu'il noue effectivement."),
+    ("Domiciliage des axes",
+     "Règle attribuant chaque axe d'évaluation au maillon de la chaîne où il se "
+     "joue réellement : l'axe 1 au porteur, l'axe 3 à l'usufruitier, l'axe 5 à "
+     "la convention d'usage, les axes 2 et 4 à toute la chaîne."),
+    ("Indice intrinsèque / indice effectif",
+     "L'indice intrinsèque note une entité sur ce qu'elle est, ses propres "
+     "critères. L'indice effectif le relit à travers les chaînes qu'elle noue : "
+     "pour les axes contaminables, l'axe effectif retient le minimum entre le "
+     "score intrinsèque et la médiane des lieux reliés. L'écart est toujours "
+     "affiché et annoté sur la fiche."),
+    ("Faux ami",
+     "Entité qui mobilise le vocabulaire du commun et de l'utilité sociale tout "
+     "en étant structurellement commerciale et lucrative au profit d'un cercle "
+     "fermé. On parle aussi de « communs-washing ». Cas-type : la société "
+     "coopérative dont le bénéficiaire réel est le seul sociétariat."),
+    ("Cinq pôles",
+     "À l'intérieur et au travers des trois régimes du sol, le cadre situe cinq "
+     "pôles, du resserrement le plus large au plus étroit de la décision et du "
+     "bénéfice : le commun citoyen, l'intérêt général institué, le mutualisme "
+     "d'usagers, l'économie sociale marchande, la propriété marchande. Ce sont "
+     "des profils de référence, non des cases."),
+    ("Verrou d'actif (asset-lock)",
+     "Clause statutaire interdisant que l'actif d'une structure soit capté à "
+     "titre privé, y compris en cas de dissolution. Verrou central des montages "
+     "qui neutralisent durablement la cessibilité du foncier."),
+    ("Réserves impartageables",
+     "Part des excédents d'une structure qui ne peut être distribuée aux "
+     "membres et reste affectée à l'objet de la structure. Clause qui, comme le "
+     "verrou d'actif, tempère ou neutralise la lucrativité."),
+    ("Complétude",
+     "Part des critères d'une fiche effectivement renseignés. Une faible "
+     "complétude pénalise l'indice affiché et signale les angles morts du "
+     "recensement. Elle se distingue du nombre d'axes sur lesquels l'Indice "
+     "est calculé."),
     ("Utilité publique",
      "Reconnaissance officielle, par l'État, qu'un organisme ou un projet "
      "sert l'intérêt de la collectivité. Elle conditionne notamment le statut "
@@ -1938,6 +2096,9 @@ def render_glossaire(cfg):
 <p class="lead">Définitions simples des termes pivots employés dans l'annuaire.
 Pour le détail du calcul de l'Indice, voir la <a href="methode.html">Méthode</a>.</p>
 <dl class="glossaire">{items}</dl>
+<p class="linkrow"><a href="methode.html">La méthode et le calcul de l'Indice →</a> ·
+<a href="regimes.html">Régimes et pôles du sol →</a> ·
+<a href="grilles.html">Grilles d'analyse →</a></p>
 <p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
     termset = {
         "@context": "https://schema.org",
@@ -2144,12 +2305,14 @@ def render_index(all_sc, cfg, n_by_cat):
       <h3>Lire une note</h3>
       <p>Chaque entrée est notée de 0 à 100 sur cinq axes — le sol, la
       structure, le pouvoir, la finalité, l'usage — résumés par un Indice de
-      libération et un palier. <a href="methode.html">La méthode →</a></p>
+      libération et un palier. L'agrégation est non compensatoire : l'axe le
+      plus faible commande l'Indice — un montage ne rachète pas une faiblesse
+      par ses forces. <a href="methode.html">La méthode →</a></p>
     </li>
   </ol>
   <p class="linkrow"><a href="themes.html">Explorer par thème →</a> ·
   <a href="comparer.html">Comparer deux montages →</a> ·
-  <a href="regimes.html">Les trois régimes du sol →</a> ·
+  <a href="regimes.html">Régimes et pôles du sol →</a> ·
   <a href="grilles.html">Grilles d'analyse →</a> ·
   <a href="glossaire.html">Glossaire des termes →</a></p>
 </section>
