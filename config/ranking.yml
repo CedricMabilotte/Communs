@@ -96,7 +96,7 @@ paliers:
   - id: abouti
     min: 85
     label: "Libération aboutie"
-    couleur: "#2f6b34"
+    couleur: "#356026"
     sens: >
       Montage non lucratif, foncier durablement verrouillé, gouvernance
       participative et organisée pour durer. Modèle de référence.
