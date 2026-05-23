@@ -186,6 +186,29 @@ def clean(text):
     return re.sub(r"\s+", " ", str(text)).strip()
 
 
+# Espace fine insécable (U+202F) — typographie française.
+_NNBSP = " "
+
+
+def typo(text):
+    """Applique la typographie française au texte VISIBLE uniquement : espace
+    fine insécable devant ; ? ! et :, et à l'intérieur des guillemets « ».
+
+    À n'appliquer qu'à du texte destiné à l'affichage, jamais à du HTML brut,
+    à des URL, du JSON-LD ou des fichiers .js/.xml — l'insécable y serait un
+    caractère parasite. Idempotent : ne double pas une insécable déjà posée."""
+    if not text:
+        return ""
+    t = str(text)
+    # espace fine insécable devant la ponctuation double — on remplace une
+    # éventuelle espace ordinaire, ou on insère si la ponctuation est collée.
+    t = re.sub(r"[   ]*([;?!:])", _NNBSP + r"\1", t)
+    # intérieur des guillemets : après « , avant »
+    t = re.sub(r"«[   ]*", "«" + _NNBSP, t)
+    t = re.sub(r"[   ]*»", _NNBSP + "»", t)
+    return t
+
+
 def slugify(s):
     s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode()
     s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
@@ -244,6 +267,26 @@ def link_glossary(body, up):
         out.append(m.group(0))
         pos = m.end()
     out.append(_link_text_chunk(body[pos:], up, done))
+    return "".join(out)
+
+
+def apply_typo(body):
+    """Applique typo() aux seuls nœuds de texte visibles du HTML assemblé.
+
+    Saute l'intérieur des balises, des <script> (donc le JSON-LD, ajouté plus
+    tard de toute façon), <style> et <svg> — où l'espace fine insécable serait
+    un caractère parasite. Les URL et attributs vivent dans les balises : ils
+    ne sont jamais touchés."""
+    skip_pat = re.compile(
+        r'<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>'
+        r'|<svg\b[^>]*>.*?</svg>|<[^>]+>',
+        re.S)
+    out, pos = [], 0
+    for m in skip_pat.finditer(body):
+        out.append(typo(body[pos:m.start()]))
+        out.append(m.group(0))
+        pos = m.end()
+    out.append(typo(body[pos:]))
     return "".join(out)
 
 
@@ -326,7 +369,7 @@ def page(title, body, active, depth=0, project=None, description="",
 
     robots_tag = f'\n<meta name="robots" content="{e(robots)}">' if robots else ""
 
-    return f"""<!DOCTYPE html>
+    doc = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -369,9 +412,11 @@ def page(title, body, active, depth=0, project=None, description="",
 <footer class="footer">
   <div class="wrap">
     <p>{e(pname)} — annuaire critique des montages de libération des terres en
-    France. Données factuelles sourcées ; l'Indice de libération est une grille
+    France. Les données sont sourcées ; l'Indice de libération est une grille
     d'analyse explicite, non un jugement de valeur.</p>
     <p class="foot-links"><a href="{up}methode.html">Méthode</a> ·
+    <a href="{up}themes.html">Thèmes</a> ·
+    <a href="{up}comparer.html">Comparer</a> ·
     <a href="{up}regimes.html">Trois régimes</a> ·
     <a href="{up}grilles.html">Grilles d'analyse</a> ·
     <a href="{up}modeles.html">Modèles voisins</a> ·
@@ -384,6 +429,10 @@ def page(title, body, active, depth=0, project=None, description="",
 </body>
 </html>
 """
+    # passe typographique française : espaces fines insécables sur le seul
+    # texte visible (audit copywriting D, D1). N'affecte ni les balises, ni
+    # les URL, ni le JSON-LD (dans <script>), ni les SVG.
+    return apply_typo(doc)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1028,7 +1077,7 @@ def render_catalogue(cat, fiches_sc, cfg):
             '<div class="callout callout-note"><p><strong>Hors classement '
             'principal.</strong> Les modèles voisins ne sont pas notés par les '
             'grilles de l\'annuaire : leur Indice est <em>estimé</em> '
-            '(axes posés éditorialement) et signalé par un anneau en pointillé. '
+            '(axes estimés, hors grille) et signalé par un anneau en pointillé. '
             'Ils servent de points de comparaison et n\'apparaissent pas dans '
             'le classement.</p></div>')
     else:
@@ -1083,14 +1132,14 @@ def render_catalogue(cat, fiches_sc, cfg):
 <a href="methode.html">Comprendre l'Indice et les axes →</a></p>
 {modeles_note}
 <div class="toolbar">
-  <input type="search" id="q" placeholder="Filtrer par nom…" aria-label="Filtrer par nom" aria-controls="resultats">
+  <input type="search" id="q" placeholder="Rechercher un nom…" aria-label="Rechercher par nom" aria-controls="resultats">
   <label class="sort-lab" for="sort">Trier :</label>
   <select id="sort">
     <option value="idl">Par indice (décroissant)</option>
     <option value="nom">Par nom (A→Z)</option>
     <option value="axa">Par axe A — intérêt général</option>
     <option value="axb">Par axe B — libération des terres</option>
-    <option value="axc">Par axe C — gouvernance</option>
+    <option value="axc">Par axe C — gouvernance participative</option>
   </select>
   <span class="count" id="cnt" aria-live="polite"><b id="cntn">{n}</b><span id="cntl"> entrée{'s' if n > 1 else ''} affichée{'s' if n > 1 else ''}</span></span>
 </div>
@@ -1110,7 +1159,7 @@ def render_catalogue(cat, fiches_sc, cfg):
 <span class="axe-dot axe-B"></span> B — Libération des terres
 <span class="axe-dot axe-C"></span> C — Gouvernance participative</p>
 {cards_grid(fiches_sc, axes_cfg, concepts=concepts, grid_id="resultats")}
-<p class="no-result" id="noresult" role="status" hidden>Aucune entrée ne correspond aux filtres choisis.</p>
+<p class="no-result" id="noresult" role="status" hidden>Aucune entrée ne correspond à ces filtres. Élargissez la sélection.</p>
 <p class="cat-foot"><a href="suggerer.html">Un lieu manque ou une fiche est incomplète ? Signalez-le →</a></p>
 <script defer src="assets/list.js"></script>"""
     active = CAT_PAGE[cat]
@@ -1161,7 +1210,8 @@ def render_classement(all_sc, cfg):
     body = f"""<h1>Classement par l'Indice de libération</h1>
 <p class="lead">L'Indice de libération (IdL) note chaque montage de 0 à 100 sur
 trois axes — intérêt général (A), libération des terres (B), gouvernance
-participative (C). <a href="methode.html">Méthode détaillée →</a></p>
+participative (C). <a href="methode.html">Méthode détaillée →</a> ·
+<a href="comparer.html">Comparer deux entrées en vis-à-vis →</a></p>
 <div class="callout callout-warn">
   <p><strong>Un classement croisé, indicatif.</strong> Lieux, porteurs de
   nue-propriété et usufruitiers sont notés par <strong>trois grilles
@@ -1197,8 +1247,8 @@ l'Indice de libération, du plus élevé au plus faible.</caption>
 <tbody>{''.join(rows)}</tbody>
 </table></div>
 <p class="note">A — Intérêt général · B — Libération des terres · C — Gouvernance
-participative. « — » : axe non renseigné. Les mini-barres de couleur doublent
-la lecture chiffrée.</p>
+participative. « — » : axe non renseigné. Les mini-barres de couleur
+accompagnent la lecture chiffrée.</p>
 <script defer src="assets/list.js"></script>"""
     itemlist = {
         "@context": "https://schema.org",
@@ -1411,6 +1461,17 @@ def render_methode(cfg, n_by_cat, all_sc):
     project = cfg["concepts"]["project"]
     ranking = cfg["ranking"]
     cc = cfg["concepts"]["concept_central"]
+
+    # chiffres de transparence calculés depuis all_sc (audit cycle D —
+    # transparence). Complétude moyenne et part de critères « inconnu » sur les
+    # seules entrées notées (modèles exclus).
+    n_total_fiches = len(all_sc)
+    notees = [(f, sc) for f, sc in all_sc
+              if f["categorie"] != "modele" and sc.get("completude") is not None]
+    n_notees = len(notees)
+    comp_vals = [sc["completude"] for _, sc in notees]
+    pct_complet = round(sum(comp_vals) / len(comp_vals) * 100) if comp_vals else 0
+    pct_inconnu = 100 - pct_complet
     axes_html = "".join(
         f"""<div class="axe-card" style="--c:{a['couleur']}">
   <h3>Axe {a['id']} — {e(a['label'])}</h3>
@@ -1459,7 +1520,7 @@ critères restent « inconnu » voit son indice ramené aux trois quarts de l'in
 brut. L'indice brut est conservé pour information ; c'est l'indice affiché,
 pénalisé, qui sert au badge, au classement et à l'export <code>data.json</code>.</p>
 <p class="prose">Les modèles voisins, eux, ne sont pas notés par la grille :
-leur indice est <strong>estimé</strong> (axes posés éditorialement) et marqué
+leur indice est <strong>estimé</strong> (axes estimés, hors grille) et marqué
 comme tel ; ils restent hors du classement principal.</p>
 <table class="rank-tbl small">
 <caption class="visually-hidden">Paliers de l'Indice de libération : seuil et sens.</caption>
@@ -1489,14 +1550,34 @@ pas un label ni un jugement de valeur.</li>
 complétude est toujours affichée.</li>
 <li>Le « montage de référence » (nue-propriété d'intérêt général + usufruit
 associatif) est un idéal-type ; peu de lieux réels le réalisent à la lettre.</li>
+<li>Le corpus est construit et non exhaustif ; sa composition — forte présence
+de la mouvance Terre de Liens, sous-représentation de l'habitat et de
+l'Outre-mer — est détaillée dans l'<a href="#etat">État du corpus</a>.</li>
 </ul>
 </section>
 
 <section id="etat"><h2 class="sec">État du corpus</h2>
 <p class="prose">{n_by_cat['lieu']} lieux · {n_by_cat['porteur']} porteurs de
 nue-propriété · {n_by_cat['usufruitier']} organismes usufruitiers ·
-{n_by_cat['modele']} modèles voisins de comparaison.</p>
+{n_by_cat['modele']} modèles voisins de comparaison. Les {n_total_fiches}
+fiches sont publiées ; le corpus est construit, non exhaustif.</p>
 {corpus_histogram(all_sc, ranking)}
+<p class="prose"><strong>Complétude.</strong> Les {n_notees} entrées notées
+renseignent en moyenne {pct_complet} % des critères de leur grille ;
+{pct_inconnu} % restent « inconnu », faute de source publique. La complétude de
+chaque fiche est affichée sur la fiche elle-même ; quelques fiches restent
+nettement plus lacunaires et leur Indice est à lire avec prudence.</p>
+<p class="prose"><strong>Ce que le corpus ne couvre pas encore.</strong> Le
+recensement est partiel et assume ses angles morts. Il regarde le sujet en
+grande partie depuis la mouvance Terre de Liens, acteur structurant du foncier
+agricole non spéculatif en France. Il est très majoritairement rural et
+agricole : l'habitat coopératif n'y figure que par quelques entrées récentes,
+le foncier solidaire de logement urbain et le périurbain structuré restent peu
+représentés. Géographiquement, les lieux se concentrent sur la moitié sud et
+est de la métropole — six régions environ — ; plusieurs régions et l'ensemble
+de l'Outre-mer ne sont pas couverts. Ces manques sont documentés dans les notes
+d'audit du projet et signalent des pistes d'enrichissement, non des choix
+d'exclusion.</p>
 </section>
 
 <section><h2 class="sec">Aller plus loin</h2>
@@ -1647,6 +1728,139 @@ Pour le détail du calcul de l'Indice, voir la <a href="methode.html">Méthode</
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Page — thèmes transversaux
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Cinq thèmes transversaux : porte d'entrée par sujet, absente des catalogues
+# (qui entrent par rôle) et du classement (qui entre par note). Répartition
+# codée en dur — aucun champ ajouté aux YAML. Un uid peut figurer dans deux
+# thèmes (recoupement assumé, cf. audit cycle D — thèmes).
+THEMES = [
+    ("foncier-agricole", "Foncier agricole et installation paysanne",
+     "Terres cultivées sorties du marché pour installer ou maintenir des "
+     "paysan·nes.",
+     ["reseau-terre-de-liens", "lurzaindia", "larzac", "villarceaux", "nddl",
+      "fondation-terre-de-liens", "fonciere-terre-de-liens", "lurzaindia-sca",
+      "feve", "sctl", "gfa-mutuels", "champs-des-possibles", "reneta"]),
+    ("habitat", "Habitat et logement non spéculatif",
+     "Immeubles et écolieux dont la propriété du logement est déconnectée du "
+     "marché.",
+     ["village-vertical", "hameau-des-buis", "longo-mai", "habicoop",
+      "fonciere-chenelet", "cooperative-oasis", "cooperatives-longo-mai",
+      "cooperative-habitants-alur", "ofs-brs", "clt-bruxelles",
+      "stiftung-trias", "mietshauser-syndikat"]),
+    ("espaces-naturels", "Espaces naturels et protection de l'eau",
+     "Foncier naturel ou sensible protégé pour des raisons écologiques.",
+     ["conservatoire-littoral", "federation-cen", "scic-terres-de-sources",
+      "nddl"]),
+    ("portage-public", "Portage public et collectivités",
+     "Montages où une personne publique détient ou sécurise le foncier.",
+     ["larzac", "conservatoire-littoral", "scic-terres-de-sources",
+      "federation-cen", "ofs-brs"]),
+    ("portage-citoyen", "Portage citoyen et fondations",
+     "Foncier sécurisé par l'épargne, les dons ou une fondation, hors "
+     "puissance publique.",
+     ["fondation-terre-de-liens", "fonciere-terre-de-liens",
+      "fonds-la-terre-en-commun", "fonds-terre-europeenne", "fonciere-antidote",
+      "fondation-fph", "lurzaindia-sca", "feve", "stiftung-trias"]),
+]
+
+
+def render_themes(all_sc, cfg):
+    """Page « Thèmes » statique : 5 sections, une par thème transversal.
+    Réutilise le composant de cartes existant ; aucun JS, aucun filtre."""
+    project = cfg["concepts"]["project"]
+    concepts = cfg["concepts"]
+    axes_cfg = cfg["ranking"]["axes"]
+    sc_by_uid = {f["uid"]: (f, sc) for f, sc in all_sc}
+
+    toc = "".join(f'<a href="#theme-{tid}">{e(titre)}</a>'
+                  for tid, titre, _, _ in THEMES)
+
+    sections = []
+    for tid, titre, cadrage, uids in THEMES:
+        fiches_sc = [sc_by_uid[u] for u in uids if u in sc_by_uid]
+        fiches_sc.sort(key=lambda x: x[1]["idl"] or 0, reverse=True)
+        grid = cards_grid(fiches_sc, axes_cfg, concepts=concepts)
+        sections.append(f"""<section id="theme-{tid}">
+<h2 class="sec">{e(titre)}</h2>
+<p class="lead">{e(cadrage)}</p>
+{grid}
+</section>""")
+
+    body = f"""{tri_defs(axes_cfg)}<h1>Thèmes transversaux</h1>
+<p class="lead">Les catalogues classent l'annuaire par rôle dans le montage ;
+le classement, par l'Indice. Cette page propose une troisième lecture, par
+sujet : à quoi sert la terre, et qui la porte. Un même montage peut relever de
+deux thèmes. <a href="methode.html">Comprendre l'Indice et les axes →</a></p>
+<nav class="page-toc" aria-label="Sommaire des thèmes">{toc}</nav>
+<p class="axe-legend cat-legend">Profil tri-axes :
+<span class="axe-dot axe-A"></span> A — Intérêt général
+<span class="axe-dot axe-B"></span> B — Libération des terres
+<span class="axe-dot axe-C"></span> C — Gouvernance participative</p>
+{''.join(sections)}
+<p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
+    return page("Thèmes", body, "themes.html", project=project,
+                description="Cinq thèmes transversaux pour explorer l'annuaire "
+                            "par sujet : foncier agricole, habitat, espaces "
+                            "naturels, portage public et citoyen.",
+                path="themes.html")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Page — comparateur
+# ─────────────────────────────────────────────────────────────────────────────
+
+def render_comparer(all_sc, cfg):
+    """Page « Comparer » : deux sélecteurs, rendu en deux colonnes côté client
+    depuis data.json. Le HTML est quasi vide ; compare.js fait le rendu.
+    Réutilise les styles de carte / axes existants."""
+    project = cfg["concepts"]["project"]
+    groups = {"lieu": [], "porteur": [], "usufruitier": [], "modele": []}
+    for f, _ in all_sc:
+        groups[f["categorie"]].append((f["uid"], f["nom"]))
+    catlab = {"lieu": "Lieux", "porteur": "Porteurs",
+              "usufruitier": "Usufruitiers", "modele": "Modèles voisins"}
+
+    def opts():
+        out = '<option value="">— Choisir —</option>'
+        for cat, lab in catlab.items():
+            items = sorted(groups[cat], key=lambda x: x[1])
+            if not items:
+                continue
+            out += f'<optgroup label="{e(lab)}">'
+            out += "".join(f'<option value="{e(u)}">{e(n)}</option>'
+                            for u, n in items)
+            out += '</optgroup>'
+        return out
+
+    selects = opts()
+    body = f"""<h1>Comparer deux montages</h1>
+<p class="lead">Choisissez deux entrées de l'annuaire pour voir leurs indices,
+profils tri-axes et caractéristiques en vis-à-vis.
+<a href="methode.html">Comprendre l'Indice →</a></p>
+<div class="callout callout-warn"><p><strong>Comparer ce qui est
+comparable.</strong> Lieux, porteurs et usufruitiers sont notés par trois
+grilles distinctes : la comparaison critère à critère n'a de sens qu'entre
+entrées de même catégorie.</p></div>
+<div class="cmp-pickers">
+  <label>Montage A <select id="cmp-a">{selects}</select></label>
+  <label>Montage B <select id="cmp-b">{selects}</select></label>
+</div>
+<p id="cmp-warn" class="note" role="status" hidden></p>
+<div class="cmp-grid" id="cmp-grid"></div>
+<noscript><p class="no-result">La comparaison nécessite JavaScript. Vous pouvez
+consulter chaque fiche depuis le <a href="classement.html">classement</a> ou
+les <a href="lieux.html">catalogues</a>.</p></noscript>
+<p class="backlink"><a href="classement.html">← Voir le classement complet</a></p>
+<script defer src="assets/compare.js"></script>"""
+    return page("Comparer", body, "comparer.html", project=project,
+                description="Comparer deux montages de libération des terres : "
+                            "indices, axes et caractéristiques en vis-à-vis.",
+                path="comparer.html")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Page — accueil
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1671,7 +1885,7 @@ def render_index(all_sc, cfg, n_by_cat):
     hist = corpus_histogram(all_sc, ranking)
 
     body = f"""{tri_defs(axes_cfg)}<section class="hero">
-  <p class="hero-kicker">Annuaire critique · France</p>
+  <p class="hero-kicker">Annuaire critique · libération des terres</p>
   <h1>La terre, soustraite au marché.</h1>
   <p class="hero-lead">Partout en France, des terres sont sorties du marché
   spéculatif — par le réemploi d'outils de droit civil non lucratif. Cet
@@ -1696,7 +1910,7 @@ def render_index(all_sc, cfg, n_by_cat):
     <li class="step">
       <span class="step-n">2</span>
       <h3>Explorer une catégorie</h3>
-      <p>Chaque montage se lit à travers trois objets : le lieu, son porteur de
+      <p>Chaque montage réunit trois acteurs : le lieu, son porteur de
       nue-propriété et son usufruitier. Chacun a son catalogue filtrable.</p>
     </li>
     <li class="step">
@@ -1707,13 +1921,15 @@ def render_index(all_sc, cfg, n_by_cat):
       méthode →</a></p>
     </li>
   </ol>
-  <p class="linkrow"><a href="regimes.html">Les trois régimes du sol →</a> ·
+  <p class="linkrow"><a href="themes.html">Explorer par thème →</a> ·
+  <a href="comparer.html">Comparer deux montages →</a> ·
+  <a href="regimes.html">Les trois régimes du sol →</a> ·
   <a href="grilles.html">Grilles d'analyse →</a> ·
   <a href="glossaire.html">Glossaire des termes →</a></p>
 </section>
 
 <section>
-  <h2 class="sec">Trois catégories analysées</h2>
+  <h2 class="sec">Explorer par catégorie</h2>
   <div class="cat-cards">{cat_cards}</div>
 </section>
 
@@ -1728,8 +1944,8 @@ def render_index(all_sc, cfg, n_by_cat):
 
 <section>
   <h2 class="sec">En tête du classement</h2>
-  <p class="lead">Les montages dont l'Indice de libération est le plus élevé —
-  tous axes confondus. <a href="classement.html">Classement complet →</a></p>
+  <p class="lead">Les montages dont l'Indice de libération est le plus élevé.
+  <a href="classement.html">Classement complet →</a></p>
   <p class="axe-legend cat-legend">Profil tri-axes :
   <span class="axe-dot axe-A"></span> A — Intérêt général
   <span class="axe-dot axe-B"></span> B — Libération des terres
@@ -1766,7 +1982,7 @@ def render_suggerer(cfg):
     project = cfg["concepts"]["project"]
     body = """<h1>Proposer un lieu</h1>
 <p class="lead">« Terres Libérées » est un annuaire évolutif au corpus volontairement
-mince et exigeant. Si vous connaissez un lieu, un porteur ou un montage réel de
+restreint et exigeant. Si vous connaissez un lieu, un porteur ou un montage réel de
 libération des terres qui n'y figure pas encore, vous pouvez le signaler.</p>
 
 <section><h2 class="sec">Ce que recense l'annuaire</h2>
@@ -2295,6 +2511,35 @@ a.gloss-link:hover{color:var(--green-dk);text-decoration-color:var(--green-dk);}
  margin-bottom:.2rem;}
 .gloss-item dd{margin:0;font-size:1.02rem;color:var(--muted);max-width:70ch;}
 
+/* comparateur — deux colonnes, réutilise les styles de carte et d'axes */
+.cmp-pickers{display:flex;gap:1rem;flex-wrap:wrap;margin:1.3rem 0 .6rem;}
+.cmp-pickers label{display:flex;flex-direction:column;gap:.25rem;flex:1 1 220px;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;
+ color:var(--muted);font-weight:600;}
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+.cmp-col{background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius);padding:1rem 1.15rem;}
+.cmp-col.cmp-empty{display:flex;align-items:center;justify-content:center;
+ min-height:8rem;border-style:dashed;}
+.cmp-col-head{display:flex;justify-content:space-between;align-items:flex-start;
+ gap:.5rem;}
+.cmp-idl{display:inline-flex;flex-direction:column;align-items:flex-end;
+ line-height:1.1;border-right:3px solid var(--pal,#999);padding-right:.5rem;}
+.cmp-idl b{font-size:1.2rem;font-variant-numeric:tabular-nums;color:var(--ink);
+ font-family:-apple-system,system-ui,sans-serif;}
+.cmp-name{font-size:1.2rem;margin:.6rem 0 .15rem;border:0;padding:0;}
+.cmp-name::before{display:none;}
+.cmp-sub{font-size:.88rem;color:var(--muted);margin:.1rem 0 .6rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.cmp-dl{display:grid;grid-template-columns:max-content 1fr;gap:.4rem 1rem;
+ margin:.8rem 0 .4rem;font-size:.86rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.cmp-dl dt{color:var(--muted);font-weight:600;}
+.cmp-dl dd{margin:0;}
+.cmp-link{font-family:-apple-system,system-ui,sans-serif;font-size:.86rem;
+ margin:.6rem 0 0;}
+@media(max-width:560px){.cmp-grid{grid-template-columns:1fr;}}
+
 /* footer */
 .footer{border-top:2px solid var(--ink);margin-top:3rem;background:var(--paper);}
 .footer .wrap{padding:1.6rem 1.3rem 2.2rem;}
@@ -2511,6 +2756,99 @@ LIST_JS = """/* list.js — filtre, tri et recherche des catalogues.
 })();
 """
 
+COMPARE_JS = """/* compare.js — comparateur de deux montages, page comparer.html.
+   Rendu côté client depuis data.json. Vanilla JS, aucune dépendance.
+   N'est chargé que par comparer.html ; list.js n'est pas touché. */
+(function(){
+ var selA=document.getElementById('cmp-a'),selB=document.getElementById('cmp-b'),
+   grid=document.getElementById('cmp-grid'),warn=document.getElementById('cmp-warn');
+ if(!selA||!selB||!grid) return;
+ var byUid={};
+ function esc(s){
+  return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+   return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+  });
+ }
+ var AXES=[['A','Intérêt général','#4a7a3a'],
+           ['B','Libération des terres','#bc5d3a'],
+           ['C','Gouvernance participative','#36748a']];
+ var CATLAB={lieu:'Lieu',porteur:'Porteur',usufruitier:'Usufruitier',
+   modele:'Modèle voisin'};
+ var SLUG={lieu:'l',porteur:'p',usufruitier:'u',modele:'m'};
+ function bar(label,col,val){
+  var w=(val==null?0:Math.max(0,Math.min(100,val)));
+  var txt=(val==null?'n.r.':val);
+  return '<div class="axis-row"><span class="axis-label">'+esc(label)
+   +'</span><span class="axis-track"><span class="axis-fill'
+   +(val==null?' axis-na':'')+'" style="width:'+w+'%;background:'+col
+   +'"></span></span><span class="axis-val">'+esc(txt)+'</span></div>';
+ }
+ function col(d){
+  if(!d) return '<div class="cmp-col cmp-empty"><p class="note">'
+   +'Choisissez une entrée.</p></div>';
+  var bars='';
+  for(var i=0;i<AXES.length;i++){
+   bars+=bar(AXES[i][0]+' · '+AXES[i][1],AXES[i][2],
+     d.axes?d.axes[AXES[i][0]]:null);
+  }
+  var estime=d.score_type==='estime';
+  var idl=(d.idl==null?'n.r.':d.idl)+(estime?' · estimé':'');
+  var pal=d.palier_label?esc(d.palier_label):'—';
+  var palCol=d.palier_couleur||'#999';
+  var rows='';
+  function row(k,v){
+   if(!v) return '';
+   return '<dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd>';
+  }
+  rows+=row('Catégorie',CATLAB[d.categorie]||d.categorie);
+  rows+=row('Forme juridique',d.forme_juridique);
+  rows+=row('Type de montage',d.montage_label);
+  rows+=row('Nature juridique',d.nature_juridique);
+  if(d.completude!=null){
+   rows+=row('Complétude',Math.round(d.completude*100)+' %');
+  }
+  var href=SLUG[d.categorie]+'/'+d.uid+'.html';
+  return '<div class="cmp-col"><div class="cmp-col-head">'
+   +'<span class="tag tag-'+esc(d.categorie)+'">'
+   +esc(CATLAB[d.categorie]||d.categorie)+'</span>'
+   +'<span class="cmp-idl" style="--pal:'+esc(palCol)+'">'
+   +'<b>'+esc(idl)+'</b><span class="idl-pal">'+pal+'</span></span></div>'
+   +'<h2 class="cmp-name">'+esc(d.nom)+'</h2>'
+   +'<p class="cmp-sub">'+esc(d.sous_titre||'')+'</p>'
+   +'<div class="axis-block">'+bars+'</div>'
+   +'<dl class="cmp-dl">'+rows+'</dl>'
+   +'<p class="cmp-link"><a href="'+esc(href)+'">Fiche complète →</a></p>'
+   +'</div>';
+ }
+ function render(){
+  var a=byUid[selA.value],b=byUid[selB.value];
+  grid.innerHTML=col(a)+col(b);
+  if(a&&b&&a.categorie!==b.categorie){
+   warn.textContent='Ces deux entrées relèvent de catégories différentes, '
+    +'notées par des grilles distinctes : la comparaison est indicative.';
+   warn.hidden=false;
+  }else{ warn.hidden=true; }
+  var p=new URLSearchParams();
+  if(selA.value) p.set('a',selA.value);
+  if(selB.value) p.set('b',selB.value);
+  var qs=p.toString();
+  history.replaceState(null,'',qs?('?'+qs):location.pathname);
+ }
+ fetch('data.json').then(function(r){return r.json();}).then(function(list){
+  list.forEach(function(d){byUid[d.uid]=d;});
+  var q=new URLSearchParams(location.search);
+  if(q.get('a')&&byUid[q.get('a')]) selA.value=q.get('a');
+  if(q.get('b')&&byUid[q.get('b')]) selB.value=q.get('b');
+  render();
+ }).catch(function(){
+  grid.innerHTML='<p class="no-result">Données indisponibles. '
+   +'Consultez le <a href="classement.html">classement</a>.</p>';
+ });
+ selA.addEventListener('change',render);
+ selB.addEventListener('change',render);
+})();
+"""
+
 OG_SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
 <rect width="1200" height="630" fill="#f5f2e9"/>
 <rect x="0" y="0" width="1200" height="14" fill="#221f1a"/>
@@ -2579,6 +2917,7 @@ def main():
     ASSETS.mkdir(exist_ok=True)
     write(ASSETS / "style.css", CSS)
     write(ASSETS / "list.js", LIST_JS)
+    write(ASSETS / "compare.js", COMPARE_JS)
     write(ASSETS / "favicon.svg", FAVICON_SVG)
     write(ASSETS / "og-default.svg", OG_SVG)
     write(SITE / "favicon.svg", FAVICON_SVG)
@@ -2604,6 +2943,8 @@ def main():
     write(SITE / "grilles.html", render_grilles(cfg))
     write(SITE / "glossaire.html", render_glossaire(cfg))
     write(SITE / "methode.html", render_methode(cfg, n_by_cat, all_sc))
+    write(SITE / "themes.html", render_themes(all_sc, cfg))
+    write(SITE / "comparer.html", render_comparer(all_sc, cfg))
     write(SITE / "suggerer.html", render_suggerer(cfg))
     write(SITE / "404.html", render_404(cfg))
 
@@ -2615,23 +2956,41 @@ def main():
     for cat in ("lieu", "porteur", "usufruitier", "modele"):
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
     for p in ("classement.html", "regimes.html", "grilles.html",
-              "methode.html", "glossaire.html", "suggerer.html"):
+              "methode.html", "themes.html", "comparer.html", "glossaire.html",
+              "suggerer.html"):
         sitemap_paths.append((p, "0.6"))
     for f, sc in all_sc:
         sitemap_paths.append((f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html', "0.7"))
     write(SITE / "robots.txt", build_robots())
     write(SITE / "sitemap.xml", build_sitemap(sitemap_paths))
 
-    # data.json (export ouvert)
+    # data.json (export ouvert) — enrichi de champs descriptifs pour le
+    # comparateur (sous-titre, forme juridique, type de montage, nature). Champs
+    # ajoutés, aucun retiré : l'export reste rétro-compatible.
     data = []
     for f, sc in all_sc:
+        mont = f.get("montage", {}) or {}
+        pj = f.get("purete_juridique", {}) or {}
+        montage_id = mont.get("type", "") or ""
+        pj_niv = pj.get("niveau", "") or ""
+        pj_lab = purete_label(pj_niv, ranking)[0] if pj_niv else ""
         data.append({"uid": f["uid"], "nom": f["nom"], "categorie": f["categorie"],
+                      "sous_titre": clean(f.get("sous_titre", "")),
                       "idl": sc["idl"], "idl_brut": sc.get("idl_brut"),
                       "score_type": sc.get("score_type"),
                       "completude": (round(sc["completude"], 3)
                                      if sc.get("completude") is not None else None),
                       "axes": sc["axes"],
-                      "palier": sc["palier"]["id"] if sc["palier"] else None})
+                      "palier": sc["palier"]["id"] if sc["palier"] else None,
+                      "palier_label": (sc["palier"]["label"]
+                                       if sc["palier"] else None),
+                      "palier_couleur": (sc["palier"]["couleur"]
+                                         if sc["palier"] else None),
+                      "forme_juridique": clean(f.get("forme_juridique", "")),
+                      "montage_type": montage_id,
+                      "montage_label": (montage_label(montage_id, cfg["concepts"])
+                                        if montage_id else ""),
+                      "nature_juridique": pj_lab})
     write(SITE / "data.json", json.dumps(data, ensure_ascii=False, indent=2))
 
     total = len(fiches)
