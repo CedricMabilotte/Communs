@@ -397,9 +397,11 @@ def apply_typo(body):
     tard de toute façon), <style> et <svg> — où l'espace fine insécable serait
     un caractère parasite. Les URL et attributs vivent dans les balises : ils
     ne sont jamais touchés."""
+    # On saute aussi les entités HTML (&#x27; &amp; &quot; …) : leur point-virgule
+    # final ne doit pas recevoir d'espace fine insécable, qui casserait l'entité.
     skip_pat = re.compile(
         r'<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>'
-        r'|<svg\b[^>]*>.*?</svg>|<[^>]+>',
+        r'|<svg\b[^>]*>.*?</svg>|<[^>]+>|&#?[0-9A-Za-z]+;',
         re.S)
     out, pos = [], 0
     for m in skip_pat.finditer(body):
