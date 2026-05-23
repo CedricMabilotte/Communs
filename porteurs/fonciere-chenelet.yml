@@ -24,8 +24,8 @@ montage:
     revente : la foncière joue le rôle de bailleur social pérenne. La
     construction en matériaux sains permet des charges résidentielles
     nettement réduites par rapport au logement social conventionnel.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: economie_marchande
   commentaire: >
     Foncière de forme sociétaire à finalité solidaire, agréée ESUS ; la
     non-lucrativité repose sur l'agrément et les clauses encadrant le capital.
@@ -72,6 +72,12 @@ grille:
   - critere: risque_requalification
     valeur: partiel
     note: "L'agrément ESUS sécurise la finalité sociale, mais il n'a pas la stabilité d'une reconnaissance d'utilité publique."
+  - critere: regime_usage_offert
+    valeur: oui
+    note: "La foncière loue son parc à des ménages à très faibles revenus avec des charges fortement réduites, dans une logique de logement social et non de revenu locatif de marché."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "La foncière conserve durablement la propriété et joue le rôle de bailleur social pérenne, mais la nature et la durée des titres d'usage offerts aux locataires ne sont pas détaillées par les sources."
   - critere: redevabilite_publique
     valeur: partiel
     note: "L'agrément ESUS et la maîtrise d'ouvrage d'insertion soumettent la foncière à un cadre de contrôle, mais le détail de la reddition de comptes au public n'est pas documenté."

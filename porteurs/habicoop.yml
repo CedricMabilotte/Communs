@@ -27,8 +27,8 @@ montage:
     chaque ménage est locataire de son logement et détenteur de parts sociales,
     dont la valeur est déconnectée de celle du bien. Habicoop accompagne la
     création de ces coopératives et défend leur cadre juridique.
-purete_juridique:
-  niveau: civil_non_lucratif
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Association loi 1901 sans capital appropriable ; le modèle de coopérative
     d'habitants qu'elle promeut relève du droit coopératif non spéculatif.
@@ -75,6 +75,12 @@ grille:
   - critere: risque_requalification
     valeur: partiel
     note: "Habicoop n'est pas reconnue d'utilité publique ; sa qualité d'intérêt général repose sur son objet et son fonctionnement effectif."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "Habicoop ne porte pas de foncier et ne confie pas elle-même d'usage : le régime d'usage dépend des coopératives d'habitants qu'elle accompagne et n'est pas appréciable à son niveau."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "Habicoop n'accorde pas de titres d'usage ; dans le modèle qu'elle promeut, les habitant·es sont locataires de leur logement, mais la sécurité d'usage relève des coopératives elles-mêmes."
   - critere: redevabilite_publique
     valeur: partiel
     note: "Habicoop rend compte de son action auprès de son réseau et du public, mais ne relève pas d'un contrôle public comparable à celui d'une fondation reconnue d'utilité publique."

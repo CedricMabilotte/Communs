@@ -32,8 +32,8 @@ montage:
     la coopérative et décident collectivement du devenir du lieu. La nature
     exacte des titres d'occupation des logements et les clauses statutaires de
     la coopérative ne sont pas détaillées par les sources publiques.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: mutualisme
   commentaire: >
     Foncier porté par une SAS coopérative à gouvernance partagée : forme
     sociétaire à vocation solidaire, dont l'anti-spéculation dépend des clauses
@@ -72,6 +72,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: partiel
     note: "La transformation en SAS coopérative vise une gouvernance durable, mais les dispositifs de transmission et de renouvellement ne sont pas tous documentés."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le foncier est porté par une SAS coopérative : société commerciale, mais de forme coopérative encadrant la lucrativité. La présence éventuelle d'un autre maillon n'est pas documentée."
+  - critere: usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'accès aux logements et aux fruits du lieu (gratuité, contribution, tarification) n'est pas documenté par les sources."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "La nature et le montant des redevances ou loyers versés au sein du montage ne sont pas documentés ; le foncier a été financé notamment par des prêts en viager des habitant·es."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature exacte des titres d'occupation des logements et leur durée ne sont pas détaillées par les sources."
 analyse:
   forces:
     - "Gouvernance partagée organisée par une SAS coopérative depuis 2023."

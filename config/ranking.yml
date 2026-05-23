@@ -1,25 +1,28 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# ranking.yml — L'Indice de libération
+# ranking.yml — L'Indice de libération (modèle v2, à 5 axes)
 # ─────────────────────────────────────────────────────────────────────────────
-# Le classement mesure à quel point un montage (porteur, usufruitier ou lieu)
-# se rapproche de trois finalités, chacune un AXE noté de 0 à 100 :
+# L'Indice mesure à quel point un montage (porteur, usufruitier ou lieu) se
+# rapproche d'une libération réelle des terres. Il décompose le montage en CINQ
+# axes — cinq facettes indépendantes, du sol vers les gens puis vers le temps :
 #
-#   A — Intérêt général
-#   B — Libération des terres (sortie du marché, irréversibilité)
-#   C — Gouvernance participative d'intérêt général
+#   1 — Le sol        soustraction durable au marché
+#   2 — La structure  nature civile et non lucrative du montage
+#   3 — Le pouvoir    gouvernance citoyenne et collective de l'usage
+#   4 — La finalité   vocation d'intérêt général ouverte
+#   5 — L'usage       régime d'usage non marchand et sécurité dans le temps
 #
 # Chaque critère des grilles (grilles.yml) est rattaché à un axe et pondéré.
 # Pour une fiche : score_axe = Σ(poids × facteur) / Σ(poids) × 100, où le
-# facteur dépend de la valeur cochée dans la fiche (voir `valeurs` ci-dessous).
-# Les critères « inconnu » sont EXCLUS du dénominateur (non pénalisants mais
-# signalés comme angle mort).
+# facteur dépend de la valeur cochée (voir `valeurs`). Les critères « inconnu »
+# sont EXCLUS du dénominateur (non pénalisants, mais signalés comme angle mort).
 #
-# L'Indice de libération global = moyenne pondérée des trois axes.
-# La « pureté juridique » est un indicateur COMPLÉMENTAIRE, affiché à part :
-# il ne pèse pas dans l'Indice mais éclaire la nature du montage.
+# L'Indice de libération global est une AGRÉGATION NON COMPENSATOIRE des axes
+# (moyenne géométrique) : l'axe le plus faible commande le résultat, de sorte
+# qu'une force ne puisse jamais racheter une faiblesse. Voir `indice`.
 # ─────────────────────────────────────────────────────────────────────────────
-version: 1
+version: 2
 date: 2026-05-23
+remplace: "modèle v1 à 3 axes (A/B/C) — voir recherche/04-methodologie-cadre-conceptuel.pdf"
 
 # ── Mapping des valeurs cochées dans les fiches → facteur de score ───────────
 valeurs:
@@ -28,134 +31,235 @@ valeurs:
   non:     0.0      # critère non rempli
   inconnu: null     # exclu du calcul (angle mort signalé)
 
-# ── Les trois axes ───────────────────────────────────────────────────────────
+# ── Les cinq axes ────────────────────────────────────────────────────────────
+# `domicile` : maillon de la chaîne lieu/porteur/usufruitier où l'axe se joue
+# réellement (voir `chaine`). Pour une fiche notée seule, l'axe est lu sur la
+# fiche elle-même ; pour un lieu, il est lu au domicile indiqué.
 axes:
-  - id: A
-    label: "Intérêt général"
-    couleur: "#4a7a3a"
-    question: >
-      Le montage est-il non lucratif, à gestion désintéressée, et son usage
-      sert-il un intérêt qui dépasse le cercle de ses occupants ?
-    description: >
-      Mesure l'ancrage dans l'intérêt général : forme non lucrative,
-      reconnaissance ou éligibilité publique, objet statutaire, absence de
-      cercle restreint, utilité pour le territoire.
-  - id: B
-    label: "Libération des terres"
+  - id: 1
+    label: "Le sol"
+    court: "Soustraction au marché"
     couleur: "#bc5d3a"
+    domicile: porteur
     question: >
-      Le foncier est-il réellement sorti du marché spéculatif, et la sortie
-      est-elle irréversible ?
+      Le foncier est-il durablement soustrait à la sphère marchande et
+      spéculative, et la sortie est-elle irréversible ?
     description: >
-      Mesure la soustraction effective au marché : inaliénabilité, nature
-      protectrice du porteur, clause de dévolution, durée de l'usage, origine
-      non spéculative de l'acquisition.
-  - id: C
-    label: "Gouvernance participative"
+      Mesure la soustraction effective au marché : inaliénabilité, parts ou
+      titres non cessibles, nature protectrice du porteur, clause de dévolution
+      désintéressée, origine non spéculative de l'acquisition.
+  - id: 2
+    label: "La structure"
+    court: "Nature civile et non lucrative"
+    couleur: "#4a6b8a"
+    domicile: chaine_min
+    question: >
+      Le montage relève-t-il du droit civil non lucratif, avec des verrous
+      statutaires effectifs — et non du droit commercial, fût-il habillé de
+      vocabulaire social ?
+    description: >
+      Mesure la nature juridique : forme non lucrative, non-lucrativité
+      effective (capital non rémunéré), indépendance vis-à-vis d'une logique de
+      rendement, gestion désintéressée. C'est l'axe qui démasque les « faux
+      amis ». Lu sur toute la chaîne : le maillon le plus faible commande.
+  - id: 3
+    label: "Le pouvoir"
+    court: "Gouvernance citoyenne"
     couleur: "#36748a"
+    domicile: usufruitier
     question: >
-      Les usager·es et les parties prenantes décident-ils collectivement, et
-      la gouvernance se renouvelle-t-elle ?
+      L'usage est-il gouverné collectivement par ses usager·es-citoyen·nes, de
+      façon autogérée et horizontale, plutôt que par un conseil mandaté, un
+      sociétariat fermé ou un actionnariat ?
     description: >
-      Mesure le caractère participatif et pérenne de la gouvernance :
-      collégialité, principe « une personne = une voix », association du
-      voisinage et des citoyens, transparence, transmission.
+      Mesure la gouvernance citoyenne : décision collective, principe « une
+      personne = une voix », usager·es décideur·ses, ouverture aux nouveaux
+      entrants, transparence interne.
+  - id: 4
+    label: "La finalité"
+    court: "Vocation d'intérêt général"
+    couleur: "#4a7a3a"
+    domicile: chaine_min
+    question: >
+      Le projet porte-t-il une finalité d'intérêt général ouverte — un
+      bénéficiaire au-delà du cercle des membres — affirmée indépendamment de
+      toute reconnaissance d'État ?
+    description: >
+      Mesure la vocation d'intérêt général d'initiative citoyenne : objet
+      d'intérêt général, public non restreint, ancrage territorial et
+      ouverture, redevabilité publique. La reconnaissance d'État est un simple
+      tag informatif, jamais un bonus. Lu sur toute la chaîne.
+  - id: 5
+    label: "L'usage"
+    court: "Régime non marchand et sécurité"
+    couleur: "#b0822f"
+    domicile: convention
+    question: >
+      L'usage repose-t-il sur la gratuité, le don ou le troc — ou un loyer
+      modéré intégralement réinvesti — plutôt que sur une rentabilité ? Et le
+      collectif usager peut-il maîtriser le lieu durablement ?
+    description: >
+      Mesure le régime d'usage et sa sécurité dans le temps : usage non
+      marchand (gratuité, don, troc) ou loyer soutenable et réinvesti,
+      durée et renouvellement de l'usage, sécurité de jouissance, articulation
+      loyale avec le porteur. C'est l'axe relationnel : il se joue dans la
+      convention qui lie porteur et usufruitier.
 
 # ── Composition de l'Indice de libération ───────────────────────────────────
 indice:
   label: "Indice de libération"
   abrev: "IdL"
   max: 100
-  # Pondération des axes. Volontairement ÉGALE : les trois finalités sont
-  # tenues pour aussi importantes l'une que l'autre. La transparence du calcul
-  # prime sur tout réglage fin.
-  ponderation:
-    A: 1
-    B: 1
-    C: 1
+  representation_premiere: >
+    La lecture première de l'Indice est le PROFIL : le radar à cinq branches
+    qui donne, d'un coup d'œil, la silhouette du montage. Le chiffre 0-100
+    n'est qu'une synthèse de ce profil.
+  agregation: geometrique
   formule: >
-    IdL = (score_A × 1 + score_B × 1 + score_C × 1) / 3
-  note_fiabilite: >
-    L'Indice n'a de sens que si la fiche est suffisamment renseignée. Une part
-    élevée de critères « inconnu » abaisse la fiabilité : elle est affichée
-    séparément (taux de complétude de la grille).
+    IdL_brut = (score_1 × score_2 × … × score_k) ^ (1 / k), où k est le nombre
+    d'axes effectivement renseignés (axes entièrement « inconnu » exclus).
+  justification_agregation: >
+    L'agrégation est NON COMPENSATOIRE. Une moyenne arithmétique laisserait un
+    montage solide sur quatre axes mais commercial de nature (axe 2 effondré)
+    racheter sa faiblesse par ses forces. La moyenne géométrique fait peser
+    l'axe le plus faible : un « faux ami » ne peut structurellement pas
+    afficher un score élevé. Le jugement est porté par la forme mathématique,
+    sans règle ad hoc.
   penalite_completude: >
     Pour ne pas surnoter les fiches lacunaires, l'indice affiché est pénalisé
     par la complétude : idl_affiche = round(idl_brut × (0,5 + 0,5 × complétude)).
     Une fiche entièrement renseignée n'est pas pénalisée ; une fiche dont la
     moitié des critères sont « inconnu » voit son indice ramené aux trois quarts
-    de l'indice brut. L'indice brut (idl_brut) reste conservé et affiché pour
-    information. C'est l'indice affiché, pénalisé, qui sert au badge, au
-    classement et à l'export data.json.
+    de l'indice brut. C'est l'indice affiché qui sert au badge, au classement
+    et à l'export data.json ; l'indice brut reste conservé pour information.
+
+# ── La chaîne lieu / porteur / usufruitier ───────────────────────────────────
+# Le modèle évalue des CHAÎNES, pas des entités isolées. Chaque axe a un
+# domicile : le maillon où il se joue réellement. Ce n'est pas un sixième axe,
+# c'est la règle qui dit quel maillon alimente quel axe.
+chaine:
+  domiciliage:
+    - axe: 1
+      regle: "Lu chez le PORTEUR — seul détenteur de la nue-propriété."
+    - axe: 2
+      regle: "Lu sur TOUTE la chaîne — maillon le plus faible : un seul lien
+              commercial contamine l'axe."
+    - axe: 3
+      regle: "Lu chez l'USUFRUITIER — qui gouverne l'usage au quotidien."
+    - axe: 4
+      regle: "Lu sur TOUTE la chaîne — maillon le plus faible."
+    - axe: 5
+      regle: "Lu dans la CONVENTION porteur/usufruitier — bail, loyer,
+              sécurité de jouissance."
+  coherence: >
+    Une chaîne est saine tant qu'aucun maillon ne bascule dans le régime
+    commercial, idéalement avec une entité du pôle « commun citoyen » à
+    l'extrémité usage. Une collectivité publique en nue-propriété et une
+    association citoyenne en usufruit forment une excellente chaîne :
+    l'adversaire est le commerce, non l'institution.
+
+# ── Option A intelligente : indice intrinsèque et indice effectif ────────────
+# Un porteur (ou un usufruitier) noté seul est jugé sur ce qu'il EST, mais
+# aussi sur les chaînes qu'il NOUE : une entité n'existe, comme actrice de la
+# libération des terres, qu'à travers ses montages réels.
+option_a:
+  indice_intrinseque: >
+    Note l'entité sur ses propres critères. Stable, ne dépend pas des
+    partenaires.
+  indice_effectif: >
+    Relit l'indice intrinsèque à travers les chaînes de l'entité. C'est
+    l'indice affiché et classant ; l'écart avec l'intrinsèque est toujours
+    annoté avec sa cause.
+  disciplines:
+    - "Plafonner, pas moyenner : une mauvaise chaîne plafonne un axe ; une
+       bonne chaîne ne rehausse pas au-delà du plafond intrinsèque (asymétrie
+       probatoire)."
+    - "Cibler, pas globaliser : la contamination ne touche que les axes où la
+       chaîne fait preuve sur l'entité (axe 5, et axes 2 et 4) ; l'axe 1 reste
+       intrinsèque au porteur."
+    - "Lire le motif, pas l'instance : la contamination lit la distribution
+       des chaînes, pas un cas isolé."
+    - "Lire la trajectoire, pas l'instantané : une chaîne en cours de
+       dé-précarisation compte comme l'entité faisant son travail."
+    - "Rendre lisible : l'écart intrinsèque/effectif est toujours affiché et
+       annoté — un score instable mais expliqué vaut mieux qu'un score stable
+       mais fictif."
+  mise_en_oeuvre: >
+    Pour chaque axe contaminable (2, 4, 5), l'indice effectif retient le
+    minimum entre le score intrinsèque de l'entité et le score médian de cet
+    axe sur ses chaînes. L'axe 1 et l'axe 3 ne sont pas contaminés. Faute de
+    chaîne renseignée, l'indice effectif égale l'indice intrinsèque.
 
 # ── Paliers (tiers) de lecture de l'Indice ───────────────────────────────────
-# Seuils calibrés sur la dispersion réelle du corpus au 2026-05-23, après
-# application de la pénalité de complétude. À réviser à chaque élargissement
-# notable du corpus.
+# Seuils PROVISOIRES : l'agrégation géométrique abaisse mécaniquement les
+# scores par rapport à la moyenne arithmétique. À recalibrer sur la dispersion
+# réelle du corpus après la première régénération du modèle v2.
 paliers:
   - id: abouti
-    min: 85
+    min: 78
     label: "Libération aboutie"
     couleur: "#356026"
     sens: >
-      Montage non lucratif, foncier durablement verrouillé, gouvernance
-      participative et organisée pour durer. Modèle de référence.
+      Les cinq axes sont tenus : foncier verrouillé, montage civil non
+      lucratif, gouvernance citoyenne, finalité ouverte, usage non marchand et
+      sécurisé. Profil de référence.
   - id: solide
-    min: 72
+    min: 64
     label: "Montage solide"
     couleur: "#4a7a3a"
     sens: >
-      Le montage atteint les trois finalités avec quelques marges de
-      consolidation, souvent sur la gouvernance ou l'irréversibilité.
+      Le montage atteint l'ensemble des finalités avec une ou deux marges de
+      consolidation, sans axe effondré.
   - id: engage
-    min: 58
+    min: 50
     label: "Engagement réel"
     couleur: "#b08431"
     sens: >
-      La démarche est sincère et avancée mais un axe reste nettement en
-      retrait — verrou foncier incomplet ou gouvernance peu participative.
+      La démarche est sincère et avancée, mais un axe reste nettement en
+      retrait et tire l'ensemble vers le bas.
   - id: partiel
-    min: 42
+    min: 35
     label: "Libération partielle"
     couleur: "#bc5d3a"
     sens: >
-      Le montage emprunte au modèle sans en réunir les garanties : sortie du
-      marché fragile, intérêt général discutable ou gouvernance fermée.
+      Le montage emprunte au modèle sans en réunir les garanties : au moins un
+      axe est faible — nature commerciale, usage rentier ou gouvernance fermée.
   - id: eloigne
     min: 0
     label: "Éloigné du modèle"
     couleur: "#8f3829"
     sens: >
-      Le foncier reste largement dans une logique de marché ou de cercle
-      restreint ; la parenté avec la libération des terres est surtout
-      revendiquée.
+      Plusieurs axes sont faibles ou effondrés ; la parenté avec la libération
+      des terres est surtout revendiquée.
 
-# ── Indicateur complémentaire : pureté juridique ─────────────────────────────
-# N'entre PAS dans l'Indice. Renseigné éditorialement dans chaque fiche
-# (champ `purete_juridique`). Situe le montage sur l'axe « reste-t-on
-# strictement en droit civil privé et non lucratif ? ».
-purete_juridique:
-  label: "Nature juridique du montage"
+# ── Indicateur complémentaire : intégrité du montage ─────────────────────────
+# N'entre PAS dans l'Indice. Situe le montage par rapport aux cinq pôles
+# (voir concepts.yml). Remplace l'ancien indicateur « pureté juridique ».
+integrite_montage:
+  label: "Intégrité du montage"
   question: >
-    De quel régime relève le montage ? L'indicateur situe — il ne classe pas :
-    chaque régime a ses forces.
+    Toute la chaîne lieu/porteur/usufruitier tient-elle dans le droit civil
+    d'intérêt général, sans maillon commercial ?
   note_lecture: >
-    Cet indicateur n'est PAS une échelle de qualité. La protection effective du
-    foncier est mesurée par l'axe B de l'Indice. Ici, on situe seulement le
-    régime juridique du montage : voir la page « Trois régimes du sol ».
+    Cet indicateur situe — il ne classe pas. La protection effective du
+    foncier est mesurée par l'axe 1, la nature par l'axe 2. Ici on indique
+    seulement le pôle dominant du montage (voir la page « Cinq pôles »).
   niveaux:
-    - id: civil_non_lucratif
-      label: "Droit civil non lucratif"
-      sens: "Fondation, association, société civile sans lucrativité ni parts cessibles."
-    - id: civil_encadre
-      label: "Droit civil sous encadrement public"
-      sens: "Droit civil mais agrément, plafonds ou contrôle étatique fort."
-    - id: societaire_solidaire
-      label: "Forme sociétaire solidaire"
-      sens: "Société (SCA, coopérative) à vocation solidaire ; parts cessibles, lucrativité possible."
-    - id: droit_public
-      label: "Droit public"
-      sens: "Le foncier relève de la domanialité ou d'un établissement public."
+    - id: commun_citoyen
+      label: "Commun citoyen"
+      sens: "Chaîne entièrement en droit civil non lucratif, gouvernance citoyenne autogérée."
+    - id: ig_institue
+      label: "Intérêt général institué"
+      sens: "Droit civil non lucratif, mais gouvernance descendante (conseil, tutelle, donateurs)."
+    - id: mutualisme
+      label: "Mutualisme d'usagers"
+      sens: "Forme sociétaire (SCIC, coopérative) ; bénéficiaire = le sociétariat."
+    - id: economie_marchande
+      label: "Économie sociale marchande"
+      sens: "Société commerciale à rendement modéré et posture sociale."
+    - id: propriete_marchande
+      label: "Propriété marchande"
+      sens: "Propriété privée ordinaire ; le foncier reste un actif."
 
 # ── Drapeaux de fiabilité affichés sur chaque fiche ──────────────────────────
 fiabilite:

@@ -29,8 +29,8 @@ montage:
     d'exploitation. Ce montage facilite l'installation, mais l'option d'achat
     réintroduit la perspective d'une appropriation individuelle du foncier :
     la sortie du marché n'est, en ce cas, que temporaire.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: economie_marchande
   commentaire: >
     Foncière de forme sociétaire reposant sur un actionnariat citoyen ; l'option
     d'achat consentie au preneur peut conduire le foncier à quitter le portage
@@ -78,6 +78,12 @@ grille:
   - critere: risque_requalification
     valeur: partiel
     note: "FEVE relève de la finance solidaire mais n'est pas reconnue d'intérêt général ; sa solidité repose sur ses clauses statutaires plutôt que sur une qualification fiscale."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "L'usage est confié par bail rural, dont le fermage est encadré réglementairement et n'est pas un loyer de marché ; le détail des conditions financières pratiquées par FEVE n'est pas documenté."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le bail rural offre une jouissance d'au moins neuf ans avec droit au renouvellement, mais l'option d'achat consentie au preneur oriente le montage vers une acquisition individuelle plutôt que vers une sécurité d'usage collective durable."
   - critere: redevabilite_publique
     valeur: partiel
     note: "FEVE communique sur son activité auprès de ses épargnant·es, mais ne relève pas d'un contrôle public comparable à celui d'une fondation reconnue d'utilité publique."

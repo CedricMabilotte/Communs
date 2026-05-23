@@ -24,16 +24,18 @@ montage:
     mutation et l'encadrement du prix de revente neutralisent la spéculation. Le
     dispositif relève d'une logique de politique publique du logement, fortement
     encadrée par l'État.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Montage non lucratif mais fortement encadré par l'État (agrément préfectoral,
     plafonds de ressources) ; l'OFS porte la pleine propriété du sol et non une
     simple nue-propriété.
 axes_estimes:
-  A: 90
-  B: 90
-  C: 50
+  1: 90
+  2: 85
+  3: 50
+  4: 85
+  5: 80
 analyse:
   forces:
     - "Bail rechargé à chaque mutation : sortie du marché potentiellement perpétuelle."

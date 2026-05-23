@@ -1,21 +1,22 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# grilles.yml — Grilles de lecture et d'analyse stratégique
+# grilles.yml — Grilles de lecture et d'analyse stratégique (modèle v2)
 # ─────────────────────────────────────────────────────────────────────────────
 # Une grille complète par catégorie (porteur · usufruitier · lieu). Chaque grille
-# comporte (1) des FAMILLES de critères de lecture, chaque critère rattaché à un
-# AXE du ranking (A/B/C) et pondéré ; (2) une LECTURE STRATÉGIQUE qui cadre les
-# enjeux, forces typiques, fragilités typiques et leviers de la catégorie.
+# comporte CINQ familles de critères, une par axe du modèle, plus une LECTURE
+# STRATÉGIQUE. Chaque critère est rattaché à un AXE (1 à 5) et pondéré.
 #
 # Ce fichier est ÉDITABLE : ajouter / retirer / repondérer des critères ici
 # suffit — le générateur recalcule scores et fiches. Chaque fiche YAML évalue
 # ces critères via une liste `grille:` (valeur : oui | partiel | non | inconnu).
 #
-# Axes du ranking (définis dans ranking.yml) :
-#   A — Intérêt général
-#   B — Libération des terres (sortie du marché, irréversibilité)
-#   C — Gouvernance participative d'intérêt général
+# Les cinq axes (définis dans ranking.yml) :
+#   1 — Le sol         soustraction durable au marché
+#   2 — La structure   nature civile et non lucrative
+#   3 — Le pouvoir     gouvernance citoyenne et collective
+#   4 — La finalité    vocation d'intérêt général ouverte
+#   5 — L'usage        régime non marchand et sécurité dans le temps
 # ─────────────────────────────────────────────────────────────────────────────
-version: 1
+version: 2
 date: 2026-05-23
 
 grilles:
@@ -27,154 +28,182 @@ grilles:
     titre: "Grille de lecture — Porteur de nue-propriété"
     objet: >
       Apprécier la solidité d'un organisme appelé à détenir durablement la
-      nue-propriété d'un foncier : sa nature non lucrative, sa capacité à
-      verrouiller la terre hors marché, la robustesse de sa gouvernance.
+      nue-propriété d'un foncier : sa capacité à verrouiller la terre hors
+      marché, sa nature non lucrative, sa gouvernance, sa vocation d'intérêt
+      général et la qualité des usages qu'il rend possibles.
     familles:
-      - id: statut_ig
-        label: "Statut et intérêt général"
-        criteres:
-          - id: forme_non_lucrative
-            label: "Forme juridique non lucrative"
-            axe: A
-            poids: 2
-            definition: >
-              L'organisme relève d'une forme structurellement non lucrative
-              (fondation, fonds de dotation, établissement public, association).
-          - id: non_lucrativite_effective
-            label: "Non-lucrativité effective (capital non rémunéré)"
-            axe: A
-            poids: 3
-            definition: >
-              Le capital apporté n'est pas rémunéré : ni dividende, ni intérêt,
-              ni plus-value distribuée aux apporteurs. « partiel » si une
-              revalorisation des parts existe, même plafonnée à l'inflation ;
-              « non » si dividende ou plus-value sont possibles.
-          - id: agrement_ig
-            label: "Reconnaissance publique ou éligibilité à l'intérêt général"
-            axe: A
-            poids: 3
-            definition: >
-              Reconnaissance d'utilité publique, agrément public, ou
-              éligibilité avérée au régime fiscal de l'intérêt général.
-          - id: objet_foncier_protecteur
-            label: "Objet statutaire de protection foncière"
-            axe: A
-            poids: 2
-            definition: >
-              Les statuts mentionnent explicitement la préservation du foncier,
-              sa soustraction au marché ou son affectation d'intérêt général.
-          - id: gestion_desinteressee
-            label: "Gestion désintéressée, hors cercle restreint"
-            axe: A
-            poids: 2
-            definition: >
-              Dirigeants bénévoles ou rémunération encadrée ; l'organisme ne
-              fonctionne pas au profit d'un cercle restreint de personnes.
-          - id: risque_requalification
-            label: "Absence de risque de requalification fiscale"
-            axe: A
-            poids: 1
-            definition: >
-              L'organisme n'est pas exposé à un risque sérieux de requalification
-              fiscale faisant perdre l'intérêt général. Une reconnaissance
-              d'utilité publique ou un statut d'établissement public sécurise
-              durablement la qualification ; un fonds de dotation redistributeur,
-              dont la qualité d'intérêt général n'est jamais définitivement
-              acquise, y est davantage exposé.
-      - id: verrou_foncier
-        label: "Verrouillage du foncier hors marché"
+      - id: sol
+        label: "Le sol — soustraction au marché"
+        axe: 1
         criteres:
           - id: inalienabilite
             label: "Inaliénabilité / dotation non consomptible"
-            axe: B
+            axe: 1
             poids: 3
             definition: >
               Le foncier est rendu inaliénable au sein de l'organisme (dotation
               non consomptible d'un fonds de dotation, domanialité, clause
-              statutaire d'inaliénabilité temporaire et justifiée).
+              statutaire d'inaliénabilité justifiée).
           - id: parts_non_cessibles
             label: "Parts / titres non cessibles ou cession encadrée"
-            axe: B
+            axe: 1
             poids: 3
             definition: >
               Les parts, actions ou titres de la structure ne sont pas
               librement cessibles sur un marché : soit la structure n'a pas de
-              capital social appropriable (fondation, association), soit ses
-              statuts encadrent strictement la cession (agrément, prix plafonné
-              à la valeur nominale, inaliénabilité). « oui » : aucune part
+              capital appropriable (fondation, association), soit ses statuts
+              encadrent strictement la cession. « oui » : aucune part
               appropriable, ou cession verrouillée au nominal ; « partiel » :
               cession soumise à agrément mais à un prix non plafonné ; « non » :
               parts librement cessibles, valeur foncière captable.
           - id: nature_protectrice
             label: "Nature juridique protectrice"
-            axe: B
+            axe: 1
             poids: 2
             definition: >
               Échelle de protection décroissante : personne publique >
               fondation RUP > fonds de dotation > société civile.
           - id: clause_devolution
             label: "Clause de dévolution désintéressée"
-            axe: B
+            axe: 1
             poids: 2
             definition: >
               En cas de dissolution, l'actif est dévolu à un autre organisme
               désintéressé : aucun retour possible dans un patrimoine privé.
+      - id: structure
+        label: "La structure — nature civile et non lucrative"
+        axe: 2
+        criteres:
+          - id: forme_non_lucrative
+            label: "Forme juridique non lucrative"
+            axe: 2
+            poids: 2
+            definition: >
+              L'organisme relève d'une forme structurellement non lucrative
+              (fondation, fonds de dotation, établissement public, association)
+              — et non d'une société commerciale, fût-elle solidaire.
+          - id: non_lucrativite_effective
+            label: "Non-lucrativité effective (capital non rémunéré)"
+            axe: 2
+            poids: 3
+            definition: >
+              Le capital apporté n'est pas rémunéré : ni dividende, ni intérêt,
+              ni plus-value distribuée. « partiel » si une revalorisation des
+              parts existe, même plafonnée ; « non » si dividende ou plus-value
+              sont possibles.
+          - id: gestion_desinteressee
+            label: "Gestion désintéressée, hors cercle restreint"
+            axe: 2
+            poids: 2
+            definition: >
+              Dirigeants bénévoles ou rémunération encadrée ; l'organisme ne
+              fonctionne pas au profit d'un cercle restreint de personnes.
           - id: independance_rendement
             label: "Indépendance vis-à-vis d'une logique de rendement"
-            axe: B
+            axe: 2
             poids: 3
             definition: >
               Le capital n'est pas soumis à des investisseurs attendant une
               plus-value ou un dividende sur le foncier.
-      - id: gouvernance
-        label: "Gouvernance et redevabilité"
+      - id: pouvoir
+        label: "Le pouvoir — gouvernance citoyenne"
+        axe: 3
         criteres:
           - id: ca_collegial
             label: "Conseil d'administration collégial et indépendant"
-            axe: C
+            axe: 3
             poids: 2
             definition: >
               Organe de direction pluraliste, indépendant du fondateur unique
               et des intérêts privés.
           - id: parties_prenantes
             label: "Parties prenantes associées à la gouvernance"
-            axe: C
-            poids: 2
+            axe: 3
+            poids: 3
             definition: >
-              Usagers, citoyens, collectivités ou donateurs sont représentés
-              dans les instances ou consultés.
+              Usager·es, citoyen·nes, collectivités ou donateur·rices sont
+              représenté·es dans les instances ou réellement consulté·es.
           - id: transparence
             label: "Transparence des comptes et de l'activité"
-            axe: C
+            axe: 3
             poids: 2
             definition: >
               Publication régulière des comptes, rapports d'activité, liste
               des biens portés.
-          - id: redevabilite_publique
-            label: "Redevabilité publique de l'organisme"
-            axe: C
+      - id: finalite
+        label: "La finalité — vocation d'intérêt général"
+        axe: 4
+        criteres:
+          - id: objet_foncier_protecteur
+            label: "Objet statutaire de protection foncière"
+            axe: 4
+            poids: 3
+            definition: >
+              Les statuts mentionnent explicitement la préservation du foncier,
+              sa soustraction au marché ou son affectation d'intérêt général.
+          - id: agrement_ig
+            label: "Reconnaissance publique ou éligibilité à l'intérêt général"
+            axe: 4
             poids: 1
             definition: >
-              L'organisme rend compte de son action au-delà de ses seuls
-              membres : contrôle de l'État, reddition de comptes au public,
-              publication de rapports d'activité accessibles à tous.
+              Reconnaissance d'utilité publique, agrément public, ou
+              éligibilité avérée au régime fiscal de l'intérêt général. Tag
+              informatif : la reconnaissance d'État n'est pas un gage de
+              libération, seulement un fait à signaler.
+          - id: risque_requalification
+            label: "Absence de risque de requalification fiscale"
+            axe: 4
+            poids: 1
+            definition: >
+              L'organisme n'est pas exposé à un risque sérieux de
+              requalification fiscale faisant perdre la qualité d'intérêt
+              général.
+          - id: redevabilite_publique
+            label: "Redevabilité au-delà des seuls membres"
+            axe: 4
+            poids: 2
+            definition: >
+              L'organisme rend compte de son action au-delà de ses membres :
+              reddition de comptes au public, rapports accessibles à tous.
+      - id: usage
+        label: "L'usage — régime et sécurité"
+        axe: 5
+        criteres:
+          - id: regime_usage_offert
+            label: "Usage confié à des conditions non rentières"
+            axe: 5
+            poids: 3
+            definition: >
+              Le porteur confie l'usage de ses fonciers à titre gratuit, ou
+              contre un loyer modéré couvrant ses charges sans rechercher de
+              rendement. « non » si le porteur attend du foncier un revenu
+              locatif de marché.
+          - id: securite_usage_offerte
+            label: "Sécurité d'usage durable offerte aux usufruitiers"
+            axe: 5
+            poids: 3
+            definition: >
+              Le porteur accorde des titres d'usage longs et au renouvellement
+              sécurisé (bail rural, bail emphytéotique, convention pérenne),
+              permettant au collectif usager de maîtriser le lieu dans la durée.
     lecture_strategique:
       enjeu: >
         Le porteur est le coffre-fort du montage. Sa valeur tient moins à sa
-        taille qu'à l'irréversibilité qu'il garantit : un foncier mal verrouillé
-        chez un porteur fragile peut revenir au marché en une génération.
+        taille qu'à l'irréversibilité qu'il garantit — et à la qualité des
+        usages qu'il rend possibles : un foncier verrouillé mais loué au prix
+        du marché n'a libéré la terre qu'à moitié.
       forces_typiques:
         - "Permanence : une personne morale ne meurt pas, contrairement à un propriétaire."
-        - "Le régime fiscal du mécénat draine dons et legs vers la protection foncière."
-        - "La dotation non consomptible rend la sortie du foncier juridiquement très difficile."
+        - "Le régime du mécénat draine dons et legs vers la protection foncière."
+        - "La dotation non consomptible rend la sortie du foncier très difficile."
       fragilites_typiques:
-        - "Un fonds de dotation se crée sans agrément : la solidité dépend entièrement des statuts."
-        - "La qualité d'intérêt général n'est jamais acquise et peut être requalifiée."
+        - "Un fonds de dotation se crée sans agrément : tout dépend des statuts."
         - "Un porteur dépendant d'investisseurs en rendement n'a libéré la terre qu'en apparence."
+        - "Un loyer trop élevé fragilise le collectif usager, même si le foncier est verrouillé."
       leviers:
         - "Rédiger une dotation non consomptible et un objet statutaire foncier précis."
         - "Soigner la clause de dévolution : c'est elle qui interdit le retour au privé."
-        - "Ouvrir la gouvernance aux usagers et aux collectivités pour ancrer l'intérêt général."
+        - "Confier l'usage à des conditions non rentières et à des titres longs."
 
   # ═══════════════════════════════════════════════════════════════════════════
   # GRILLE 2 — ORGANISME USUFRUITIER
@@ -182,149 +211,175 @@ grilles:
   usufruitier:
     titre: "Grille de lecture — Organisme usufruitier"
     objet: >
-      Apprécier la personne morale de droit civil qui reçoit l'usufruit ou
-      l'usage : son caractère non lucratif et d'intérêt général, la sécurité
-      de l'usage qu'elle détient, et le caractère participatif de sa gouvernance.
+      Apprécier la personne morale qui reçoit l'usufruit ou l'usage : la
+      non-cessibilité de ce qu'elle détient, sa nature civile non lucrative, le
+      caractère citoyen de sa gouvernance, sa vocation d'intérêt général et le
+      régime d'usage qu'elle fait vivre.
     familles:
-      - id: statut_ig
-        label: "Statut et intérêt général"
+      - id: sol
+        label: "Le sol — soustraction au marché"
+        axe: 1
+        criteres:
+          - id: non_appropriation
+            label: "Pas d'appropriation possible du foncier"
+            axe: 1
+            poids: 3
+            definition: >
+              Les usager·es ne peuvent ni revendre, ni capter à titre privé la
+              valeur du foncier.
+          - id: parts_non_cessibles
+            label: "Parts / titres non cessibles ou cession encadrée"
+            axe: 1
+            poids: 3
+            definition: >
+              Les parts ou titres de la structure ne sont pas librement
+              cessibles : pas de capital appropriable (association), ou cession
+              strictement encadrée. « oui » : aucune part appropriable, ou
+              cession au nominal ; « partiel » : cession sous agrément à prix
+              non plafonné ; « non » : parts librement cessibles.
+          - id: devolution_usufruitier
+            label: "Clause de dévolution désintéressée"
+            axe: 1
+            poids: 2
+            definition: >
+              En cas de dissolution, l'actif de l'usufruitier est dévolu à un
+              organisme désintéressé : aucun retour de valeur vers les membres.
+      - id: structure
+        label: "La structure — nature civile et non lucrative"
+        axe: 2
         criteres:
           - id: personne_morale_civile
             label: "Personne morale de droit civil non lucrative"
-            axe: A
+            axe: 2
             poids: 3
             definition: >
-              Association loi 1901, société civile non lucrative, coopérative
-              ou GFA — et non une société commerciale de droit privé classique.
-          - id: objet_ig
-            label: "Objet d'intérêt général"
-            axe: A
-            poids: 3
-            definition: >
-              L'objet porte un intérêt général identifié : agriculture
-              paysanne, accès à la terre, écologie, habitat digne, éducation.
+              Association loi 1901, société civile non lucrative, GFA ou
+              coopérative à lucrativité verrouillée — et non une société
+              commerciale de droit privé classique. Une SCIC est notée
+              « partiel » : société commerciale, mais à lucrativité encadrée.
           - id: non_lucrativite_effective
             label: "Non-lucrativité effective"
-            axe: A
+            axe: 2
             poids: 3
             definition: >
               Absence de partage de bénéfices ; les excédents sont réinvestis
               dans l'objet et non distribués aux membres.
-          - id: public_non_restreint
-            label: "Ne sert pas un cercle restreint"
-            axe: A
-            poids: 2
-            definition: >
-              Le lieu et ses bénéfices ne profitent pas exclusivement aux seuls
-              membres fondateurs ou à leurs familles.
-      - id: securite_usage
-        label: "Sécurité et loyauté de l'usage"
-        criteres:
-          - id: duree_usage
-            label: "Durée d'usage longue et renouvellement organisé"
-            axe: B
-            poids: 3
-            definition: >
-              Le titre d'usage assure une jouissance durable et sécurisée. Les
-              régimes diffèrent nettement : l'usufruit d'une personne morale est
-              plafonné à 30 ans (article 619 du Code civil) et n'est pas
-              renouvelable de droit ; le bail rural a une durée minimale de 9 ans
-              mais bénéficie d'un droit au renouvellement d'ordre public,
-              protecteur du preneur ; le bail emphytéotique peut courir jusqu'à
-              99 ans. Le critère est rempli « oui » si la durée est longue ET le
-              renouvellement sécurisé ; il est « partiel » si la durée est longue
-              mais le renouvellement incertain.
-          - id: clauses_usage
-            label: "Clauses d'usage / environnementales inscrites"
-            axe: B
-            poids: 2
-            definition: >
-              Le contrat inscrit des engagements d'usage : pratiques
-              écologiques (bail rural environnemental), affectation maintenue.
-          - id: articulation_porteur
-            label: "Articulation loyale avec le porteur"
-            axe: B
-            poids: 2
-            definition: >
-              Relation claire, contractualisée et loyale avec le porteur de
-              nue-propriété ; pas de conflit d'intérêts entre les deux.
-          - id: non_appropriation
-            label: "Pas d'appropriation possible du foncier"
-            axe: B
-            poids: 2
-            definition: >
-              Les usagers ne peuvent ni revendre, ni capter à titre privé la
-              valeur du foncier.
-          - id: parts_non_cessibles
-            label: "Parts / titres non cessibles ou cession encadrée"
-            axe: B
-            poids: 3
-            definition: >
-              Les parts, actions ou titres de la structure ne sont pas
-              librement cessibles sur un marché : soit la structure n'a pas de
-              capital social appropriable (association), soit ses statuts
-              encadrent strictement la cession (agrément, prix plafonné à la
-              valeur nominale, inaliénabilité). « oui » : aucune part
-              appropriable, ou cession verrouillée au nominal ; « partiel » :
-              cession soumise à agrément mais à un prix non plafonné ; « non » :
-              parts librement cessibles, valeur foncière captable.
-          - id: devolution_usufruitier
-            label: "Clause de dévolution désintéressée de l'usufruitier"
-            axe: B
-            poids: 1
-            definition: >
-              En cas de dissolution, l'actif de l'usufruitier (association, SCI,
-              GFA, coopérative) est dévolu à un organisme désintéressé : aucun
-              retour de valeur vers les membres, qui ferait fuir la valeur du
-              montage.
-      - id: gouvernance
-        label: "Gouvernance participative"
+      - id: pouvoir
+        label: "Le pouvoir — gouvernance citoyenne"
+        axe: 3
         criteres:
           - id: une_voix
             label: "Principe « une personne = une voix »"
-            axe: C
+            axe: 3
             poids: 2
             definition: >
               Le pouvoir de décision n'est pas proportionnel au capital
               apporté.
           - id: usagers_decident
             label: "Les usager·es participent aux décisions"
-            axe: C
+            axe: 3
             poids: 3
             definition: >
               Les habitant·es, exploitant·es ou usager·es du lieu participent
               effectivement aux choix qui les concernent.
           - id: ouverture_entrants
             label: "Ouverture aux nouveaux entrants"
-            axe: C
+            axe: 3
             poids: 2
             definition: >
               La structure organise l'arrivée de nouveaux membres et le
               renouvellement générationnel.
           - id: transparence_interne
             label: "Transparence interne et redevabilité"
-            axe: C
+            axe: 3
             poids: 1
             definition: >
               Comptes et décisions accessibles aux membres et, autant que
               possible, au public.
+      - id: finalite
+        label: "La finalité — vocation d'intérêt général"
+        axe: 4
+        criteres:
+          - id: objet_ig
+            label: "Objet d'intérêt général"
+            axe: 4
+            poids: 3
+            definition: >
+              L'objet porte un intérêt général identifié : agriculture
+              paysanne, accès à la terre, écologie, habitat digne, éducation.
+          - id: public_non_restreint
+            label: "Ne sert pas un cercle restreint"
+            axe: 4
+            poids: 3
+            definition: >
+              Le lieu et ses bénéfices ne profitent pas exclusivement aux seuls
+              membres fondateurs ou à leurs familles.
+      - id: usage
+        label: "L'usage — régime et sécurité"
+        axe: 5
+        criteres:
+          - id: duree_usage
+            label: "Durée d'usage longue et renouvellement organisé"
+            axe: 5
+            poids: 3
+            definition: >
+              Le titre d'usage assure une jouissance durable. L'usufruit d'une
+              personne morale est plafonné à 30 ans (article 619 du Code civil)
+              et non renouvelable de droit ; le bail rural dure au moins 9 ans
+              avec droit au renouvellement d'ordre public ; le bail
+              emphytéotique court jusqu'à 99 ans. « oui » si la durée est
+              longue ET le renouvellement sécurisé ; « partiel » si la durée
+              est longue mais le renouvellement incertain.
+          - id: clauses_usage
+            label: "Clauses d'usage / environnementales inscrites"
+            axe: 5
+            poids: 2
+            definition: >
+              Le contrat inscrit des engagements d'usage : pratiques
+              écologiques (bail rural environnemental), affectation maintenue.
+          - id: articulation_porteur
+            label: "Articulation loyale avec le porteur"
+            axe: 5
+            poids: 2
+            definition: >
+              Relation claire, contractualisée et loyale avec le porteur de
+              nue-propriété ; pas de conflit d'intérêts entre les deux.
+          - id: regime_usage_non_marchand
+            label: "Régime d'usage non marchand"
+            axe: 5
+            poids: 3
+            definition: >
+              L'usage que l'organisme fait vivre repose sur la gratuité, le don
+              ou le troc, ou sur une contribution modique. « partiel » si une
+              part marchande coexiste avec une logique de partage ; « non » si
+              l'accès au lieu est tarifé à un prix de marché.
+          - id: loyer_soutenable
+            label: "Loyer soutenable, non rentier"
+            axe: 5
+            poids: 3
+            definition: >
+              Le loyer ou la redevance versé au porteur reste soutenable pour
+              le collectif et ne nourrit pas une logique de rendement. « non »
+              si le loyer est calé sur le marché et grève durablement le
+              collectif usager.
     lecture_strategique:
       enjeu: >
         L'usufruitier est le maillon vivant du montage : c'est lui qui fait
-        exister le lieu. Mais c'est aussi le maillon temporellement le plus
-        faible — l'usufruit d'une personne morale ne dure pas plus de 30 ans.
+        exister le lieu, et lui qui en gouverne l'usage. Mais c'est aussi le
+        maillon temporellement le plus faible — l'usufruit d'une personne
+        morale ne dure pas plus de 30 ans.
       forces_typiques:
-        - "L'association porte l'usage sans avoir à mobiliser le capital d'achat."
-        - "La gouvernance peut être réellement participative et ancrée localement."
-        - "Le bail environnemental permet d'inscrire l'écologie dans le droit du lieu."
+        - "L'association porte l'usage sans mobiliser le capital d'achat."
+        - "La gouvernance peut être réellement citoyenne et ancrée localement."
+        - "Le bail environnemental inscrit l'écologie dans le droit du lieu."
       fragilites_typiques:
         - "L'usufruit d'une personne morale est plafonné à 30 ans : rien n'est perpétuel."
         - "Une association peut dériver vers un cercle restreint et perdre l'intérêt général."
-        - "Un usufruitier en conflit avec son porteur fragilise tout le montage."
+        - "Un loyer de marché transforme l'usager en locataire précaire."
       leviers:
         - "Anticiper le renouvellement de l'usufruit bien avant son terme."
         - "Inscrire l'ouverture aux nouveaux entrants dans les statuts."
-        - "Contractualiser clairement la relation avec le porteur (charte, convention)."
+        - "Négocier un régime d'usage non marchand et un loyer soutenable."
 
   # ═══════════════════════════════════════════════════════════════════════════
   # GRILLE 3 — LIEU
@@ -332,30 +387,32 @@ grilles:
   lieu:
     titre: "Grille de lecture — Lieu"
     objet: >
-      Apprécier un lieu concret : son foncier est-il réellement sorti du
-      marché, l'usage sert-il l'intérêt général, et la gouvernance est-elle
-      participative et pérenne ?
+      Apprécier un lieu concret à travers toute sa chaîne : son foncier est-il
+      sorti du marché, le montage est-il de nature civile, la gouvernance
+      citoyenne, la finalité d'intérêt général, et l'usage non marchand et
+      sécurisé ?
     familles:
-      - id: sortie_marche
-        label: "Sortie du marché"
+      - id: sol
+        label: "Le sol — soustraction au marché"
+        axe: 1
         criteres:
           - id: foncier_hors_marche
             label: "Foncier effectivement soustrait au marché"
-            axe: B
+            axe: 1
             poids: 3
             definition: >
               Le foncier est porté par une structure non spéculative et n'est
               pas destiné à être revendu sur le marché libre.
           - id: montage_documente
             label: "Montage juridique documenté et lisible"
-            axe: B
+            axe: 1
             poids: 2
             definition: >
               Le montage (qui détient quoi, par quel acte) est public,
               traçable et compréhensible.
           - id: irreversibilite
             label: "Dispositif d'irréversibilité"
-            axe: B
+            axe: 1
             poids: 3
             definition: >
               Inaliénabilité, droit de veto sur revente, clause anti-spéculative
@@ -363,88 +420,127 @@ grilles:
               difficile.
           - id: origine_non_speculative
             label: "Acquisition non spéculative"
-            axe: B
+            axe: 1
             poids: 2
             definition: >
               Le foncier a été acquis par dons, legs, épargne solidaire ou
               fonds publics — non par un endettement attendant une plus-value.
           - id: parts_non_cessibles
             label: "Parts / titres non cessibles ou cession encadrée"
-            axe: B
+            axe: 1
             poids: 3
             definition: >
-              Les parts, actions ou titres des structures du montage ne sont
-              pas librement cessibles sur un marché : soit elles n'ont pas de
-              capital social appropriable (fondation, association, propriété
-              publique), soit leurs statuts encadrent strictement la cession
-              (agrément, prix plafonné à la valeur nominale, inaliénabilité).
-              « oui » : aucune part appropriable, ou cession verrouillée au
-              nominal ; « partiel » : cession soumise à agrément mais à un prix
-              non plafonné ; « non » : parts librement cessibles, valeur
-              foncière captable.
-      - id: usage_ig
-        label: "Intérêt général de l'usage"
+              Les parts ou titres des structures du montage ne sont pas
+              librement cessibles : pas de capital appropriable, ou cession
+              strictement encadrée. « oui » : aucune part appropriable, ou
+              cession au nominal ; « partiel » : cession sous agrément à prix
+              non plafonné ; « non » : parts librement cessibles.
+      - id: structure
+        label: "La structure — nature civile et non lucrative"
+        axe: 2
         criteres:
-          - id: usage_interet_general
-            label: "Usage au service d'un intérêt général"
-            axe: A
-            poids: 3
-            definition: >
-              L'activité du lieu (agriculture nourricière, écologie, habitat
-              digne, accueil, pédagogie) sert un intérêt qui dépasse ses
-              occupants.
           - id: non_lucratif_global
             label: "Montage globalement non lucratif"
-            axe: A
-            poids: 2
+            axe: 2
+            poids: 3
             definition: >
               Aucun maillon du montage ne capte de plus-value foncière à titre
               privé.
-          - id: ancrage_territorial
-            label: "Ancrage territorial et ouverture"
-            axe: A
-            poids: 2
+          - id: montage_non_commercial
+            label: "Aucun maillon commercial dans la chaîne"
+            axe: 2
+            poids: 3
             definition: >
-              Le lieu est utile à son territoire et ouvert, à un degré ou un
-              autre, au-delà de ses seuls résidents.
-      - id: gouvernance
-        label: "Gouvernance participative et pérennité"
+              Ni le porteur ni l'usufruitier ne sont des sociétés commerciales
+              à lucrativité ouverte. « partiel » si un maillon est une société
+              commerciale à lucrativité encadrée (SCIC, SCA solidaire) ;
+              « non » si un maillon poursuit une logique de rendement.
+      - id: pouvoir
+        label: "Le pouvoir — gouvernance citoyenne"
+        axe: 3
         criteres:
           - id: gouvernance_collective
             label: "Décisions prises collectivement"
-            axe: C
+            axe: 3
             poids: 3
             definition: >
               Les usager·es du lieu décident ensemble de son devenir.
           - id: tripartisme
             label: "Voisinage / citoyens / pouvoirs publics associés"
-            axe: C
+            axe: 3
             poids: 2
             definition: >
               La gouvernance dépasse le cercle des occupants : voisinage,
-              citoyens, collectivités sont associés (idéal du modèle tripartite).
+              citoyen·nes, collectivités sont associé·es.
           - id: perennite_gouvernance
             label: "Transmission et renouvellement organisés"
-            axe: C
+            axe: 3
             poids: 2
             definition: >
               Des dispositifs assurent la transmission du lieu et le
               renouvellement des personnes qui le gouvernent.
+      - id: finalite
+        label: "La finalité — vocation d'intérêt général"
+        axe: 4
+        criteres:
+          - id: usage_interet_general
+            label: "Usage au service d'un intérêt général"
+            axe: 4
+            poids: 3
+            definition: >
+              L'activité du lieu (agriculture nourricière, écologie, habitat
+              digne, accueil, pédagogie) sert un intérêt qui dépasse ses
+              occupants.
+          - id: ancrage_territorial
+            label: "Ancrage territorial et ouverture"
+            axe: 4
+            poids: 2
+            definition: >
+              Le lieu est utile à son territoire et ouvert, à un degré ou un
+              autre, au-delà de ses seuls résidents.
+      - id: usage
+        label: "L'usage — régime et sécurité"
+        axe: 5
+        criteres:
+          - id: usage_non_marchand
+            label: "Régime d'usage non marchand"
+            axe: 5
+            poids: 3
+            definition: >
+              L'accès au lieu et à ses fruits repose sur la gratuité, le don,
+              le troc ou une contribution modique. « partiel » si une part
+              marchande coexiste avec une logique de partage ; « non » si
+              l'accès est tarifé au prix du marché.
+          - id: loyer_non_rentier
+            label: "Loyer / redevance non rentier"
+            axe: 5
+            poids: 2
+            definition: >
+              Le loyer versé par les usager·es au sein du montage reste
+              soutenable et ne nourrit aucune logique de rendement.
+          - id: securite_jouissance
+            label: "Sécurité de jouissance dans le temps"
+            axe: 5
+            poids: 3
+            definition: >
+              Le collectif usager dispose d'un titre d'usage long et au
+              renouvellement sécurisé ; il peut maîtriser le lieu dans la durée
+              sans précarité locative.
     lecture_strategique:
       enjeu: >
         Le lieu est le point où le montage juridique devient une réalité
-        vécue. Un montage parfait sur le papier peut produire un lieu fermé ;
-        un montage imparfait peut faire vivre un commun exemplaire. La grille
-        lit les deux dimensions.
+        vécue. Un montage parfait sur le papier peut produire un lieu fermé ou
+        précaire ; un montage imparfait peut faire vivre un commun exemplaire.
+        La grille lit toute la chaîne.
       forces_typiques:
-        - "La terre libérée permet d'installer des activités impossibles sur le marché."
-        - "La sécurité foncière autorise des investissements de long terme (sols, arbres)."
+        - "La terre libérée permet des activités impossibles sur le marché."
+        - "La sécurité foncière autorise des investissements de long terme."
         - "Le lieu devient un bien commun transmissible entre générations."
       fragilites_typiques:
         - "Un lieu peut se refermer sur ses occupants et perdre son intérêt général."
-        - "La gouvernance collective s'épuise si le renouvellement n'est pas organisé."
-        - "Un montage opaque fragilise la confiance des donateurs et du territoire."
+        - "Un usage tarifé au marché trahit la promesse de libération."
+        - "Sans sécurité de jouissance, le collectif reste un locataire précaire."
       leviers:
-        - "Documenter et publier le montage : la transparence est un verrou en soi."
+        - "Documenter et publier le montage : la transparence est un verrou."
         - "Associer le voisinage et la collectivité pour ancrer l'intérêt général."
-        - "Organiser dès le départ la transmission et l'accueil de nouveaux usagers."
+        - "Sécuriser un titre d'usage long et un régime d'usage non marchand."

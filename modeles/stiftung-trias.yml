@@ -21,15 +21,17 @@ montage:
     un droit de superficie héréditaire de longue durée portant sur le bâti. La
     séparation sol/bâti par une fondation non lucrative et un droit réel long
     sanctuarise le foncier.
-purete_juridique:
-  niveau: civil_non_lucratif
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Fondation non lucrative recourant à un droit réel long : montage de droit
     civil, structurellement très proche du modèle de référence.
 axes_estimes:
-  A: 90
-  B: 90
-  C: 70
+  1: 90
+  2: 95
+  3: 70
+  4: 85
+  5: 80
 analyse:
   forces:
     - "Fondation non lucrative sanctuarisant durablement le sol."

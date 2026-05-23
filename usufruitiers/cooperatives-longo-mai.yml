@@ -24,8 +24,8 @@ montage:
     Elles fonctionnent en autogestion : les usager·es décident collectivement. La
     formalisation contractuelle de l'usage entre fondation et coopératives n'est
     pas documentée par les sources.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Collectifs autogérés dont le statut juridique précis n'est pas confirmé ;
     l'usage repose sur l'autogestion plutôt que sur un contrat documenté.
@@ -72,6 +72,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif des coopératives en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'usage repose sur l'autogestion et la qualité de coopérant, sans tarification de marché ; mais agriculture, vigne et artisanat impliquent une part marchande coexistant avec la logique de partage."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'articulation contractuelle entre les coopératives et le Fonds de Terre Européenne n'étant pas documentée, l'existence et le niveau d'un loyer ou d'une redevance ne le sont pas non plus."
 analyse:
   forces:
     - "Autogestion effective : les usager·es décident collectivement."

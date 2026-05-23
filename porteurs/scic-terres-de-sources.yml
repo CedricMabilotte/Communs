@@ -26,8 +26,8 @@ montage:
     de pratiques protectrices de l'eau. La SCIC Terres de Sources organise les
     débouchés, notamment via les marchés publics de restauration collective,
     pour les fermes labellisées.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Acquisition foncière publique articulée à une SCIC multi-acteurs ; montage
     coopératif fortement adossé à une politique publique de l'eau.
@@ -74,6 +74,12 @@ grille:
   - critere: risque_requalification
     valeur: oui
     note: "Le portage public du foncier sur les aires de captage relève d'une compétence d'intérêt général stable, non exposée à une requalification fiscale."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le foncier acquis par la collectivité est mis à disposition d'exploitant·es engagé·es dans des pratiques protectrices de l'eau, hors logique de revenu locatif de marché ; les conditions financières de la mise à disposition ne sont pas détaillées."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "La mise à disposition est assortie de clauses contractuelles de pratiques protectrices de l'eau, mais la nature et la durée des titres d'usage accordés aux exploitant·es ne sont pas documentées par les sources."
   - critere: redevabilite_publique
     valeur: oui
     note: "La collectivité Eau du Bassin Rennais rend compte publiquement de sa politique foncière et la SCIC associe collectivités et citoyen·nes."

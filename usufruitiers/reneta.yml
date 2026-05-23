@@ -31,8 +31,8 @@ montage:
     ou un site déjà sorti du marché ; l'espace-test en organise l'usage amont,
     avant l'installation. La libération du foncier proprement dite relève des
     porteurs auxquels les espaces-test s'articulent.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Réseau associatif de droit privé fédérant des structures d'usage
     transitoire ; l'espace-test ne porte pas le foncier mais en organise un
@@ -80,6 +80,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif du réseau en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'espace-test organise un usage transitoire d'accompagnement, sans tarification de marché de l'accès au foncier, mais le test débouche sur une production agricole marchande."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le foncier mobilisé étant variable et l'articulation multi-partenariale, les sources ne documentent ni le loyer versé aux porteurs ni la redevance demandée aux porteur·ses de projet en test."
 analyse:
   forces:
     - "Comble l'amont de l'installation : tester une activité avant de s'installer durablement."

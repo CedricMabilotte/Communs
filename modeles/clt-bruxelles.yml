@@ -23,15 +23,17 @@ montage:
     voisinage et société civile, et pouvoirs publics. Cette répartition des
     sièges en trois tiers égaux est la règle statutaire du conseil
     d'administration, sous réserve d'évolutions possibles dans le temps.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Montage mixte fondation et association, non lucratif, mais soumis à une
     influence publique notable au travers de la gouvernance tripartite.
 axes_estimes:
-  A: 90
-  B: 90
-  C: 90
+  1: 90
+  2: 90
+  3: 90
+  4: 90
+  5: 75
 analyse:
   forces:
     - "Gouvernance tripartite associant habitant·es, voisinage et pouvoirs publics."

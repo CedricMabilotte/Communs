@@ -4,7 +4,7 @@
  --line:#ddd4bf;--green:#4a7a3a;--green-dk:#356026;--terra:#bc5d3a;
  --terra-dk:#8f3f25;--blue:#36748a;--blue-dk:#2a5566;--gold:#b0843a;
  --gold-dk:#8a6420;--beige:#efe9d8;--beige-dk:#e6ddc6;
- --axe-a:#4a7a3a;--axe-b:#bc5d3a;--axe-c:#36748a;
+ --axe-1:#bc5d3a;--axe-2:#4a6b8a;--axe-3:#36748a;--axe-4:#4a7a3a;--axe-5:#b0822f;
  --radius:8px;--radius-sm:4px;--radius-pill:999px;
 }
 *{box-sizing:border-box;}
@@ -143,10 +143,10 @@ main.wrap{padding-bottom:4rem;}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
 
-/* triangle de profil tri-axes */
-.tri{width:108px;height:auto;display:block;flex:0 0 auto;}
-.tri.compact{width:92px;}
-.score-main .tri{width:140px;margin:.6rem auto 0;}
+/* pentagone radar de profil à cinq axes */
+.tri{width:118px;height:auto;display:block;flex:0 0 auto;}
+.tri.compact{width:100px;}
+.score-main .tri{width:160px;margin:.6rem auto 0;}
 .tri-frame{fill:none;stroke:var(--line);stroke-width:1;}
 .tri-grid{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:2 2;}
 /* remplissage neutre, découplé des couleurs d'axe (audit dataviz B, M5) */
@@ -156,10 +156,32 @@ main.wrap{padding-bottom:4rem;}
 .tri-edge-na{stroke:var(--faint);stroke-width:1.6;stroke-dasharray:3 2;}
 .tri-vtx.tri-na{fill:var(--paper);stroke:var(--faint);stroke-width:1;
  stroke-dasharray:2 1.5;}
-.tri-lab{font:700 7px -apple-system,system-ui,sans-serif;fill:var(--paper);
+/* numéro d'axe : posé hors du sommet, donc en encre foncée et non en blanc */
+.tri-lab{font:700 8px -apple-system,system-ui,sans-serif;fill:var(--muted);
  text-anchor:middle;dominant-baseline:central;}
 .tri-scale{font:6px -apple-system,system-ui,sans-serif;fill:var(--faint);
  text-anchor:middle;}
+
+/* note de chaîne : écart indice intrinsèque / effectif sur la fiche */
+.chaine-note{font-size:.82rem;color:var(--faint);margin:.5rem 0 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+
+/* cinq pôles (page régimes) */
+.pole-grid{display:grid;gap:1rem;margin:1.1rem 0;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.pole-card{border:1px solid var(--line);border-top:3px solid var(--terra);
+ border-radius:var(--radius);padding:.5rem 1.1rem 1rem;background:var(--card);}
+.pole-card:nth-child(1){border-top-color:var(--green-dk);}
+.pole-card:nth-child(2){border-top-color:var(--green);}
+.pole-card:nth-child(3){border-top-color:var(--gold);}
+.pole-card:nth-child(4){border-top-color:var(--terra);}
+.pole-card:nth-child(5){border-top-color:var(--terra-dk);}
+.pole-rang{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;
+ color:var(--faint);font-weight:700;margin:.2rem 0 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+.pole-card h3{font-size:1.05rem;margin:.2rem 0 .3rem;}
+.pole-role{color:var(--faint);font-style:italic;font-size:.86rem;}
+.pole-line{font-size:.88rem;color:var(--muted);margin:.35rem 0;}
 
 /* idl badge — anneau */
 .idl-badge{display:inline-flex;flex-direction:column;align-items:center;
@@ -341,9 +363,11 @@ table th{color:var(--muted);font-weight:700;font-size:.72rem;text-transform:uppe
 .num{text-align:right;font-variant-numeric:tabular-nums;}
 .axe-dot{display:inline-block;width:.62rem;height:.62rem;border-radius:50%;
  margin-right:.35rem;vertical-align:baseline;}
-.axe-A{background:var(--axe-a);}
-.axe-B{background:var(--axe-b);}
-.axe-C{background:var(--axe-c);}
+.axe-1{background:var(--axe-1);}
+.axe-2{background:var(--axe-2);}
+.axe-3{background:var(--axe-3);}
+.axe-4{background:var(--axe-4);}
+.axe-5{background:var(--axe-5);}
 .axe-legend{font-size:.82rem;color:var(--muted);}
 .axe-legend .axe-dot{margin-left:.8rem;}
 .cat-legend{margin:.4rem 0 1rem;}
@@ -383,9 +407,9 @@ th.sortable[aria-sort=descending]::after{content:" \25BC";opacity:1;}
 .an-col h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;}
 .an-col ul{margin:.3rem 0;padding-left:1.1rem;font-size:.92rem;}
 .an-col li{margin:.35rem 0;}
-.an-forces{border-top:3px solid var(--axe-a);}
-.an-frag{border-top:3px solid var(--axe-b);}
-.an-lev{border-top:3px solid var(--axe-c);}
+.an-forces{border-top:3px solid var(--axe-4);}
+.an-frag{border-top:3px solid var(--axe-1);}
+.an-lev{border-top:3px solid var(--axe-3);}
 
 /* strat (grilles page) */
 .strat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);

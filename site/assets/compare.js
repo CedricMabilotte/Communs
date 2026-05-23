@@ -11,9 +11,8 @@
    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
   });
  }
- var AXES=[['A','Intérêt général','#4a7a3a'],
-           ['B','Libération des terres','#bc5d3a'],
-           ['C','Gouvernance participative','#36748a']];
+ /* Les cinq axes du modèle, injectés depuis ranking.yml à la génération. */
+ var AXES=[[1, "Le sol", "#bc5d3a"], [2, "La structure", "#4a6b8a"], [3, "Le pouvoir", "#36748a"], [4, "La finalité", "#4a7a3a"], [5, "L'usage", "#b0822f"]];
  var CATLAB={lieu:'Lieu',porteur:'Porteur',usufruitier:'Usufruitier',
    modele:'Modèle voisin'};
  var SLUG={lieu:'l',porteur:'p',usufruitier:'u',modele:'m'};
@@ -30,8 +29,9 @@
    +'Choisissez une entrée.</p></div>';
   var bars='';
   for(var i=0;i<AXES.length;i++){
-   bars+=bar(AXES[i][0]+' · '+AXES[i][1],AXES[i][2],
-     d.axes?d.axes[AXES[i][0]]:null);
+   var av=d.axes?(d.axes[AXES[i][0]]!=null?d.axes[AXES[i][0]]
+     :d.axes[String(AXES[i][0])]):null;
+   bars+=bar(AXES[i][0]+' · '+AXES[i][1],AXES[i][2],av);
   }
   var estime=d.score_type==='estime';
   var idl=(d.idl==null?'n.r.':d.idl)+(estime?' · estimé':'');

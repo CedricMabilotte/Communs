@@ -28,8 +28,8 @@ montage:
     avant une installation pérenne. Le foncier mobilisé est souvent un terrain
     déjà sorti du marché en amont ; la coopérative en organise l'usage
     transitoire.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: mutualisme
   commentaire: >
     Société anonyme coopérative à finalité d'intérêt collectif ; forme
     coopérative encadrant la lucrativité, l'usage organisé étant transitoire.
@@ -76,6 +76,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif de la coopérative en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Le test d'activité est un accompagnement à l'installation, mais débouche sur une production agricole marchande ; logique de partage et logique marchande coexistent."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Les sources ne documentent ni le loyer versé au porteur du foncier mobilisé, ni la redevance demandée aux porteur·ses de projet en test."
 analyse:
   forces:
     - "Espace-test concret comblant l'amont de l'installation agricole en périurbain francilien."

@@ -93,26 +93,58 @@ def grille_index(grilles_cfg):
     return idx
 
 
+def axes_ids(ranking):
+    """Liste ordonnée des identifiants d'axes (entiers 1..5)."""
+    return [a["id"] for a in ranking["axes"]]
+
+
+def geometric_idl(axes_scores):
+    """Moyenne géométrique des scores d'axes renseignés (agrégation NON
+    compensatoire). Un score nul annule le produit → idl 0. Aucun axe
+    renseigné → None."""
+    known = [v for v in axes_scores.values() if v is not None]
+    k = len(known)
+    if k == 0:
+        return None
+    produit = 1.0
+    for v in known:
+        produit *= v
+    return round(produit ** (1.0 / k))
+
+
 def score_fiche(fiche, gidx, ranking):
-    """Calcule axes A/B/C (0-100), Indice global, palier, complétude."""
+    """Calcule les cinq axes (1..5, 0-100), l'Indice global (moyenne
+    géométrique non compensatoire), le palier et la complétude."""
     valeurs = ranking["valeurs"]
     cat = fiche["categorie"]
+    aids = axes_ids(ranking)
 
     if cat == "modele":
         ax = fiche.get("axes_estimes", {}) or {}
-        # axes estimés arrondis à l'entier : une seule source, pas de décimale
-        # parasite dans le triangle, les barres ou l'aria-label (audit dataviz B, M1).
-        axes = {k: (round(float(ax[k])) if ax.get(k) is not None else None)
-                for k in ("A", "B", "C")}
-        known = [v for v in axes.values() if v is not None]
-        idl = round(sum(known) / len(known)) if known else None
+        # Les fiches modeles utilisent les clés entières 1..5. Tolérance de
+        # repli sur l'ancien jeu A/B/C → 1..3 si une fiche n'a pas encore
+        # migré, pour ne jamais planter la génération.
+        legacy = {"A": 1, "B": 2, "C": 3}
+        axes = {}
+        for aid in aids:
+            v = ax.get(aid)
+            if v is None:
+                # repli : clé string de l'entier, ou ancienne lettre A/B/C
+                v = ax.get(str(aid))
+            if v is None:
+                for old, new in legacy.items():
+                    if new == aid and ax.get(old) is not None:
+                        v = ax.get(old)
+                        break
+            axes[aid] = round(float(v)) if v is not None else None
+        idl = geometric_idl(axes)
         return {"axes": axes, "idl": idl, "idl_brut": idl,
                 "palier": palier_for(idl, ranking),
                 "completude": None, "estime": True,
                 "score_type": "estime", "criteres_evalues": {}}
 
     cmap = gidx.get(cat, {})
-    acc = {"A": [0.0, 0.0], "B": [0.0, 0.0], "C": [0.0, 0.0]}  # [poids_total, poids_obtenu]
+    acc = {aid: [0.0, 0.0] for aid in aids}  # axe → [poids_total, poids_obtenu]
     n_total = len(cmap)
     n_known = 0
     criteres_evalues = {}
@@ -129,15 +161,17 @@ def score_fiche(fiche, gidx, ranking):
             continue
         n_known += 1
         axe = meta["axe"]
-        acc[axe][0] += meta["poids"]
-        acc[axe][1] += meta["poids"] * factor
+        if axe in acc:
+            acc[axe][0] += meta["poids"]
+            acc[axe][1] += meta["poids"] * factor
 
     axes = {}
-    for axe, (wtot, wobt) in acc.items():
+    for axe in aids:
+        wtot, wobt = acc[axe]
         axes[axe] = round(wobt / wtot * 100) if wtot > 0 else None
 
-    known = [v for v in axes.values() if v is not None]
-    idl_brut = round(sum(known) / len(known)) if known else None
+    # Indice brut : moyenne géométrique non compensatoire des axes renseignés.
+    idl_brut = geometric_idl(axes)
     completude = (n_known / n_total) if n_total else 0.0
     # Pénalité de complétude : l'indice affiché est l'indice brut pondéré par la
     # complétude, pour ne pas surnoter les fiches lacunaires (cf. ranking.yml).
@@ -149,6 +183,92 @@ def score_fiche(fiche, gidx, ranking):
             "palier": palier_for(idl, ranking),
             "completude": completude, "estime": False,
             "score_type": "calcule", "criteres_evalues": criteres_evalues}
+
+
+def _median(values):
+    """Médiane d'une liste non vide de nombres."""
+    s = sorted(values)
+    n = len(s)
+    mid = n // 2
+    if n % 2:
+        return s[mid]
+    return (s[mid - 1] + s[mid]) / 2.0
+
+
+# Axes « contaminables » par la chaîne : la structure (2), la finalité (4) et
+# l'usage (5). L'axe 1 (le sol) reste intrinsèque au porteur, l'axe 3 (le
+# pouvoir) intrinsèque à l'usufruitier. Cf. ranking.yml § option_a.
+CHAINE_AXES_CONTAMINABLES = (2, 4, 5)
+
+
+def chained_uids(fiche, by_uid):
+    """Renvoie les uid des LIEUX reliés à une fiche, dans les deux sens :
+    liens déclarés par la fiche + rétro-liens (lieux qui citent la fiche)."""
+    me = fiche["uid"]
+    lieux = set()
+    liens = fiche.get("liens", {}) or {}
+    for uid in liens.get("lieux", []) or []:
+        tgt = by_uid.get(uid)
+        if tgt and tgt.get("categorie") == "lieu":
+            lieux.add(uid)
+    for other_uid, other in by_uid.items():
+        if other_uid == me or other.get("categorie") != "lieu":
+            continue
+        oliens = other.get("liens", {}) or {}
+        for key in ("porteurs", "usufruitiers"):
+            if me in (oliens.get(key, []) or []):
+                lieux.add(other_uid)
+    return sorted(lieux)
+
+
+def apply_chaine(all_sc, by_uid, ranking):
+    """Calcule l'indice EFFECTIF des porteurs et usufruitiers : relit l'indice
+    intrinsèque à travers les chaînes (lieux reliés).
+
+    Pour les axes contaminables (2, 4, 5), l'axe effectif = min(axe
+    intrinsèque, médiane de cet axe sur les lieux reliés). Les axes 1 et 3
+    restent intrinsèques. L'indice effectif = moyenne géométrique des axes
+    effectifs, puis pénalité de complétude. Sans lieu relié, effectif =
+    intrinsèque. Les lieux et les modèles ne sont pas recalculés.
+
+    Mute chaque dict de score en place : ajoute `axes_intr`, `idl_intr`,
+    `idl_brut_intr` (valeurs intrinsèques conservées) et remplace `axes`,
+    `idl`, `idl_brut`, `palier` par les valeurs effectives."""
+    sc_by_uid = {f["uid"]: sc for f, sc in all_sc}
+    for fiche, sc in all_sc:
+        cat = fiche["categorie"]
+        # valeurs intrinsèques toujours conservées pour affichage
+        sc["axes_intr"] = dict(sc["axes"])
+        sc["idl_intr"] = sc["idl"]
+        sc["idl_brut_intr"] = sc.get("idl_brut")
+        sc["chaine_uids"] = []
+        if cat not in ("porteur", "usufruitier"):
+            continue
+        lieux = chained_uids(fiche, by_uid)
+        sc["chaine_uids"] = lieux
+        if not lieux:
+            continue
+        eff = dict(sc["axes"])
+        for axe in CHAINE_AXES_CONTAMINABLES:
+            vals = []
+            for luid in lieux:
+                lsc = sc_by_uid.get(luid)
+                if lsc and lsc["axes"].get(axe) is not None:
+                    vals.append(lsc["axes"][axe])
+            intr = sc["axes"].get(axe)
+            if vals and intr is not None:
+                eff[axe] = round(min(intr, _median(vals)))
+        sc["axes"] = eff
+        idl_brut = geometric_idl(eff)
+        sc["idl_brut"] = idl_brut
+        comp = sc.get("completude")
+        if idl_brut is not None and comp is not None:
+            sc["idl"] = round(idl_brut * (0.5 + 0.5 * comp))
+        elif idl_brut is not None:
+            sc["idl"] = idl_brut
+        else:
+            sc["idl"] = None
+        sc["palier"] = palier_for(sc["idl"], ranking)
 
 
 def palier_for(idl, ranking):
@@ -457,8 +577,17 @@ def _fmtnum(val):
     return str(val)
 
 
+def axe_legend(axes_cfg, prefix=""):
+    """Légende des axes : une pastille colorée + numéro + libellé par axe.
+    Itère ranking["axes"] — aucun axe codé en dur."""
+    items = "".join(
+        f'<span class="axe-dot axe-{ax["id"]}"></span> {ax["id"]} — {e(ax["label"])}'
+        for ax in axes_cfg)
+    return prefix + items
+
+
 def axis_bar(axes_cfg, axes_scores, compact=False):
-    """Barres horizontales des trois axes — lecture chiffrée précise."""
+    """Barres horizontales des cinq axes — lecture chiffrée précise."""
     rows = []
     for ax in axes_cfg:
         aid = ax["id"]
@@ -477,30 +606,34 @@ def axis_bar(axes_cfg, axes_scores, compact=False):
     return f'<div class="{cls}">' + "".join(rows) + "</div>"
 
 
-# ── Triangle de profil tri-axes (SVG inline) ─────────────────────────────────
+# ── Pentagone de profil à cinq axes (radar SVG inline) ───────────────────────
 
-def _tri_geom(size=120):
-    """Sommets équilatéraux (A haut, B bas-droite, C bas-gauche) et centre G."""
-    cx, cy, r = size / 2, size * 0.46, size * 0.42
+_TRI_SIZE = 120  # taille de référence du SVG pentagone (viewBox)
+
+
+def _penta_geom(axes_cfg, size=_TRI_SIZE):
+    """Sommets du radar : un par axe, répartis régulièrement sur un cercle,
+    l'axe 1 en haut. Renvoie (centre, {axe_id: (x, y)})."""
+    cx, cy = size / 2, size / 2
+    r = size * 0.40
+    n = len(axes_cfg)
     verts = {}
-    for i, ax in enumerate(("A", "B", "C")):
-        ang = -math.pi / 2 + i * 2 * math.pi / 3
-        verts[ax] = (cx + r * math.cos(ang), cy + r * math.sin(ang))
+    for i, ax in enumerate(axes_cfg):
+        ang = -math.pi / 2 + i * 2 * math.pi / n
+        verts[ax["id"]] = (cx + r * math.cos(ang), cy + r * math.sin(ang))
     return (cx, cy), verts
 
 
-_TRI_SIZE = 120  # taille de référence du SVG triangle (viewBox)
-
-
-def _tri_profile_points(axes_scores, size=_TRI_SIZE):
+def _penta_profile_points(axes_cfg, axes_scores, size=_TRI_SIZE):
     """Renvoie (points du polygone de profil, liste des axes manquants)."""
-    (gx, gy), verts = _tri_geom(size)
+    (gx, gy), verts = _penta_geom(axes_cfg, size)
     pts, missing = [], []
-    for ax in ("A", "B", "C"):
-        v = axes_scores.get(ax)
-        vx, vy = verts[ax]
+    for ax in axes_cfg:
+        aid = ax["id"]
+        v = axes_scores.get(aid)
+        vx, vy = verts[aid]
         if v is None:
-            missing.append(ax)
+            missing.append(aid)
             f = 0.0
         else:
             f = max(0.0, min(1.0, v / 100))
@@ -509,20 +642,24 @@ def _tri_profile_points(axes_scores, size=_TRI_SIZE):
 
 
 def tri_defs(axes_cfg, size=_TRI_SIZE):
-    """Bloc <defs> commun à tous les triangles compacts d'une page : cadre,
-    grille, sommets et lettres — la seule part qui varie ensuite est le
-    polygone de profil (cf. cycle B — audit performance, B-1)."""
-    (gx, gy), verts = _tri_geom(size)
+    """Bloc <defs> commun à tous les pentagones compacts d'une page : cadre,
+    grille intermédiaire, sommets et numéros d'axes — la seule part qui varie
+    ensuite est le polygone de profil (factorisation, audit performance B-1)."""
+    (gx, gy), verts = _penta_geom(axes_cfg, size)
     col = {ax["id"]: ax["couleur"] for ax in axes_cfg}
     frame = " ".join(f"{x:.1f},{y:.1f}" for x, y in verts.values())
     mid = " ".join(f"{gx + (x - gx) * 0.5:.1f},{gy + (y - gy) * 0.5:.1f}"
                    for x, y in verts.values())
     dots = ""
-    for ax in ("A", "B", "C"):
-        vx, vy = verts[ax]
+    for ax in axes_cfg:
+        aid = ax["id"]
+        vx, vy = verts[aid]
+        # léger décalage radial du numéro pour le sortir du sommet
+        lx = gx + (vx - gx) * 1.16
+        ly = gy + (vy - gy) * 1.16
         dots += (f'<circle class="tri-vtx" cx="{vx:.1f}" cy="{vy:.1f}" '
-                 f'r="3.5" fill="{col[ax]}"/>'
-                 f'<text class="tri-lab" x="{vx:.1f}" y="{vy:.1f}">{ax}</text>')
+                 f'r="3" fill="{col[aid]}"/>'
+                 f'<text class="tri-lab" x="{lx:.1f}" y="{ly:.1f}">{aid}</text>')
     return (f'<svg width="0" height="0" aria-hidden="true" '
             f'style="position:absolute" focusable="false"><defs>'
             f'<g id="tri-base">'
@@ -532,7 +669,7 @@ def tri_defs(axes_cfg, size=_TRI_SIZE):
 
 
 def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
-    """SVG triangle de profil tri-axes.
+    """SVG pentagone de profil à cinq axes (radar).
 
     En mode `compact` (cartes / chips) : ne rend que le polygone variable et
     référence le cadre commun via <use href="#tri-base"> — la part fixe est
@@ -540,27 +677,25 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
     En pleine taille (fiche) : SVG autonome avec cadre, repère d'échelle et
     aria-label — seule source accessible du profil chiffré.
     """
-    (gx, gy), verts = _tri_geom(size)
+    (gx, gy), verts = _penta_geom(axes_cfg, size)
     col = {ax["id"]: ax["couleur"] for ax in axes_cfg}
-    pts, missing = _tri_profile_points(axes_scores, size)
-    axname = {"A": "intérêt général", "B": "libération des terres",
-              "C": "gouvernance participative"}
-    label = "Profil tri-axes — " + ", ".join(
-        f"{axname[a]} "
-        f"{_fmtnum(axes_scores.get(a)) if axes_scores.get(a) is not None else 'non renseigné'}"
-        for a in ("A", "B", "C"))
-    vb = f"0 0 {size} {size * 0.92:.0f}"
+    pts, missing = _penta_profile_points(axes_cfg, axes_scores, size)
+    label = "Profil à cinq axes — " + ", ".join(
+        f"{ax['label']} "
+        f"{_fmtnum(axes_scores.get(ax['id'])) if axes_scores.get(ax['id']) is not None else 'non renseigné'}"
+        for ax in axes_cfg)
+    vb = f"0 0 {size} {size}"
 
     # arêtes du polygone : hachurer celles qui touchent un sommet absent (None)
-    # pour signaler une donnée indéterminée plutôt qu'un score nul (audit
-    # dataviz B, I1).
+    # pour signaler une donnée indéterminée plutôt qu'un score nul.
     edge_lines = ""
     if missing:
-        idx = {"A": 0, "B": 1, "C": 2}
-        for a in ("A", "B", "C"):
-            b = {"A": "B", "B": "C", "C": "A"}[a]
+        n = len(axes_cfg)
+        for i, ax in enumerate(axes_cfg):
+            a = ax["id"]
+            b = axes_cfg[(i + 1) % n]["id"]
             if a in missing or b in missing:
-                pa, pb = pts[idx[a]], pts[idx[b]]
+                pa, pb = pts[i], pts[(i + 1) % n]
                 edge_lines += (f'<line class="tri-edge-na" x1="{pa.split(",")[0]}" '
                                f'y1="{pa.split(",")[1]}" x2="{pb.split(",")[0]}" '
                                f'y2="{pb.split(",")[1]}"/>')
@@ -579,15 +714,18 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
     mid = " ".join(f"{gx + (x - gx) * 0.5:.1f},{gy + (y - gy) * 0.5:.1f}"
                    for x, y in verts.values())
     dots = ""
-    for ax in ("A", "B", "C"):
-        vx, vy = verts[ax]
-        na = " tri-na" if ax in missing else ""
+    for ax in axes_cfg:
+        aid = ax["id"]
+        vx, vy = verts[aid]
+        na = " tri-na" if aid in missing else ""
+        lx = gx + (vx - gx) * 1.17
+        ly = gy + (vy - gy) * 1.17
         dots += (f'<circle class="tri-vtx{na}" cx="{vx:.1f}" cy="{vy:.1f}" '
-                 f'r="5" fill="{col[ax]}"/>'
-                 f'<text class="tri-lab" x="{vx:.1f}" y="{vy:.1f}">{ax}</text>')
-    # repère d'échelle : « 100 » à un sommet, « 0 » au centre.
-    ax0, ay0 = verts["A"]
-    scale = (f'<text class="tri-scale" x="{ax0:.1f}" y="{ay0 - 7:.1f}">100</text>'
+                 f'r="4" fill="{col[aid]}"/>'
+                 f'<text class="tri-lab" x="{lx:.1f}" y="{ly:.1f}">{aid}</text>')
+    # repère d'échelle : « 100 » au sommet de l'axe 1, « 0 » au centre.
+    a1x, a1y = verts[axes_cfg[0]["id"]]
+    scale = (f'<text class="tri-scale" x="{a1x:.1f}" y="{a1y - 6:.1f}">100</text>'
              f'<text class="tri-scale" x="{gx:.1f}" y="{gy + 9:.1f}">0</text>')
     return (f'<svg class="tri" viewBox="{vb}" '
             f'role="img" aria-label="{e(label)}">'
@@ -747,11 +885,10 @@ def card(fiche, sc, axes_cfg, depth=0, concepts=None):
     montage_lab = montage_label(montage_id, concepts) if (montage_id and concepts) else ""
     pal_id = sc["palier"]["id"] if sc["palier"] else ""
     ax = sc["axes"]
+    ax_attrs = " ".join(f'data-ax{aid}="{ax.get(aid) or 0}"' for aid in ax)
     data = (f'data-idl="{sc["idl"] or 0}" data-nom="{e(fiche["nom"])}" '
             f'data-palier="{e(pal_id)}" data-region="{e(region)}" '
-            f'data-montage="{e(montage_id)}" '
-            f'data-axa="{ax.get("A") or 0}" data-axb="{ax.get("B") or 0}" '
-            f'data-axc="{ax.get("C") or 0}"')
+            f'data-montage="{e(montage_id)}" {ax_attrs}')
     return f"""<li class="card" {data}>
   <div class="card-head">
     <span class="tag tag-{cat}">{catlabel}</span>
@@ -776,11 +913,19 @@ def cards_grid(fiches_sc, axes_cfg, depth=0, concepts=None, grid_id=""):
 # Pages — fiche détaillée
 # ─────────────────────────────────────────────────────────────────────────────
 
-def purete_label(niv, ranking):
-    for n in ranking["purete_juridique"]["niveaux"]:
+def integrite_label(niv, ranking):
+    """Libellé et sens d'un niveau d'intégrité du montage. Lit la nouvelle
+    section `integrite_montage` ; tolère l'absence de niveau."""
+    im = ranking.get("integrite_montage", {}) or {}
+    for n in im.get("niveaux", []) or []:
         if n["id"] == niv:
-            return n["label"], n["sens"]
+            return n["label"], n.get("sens", "")
     return niv or "—", ""
+
+
+# Repli compatibilité : ancien nom de fonction.
+def purete_label(niv, ranking):
+    return integrite_label(niv, ranking)
 
 
 def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
@@ -817,6 +962,28 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
             comp += (f' Indice brut {sc["idl_brut"]}, ramené à {sc["idl"]} '
                      f'après pénalité de complétude.')
         comp += "</p>"
+    # écart indice intrinsèque / effectif — chaîne (porteurs et usufruitiers).
+    chaine_html = ""
+    idl_intr = sc.get("idl_intr")
+    n_chaine = len(sc.get("chaine_uids", []) or [])
+    if cat in ("porteur", "usufruitier") and idl_intr is not None \
+            and sc["idl"] is not None:
+        if n_chaine == 0:
+            chaine_html = ('<p class="chaine-note">Aucun lieu relié dans '
+                           'l\'annuaire : l\'indice effectif égale l\'indice '
+                           'intrinsèque.</p>')
+        elif sc["idl"] == idl_intr:
+            chaine_html = (f'<p class="chaine-note">Indice intrinsèque et '
+                           f'effectif identiques ({sc["idl"]}) : les '
+                           f'{n_chaine} lieu(x) relié(s) ne contaminent aucun '
+                           f'axe.</p>')
+        else:
+            chaine_html = (f'<p class="chaine-note">Indice intrinsèque '
+                           f'{idl_intr}, ramené à <strong>{sc["idl"]}</strong> '
+                           f'(indice effectif) : les {n_chaine} lieu(x) '
+                           f'relié(s) plafonnent un ou plusieurs axes '
+                           f'contaminables (structure, finalité, usage).</p>')
+
     pal_col = sc["palier"]["couleur"] if sc["palier"] else "var(--green)"
     score_block = f"""<section class="score-panel" style="--pal:{pal_col}">
   <div class="score-main">
@@ -829,6 +996,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     {idl_scale(sc, ranking)}
     <p class="fiab fiab-{fcls}">{e(flabel)}</p>
     {comp}
+    {chaine_html}
   </div>
 </section>"""
 
@@ -837,15 +1005,17 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     grille_line = ("</li>\n  <li><strong>Grille détaillée</strong> — chaque "
                    "critère est évalué oui · partiel · non ; le score en "
                    "découle.") if (cat != "modele" and sc["criteres_evalues"]) else ""
+    axes_enum = ", ".join(f"{a['id']} {a['label']}" for a in axes_cfg)
     lecture = f"""<details class="fiche-key">
   <summary>Comment lire cette fiche</summary>
   <ul>
   <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
-  indique le palier.</li>
-  <li><strong>Triangle tri-axes</strong> — un sommet par axe (A en haut, B en
-  bas à droite, C en bas à gauche). Plus la zone colorée s'étend vers un sommet,
-  plus le montage est noté sur cet axe.</li>
-  <li><strong>Barres d'axe</strong> — le détail chiffré des trois axes.{grille_line}</li>
+  indique le palier. L'Indice est la moyenne géométrique (non compensatoire)
+  des axes renseignés : l'axe le plus faible commande le résultat.</li>
+  <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
+  l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
+  est noté sur cet axe.</li>
+  <li><strong>Barres d'axe</strong> — le détail chiffré des cinq axes.{grille_line}</li>
   </ul>
 </details>"""
 
@@ -866,10 +1036,13 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     if mont.get("type"):
         rows.append(("Type de montage",
                      e(montage_label(mont["type"], cfg["concepts"]))))
-    pj = fiche.get("purete_juridique", {}) or {}
-    if pj.get("niveau"):
-        plab, psens = purete_label(pj["niveau"], ranking)
-        rows.append(("Nature juridique",
+    # intégrité du montage : nouvelle clé `integrite_montage`, repli sur
+    # l'ancienne clé `purete_juridique` pour ne pas planter sur une fiche non
+    # encore migrée.
+    im = fiche.get("integrite_montage", {}) or fiche.get("purete_juridique", {}) or {}
+    if im.get("niveau"):
+        plab, psens = integrite_label(im["niveau"], ranking)
+        rows.append(("Intégrité du montage",
                      f'<span title="{e(psens)}">'
                      f'<a href="../regimes.html">{e(plab)}</a></span>'))
     if fiche.get("url"):
@@ -932,10 +1105,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
 <caption class="visually-hidden">Grille de lecture de la fiche : critère, poids, évaluation et lecture.</caption>
 <thead><tr><th scope="col">Critère</th><th scope="col" class="num">Poids</th><th scope="col">Évaluation</th><th scope="col">Lecture</th></tr></thead>
 <tbody>{''.join(fam_rows)}</tbody></table></div>
-<p class="axe-legend">
-<span class="axe-dot axe-A"></span> A — Intérêt général
-<span class="axe-dot axe-B"></span> B — Libération des terres
-<span class="axe-dot axe-C"></span> C — Gouvernance participative</p>
+<p class="axe-legend">{axe_legend(axes_cfg)}</p>
 </section>"""
 
     # analyse stratégique
@@ -986,7 +1156,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     if chips:
         liens_html = (f'<section><h2 class="sec">Reliés dans l\'annuaire</h2>'
                       f'<p class="lead">Montages directement reliés à cette '
-                      f'fiche ; le profil tri-axes permet la comparaison '
+                      f'fiche ; le profil à cinq axes permet la comparaison '
                       f'visuelle.</p>'
                       f'<div class="chips">{"".join(chips)}</div></section>')
 
@@ -1137,9 +1307,7 @@ def render_catalogue(cat, fiches_sc, cfg):
   <select id="sort">
     <option value="idl">Par indice (décroissant)</option>
     <option value="nom">Par nom (A→Z)</option>
-    <option value="axa">Par axe A — intérêt général</option>
-    <option value="axb">Par axe B — libération des terres</option>
-    <option value="axc">Par axe C — gouvernance participative</option>
+    {"".join(f'<option value="ax{a["id"]}">Par axe {a["id"]} — {e(a["court"])}</option>' for a in axes_cfg)}
   </select>
   <span class="count" id="cnt" aria-live="polite"><b id="cntn">{n}</b><span id="cntl"> entrée{'s' if n > 1 else ''} affichée{'s' if n > 1 else ''}</span></span>
 </div>
@@ -1154,10 +1322,7 @@ def render_catalogue(cat, fiches_sc, cfg):
     {region_block}
   </div>
 </details>
-<p class="axe-legend cat-legend">Profil tri-axes :
-<span class="axe-dot axe-A"></span> A — Intérêt général
-<span class="axe-dot axe-B"></span> B — Libération des terres
-<span class="axe-dot axe-C"></span> C — Gouvernance participative</p>
+<p class="axe-legend cat-legend">{axe_legend(axes_cfg, "Profil à cinq axes : ")}</p>
 {cards_grid(fiches_sc, axes_cfg, concepts=concepts, grid_id="resultats")}
 <p class="no-result" id="noresult" role="status" hidden>Aucune entrée ne correspond à ces filtres. Élargissez la sélection.</p>
 <p class="cat-foot"><a href="suggerer.html">Un lieu manque ou une fiche est incomplète ? Signalez-le →</a></p>
@@ -1192,12 +1357,14 @@ def render_classement(all_sc, cfg):
         cat = f["categorie"]
         href = f'{CAT_SLUG[cat]}/{f["uid"]}.html'
         a = s["axes"]
+        axes_cells = "".join(cell(a.get(ax["id"]), axcol[ax["id"]])
+                             for ax in axes_cfg)
         rows.append(f"""<tr data-cat="{cat}">
   <td class="rank">{i}</td>
   <td class="name"><a href="{href}">{e(f['nom'])}</a>
       <span class="row-sub">{e(clean(f.get('sous_titre','')))}</span></td>
   <td><span class="tag tag-{cat}">{catlabel[cat]}</span></td>
-  {cell(a.get('A'), axcol['A'])}{cell(a.get('B'), axcol['B'])}{cell(a.get('C'), axcol['C'])}
+  {axes_cells}
   <td class="num idl-cell" style="--pal:{s['palier']['couleur'] if s['palier'] else '#999'}">
       <b>{s['idl'] if s['idl'] is not None else '—'}</b></td>
 </tr>""")
@@ -1207,10 +1374,11 @@ def render_classement(all_sc, cfg):
         f'{e(p["label"])} <em>≥ {p["min"]}</em></span>'
         for p in ranking["paliers"])
 
+    axes_enum = ", ".join(f"{a['id']} {a['court'].lower()}" for a in axes_cfg)
     body = f"""<h1>Classement par l'Indice de libération</h1>
 <p class="lead">L'Indice de libération (IdL) note chaque montage de 0 à 100 sur
-trois axes — intérêt général (A), libération des terres (B), gouvernance
-participative (C). <a href="methode.html">Méthode détaillée →</a> ·
+cinq axes — {axes_enum}. L'Indice est leur moyenne géométrique non
+compensatoire. <a href="methode.html">Méthode détaillée →</a> ·
 <a href="comparer.html">Comparer deux entrées en vis-à-vis →</a></p>
 <div class="callout callout-warn">
   <p><strong>Un classement croisé, indicatif.</strong> Lieux, porteurs de
@@ -1229,7 +1397,7 @@ participative (C). <a href="methode.html">Méthode détaillée →</a> ·
   <button class="fbtn" data-f="usufruitier" aria-pressed="false">Usufruitiers</button>
 </div>
 <p class="note sort-hint">Triez le tableau en activant un en-tête de colonne
-(Entrée, A, B, C ou IdL).</p>
+(Entrée, axes 1 à 5 ou IdL).</p>
 <p id="sort-status" role="status" class="visually-hidden"></p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Tableau du classement">
 <table class="rank-tbl">
@@ -1239,16 +1407,14 @@ l'Indice de libération, du plus élevé au plus faible.</caption>
   <th scope="col">#</th>
   <th scope="col" class="sortable" data-sort="text" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par entrée, ordre alphabétique">Entrée</button></th>
   <th scope="col">Catégorie</th>
-  <th scope="col" class="num sortable" data-sort="num" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par axe A — intérêt général">A</button></th>
-  <th scope="col" class="num sortable" data-sort="num" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par axe B — libération des terres">B</button></th>
-  <th scope="col" class="num sortable" data-sort="num" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par axe C — gouvernance participative">C</button></th>
+  {"".join(f'<th scope="col" class="num sortable" data-sort="num" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par axe {a["id"]} — {e(a["court"])}">{a["id"]}</button></th>' for a in axes_cfg)}
   <th scope="col" class="num sortable idl-cell" data-sort="num" aria-sort="descending"><button type="button" class="th-sort" aria-label="Trier par Indice de libération">IdL</button></th>
 </tr></thead>
 <tbody>{''.join(rows)}</tbody>
 </table></div>
-<p class="note">A — Intérêt général · B — Libération des terres · C — Gouvernance
-participative. « — » : axe non renseigné. Les mini-barres de couleur
-accompagnent la lecture chiffrée.</p>
+<p class="note">{" · ".join(f"{a['id']} — {e(a['label'])}" for a in axes_cfg)}.
+« — » : axe non renseigné. Les mini-barres de couleur accompagnent la lecture
+chiffrée.</p>
 <script defer src="assets/list.js"></script>"""
     itemlist = {
         "@context": "https://schema.org",
@@ -1325,10 +1491,7 @@ stratégique</strong> qui cadre les enjeux, forces, fragilités et leviers
 propres à la catégorie. Toute fiche évalue ces critères (oui · partiel · non ·
 inconnu) ; le score en découle directement.
 <a href="regimes.html">Le cadre des trois régimes du sol →</a></p>
-<p class="axe-legend">
-<span class="axe-dot axe-A"></span> Axe A — Intérêt général
-<span class="axe-dot axe-B"></span> Axe B — Libération des terres
-<span class="axe-dot axe-C"></span> Axe C — Gouvernance participative</p>
+<p class="axe-legend">{axe_legend(axes_cfg, "Cinq axes : ")}</p>
 {''.join(blocks)}"""
     return page("Grilles", body, "grilles.html", project=project,
                 description="Les trois grilles de lecture et d'analyse stratégique de l'annuaire.",
@@ -1413,6 +1576,35 @@ sept critères.</caption>
                     f'<strong>Un régime n\'est pas une fatalité.</strong> '
                     f'{e(clean(reg["paradoxe"]))}</p></div>')
 
+    # cinq pôles — lus depuis concepts["poles"].
+    poles = cfg["concepts"].get("poles", {}) or {}
+    poles_liste = poles.get("liste", []) or []
+    poles_html = ""
+    if poles_liste:
+        pole_cards = "".join(
+            f"""<div class="pole-card">
+  <p class="pole-rang">Pôle {p.get('rang','')}</p>
+  <h3>{e(clean(p.get('label','')))}</h3>
+  <p class="pole-role">{e(clean(p.get('role','')))}</p>
+  <p class="pole-line"><strong>Décision.</strong> {e(clean(p.get('decision','')))}</p>
+  <p class="pole-line"><strong>Bénéficiaire.</strong> {e(clean(p.get('beneficiaire','')))}</p>
+  <p class="pole-line"><strong>Logique.</strong> {e(clean(p.get('logique','')))}</p>
+</div>""" for p in poles_liste)
+        registres = poles.get("registres", {}) or {}
+        reg_html = ""
+        if registres:
+            reg_html = f"""<p class="prose">{e(clean(registres.get('chapeau','')))}</p>
+<ul class="prose">
+  <li><strong>Nature.</strong> {e(clean(registres.get('nature','')))}</li>
+  <li><strong>Posture.</strong> {e(clean(registres.get('posture','')))}</li>
+  <li><strong>Modèle économique.</strong> {e(clean(registres.get('modele_economique','')))}</li>
+</ul>"""
+        poles_html = f"""<section><h2 class="sec">Les cinq pôles</h2>
+<p class="prose">{e(clean(poles.get('chapeau','')))}</p>
+<div class="pole-grid">{pole_cards}</div>
+{reg_html}
+</section>"""
+
     body = f"""<h1>Trois régimes du sol</h1>
 <p class="lead">{e(clean(reg.get('chapeau','')))}</p>
 
@@ -1425,11 +1617,13 @@ sept critères.</caption>
 {table}
 </section>
 
+{poles_html}
+
 {anti_html}
 
-<p class="prose">La grille de notation traduit ce cadre en critères :
-voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul de l'Indice
-est détaillé dans la <a href="methode.html">méthode</a>.</p>"""
+<p class="prose">La grille de notation traduit ce cadre en critères, répartis
+sur cinq axes : voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul
+de l'Indice est détaillé dans la <a href="methode.html">méthode</a>.</p>"""
     # données structurées : les trois régimes en DefinedTermSet, bâti depuis la
     # même source que le HTML (audit SEO C, I1).
     termset = {
@@ -1482,13 +1676,18 @@ def render_methode(cfg, n_by_cat, all_sc):
         f"""<tr><td><span class="pal-chip" style="--pal:{p['couleur']}">
 {e(p['label'])}</span></td><td class="num">≥ {p['min']}</td>
 <td>{e(clean(p['sens']))}</td></tr>""" for p in ranking["paliers"])
+    # règles de domiciliage des axes sur la chaîne (cf. ranking.yml § chaine).
+    domiciliage_html = "".join(
+        f'<li><strong>Axe {d["axe"]}</strong> — {e(clean(d["regle"]))}</li>'
+        for d in ranking.get("chaine", {}).get("domiciliage", []))
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
 libération des terres.</p>
 <nav class="page-toc" aria-label="Sommaire de la page">
   <a href="#corpus">Ce que recense l'annuaire</a>
   <a href="#indice">L'Indice de libération</a>
-  <a href="#nature">Nature juridique du montage</a>
+  <a href="#chaine">La chaîne et le domiciliage des axes</a>
+  <a href="#integrite">L'intégrité du montage</a>
   <a href="#limites">Limites</a>
   <a href="#etat">État du corpus</a>
 </nav>
@@ -1502,16 +1701,23 @@ l'usage. {e(clean(cc['definition']))}</p>
 </section>
 
 <section id="indice"><h2 class="sec">L'Indice de libération</h2>
-<p class="prose">Chaque entrée est notée de 0 à 100 sur trois axes. Pour une
-fiche, le score d'un axe est la somme pondérée des critères remplis, ramenée à
-100 : <code>score = Σ(poids × facteur) / Σ(poids) × 100</code>. Le facteur vaut
-1 pour « oui », 0,5 pour « partiel », 0 pour « non ». Les critères « inconnu »
-sont <strong>exclus du calcul</strong> — ils ne pénalisent pas la note mais
-abaissent la complétude affichée de la fiche.</p>
+<p class="prose">Chaque entrée est notée de 0 à 100 sur <strong>cinq axes</strong>
+— cinq facettes indépendantes, du sol vers les gens puis vers le temps. Pour
+une fiche, le score d'un axe est la somme pondérée des critères remplis, ramenée
+à 100 : <code>score = Σ(poids × facteur) / Σ(poids) × 100</code>. Le facteur
+vaut 1 pour « oui », 0,5 pour « partiel », 0 pour « non ». Les critères
+« inconnu » sont <strong>exclus du calcul</strong> — ils ne pénalisent pas la
+note mais abaissent la complétude affichée de la fiche.</p>
 <div class="axe-cards">{axes_html}</div>
-<p class="prose">L'Indice global est la moyenne des trois axes, à parts égales :
-les trois finalités sont tenues pour aussi importantes. La transparence du
-calcul prime sur tout réglage fin de pondération.</p>
+<p class="prose"><strong>Une agrégation non compensatoire.</strong> L'Indice
+global n'est pas la moyenne arithmétique des axes : c'est leur
+<strong>moyenne géométrique</strong> —
+<code>IdL brut = (score₁ × score₂ × … × score_k) ^ (1 / k)</code>, où
+<em>k</em> est le nombre d'axes renseignés. La moyenne géométrique fait peser
+l'axe le plus faible : un montage solide sur quatre axes mais commercial de
+nature (axe 2 effondré) ne peut pas racheter sa faiblesse par ses forces. Si un
+axe vaut 0, le produit vaut 0 et l'Indice tombe à 0 — c'est voulu : un « faux
+ami » ne peut structurellement pas afficher un score élevé.</p>
 <p class="prose"><strong>Pénalité de complétude.</strong> Pour ne pas surnoter
 les fiches lacunaires, l'indice affiché est pénalisé par la complétude :
 <code>IdL affiché = IdL brut × (0,5 + 0,5 × complétude)</code>. Une fiche
@@ -1528,15 +1734,35 @@ comme tel ; ils restent hors du classement principal.</p>
 <tbody>{paliers_html}</tbody></table>
 </section>
 
-<section id="nature"><h2 class="sec">Nature juridique du montage</h2>
-<p class="prose">{e(clean(ranking['purete_juridique']['question']))}</p>
-<p class="prose">Cet indicateur complémentaire n'entre pas dans l'Indice et
-n'est <strong>pas une échelle de qualité</strong> : il situe le montage parmi
-les régimes juridiques sans les hiérarchiser. La protection effective du
-foncier est mesurée séparément, par l'axe B. Une propriété publique inaliénable
-n'est pas une « bascule » défavorable : c'est, dans le corpus, l'un des
-ancrages hors marché les plus solides. Le cadre de ces régimes est exposé sur
-la page <a href="regimes.html">Trois régimes du sol</a>.</p>
+<section id="chaine"><h2 class="sec">La chaîne et le domiciliage des axes</h2>
+<p class="prose">Un montage de libération des terres n'est pas une entité
+isolée mais une <strong>chaîne</strong> : un lieu, son porteur de
+nue-propriété, son organisme usufruitier. Chaque axe a un <strong>domicile</strong>
+— le maillon où il se joue réellement. {e(clean(ranking['chaine']['coherence']))}</p>
+<ul class="prose">{domiciliage_html}</ul>
+<p class="prose"><strong>Indice intrinsèque et indice effectif.</strong> Un
+porteur ou un usufruitier est d'abord noté sur ses propres critères : c'est son
+indice <em>intrinsèque</em>. Mais une entité n'existe, comme actrice de la
+libération des terres, qu'à travers les chaînes qu'elle noue. L'indice
+<em>effectif</em> relit l'indice intrinsèque à travers les lieux reliés : pour
+les axes contaminables — la structure (2), la finalité (4) et l'usage (5) —
+l'axe effectif retient le <strong>minimum</strong> entre le score intrinsèque
+et la médiane de cet axe sur les lieux reliés. L'axe 1 (le sol) et l'axe 3 (le
+pouvoir) restent intrinsèques. Une mauvaise chaîne plafonne un axe ; une bonne
+chaîne ne le rehausse jamais au-delà du plafond intrinsèque. C'est l'indice
+effectif qui sert au badge et au classement ; l'écart avec l'intrinsèque est
+toujours affiché et annoté sur la fiche. Faute de lieu relié, l'indice effectif
+égale l'indice intrinsèque.</p>
+</section>
+
+<section id="integrite"><h2 class="sec">L'intégrité du montage</h2>
+<p class="prose">{e(clean(ranking['integrite_montage']['question']))}</p>
+<p class="prose">{e(clean(ranking['integrite_montage']['note_lecture']))}
+Cet indicateur complémentaire n'entre pas dans l'Indice : il
+<strong>situe</strong> le montage parmi les cinq pôles sans les hiérarchiser.
+La protection effective du foncier est mesurée par l'axe 1, la nature du
+montage par l'axe 2. Le cadre des régimes et des pôles est exposé sur la page
+<a href="regimes.html">Trois régimes du sol</a>.</p>
 </section>
 
 <section id="limites"><h2 class="sec">Limites</h2>
@@ -1676,15 +1902,16 @@ GLOSSAIRE = [
      "des parts qui en portent la valeur."),
     ("Indice de libération",
      "Note de synthèse de 0 à 100 attribuée à chaque entrée de l'annuaire. "
-     "Elle est la moyenne de trois axes — intérêt général (A), libération des "
-     "terres (B), gouvernance participative (C) — et résume la solidité du "
-     "montage. Voir la page Méthode."),
-    ("Nature juridique du montage",
-     "Indicateur complémentaire, non noté et non hiérarchique : il situe le "
-     "montage parmi quatre régimes — droit civil non lucratif, droit civil "
-     "sous encadrement public, forme sociétaire solidaire, droit public — sans "
-     "les classer. La protection effective du foncier est mesurée à part, par "
-     "l'axe B de l'Indice."),
+     "Elle est la moyenne géométrique de cinq axes — le sol, la structure, le "
+     "pouvoir, la finalité, l'usage — et résume la solidité du montage. "
+     "L'agrégation géométrique est non compensatoire : l'axe le plus faible "
+     "commande le résultat. Voir la page Méthode."),
+    ("Intégrité du montage",
+     "Indicateur complémentaire, non noté et non hiérarchique : il situe la "
+     "chaîne du montage parmi cinq pôles, du commun citoyen à la propriété "
+     "marchande, sans les classer. La protection effective du foncier est "
+     "mesurée à part, par l'axe 1 (le sol) de l'Indice ; la nature civile non "
+     "lucrative, par l'axe 2 (la structure)."),
     ("Modèle voisin",
      "Montage de référence — français ou étranger — proche de l'idéal de "
      "libération des terres, recensé à titre de comparaison. Les modèles "
@@ -1794,10 +2021,7 @@ le classement, par l'Indice. Cette page propose une troisième lecture, par
 sujet : à quoi sert la terre, et qui la porte. Un même montage peut relever de
 deux thèmes. <a href="methode.html">Comprendre l'Indice et les axes →</a></p>
 <nav class="page-toc" aria-label="Sommaire des thèmes">{toc}</nav>
-<p class="axe-legend cat-legend">Profil tri-axes :
-<span class="axe-dot axe-A"></span> A — Intérêt général
-<span class="axe-dot axe-B"></span> B — Libération des terres
-<span class="axe-dot axe-C"></span> C — Gouvernance participative</p>
+<p class="axe-legend cat-legend">{axe_legend(axes_cfg, "Profil à cinq axes : ")}</p>
 {''.join(sections)}
 <p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
     return page("Thèmes", body, "themes.html", project=project,
@@ -1837,7 +2061,7 @@ def render_comparer(all_sc, cfg):
     selects = opts()
     body = f"""<h1>Comparer deux montages</h1>
 <p class="lead">Choisissez deux entrées de l'annuaire pour voir leurs indices,
-profils tri-axes et caractéristiques en vis-à-vis.
+profils à cinq axes et caractéristiques en vis-à-vis.
 <a href="methode.html">Comprendre l'Indice →</a></p>
 <div class="callout callout-warn"><p><strong>Comparer ce qui est
 comparable.</strong> Lieux, porteurs et usufruitiers sont notés par trois
@@ -1916,9 +2140,9 @@ def render_index(all_sc, cfg, n_by_cat):
     <li class="step">
       <span class="step-n">3</span>
       <h3>Lire une note</h3>
-      <p>Chaque entrée est notée de 0 à 100 sur trois axes — A, B, C — résumés
-      par un Indice de libération et un palier. <a href="methode.html">La
-      méthode →</a></p>
+      <p>Chaque entrée est notée de 0 à 100 sur cinq axes — le sol, la
+      structure, le pouvoir, la finalité, l'usage — résumés par un Indice de
+      libération et un palier. <a href="methode.html">La méthode →</a></p>
     </li>
   </ol>
   <p class="linkrow"><a href="themes.html">Explorer par thème →</a> ·
@@ -1946,10 +2170,7 @@ def render_index(all_sc, cfg, n_by_cat):
   <h2 class="sec">En tête du classement</h2>
   <p class="lead">Les montages dont l'Indice de libération est le plus élevé.
   <a href="classement.html">Classement complet →</a></p>
-  <p class="axe-legend cat-legend">Profil tri-axes :
-  <span class="axe-dot axe-A"></span> A — Intérêt général
-  <span class="axe-dot axe-B"></span> B — Libération des terres
-  <span class="axe-dot axe-C"></span> C — Gouvernance participative</p>
+  <p class="axe-legend cat-legend">{axe_legend(axes_cfg, "Profil à cinq axes : ")}</p>
   {cards_grid(top, axes_cfg, concepts=concepts)}
 </section>
 
@@ -2055,7 +2276,7 @@ CSS = """
  --line:#ddd4bf;--green:#4a7a3a;--green-dk:#356026;--terra:#bc5d3a;
  --terra-dk:#8f3f25;--blue:#36748a;--blue-dk:#2a5566;--gold:#b0843a;
  --gold-dk:#8a6420;--beige:#efe9d8;--beige-dk:#e6ddc6;
- --axe-a:#4a7a3a;--axe-b:#bc5d3a;--axe-c:#36748a;
+ --axe-1:#bc5d3a;--axe-2:#4a6b8a;--axe-3:#36748a;--axe-4:#4a7a3a;--axe-5:#b0822f;
  --radius:8px;--radius-sm:4px;--radius-pill:999px;
 }
 *{box-sizing:border-box;}
@@ -2194,10 +2415,10 @@ main.wrap{padding-bottom:4rem;}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
 
-/* triangle de profil tri-axes */
-.tri{width:108px;height:auto;display:block;flex:0 0 auto;}
-.tri.compact{width:92px;}
-.score-main .tri{width:140px;margin:.6rem auto 0;}
+/* pentagone radar de profil à cinq axes */
+.tri{width:118px;height:auto;display:block;flex:0 0 auto;}
+.tri.compact{width:100px;}
+.score-main .tri{width:160px;margin:.6rem auto 0;}
 .tri-frame{fill:none;stroke:var(--line);stroke-width:1;}
 .tri-grid{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:2 2;}
 /* remplissage neutre, découplé des couleurs d'axe (audit dataviz B, M5) */
@@ -2207,10 +2428,32 @@ main.wrap{padding-bottom:4rem;}
 .tri-edge-na{stroke:var(--faint);stroke-width:1.6;stroke-dasharray:3 2;}
 .tri-vtx.tri-na{fill:var(--paper);stroke:var(--faint);stroke-width:1;
  stroke-dasharray:2 1.5;}
-.tri-lab{font:700 7px -apple-system,system-ui,sans-serif;fill:var(--paper);
+/* numéro d'axe : posé hors du sommet, donc en encre foncée et non en blanc */
+.tri-lab{font:700 8px -apple-system,system-ui,sans-serif;fill:var(--muted);
  text-anchor:middle;dominant-baseline:central;}
 .tri-scale{font:6px -apple-system,system-ui,sans-serif;fill:var(--faint);
  text-anchor:middle;}
+
+/* note de chaîne : écart indice intrinsèque / effectif sur la fiche */
+.chaine-note{font-size:.82rem;color:var(--faint);margin:.5rem 0 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+
+/* cinq pôles (page régimes) */
+.pole-grid{display:grid;gap:1rem;margin:1.1rem 0;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.pole-card{border:1px solid var(--line);border-top:3px solid var(--terra);
+ border-radius:var(--radius);padding:.5rem 1.1rem 1rem;background:var(--card);}
+.pole-card:nth-child(1){border-top-color:var(--green-dk);}
+.pole-card:nth-child(2){border-top-color:var(--green);}
+.pole-card:nth-child(3){border-top-color:var(--gold);}
+.pole-card:nth-child(4){border-top-color:var(--terra);}
+.pole-card:nth-child(5){border-top-color:var(--terra-dk);}
+.pole-rang{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;
+ color:var(--faint);font-weight:700;margin:.2rem 0 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+.pole-card h3{font-size:1.05rem;margin:.2rem 0 .3rem;}
+.pole-role{color:var(--faint);font-style:italic;font-size:.86rem;}
+.pole-line{font-size:.88rem;color:var(--muted);margin:.35rem 0;}
 
 /* idl badge — anneau */
 .idl-badge{display:inline-flex;flex-direction:column;align-items:center;
@@ -2392,9 +2635,11 @@ table th{color:var(--muted);font-weight:700;font-size:.72rem;text-transform:uppe
 .num{text-align:right;font-variant-numeric:tabular-nums;}
 .axe-dot{display:inline-block;width:.62rem;height:.62rem;border-radius:50%;
  margin-right:.35rem;vertical-align:baseline;}
-.axe-A{background:var(--axe-a);}
-.axe-B{background:var(--axe-b);}
-.axe-C{background:var(--axe-c);}
+.axe-1{background:var(--axe-1);}
+.axe-2{background:var(--axe-2);}
+.axe-3{background:var(--axe-3);}
+.axe-4{background:var(--axe-4);}
+.axe-5{background:var(--axe-5);}
 .axe-legend{font-size:.82rem;color:var(--muted);}
 .axe-legend .axe-dot{margin-left:.8rem;}
 .cat-legend{margin:.4rem 0 1rem;}
@@ -2434,9 +2679,9 @@ th.sortable[aria-sort=descending]::after{content:" \\25BC";opacity:1;}
 .an-col h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;}
 .an-col ul{margin:.3rem 0;padding-left:1.1rem;font-size:.92rem;}
 .an-col li{margin:.35rem 0;}
-.an-forces{border-top:3px solid var(--axe-a);}
-.an-frag{border-top:3px solid var(--axe-b);}
-.an-lev{border-top:3px solid var(--axe-c);}
+.an-forces{border-top:3px solid var(--axe-4);}
+.an-frag{border-top:3px solid var(--axe-1);}
+.an-lev{border-top:3px solid var(--axe-3);}
 
 /* strat (grilles page) */
 .strat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
@@ -2769,9 +3014,8 @@ COMPARE_JS = """/* compare.js — comparateur de deux montages, page comparer.ht
    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
   });
  }
- var AXES=[['A','Intérêt général','#4a7a3a'],
-           ['B','Libération des terres','#bc5d3a'],
-           ['C','Gouvernance participative','#36748a']];
+ /* Les cinq axes du modèle, injectés depuis ranking.yml à la génération. */
+ var AXES=__AXES__;
  var CATLAB={lieu:'Lieu',porteur:'Porteur',usufruitier:'Usufruitier',
    modele:'Modèle voisin'};
  var SLUG={lieu:'l',porteur:'p',usufruitier:'u',modele:'m'};
@@ -2788,8 +3032,9 @@ COMPARE_JS = """/* compare.js — comparateur de deux montages, page comparer.ht
    +'Choisissez une entrée.</p></div>';
   var bars='';
   for(var i=0;i<AXES.length;i++){
-   bars+=bar(AXES[i][0]+' · '+AXES[i][1],AXES[i][2],
-     d.axes?d.axes[AXES[i][0]]:null);
+   var av=d.axes?(d.axes[AXES[i][0]]!=null?d.axes[AXES[i][0]]
+     :d.axes[String(AXES[i][0])]):null;
+   bars+=bar(AXES[i][0]+' · '+AXES[i][1],AXES[i][2],av);
   }
   var estime=d.score_type==='estime';
   var idl=(d.idl==null?'n.r.':d.idl)+(estime?' · estimé':'');
@@ -2904,6 +3149,11 @@ def main():
         all_sc.append((f, sc))
         by_uid[f["uid"]] = f
 
+    # chaîne / Option A : relit l'indice des porteurs et usufruitiers à
+    # travers leurs lieux reliés (indice intrinsèque → indice effectif).
+    # À faire après le scoring de TOUTES les fiches (besoin des axes des lieux).
+    apply_chaine(all_sc, by_uid, ranking)
+
     sc_by_uid = {f["uid"]: sc for f, sc in all_sc}
 
     # nettoyage du site
@@ -2917,7 +3167,12 @@ def main():
     ASSETS.mkdir(exist_ok=True)
     write(ASSETS / "style.css", CSS)
     write(ASSETS / "list.js", LIST_JS)
-    write(ASSETS / "compare.js", COMPARE_JS)
+    # compare.js : on injecte les cinq axes (id, libellé, couleur) lus depuis
+    # ranking.yml — aucun axe codé en dur dans le JavaScript.
+    axes_js = json.dumps(
+        [[a["id"], a["label"], a["couleur"]] for a in ranking["axes"]],
+        ensure_ascii=False)
+    write(ASSETS / "compare.js", COMPARE_JS.replace("__AXES__", axes_js))
     write(ASSETS / "favicon.svg", FAVICON_SVG)
     write(ASSETS / "og-default.svg", OG_SVG)
     write(SITE / "favicon.svg", FAVICON_SVG)
@@ -2970,17 +3225,22 @@ def main():
     data = []
     for f, sc in all_sc:
         mont = f.get("montage", {}) or {}
-        pj = f.get("purete_juridique", {}) or {}
+        # intégrité du montage : nouvelle clé, repli sur l'ancienne.
+        im = f.get("integrite_montage", {}) or f.get("purete_juridique", {}) or {}
         montage_id = mont.get("type", "") or ""
-        pj_niv = pj.get("niveau", "") or ""
-        pj_lab = purete_label(pj_niv, ranking)[0] if pj_niv else ""
+        im_niv = im.get("niveau", "") or ""
+        im_lab = integrite_label(im_niv, ranking)[0] if im_niv else ""
+        # axes exportés avec les clés entières 1..5 (sérialisées en chaînes).
         data.append({"uid": f["uid"], "nom": f["nom"], "categorie": f["categorie"],
                       "sous_titre": clean(f.get("sous_titre", "")),
                       "idl": sc["idl"], "idl_brut": sc.get("idl_brut"),
+                      "idl_intrinseque": sc.get("idl_intr"),
                       "score_type": sc.get("score_type"),
                       "completude": (round(sc["completude"], 3)
                                      if sc.get("completude") is not None else None),
-                      "axes": sc["axes"],
+                      "axes": {str(k): v for k, v in sc["axes"].items()},
+                      "axes_intrinseques": {str(k): v for k, v in
+                                            (sc.get("axes_intr") or {}).items()},
                       "palier": sc["palier"]["id"] if sc["palier"] else None,
                       "palier_label": (sc["palier"]["label"]
                                        if sc["palier"] else None),
@@ -2990,7 +3250,7 @@ def main():
                       "montage_type": montage_id,
                       "montage_label": (montage_label(montage_id, cfg["concepts"])
                                         if montage_id else ""),
-                      "nature_juridique": pj_lab})
+                      "nature_juridique": im_lab})
     write(SITE / "data.json", json.dumps(data, ensure_ascii=False, indent=2))
 
     total = len(fiches)

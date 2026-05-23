@@ -27,8 +27,8 @@ montage:
     propriété collective au service du bien commun. L'usage relève de collectifs
     d'habitant·es ; les détails des montages d'usage parcelle par parcelle ne sont
     pas confirmés par les sources consultées.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Foncier porté par un fonds de dotation non lucratif ; la solidité dépend de
     statuts (dotation consomptible ou non) qui ne sont pas détaillés par les
@@ -67,6 +67,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: inconnu
     note: "Les dispositifs de transmission et de renouvellement ne sont pas décrits par les sources consultées."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : le foncier est porté par le fonds de dotation « La Terre en commun », non lucratif, et l'usage relève de collectifs d'habitant·es."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Les activités collectives nées de la lutte relèvent d'une logique de commun et de partage, mais le régime précis d'accès au lieu et à ses fruits n'est pas documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Les montages d'usage parcelle par parcelle et l'existence éventuelle d'une redevance ne sont pas confirmés par les sources."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature et la durée des titres d'usage des collectifs d'habitant·es ne sont pas documentées ; les conventions d'usage ne sont pas confirmées."
 analyse:
   forces:
     - "Foncier acquis par un fonds de dotation non lucratif, sur la base de dons."

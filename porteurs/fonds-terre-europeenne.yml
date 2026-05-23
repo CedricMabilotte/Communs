@@ -20,8 +20,8 @@ montage:
     coopératives autogérées. Le démembrement nue-propriété/usufruit au sens du
     droit français n'est pas en cause : il s'agit d'une propriété sanctuarisée en
     fondation.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Fondation non lucrative assurant une détention inaliénable du foncier, mais
     relevant du droit suisse et non du droit français.
@@ -68,6 +68,12 @@ grille:
   - critere: risque_requalification
     valeur: inconnu
     note: "La fondation relève du droit suisse ; son exposition à un risque de requalification fiscale au regard du droit français n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "La fondation soustrait les terres à la spéculation et en confie l'usage aux coopératives autogérées de Longo Maï, hors logique de rendement ; les conditions financières précises de cet usage ne sont pas documentées."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "L'usage des terres est assuré durablement par les coopératives elles-mêmes, mais la nature et la durée des titres d'usage formalisés ne sont pas documentées par les sources."
   - critere: redevabilite_publique
     valeur: partiel
     note: "L'existence et la mission de la fondation sont publiques, mais la reddition de comptes régulière n'est pas confirmée."

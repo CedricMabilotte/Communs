@@ -29,8 +29,8 @@ montage:
     démembrement nue-propriété/usufruit au sens du droit français n'est pas
     confirmé : il s'agit d'une propriété sanctuarisée par une fondation et d'un
     usage collectif.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Foncier sanctuarisé de manière inaliénable dans une fondation, mais relevant
     du droit suisse, et usage collectif dont la formalisation contractuelle
@@ -69,6 +69,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: partiel
     note: "Le réseau fonctionne depuis 1973, mais les dispositifs de transmission et de renouvellement ne sont pas décrits."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte pas de société commerciale : le foncier est porté par une fondation de droit suisse et l'usage par des coopératives autogérées de statut associatif."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et les activités collectives (agriculture, artisanat, accueil) relèvent d'une logique de partage, mais le régime d'accès aux fruits du lieu n'est pas précisément documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et les coopératives ne sont pas documentées ; la formalisation contractuelle de l'usage n'est pas connue."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le foncier est sanctuarisé de façon inaliénable et le réseau fonctionne depuis 1973, mais les actes formalisant l'usage et sa durée ne sont pas documentés."
 analyse:
   forces:
     - "Foncier sanctuarisé de façon inaliénable depuis des décennies."

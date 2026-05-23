@@ -28,16 +28,18 @@ montage:
     jouissance d'un logement, et leur prix de cession est plafonné à la valeur
     nominale majorée de l'IRL : la spéculation sur le logement est neutralisée
     par construction.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: mutualisme
   commentaire: >
     Société coopérative encadrée par la loi ALUR ; forme sociétaire mais
     plafonnement légal du prix de cession des parts qui verrouille
     l'anti-spéculation.
 axes_estimes:
-  A: 80
-  B: 90
-  C: 90
+  1: 85
+  2: 55
+  3: 85
+  4: 65
+  5: 75
 analyse:
   forces:
     - "Prix de cession des parts plafonné par la loi à la valeur nominale majorée de l'IRL."

@@ -21,8 +21,8 @@ montage:
     mobilisant selon les sites la pleine propriété, le bail emphytéotique de
     longue durée ou des conventions de gestion. Associations d'intérêt général
     agréées, ils relèvent du droit civil privé non lucratif.
-purete_juridique:
-  niveau: civil_non_lucratif
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Associations loi 1901 d'intérêt général agréées : montage strictement de
     droit civil privé et non lucratif.
@@ -72,6 +72,12 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "L'agrément public soumet les CEN à un cadre de contrôle, mais le détail de la reddition de comptes au public n'est pas documenté."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Les CEN protègent des espaces naturels via propriété, bail emphytéotique et conventions de gestion ; les sources n'indiquent pas de recherche de revenu locatif de marché, mais les conditions financières des conventions ne sont pas détaillées."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Les CEN mobilisent notamment le bail emphytéotique de longue durée, titre d'usage long, mais aussi des conventions de gestion dont la durée et le renouvellement ne sont pas documentés."
 analyse:
   forces:
     - "Associations loi 1901 d'intérêt général agréées : pureté juridique élevée."

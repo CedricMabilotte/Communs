@@ -23,8 +23,8 @@ montage:
     Villarceaux, propriété de la FPH. Elle porte l'animation et la formation,
     tandis que l'exploitation agricole relève d'une EARL. La nature exacte des
     actes liant l'association à la fondation n'est pas documentée par les sources.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Association loi 1901 d'animation, non lucrative ; le montage d'usage du
     domaine reste partiellement documenté et cohabite avec une EARL.
@@ -71,6 +71,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: inconnu
+    note: "Le régime des activités d'animation et de formation — gratuité, contribution modique ou tarification — n'est pas documenté par les sources."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Les actes liant l'association à la Fondation Charles Léopold Mayer n'étant pas documentés, l'existence et le niveau d'un loyer ou d'une redevance ne le sont pas non plus."
 analyse:
   forces:
     - "Association loi 1901 non lucrative portant l'animation et la formation."

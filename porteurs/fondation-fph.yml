@@ -22,8 +22,8 @@ montage:
     l'usage agricole à des structures d'exploitation tierces. Il s'agit d'une
     propriété de fondation assortie d'une exploitation tierce, et non d'un
     démembrement strict.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Fondation non lucrative offrant une bonne protection du foncier, mais dont la
     forme exacte au regard du droit français reste à confirmer.
@@ -70,6 +70,12 @@ grille:
   - critere: risque_requalification
     valeur: inconnu
     note: "La forme exacte de la FPH au regard du droit français n'étant pas confirmée, son exposition à un risque de requalification fiscale ne peut être appréciée."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "La FPH met le domaine à disposition pour une transition agroécologique, mais les conditions financières de la mise à disposition aux structures d'exploitation ne sont pas documentées par les sources."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "La nature et la durée des titres d'usage confiés aux structures d'exploitation tierces ne sont pas documentées par les sources consultées."
   - critere: redevabilite_publique
     valeur: partiel
     note: "La FPH présente son action sur son site, mais la reddition de comptes régulière et détaillée n'est pas confirmée."

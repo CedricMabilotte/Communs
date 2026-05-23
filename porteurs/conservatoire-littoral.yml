@@ -22,8 +22,8 @@ montage:
     devient inaliénable. La gestion est confiée à des collectivités, syndicats
     mixtes, fondations, associations agréées ou établissements publics. En 2015,
     environ 13 % des sites étaient gérés par des associations.
-purete_juridique:
-  niveau: droit_public
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Établissement public relevant du droit public ; la domanialité et
     l'inaliénabilité confèrent une protection foncière maximale.
@@ -73,6 +73,12 @@ grille:
   - critere: redevabilite_publique
     valeur: oui
     note: "Établissement public, le Conservatoire est soumis au contrôle de l'État et rend compte publiquement de son patrimoine et de son activité."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le Conservatoire confie la gestion de ses sites à des tiers (collectivités, associations) sans logique de revenu locatif de marché, mais les conditions financières des conventions de gestion ne sont pas détaillées par les sources."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "La gestion est confiée par conventions à des tiers ; la domanialité inaliénable sécurise le foncier, mais la durée et le mode de renouvellement de ces conventions ne sont pas documentés."
 analyse:
   forces:
     - "Domaine propre inaliénable : protection foncière parmi les plus fortes."

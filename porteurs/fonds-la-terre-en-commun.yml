@@ -22,8 +22,8 @@ montage:
     l'agriculture intensive. Les dons ne confèrent aucune part de capital. Le
     caractère consomptible ou non de la dotation n'est pas confirmé par les
     sources.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Fonds de dotation non lucratif ; la solidité du verrou foncier dépend du
     caractère non consomptible de la dotation, non confirmé par les sources.
@@ -70,6 +70,12 @@ grille:
   - critere: risque_requalification
     valeur: non
     note: "La qualité d'intérêt général d'un fonds de dotation n'est jamais définitivement acquise ; un fonds redistributeur n'ouvre droit au mécénat que sous conditions : le risque de requalification fiscale, avec perte de l'intérêt général, est sérieux et non écarté."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le fonds acquiert le foncier pour en faire une propriété collective au service du bien commun, hors logique de revenu locatif ; les conditions financières de l'usage confié aux collectifs ne sont pas documentées."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "Le fonds s'appuie sur les collectifs usager·es de la ZAD, mais la nature et la durée des titres d'usage qui leur sont accordés ne sont pas documentées par les sources."
   - critere: redevabilite_publique
     valeur: partiel
     note: "Le fonds communique sur sa collecte, mais la publication régulière de comptes et de rapports d'activité n'est pas confirmée."

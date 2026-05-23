@@ -26,8 +26,8 @@ montage:
     2083. Elle redistribue l'usage aux
     paysan·nes par des baux de long terme. Ses associés sont les utilisateurs
     eux-mêmes, ce qui en fait une structure d'usage collective.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Société civile de droit privé articulée à une propriété publique ; structure
     d'usage collective dont les associés sont les utilisateurs du foncier.
@@ -74,6 +74,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif de la SCTL en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'usage attribué aux paysan·nes est une exploitation agricole marchande, mais la SCTL fonctionne comme un office foncier au service de l'installation et non d'un rendement."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "La SCTL attribue l'usage par baux ruraux, dont le fermage est plafonné par barème préfectoral ; office foncier local, elle ne recherche pas un revenu locatif de marché."
 analyse:
   forces:
     - "Structure d'usage dont les associés sont les utilisateurs eux-mêmes."

@@ -31,8 +31,8 @@ montage:
     sortie, elles sont remboursées au nominal, sans plus-value. En cas de
     revente du bâtiment, le surplus ne peut être distribué aux membres : la
     sortie du système spéculatif est garantie statutairement.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: mutualisme
   commentaire: >
     Société coopérative d'habitants à capital variable ; forme sociétaire mais
     statuts anti-spéculatifs verrouillant la valeur des parts au nominal.
@@ -70,6 +70,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: partiel
     note: "La forme coopérative organise la durée, mais les dispositifs de renouvellement des coopérateur·rices ne sont pas tous documentés."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le foncier est porté par une société coopérative d'habitants à capital variable : société commerciale de forme coopérative, à lucrativité encadrée par des statuts anti-spéculatifs."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'accès au logement repose sur une redevance et non sur la gratuité, mais l'immeuble compte 9 logements sociaux et 4 très sociaux : une logique de logement abordable coexiste avec une part contributive."
+  - critere: loyer_non_rentier
+    valeur: oui
+    note: "La redevance versée par les ménages couvre les charges de la coopérative sans nourrir de rendement ; les parts sont remboursées au nominal sans plus-value et le surplus de revente ne peut être distribué."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "Chaque ménage signe un contrat coopératif lui conférant un droit de jouissance durable sur son logement, sans précarité locative de marché."
 analyse:
   forces:
     - "Parts plafonnées au nominal : sortie du marché spéculatif garantie statutairement."

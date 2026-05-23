@@ -27,8 +27,8 @@ montage:
     et en conserve la propriété sur le long terme. L'usage est confié aux
     agriculteur·rices par des baux de long terme. Le modèle est analogue à celui de la
     Foncière Terre de Liens, à l'échelle régionale du Pays Basque.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: economie_marchande
   commentaire: >
     Foncière de forme sociétaire (société en commandite par actions) reposant sur
     un actionnariat citoyen ; la non-lucrativité dépend des clauses statutaires
@@ -67,6 +67,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: partiel
     note: "Lurzaindia s'inscrit dans une continuité depuis le GFAM Lurra, mais les dispositifs de transmission ne sont pas décrits."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le foncier est porté par une société en commandite par actions, société commerciale à actionnariat solidaire ; l'usufruitier (preneurs de baux ruraux) n'est pas une société commerciale."
+  - critere: usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'accès à la terre et à ses fruits n'est pas documenté ; l'usage est confié à des agriculteur·rices par des baux de long terme."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par baux ruraux dans une logique d'installation paysanne, mais la non-lucrativité de la société en commandite par actions n'est pas garantie par construction et les clauses encadrant la rémunération du capital ne sont pas documentées."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par des baux ruraux de long terme dont le renouvellement est d'ordre public, assurant aux agriculteur·rices une jouissance sécurisée dans le temps."
 analyse:
   forces:
     - "Foncière citoyenne ancrée régionalement, forte mobilisation d'épargne populaire."

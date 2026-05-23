@@ -190,6 +190,71 @@ regimes:
     en fait.
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Les cinq pôles — profils de référence du cadre d'évaluation
+# ─────────────────────────────────────────────────────────────────────────────
+# Les trois régimes du sol se précisent en cinq pôles, engendrés par un principe
+# unique : le resserrement progressif de la DÉCISION (qui décide de l'usage du
+# sol) et du BÉNÉFICE (à qui cet usage profite). Les pôles ne sont pas des
+# cases : ce sont des profils de référence sur les cinq axes de l'Indice. Une
+# entité réelle, presque toujours hybride, reçoit un profil — non une étiquette.
+poles:
+  chapeau: >
+    Du commun citoyen, repère du cadre, à la propriété marchande qu'il affronte,
+    cinq pôles jalonnent le resserrement de la décision et du bénéfice. Le repère
+    n'est pas l'intérêt général d'État mais la gouvernance citoyenne collective
+    de droit civil — une troisième voie, ni État ni marché : le peuple.
+  liste:
+    - id: commun_citoyen
+      rang: 1
+      label: "Le commun citoyen"
+      regime: civil_commun
+      role: "Pôle de référence."
+      decision: "Le collectif citoyen usager, autogéré."
+      beneficiaire: "Ouvert, au-delà des membres — intérêt général d'initiative citoyenne."
+      logique: "Le commun — troisième voie, ni État ni commerce."
+    - id: ig_institue
+      rang: 2
+      label: "L'intérêt général institué"
+      regime: civil_commun
+      role: "Allié du pôle de référence — même régime, gouvernance descendante."
+      decision: "Une instance mandatée (conseil, donateurs, tutelle)."
+      beneficiaire: "Un intérêt général défini institutionnellement, ouvert mais octroyé."
+      logique: "L'intérêt général administré."
+    - id: mutualisme
+      rang: 3
+      label: "Le mutualisme d'usagers"
+      regime: commercial
+      role: "Pôle des « faux amis » — lexique social, bénéfice fermé."
+      decision: "Les sociétaires."
+      beneficiaire: "Les membres — cercle fermé."
+      logique: "L'entraide entre membres ; SCIC, coopérative, SCOP."
+    - id: economie_marchande
+      rang: 4
+      label: "L'économie sociale marchande"
+      regime: commercial
+      role: "Posture sociale, structure de rentabilité."
+      decision: "Dirigeants et investisseurs « patients »."
+      beneficiaire: "La mission affichée et un rendement servi au capital."
+      logique: "Rentabilité tempérée par une posture sociale."
+    - id: propriete_marchande
+      rang: 5
+      label: "La propriété marchande"
+      regime: propriete_privee
+      role: "Pôle repoussoir — c'est lui que le commun citoyen affronte."
+      decision: "Le propriétaire."
+      beneficiaire: "Lui-même — plus-value, spéculation."
+      logique: "Le marché."
+  registres:
+    chapeau: >
+      Une entité se lit à travers trois registres. La nature (faits statutaires)
+      sert à vérifier la posture (orientation déclarée) ; le modèle économique
+      dit le régime d'usage. L'écart entre une posture haute et une nature
+      effondrée révèle le « communs-washing ».
+    nature: "Faits statutaires : droit civil ou commercial, verrou d'actif, réserves impartageables, gouvernance."
+    posture: "Orientation déclarée vers le bien commun ; ouverture du bénéficiaire."
+    modele_economique: "Régime d'usage : gratuité, don, troc ↔ loyer modéré réinvesti ↔ loyer de marché."
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Anti-concepts — ce que l'annuaire ne référence PAS
 # ─────────────────────────────────────────────────────────────────────────────
 anti_concepts:

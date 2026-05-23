@@ -26,8 +26,8 @@ montage:
     portée par ces structures non spéculatives, qui confient l'usage aux
     paysan·nes par bail rural, fréquemment assorti de clauses environnementales.
     Le démembrement strict s'observe surtout pour les donations à la Fondation.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Foncier sanctuarisé par des structures non spéculatives (FRUP et société en
     commandite par actions à actionnariat solidaire) ; pureté variable selon le
@@ -66,6 +66,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: oui
     note: "Trois structures complémentaires et un mouvement structuré depuis 2003 organisent la continuité."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Variable selon le porteur : la Fondation, reconnue d'utilité publique, n'est pas commerciale ; la Foncière est une société en commandite par actions, société commerciale à actionnariat solidaire et lucrativité encadrée."
+  - critere: usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'accès à la terre et à ses fruits n'est pas documenté ; l'usage est confié aux paysan·nes par bail rural pour une activité agricole."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage et les actions de la Foncière ne versent pas de dividende ; le caractère soutenable des loyers n'est toutefois pas documenté à l'échelle du réseau."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, souvent environnemental, dont le renouvellement est d'ordre public : le collectif paysan dispose d'une jouissance durable et sécurisée."
 analyse:
   forces:
     - "Modèle national éprouvé, près de 7 000 hectares portés hors marché."

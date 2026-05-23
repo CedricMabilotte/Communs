@@ -23,8 +23,8 @@ montage:
     aux agriculteur·rices par des baux de long terme. Le modèle est analogue à celui
     de la Foncière Terre de Liens, à l'échelle régionale du Pays Basque ; il
     s'agit d'un portage collectif et non d'un démembrement de propriété.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: economie_marchande
   commentaire: >
     Foncière de forme sociétaire (société en commandite par actions) reposant
     sur un actionnariat citoyen ; la non-lucrativité dépend des clauses
@@ -72,6 +72,12 @@ grille:
   - critere: risque_requalification
     valeur: partiel
     note: "Lurzaindia relève de la finance solidaire mais n'est pas reconnue d'intérêt général ; le risque de requalification fiscale ne se pose pas dans les mêmes termes que pour une fondation, sa solidité reposant sur ses clauses statutaires."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "L'usage est confié aux agriculteur·rices par des baux de long terme, dont le fermage est encadré réglementairement et n'est pas un loyer de marché ; le détail des conditions financières n'est pas documenté."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Lurzaindia confie les terres par des baux de long terme, gage d'une jouissance durable, mais la nature exacte de ces baux et leur régime de renouvellement ne sont pas détaillés par les sources."
   - critere: redevabilite_publique
     valeur: partiel
     note: "Lurzaindia communique sur son activité auprès de ses actionnaires, mais ne relève pas d'un contrôle public comparable à celui d'une fondation reconnue d'utilité publique."

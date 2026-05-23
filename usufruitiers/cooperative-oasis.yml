@@ -25,8 +25,8 @@ montage:
     le bâti d'écolieux pour les inscrire en propriété collective. Elle joue un
     rôle de financement et d'accompagnement plus que d'usufruitier direct ;
     l'usage relève des collectifs des écolieux eux-mêmes.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: mutualisme
   commentaire: >
     Société coopérative d'intérêt collectif avec agrément ESUS : forme
     coopérative encadrée, fonctionnant sur le principe « une personne, une voix ».
@@ -73,6 +73,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif de la coopérative en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'usage des écolieux financés — gratuité, contribution modique ou accès tarifé — n'est pas documenté par les sources."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'investissement ouvre droit à une réduction d'impôt et une SCIC peut rémunérer modérément le capital ; le niveau des loyers ou redevances dans les montages financés n'est toutefois pas documenté."
 analyse:
   forces:
     - "Forme de SCIC fonctionnant sur le principe « une personne, une voix »."

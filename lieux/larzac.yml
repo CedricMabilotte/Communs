@@ -31,8 +31,8 @@ montage:
     de long terme. La SCTL n'est pas propriétaire : elle est preneuse à bail
     emphytéotique. C'est ce bail de 99 ans, et non la seule domanialité, qui
     fonde l'irréversibilité du dispositif.
-purete_juridique:
-  niveau: droit_public
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Propriété publique de l'État, fortement protectrice, assortie d'un bail
     emphytéotique de 99 ans consenti à une société civile attribuant l'usage de
@@ -71,6 +71,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: oui
     note: "La SCTL fonctionne en continu depuis 1985 et attribue l'usage par des baux de long terme."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : la propriété est publique (État) et l'usage est porté par la SCTL, société civile de droit privé attribuant l'usage de manière collective."
+  - critere: usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'accès à la terre et à ses fruits (vente au prix du marché, contribution modique) n'est pas documenté par les sources : il s'agit d'exploitations agricoles paysannes."
+  - critere: loyer_non_rentier
+    valeur: oui
+    note: "Le dispositif fonctionne comme un office foncier local sans recherche de rendement ; les baux attribués aux paysan·nes relèvent d'une logique d'installation et non d'un loyer rentier."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "La SCTL attribue l'usage aux paysan·nes par des baux de long terme, assurant au collectif usager une jouissance durable du plateau."
 analyse:
   forces:
     - "Propriété publique de l'État adossée à un bail emphytéotique de 99 ans : irréversibilité parmi les plus fortes."

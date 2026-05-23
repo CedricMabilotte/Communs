@@ -27,8 +27,8 @@ montage:
     nomme les administrateur·rices du fonds et définit ses orientations : le
     montage dissocie nettement la propriété protégée de l'usage confié, sans
     recourir à l'usufruit civil plafonné à 30 ans.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Fonds de dotation de droit privé non lucratif, sans capital lucratif ; la
     cession d'usage par bail emphytéotique de 99 ans sécurise l'usage bien
@@ -73,6 +73,12 @@ grille:
   - critere: transparence
     valeur: partiel
     note: "Le fonctionnement du fonds est documenté publiquement, notamment par une monographie ; le détail de la publication des comptes n'est pas confirmé."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le fonctionnement non capitaliste et la transformation de la propriété en propriété d'usage écartent une logique de rendement, mais le montant de la redevance du bail emphytéotique n'est pas documenté par les sources."
+  - critere: securite_usage_offerte
+    valeur: oui
+    note: "L'usage est confié aux collectifs par un bail emphytéotique de 99 ans, titre d'usage long ouvrant un droit réel sur le lieu, bien au-delà du plafond de 30 ans des démembrements civils."
   - critere: redevabilite_publique
     valeur: partiel
     note: "Un fonds de dotation est soumis à des obligations déclaratives auprès de l'État ; la reddition de comptes au public n'est pas détaillée par les sources."

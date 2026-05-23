@@ -23,8 +23,8 @@ montage:
     lorsqu'il est bailleur, le loue à un fermier par bail rural. Terre de Liens
     distingue ce GFA mutuel ou solidaire du GFA d'épargnants, qu'elle qualifie
     d'outil financier contre-productif pour le renouvellement des générations.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Société civile agricole ; la pureté dépend des clauses statutaires, le GFA
     mutuel ou solidaire se distinguant nettement du GFA d'épargnants spéculatif.
@@ -71,6 +71,12 @@ grille:
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif du GFA en cas de dissolution dépend des statuts ; il n'est pas documenté par les sources consultées."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'usage du fermier preneur est une exploitation agricole marchande, mais le GFA mutuel ou solidaire repose sur une logique de mutualisation de l'épargne citoyenne hors recherche de rendement."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "Le GFA bailleur loue par bail rural : le fermage est plafonné par barème préfectoral et non calé sur un loyer de marché libre ; le GFA mutuel ou solidaire se distingue du GFA d'épargnants en ne recherchant pas le rendement."
 analyse:
   forces:
     - "Société civile agricole permettant une propriété foncière collective."

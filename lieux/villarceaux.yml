@@ -29,8 +29,8 @@ montage:
     formation. Le démembrement strict nue-propriété/usufruit au sens du Code civil
     n'est pas confirmé par les sources : il s'agit d'une propriété de fondation
     assortie d'une exploitation tierce.
-purete_juridique:
-  niveau: civil_encadre
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     Foncier sanctuarisé chez une fondation non lucrative, mais le montage d'usage
     n'est pas un démembrement strict et reste partiellement documenté.
@@ -68,6 +68,18 @@ grille:
   - critere: perennite_gouvernance
     valeur: inconnu
     note: "Les dispositifs de transmission et de renouvellement ne sont pas décrits par les sources consultées."
+  - critere: montage_non_commercial
+    valeur: non
+    note: "L'usufruitier inclut l'EARL du Chemin Neuf, société commerciale d'exploitation agricole dont la non-lucrativité n'est pas établie ; le foncier est en revanche porté par une fondation non lucrative."
+  - critere: usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'accès à la terre et à ses fruits n'est pas documenté ; l'exploitation agroécologique est conduite par une EARL et le détail des activités de formation et d'accueil n'est pas précisé."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Les actes liant la fondation et les structures d'exploitation ne sont pas publiquement détaillés : l'existence et la nature d'un loyer ou d'une redevance ne sont pas documentées."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "Le montage d'usage n'est pas un démembrement strict et reste partiellement opaque : la nature et la durée des titres d'usage ne sont pas documentées."
 analyse:
   forces:
     - "Foncier de grande ampleur durablement détenu par une fondation non lucrative."

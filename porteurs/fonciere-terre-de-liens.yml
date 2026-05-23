@@ -21,8 +21,8 @@ montage:
     responsabilité est limitée à leur apport, et achète le foncier qu'elle
     conserve durablement. L'usage est confié aux paysan·nes par bail rural. Il
     s'agit d'un portage collectif et non d'un démembrement de propriété.
-purete_juridique:
-  niveau: societaire_solidaire
+integrite_montage:
+  niveau: economie_marchande
   commentaire: >
     Forme sociétaire (société en commandite par actions) à actionnariat solidaire,
     sans dividende ; la non-lucrativité repose sur les clauses statutaires plus
@@ -70,6 +70,12 @@ grille:
   - critere: risque_requalification
     valeur: partiel
     note: "La Foncière relève de la finance solidaire mais n'est pas reconnue d'intérêt général ; le risque de requalification fiscale ne se pose pas dans les mêmes termes que pour une fondation, sa solidité reposant sur ses clauses statutaires."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "L'usage est confié aux paysan·nes par bail rural, dont le fermage est encadré réglementairement et n'est pas un loyer de marché ; le détail des conditions financières n'est pas documenté."
+  - critere: securite_usage_offerte
+    valeur: oui
+    note: "Le bail rural assure une jouissance d'au moins neuf ans avec un droit au renouvellement d'ordre public ; il est souvent environnemental, inscrivant l'usage dans la durée."
   - critere: redevabilite_publique
     valeur: partiel
     note: "La Foncière communique dans le cadre du mouvement Terre de Liens et de la finance solidaire, mais ne relève pas d'un contrôle public comparable à celui d'une FRUP."

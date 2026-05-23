@@ -21,8 +21,8 @@ montage:
     seule nue-propriété, le donateur conservant l'usufruit de son vivant. Elle
     peut également recevoir un usufruit temporaire. Une fondation ouverte aux
     collectivités pour le portage du foncier agricole a par ailleurs été annoncée.
-purete_juridique:
-  niveau: civil_non_lucratif
+integrite_montage:
+  niveau: ig_institue
   commentaire: >
     La reconnaissance d'utilité publique constitue le statut le plus protecteur
     pour porter durablement un foncier hors marché.
@@ -69,6 +69,12 @@ grille:
   - critere: risque_requalification
     valeur: oui
     note: "La reconnaissance d'utilité publique, accordée par décret après instruction de l'État, sécurise durablement la qualité d'intérêt général et expose à un risque de requalification fiscale très faible."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "La Fondation porte le foncier agricole et accompagne la transmission de fermes ; les conditions financières de mise à disposition de l'usage ne sont pas détaillées par cette fiche."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "La nature et la durée des titres d'usage accordés sur le foncier porté par la Fondation ne sont pas documentées par les sources de cette fiche."
   - critere: redevabilite_publique
     valeur: oui
     note: "Le statut de FRUP impose un contrôle de l'État et la publication d'un rapport annuel ; la Fondation rend compte publiquement de son activité."
