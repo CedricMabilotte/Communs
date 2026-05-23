@@ -25,6 +25,12 @@ import yaml
 # Date de génération du site — affichée en pied de page et dans le sitemap.
 BUILD_DATE = datetime.date.today().isoformat()
 
+# Variante française lisible de la date de génération (pied de page public).
+_MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+            "août", "septembre", "octobre", "novembre", "décembre")
+_today = datetime.date.today()
+BUILD_DATE_FR = f"{_today.day} {_MOIS_FR[_today.month - 1]} {_today.year}"
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config"
 SITE = ROOT / "site"
@@ -203,6 +209,7 @@ NAV = [
     ("porteurs.html", "Porteurs"),
     ("usufruitiers.html", "Usufruitiers"),
     ("classement.html", "Classement"),
+    ("regimes.html", "Trois régimes"),
     ("grilles.html", "Grilles"),
     ("modeles.html", "Modèles voisins"),
     ("glossaire.html", "Glossaire"),
@@ -288,13 +295,13 @@ def page(title, body, active, depth=0, project=None, description="",
     <p>{e(pname)} — annuaire critique des montages de libération des terres en
     France. Données factuelles sourcées ; l'Indice de libération est une grille
     d'analyse explicite, non un jugement de valeur.</p>
-    <p class="foot-links"><a href="{up}methode.html">Méthode &amp; sources</a> ·
+    <p class="foot-links"><a href="{up}methode.html">Méthode</a> ·
+    <a href="{up}regimes.html">Trois régimes</a> ·
     <a href="{up}grilles.html">Grilles d'analyse</a> ·
     <a href="{up}glossaire.html">Glossaire</a> ·
     <a href="{up}suggerer.html">Proposer un lieu</a> ·
     <a href="{up}data.json">Données ouvertes (JSON)</a></p>
-    <p>Fork de « Résidence » · site statique généré automatiquement le
-    {e(BUILD_DATE)}.</p>
+    <p>Site statique, généré automatiquement le {e(BUILD_DATE_FR)}.</p>
   </div>
 </footer>
 </body>
@@ -599,7 +606,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     cat = fiche["categorie"]
     catlabel = {"lieu": "Lieu", "porteur": "Porteur de nue-propriété",
                 "usufruitier": "Organisme usufruitier",
-                "modele": "Modèle voisin de référence"}[cat]
+                "modele": "Modèle voisin"}[cat]
 
     # fil d'Ariane complet : Accueil › Catégorie › Fiche
     head = f"""<nav class="crumb" aria-label="Fil d'Ariane">
@@ -659,8 +666,9 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     pj = fiche.get("purete_juridique", {}) or {}
     if pj.get("niveau"):
         plab, psens = purete_label(pj["niveau"], ranking)
-        rows.append(("Pureté juridique",
-                     f'<span title="{e(psens)}">{e(plab)}</span>'))
+        rows.append(("Nature juridique",
+                     f'<span title="{e(psens)}">'
+                     f'<a href="../regimes.html">{e(plab)}</a></span>'))
     if fiche.get("url"):
         rows.append(("Site", f'<a href="{e(fiche["url"])}" rel="noopener" '
                              f'target="_blank">{e(fiche["url"])}</a>'))
@@ -1011,11 +1019,9 @@ def render_classement(all_sc, cfg):
         for p in ranking["paliers"])
 
     body = f"""<h1>Classement par l'Indice de libération</h1>
-<p class="lead">L'Indice de libération (IdL) mesure, de 0 à 100, à quel point un
-montage atteint trois finalités, chacune notée comme un axe : l'intérêt général
-(A), la libération des terres (B) et la gouvernance participative (C).
-L'indice global est leur moyenne — les trois finalités pèsent à parts égales.
-<a href="methode.html">Méthode détaillée →</a></p>
+<p class="lead">L'Indice de libération (IdL) note chaque montage de 0 à 100 sur
+trois axes — intérêt général (A), libération des terres (B), gouvernance
+participative (C). <a href="methode.html">Méthode détaillée →</a></p>
 <div class="callout callout-warn">
   <p><strong>Un classement croisé, indicatif.</strong> Lieux, porteurs de
   nue-propriété et usufruitiers sont notés par <strong>trois grilles
@@ -1174,7 +1180,8 @@ dédiée. Une grille combine des <strong>critères de lecture</strong> — chacu
 rattaché à un axe du classement et pondéré — et une <strong>lecture
 stratégique</strong> qui cadre les enjeux, forces, fragilités et leviers
 propres à la catégorie. Toute fiche évalue ces critères (oui · partiel · non ·
-inconnu) ; le score en découle directement.</p>
+inconnu) ; le score en découle directement.
+<a href="regimes.html">Le cadre des trois régimes du sol →</a></p>
 <p class="axe-legend">
 <span class="axe-dot axe-A"></span> Axe A — Intérêt général
 <span class="axe-dot axe-B"></span> Axe B — Libération des terres
@@ -1183,6 +1190,108 @@ inconnu) ; le score en découle directement.</p>
     return page("Grilles", body, "grilles.html", project=project,
                 description="Les trois grilles de lecture et d'analyse stratégique de l'annuaire.",
                 path="grilles.html")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Page — trois régimes du sol
+# ─────────────────────────────────────────────────────────────────────────────
+
+def render_regimes(cfg):
+    project = cfg["concepts"]["project"]
+    reg = cfg["concepts"].get("regimes", {}) or {}
+    anti = cfg["concepts"].get("anti_concepts", []) or []
+    liste = reg.get("liste", []) or []
+
+    # trois blocs courts, un par régime
+    cards = ""
+    for r in liste:
+        cards += f"""<div class="regime-card">
+  <h3>{e(clean(r.get('label','')))}</h3>
+  <p class="regime-outils"><strong>Outils.</strong> {e(clean(r.get('outils','')))}</p>
+  <p class="regime-but"><strong>Finalité.</strong> {e(clean(r.get('but','')))}</p>
+  <p class="regime-role">{e(clean(r.get('role','')))}</p>
+</div>"""
+
+    # tableau comparatif — structure stable, en dur
+    tbl_rows = [
+        ("Outil juridique type",
+         "Démembrement, fondation, fonds de dotation, bail long, association, SCIC",
+         "Société commerciale, parts ou actions cessibles",
+         "Pleine propriété individuelle (art. 544 C. civ.)"),
+        ("But poursuivi",
+         "Usage collectif d'intérêt général",
+         "Profit, valorisation du capital",
+         "Jouissance et transmission privées"),
+        ("Lucrativité",
+         "Non lucratif, gestion désintéressée",
+         "Lucratif par construction",
+         "Indifférente (usage privé)"),
+        ("Cessibilité du foncier",
+         "Verrouillée (inaliénabilité, dévolution)",
+         "Libre — parts cessibles, revente",
+         "Libre"),
+        ("Rapport au marché",
+         "Soustrait durablement",
+         "Soumis, voire spéculatif",
+         "Soumis, sans visée spéculative"),
+        ("Gouvernance",
+         "Collective, ouverte, « une voix par personne »",
+         "Proportionnelle au capital",
+         "Individuelle"),
+        ("Place dans l'annuaire",
+         "Régime de référence (noté)",
+         "Repoussoir — sauf si neutralisé",
+         "Point de départ, non référencé"),
+    ]
+    trs = "".join(
+        f"<tr><th scope=\"row\">{e(c)}</th><td>{e(a)}</td><td>{e(b)}</td>"
+        f"<td>{e(d)}</td></tr>"
+        for c, a, b, d in tbl_rows)
+    table = f"""<div class="table-scroll"><table class="rank-tbl regimes-tbl">
+<caption class="visually-hidden">Comparaison des trois régimes du sol selon
+sept critères.</caption>
+<thead><tr><th scope="col">Critère</th>
+<th scope="col">Droit civil / intérêt général</th>
+<th scope="col">Droit commercial</th>
+<th scope="col">Propriété privée classique</th></tr></thead>
+<tbody>{trs}</tbody></table></div>"""
+
+    anti_html = ""
+    if anti:
+        items = "".join(f"<li>{e(clean(x))}</li>" for x in anti)
+        anti_html = f"""<section><h2 class="sec">Aux frontières du modèle</h2>
+<p class="prose">L'annuaire se définit aussi par contraste. Ne sont
+<strong>pas</strong> référencés :</p>
+<ul class="prose">{items}</ul></section>"""
+
+    paradoxe = ""
+    if reg.get("paradoxe"):
+        paradoxe = (f'<div class="callout callout-note"><p>'
+                    f'<strong>Un régime n\'est pas une fatalité.</strong> '
+                    f'{e(clean(reg["paradoxe"]))}</p></div>')
+
+    body = f"""<h1>Trois régimes du sol</h1>
+<p class="lead">{e(clean(reg.get('chapeau','')))}</p>
+
+<section><h2 class="sec">Les trois régimes</h2>
+<div class="regime-grid">{cards}</div>
+{paradoxe}
+</section>
+
+<section><h2 class="sec">Tableau comparatif</h2>
+{table}
+</section>
+
+{anti_html}
+
+<p class="prose">La grille de notation traduit ce cadre en critères :
+voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul de l'Indice
+est détaillé dans la <a href="methode.html">méthode</a>.</p>"""
+    return page("Trois régimes du sol", body, "regimes.html", project=project,
+                description="Les trois régimes juridiques du foncier : droit "
+                            "civil d'intérêt général, droit commercial, "
+                            "propriété privée classique.",
+                path="regimes.html")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1230,21 +1339,25 @@ les fiches lacunaires, l'indice affiché est pénalisé par la complétude :
 entièrement renseignée n'est pas pénalisée ; une fiche dont la moitié des
 critères restent « inconnu » voit son indice ramené aux trois quarts de l'indice
 brut. L'indice brut est conservé pour information ; c'est l'indice affiché,
-pénalisé, qui sert au badge, au classement et à l'export <code>data.json</code>.
-Les modèles voisins ne sont pas notés par la grille : leur indice est
-<strong>estimé</strong> (axes posés éditorialement) et marqué comme tel ; ils
-restent hors du classement principal.</p>
+pénalisé, qui sert au badge, au classement et à l'export <code>data.json</code>.</p>
+<p class="prose">Les modèles voisins, eux, ne sont pas notés par la grille :
+leur indice est <strong>estimé</strong> (axes posés éditorialement) et marqué
+comme tel ; ils restent hors du classement principal.</p>
 <table class="rank-tbl small">
 <caption class="visually-hidden">Paliers de l'Indice de libération : seuil et sens.</caption>
 <thead><tr><th scope="col">Palier</th><th scope="col" class="num">Seuil</th><th scope="col">Sens</th></tr></thead>
 <tbody>{paliers_html}</tbody></table>
 </section>
 
-<section><h2 class="sec">Pureté juridique</h2>
-<p class="prose">{e(clean(ranking['purete_juridique']['question']))} Cet
-indicateur complémentaire n'entre pas dans l'Indice : il situe le montage sans
-le noter, car rester en droit public ou en forme sociétaire n'est pas en soi un
-défaut.</p>
+<section><h2 class="sec">Nature juridique du montage</h2>
+<p class="prose">{e(clean(ranking['purete_juridique']['question']))}</p>
+<p class="prose">Cet indicateur complémentaire n'entre pas dans l'Indice et
+n'est <strong>pas une échelle de qualité</strong> : il situe le montage parmi
+les régimes juridiques sans les hiérarchiser. La protection effective du
+foncier est mesurée séparément, par l'axe B. Une propriété publique inaliénable
+n'est pas une « bascule » défavorable : c'est, dans le corpus, l'un des
+ancrages hors marché les plus solides. Le cadre de ces régimes est exposé sur
+la page <a href="regimes.html">Trois régimes du sol</a>.</p>
 </section>
 
 <section><h2 class="sec">Limites</h2>
@@ -1330,16 +1443,38 @@ GLOSSAIRE = [
      "Reconnaissance officielle, par l'État, qu'un organisme ou un projet "
      "sert l'intérêt de la collectivité. Elle conditionne notamment le statut "
      "de fondation reconnue d'utilité publique."),
+    ("Droit civil",
+     "Branche du droit qui régit les rapports entre les personnes privées et "
+     "leurs biens : propriété, démembrement, baux, associations, sociétés "
+     "civiles. La libération des terres réemploie ces outils de droit civil, "
+     "dans leur version non lucrative, pour soustraire le foncier au marché."),
+    ("Droit commercial",
+     "Branche du droit qui régit les commerçants et les sociétés "
+     "commerciales. Une société commerciale poursuit en principe un but "
+     "lucratif et ses parts ou actions sont, sauf clause contraire, librement "
+     "cessibles. C'est le régime que l'annuaire prend pour repoussoir — sauf "
+     "lorsque ses statuts en neutralisent la lucrativité."),
+    ("Propriété privée",
+     "Droit d'user, de jouir et de disposer d'un bien de la manière la plus "
+     "absolue (article 544 du Code civil). La pleine propriété individuelle "
+     "est le régime ordinaire du foncier : ni libération, ni spéculation, mais "
+     "le point de départ que la libération des terres entend dépasser."),
+    ("Spéculation foncière",
+     "Acquisition d'un foncier dans l'attente d'une plus-value à la revente, "
+     "plutôt que pour son usage. Les montages de l'annuaire visent à "
+     "neutraliser cette logique, en verrouillant la cessibilité du foncier ou "
+     "des parts qui en portent la valeur."),
     ("Indice de libération",
      "Note de synthèse de 0 à 100 attribuée à chaque entrée de l'annuaire. "
      "Elle est la moyenne de trois axes — intérêt général (A), libération des "
      "terres (B), gouvernance participative (C) — et résume la solidité du "
      "montage. Voir la page Méthode."),
-    ("Pureté juridique",
-     "Indicateur complémentaire, non noté : il situe le montage selon qu'il "
-     "reste ou non strictement dans le droit civil privé et la "
-     "non-lucrativité, sans bascule vers le droit public ou une forme "
-     "sociétaire lucrative."),
+    ("Nature juridique du montage",
+     "Indicateur complémentaire, non noté et non hiérarchique : il situe le "
+     "montage parmi quatre régimes — droit civil non lucratif, droit civil "
+     "sous encadrement public, forme sociétaire solidaire, droit public — sans "
+     "les classer. La protection effective du foncier est mesurée à part, par "
+     "l'axe B de l'Indice."),
 ]
 
 
@@ -1399,8 +1534,9 @@ def render_index(all_sc, cfg, n_by_cat):
   <p class="hero-kicker">Annuaire critique · France</p>
   <h1>La terre, soustraite au marché.</h1>
   <p class="hero-lead">Partout en France, des terres sont sorties du marché
-  spéculatif. Cet annuaire les recense, explique leurs montages juridiques et
-  les note selon une grille d'analyse explicite.</p>
+  spéculatif — par le réemploi d'outils de droit civil non lucratif. Cet
+  annuaire les recense, explique leurs montages juridiques et les note selon
+  une grille d'analyse explicite.</p>
   <p class="hero-cta">
     <a class="cta" href="classement.html">Voir le classement</a>
     <a class="cta cta-ghost" href="methode.html">Comprendre la méthode</a>
@@ -1435,25 +1571,13 @@ def render_index(all_sc, cfg, n_by_cat):
 
 <section class="explain">
   <h2 class="sec">Le principe</h2>
-  <div class="explain-grid">
-    <div>
-      <h3>Libérer la terre</h3>
-      <p>Soustraire durablement un foncier à la logique spéculative pour le
-      placer au service d'un usage collectif d'intérêt général.</p>
-    </div>
-    <div>
-      <h3>Dissocier propriété et usage</h3>
-      <p>La propriété reste à un collectif non lucratif ; l'usage est confié à
-      des usager·es — par démembrement, bail long ou propriété publique.</p>
-    </div>
-    <div>
-      <h3>Le verrou des 30 ans</h3>
-      <p>L'usufruit d'une personne morale ne peut excéder 30 ans ; baux ruraux,
-      baux emphytéotiques et propriété publique y échappent.</p>
-    </div>
-  </div>
-  <p class="lead">Définitions complètes dans le <a href="glossaire.html">glossaire</a>
-  et le détail juridique dans la <a href="methode.html">méthode</a>.</p>
+  <p class="prose">« Libérer la terre », c'est réemployer des outils de droit
+  civil — démembrement, baux longs, statuts non lucratifs — pour soustraire un
+  foncier à la logique marchande et le placer durablement au service d'un usage
+  collectif. L'annuaire oppose pour cela trois régimes du sol.</p>
+  <p class="lead"><a href="regimes.html">Les trois régimes du sol →</a> ·
+  <a href="glossaire.html">Glossaire des termes →</a> ·
+  <a href="methode.html">Méthode et calcul de l'Indice →</a></p>
 </section>
 
 <section>
@@ -1465,7 +1589,8 @@ def render_index(all_sc, cfg, n_by_cat):
   <h2 class="sec">État du corpus</h2>
   <p class="lead">L'annuaire compte {n_by_cat['lieu']} lieux,
   {n_by_cat['porteur']} porteurs et {n_by_cat['usufruitier']} usufruitiers
-  notés. Leur répartition par palier d'Indice :</p>
+  notés — hors modèles voisins, présentés plus bas. Leur répartition par palier
+  d'Indice :</p>
   {hist}
 </section>
 
@@ -1955,6 +2080,20 @@ th.sortable[aria-sort=descending]::after{content:" \\25BC";opacity:1;}
 code{background:var(--beige);padding:.1rem .35rem;border-radius:3px;font-size:.86rem;}
 .note{font-size:.83rem;color:var(--faint);}
 
+/* trois régimes du sol */
+.regime-grid{display:grid;gap:1rem;margin:1.1rem 0;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.regime-card{border:1px solid var(--line);border-top:4px solid var(--green);
+ border-radius:var(--radius);padding:.5rem 1.1rem 1rem;background:var(--card);}
+.regime-card:nth-child(2){border-top-color:var(--terra);}
+.regime-card:nth-child(3){border-top-color:var(--gold);}
+.regime-card h3{font-size:1.05rem;}
+.regime-card p{font-size:.9rem;margin:.45rem 0;}
+.regime-outils,.regime-but{color:var(--muted);}
+.regime-role{color:var(--faint);font-style:italic;font-size:.85rem!important;}
+.regimes-tbl th[scope=row]{font-weight:600;color:var(--ink);text-transform:none;
+ letter-spacing:0;font-size:.86rem;border-bottom:1px solid var(--line);}
+
 /* glossaire */
 .glossaire{margin:1.4rem 0;display:flex;flex-direction:column;gap:0;}
 .gloss-item{border-bottom:1px solid var(--line);padding:.9rem 0;}
@@ -2101,6 +2240,7 @@ def main():
     # pages transverses
     write(SITE / "index.html", render_index(all_sc, cfg, n_by_cat))
     write(SITE / "classement.html", render_classement(all_sc, cfg))
+    write(SITE / "regimes.html", render_regimes(cfg))
     write(SITE / "grilles.html", render_grilles(cfg))
     write(SITE / "glossaire.html", render_glossaire(cfg))
     write(SITE / "methode.html", render_methode(cfg, n_by_cat, all_sc))
@@ -2114,8 +2254,8 @@ def main():
     sitemap_paths = [("index.html", "1.0")]
     for cat in ("lieu", "porteur", "usufruitier", "modele"):
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
-    for p in ("classement.html", "grilles.html", "methode.html",
-              "glossaire.html", "suggerer.html"):
+    for p in ("classement.html", "regimes.html", "grilles.html",
+              "methode.html", "glossaire.html", "suggerer.html"):
         sitemap_paths.append((p, "0.6"))
     for f, sc in all_sc:
         sitemap_paths.append((f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html', "0.7"))

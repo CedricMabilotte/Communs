@@ -381,6 +381,20 @@ th.sortable[aria-sort=descending]::after{content:" \25BC";opacity:1;}
 code{background:var(--beige);padding:.1rem .35rem;border-radius:3px;font-size:.86rem;}
 .note{font-size:.83rem;color:var(--faint);}
 
+/* trois régimes du sol */
+.regime-grid{display:grid;gap:1rem;margin:1.1rem 0;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.regime-card{border:1px solid var(--line);border-top:4px solid var(--green);
+ border-radius:var(--radius);padding:.5rem 1.1rem 1rem;background:var(--card);}
+.regime-card:nth-child(2){border-top-color:var(--terra);}
+.regime-card:nth-child(3){border-top-color:var(--gold);}
+.regime-card h3{font-size:1.05rem;}
+.regime-card p{font-size:.9rem;margin:.45rem 0;}
+.regime-outils,.regime-but{color:var(--muted);}
+.regime-role{color:var(--faint);font-style:italic;font-size:.85rem!important;}
+.regimes-tbl th[scope=row]{font-weight:600;color:var(--ink);text-transform:none;
+ letter-spacing:0;font-size:.86rem;border-bottom:1px solid var(--line);}
+
 /* glossaire */
 .glossaire{margin:1.4rem 0;display:flex;flex-direction:column;gap:0;}
 .gloss-item{border-bottom:1px solid var(--line);padding:.9rem 0;}

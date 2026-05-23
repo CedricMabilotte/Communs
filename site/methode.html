@@ -32,7 +32,7 @@
       <span class="brand-txt"><span class="brand-name">Terres Libérées</span>
       <span class="baseline">Annuaire critique des montages de libération des terres en France.</span></span>
     </a>
-    <nav class="topnav"><a href="index.html">Accueil</a><a href="lieux.html">Lieux</a><a href="porteurs.html">Porteurs</a><a href="usufruitiers.html">Usufruitiers</a><a href="classement.html">Classement</a><a href="grilles.html">Grilles</a><a href="modeles.html">Modèles voisins</a><a href="glossaire.html">Glossaire</a><a href="methode.html" class='active'>Méthode</a></nav>
+    <nav class="topnav"><a href="index.html">Accueil</a><a href="lieux.html">Lieux</a><a href="porteurs.html">Porteurs</a><a href="usufruitiers.html">Usufruitiers</a><a href="classement.html">Classement</a><a href="regimes.html">Trois régimes</a><a href="grilles.html">Grilles</a><a href="modeles.html">Modèles voisins</a><a href="glossaire.html">Glossaire</a><a href="methode.html" class='active'>Méthode</a></nav>
   </div>
 </header>
 <main class="wrap" id="contenu">
@@ -75,31 +75,35 @@ les fiches lacunaires, l'indice affiché est pénalisé par la complétude :
 entièrement renseignée n'est pas pénalisée ; une fiche dont la moitié des
 critères restent « inconnu » voit son indice ramené aux trois quarts de l'indice
 brut. L'indice brut est conservé pour information ; c'est l'indice affiché,
-pénalisé, qui sert au badge, au classement et à l'export <code>data.json</code>.
-Les modèles voisins ne sont pas notés par la grille : leur indice est
-<strong>estimé</strong> (axes posés éditorialement) et marqué comme tel ; ils
-restent hors du classement principal.</p>
+pénalisé, qui sert au badge, au classement et à l'export <code>data.json</code>.</p>
+<p class="prose">Les modèles voisins, eux, ne sont pas notés par la grille :
+leur indice est <strong>estimé</strong> (axes posés éditorialement) et marqué
+comme tel ; ils restent hors du classement principal.</p>
 <table class="rank-tbl small">
 <caption class="visually-hidden">Paliers de l'Indice de libération : seuil et sens.</caption>
 <thead><tr><th scope="col">Palier</th><th scope="col" class="num">Seuil</th><th scope="col">Sens</th></tr></thead>
 <tbody><tr><td><span class="pal-chip" style="--pal:#2f6b34">
-Libération aboutie</span></td><td class="num">≥ 88</td>
+Libération aboutie</span></td><td class="num">≥ 85</td>
 <td>Montage non lucratif, foncier durablement verrouillé, gouvernance participative et organisée pour durer. Modèle de référence.</td></tr><tr><td><span class="pal-chip" style="--pal:#4a7a3a">
-Montage solide</span></td><td class="num">≥ 76</td>
+Montage solide</span></td><td class="num">≥ 72</td>
 <td>Le montage atteint les trois finalités avec quelques marges de consolidation, souvent sur la gouvernance ou l&#x27;irréversibilité.</td></tr><tr><td><span class="pal-chip" style="--pal:#b08431">
-Engagement réel</span></td><td class="num">≥ 64</td>
+Engagement réel</span></td><td class="num">≥ 58</td>
 <td>La démarche est sincère et avancée mais un axe reste nettement en retrait — verrou foncier incomplet ou gouvernance peu participative.</td></tr><tr><td><span class="pal-chip" style="--pal:#bc5d3a">
-Libération partielle</span></td><td class="num">≥ 50</td>
+Libération partielle</span></td><td class="num">≥ 42</td>
 <td>Le montage emprunte au modèle sans en réunir les garanties : sortie du marché fragile, intérêt général discutable ou gouvernance fermée.</td></tr><tr><td><span class="pal-chip" style="--pal:#8f3829">
 Éloigné du modèle</span></td><td class="num">≥ 0</td>
 <td>Le foncier reste largement dans une logique de marché ou de cercle restreint ; la parenté avec la libération des terres est surtout revendiquée.</td></tr></tbody></table>
 </section>
 
-<section><h2 class="sec">Pureté juridique</h2>
-<p class="prose">Le montage reste-t-il strictement dans le droit civil privé et la non-lucrativité, sans bascule vers le droit public, une forme sociétaire lucrative ou un encadrement étatique fort ? Cet
-indicateur complémentaire n'entre pas dans l'Indice : il situe le montage sans
-le noter, car rester en droit public ou en forme sociétaire n'est pas en soi un
-défaut.</p>
+<section><h2 class="sec">Nature juridique du montage</h2>
+<p class="prose">De quel régime relève le montage ? L&#x27;indicateur situe — il ne classe pas : chaque régime a ses forces.</p>
+<p class="prose">Cet indicateur complémentaire n'entre pas dans l'Indice et
+n'est <strong>pas une échelle de qualité</strong> : il situe le montage parmi
+les régimes juridiques sans les hiérarchiser. La protection effective du
+foncier est mesurée séparément, par l'axe B. Une propriété publique inaliénable
+n'est pas une « bascule » défavorable : c'est, dans le corpus, l'un des
+ancrages hors marché les plus solides. Le cadre de ces régimes est exposé sur
+la page <a href="regimes.html">Trois régimes du sol</a>.</p>
 </section>
 
 <section><h2 class="sec">Limites</h2>
@@ -117,10 +121,10 @@ associatif) est un idéal-type ; peu de lieux réels le réalisent à la lettre.
 </section>
 
 <section><h2 class="sec">État du corpus</h2>
-<p class="prose">7 lieux · 10 porteurs de
+<p class="prose">8 lieux · 13 porteurs de
 nue-propriété · 7 organismes usufruitiers ·
-4 modèles voisins de comparaison.</p>
-<figure class="corpus-hist"><svg viewBox="0 0 360 180" role="img" aria-label="Répartition des 24 entrées notées par palier d'Indice de libération"><rect class="hg-bar" x="38.0" y="139.4" width="44.0" height="10.6" fill="#8f3829" rx="2"/><text class="hg-n" x="60.0" y="134.4">1</text><text class="hg-l" x="60.0" y="163.0">Éloigné du modèle</text><rect class="hg-bar" x="98.0" y="75.8" width="44.0" height="74.2" fill="#bc5d3a" rx="2"/><text class="hg-n" x="120.0" y="70.8">7</text><text class="hg-l" x="120.0" y="163.0">Libération partielle</text><rect class="hg-bar" x="158.0" y="44.0" width="44.0" height="106.0" fill="#b08431" rx="2"/><text class="hg-n" x="180.0" y="39.0">10</text><text class="hg-l" x="180.0" y="163.0">Engagement réel</text><rect class="hg-bar" x="218.0" y="128.8" width="44.0" height="21.2" fill="#4a7a3a" rx="2"/><text class="hg-n" x="240.0" y="123.8">2</text><text class="hg-l" x="240.0" y="163.0">Montage solide</text><rect class="hg-bar" x="278.0" y="107.6" width="44.0" height="42.4" fill="#2f6b34" rx="2"/><text class="hg-n" x="300.0" y="102.6">4</text><text class="hg-l" x="300.0" y="163.0">Libération aboutie</text></svg><figcaption>Répartition des 24 entrées notées par palier d'Indice de libération (modèles voisins exclus).</figcaption></figure>
+5 modèles voisins de comparaison.</p>
+<figure class="corpus-hist"><svg viewBox="0 0 360 180" role="img" aria-label="Répartition des 28 entrées notées par palier d'Indice de libération"><rect class="hg-bar" x="38.0" y="139.4" width="44.0" height="10.6" fill="#8f3829" rx="2"/><text class="hg-n" x="60.0" y="134.4">1</text><text class="hg-l" x="60.0" y="163.0">Éloigné du modèle</text><rect class="hg-bar" x="98.0" y="107.6" width="44.0" height="42.4" fill="#bc5d3a" rx="2"/><text class="hg-n" x="120.0" y="102.6">4</text><text class="hg-l" x="120.0" y="163.0">Libération partielle</text><rect class="hg-bar" x="158.0" y="44.0" width="44.0" height="106.0" fill="#b08431" rx="2"/><text class="hg-n" x="180.0" y="39.0">10</text><text class="hg-l" x="180.0" y="163.0">Engagement réel</text><rect class="hg-bar" x="218.0" y="65.2" width="44.0" height="84.8" fill="#4a7a3a" rx="2"/><text class="hg-n" x="240.0" y="60.2">8</text><text class="hg-l" x="240.0" y="163.0">Montage solide</text><rect class="hg-bar" x="278.0" y="97.0" width="44.0" height="53.0" fill="#2f6b34" rx="2"/><text class="hg-n" x="300.0" y="92.0">5</text><text class="hg-l" x="300.0" y="163.0">Libération aboutie</text></svg><figcaption>Répartition des 28 entrées notées par palier d'Indice de libération (modèles voisins exclus).</figcaption></figure>
 </section>
 </main>
 <footer class="footer">
@@ -128,13 +132,13 @@ nue-propriété · 7 organismes usufruitiers ·
     <p>Terres Libérées — annuaire critique des montages de libération des terres en
     France. Données factuelles sourcées ; l'Indice de libération est une grille
     d'analyse explicite, non un jugement de valeur.</p>
-    <p class="foot-links"><a href="methode.html">Méthode &amp; sources</a> ·
+    <p class="foot-links"><a href="methode.html">Méthode</a> ·
+    <a href="regimes.html">Trois régimes</a> ·
     <a href="grilles.html">Grilles d'analyse</a> ·
     <a href="glossaire.html">Glossaire</a> ·
     <a href="suggerer.html">Proposer un lieu</a> ·
     <a href="data.json">Données ouvertes (JSON)</a></p>
-    <p>Fork de « Résidence » · site statique généré automatiquement le
-    2026-05-23.</p>
+    <p>Site statique, généré automatiquement le 23 mai 2026.</p>
   </div>
 </footer>
 </body>
