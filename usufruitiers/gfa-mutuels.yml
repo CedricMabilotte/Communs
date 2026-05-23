@@ -6,7 +6,7 @@ statut_fiche: publie
 forme_juridique: "Société civile (groupement foncier agricole)"
 localisation: null
 annee: null
-url: "https://www.ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyen·nes"
+url: "https://ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyens"
 resume: >
   Les groupements fonciers agricoles (GFA) sont des sociétés civiles spécifiques à
   l'agriculture, créées dans les années 1970. On distingue le GFA d'exploitation
@@ -100,6 +100,6 @@ liens:
   lieux: [reseau-terre-de-liens]
 sources:
   - titre: "Terre de Liens — Découvrir les GFA/SCI citoyen·nes"
-    url: "https://www.ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyen·nes"
+    url: "https://ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyens"
   - titre: "Terre de Liens — Le GFA d'épargnants, un outil contre-productif"
     url: "https://terredeliens.org/national/actu/le-groupement-foncier-agricole-d%C3%A9pargnants-un-outil-financier-contre-productif-pour-le-renouvellement-des-g%C3%A9n%C3%A9rations-24-10-2023/"

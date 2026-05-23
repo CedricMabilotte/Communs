@@ -202,6 +202,71 @@ def meta_desc(text, limit=155):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Liage du glossaire — première occurrence par page des termes pivots
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Termes pivots reliés, du plus long au plus court (pour éviter qu'un terme
+# court masque un terme long). Le slug doit correspondre à une ancre du
+# glossaire (id="g-…"), cf. GLOSSAIRE / slugify().
+GLOSS_TERMS = [
+    ("libération des terres", "liberation-des-terres"),
+    ("indice de libération", "indice-de-liberation"),
+    ("bail emphytéotique", "bail-emphyteotique"),
+    ("fonds de dotation", "fonds-de-dotation"),
+    ("utilité publique", "utilite-publique"),
+    ("intérêt général", "interet-general"),
+    ("fondation RUP", "fondation-rup"),
+    ("nue-propriété", "nue-propriete"),
+    ("démembrement", "demembrement"),
+    ("bail rural", "bail-rural"),
+    ("usufruit", "usufruit"),
+]
+
+
+def link_glossary(body, up):
+    """Lie sobrement la première occurrence par page de chaque terme pivot vers
+    son ancre du glossaire. Opère sur le HTML déjà assemblé ; ne touche ni à
+    l'intérieur des balises, ni aux liens existants, ni aux titres, pour ne pas
+    surligner tout le texte (audit pédagogie C, C1)."""
+    # segmente le HTML : on ne modifie que les segments de texte hors balise,
+    # et on saute entièrement les zones <a …>…</a>, <h1>…</h6>, <script>, <svg>.
+    skip_pat = re.compile(
+        r'<a\b[^>]*>.*?</a>|<h[1-6]\b[^>]*>.*?</h[1-6]>'
+        r'|<script\b[^>]*>.*?</script>|<svg\b[^>]*>.*?</svg>'
+        r'|<style\b[^>]*>.*?</style>|<[^>]+>',
+        re.S)
+    done = set()
+    out = []
+    pos = 0
+    for m in skip_pat.finditer(body):
+        # texte brut entre deux éléments à sauter
+        out.append(_link_text_chunk(body[pos:m.start()], up, done))
+        out.append(m.group(0))
+        pos = m.end()
+    out.append(_link_text_chunk(body[pos:], up, done))
+    return "".join(out)
+
+
+def _link_text_chunk(text, up, done):
+    if not text:
+        return text
+    for term, slug in GLOSS_TERMS:
+        if slug in done:
+            continue
+        # première occurrence, frontière de mot, insensible à la casse
+        pat = re.compile(r'(?<![\w-])(' + re.escape(term) + r')(?![\w-])',
+                         re.IGNORECASE)
+        m = pat.search(text)
+        if not m:
+            continue
+        done.add(slug)
+        link = (f'<a class="gloss-link" href="{up}glossaire.html#g-{slug}">'
+                f'{m.group(1)}</a>')
+        text = text[:m.start()] + link + text[m.end():]
+    return text
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Gabarit de page
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -230,12 +295,21 @@ def canonical_url(path):
 
 
 def page(title, body, active, depth=0, project=None, description="",
-         path="", jsonld=None, og_type="website", robots=None):
+         path="", jsonld=None, og_type="website", robots=None,
+         link_gloss=True):
     up = "../" * depth
-    nav = "".join(
-        f'<a href="{up}{href}"{" class=\'active\'" if href == active else ""}>{e(label)}</a>'
-        for href, label in NAV
-    )
+    # liage du glossaire : première occurrence par page des termes pivots
+    # (audit pédagogie C, C1). Désactivé sur le glossaire lui-même.
+    if link_gloss:
+        body = link_glossary(body, up)
+    nav_items = []
+    for href, label in NAV:
+        if href == active:
+            cls = ' class="active" aria-current="page"'
+        else:
+            cls = ''
+        nav_items.append(f'<a href="{up}{href}"{cls}>{e(label)}</a>')
+    nav = "".join(nav_items)
     pname = project["display_name"] if project else "Terres Libérées"
     mark = project["logo_mark"] if project else "TL"
     base = project["tagline"] if project else ""
@@ -446,7 +520,7 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
         # décoratif : la carte porte nom + palier + anneau ; le détail chiffré
         # est sur la fiche liée. <use> du cadre commun, polygone variable seul.
         return (f'<svg class="tri compact" viewBox="{vb}" '
-                f'role="img" aria-label="{e(label)}">'
+                f'role="img" focusable="false" aria-label="{e(label)}">'
                 f'<use href="#tri-base"/>'
                 f'<polygon class="tri-fill" points="{" ".join(pts)}"/>'
                 f'{edge_lines}</svg>')
@@ -709,6 +783,23 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
   </div>
 </section>"""
 
+    # clé de lecture compacte de la fiche — repliée par défaut, sobre
+    # (audit pédagogie C, I1/I3).
+    grille_line = ("</li>\n  <li><strong>Grille détaillée</strong> — chaque "
+                   "critère est évalué oui · partiel · non ; le score en "
+                   "découle.") if (cat != "modele" and sc["criteres_evalues"]) else ""
+    lecture = f"""<details class="fiche-key">
+  <summary>Comment lire cette fiche</summary>
+  <ul>
+  <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
+  indique le palier.</li>
+  <li><strong>Triangle tri-axes</strong> — un sommet par axe (A en haut, B en
+  bas à droite, C en bas à gauche). Plus la zone colorée s'étend vers un sommet,
+  plus le montage est noté sur cet axe.</li>
+  <li><strong>Barres d'axe</strong> — le détail chiffré des trois axes.{grille_line}</li>
+  </ul>
+</details>"""
+
     # en bref
     rows = []
     if fiche.get("forme_juridique"):
@@ -788,7 +879,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
 <p class="grille-intro">{e(clean(gril.get('objet','')))}
 <a href="../grilles.html#grille-{cat}">Comprendre la grille →</a></p>
 {recap}
-<div class="table-scroll"><table class="grille-tbl">
+<div class="table-scroll" tabindex="0" role="region" aria-label="Grille de lecture détaillée de la fiche"><table class="grille-tbl">
 <caption class="visually-hidden">Grille de lecture de la fiche : critère, poids, évaluation et lecture.</caption>
 <thead><tr><th scope="col">Critère</th><th scope="col" class="num">Poids</th><th scope="col">Évaluation</th><th scope="col">Lecture</th></tr></thead>
 <tbody>{''.join(fam_rows)}</tbody></table></div>
@@ -869,7 +960,10 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     backlink = (f'<p class="backlink">'
                 f'<a href="../{CAT_PAGE[cat]}">← Retour {retlabel}</a>'
                 f' · <a href="../classement.html">Voir le classement</a></p>')
-    body = (tri_defs(axes_cfg) + head + score_block + enbref + resume
+    # le <defs> tri-base n'est utile que si la fiche rend au moins un triangle
+    # compact, c'est-à-dire si elle a des chips reliés (audit fonctionnel C, M2).
+    defs = tri_defs(axes_cfg) if chips else ""
+    body = (defs + head + score_block + lecture + enbref + resume
             + montage_html + grille_html + analyse_html + liens_html + fiab
             + sources_html + backlink)
 
@@ -907,7 +1001,11 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
             entity["url"] = fiche["url"]
             entity["sameAs"] = [fiche["url"]]
     ogt = "article" if cat != "modele" else "website"
-    return page(fiche["nom"], body, CAT_PAGE[cat], depth=1, project=project,
+    # titre_court : <title> abrégé optionnel, pour ne pas dépasser ~60 car. une
+    # fois suffixé « — Terres Libérées » (audit SEO C, M1). Le H1 reste le nom
+    # complet.
+    page_title = clean(fiche.get("titre_court", "")) or fiche["nom"]
+    return page(page_title, body, CAT_PAGE[cat], depth=1, project=project,
                 description=clean(fiche.get("resume", "")) or sub,
                 path=fpath, jsonld=[breadcrumb, entity], og_type=ogt)
 
@@ -940,10 +1038,17 @@ def render_catalogue(cat, fiches_sc, cfg):
     fiches_sc = sorted(fiches_sc, key=lambda x: x[1]["idl"] or 0, reverse=True)
     n = len(fiches_sc)
 
-    # filtres par palier
+    # filtres par palier — n'émettre que les paliers présents dans le
+    # sous-ensemble, pour éviter des boutons morts (audit fonctionnel C, M1).
+    present_pal = []
+    for f, s in fiches_sc:
+        pid = s["palier"]["id"] if s["palier"] else None
+        if pid and pid not in present_pal:
+            present_pal.append(pid)
+    pal_order = [p for p in ranking["paliers"] if p["id"] in present_pal]
     pal_btns = "".join(
-        f'<button class="fbtn" data-fk="palier" data-fv="{p["id"]}">'
-        f'{e(p["label"])}</button>' for p in ranking["paliers"])
+        f'<button class="fbtn" data-fk="palier" data-fv="{p["id"]}" '
+        f'aria-pressed="false">{e(p["label"])}</button>' for p in pal_order)
     # filtres par montage (montages présents dans le sous-ensemble)
     present_mont = []
     for f, _ in fiches_sc:
@@ -951,8 +1056,9 @@ def render_catalogue(cat, fiches_sc, cfg):
         if m and m not in present_mont:
             present_mont.append(m)
     mont_btns = "".join(
-        f'<button class="fbtn" data-fk="montage" data-fv="{m}">'
-        f'{e(montage_label(m, concepts))}</button>' for m in present_mont)
+        f'<button class="fbtn" data-fk="montage" data-fv="{m}" '
+        f'aria-pressed="false">{e(montage_label(m, concepts))}</button>'
+        for m in present_mont)
     # filtres par région (lieux uniquement)
     region_block = ""
     if cat == "lieu":
@@ -963,12 +1069,14 @@ def render_catalogue(cat, fiches_sc, cfg):
                 regions.append(r)
         if regions:
             reg_btns = "".join(
-                f'<button class="fbtn" data-fk="region" data-fv="{e(r)}">'
-                f'{e(r)}</button>' for r in sorted(regions))
+                f'<button class="fbtn" data-fk="region" data-fv="{e(r)}" '
+                f'aria-pressed="false">{e(r)}</button>' for r in sorted(regions))
             region_block = (
-                f'<div class="filter-row"><span class="filter-lab">Région</span>'
-                f'<button class="fbtn active" data-fk="region" data-fv="all">'
-                f'Toutes</button>{reg_btns}</div>')
+                f'<div class="filter-row" role="group" '
+                f'aria-label="Filtrer par région">'
+                f'<span class="filter-lab">Région</span>'
+                f'<button class="fbtn active" data-fk="region" data-fv="all" '
+                f'aria-pressed="true">Toutes</button>{reg_btns}</div>')
 
     body = f"""{tri_defs(axes_cfg)}<h1>{e(title)}</h1>
 <p class="lead">{e(intro)}
@@ -984,15 +1092,16 @@ def render_catalogue(cat, fiches_sc, cfg):
     <option value="axb">Par axe B — libération des terres</option>
     <option value="axc">Par axe C — gouvernance</option>
   </select>
-  <span class="count" id="cnt" aria-live="polite"><b>{n}</b> entrée{'s' if n > 1 else ''} affichée{'s' if n > 1 else ''}</span>
+  <span class="count" id="cnt" aria-live="polite"><b id="cntn">{n}</b><span id="cntl"> entrée{'s' if n > 1 else ''} affichée{'s' if n > 1 else ''}</span></span>
 </div>
+<p id="sort-status" role="status" class="visually-hidden"></p>
 <details class="filter-details">
   <summary>Filtres avancés</summary>
   <div class="filter-bar">
-    <div class="filter-row"><span class="filter-lab">Palier</span>
-      <button class="fbtn active" data-fk="palier" data-fv="all">Tous</button>
+    <div class="filter-row" role="group" aria-label="Filtrer par palier"><span class="filter-lab">Palier</span>
+      <button class="fbtn active" data-fk="palier" data-fv="all" aria-pressed="true">Tous</button>
       {pal_btns}</div>
-    {f'<div class="filter-row"><span class="filter-lab">Montage</span><button class="fbtn active" data-fk="montage" data-fv="all">Tous</button>{mont_btns}</div>' if mont_btns else ''}
+    {f'<div class="filter-row" role="group" aria-label="Filtrer par montage"><span class="filter-lab">Montage</span><button class="fbtn active" data-fk="montage" data-fv="all" aria-pressed="true">Tous</button>{mont_btns}</div>' if mont_btns else ''}
     {region_block}
   </div>
 </details>
@@ -1062,12 +1171,12 @@ participative (C). <a href="methode.html">Méthode détaillée →</a></p>
   comparer des entrées de même nature.</p>
 </div>
 <div class="paliers-legend">{paliers_legend}</div>
-<div class="toolbar">
-  <label>Filtrer par catégorie : </label>
-  <button class="fbtn active" data-f="all">Tout</button>
-  <button class="fbtn" data-f="lieu">Lieux</button>
-  <button class="fbtn" data-f="porteur">Porteurs</button>
-  <button class="fbtn" data-f="usufruitier">Usufruitiers</button>
+<div class="toolbar" role="group" aria-label="Filtrer par catégorie">
+  <span class="sort-lab">Filtrer par catégorie : </span>
+  <button class="fbtn active" data-f="all" aria-pressed="true">Tout</button>
+  <button class="fbtn" data-f="lieu" aria-pressed="false">Lieux</button>
+  <button class="fbtn" data-f="porteur" aria-pressed="false">Porteurs</button>
+  <button class="fbtn" data-f="usufruitier" aria-pressed="false">Usufruitiers</button>
 </div>
 <p class="note sort-hint">Triez le tableau en activant un en-tête de colonne
 (Entrée, A, B, C ou IdL).</p>
@@ -1143,7 +1252,7 @@ def render_grilles(cfg):
         blocks.append(f"""<section class="grille-block" id="grille-{cat}">
 <h2 class="sec">{e(lab)}</h2>
 <p class="prose">{e(clean(g['objet']))}</p>
-<div class="table-scroll"><table class="grille-tbl">
+<div class="table-scroll" tabindex="0" role="region" aria-label="Critères de la grille {e(lab)}"><table class="grille-tbl">
 <caption class="visually-hidden">Critères de lecture de la grille {e(lab)} : axe, poids et définition.</caption>
 <thead><tr><th scope="col">Critère de lecture</th><th scope="col">Axe</th><th scope="col">Poids</th><th scope="col">Définition</th></tr></thead>
 <tbody>{''.join(fam_html)}</tbody></table></div>
@@ -1231,7 +1340,7 @@ def render_regimes(cfg):
         f"<tr><th scope=\"row\">{e(c)}</th><td>{e(a)}</td><td>{e(b)}</td>"
         f"<td>{e(d)}</td></tr>"
         for c, a, b, d in tbl_rows)
-    table = f"""<div class="table-scroll"><table class="rank-tbl regimes-tbl">
+    table = f"""<div class="table-scroll" tabindex="0" role="region" aria-label="Tableau comparatif des trois régimes du sol"><table class="rank-tbl regimes-tbl">
 <caption class="visually-hidden">Comparaison des trois régimes du sol selon
 sept critères.</caption>
 <thead><tr><th scope="col">Critère</th>
@@ -1271,11 +1380,27 @@ sept critères.</caption>
 <p class="prose">La grille de notation traduit ce cadre en critères :
 voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul de l'Indice
 est détaillé dans la <a href="methode.html">méthode</a>.</p>"""
+    # données structurées : les trois régimes en DefinedTermSet, bâti depuis la
+    # même source que le HTML (audit SEO C, I1).
+    termset = {
+        "@context": "https://schema.org",
+        "@type": "DefinedTermSet",
+        "name": "Trois régimes du sol",
+        "description": meta_desc(reg.get("chapeau", "")),
+        "inLanguage": "fr",
+        "url": canonical_url("regimes.html"),
+        "hasDefinedTerm": [
+            {"@type": "DefinedTerm", "name": clean(r.get("label", "")),
+             "description": clean(r.get("but", "")),
+             "inDefinedTermSet": canonical_url("regimes.html")}
+            for r in liste
+        ],
+    }
     return page("Trois régimes du sol", body, "regimes.html", project=project,
                 description="Les trois régimes juridiques du foncier : droit "
                             "civil d'intérêt général, droit commercial, "
                             "propriété privée classique.",
-                path="regimes.html")
+                path="regimes.html", jsonld=[termset])
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1401,7 +1526,8 @@ GLOSSAIRE = [
     ("Démembrement",
      "Division du droit de propriété (article 544 du Code civil) en deux "
      "droits distincts confiés à des titulaires différents : la nue-propriété "
-     "et l'usufruit."),
+     "et l'usufruit. On parle aussi de dissociation de la propriété et de "
+     "l'usage : dans l'annuaire, les deux termes désignent la même opération."),
     ("Nue-propriété",
      "Droit de propriété privé de l'usage et des revenus du bien : le "
      "nu-propriétaire détient le bien mais n'en a ni l'usage ni la jouissance. "
@@ -1478,6 +1604,17 @@ GLOSSAIRE = [
      "sous encadrement public, forme sociétaire solidaire, droit public — sans "
      "les classer. La protection effective du foncier est mesurée à part, par "
      "l'axe B de l'Indice."),
+    ("Modèle voisin",
+     "Montage de référence — français ou étranger — proche de l'idéal de "
+     "libération des terres, recensé à titre de comparaison. Les modèles "
+     "voisins ne sont pas notés par les grilles de l'annuaire : leur Indice "
+     "est estimé (axes posés éditorialement) et ils restent hors du classement "
+     "principal."),
+    ("Idéal-type",
+     "Construction de référence qui décrit un montage sous sa forme la plus "
+     "pure, pour servir de point de comparaison. L'idéal-type n'a pas "
+     "vocation à exister tel quel : peu de lieux réels le réalisent à la "
+     "lettre, mais il aide à situer chaque cas concret."),
 ]
 
 
@@ -1506,7 +1643,7 @@ Pour le détail du calcul de l'Indice, voir la <a href="methode.html">Méthode</
     return page("Glossaire", body, "glossaire.html", project=project,
                 description="Glossaire des termes de la libération des terres : "
                             "nue-propriété, usufruit, démembrement, intérêt général.",
-                path="glossaire.html", jsonld=[termset])
+                path="glossaire.html", jsonld=[termset], link_gloss=False)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1818,7 +1955,11 @@ main.wrap{padding-bottom:4rem;}
  border-radius:var(--radius);padding:1rem 1.15rem;
  transition:border-color .15s,box-shadow .15s;}
 .card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(33,29,24,.07);}
-.card:focus-within{border-color:var(--green);}
+/* stretched-link : l'indicateur de focus porte sur la carte entière, pas sur
+   le seul titre, pour refléter la cible cliquable réelle (audit a11y C, I5). */
+.card:focus-within{border-color:var(--green);
+ outline:2px solid var(--ink);outline-offset:2px;}
+.card-link:focus-visible{outline:none;}
 .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;}
 .card h3{margin:.5rem 0 .2rem;font-size:1.16rem;line-height:1.3;}
 .card h3 a{text-decoration:none;color:var(--ink);}
@@ -1862,7 +2003,9 @@ main.wrap{padding-bottom:4rem;}
 .idl-badge.big .idl-ring{width:92px;height:92px;}
 .idl-track{fill:none;stroke:var(--beige-dk);}
 .idl-arc{fill:none;stroke:var(--pal,#999);stroke-linecap:round;}
-.idl-num{fill:var(--pal,#999);font-weight:800;text-anchor:middle;
+/* le chiffre de l'Indice est porté par var(--ink) : contraste > 12:1, la
+   couleur du palier restant sur l'anneau (audit a11y C, I1). */
+.idl-num{fill:var(--ink);font-weight:800;text-anchor:middle;
  dominant-baseline:central;font-family:-apple-system,system-ui,sans-serif;}
 .idl-pal{font-size:.62rem;text-transform:uppercase;letter-spacing:.04em;
  color:var(--muted);text-align:center;max-width:9rem;}
@@ -1896,7 +2039,11 @@ main.wrap{padding-bottom:4rem;}
  white-space:nowrap;}
 .axis-track{flex:1;height:.5rem;background:var(--beige-dk);
  border-radius:var(--radius-sm);overflow:hidden;}
-.axis-fill{display:block;height:100%;border-radius:var(--radius-sm);}
+/* liseré 1px var(--ink) : garantit le 3:1 de délimitation de la jauge
+   quelle que soit la couleur d'axe (audit a11y C, I2). */
+.axis-fill{display:block;height:100%;border-radius:var(--radius-sm);
+ box-shadow:inset 0 0 0 1px rgba(34,31,26,.55);}
+.axis-fill.axis-na{box-shadow:none;}
 .axis-fill.axis-na{background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#eee 3px,#eee 6px)!important;}
 .axis-val{flex:0 0 2.1rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;}
 .axis-block.compact .axis-label{flex-basis:5.6rem;font-size:.72rem;}
@@ -1965,6 +2112,14 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .fiab-gold{color:var(--gold-dk);}
 .fiab-faint{color:var(--faint);}
 .completude{font-size:.8rem;color:var(--faint);margin:.2rem 0 0;}
+
+/* clé de lecture de la fiche — repliée, sobre (audit pédagogie C, I1/I3) */
+.fiche-key{margin:-.4rem 0 1.2rem;font-family:-apple-system,system-ui,sans-serif;}
+.fiche-key summary{font-size:.84rem;color:var(--muted);cursor:pointer;
+ padding:.3rem 0;width:fit-content;}
+.fiche-key summary:hover{color:var(--green-dk);}
+.fiche-key ul{margin:.4rem 0 .2rem;padding-left:1.1rem;}
+.fiche-key li{font-size:.88rem;color:var(--muted);margin:.3rem 0;max-width:68ch;}
 
 /* en bref — composant tertiaire (info) */
 .enbref{background:var(--beige);border-radius:var(--radius);
@@ -2036,7 +2191,7 @@ table th{color:var(--muted);font-weight:700;font-size:.72rem;text-transform:uppe
 .rank-tbl .name a:hover{text-decoration:underline;}
 .row-sub{display:block;font-size:.78rem;color:var(--faint);font-weight:400;}
 .rank-tbl td.idl-cell,.rank-tbl th.idl-cell{border-left:1px solid var(--line);}
-.idl-cell b{color:var(--pal,#999);font-size:1.05rem;font-variant-numeric:tabular-nums;}
+.idl-cell b{color:var(--ink);font-size:1.05rem;font-variant-numeric:tabular-nums;}
 .rank-tbl.small{max-width:640px;}
 th.sortable{white-space:nowrap;padding:0;}
 .th-sort{font:inherit;font-family:-apple-system,system-ui,sans-serif;
@@ -2125,6 +2280,13 @@ code{background:var(--beige);padding:.1rem .35rem;border-radius:var(--radius-sm)
 .regime-role{color:var(--faint);font-style:italic;font-size:.85rem!important;}
 .regimes-tbl th[scope=row]{font-weight:600;color:var(--ink);text-transform:none;
  letter-spacing:0;font-size:.86rem;border-bottom:1px solid var(--line);}
+
+/* liens vers le glossaire — sobres : soulignement pointillé discret, pas de
+   couleur vive, pour ne pas surcharger la prose (audit pédagogie C, C1) */
+a.gloss-link{color:inherit;text-decoration:underline;
+ text-decoration-style:dotted;text-decoration-thickness:1px;
+ text-underline-offset:2px;text-decoration-color:var(--faint);}
+a.gloss-link:hover{color:var(--green-dk);text-decoration-color:var(--green-dk);}
 
 /* glossaire */
 .glossaire{margin:1.4rem 0;display:flex;flex-direction:column;gap:0;}
@@ -2237,7 +2399,9 @@ LIST_JS = """/* list.js — filtre, tri et recherche des catalogues.
    (cf. cycle B — audit performance, B-2). Vanilla JS, aucune dépendance. */
 (function(){
  var q=document.getElementById('q'),sort=document.getElementById('sort'),
-   cnt=document.getElementById('cnt'),nores=document.getElementById('noresult'),
+   cntn=document.getElementById('cntn'),cntl=document.getElementById('cntl'),
+   nores=document.getElementById('noresult'),
+   sstatus=document.getElementById('sort-status'),
    grid=document.querySelector('.cards');
  if(!grid) return;
  var cards=[].slice.call(document.querySelectorAll('.card')),
@@ -2257,9 +2421,9 @@ LIST_JS = """/* list.js — filtre, tri et recherche des catalogues.
    c.style.display=ok?'':'none';
    if(ok) n++;
   });
-  if(cnt){
-   cnt.innerHTML='<b>'+n+'</b> entrée'+(n>1?'s':'')+' affichée'+(n>1?'s':'');
-  }
+  /* on n'écrit que du texte dans la région live (audit a11y C, I3). */
+  if(cntn) cntn.textContent=n;
+  if(cntl) cntl.textContent=' entrée'+(n>1?'s':'')+' affichée'+(n>1?'s':'');
   if(nores) nores.hidden=n!==0;
  }
  function doSort(){
@@ -2269,6 +2433,9 @@ LIST_JS = """/* list.js — filtre, tri et recherche des catalogues.
    return (parseFloat(b.dataset[key])||0)-(parseFloat(a.dataset[key])||0);
   });
   vis.forEach(function(c){grid.appendChild(c);});
+  /* annonce du tri pour les lecteurs d'écran (audit a11y C, C1). */
+  if(sstatus) sstatus.textContent='Liste triée : '
+   +sort.options[sort.selectedIndex].text+'.';
  }
  if(q) q.addEventListener('input',apply);
  if(sort) sort.addEventListener('change',doSort);
@@ -2276,9 +2443,10 @@ LIST_JS = """/* list.js — filtre, tri et recherche des catalogues.
   b.addEventListener('click',function(){
    var k=b.dataset.fk;
    document.querySelectorAll('.fbtn[data-fk="'+k+'"]').forEach(function(x){
-    x.classList.remove('active');
+    x.classList.remove('active');x.setAttribute('aria-pressed','false');
    });
-   b.classList.add('active');active[k]=b.dataset.fv;apply();
+   b.classList.add('active');b.setAttribute('aria-pressed','true');
+   active[k]=b.dataset.fv;apply();
   });
  });
 })();
@@ -2299,8 +2467,10 @@ LIST_JS = """/* list.js — filtre, tri et recherche des catalogues.
  }
  btns.forEach(function(b){
   b.addEventListener('click',function(){
-   btns.forEach(function(x){x.classList.remove('active');});
-   b.classList.add('active');
+   btns.forEach(function(x){
+    x.classList.remove('active');x.setAttribute('aria-pressed','false');
+   });
+   b.classList.add('active');b.setAttribute('aria-pressed','true');
    var f=b.dataset.f;
    [].slice.call(tb.rows).forEach(function(t){
     t.style.display=(f==='all'||t.dataset.cat===f)?'':'none';

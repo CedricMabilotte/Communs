@@ -99,8 +99,8 @@ fiabilite: >
   des associations en 2015. Non confirmé : place détaillée des citoyen·nes dans
   la gouvernance, part actuelle des sites gérés par des associations.
 liens:
-  porteurs: []
-  usufruitiers: [federation-cen]
+  porteurs: [federation-cen]
+  usufruitiers: []
   lieux: []
 sources:
   - titre: "Conservatoire du littoral — site officiel"
