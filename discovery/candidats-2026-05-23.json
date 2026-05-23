@@ -124,6 +124,36 @@
     "statut": "revu"
   },
   {
+    "titre_page": "Transmettre des terres — Terre de Liens",
+    "texte": "Accompagner la transmission de fermes",
+    "url": "https://terredeliens.org/national/transmettre-des-terres/",
+    "source_id": "terre-de-liens",
+    "categorie_probable": [
+      "lieu",
+      "porteur"
+    ],
+    "score": 13,
+    "mots_cles": [
+      "association",
+      "ferme",
+      "foncière",
+      "fondation",
+      "société civile"
+    ],
+    "angle_mort": [
+      "Bourgogne-Franche-Comté",
+      "Bretagne",
+      "Centre-Val de Loire",
+      "Hauts-de-France",
+      "Normandie",
+      "Pays de la Loire",
+      "Provence-Alpes-Côte d'Azur"
+    ],
+    "fiche_existante": false,
+    "domaine_connu": true,
+    "statut": "revu"
+  },
+  {
     "titre_page": "Les fermes Terre de Liens",
     "texte": "Les fermes",
     "url": "https://terredeliens.org/national/hub-ferme/",
@@ -586,6 +616,27 @@
     "statut": "revu"
   },
   {
+    "titre_page": "La SCIC Terres de Sources - Terres de SourcesComments Box SVG icons",
+    "texte": "La SCIC Terres de Sources",
+    "url": "https://terresdesources.fr/la-scic-terres-de-sources/",
+    "source_id": "terres-de-sources",
+    "categorie_probable": [
+      "porteur",
+      "lieu"
+    ],
+    "score": 6,
+    "mots_cles": [
+      "SCIC",
+      "association",
+      "eau",
+      "scic"
+    ],
+    "angle_mort": [],
+    "fiche_existante": false,
+    "domaine_connu": false,
+    "statut": "revu"
+  },
+  {
     "titre_page": "Événements | Le Labo de l'économie sociale et solidaire",
     "texte": "Petit-déjeuner/débat : \"L’entreprise de demain existe depuis hier : Histoire des Scop et des Scic\"",
     "url": "https://www.lelabo-ess.org/petit-dejeuner-debat-l-entreprise-de-demain-existe-depuis-hier-histoire-des-scop-et-des-scic",
@@ -661,6 +712,31 @@
     ],
     "angle_mort": [],
     "fiche_existante": false,
+    "domaine_connu": true,
+    "statut": "revu"
+  },
+  {
+    "titre_page": "Société Civile des Terres du Larzac – Larzac.org",
+    "texte": "SCTL, des terres gérées par les fermiers",
+    "url": "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/",
+    "source_id": "larzac",
+    "categorie_probable": [
+      "lieu",
+      "usufruitier"
+    ],
+    "score": 14,
+    "mots_cles": [
+      "SCTL",
+      "association",
+      "bail emphytéotique",
+      "foncière",
+      "gestion foncière",
+      "gfa",
+      "société civile",
+      "terres"
+    ],
+    "angle_mort": [],
+    "fiche_existante": true,
     "domaine_connu": true,
     "statut": "revu"
   }
