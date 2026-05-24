@@ -470,6 +470,27 @@
     "statut": "revu"
   },
   {
+    "titre_page": "La SCIC Terres de Sources - Terres de SourcesComments Box SVG icons",
+    "texte": "La SCIC Terres de Sources",
+    "url": "https://terresdesources.fr/la-scic-terres-de-sources/",
+    "source_id": "terres-de-sources",
+    "categorie_probable": [
+      "porteur",
+      "lieu"
+    ],
+    "score": 6,
+    "mots_cles": [
+      "SCIC",
+      "association",
+      "eau",
+      "scic"
+    ],
+    "angle_mort": [],
+    "fiche_existante": false,
+    "domaine_connu": false,
+    "statut": "revu"
+  },
+  {
     "titre_page": "Événements | Le Labo de l'économie sociale et solidaire",
     "texte": "Petit-déjeuner/débat : \"L’entreprise de demain existe depuis hier : Histoire des Scop et des Scic\"",
     "url": "https://www.lelabo-ess.org/petit-dejeuner-debat-l-entreprise-de-demain-existe-depuis-hier-histoire-des-scop-et-des-scic",
