@@ -11,7 +11,7 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - reseau-cen — ok — 5 lien·s pré-retenu·s
 - foncier-solidaire — ok — 11 lien·s pré-retenu·s
 - rtes — ok — 1 lien·s pré-retenu·s
-- habitat-participatif — ok — 0 lien·s pré-retenu·s
+- habitat-participatif — ok — 10 lien·s pré-retenu·s
 - habicoop — ok — 6 lien·s pré-retenu·s
 - labo-ess — ok — 8 lien·s pré-retenu·s
 - reseau-ecolieux — échec ⚠ — 0 lien·s pré-retenu·s

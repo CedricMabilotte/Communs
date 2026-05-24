@@ -1,6 +1,6 @@
 # Veille — candidats du 2026-05-24
 
-29 candidat·s repéré·s sur 15 sources (28 hors fiches existantes, 18 sur un angle mort). Score pondéré ; à examiner et promouvoir manuellement.
+29 candidat·s repéré·s sur 15 sources (28 hors fiches existantes, 18 sur un angle mort ; 0 écarté·s via discovery/ignore.txt). Score pondéré ; à examiner et promouvoir manuellement.
 
 ## Nouveautés possibles (28)
 
