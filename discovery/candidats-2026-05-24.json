@@ -1,172 +1,5 @@
 [
   {
-    "titre_page": "Les avantages du BRS – Foncier Solidaire France",
-    "texte": "Les avantages du BRS",
-    "url": "https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/les-avantages-du-brs/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 11,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "bail réel solidaire",
-      "foncier solidaire"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "Les conditions d’accès à un logement BRS – Foncier Solidaire France",
-    "texte": "Les conditions d’accès à un logement BRS",
-    "url": "https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 11,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "bail réel solidaire",
-      "foncier solidaire"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "Revendre son logement en BRS – Foncier Solidaire France",
-    "texte": "Revendre son logement en BRS",
-    "url": "https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/revendre-son-logement-en-brs/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 11,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "bail réel solidaire",
-      "foncier solidaire"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "Les OFS agréés – Foncier Solidaire France",
-    "texte": "Les OFS agréés",
-    "url": "https://www.foncier-solidaire.fr/le-reseau/les-ofs-agrees/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 9,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "foncier solidaire",
-      "foncière",
-      "fondation"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "Vivre dans un logement BRS – Foncier Solidaire France",
-    "texte": "Vivre dans un logement BRS",
-    "url": "https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/vivre-dans-un-logement-brs/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 7,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "foncier solidaire",
-      "foncière"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "A l’origine des OFS – Foncier Solidaire France",
-    "texte": "A l’origine des OFS",
-    "url": "https://www.foncier-solidaire.fr/le-reseau/a-lorigine-des-ofs/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 5,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "foncier solidaire"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "Plafonds d’éligibilité au BRS pour 2026 – Foncier Solidaire France",
-    "texte": "Plafonds d’éligibilité au BRS pour 2026",
-    "url": "https://www.foncier-solidaire.fr/plafonds-deligibilite-au-brs-pour-2026/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 5,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "foncier solidaire"
-    ],
-    "angle_mort": [],
-    "fiche_existante": false,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
-    "titre_page": "Les principes du foncier solidaire – Foncier Solidaire France",
-    "texte": "Les principes du foncier solidaire",
-    "url": "https://www.foncier-solidaire.fr/le-reseau/les-principes-du-foncier-solidaire/",
-    "source_id": "foncier-solidaire",
-    "categorie_probable": [
-      "porteur"
-    ],
-    "score": 11,
-    "mots_cles": [
-      "BRS",
-      "OFS",
-      "association",
-      "bail réel solidaire",
-      "foncier solidaire"
-    ],
-    "angle_mort": [],
-    "fiche_existante": true,
-    "domaine_connu": true,
-    "statut": "nouveau"
-  },
-  {
     "titre_page": "La Fondation Terre de Liens — Terre de Liens",
     "texte": "La fondation",
     "url": "https://terredeliens.org/national/la-fondation-terre-de-liens/",
@@ -591,6 +424,28 @@
     "statut": "revu"
   },
   {
+    "titre_page": "Voyages Oasis - Coopérative Oasis",
+    "texte": "Voyages Oasis",
+    "url": "https://cooperative-oasis.org/nos-offres/voyages-oasis/",
+    "source_id": "cooperative-oasis",
+    "categorie_probable": [
+      "lieu",
+      "usufruitier"
+    ],
+    "score": 4,
+    "mots_cles": [
+      "foncière",
+      "oasis",
+      "écolieu"
+    ],
+    "angle_mort": [
+      "Bretagne"
+    ],
+    "fiche_existante": false,
+    "domaine_connu": true,
+    "statut": "revu"
+  },
+  {
     "titre_page": "",
     "texte": "location Ferme en arboriculture à transmettre 14 Ha Flamanville (76970) • Normandie Voir l'annonce",
     "url": "https://www.objectif-terres.org/annonces/9966",
@@ -740,6 +595,27 @@
     "statut": "revu"
   },
   {
+    "titre_page": "Foncière Oasis - Coopérative Oasis",
+    "texte": "Foncière Oasis",
+    "url": "https://cooperative-oasis.org/nos-offres/fonciere-oasis/",
+    "source_id": "cooperative-oasis",
+    "categorie_probable": [
+      "lieu",
+      "usufruitier"
+    ],
+    "score": 9,
+    "mots_cles": [
+      "foncière",
+      "fonds de dotation",
+      "oasis",
+      "écolieu"
+    ],
+    "angle_mort": [],
+    "fiche_existante": false,
+    "domaine_connu": true,
+    "statut": "revu"
+  },
+  {
     "titre_page": "La SCIC Terres de Sources - Terres de SourcesComments Box SVG icons",
     "texte": "La SCIC Terres de Sources",
     "url": "https://terresdesources.fr/la-scic-terres-de-sources/",
@@ -793,6 +669,27 @@
     "mots_cles": [
       "foncier",
       "foncière"
+    ],
+    "angle_mort": [],
+    "fiche_existante": false,
+    "domaine_connu": true,
+    "statut": "revu"
+  },
+  {
+    "titre_page": "Protéger la biodiversité avec les ORE - Coopérative Oasis",
+    "texte": "Oasis de Biodiversité",
+    "url": "https://cooperative-oasis.org/nos-offres/proteger-la-biodiversite-ore/",
+    "source_id": "cooperative-oasis",
+    "categorie_probable": [
+      "lieu",
+      "usufruitier"
+    ],
+    "score": 4,
+    "mots_cles": [
+      "association",
+      "foncier",
+      "foncière",
+      "oasis"
     ],
     "angle_mort": [],
     "fiche_existante": false,
