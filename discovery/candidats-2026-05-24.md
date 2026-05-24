@@ -27,11 +27,11 @@
 - **[11]** [Société Civile Gestion Foncière Agricole du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
 - **[10]** [la terre en commun enfin propriétaire des Q de plomb! | la terre en commun](https://encommun.eco/actualites/terre-en-commun-enfin-proprietaire-q-de-plomb) — source : encommun — statut : revu — mots-clés : commun, fonds de dotation, terres
 - **[9]** [Foncière Oasis - Coopérative Oasis](https://cooperative-oasis.org/nos-offres/fonciere-oasis/) — source : cooperative-oasis — statut : revu — mots-clés : foncière, fonds de dotation, oasis, écolieu
-- **[6]** [La SCIC Terres de Sources - Terres de SourcesComments Box SVG icons](https://terresdesources.fr/la-scic-terres-de-sources/) — source : terres-de-sources — statut : revu — mots-clés : SCIC, association, eau, scic
 - **[5]** [Événements | Le Labo de l'économie sociale et solidaire](https://www.lelabo-ess.org/petit-dejeuner-debat-l-entreprise-de-demain-existe-depuis-hier-histoire-des-scop-et-des-scic) — source : labo-ess — statut : revu — mots-clés : ESS, association, scic
 - **[4]** [Le portage foncier agricole - Rapport #3 - Centre de Ressources - Terre de liens](https://ressources.terredeliens.org/les-ressources/le-portage-foncier-agricole-rapport-3) — source : terre-de-liens — statut : revu — mots-clés : foncier, foncière
 - **[4]** [Protéger la biodiversité avec les ORE - Coopérative Oasis](https://cooperative-oasis.org/nos-offres/proteger-la-biodiversite-ore/) — source : cooperative-oasis — statut : revu — mots-clés : association, foncier, foncière, oasis
 - **[3]** [ESS, travail et emploi | Le Labo de l'économie sociale et solidaire](https://www.lelabo-ess.org/ess-travail-et-emploi) — source : labo-ess — statut : revu — mots-clés : ESS, fondation
+- **[3]** [La SCIC Terres de Sources](https://terresdesources.fr/la-scic-terres-de-sources/) — source : terres-de-sources — statut : revu — mots-clés : SCIC, scic
 
 ## Déjà référencés (1)
 
