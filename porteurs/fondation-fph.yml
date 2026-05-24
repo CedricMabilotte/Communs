@@ -103,10 +103,7 @@ fiabilite: >
   exploitation confiée à des structures tierces. Non confirmé : forme juridique
   exacte au regard du droit français, objet statutaire foncier, gouvernance,
   clause de dévolution.
-liens:
-  porteurs: []
-  usufruitiers: [ecosite-villarceaux]
-  lieux: [villarceaux]
+voir_aussi: [ecosite-villarceaux]
 sources:
   - titre: "FPH — La Bergerie de Villarceaux"
     url: "https://www.fph.ch/article16_fr.html"

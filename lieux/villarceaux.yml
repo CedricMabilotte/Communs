@@ -104,10 +104,9 @@ fiabilite: >
   cohabitation de six structures juridiques distinctes dont l'association
   Écosite et la coopérative Saveurs du Vexin. Non confirmé : nature exacte des actes d'usage,
   existence d'un démembrement strict, modalités de gouvernance et de transmission.
-liens:
+chaine:
   porteurs: [fondation-fph]
   usufruitiers: [ecosite-villarceaux]
-  lieux: []
 sources:
   - titre: "Bergerie de Villarceaux — site officiel"
     url: "https://www.bergerie-villarceaux.org/"

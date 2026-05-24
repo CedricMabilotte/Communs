@@ -112,10 +112,7 @@ fiabilite: >
   Monographies #7 ». Non confirmé : caractère consomptible ou non de la
   dotation, détail des statuts, composition du conseil d'administration,
   éligibilité fiscale à l'intérêt général.
-liens:
-  porteurs: [fonds-la-terre-en-commun]
-  usufruitiers: []
-  lieux: []
+voir_aussi: [fonds-la-terre-en-commun]
 sources:
   - titre: "Aventure Antidote — Notre fonctionnement"
     url: "https://aventure-antidote.org/comment-ca-marche/notre-fonctionnement/"

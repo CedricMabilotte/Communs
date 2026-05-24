@@ -104,10 +104,7 @@ fiabilite: >
   cinquantenaire de l'établissement en 2025, environ 13 % des sites gérés par
   des associations en 2015. Non confirmé : place détaillée des citoyen·nes dans
   la gouvernance, part actuelle des sites gérés par des associations.
-liens:
-  porteurs: [federation-cen]
-  usufruitiers: []
-  lieux: []
+voir_aussi: [federation-cen]
 sources:
   - titre: "Conservatoire du littoral — site officiel"
     url: "https://www.conservatoire-du-littoral.fr/"

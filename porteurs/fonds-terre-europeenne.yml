@@ -99,10 +99,7 @@ fiabilite: >
   détention inaliénable des terres de Longo Maï, finalité de soustraction à la
   spéculation. Non confirmé : composition de la gouvernance, clause de dévolution,
   publication des comptes.
-liens:
-  porteurs: []
-  usufruitiers: [cooperatives-longo-mai]
-  lieux: [longo-mai]
+voir_aussi: [cooperatives-longo-mai]
 sources:
   - titre: "Pro Longo Maï"
     url: "https://www.prolongomaif.ch/"

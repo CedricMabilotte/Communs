@@ -112,10 +112,9 @@ fiabilite: >
   ferme-école. Non confirmé : clauses statutaires de la SAS coopérative,
   caractère anti-spéculatif du verrouillage des parts, nature exacte des titres
   d'occupation des logements.
-liens:
+chaine:
   porteurs: []
   usufruitiers: []
-  lieux: []
 sources:
   - titre: "Le Hameau des Buis — L'histoire"
     url: "https://hameaudesbuis.org/lhistoire/"

@@ -104,10 +104,9 @@ fiabilite: >
   détention inaliénable du foncier par le Fonds de Terre Européenne, autogestion
   des coopératives. Non confirmé : nature exacte des actes d'usage, existence d'un
   démembrement de droit français, dispositifs de transmission.
-liens:
+chaine:
   porteurs: [fonds-terre-europeenne]
   usufruitiers: [cooperatives-longo-mai]
-  lieux: []
 sources:
   - titre: "Pro Longo Maï"
     url: "https://www.prolongomaif.ch/"

@@ -102,10 +102,7 @@ fiabilite: >
   principe de revalorisation des parts, location aux paysan·nes par bail rural.
   Non confirmé : clause de dévolution, inaliénabilité statutaire, composition des
   instances de gouvernance.
-liens:
-  porteurs: [fondation-terre-de-liens]
-  usufruitiers: [gfa-mutuels]
-  lieux: [reseau-terre-de-liens]
+voir_aussi: [fondation-terre-de-liens, gfa-mutuels]
 sources:
   - titre: "Terre de Liens — La Foncière"
     url: "https://terredeliens.org/la-fonciere"

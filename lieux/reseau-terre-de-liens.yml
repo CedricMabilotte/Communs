@@ -103,10 +103,9 @@ fiabilite: >
   par an, recours au bail rural environnemental. Non confirmé : total du
   mouvement à jour, situation parcelle par parcelle, fiches individuelles de
   fermes emblématiques.
-liens:
+chaine:
   porteurs: [fondation-terre-de-liens, fonciere-terre-de-liens]
-  usufruitiers: [gfa-mutuels]
-  lieux: []
+  usufruitiers: [gfa-mutuels, reneta]
 sources:
   - titre: "Terre de Liens — site officiel"
     url: "https://terredeliens.org/"

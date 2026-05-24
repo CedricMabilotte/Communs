@@ -311,7 +311,11 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 /* en bref — composant tertiaire (info) */
 .enbref{background:var(--beige);border-radius:var(--radius);
  padding:1rem 1.3rem;margin:1.2rem 0;font-size:.92rem;}
-.enbref dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.6rem;margin:0;}
+.enbref .bref-titre{font-size:.95rem;margin:0 0 .8rem;color:var(--muted);
+ font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+.enbref dl{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2.2rem;margin:0;}
+.enbref .bref-item{display:grid;grid-template-columns:max-content 1fr;
+ gap:.55rem 1rem;align-content:start;}
 .enbref dt{color:var(--muted);font-weight:600;}
 .enbref dd{margin:0;word-break:break-word;}
 .prose{font-size:1.05rem;max-width:68ch;}

@@ -100,10 +100,7 @@ fiabilite: >
   juridiques distinctes dont l'EARL du Chemin Neuf et la coopérative Saveurs du
   Vexin créée en 2001. Non confirmé : nature exacte des actes
   d'usage, durée de l'usage, gouvernance et transparence interne.
-liens:
-  porteurs: [fondation-fph]
-  usufruitiers: []
-  lieux: [villarceaux]
+voir_aussi: [fondation-fph]
 sources:
   - titre: "Bergerie de Villarceaux — site officiel"
     url: "https://www.bergerie-villarceaux.org/"

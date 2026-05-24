@@ -100,10 +100,7 @@ fiabilite: >
   personnes physiques, accompagnement de 45 GFA et structures similaires par
   Terre de Liens, distinction d'avec le GFA d'épargnants. Non confirmé : modalités
   de vote, clauses environnementales, transparence interne.
-liens:
-  porteurs: [fondation-terre-de-liens, fonciere-terre-de-liens]
-  usufruitiers: []
-  lieux: [reseau-terre-de-liens]
+voir_aussi: [fondation-terre-de-liens, fonciere-terre-de-liens]
 sources:
   - titre: "Terre de Liens — Découvrir les GFA/SCI citoyen·nes"
     url: "https://ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyens"

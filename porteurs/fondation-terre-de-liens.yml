@@ -104,10 +104,7 @@ fiabilite: >
   temporaire d'au moins trois ans), création annoncée d'une fondation ouverte aux
   collectivités. Non confirmé : clauses d'inaliénabilité parcelle par parcelle,
   composition détaillée de la gouvernance.
-liens:
-  porteurs: [fonciere-terre-de-liens]
-  usufruitiers: [gfa-mutuels]
-  lieux: [reseau-terre-de-liens]
+voir_aussi: [fonciere-terre-de-liens, gfa-mutuels]
 sources:
   - titre: "Terre de Liens — Tout savoir sur les donations"
     url: "https://terredeliens.org/national/foire-aux-questions/tout-savoir-sur-les-donations/"

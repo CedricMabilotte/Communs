@@ -118,10 +118,7 @@ fiabilite: >
   d'euros collectés depuis 2021. Non confirmé : composition de la
   gouvernance, clause de dévolution, encadrement anti-spéculatif de l'option
   d'achat. Les chiffres d'activité évoluent rapidement.
-liens:
-  porteurs: [lurzaindia-sca, fonciere-terre-de-liens]
-  usufruitiers: []
-  lieux: []
+voir_aussi: [lurzaindia-sca, fonciere-terre-de-liens]
 sources:
   - titre: "FEVE — Fermes en Vie, site officiel"
     url: "https://www.feve.co/"

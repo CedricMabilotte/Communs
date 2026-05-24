@@ -202,22 +202,20 @@ CHAINE_AXES_CONTAMINABLES = (2, 4, 5)
 
 
 def chained_uids(fiche, by_uid):
-    """Renvoie les uid des LIEUX reliés à une fiche, dans les deux sens :
-    liens déclarés par la fiche + rétro-liens (lieux qui citent la fiche)."""
+    """Renvoie les uid des LIEUX reliés à une fiche par une CHAÎNE.
+
+    Le lieu est la source unique de vérité : il déclare `chaine.porteurs` et
+    `chaine.usufruitiers`. Un porteur ou un usufruitier reçoit ses lieux par
+    rétro-référence (les lieux dont la chaîne le citent). Les liens `voir_aussi`
+    sont éditoriaux et n'entrent jamais dans la chaîne ni dans le scoring."""
     me = fiche["uid"]
     lieux = set()
-    liens = fiche.get("liens", {}) or {}
-    for uid in liens.get("lieux", []) or []:
-        tgt = by_uid.get(uid)
-        if tgt and tgt.get("categorie") == "lieu":
-            lieux.add(uid)
     for other_uid, other in by_uid.items():
         if other_uid == me or other.get("categorie") != "lieu":
             continue
-        oliens = other.get("liens", {}) or {}
-        for key in ("porteurs", "usufruitiers"):
-            if me in (oliens.get(key, []) or []):
-                lieux.add(other_uid)
+        ch = other.get("chaine", {}) or {}
+        if me in (ch.get("porteurs") or []) or me in (ch.get("usufruitiers") or []):
+            lieux.add(other_uid)
     return sorted(lieux)
 
 
@@ -1125,8 +1123,11 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     if fiche.get("url"):
         rows.append(("Site", f'<a href="{e(fiche["url"])}" rel="noopener" '
                              f'target="_blank">{e(fiche["url"])}</a>'))
-    enbref = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows)
-    enbref = f'<section class="enbref"><dl>{enbref}</dl></section>'
+    bref_items = "".join(
+        f'<div class="bref-item"><dt>{k}</dt><dd>{v}</dd></div>'
+        for k, v in rows)
+    enbref = (f'<section class="enbref"><h2 class="bref-titre">Repères</h2>'
+              f'<dl>{bref_items}</dl></section>')
 
     # résumé
     resume = ""
@@ -1201,22 +1202,25 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
   <div class="an-col an-lev"><h3>Leviers</h3><ul>{lst(an.get('leviers'))}</ul></div>
 </div></section>"""
 
-    # liens — réciproques : liens déclarés + rétro-liens (fiches qui citent celle-ci)
+    # reliés — la chaîne (déclarée par le lieu) et les liens voir_aussi, dans
+    # les deux sens (liens déclarés + rétro-liens des fiches qui citent celle-ci).
     liens_html = ""
-    liens = fiche.get("liens", {}) or {}
     rel_uids = set()
-    for key in ("lieux", "porteurs", "usufruitiers"):
-        for uid in liens.get(key, []) or []:
-            rel_uids.add(uid)
-    # rétro-liens : toute fiche qui cite la fiche courante
     me = fiche["uid"]
+    if cat == "lieu":
+        ch = fiche.get("chaine", {}) or {}
+        rel_uids |= set(ch.get("porteurs") or [])
+        rel_uids |= set(ch.get("usufruitiers") or [])
+    rel_uids |= set(fiche.get("voir_aussi", []) or [])
     for other_uid, other in by_uid.items():
         if other_uid == me:
             continue
-        oliens = other.get("liens", {}) or {}
-        for key in ("lieux", "porteurs", "usufruitiers"):
-            if me in (oliens.get(key, []) or []):
-                rel_uids.add(other_uid)
+        och = other.get("chaine", {}) or {}
+        if me in (och.get("porteurs") or []) or me in (och.get("usufruitiers") or []):
+            rel_uids.add(other_uid)
+        if me in (other.get("voir_aussi", []) or []):
+            rel_uids.add(other_uid)
+    rel_uids.discard(me)
     chips = []
     for uid in sorted(rel_uids):
         tgt = by_uid.get(uid)
@@ -1259,8 +1263,11 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     # le <defs> tri-base n'est utile que si la fiche rend au moins un triangle
     # compact, c'est-à-dire si elle a des chips reliés (audit fonctionnel C, M2).
     defs = tri_defs(axes_cfg) if chips else ""
-    body = (defs + head + score_block + lecture + enbref + resume
-            + montage_html + liens_html + grille_html + analyse_html + fiab
+    # ordre de lecture (session #3, chantier C1) : le récit avant la preuve —
+    # présentation, repères, montage, analyse, chaîne, puis la grille (matériau
+    # de référence) reléguée en fin, avant fiabilité et sources.
+    body = (defs + head + score_block + lecture + resume + enbref
+            + montage_html + analyse_html + liens_html + grille_html + fiab
             + sources_html + backlink)
 
     # données structurées : fil d'Ariane + entité principale
@@ -2748,7 +2755,11 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 /* en bref — composant tertiaire (info) */
 .enbref{background:var(--beige);border-radius:var(--radius);
  padding:1rem 1.3rem;margin:1.2rem 0;font-size:.92rem;}
-.enbref dl{display:grid;grid-template-columns:max-content 1fr;gap:.55rem 1.6rem;margin:0;}
+.enbref .bref-titre{font-size:.95rem;margin:0 0 .8rem;color:var(--muted);
+ font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+.enbref dl{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2.2rem;margin:0;}
+.enbref .bref-item{display:grid;grid-template-columns:max-content 1fr;
+ gap:.55rem 1rem;align-content:start;}
 .enbref dt{color:var(--muted);font-weight:600;}
 .enbref dd{margin:0;word-break:break-word;}
 .prose{font-size:1.05rem;max-width:68ch;}
@@ -3309,6 +3320,43 @@ def verifier_entites_html():
     return fautes
 
 
+def verifier_chaines(fiches):
+    """Contrôle de cohérence des chaînes (chantier A, session #3).
+
+    Une chaîne est déclarée par le LIEU, qui nomme ses porteurs et ses
+    usufruitiers. Le contrôle vérifie que tout lieu déclare une chaîne complète
+    (au moins un porteur ET un usufruitier) et que tout porteur ou usufruitier
+    est cité par au moins une chaîne. Les modèles voisins en sont exemptés.
+    Avertit sans bloquer la génération : les manques relèvent de la recherche
+    (chantier D), pas d'une erreur de code."""
+    cites = set()
+    for f in fiches:
+        if f["categorie"] == "lieu":
+            ch = f.get("chaine", {}) or {}
+            cites.update(ch.get("porteurs") or [])
+            cites.update(ch.get("usufruitiers") or [])
+    avert = []
+    for f in sorted(fiches, key=lambda x: (x["categorie"], x["uid"])):
+        cat, uid = f["categorie"], f["uid"]
+        if cat == "lieu":
+            ch = f.get("chaine", {}) or {}
+            if not (ch.get("porteurs") or []):
+                avert.append(f"  lieu {uid} — aucun porteur dans la chaîne")
+            if not (ch.get("usufruitiers") or []):
+                avert.append(f"  lieu {uid} — aucun usufruitier dans la chaîne")
+        elif cat in ("porteur", "usufruitier"):
+            if uid not in cites:
+                avert.append(f"  {cat} {uid} — orphelin : cité par aucune chaîne")
+    if avert:
+        print(f"Contrôle des chaînes : {len(avert)} signalement·s "
+              f"(worklist du chantier D) —")
+        for a in avert:
+            print(a)
+    else:
+        print("Contrôle des chaînes : toutes les entités sont reliées.")
+    return avert
+
+
 def main():
     global BASE_URL
     cfg = load_config()
@@ -3331,6 +3379,9 @@ def main():
     # travers leurs lieux reliés (indice intrinsèque → indice effectif).
     # À faire après le scoring de TOUTES les fiches (besoin des axes des lieux).
     apply_chaine(all_sc, by_uid, ranking)
+
+    # contrôle de cohérence des chaînes (chantier A) — avertit, ne bloque pas.
+    verifier_chaines(fiches)
 
     sc_by_uid = {f["uid"]: sc for f, sc in all_sc}
 

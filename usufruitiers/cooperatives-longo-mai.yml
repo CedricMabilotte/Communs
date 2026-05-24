@@ -101,10 +101,7 @@ fiabilite: >
   Européenne détenues de façon inaliénable. Non confirmé : statut juridique
   précis des coopératives, actes formalisant l'usage, modalités d'accueil de
   nouveaux entrants, transparence interne.
-liens:
-  porteurs: [fonds-terre-europeenne]
-  usufruitiers: []
-  lieux: [longo-mai]
+voir_aussi: [fonds-terre-europeenne]
 sources:
   - titre: "Pro Longo Maï"
     url: "https://www.prolongomaif.ch/"

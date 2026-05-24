@@ -113,10 +113,7 @@ fiabilite: >
   sur une installation pérenne. Non confirmé : modalités de gouvernance interne
   du réseau, clause de dévolution, place décisionnelle des porteur·ses de projet.
   Les effectifs du réseau évoluent d'une année sur l'autre.
-liens:
-  porteurs: [fondation-terre-de-liens]
-  usufruitiers: [champs-des-possibles]
-  lieux: [reseau-terre-de-liens]
+voir_aussi: [fondation-terre-de-liens, champs-des-possibles]
 sources:
   - titre: "RENETA — site officiel"
     url: "https://reneta.fr/"
