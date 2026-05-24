@@ -96,6 +96,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "limans",
+    "nom": "Longo Maï — Limans",
+    "categorie": "lieu",
+    "sous_titre": "Coopérative fondatrice de Longo Maï, sur 270 hectares sanctuarisés",
+    "idl": 65,
+    "idl_brut": 67,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "nddl",
     "nom": "ZAD de Notre-Dame-des-Landes",
     "categorie": "lieu",
@@ -548,8 +580,8 @@
     "nom": "Fonds de Terre Européenne",
     "categorie": "porteur",
     "sous_titre": "Fondation de droit suisse détenant les terres de Longo Maï",
-    "idl": 64,
-    "idl_brut": 72,
+    "idl": 58,
+    "idl_brut": 66,
     "idl_intrinseque": 64,
     "score_type": "calcule",
     "completude": 0.765,
@@ -557,7 +589,7 @@
       "1": 100,
       "2": 100,
       "3": 50,
-      "4": 75,
+      "4": 50,
       "5": 50
     },
     "axes_intrinseques": {
@@ -567,44 +599,12 @@
       "4": 75,
       "5": 50
     },
-    "palier": "solide",
-    "palier_label": "Montage solide",
-    "palier_couleur": "#4a7a3a",
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
     "forme_juridique": "Fondation de droit suisse",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
-  },
-  {
-    "uid": "habicoop",
-    "nom": "Habicoop",
-    "categorie": "porteur",
-    "sous_titre": "Fédération française des coopératives d'habitants",
-    "idl": 70,
-    "idl_brut": 74,
-    "idl_intrinseque": 70,
-    "score_type": "calcule",
-    "completude": 0.882,
-    "axes": {
-      "1": 65,
-      "2": 100,
-      "3": 64,
-      "4": 71,
-      "5": null
-    },
-    "axes_intrinseques": {
-      "1": 65,
-      "2": 100,
-      "3": 64,
-      "4": 71,
-      "5": null
-    },
-    "palier": "solide",
-    "palier_label": "Montage solide",
-    "palier_couleur": "#4a7a3a",
-    "forme_juridique": "Association loi 1901 (structure fédérale)",
-    "montage_type": "propriete_collective",
-    "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -734,38 +734,6 @@
     "montage_type": "demembrement",
     "montage_label": "Démembrement nue-propriété / usufruit",
     "nature_juridique": "Commun citoyen"
-  },
-  {
-    "uid": "cooperative-oasis",
-    "nom": "Coopérative Oasis",
-    "categorie": "usufruitier",
-    "sous_titre": "Coopérative finançant le foncier collectif des écolieux",
-    "idl": 57,
-    "idl_brut": 68,
-    "idl_intrinseque": 57,
-    "score_type": "calcule",
-    "completude": 0.688,
-    "axes": {
-      "1": 50,
-      "2": 75,
-      "3": 75,
-      "4": 100,
-      "5": 50
-    },
-    "axes_intrinseques": {
-      "1": 50,
-      "2": 75,
-      "3": 75,
-      "4": 100,
-      "5": 50
-    },
-    "palier": "engage",
-    "palier_label": "Engagement réel",
-    "palier_couleur": "#b08431",
-    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC), agrément ESUS",
-    "montage_type": "propriete_collective",
-    "montage_label": "Propriété collective verrouillée",
-    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "cooperatives-longo-mai",

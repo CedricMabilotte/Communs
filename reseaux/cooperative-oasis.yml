@@ -1,5 +1,5 @@
 uid: cooperative-oasis
-categorie: usufruitier
+categorie: reseau
 nom: "Coopérative Oasis"
 sous_titre: "Coopérative finançant le foncier collectif des écolieux"
 statut_fiche: publie
@@ -105,7 +105,7 @@ fiabilite: >
   entre 2019 et juin 2022 pour 36 projets, réduction d'impôt de 25 % pour
   l'investisseur. Non confirmé : durées et clauses d'usage du foncier financé,
   articulation contractuelle avec les structures porteuses.
-voir_aussi: [feve, fonciere-antidote]
+membres: []
 sources:
   - titre: "Coopérative Oasis — site officiel"
     url: "https://cooperative-oasis.org/"

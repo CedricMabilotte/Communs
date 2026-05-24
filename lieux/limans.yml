@@ -1,0 +1,118 @@
+uid: limans
+categorie: lieu
+nom: "Longo Maï — Limans"
+sous_titre: "Coopérative fondatrice de Longo Maï, sur 270 hectares sanctuarisés"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Limans"
+  departement: "Alpes-de-Haute-Provence (04)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 1973
+url: "https://www.prolongomaif.ch/"
+resume: >
+  Site fondateur du réseau Longo Maï, près de Forcalquier. En juillet 1973, une
+  vingtaine de jeunes venu·es de deux collectifs militants — Spartakus et Hydra,
+  dans l'esprit de Mai 68 — rachètent par une collecte un domaine de 270
+  hectares pour y établir une coopérative rurale autogérée d'inspiration
+  libertaire. La terre est aujourd'hui détenue de façon inaliénable par le Fonds
+  de Terre Européenne ; la coopérative autogérée en assure l'usage : élevage
+  ovin, agriculture, vigne, transformation (conserves, laine, cosmétiques),
+  artisanat et accueil.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
+  usufruitier: "Coopérative Longo Maï de Limans (collectif autogéré)"
+  description: >
+    Le foncier de Limans est détenu de façon inaliénable par le Fonds de Terre
+    Européenne, fondation de droit suisse qui sanctuarise la propriété des
+    terres de Longo Maï. La coopérative autogérée, de statut associatif, en
+    assure l'usage et la gouverne collectivement. Le démembrement
+    nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
+    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
+    pas documentée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Les 270 hectares sont détenus de façon inaliénable par le Fonds de Terre Européenne, à l'abri de la spéculation."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le principe — propriété en fondation, usage par la coopérative — est public, mais les actes formalisant l'usage ne sont pas détaillés."
+  - critere: irreversibilite
+    valeur: oui
+    note: "La fondation détient le foncier de façon explicitement inaliénable depuis des décennies."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le domaine a été racheté en 1973 par une collecte militante, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Le foncier est détenu par une fondation sans capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fondation et coopérative autogérée de statut associatif ne captent aucune plus-value foncière privée."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : une fondation porte le foncier, un collectif associatif autogéré en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La coopérative fonctionne en autogestion depuis 1973 : les usager·es décident collectivement, dans une tradition libertaire."
+  - critere: tripartisme
+    valeur: non
+    note: "La gouvernance repose sur les coopérant·es ; l'association du voisinage ou des pouvoirs publics n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le site fonctionne de façon continue depuis 1973, mais les dispositifs explicites de transmission et de renouvellement ne sont pas décrits."
+  - critere: usage_interet_general
+    valeur: partiel
+    note: "Élevage, agriculture, transformation et accueil ont une portée collective ; l'ouverture au-delà du cercle des coopérant·es n'est pas explicitée."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "Site fondateur ancré localement depuis un demi-siècle ; le degré d'ouverture au territoire n'est pas documenté."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et les activités collectives relèvent d'une logique de partage, mais une part marchande (vente de produits transformés) coexiste."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1973, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+analyse:
+  forces:
+    - "Foncier sanctuarisé de façon inaliénable depuis 1973."
+    - "Autogestion effective et continue depuis un demi-siècle."
+    - "Activités diversifiées assurant une réelle autonomie au collectif."
+  fragilites:
+    - "Propriété portée par une fondation de droit suisse, hors cadre juridique français."
+    - "Gouvernance centrée sur les coopérant·es, peu ouverte au voisinage."
+    - "Formalisation contractuelle de l'usage non documentée."
+  leviers:
+    - "Documenter publiquement les actes liant la fondation et la coopérative."
+    - "Organiser explicitement l'accueil de nouveaux·elles entrant·es."
+    - "Articuler la gouvernance avec le territoire et les collectivités."
+  synthese: >
+    Limans est le berceau de Longo Maï : un foncier sanctuarisé en fondation et
+    une autogestion libertaire qui dure depuis 1973. Sa singularité — recours au
+    droit suisse, gouvernance centrée sur les coopérant·es — gagnerait en
+    ancrage à s'ouvrir davantage au territoire.
+fiabilite: >
+  Faits vérifiés (sources Pro Longo Maï, Wikipédia et presse spécialisée,
+  consultées en mai 2026) : fondation du réseau à Limans en juillet 1973, achat
+  d'un domaine de 270 hectares par une collecte militante, collectifs fondateurs
+  Spartakus et Hydra, autogestion d'inspiration libertaire, activités d'élevage,
+  d'agriculture et de transformation, détention inaliénable du foncier par le
+  Fonds de Terre Européenne. Non confirmé : actes formalisant l'usage, existence
+  d'un loyer, dispositifs de transmission.
+chaine:
+  porteurs: [fonds-terre-europeenne]
+  usufruitiers: [cooperatives-longo-mai]
+sources:
+  - titre: "Pro Longo Maï"
+    url: "https://www.prolongomaif.ch/"
+  - titre: "Association Longo Maï — Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Association_Longo_Ma%C3%AF"
