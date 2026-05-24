@@ -1,0 +1,136 @@
+uid: captage-cheze-canut
+categorie: lieu
+nom: "Captage de la Chèze-Canut"
+sous_titre: "Aire d'alimentation de captage protégée par maîtrise foncière publique, en lisière de Brocéliande"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Maxent"
+  departement: "Ille-et-Vilaine (35)"
+  region: "Bretagne"
+annee: null
+url: "https://www.eaudubassinrennais-collectivite.fr/notre-reseau/ressources-eau/ressource-cheze-canut/"
+resume: >
+  Aire d'alimentation des captages d'eau potable de la Chèze et du Canut, sur un
+  bassin versant rural d'environ 62 km² en lisière de la forêt de Brocéliande
+  (communes de Maxent, Saint-Thurial, Plélan-le-Grand, Treffendel). L'eau,
+  retenue dans le barrage de la Chèze, est l'une des ressources historiques
+  d'alimentation en eau potable de l'agglomération rennaise. Pour protéger
+  durablement la ressource, Eau du Bassin Rennais (ex-SMPBR) y mène depuis des
+  décennies une politique d'acquisition foncière à l'amiable : environ 232
+  hectares y sont détenus par la collectivité, soit le plus important patrimoine
+  de protection foncière du bassin rennais. Les parcelles acquises sont soit
+  aménagées et gérées durablement (boisements, haies bocagères, mares), soit
+  remises à des exploitant·es agricoles par bail rural à clauses
+  environnementales. Le site relève du dispositif Terres de Sources, porté par
+  la SCIC du même nom et Eau du Bassin Rennais, qui sécurise les terres des
+  aires de captage pour préserver la qualité de l'eau.
+montage:
+  type: propriete_publique
+  nu_proprietaire: "Eau du Bassin Rennais (collectivité publique — syndicat mixte de production d'eau potable)"
+  usufruitier: "Exploitant·es agricoles preneur·ses de bail rural à clauses environnementales sur le captage de la Chèze-Canut"
+  description: >
+    Le foncier de protection du captage est acquis et détenu par Eau du Bassin
+    Rennais, collectivité publique gestionnaire de l'eau du bassin rennais. Les
+    acquisitions se font à l'amiable, sans préemption. Une partie des parcelles
+    est aménagée et gérée écologiquement par la collectivité (boisements, haies,
+    mares) ; une autre est remise à des exploitant·es agricoles par bail rural à
+    clauses environnementales (BRCE), qui inscrit dans le contrat des
+    engagements de pratiques favorables à la qualité de l'eau. Le montage
+    associe une propriété publique destinée à un usage d'intérêt général et un
+    usage agricole encadré par bail.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier détenu par une collectivité publique, à vocation explicite de
+    protection de la ressource en eau ; usage agricole confié par bail rural à
+    clauses environnementales, sous une gouvernance institutionnelle (la
+    collectivité et ses instances), sans gouvernance citoyenne autogérée
+    documentée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier de protection du captage est acquis et détenu par Eau du Bassin Rennais, collectivité publique, et n'est pas destiné à la revente sur le marché."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition foncière publique à l'amiable, remise des parcelles agricoles par bail rural à clauses environnementales — est public et documenté sur le site d'Eau du Bassin Rennais."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par une collectivité publique soustrait durablement les parcelles au marché ; le caractère explicitement inaliénable de ce patrimoine foncier de protection n'est pas confirmé par les sources."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Les terres ont été acquises à l'amiable par la collectivité dans le cadre de sa politique de protection de la ressource en eau, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Une collectivité publique n'a pas de capital appropriable : aucune part ne porte la valeur foncière des terres de protection du captage."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Collectivité publique côté propriété, exploitation agricole familiale côté usage : le foncier de protection ne fait l'objet d'aucune captation de plus-value foncière privée."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : une collectivité publique détient le foncier, des exploitant·es agricoles en assurent l'usage par bail rural."
+  - critere: gouvernance_collective
+    valeur: non
+    note: "La gouvernance du foncier de protection relève des instances de la collectivité Eau du Bassin Rennais ; aucune décision collective des usager·es du lieu n'est documentée."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Eau du Bassin Rennais travaille avec la profession agricole, les élu·es locaux et des partenaires techniques pour réduire les pollutions diffuses ; cette concertation ne constitue pas une gouvernance partagée du lieu."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "La permanence d'une personne morale publique assure la continuité du portage ; les dispositifs de transmission de l'usage agricole et de renouvellement des preneur·ses ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Le lieu sert un intérêt général majeur — la protection d'une ressource d'eau potable alimentant l'agglomération rennaise — combiné à un usage agricole nourricier."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Captage historique d'alimentation en eau potable du bassin rennais, le site est utile à un large territoire et associe la profession agricole et les communes locales."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'usage agricole des parcelles relève d'une production marchande classique encadrée par des clauses environnementales ; il ne repose pas sur la gratuité, le don ou le troc."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Le bail rural prévoit un fermage encadré par la réglementation des baux ruraux, écartant un loyer de marché spéculatif ; son montant exact n'est pas documenté par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitant·e dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier de protection détenu durablement par une collectivité publique, hors marché."
+    - "Plus important patrimoine de protection foncière du bassin rennais (environ 232 hectares)."
+    - "Usage agricole sécurisé par bail rural et encadré par des clauses environnementales."
+  fragilites:
+    - "Gouvernance institutionnelle, sans décision collective des usager·es du lieu."
+    - "Usage agricole de nature marchande, non non marchand."
+    - "Caractère explicitement inaliénable du patrimoine foncier non confirmé par les sources."
+  leviers:
+    - "Confirmer et publier le statut d'inaliénabilité des parcelles de protection."
+    - "Associer plus explicitement la profession agricole et le voisinage à la gouvernance du site."
+    - "Documenter le contenu des clauses environnementales des baux ruraux et le niveau du fermage."
+  synthese: >
+    Le captage de la Chèze-Canut illustre la libération des terres par la voie
+    publique : une collectivité gestionnaire de l'eau acquiert le foncier des
+    aires de captage pour le soustraire aux pressions agricoles intensives et
+    spéculatives, et en confie l'usage par bail rural environnemental. Le
+    montage est solide sur le sol et la finalité ; sa réserve tient à une
+    gouvernance institutionnelle et à un usage agricole de nature marchande.
+fiabilite: >
+  Faits vérifiés (sources Eau du Bassin Rennais et presse spécialisée,
+  consultées en mai 2026) : bassin versant rural d'environ 62 km² en lisière de
+  Brocéliande, barrage de la Chèze comme ressource historique d'eau potable du
+  bassin rennais, barrage du Canut sur la commune de Maxent, politique
+  d'acquisition foncière de longue date par Eau du Bassin Rennais (ex-SMPBR),
+  environ 232 hectares détenus autour des captages de la Chèze-Canut,
+  acquisitions à l'amiable sans préemption, aménagement écologique d'une partie
+  des parcelles et remise de l'autre par bail rural à clauses environnementales,
+  rattachement au dispositif Terres de Sources. Non confirmé : statut
+  d'inaliénabilité du foncier, identité des exploitant·es preneur·ses, montant
+  du fermage, contenu précis des clauses environnementales, date de mise en
+  place du dispositif.
+chaine:
+  porteurs: [scic-terres-de-sources]
+  usufruitiers: [exploitants-brce-cheze-canut]
+sources:
+  - titre: "Eau du Bassin Rennais — Le Bassin versant de Chèze-Canut"
+    url: "https://www.eaudubassinrennais-collectivite.fr/notre-reseau/ressources-eau/ressource-cheze-canut/"
+  - titre: "Eau du Bassin Rennais — La protection foncière"
+    url: "https://www.eaudubassinrennais-collectivite.fr/la-solidarite-internationale/preservation-ressources-eau/protection-fonciere/"

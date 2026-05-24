@@ -1,0 +1,121 @@
+uid: gaec-ferme-la-durette
+categorie: usufruitier
+nom: "GAEC de la ferme de la Durette"
+sous_titre: "Groupement agricole exploitant la ferme pilote de la Durette à Avignon"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "Avignon"
+  departement: "Vaucluse (84)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: null
+url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"
+resume: >
+  Groupement agricole d'exploitation en commun (GAEC) qui exploite la ferme
+  pilote de la Durette, dans la ceinture verte d'Avignon, dont le foncier a été
+  acquis par la Foncière Terre de Liens. Le GAEC réunit de jeunes
+  agriculteur·rices issu·es de la couveuse d'activités CREA, qui se sont
+  associé·es pour reprendre et faire vivre cette ferme en verger-maraîcher
+  agroforestier conduite en agriculture biologique. Ils·elles produisent fruits
+  et légumes en circuit court, fournissant chaque semaine des paniers
+  pré-commandés en ligne. La ferme reste un site pilote suivi par le GRAB pour
+  ses recherches en agroforesterie. Les sources publiques ne détaillent ni
+  l'année de constitution du GAEC, ni sa composition nominative complète.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC de la ferme de la Durette (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la Durette est porté durablement par la Foncière Terre de
+    Liens, qui l'a acquis par l'épargne citoyenne pour le retirer du marché.
+    Son usage est confié au GAEC exploitant par bail rural. Le GAEC ne détient
+    pas la terre : il en assure l'exploitation agricole, sans pouvoir capter sa
+    valeur foncière.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Le GAEC est une société civile agricole : sa lucrativité, encadrée par le
+    statut, profite à ses associé·es exploitant·es ; le bénéfice de l'usage
+    reste circonscrit au cercle des paysan·nes installé·es.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété reste à la Foncière Terre de Liens : le GAEC ne peut ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le GAEC a un capital social composé de parts ; leur cession est soumise à l'agrément des associé·es, mais à un prix non plafonné par les sources consultées."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort des actifs du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de personnes, non une société commerciale ; sa lucrativité est encadrée par un statut spécifique."
+  - critere: non_lucrativite_effective
+    valeur: non
+    note: "Le GAEC est une société d'exploitation à but lucratif : les excédents constituent le revenu agricole de ses associé·es exploitant·es."
+  - critere: une_voix
+    valeur: oui
+    note: "Le statut du GAEC consacre l'égalité des associé·es : chacun·e dispose d'une voix, indépendamment de son apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le GAEC ne réunit que des associé·es exploitant·es : les usager·es de la ferme en sont aussi les décideur·ses."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le GAEC est issu de la couveuse CREA, qui accompagne l'installation, et a accueilli de nouveaux·elles associé·es ; ses modalités statutaires d'accueil ne sont pas documentées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions du GAEC au-delà de ses associé·es n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — agriculture biologique en verger-maraîcher agroforestier, recherche pilote avec le GRAB — porte un intérêt général agricole et écologique."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme vend en circuit court et accueille visites et événements publics ; les bénéfices de l'exploitation profitent toutefois d'abord aux associé·es du GAEC."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail rural, d'une durée minimale de neuf ans avec droit au renouvellement d'ordre public : jouissance durable et sécurisée."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses environnementales formalisées dans le bail (bail rural environnemental) n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le GAEC est lié à la Foncière Terre de Liens par un bail rural : relation contractuelle claire entre le porteur et l'exploitant."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "La ferme produit pour la vente en circuit court : l'usage relève d'une logique marchande, même en prix de proximité."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'existence et le montant du fermage versé par le GAEC à la Foncière ne sont pas documentés par les sources consultées."
+analyse:
+  forces:
+    - "Exploitation collective égalitaire : une voix par associé·e."
+    - "Installation de jeunes paysan·nes sécurisée par la couveuse CREA puis le foncier Terre de Liens."
+    - "Objet agricole et écologique d'intérêt général, en lien avec la recherche du GRAB."
+  fragilites:
+    - "GAEC à but lucratif : le bénéfice de l'usage profite d'abord aux associé·es."
+    - "Régime d'usage marchand (vente en circuit court)."
+    - "Transparence comptable, clause de dévolution, fermage non documentés."
+  leviers:
+    - "Documenter le fermage versé à la Foncière et son caractère soutenable."
+    - "Inscrire des clauses environnementales dans un bail rural environnemental."
+    - "Formaliser et publier les modalités d'accueil de nouveaux·elles associé·es."
+  synthese: >
+    Le GAEC de la Durette est le maillon vivant d'une ferme libérée du marché
+    par la Foncière Terre de Liens : un groupement agricole égalitaire qui
+    exploite le lieu. Société d'exploitation à but lucratif, il relève du pôle
+    mutualiste — l'usage agricole profite d'abord à ses associé·es paysan·nes.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens et GRAB, consultées en mai 2026) :
+  groupement agricole d'exploitation en commun exploitant la ferme de la Durette
+  à Avignon, foncier porté par la Foncière Terre de Liens, GAEC formé par de
+  jeunes agriculteur·rices issu·es de la couveuse d'activités CREA, exploitation
+  en verger-maraîcher agroforestier bio, vente en paniers pré-commandés, ferme
+  pilote suivie par le GRAB. Non confirmé : année de constitution du GAEC,
+  composition nominative complète, capital et clauses de cession, fermage,
+  clause de dévolution, transparence comptable.
+voir_aussi: [fonciere-terre-de-liens]
+sources:
+  - titre: "La Durette — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"
+  - titre: "Ferme pilote de la Durette — GRAB"
+    url: "https://www.grab.fr/durette/"

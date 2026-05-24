@@ -1,0 +1,128 @@
+uid: magnantru
+categorie: lieu
+nom: "Ferme de Magnantru"
+sous_titre: "Première ferme transmise par la foncière FEVE, en polyculture-élevage bio dans les Deux-Sèvres"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Périgné"
+  departement: "Deux-Sèvres (79)"
+  region: "Nouvelle-Aquitaine"
+annee: 2021
+url: "https://www.feve.co/les-feves-financees/magnantru"
+resume: >
+  Ferme de polyculture-élevage d'environ 47 hectares au lieu-dit Magnantru, à
+  Périgné dans le Mellois (Deux-Sèvres), en agriculture biologique depuis 2010.
+  Première ferme transmise via la plateforme Fermes en Vie (FEVE) : à l'été
+  2021, la foncière solidaire de FEVE en a acquis le foncier, les bâtiments et
+  une partie du matériel grâce à l'épargne citoyenne, et en a confié l'usage à
+  Camille Touzeau et Raphaël Marquet — anciens salarié·es de la ferme — par un
+  bail rural environnemental, assorti d'une option d'achat. Le couple y
+  poursuit l'élevage bovin viande, les grandes cultures, la transformation et
+  la vente à la ferme, l'accueil en chambres d'hôtes, et a introduit un élevage
+  d'oies.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière de FEVE — Fermes en Vie (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "EARL La Ferme de Magnantru (société civile agricole)"
+  description: >
+    La foncière solidaire de FEVE a acquis la pleine propriété de la ferme —
+    terres, bâtiments, partie du matériel — grâce à l'épargne citoyenne. Elle en
+    conserve la propriété et en confie l'usage à l'EARL La Ferme de Magnantru
+    par un bail rural environnemental, assorti de clauses en faveur de la
+    biodiversité et du maintien de l'agriculture biologique. Le bail ouvre aux
+    exploitant·es une option d'achat au bout de sept ans. Le montage dissocie la
+    propriété, portée durablement par la foncière, de l'usage exercé par les
+    paysan·nes ; FEVE n'est pas partie prenante de la société d'exploitation.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier porté hors marché spéculatif par une foncière solidaire ; ce
+    porteur, la foncière de FEVE, est toutefois une société en commandite par
+    actions à actionnariat solidaire, et l'option d'achat à sept ans ouvre une
+    sortie possible du dispositif.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis en 2021 par la foncière solidaire de FEVE grâce à l'épargne citoyenne, hors logique spéculative."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition par la foncière de FEVE, bail rural environnemental à l'EARL La Ferme de Magnantru — est public et documenté par FEVE et la presse agricole."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La foncière porte le foncier hors marché, mais le bail prévoit une option d'achat au bout de sept ans qui ouvre une sortie possible du dispositif."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis par l'épargne solidaire citoyenne collectée par FEVE, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: non
+    note: "Le foncier est porté par la foncière de FEVE, société en commandite par actions dont les actions sont cessibles ; la valeur foncière est partiellement captable."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "L'EARL d'exploitation est non lucrative au sens d'une captation de plus-value foncière, mais la foncière de FEVE sert un rendement encadré à ses actionnaires."
+  - critere: montage_non_commercial
+    valeur: non
+    note: "La foncière de FEVE est une société en commandite par actions — société commerciale à actionnariat solidaire — et l'EARL d'exploitation est elle-même une société civile à capital."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "La ferme est gérée par les deux paysan·nes exploitant·es ; l'accueil d'autres porteur·ses de projet est envisagé, mais une gouvernance collective élargie n'est pas documentée."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "L'association du voisinage ou des collectivités à la gouvernance du lieu n'est pas documentée par les sources."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "La transmission a renouvelé une génération de paysan·nes ; les dispositifs de transmission au-delà du couple installé ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Agriculture biologique, élevage, transformation et accueil : le lieu sert un intérêt général agricole et alimentaire, et illustre le renouvellement des générations agricoles."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Vente à la ferme, transformation sur place et chambres d'hôtes ancrent le lieu dans le Mellois et l'ouvrent au public."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'activité repose sur la production agricole vendue et l'accueil touristique payant : l'usage du lieu relève d'une logique marchande."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage encadré par arrêté préfectoral, écartant un loyer de marché ; son caractère soutenable n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'EARL dispose d'une jouissance durable, avec en outre une option d'achat à sept ans."
+analyse:
+  forces:
+    - "Foncier acquis hors marché spéculatif par l'épargne citoyenne en 2021."
+    - "Transmission réussie d'une ferme bio à un couple sans cadre familial agricole."
+    - "Bail rural environnemental sécurisant la jouissance et inscrivant des clauses de biodiversité."
+  fragilites:
+    - "Le porteur, la foncière de FEVE, est une société en commandite par actions servant un rendement encadré."
+    - "L'option d'achat à sept ans ouvre une sortie possible du dispositif de portage."
+    - "Usage marchand (vente, transformation, accueil touristique), sans dimension non marchande documentée."
+  leviers:
+    - "Privilégier le maintien du foncier dans la foncière plutôt que l'exercice de l'option d'achat."
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Associer le voisinage et la collectivité à la gouvernance du lieu."
+  synthese: >
+    Magnantru illustre le modèle FEVE : une ferme bio rachetée par l'épargne
+    citoyenne et confiée à un couple de paysan·nes par bail environnemental. Le
+    montage sécurise une transmission agricole réelle, mais sa nature — porteur
+    en société commerciale solidaire, option d'achat à sept ans — le rapproche
+    autant de l'accession différée à la propriété que d'une libération durable
+    du foncier.
+fiabilite: >
+  Faits vérifiés (sources Fermes en Vie, presse agricole — Web-agri, Réussir —
+  et registre des entreprises, consultées en mai 2026) : ferme de
+  polyculture-élevage d'environ 47 hectares au lieu-dit Magnantru à Périgné,
+  agriculture biologique depuis 2010, première ferme transmise via FEVE à l'été
+  2021, foncier acquis par la foncière solidaire de FEVE grâce à l'épargne
+  citoyenne, usage confié à Camille Touzeau et Raphaël Marquet par bail rural
+  environnemental avec option d'achat à sept ans, activités d'élevage bovin, de
+  grandes cultures, de transformation, de vente à la ferme et d'accueil en
+  chambres d'hôtes, introduction d'un élevage d'oies. Non confirmé : surface
+  définitive, montant du fermage, durée exacte du bail, clauses détaillées.
+chaine:
+  porteurs: [feve]
+  usufruitiers: [earl-ferme-de-magnantru]
+sources:
+  - titre: "La ferme de Magnantru — Fermes en Vie"
+    url: "https://www.feve.co/les-feves-financees/magnantru"
+  - titre: "La ferme de Magnantru transmise via Fermes en Vie — Web-agri"
+    url: "https://www.web-agri.fr/installation-transmission/article/181383/la-ferme-de-magnantru-deux-sevres-transmise-via-la-plateforme-de-financement-participatif-fermes-en"

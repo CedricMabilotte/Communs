@@ -1,0 +1,120 @@
+uid: chantemerle
+categorie: lieu
+nom: "Longo Maï — Chantemerle"
+sous_titre: "Filature de laine autogérée du réseau Longo Maï, dans la vallée de la Guisane"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Saint-Chaffrey (Chantemerle)"
+  departement: "Hautes-Alpes (05)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 1976
+url: "https://filature-longomai.org/"
+resume: >
+  Site du réseau Longo Maï à Chantemerle, hameau de Saint-Chaffrey près de
+  Briançon, dans la vallée de la Guisane. En 1976, la coopérative Longo Maï
+  rachète une ancienne filature textile inactive depuis 1969 pour y établir une
+  filière laine de bout en bout. L'atelier transforme la laine des troupeaux du
+  réseau — mérinos d'Arles notamment — en vêtements, draps et couvertures, en
+  maîtrisant toutes les étapes : tonte, tri, lavage, cardage, filage, tissage,
+  tricotage et confection. La terre et les bâtiments sont détenus de façon
+  inaliénable par le Fonds de Terre Européenne ; la coopérative autogérée en
+  assure l'usage.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
+  usufruitier: "Coopérative Longo Maï de Chantemerle (collectif autogéré)"
+  description: >
+    Le foncier et les bâtiments de la filature de Chantemerle sont détenus de
+    façon inaliénable par le Fonds de Terre Européenne, fondation de droit
+    suisse qui sanctuarise la propriété des terres et des sites de Longo Maï.
+    La coopérative autogérée, de statut associatif, en assure l'usage et la
+    gouverne collectivement. Le démembrement nue-propriété/usufruit au sens du
+    droit français n'est pas formalisé : il s'agit d'une propriété sanctuarisée
+    en fondation et d'un usage collectif.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
+    pas documentée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le site est détenu de façon inaliénable par le Fonds de Terre Européenne, fondation qui sanctuarise les terres de Longo Maï à l'abri du marché."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le principe — propriété en fondation, usage par la coopérative — est public, mais les actes formalisant l'usage de la filature ne sont pas détaillés."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le Fonds de Terre Européenne détient le foncier de Longo Maï de façon explicitement inaliénable."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "La filature, inactive depuis 1969, a été rachetée en 1976 par la coopérative, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Le foncier est détenu par une fondation sans capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fondation et coopérative autogérée de statut associatif ne captent aucune plus-value foncière privée."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : une fondation porte le foncier, un collectif associatif autogéré en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La filature fonctionne en autogestion depuis 1976 : les coopérant·es décident collectivement, dans la tradition libertaire de Longo Maï."
+  - critere: tripartisme
+    valeur: non
+    note: "La gouvernance repose sur les coopérant·es ; l'association du voisinage ou des pouvoirs publics n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le site fonctionne de façon continue depuis 1976, mais les dispositifs explicites de transmission et de renouvellement ne sont pas décrits."
+  - critere: usage_interet_general
+    valeur: partiel
+    note: "La filière laine éthique et le maintien d'un savoir-faire textile ont une portée collective ; l'ouverture au-delà du réseau n'est pas pleinement explicitée."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "La filature, dotée d'un magasin d'usine, perpétue un savoir-faire de la vallée de la Guisane ; le degré d'ouverture au territoire n'est pas documenté."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion relève d'une logique de partage, mais l'activité comporte une part marchande (vente de textiles transformés)."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1976, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+analyse:
+  forces:
+    - "Foncier et bâtiments sanctuarisés de façon inaliénable depuis 1976."
+    - "Filière laine intégrée et autogérée, de la tonte à la confection."
+    - "Réemploi d'un site industriel abandonné et d'un savoir-faire textile menacé."
+  fragilites:
+    - "Propriété portée par une fondation de droit suisse, hors cadre juridique français."
+    - "Gouvernance centrée sur les coopérant·es, peu ouverte au voisinage."
+    - "Formalisation contractuelle de l'usage non documentée."
+  leviers:
+    - "Documenter publiquement les actes liant la fondation et la coopérative."
+    - "Organiser explicitement l'accueil de nouveaux·elles entrant·es."
+    - "Articuler la gouvernance avec le territoire et les collectivités."
+  synthese: >
+    Chantemerle est un maillon industriel de Longo Maï : une ancienne filature
+    rendue à l'usage collectif, sanctuarisée en fondation et autogérée depuis
+    1976. Sa singularité — recours au droit suisse, gouvernance centrée sur les
+    coopérant·es — gagnerait en ancrage à s'ouvrir davantage au territoire.
+fiabilite: >
+  Faits vérifiés (sources Filature de Chantemerle — Longo Maï et presse
+  spécialisée, consultées en mai 2026) : rachat en 1976 d'une filature de
+  Saint-Chaffrey inactive depuis 1969, mise en place d'une filière laine
+  intégrée et autogérée, transformation de la laine des troupeaux du réseau,
+  rattachement au réseau Longo Maï dont le foncier est détenu par le Fonds de
+  Terre Européenne. Non confirmé : surface du site, actes formalisant l'usage,
+  existence d'un loyer, dispositifs de transmission.
+chaine:
+  porteurs: [fonds-terre-europeenne]
+  usufruitiers: [cooperatives-longo-mai]
+sources:
+  - titre: "Filature de Chantemerle — Longo Maï"
+    url: "https://filature-longomai.org/"
+  - titre: "La filature de Longo Maï : une usine autogérée depuis 1976"
+    url: "https://filature-longomai.org/le-projet/usine-autogeree/"

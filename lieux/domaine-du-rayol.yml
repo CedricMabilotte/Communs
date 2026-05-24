@@ -1,0 +1,127 @@
+uid: domaine-du-rayol
+categorie: lieu
+nom: "Domaine du Rayol"
+sous_titre: "Domaine côtier du Conservatoire du littoral, géré par une association loi 1901"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Le Rayol-Canadel-sur-Mer"
+  departement: "Var (83)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 1989
+url: "https://www.domainedurayol.org/"
+resume: >
+  Domaine côtier d'environ 20 hectares sur le littoral des Maures, au
+  Rayol-Canadel-sur-Mer. Menacé par un projet immobilier, le site a été acquis
+  en 1989 par le Conservatoire du littoral, établissement public qui le fait
+  entrer dans son domaine propre inaliénable. Sa gestion est confiée à
+  l'Association du Domaine du Rayol, association loi 1901 créée la même année
+  avec l'appui des collectivités, par une convention pluriannuelle d'objectifs
+  régulièrement renouvelée. On y trouve le Jardin des Méditerranées, mosaïque
+  paysagère dessinée par Gilles Clément évoquant les régions du monde à climat
+  méditerranéen ; le domaine est ouvert au public toute l'année et accueille
+  visites, expositions, ateliers de jardinage écologique et propositions
+  culturelles.
+montage:
+  type: propriete_publique
+  nu_proprietaire: "Conservatoire de l'espace littoral et des rivages lacustres (établissement public)"
+  usufruitier: "Association du Domaine du Rayol (association loi 1901)"
+  description: >
+    Le foncier appartient au Conservatoire du littoral, établissement public,
+    et entre dans son domaine propre, inaliénable et imprescriptible. La gestion
+    du site est confiée à l'Association du Domaine du Rayol par une convention
+    pluriannuelle d'objectifs régulièrement renouvelée, qui fixe la mission de
+    sauvegarde de l'espace côtier, d'ouverture au public et de valorisation
+    pédagogique et culturelle. Le montage ne relève pas du démembrement civil
+    nue-propriété/usufruit : il associe une propriété publique inaliénable et
+    une gestion conventionnée par une association d'intérêt général.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier porté par un établissement public dans un domaine inaliénable ;
+    gestion confiée par convention à une association loi 1901 d'intérêt
+    général, à gouvernance par un conseil d'administration plutôt que par les
+    seul·es usager·es.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le domaine appartient au Conservatoire du littoral, établissement public non spéculatif, et n'est pas destiné à la revente."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — propriété du Conservatoire du littoral, gestion par l'Association du Domaine du Rayol via une convention d'objectifs — est public et documenté."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Les terrains du Conservatoire du littoral entrent dans son domaine propre, inaliénable et imprescriptible : leur aliénation n'est possible qu'après décret en Conseil d'État."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le domaine a été acquis en 1989 par le Conservatoire du littoral sur fonds publics, pour le soustraire à un projet immobilier, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni l'établissement public ni l'association loi 1901 ne comportent de capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Établissement public et association loi 1901 : aucun maillon du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : un établissement public porte le foncier, une association loi 1901 en assure la gestion."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "L'association gère le site et tient une assemblée générale annuelle ; la gouvernance repose sur un conseil d'administration et non sur une autogestion par les usager·es du lieu."
+  - critere: tripartisme
+    valeur: partiel
+    note: "L'association a été créée avec l'appui des collectivités locales et le site relève d'un établissement public ; le degré d'association du voisinage à la gouvernance n'est pas documenté."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'association gère le site de façon continue depuis 1989 et la convention est régulièrement renouvelée ; les dispositifs explicites de transmission et de renouvellement des instances ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Sauvegarde d'un espace côtier, jardin botanique, pédagogie de l'environnement et accueil du public servent un intérêt général écologique et culturel qui dépasse les gestionnaires."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Ouvert au public toute l'année et accueillant environ 95 000 visiteur·ses par an, le domaine est un équipement ancré dans son territoire et largement ouvert."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'accès au domaine est payant, à un tarif de visite de site culturel, et non gratuit ou sur contribution modique."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'une redevance versée par l'association au Conservatoire du littoral ne sont pas documentées par les sources consultées."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "La convention d'objectifs est régulièrement renouvelée et la gestion dure depuis 1989, mais la convention est pluriannuelle et non un titre d'usage long de type bail emphytéotique."
+analyse:
+  forces:
+    - "Foncier sanctuarisé dans le domaine inaliénable d'un établissement public depuis 1989."
+    - "Acquisition publique non spéculative ayant écarté un projet immobilier."
+    - "Site largement ouvert au public, à forte vocation pédagogique et écologique."
+  fragilites:
+    - "Accès au domaine payant : régime d'usage marchand au sens de la grille."
+    - "Gestion par convention pluriannuelle, plus courte et moins sécurisée qu'un bail long."
+    - "Gouvernance par conseil d'administration, sans autogestion par les usager·es."
+  leviers:
+    - "Documenter publiquement la durée et les clauses de la convention d'objectifs."
+    - "Préciser les modalités de gratuité ou d'accès solidaire au domaine."
+    - "Élargir l'association des habitant·es et du voisinage à la gouvernance du site."
+  synthese: >
+    Le Domaine du Rayol illustre le modèle de propriété publique inaliénable du
+    Conservatoire du littoral : un foncier côtier verrouillé pour toujours,
+    confié à une association d'intérêt général qui en fait un jardin et un lieu
+    de pédagogie écologique. Sa distance au modèle du commun citoyen tient à
+    l'accès payant et à une gouvernance plus institutionnelle qu'autogérée.
+fiabilite: >
+  Faits vérifiés (sources Conservatoire du littoral, Association du Domaine du
+  Rayol et presse régionale, consultées en mai 2026) : domaine côtier d'environ
+  20 hectares au Rayol-Canadel-sur-Mer, acquis en 1989 par le Conservatoire du
+  littoral pour le soustraire à un projet immobilier, entrée dans le domaine
+  inaliénable de l'établissement public, gestion confiée à l'Association du
+  Domaine du Rayol (loi 1901) par convention pluriannuelle d'objectifs, Jardin
+  des Méditerranées dessiné par Gilles Clément, ouverture au public toute
+  l'année, environ 95 000 visiteur·ses par an. Non confirmé : existence et
+  montant d'une redevance, durée exacte et clauses de la convention.
+chaine:
+  porteurs: [conservatoire-littoral]
+  usufruitiers: [association-domaine-du-rayol]
+sources:
+  - titre: "Domaine du Rayol — site officiel"
+    url: "https://www.domainedurayol.org/"
+  - titre: "Domaine du Rayol — Conservatoire du littoral"
+    url: "https://www.conservatoire-du-littoral.fr/siteLittoral/202/28-domaine-du-rayol-83_var.htm"

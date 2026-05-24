@@ -1,0 +1,122 @@
+uid: mas-de-granier
+categorie: lieu
+nom: "Longo Maï — Mas de Granier"
+sous_titre: "Ferme collective du réseau Longo Maï dans la plaine de la Crau"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Saint-Martin-de-Crau"
+  departement: "Bouches-du-Rhône (13)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 1990
+url: "https://www.prolongomaif.ch/longo-ma%C3%AF/coop%C3%A9ratives/mas-de-granier-fr/"
+resume: >
+  Ferme collective du réseau Longo Maï à Saint-Martin-de-Crau, dans la plaine
+  de la Crau entre Marseille, Arles et Avignon. Le site est lancé en 1990 par
+  des membres de la coopérative Longo Maï de Grange-Neuve devenus trop
+  nombreux : une ferme d'environ 27 hectares, dont une part importante de
+  prairies naturelles irrigables produisant le foin de Crau (AOC). Une
+  quinzaine de coopérant·es y pratiquent maraîchage biologique, transformation
+  en conserves, boulangerie, pâtes fraîches, semences et plants, élevage de
+  volailles et culture d'oliviers et de céréales. La conserverie est ouverte à
+  de petit·es paysan·nes des environs. Le foncier est détenu de façon
+  inaliénable par le Fonds de Terre Européenne ; la coopérative autogérée en
+  assure l'usage.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
+  usufruitier: "Coopérative Longo Maï du Mas de Granier (collectif autogéré)"
+  description: >
+    Le foncier du Mas de Granier est détenu de façon inaliénable par le Fonds
+    de Terre Européenne, fondation de droit suisse qui sanctuarise la propriété
+    des terres de Longo Maï. La coopérative autogérée, de statut associatif, en
+    assure l'usage et la gouverne collectivement. Le démembrement
+    nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
+    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
+    pas documentée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Les terres de la ferme sont détenues de façon inaliénable par le Fonds de Terre Européenne, à l'abri de la spéculation."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le principe — propriété en fondation, usage par la coopérative — est public, mais les actes formalisant l'usage du Mas de Granier ne sont pas détaillés."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le Fonds de Terre Européenne détient le foncier de Longo Maï de façon explicitement inaliénable."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "La ferme a été établie en 1990 par essaimage de la coopérative de Grange-Neuve, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Le foncier est détenu par une fondation sans capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fondation et coopérative autogérée de statut associatif ne captent aucune plus-value foncière privée."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : une fondation porte le foncier, un collectif associatif autogéré en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La quinzaine de coopérant·es décide collectivement de la ferme en autogestion, dans la tradition libertaire de Longo Maï."
+  - critere: tripartisme
+    valeur: non
+    note: "La gouvernance repose sur les coopérant·es ; l'association du voisinage ou des pouvoirs publics n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le site fonctionne de façon continue depuis 1990, mais les dispositifs explicites de transmission et de renouvellement ne sont pas décrits."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Maraîchage nourricier, conserverie ouverte aux paysan·nes voisin·es et soutien à des luttes sociales donnent au lieu une portée qui dépasse ses occupant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La conserverie sert de nombreux·ses petit·es paysan·nes des environs et le lieu est engagé dans des solidarités locales (quartiers de Marseille, travailleur·ses agricoles)."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et l'autoconsommation relèvent d'une logique de partage, mais une part marchande coexiste (vente de conserves sur les marchés)."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1990, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+analyse:
+  forces:
+    - "Foncier sanctuarisé de façon inaliénable depuis 1990."
+    - "Conserverie ouverte aux paysan·nes voisin·es : un outil mutualisé de territoire."
+    - "Ferme engagée dans des solidarités sociales dépassant largement ses occupant·es."
+  fragilites:
+    - "Propriété portée par une fondation de droit suisse, hors cadre juridique français."
+    - "Gouvernance centrée sur les coopérant·es, peu ouverte au voisinage."
+    - "Formalisation contractuelle de l'usage non documentée."
+  leviers:
+    - "Documenter publiquement les actes liant la fondation et la coopérative."
+    - "Organiser explicitement l'accueil de nouveaux·elles entrant·es."
+    - "Associer formellement le voisinage à la gouvernance du lieu."
+  synthese: >
+    Le Mas de Granier est une ferme collective de Longo Maï tournée vers le
+    territoire : un foncier sanctuarisé en fondation, une conserverie partagée
+    et un fort engagement social. Sa marge de progression tient à la
+    documentation du montage et à l'ouverture de sa gouvernance.
+fiabilite: >
+  Faits vérifiés (sources Pro Longo Maï, Revue Silence et annuaires
+  professionnels, consultés en mai 2026) : ferme d'environ 27 hectares à
+  Saint-Martin-de-Crau lancée en 1990 par essaimage de la coopérative de
+  Grange-Neuve, prairies à foin de Crau, maraîchage biologique, conserverie
+  ouverte aux paysan·nes voisin·es, boulangerie et élevage, rattachement au
+  réseau Longo Maï dont le foncier est détenu par le Fonds de Terre Européenne.
+  Non confirmé : surface définitive, actes formalisant l'usage, existence d'un
+  loyer, dispositifs de transmission.
+chaine:
+  porteurs: [fonds-terre-europeenne]
+  usufruitiers: [cooperatives-longo-mai]
+sources:
+  - titre: "Mas de Granier — Pro Longo Maï"
+    url: "https://www.prolongomaif.ch/longo-ma%C3%AF/coop%C3%A9ratives/mas-de-granier-fr/"
+  - titre: "Le Mas de Granier, une ferme collective qui nourrit des luttes — Revue Silence"
+    url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/le-mas-de-granier-une-ferme-collective-qui-nourrit-des-luttes"

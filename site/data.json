@@ -1,5 +1,197 @@
 [
   {
+    "uid": "ancrage",
+    "nom": "Ancrage",
+    "categorie": "lieu",
+    "sous_titre": "Immeuble de quartier à Nancy, sorti du marché par le fonds de dotation Antidote",
+    "idl": 76,
+    "idl_brut": 76,
+    "idl_intrinseque": 76,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 73,
+      "2": 100,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 73,
+      "2": 100,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "demembrement",
+    "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "captage-cheze-canut",
+    "nom": "Captage de la Chèze-Canut",
+    "categorie": "lieu",
+    "sous_titre": "Aire d'alimentation de captage protégée par maîtrise foncière publique, en lisière de Brocéliande",
+    "idl": 66,
+    "idl_brut": 66,
+    "idl_intrinseque": 66,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 88,
+      "2": 100,
+      "3": 29,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 29,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "chantemerle",
+    "nom": "Longo Maï — Chantemerle",
+    "categorie": "lieu",
+    "sous_titre": "Filature de laine autogérée du réseau Longo Maï, dans la vallée de la Guisane",
+    "idl": 65,
+    "idl_brut": 67,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "domaine-du-rayol",
+    "nom": "Domaine du Rayol",
+    "categorie": "lieu",
+    "sous_titre": "Domaine côtier du Conservatoire du littoral, géré par une association loi 1901",
+    "idl": 64,
+    "idl_brut": 66,
+    "idl_intrinseque": 64,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 50,
+      "4": 100,
+      "5": 25
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 50,
+      "4": 100,
+      "5": 25
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "ferme-de-pommiers",
+    "nom": "La Ferme de Pommiers",
+    "categorie": "lieu",
+    "sous_titre": "Ferme d'élevage ovin de moyenne montagne, sécurisée par donation et acquisition de la Fondation Terre de Liens",
+    "idl": 89,
+    "idl_brut": 92,
+    "idl_intrinseque": 89,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 100,
+      "5": 75
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "gorges-du-gardon",
+    "nom": "Réserve naturelle régionale des gorges du Gardon",
+    "categorie": "lieu",
+    "sous_titre": "491 hectares de garrigue et de gorges protégés, cogérés par un Conservatoire d'espaces naturels",
+    "idl": 62,
+    "idl_brut": 69,
+    "idl_intrinseque": 62,
+    "score_type": "calcule",
+    "completude": 0.8,
+    "axes": {
+      "1": 50,
+      "2": 100,
+      "3": 64,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 100,
+      "3": 64,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "hameau-des-buis",
     "nom": "Le Hameau des Buis",
     "categorie": "lieu",
@@ -32,6 +224,70 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "la-cabrery",
+    "nom": "Longo Maï — La Cabrery",
+    "categorie": "lieu",
+    "sous_titre": "Ferme viticole collective du réseau Longo Maï en Luberon",
+    "idl": 65,
+    "idl_brut": 67,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "la-durette",
+    "nom": "La Durette",
+    "categorie": "lieu",
+    "sous_titre": "Ferme pilote en verger-maraîcher agroforestier, sauvée du marché par la Foncière Terre de Liens",
+    "idl": 78,
+    "idl_brut": 81,
+    "idl_intrinseque": 78,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 88,
+      "2": 75,
+      "3": 71,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 75,
+      "3": 71,
+      "4": 100,
+      "5": 75
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "la-marinie",
     "nom": "La Marinie",
     "categorie": "lieu",
@@ -54,6 +310,38 @@
       "3": 80,
       "4": 100,
       "5": 69
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "demembrement",
+    "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "la-talvere",
+    "nom": "La Talvère",
+    "categorie": "lieu",
+    "sous_titre": "Maison et grange des causses du Quercy, sorties du marché par le fonds de dotation Antidote",
+    "idl": 78,
+    "idl_brut": 78,
+    "idl_intrinseque": 78,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 81,
+      "2": 100,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 81,
+      "2": 100,
+      "3": 71,
+      "4": 100,
+      "5": 50
     },
     "palier": "abouti",
     "palier_label": "Libération aboutie",
@@ -117,6 +405,102 @@
       "2": 100,
       "3": 57,
       "4": 50,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "logements-chenelet-flocques",
+    "nom": "12 logements écologiques de Flocques",
+    "categorie": "lieu",
+    "sous_titre": "Opération de logement très social de la Foncière Chênelet en cœur de village normand",
+    "idl": 59,
+    "idl_brut": 59,
+    "idl_intrinseque": 59,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 77,
+      "2": 50,
+      "3": 43,
+      "4": 100,
+      "5": 44
+    },
+    "axes_intrinseques": {
+      "1": 77,
+      "2": 50,
+      "3": 43,
+      "4": 100,
+      "5": 44
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "magnantru",
+    "nom": "Ferme de Magnantru",
+    "categorie": "lieu",
+    "sous_titre": "Première ferme transmise par la foncière FEVE, en polyculture-élevage bio dans les Deux-Sèvres",
+    "idl": 51,
+    "idl_brut": 53,
+    "idl_intrinseque": 51,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 65,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 25,
+      "3": 50,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "mas-de-granier",
+    "nom": "Longo Maï — Mas de Granier",
+    "categorie": "lieu",
+    "sous_titre": "Ferme collective du réseau Longo Maï dans la plaine de la Crau",
+    "idl": 74,
+    "idl_brut": 77,
+    "idl_intrinseque": 74,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 100,
       "5": 50
     },
     "palier": "solide",
@@ -192,6 +576,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "treynas",
+    "nom": "Longo Maï — Treynas",
+    "categorie": "lieu",
+    "sous_titre": "Communauté de paysan·nes-forestier·es du réseau Longo Maï en Ardèche",
+    "idl": 65,
+    "idl_brut": 67,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 92,
+      "2": 100,
+      "3": 57,
+      "4": 50,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "village-vertical",
     "nom": "Le Village Vertical",
     "categorie": "lieu",
@@ -260,8 +676,8 @@
     "nom": "Conservatoire du littoral",
     "categorie": "porteur",
     "sous_titre": "Établissement public détenant un domaine foncier inaliénable",
-    "idl": 83,
-    "idl_brut": 83,
+    "idl": 72,
+    "idl_brut": 72,
     "idl_intrinseque": 83,
     "score_type": "calcule",
     "completude": 1.0,
@@ -270,7 +686,7 @@
       "2": 100,
       "3": 79,
       "4": 100,
-      "5": 50
+      "5": 25
     },
     "axes_intrinseques": {
       "1": 100,
@@ -279,9 +695,9 @@
       "4": 100,
       "5": 50
     },
-    "palier": "abouti",
-    "palier_label": "Libération aboutie",
-    "palier_couleur": "#356026",
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
     "forme_juridique": "Établissement public (Conservatoire de l'espace littoral et des rivages lacustres)",
     "montage_type": "propriete_publique",
     "montage_label": "Propriété publique inaliénable",
@@ -356,14 +772,14 @@
     "nom": "FEVE — Fermes en Vie",
     "categorie": "porteur",
     "sous_titre": "Foncière solidaire citoyenne portant le foncier agricole",
-    "idl": 36,
-    "idl_brut": 38,
+    "idl": 31,
+    "idl_brut": 33,
     "idl_intrinseque": 36,
     "score_type": "calcule",
     "completude": 0.882,
     "axes": {
       "1": 12,
-      "2": 50,
+      "2": 25,
       "3": 50,
       "4": 50,
       "5": 50
@@ -375,9 +791,9 @@
       "4": 50,
       "5": 50
     },
-    "palier": "partiel",
-    "palier_label": "Libération partielle",
-    "palier_couleur": "#bc5d3a",
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
     "forme_juridique": "Foncière solidaire de l'économie sociale et solidaire",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
@@ -388,8 +804,8 @@
     "nom": "Antidote",
     "categorie": "porteur",
     "sous_titre": "Fonds de dotation cédant l'usage de lieux par bail emphytéotique de 99 ans",
-    "idl": 73,
-    "idl_brut": 75,
+    "idl": 68,
+    "idl_brut": 70,
     "idl_intrinseque": 74,
     "score_type": "calcule",
     "completude": 0.941,
@@ -398,7 +814,7 @@
       "2": 100,
       "3": 71,
       "4": 75,
-      "5": 69
+      "5": 50
     },
     "axes_intrinseques": {
       "1": 65,
@@ -420,17 +836,17 @@
     "nom": "Foncière Chênelet",
     "categorie": "porteur",
     "sous_titre": "Foncière solidaire de logement social écologique",
-    "idl": 58,
-    "idl_brut": 62,
+    "idl": 50,
+    "idl_brut": 53,
     "idl_intrinseque": 58,
     "score_type": "calcule",
     "completude": 0.882,
     "axes": {
       "1": 50,
-      "2": 60,
+      "2": 50,
       "3": 50,
       "4": 79,
-      "5": 75
+      "5": 44
     },
     "axes_intrinseques": {
       "1": 50,
@@ -462,7 +878,7 @@
       "2": 65,
       "3": 64,
       "4": 71,
-      "5": 69
+      "5": 72
     },
     "axes_intrinseques": {
       "1": 31,
@@ -672,6 +1088,134 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "association-ancrage",
+    "nom": "Ancrage",
+    "categorie": "usufruitier",
+    "sous_titre": "Association de quartier autogérant un immeuble commun à Nancy",
+    "idl": 79,
+    "idl_brut": 87,
+    "idl_intrinseque": 82,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 100,
+      "5": 59
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "demembrement",
+    "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "association-domaine-du-rayol",
+    "nom": "Association du Domaine du Rayol",
+    "categorie": "usufruitier",
+    "sous_titre": "Association loi 1901 gestionnaire du Domaine du Rayol pour le Conservatoire du littoral",
+    "idl": 63,
+    "idl_brut": 70,
+    "idl_intrinseque": 72,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 67,
+      "4": 100,
+      "5": 25
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 67,
+      "4": 100,
+      "5": 45
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "association-la-talvere",
+    "nom": "La Talvère",
+    "categorie": "usufruitier",
+    "sous_titre": "Association d'usager·es autogérant le lieu de La Talvère dans le Lot",
+    "idl": 74,
+    "idl_brut": 82,
+    "idl_intrinseque": 77,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 100,
+      "4": 75,
+      "5": 59
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "demembrement",
+    "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "cen-occitanie",
+    "nom": "Conservatoire d'espaces naturels Occitanie",
+    "categorie": "usufruitier",
+    "sous_titre": "Association régionale agréée gérant 36 000 hectares d'espaces naturels",
+    "idl": 72,
+    "idl_brut": 80,
+    "idl_intrinseque": 75,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 67,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 67,
+      "4": 100,
+      "5": 60
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901 d'intérêt général, agréée",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "champs-des-possibles",
     "nom": "Les Champs des Possibles",
     "categorie": "usufruitier",
@@ -702,6 +1246,38 @@
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "commune-flocques",
+    "nom": "Commune de Flocques",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectivité bailleresse du foncier et garante locative des 12 logements Chênelet",
+    "idl": 59,
+    "idl_brut": 61,
+    "idl_intrinseque": 68,
+    "score_type": "calcule",
+    "completude": 0.938,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 38,
+      "4": 100,
+      "5": 44
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 75,
+      "3": 38,
+      "4": 100,
+      "5": 59
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Collectivité territoriale (commune)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "communs-la-marinie",
@@ -768,6 +1344,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "earl-ferme-de-magnantru",
+    "nom": "EARL La Ferme de Magnantru",
+    "categorie": "usufruitier",
+    "sous_titre": "Société agricole de Camille Touzeau et Raphaël Marquet, exploitant la ferme de Magnantru",
+    "idl": 41,
+    "idl_brut": 41,
+    "idl_intrinseque": 44,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 19,
+      "2": 25,
+      "3": 69,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 19,
+      "2": 25,
+      "3": 69,
+      "4": 75,
+      "5": 65
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "EARL (Exploitation agricole à responsabilité limitée — société civile)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "ecosite-villarceaux",
     "nom": "Association Écosite de Villarceaux",
     "categorie": "usufruitier",
@@ -798,6 +1406,102 @@
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "exploitants-brce-cheze-canut",
+    "nom": "Exploitant·es agricoles sous bail rural environnemental — captage de la Chèze-Canut",
+    "categorie": "usufruitier",
+    "sous_titre": "Preneur·ses de bail rural à clauses environnementales sur le foncier de protection du captage",
+    "idl": 46,
+    "idl_brut": 59,
+    "idl_intrinseque": 49,
+    "score_type": "calcule",
+    "completude": 0.562,
+    "axes": {
+      "1": 100,
+      "2": null,
+      "3": 50,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": null,
+      "3": 50,
+      "4": 50,
+      "5": 65
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "Exploitations agricoles preneuses de bail rural (forme juridique non documentée)",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "gaec-bergers-de-la-sure",
+    "nom": "GAEC des Bergers de la Sure",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole d'éleveur·ses ovins exploitant la Ferme de Pommiers",
+    "idl": 60,
+    "idl_brut": 71,
+    "idl_intrinseque": 60,
+    "score_type": "calcule",
+    "completude": 0.688,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 100,
+      "4": 75,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 50,
+      "3": 100,
+      "4": 75,
+      "5": 62
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "gaec-ferme-la-durette",
+    "nom": "GAEC de la ferme de la Durette",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole exploitant la ferme pilote de la Durette à Avignon",
+    "idl": 60,
+    "idl_brut": 68,
+    "idl_intrinseque": 60,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 86,
+      "4": 75,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 50,
+      "3": 86,
+      "4": 75,
+      "5": 62
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "gfa-mutuels",

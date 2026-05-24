@@ -1,0 +1,126 @@
+uid: gaec-bergers-de-la-sure
+categorie: usufruitier
+nom: "GAEC des Bergers de la Sure"
+sous_titre: "Groupement agricole d'éleveur·ses ovins exploitant la Ferme de Pommiers"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "La Sure en Chartreuse"
+  departement: "Isère (38)"
+  region: "Auvergne-Rhône-Alpes"
+annee: null
+url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
+resume: >
+  Groupement agricole d'exploitation en commun (GAEC) qui exploite la Ferme de
+  Pommiers, à La Sure en Chartreuse en Isère, dont le foncier est sanctuarisé
+  par la Fondation Terre de Liens. Le GAEC réunit Christophe, installé sur la
+  ferme depuis janvier 2016, et Marie-Pierre, qui l'a rejoint ensuite : tous
+  deux éleveur·ses expérimenté·es, ils·elles élèvent une centaine de brebis sur
+  une trentaine d'hectares et transforment l'ensemble de leur production
+  laitière, certifiée biologique, en yaourts et fromages affinés vendus à la
+  ferme, sur les marchés, en magasins de producteurs et en Biocoop. Le troupeau,
+  d'abord de race Lacaune, est progressivement remplacé par des brebis corses,
+  plus rustiques. Les sources publiques ne détaillent ni l'année de constitution
+  du GAEC, ni son capital ou ses clauses statutaires.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fondation Terre de Liens (fondation reconnue d'utilité publique)"
+  usufruitier: "GAEC des Bergers de la Sure (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la Ferme de Pommiers est sanctuarisé par la Fondation Terre de
+    Liens, fondation reconnue d'utilité publique, par donation de la famille
+    Genève et acquisition complémentaire de 6 hectares de prairie. L'usage est
+    confié par bail rural au GAEC des Bergers de la Sure, qui exploite la ferme.
+    Le GAEC ne détient pas la terre : il en assure l'exploitation agricole, sans
+    pouvoir capter sa valeur foncière.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Le GAEC est une société civile agricole : sa lucrativité, encadrée par le
+    statut, profite à ses associé·es exploitant·es ; le bénéfice de l'usage
+    reste circonscrit au cercle des éleveur·ses installé·es.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété reste à la Fondation Terre de Liens : le GAEC ne peut ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le GAEC a un capital social composé de parts ; leur cession est soumise à l'agrément des associé·es, mais à un prix non plafonné par les sources consultées."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort des actifs du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de personnes, non une société commerciale ; sa lucrativité est encadrée par un statut spécifique."
+  - critere: non_lucrativite_effective
+    valeur: non
+    note: "Le GAEC est une société d'exploitation à but lucratif : les excédents constituent le revenu agricole de ses associé·es exploitant·es."
+  - critere: une_voix
+    valeur: oui
+    note: "Le statut du GAEC consacre l'égalité des associé·es : chacun·e dispose d'une voix, indépendamment de son apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le GAEC ne réunit que les deux associé·es exploitant·es, Christophe et Marie-Pierre : les usager·es de la ferme en sont aussi les décideur·ses."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Les modalités d'accueil de nouveaux·elles associé·es au sein du GAEC ne sont pas documentées par les sources consultées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions du GAEC au-delà de ses associé·es n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — élevage ovin laitier en agriculture biologique, transformation fromagère, vente locale — porte un intérêt général agricole et alimentaire."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme vend en circuit court local et la Ferme de Pommiers a une vocation d'accueil paysan ; les bénéfices de l'exploitation profitent toutefois d'abord aux associé·es du GAEC."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail rural, d'une durée minimale de neuf ans avec droit au renouvellement d'ordre public : jouissance durable et sécurisée."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses environnementales formalisées dans le bail (bail rural environnemental) n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le GAEC est lié à la Fondation Terre de Liens par un bail rural : relation contractuelle claire entre le porteur et l'exploitant."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "La ferme transforme et vend sa production laitière en circuit court : l'usage relève d'une logique marchande, même en prix de proximité."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'existence et le montant du fermage versé par le GAEC à la Fondation ne sont pas documentés par les sources consultées."
+analyse:
+  forces:
+    - "Exploitation collective égalitaire : une voix par associé·e."
+    - "Reprise et maintien d'une ferme d'élevage emblématique de moyenne montagne."
+    - "Objet agricole et alimentaire d'intérêt général, en lien avec Accueil Paysan."
+  fragilites:
+    - "GAEC à but lucratif : le bénéfice de l'usage profite d'abord aux associé·es."
+    - "Régime d'usage marchand (transformation et vente fromagères)."
+    - "Transparence comptable, clause de dévolution, fermage et ouverture aux entrant·es non documentés."
+  leviers:
+    - "Documenter le fermage versé à la Fondation et son caractère soutenable."
+    - "Inscrire des clauses environnementales dans un bail rural environnemental."
+    - "Formaliser les modalités d'accueil de nouveaux·elles associé·es et la transmission."
+  synthese: >
+    Le GAEC des Bergers de la Sure est le maillon vivant d'une ferme d'élevage
+    sanctuarisée par la Fondation Terre de Liens : un groupement agricole
+    égalitaire de deux éleveur·ses. Société d'exploitation à but lucratif, il
+    relève du pôle mutualiste — l'usage agricole profite d'abord à ses
+    associé·es paysan·nes.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens et distributeurs locaux, consultées en
+  mai 2026) : groupement agricole d'exploitation en commun exploitant la Ferme
+  de Pommiers à La Sure en Chartreuse, foncier sanctuarisé par la Fondation
+  Terre de Liens, associé·es Christophe (installé depuis janvier 2016) et
+  Marie-Pierre, élevage d'une centaine de brebis sur une trentaine d'hectares,
+  transformation laitière bio en yaourts et fromages affinés, remplacement
+  progressif de la race Lacaune par des brebis corses, vente directe et en
+  circuit court. Non confirmé : année de constitution du GAEC, capital et
+  clauses de cession, fermage, clause de dévolution, transparence comptable,
+  modalités d'accueil de nouveaux·elles associé·es.
+voir_aussi: [fondation-terre-de-liens]
+sources:
+  - titre: "La Ferme de Pommiers — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
+  - titre: "GAEC Les Bergers de la Sure — Pappers"
+    url: "https://www.pappers.fr/entreprise/gaec-les-bergers-de-la-sure-834113136"

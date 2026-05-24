@@ -1,0 +1,136 @@
+uid: logements-chenelet-flocques
+categorie: lieu
+nom: "12 logements écologiques de Flocques"
+sous_titre: "Opération de logement très social de la Foncière Chênelet en cœur de village normand"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Flocques"
+  departement: "Seine-Maritime (76)"
+  region: "Normandie"
+annee: 2021
+url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"
+resume: >
+  Opération de douze logements sociaux et écologiques construits par la Foncière
+  Chênelet au cœur du village de Flocques, en Seine-Maritime, et inaugurés en
+  novembre 2021. Le programme se partage entre huit logements de plain-pied
+  adaptés aux personnes âgées — la « résidence des roseaux » — et quatre
+  logements familiaux superposés bordant le verger communal. Bâtis selon le
+  procédé Chênelet (ossature bois, isolation en paille comprimée, briques de
+  terre crue, toiture végétalisée, panneaux solaires, récupération d'eau de
+  pluie), ils visent des charges très faibles pour des ménages à bas revenus.
+  Première réalisation normande de la Foncière, l'opération s'inscrit dans un
+  projet de revitalisation rurale porté avec la commune, qui a fourni le terrain
+  et joue un rôle de garante locative.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Chênelet (SAS, foncière solidaire agréée maîtrise d'ouvrage d'insertion / bailleur social)"
+  usufruitier: "Commune de Flocques (collectivité publique)"
+  description: >
+    La commune de Flocques est propriétaire du terrain et l'a confié à la
+    Foncière Chênelet par un bail emphytéotique de 99 ans : la Foncière construit
+    et détient les murs des douze logements pendant la durée du bail, la commune
+    récupérant les constructions à son terme. La commune assure une gestion
+    locative de proximité — elle verse les loyers au bailleur puis les recouvre
+    auprès des locataires, ce qui garantit des prix très modérés. Le montage
+    associe une foncière solidaire non spéculative et une collectivité publique ;
+    il ne relève pas du démembrement nue-propriété/usufruit au sens du Code
+    civil, mais d'un bail emphytéotique de long terme assorti d'une gestion
+    locative communale.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Logement très social porté par une foncière solidaire à forme commerciale
+    non spéculative et une commune ; l'usage est gouverné par les acteurs
+    institutionnels (foncière, municipalité, accompagnement par Béguinage et
+    Compagnie) plutôt que par un collectif autogéré de locataires.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le terrain reste propriété de la commune ; les murs sont portés par la Foncière Chênelet, foncière solidaire non spéculative qui ne les destine pas à la revente sur le marché libre."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — terrain communal, bail emphytéotique de 99 ans à la Foncière Chênelet, gestion locative par la commune — est public et décrit par la Foncière et la presse locale."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Le bail emphytéotique de 99 ans et le retour des constructions à la commune soustraient durablement le bien ; aucune clause d'inaliénabilité formelle au-delà du terme du bail n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le terrain a été apporté par la commune et l'opération financée comme du logement très social (agrément maîtrise d'ouvrage d'insertion), hors logique d'endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "La Foncière Chênelet est une SAS dont les actions ne sont pas librement cessibles sur un marché ; le degré exact d'encadrement statutaire de la cession n'est pas documenté par les sources consultées."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "La commune ne capte aucune plus-value ; la Foncière Chênelet est une société commerciale solidaire (agréée entreprise solidaire d'utilité sociale) à lucrativité encadrée, sans appropriation privée de plus-value foncière documentée."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Un maillon du montage est une société commerciale — la Foncière Chênelet (SAS) —, mais agréée entreprise solidaire d'utilité sociale ; l'autre maillon est une collectivité publique."
+  - critere: gouvernance_collective
+    valeur: non
+    note: "L'usage est gouverné par la Foncière, la commune et l'association Béguinage et Compagnie ; aucune instance collective réunissant les locataires pour décider du devenir du lieu n'est documentée."
+  - critere: tripartisme
+    valeur: oui
+    note: "La gouvernance associe une foncière solidaire, la collectivité communale et l'association Béguinage et Compagnie qui accompagne les seniors : elle dépasse le cercle des seuls occupants."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le bail emphytéotique de 99 ans et le rôle de la commune assurent une stabilité institutionnelle ; les dispositifs de transmission et de renouvellement des locataires ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Logement très social et écologique, maintien des personnes âgées au village, revitalisation rurale et chantiers d'insertion : l'opération sert un intérêt général qui dépasse ses occupants."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "L'opération est implantée en cœur de village, face à l'école, la mairie et l'église, autour d'un espace public, et s'inscrit dans un projet de revitalisation porté avec la commune."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'accès aux logements repose sur un bail d'habitation et le paiement d'un loyer ; il s'agit d'un régime locatif, certes très social, et non d'un usage gratuit ou en partage."
+  - critere: loyer_non_rentier
+    valeur: oui
+    note: "La Foncière Chênelet vise des loyers et des charges très faibles pour des ménages à bas revenus ; la commune verse les loyers au bailleur puis les recouvre, garantissant des prix très modérés sans logique de rendement."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Les locataires bénéficient d'un bail d'habitation de logement social adossé à une foncière pérenne et au bail emphytéotique de 99 ans ; la durée et les modalités de renouvellement des baux d'habitation ne sont pas documentées."
+analyse:
+  forces:
+    - "Logement très social et écologique à charges très réduites pour des ménages à bas revenus."
+    - "Terrain communal et bail emphytéotique de 99 ans : ancrage public et long terme."
+    - "Projet de revitalisation rurale en cœur de village, avec chantiers d'insertion locale."
+  fragilites:
+    - "Pas de gouvernance collective des locataires : l'usage est administré par les institutions du montage."
+    - "Régime locatif marchand, même très social : l'accès au lieu repose sur un loyer."
+    - "Un maillon du montage est une société commerciale (SAS), même solidaire et agréée ESUS."
+  leviers:
+    - "Associer les locataires à une instance de décision sur la vie du lieu."
+    - "Documenter la durée et le renouvellement des baux d'habitation."
+    - "Publier les clauses du bail emphytéotique et l'encadrement statutaire de la Foncière."
+  synthese: >
+    Les douze logements de Flocques illustrent un logement très social et
+    écologique de qualité, sorti pour partie de la logique marchande par un
+    terrain communal et un bail emphytéotique de 99 ans. Le montage reste
+    institué : foncière solidaire et commune en gouvernent l'usage, sans
+    gouvernance collective des locataires, et l'accès demeure locatif. Sa marge
+    de progression tient à l'association des habitant·es à la vie du lieu.
+fiabilite: >
+  Faits vérifiés (sources Foncière Chênelet, Réseau des Maisons de
+  l'Architecture, presse locale et Béguinage et Compagnie, consultées en mai
+  2026) : douze logements sociaux et écologiques à Flocques (Seine-Maritime),
+  inaugurés en novembre 2021, huit logements de plain-pied pour personnes âgées
+  (« résidence des roseaux ») et quatre logements familiaux, procédé constructif
+  Chênelet (ossature bois, paille, terre crue, toiture végétalisée, solaire,
+  récupération d'eau de pluie), terrain fourni par la commune et conservé par
+  elle dans le cadre d'un bail emphytéotique de 99 ans, gestion locative et
+  garantie de loyer assurées par la commune, accompagnement des seniors par
+  Béguinage et Compagnie, première réalisation normande de la Foncière après son
+  agrément maîtrise d'ouvrage d'insertion de 2017. Non confirmé : montant des
+  loyers, durée et renouvellement des baux d'habitation, clauses du bail
+  emphytéotique, encadrement statutaire de la cession des actions de la Foncière.
+chaine:
+  porteurs: [fonciere-chenelet]
+  usufruitiers: [commune-flocques]
+sources:
+  - titre: "12 logements à Flocques (76) — Foncière Chênelet"
+    url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"
+  - titre: "INAUGURATION — 12 logements à Flocques (76) — Foncière Chênelet"
+    url: "https://fonciere-chenelet.org/actus/inauguration-12-logements-flocques-76"
+  - titre: "Des logements sociaux à Flocques — Réseau des Maisons de l'Architecture"
+    url: "https://www.ma-lereseau.org/panorama-des-images/des-logements-sociaux-flocques"

@@ -1,0 +1,125 @@
+uid: association-la-talvere
+categorie: usufruitier
+nom: "La Talvère"
+sous_titre: "Association d'usager·es autogérant le lieu de La Talvère dans le Lot"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation:
+  commune: "Bio"
+  departement: "Lot (46)"
+  region: "Occitanie"
+annee: 2019
+url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  Association loi 1901 née en 2019 pour acquérir et faire vivre une ancienne
+  maison, une grange et quelques dépendances sur les causses du Quercy, à Bio
+  dans le Lot. L'association a réuni des apports militants et une campagne de
+  dons pour l'achat ; la propriété a vocation à être portée durablement par le
+  fonds de dotation Antidote, qui en confie l'usage à l'association par bail
+  emphytéotique de longue durée. La Talvère réunit une dizaine de personnes
+  actives qui gèrent l'accueil, le soin, la gestion, la communication et un
+  « labo », et qui font du lieu un espace partagé, autogéré, attentif à ses
+  modes relationnels et de gouvernance. Stages, rencontres, réunions, cercles,
+  hébergements ponctuels et télétravail s'y développent peu à peu.
+montage:
+  type: demembrement
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "La Talvère (association loi 1901)"
+  description: >
+    La propriété du lieu a vocation à être portée durablement par le fonds de
+    dotation Antidote ; son usage est confié à l'association La Talvère par un
+    bail emphytéotique de longue durée — jusqu'à 99 ans dans le modèle Antidote
+    — contre un loyer symbolique. L'association fait vivre le lieu en
+    autogestion et, comme chaque lieu du réseau Antidote, participe à
+    l'orientation du fonds via l'association « Les Passagères de l'usage » et
+    son Conseil Communal. La signature effective du bail sur ce lieu n'est pas
+    datée par les sources consultées.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, à gouvernance citoyenne
+    autogérée : les usager·es du lieu décident collectivement de ses usages.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété a vocation à rester au fonds de dotation Antidote : les usager·es ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : les ressources servent l'objet et l'entretien du lieu, sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "L'association réunit les usager·es du lieu sur un principe de décision collective ; le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le lieu est autogéré : les personnes actives gèrent collectivement l'accueil, le soin, la gestion, la communication et le « labo »."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "Accueillir avec soin de nouvelles personnes dans l'association est un objectif déclaré ; des usager·es arrivent peu à peu."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — faire vivre un lieu partagé d'éducation populaire, autogéré, et pérenniser sa vocation collective — porte un intérêt général social et culturel."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "Le lieu accueille stages, rencontres et hébergements ponctuels et cherche sa visibilité territoriale ; l'ouverture au-delà du cercle des usager·es n'est pas pleinement documentée."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Le modèle Antidote confie l'usage par bail emphytéotique de longue durée ; la signature effective du bail sur ce lieu et sa durée précise ne sont pas confirmées par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans le bail n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association est liée au fonds de dotation Antidote par une convention engageant vers le bail emphytéotique ; chaque lieu intègre la gouvernance du fonds via « Les Passagères de l'usage »."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et la mise en commun du lieu relèvent d'une logique de partage ; le régime d'accès aux fruits du lieu n'est pas précisément documenté."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le modèle Antidote prévoit un loyer symbolique versé au fonds, écartant toute logique de rendement ; son montant pour ce lieu n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Gouvernance citoyenne autogérée : les usager·es décident ensemble des usages du lieu."
+    - "Objectif déclaré et effectif d'accueil de nouvelles personnes."
+    - "Propriété verrouillée hors marché par le fonds de dotation Antidote."
+  fragilites:
+    - "Signature effective du bail emphytéotique non confirmée par les sources."
+    - "Transparence comptable et clause de dévolution non documentées."
+    - "Régime d'accès aux fruits du lieu et montant du loyer non documentés."
+  leviers:
+    - "Confirmer et publier la signature du bail emphytéotique et sa durée."
+    - "Documenter publiquement les statuts, les comptes et la clause de dévolution."
+    - "Préciser le régime d'usage et les clauses environnementales du bail."
+  synthese: >
+    La Talvère est le maillon usufruitier d'un lieu du réseau Antidote : une
+    association d'usager·es à gouvernance citoyenne autogérée, attentive à
+    l'accueil de nouvelles personnes, qui fait vivre un lieu dont la propriété
+    a vocation à être sanctuarisée par un fonds de dotation. Sa marge de
+    progression tient à la confirmation de la signature du bail et à la
+    publication de son fonctionnement interne.
+fiabilite: >
+  Faits vérifiés (sources La Foncière Antidote, Récits de l'Anthropocène et
+  presse spécialisée, consultées en mai 2026) : association loi 1901 née en
+  2019 à Bio dans le Lot, acquisition d'une maison et d'une grange par apports
+  militants et campagne de dons via Antidote, lieu partagé autogéré par une
+  dizaine de personnes actives, objectif déclaré d'accueil de nouvelles
+  personnes, activités d'éducation populaire (stages, rencontres, cercles,
+  hébergements ponctuels). Non confirmé : date de signature et durée du bail
+  emphytéotique, montant du loyer, transparence comptable, clause de dévolution.
+voir_aussi: [fonciere-antidote]
+sources:
+  - titre: "La Foncière Antidote — Les lieux"
+    url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
+    url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"

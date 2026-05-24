@@ -1,0 +1,124 @@
+uid: la-durette
+categorie: lieu
+nom: "La Durette"
+sous_titre: "Ferme pilote en verger-maraîcher agroforestier, sauvée du marché par la Foncière Terre de Liens"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Avignon"
+  departement: "Vaucluse (84)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 2020
+url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"
+resume: >
+  Ferme d'environ 6 hectares, dont quelque 4,5 cultivés, dans la ceinture verte
+  d'Avignon, une zone périurbaine soumise à une forte pression foncière. La
+  Durette est une ferme pilote en verger-maraîcher agroforestier conçue à partir
+  de 2012 par le GRAB (Groupe de Recherche en Agriculture Biologique) : bandes de
+  maraîchage alternant avec des lignes de fruitiers, volailles intégrées,
+  conduite en agriculture biologique. La mise en vente du terrain en 2018 a
+  menacé le projet et suscité une forte mobilisation citoyenne (pétition de plus
+  de 20 000 signatures). La Foncière Terre de Liens a acquis le foncier, le
+  retirant du marché, et a sécurisé l'installation de jeunes maraîcher·es-
+  arboriculteur·rices réuni·es en GAEC ; une collecte d'épargne citoyenne a été
+  lancée en novembre 2020 pour finaliser l'acquisition.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC exploitant la ferme de la Durette (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la Durette est porté durablement par la Foncière Terre de
+    Liens, structure non spéculative qui l'a acquis grâce à l'épargne citoyenne
+    pour le soustraire au marché. Son usage est confié par bail rural au GAEC
+    qui exploite la ferme, formé par de jeunes agriculteur·rices issu·es de la
+    couveuse d'activités CREA. Le montage repose sur une propriété sanctuarisée
+    et un bail rural, sans recourir à un démembrement civil de la propriété.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est toutefois une société en commandite par
+    actions à actionnariat solidaire et lucrativité encadrée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis par la Foncière Terre de Liens, structure non spéculative, qui l'a retiré du marché après sa mise en vente en 2018."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition par la Foncière Terre de Liens, usage confié à un GAEC — est public et documenté par Terre de Liens et le GRAB."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière, structure non spéculative dédiée à la préservation du foncier agricole, soustrait durablement les terres au marché."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis grâce à l'épargne solidaire citoyenne, par une collecte lancée en novembre 2020, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier est porté par la Foncière Terre de Liens, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Les actions de la Foncière ne versent pas de dividende et le GAEC exploitant ne capte aucune plus-value foncière privée : la valeur du sol reste hors appropriation."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions — société commerciale à actionnariat solidaire et lucrativité encadrée ; le GAEC est une société civile agricole."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est exploitée par un GAEC, groupement agricole où les associé·es décident collectivement, sur le principe d'une voix par associé·e."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Ferme pilote suivie par le GRAB et soutenue par une large mobilisation citoyenne lors de la collecte ; l'association du voisinage à la gouvernance courante n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "La ferme est issue de la couveuse CREA, qui accompagne l'installation ; les dispositifs de transmission du GAEC lui-même ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Ferme pilote en agroforesterie étudiée par le GRAB, produisant fruits et légumes bio en vente directe : le lieu sert un intérêt général agricole et de recherche."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Ferme périurbaine de la ceinture verte d'Avignon, en vente directe (paniers hebdomadaires pré-commandés) et accueillant visites et événements publics."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production agricole est vendue en circuit court ; visites, fête de la ferme et recherche relèvent d'une logique de partage sans rendre l'usage pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et le montant d'un fermage versé par le GAEC à la Foncière ne sont pas documentés par les sources consultées."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier périurbain sauvé du marché par l'épargne citoyenne après une vente menaçante en 2018."
+    - "Ferme pilote en agroforesterie : un intérêt général agricole et de recherche."
+    - "Installation de jeunes paysan·nes sécurisée, en GAEC, via la couveuse CREA."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Existence et niveau du fermage non documentés."
+    - "Usage partiellement marchand (vente en circuit court)."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Associer le voisinage périurbain à la gouvernance du lieu."
+    - "Formaliser la transmission du GAEC et le renouvellement des exploitant·es."
+  synthese: >
+    La Durette illustre le rôle de la Foncière Terre de Liens : sauver du marché,
+    par l'épargne citoyenne, une ferme pilote menacée et y sécuriser
+    l'installation de jeunes paysan·nes. Sa principale réserve tient à la nature
+    sociétaire du porteur et au manque de documentation sur le régime du loyer.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, GRAB et presse spécialisée, consultées
+  en mai 2026) : ferme d'environ 6 hectares dont quelque 4,5 cultivés dans la
+  ceinture verte d'Avignon, ferme pilote en verger-maraîcher agroforestier conçue
+  par le GRAB à partir de 2012, terrain mis en vente en 2018 et menace sur le
+  projet, mobilisation citoyenne et pétition de plus de 20 000 signatures,
+  acquisition par la Foncière Terre de Liens, collecte d'épargne citoyenne lancée
+  en novembre 2020, installation de jeunes agriculteur·rices en GAEC issu·es de
+  la couveuse CREA, vente directe en paniers. Non confirmé : surface définitive
+  après acquisition, montant de la collecte, existence et niveau du fermage,
+  composition nominative du GAEC.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-ferme-la-durette]
+sources:
+  - titre: "La Durette — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"
+  - titre: "Ferme pilote de la Durette — GRAB"
+    url: "https://www.grab.fr/durette/"

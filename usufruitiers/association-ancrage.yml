@@ -1,0 +1,128 @@
+uid: association-ancrage
+categorie: usufruitier
+nom: "Ancrage"
+sous_titre: "Association de quartier autogérant un immeuble commun à Nancy"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation:
+  commune: "Nancy"
+  departement: "Meurthe-et-Moselle (54)"
+  region: "Grand Est"
+annee: 2020
+url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  Association loi 1901 portée par un collectif nancéien du quartier des Trois
+  Maisons, née d'une lutte contre la gentrification. Ancrage a acquis un
+  immeuble de quatre étages (environ 360 m²) rue de Vayringe pour y regrouper
+  des activités jusque-là précaires : trois logements à loyers modérés — dont
+  un en partenariat avec une association d'aide aux personnes exilées —, un
+  atelier d'imprimerie, une bibliothèque-librairie et un espace d'éducation
+  populaire, de rencontre et de débat. La propriété a vocation à être portée
+  hors marché par le fonds de dotation Antidote, qui en confie l'usage à
+  l'association par bail emphytéotique de longue durée. Le projet vise une
+  dynamique de quartier ouverte sur la rue, en partenariat avec d'autres
+  associations locales.
+montage:
+  type: demembrement
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "Ancrage (association loi 1901)"
+  description: >
+    La propriété de l'immeuble a vocation à être portée durablement par le
+    fonds de dotation Antidote ; son usage est confié à l'association Ancrage
+    par un bail emphytéotique de longue durée — l'engagement décrit par Antidote
+    culminant dans un bail de 99 ans — contre un loyer symbolique. L'association
+    fait vivre le lieu en autogestion et, comme chaque lieu du réseau Antidote,
+    participe à l'orientation du fonds via l'association « Les Passagères de
+    l'usage » et son Conseil Communal. La date de signature du bail sur ce lieu
+    n'est pas précisée par les sources consultées.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, à gouvernance citoyenne
+    autogérée : les usager·es de l'immeuble décident collectivement de ses
+    usages.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété a vocation à rester au fonds de dotation Antidote : les usager·es ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : les loyers perçus servent la gestion du lieu et la pérennisation des activités, sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "Le collectif Ancrage valorise la culture d'horizontalité du réseau Antidote ; le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les pôles du lieu travaillent en synergie et le projet prévoit que les usages évoluent selon les propositions des habitant·es du quartier."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "Le projet prévoit explicitement l'installation de nouvelles propositions à l'initiative des habitant·es une fois les premières activités en place."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — habitat à loyers modérés, accueil de personnes exilées, imprimerie, bibliothèque et éducation populaire — porte un intérêt général social et culturel."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le lieu vise une dynamique de quartier ouverte sur la rue (temps conviviaux, zone de gratuité, activités créatives) au-delà du cercle des membres."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Le modèle Antidote confie l'usage par bail emphytéotique de longue durée — jusqu'à 99 ans ; la signature effective du bail sur ce lieu n'est pas confirmée par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage formalisées dans le bail n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association est liée au fonds de dotation Antidote par le modèle du bail emphytéotique ; chaque lieu intègre la gouvernance du fonds via « Les Passagères de l'usage »."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Une part non marchande coexiste (zone de gratuité, éducation populaire) avec une part marchande assumée : les loyers des logements assurent l'autofinancement du lieu."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le modèle Antidote prévoit un loyer symbolique versé au fonds ; les loyers internes des logements sont déclarés modérés mais leurs montants ne sont pas documentés par les sources."
+analyse:
+  forces:
+    - "Gouvernance citoyenne autogérée, dans la culture d'horizontalité du réseau Antidote."
+    - "Objet d'intérêt général combinant habitat solidaire, imprimerie et éducation populaire."
+    - "Lieu ouvert sur le quartier, en partenariat avec d'autres associations locales."
+  fragilites:
+    - "Signature effective du bail emphytéotique non confirmée par les sources."
+    - "Modèle économique partiellement marchand, adossé aux loyers des logements."
+    - "Transparence comptable, clause de dévolution et montants des loyers non documentés."
+  leviers:
+    - "Confirmer et publier la signature du bail emphytéotique et sa durée."
+    - "Documenter les montants des loyers modérés et le régime d'usage du lieu."
+    - "Publier les statuts, les comptes et la clause de dévolution."
+  synthese: >
+    Ancrage est le maillon usufruitier d'un lieu urbain du réseau Antidote :
+    une association de quartier à gouvernance citoyenne autogérée, qui fait
+    vivre un immeuble voué à l'habitat solidaire et à l'éducation populaire.
+    Sa marge de progression tient à la confirmation de la signature du bail et
+    à l'explicitation de son modèle économique partiellement adossé aux loyers.
+fiabilite: >
+  Faits vérifiés (sources La Foncière Antidote, Récits de l'Anthropocène et
+  presse spécialisée, consultées en mai 2026) : association loi 1901 nancéienne
+  du quartier des Trois Maisons, née d'une lutte de quartier contre la
+  gentrification, acquisition d'un immeuble d'environ 360 m² rue de Vayringe par
+  dons, emprunt bancaire et subventions, campagne de dons via Antidote (environ
+  68 000 euros), activités prévues — trois logements à loyers modérés dont un
+  pour personnes exilées, imprimerie, bibliothèque, éducation populaire —,
+  modèle Antidote de propriété au fonds de dotation et usage par bail
+  emphytéotique de longue durée. Non confirmé : date de signature et durée du
+  bail, montants des loyers, transparence comptable, clause de dévolution.
+voir_aussi: [fonciere-antidote]
+sources:
+  - titre: "La Foncière Antidote — Les lieux"
+    url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
+    url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"

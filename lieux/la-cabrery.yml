@@ -1,0 +1,120 @@
+uid: la-cabrery
+categorie: lieu
+nom: "Longo Maï — La Cabrery"
+sous_titre: "Ferme viticole collective du réseau Longo Maï en Luberon"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Vitrolles-en-Lubéron"
+  departement: "Vaucluse (84)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 1993
+url: "https://www.lacabrery.org/"
+resume: >
+  Ferme collective du réseau Longo Maï à Vitrolles-en-Lubéron, dans le
+  Vaucluse. La Cabrery est acquise en 1993 : une ferme d'environ 23 hectares,
+  dont 8 hectares de vigne, avec une cave, un atelier mécanique et un atelier
+  de transformation du pain et du fromage. L'activité principale est la
+  viticulture et la vinification de vins nature — environ 12 000 bouteilles par
+  an — complétée par maraîchage, céréales, bois, élevage de chèvres et de
+  volailles. Une dizaine d'adultes et quelques enfants y vivent, entièrement
+  pris en charge par la communauté. Le foncier est détenu de façon inaliénable
+  par le Fonds de Terre Européenne ; la coopérative autogérée en assure l'usage.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
+  usufruitier: "Coopérative Longo Maï de La Cabrery (collectif autogéré)"
+  description: >
+    Le foncier de La Cabrery est détenu de façon inaliénable par le Fonds de
+    Terre Européenne, fondation de droit suisse qui sanctuarise la propriété
+    des terres de Longo Maï. La coopérative autogérée, de statut associatif, en
+    assure l'usage et la gouverne collectivement. Le démembrement
+    nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
+    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
+    pas documentée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Les quelque 23 hectares sont détenus de façon inaliénable par le Fonds de Terre Européenne, à l'abri de la spéculation."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le principe — propriété en fondation, usage par la coopérative — est public, mais les actes formalisant l'usage de La Cabrery ne sont pas détaillés."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le Fonds de Terre Européenne détient le foncier de Longo Maï de façon explicitement inaliénable."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "La ferme a été acquise en 1993 par le réseau pour alimenter sa caisse commune, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Le foncier est détenu par une fondation sans capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fondation et coopérative autogérée de statut associatif ne captent aucune plus-value foncière privée."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : une fondation porte le foncier, un collectif associatif autogéré en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La dizaine d'habitant·es décide collectivement de la ferme en autogestion, dans une perspective libertaire et féministe revendiquée."
+  - critere: tripartisme
+    valeur: non
+    note: "La gouvernance repose sur les coopérant·es ; l'association du voisinage ou des pouvoirs publics n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le site fonctionne de façon continue depuis 1993, mais les dispositifs explicites de transmission et de renouvellement ne sont pas décrits."
+  - critere: usage_interet_general
+    valeur: partiel
+    note: "Viticulture nature, maraîchage et transformation ont une portée collective ; l'ouverture au-delà du réseau n'est pas pleinement explicitée."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "La ferme produit des vins nature diffusés au-delà du Luberon ; le degré d'ouverture au territoire proche n'est pas documenté."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Habitant·es nourri·es et logé·es par la communauté via une caisse commune : logique de partage à l'interne, mais une part marchande coexiste (vente de vin)."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1993, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+analyse:
+  forces:
+    - "Foncier sanctuarisé de façon inaliénable depuis 1993."
+    - "Ferme viticole intégrée et autogérée, prise en charge complète des habitant·es par la communauté."
+    - "Démarche revendiquée de vins nature, anticapitaliste et féministe."
+  fragilites:
+    - "Propriété portée par une fondation de droit suisse, hors cadre juridique français."
+    - "Gouvernance centrée sur les coopérant·es, peu ouverte au voisinage."
+    - "Formalisation contractuelle de l'usage non documentée."
+  leviers:
+    - "Documenter publiquement les actes liant la fondation et la coopérative."
+    - "Organiser explicitement l'accueil de nouveaux·elles entrant·es."
+    - "Articuler la gouvernance avec le territoire et les collectivités."
+  synthese: >
+    La Cabrery est une ferme viticole de Longo Maï : un foncier sanctuarisé en
+    fondation, des vins nature et une vie collective intégrale. Sa marge de
+    progression tient à la documentation de son montage et à l'ouverture de sa
+    gouvernance au territoire.
+fiabilite: >
+  Faits vérifiés (sources La Cabrery, Pro Longo Maï et Revue Silence,
+  consultées en mai 2026) : ferme d'environ 23 hectares à Vitrolles-en-Lubéron
+  acquise en 1993, dont 8 hectares de vigne, production d'environ 12 000
+  bouteilles de vin nature par an, maraîchage et transformation pain/fromage,
+  une dizaine d'habitant·es pris en charge par la communauté via une caisse
+  commune, rattachement au réseau Longo Maï dont le foncier est détenu par le
+  Fonds de Terre Européenne. Non confirmé : surface définitive, actes
+  formalisant l'usage, existence d'un loyer, dispositifs de transmission.
+chaine:
+  porteurs: [fonds-terre-europeenne]
+  usufruitiers: [cooperatives-longo-mai]
+sources:
+  - titre: "La Cabrery — site officiel"
+    url: "https://www.lacabrery.org/"
+  - titre: "La Cabrery, des vins nature anticapitalistes et féministes — Revue Silence"
+    url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/la-cabrery-des-vins-natures-anticapitalistes-et-feministes"

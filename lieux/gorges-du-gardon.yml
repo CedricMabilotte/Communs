@@ -1,0 +1,129 @@
+uid: gorges-du-gardon
+categorie: lieu
+nom: "Réserve naturelle régionale des gorges du Gardon"
+sous_titre: "491 hectares de garrigue et de gorges protégés, cogérés par un Conservatoire d'espaces naturels"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Sanilhac-Sagriès"
+  departement: "Gard (30)"
+  region: "Occitanie"
+annee: 2007
+url: "https://www.cen-occitanie.org/gorges-du-gardon/"
+resume: >
+  Réserve naturelle régionale de 491,34 hectares dans le département du Gard, sur
+  la commune de Sanilhac-Sagriès, à une dizaine de kilomètres au nord-est de
+  Nîmes. Le site protège une partie des gorges du Gardon : une mosaïque de
+  garrigues, falaises calcaires et milieux rivulaires qui accueille plus de 1 200
+  espèces végétales et animales, dont des espèces emblématiques comme l'aigle de
+  Bonelli, le vautour percnoptère et le castor d'Europe. Créé en 2001 sous la
+  forme d'une réserve naturelle volontaire, à l'initiative de la commune de
+  Sanilhac-Sagriès et de l'ancien Conservatoire d'espaces naturels du
+  Languedoc-Roussillon, le site a été classé réserve naturelle régionale en 2007
+  par la Région. La réserve est cogérée par le Conservatoire d'espaces naturels
+  Occitanie et la commune de Sanilhac-Sagriès.
+montage:
+  type: propriete_publique
+  nu_proprietaire: "Foncier communal et privé classé en réserve naturelle régionale par la Région Occitanie"
+  usufruitier: "Conservatoire d'espaces naturels Occitanie et commune de Sanilhac-Sagriès (cogestionnaires)"
+  description: >
+    La protection du site ne repose pas sur un démembrement de propriété mais sur
+    un classement réglementaire : la Région a classé en 2007, en réserve naturelle
+    régionale, un périmètre de 491,34 hectares, ce qui soumet le foncier — pour
+    partie communal, pour partie privé — à une réglementation protectrice
+    indépendante de son régime de propriété. La gestion de la réserve est confiée
+    à deux cogestionnaires, le Conservatoire d'espaces naturels Occitanie et la
+    commune de Sanilhac-Sagriès. La part de foncier dont le CEN serait propriétaire
+    ou preneur de bail à l'intérieur du périmètre n'est pas documentée par les
+    sources publiques consultées.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Protection par classement réglementaire d'une réserve naturelle régionale,
+    gestion confiée à une association d'intérêt général agréée et à une commune :
+    montage entièrement de droit civil et public non lucratif, à gouvernance
+    institutionnelle.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le classement en réserve naturelle régionale soumet les 491 hectares à une réglementation protectrice durable, mais il ne transfère pas le foncier — pour partie privé — hors de la sphère de propriété marchande."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le classement de 2007 et la cogestion CEN Occitanie / commune sont publics, mais la structure foncière du périmètre (parts communale et privée, baux éventuels) n'est pas documentée."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Le classement en réserve naturelle régionale est un dispositif réglementaire durable et opposable, mais il peut en principe être abrogé par la collectivité qui l'a institué."
+  - critere: origine_non_speculative
+    valeur: inconnu
+    note: "Les sources ne documentent pas le mode d'acquisition du foncier inclus dans le périmètre de la réserve."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "La structure de propriété du foncier classé — et l'existence éventuelle de parts cessibles sur des parcelles privées du périmètre — n'est pas documentée."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "La gestion est assurée par une association loi 1901 d'intérêt général et une commune : aucun maillon ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne de gestion ne comporte aucune société commerciale : un Conservatoire d'espaces naturels et une commune assurent conjointement la gestion de la réserve."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "La réserve est gérée par deux cogestionnaires institutionnels — le CEN Occitanie et la commune — dans un cadre réglementaire ; il ne s'agit pas d'une autogestion par un collectif d'usager·es du lieu."
+  - critere: tripartisme
+    valeur: oui
+    note: "La gouvernance associe la Région (qui classe), la commune de Sanilhac-Sagriès et une association de protection de la nature agréée : plusieurs parties prenantes au-delà d'un cercle d'occupants."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "La cogestion s'appuie sur un plan de gestion pluriannuel et un cadre réglementaire stable ; les dispositifs de renouvellement des gestionnaires ne sont pas détaillés par les sources."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "La réserve protège plus de 1 200 espèces dont l'aigle de Bonelli et le vautour percnoptère, et porte une mission de préservation de la biodiversité d'intérêt général manifeste."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Site cogéré avec la commune, doté d'une maison de la réserve et de sorties naturalistes ouvertes au public, il est étroitement ancré dans son territoire."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La réserve est un espace naturel protégé ouvert à la découverte ; certaines activités d'animation peuvent être tarifées, sans que le régime d'accès soit précisément documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et la nature d'une redevance liée au foncier de la réserve ne sont pas documentées par les sources consultées."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le classement en réserve naturelle régionale et le plan de gestion confèrent aux gestionnaires un cadre d'intervention durable, mais les sources ne documentent pas de titre d'usage de longue durée sur le foncier."
+analyse:
+  forces:
+    - "Réserve naturelle régionale de 491 hectares à la biodiversité exceptionnelle, protégée par classement réglementaire."
+    - "Gestion confiée à une association d'intérêt général agréée et à la commune : aucun maillon commercial."
+    - "Gouvernance associant Région, commune et Conservatoire d'espaces naturels."
+  fragilites:
+    - "Protection réglementaire, et non soustraction du foncier au marché : une partie des parcelles reste de propriété privée."
+    - "Structure foncière du périmètre (parts communale et privée, baux) non documentée."
+    - "Gestion institutionnelle descendante plutôt qu'autogestion par un collectif d'usager·es."
+  leviers:
+    - "Documenter publiquement la structure de propriété du foncier classé."
+    - "Renforcer la maîtrise foncière du CEN par acquisition ou bail emphytéotique sur les parcelles clés."
+    - "Préciser la durée et le renouvellement des conventions de cogestion."
+  synthese: >
+    La réserve naturelle régionale des gorges du Gardon illustre un modèle distinct
+    de la libération des terres par démembrement : un foncier protégé par
+    classement réglementaire, dont la gestion — et non la propriété — est confiée à
+    un Conservatoire d'espaces naturels et à une commune. La protection est réelle
+    et la gouvernance institutionnelle solide ; la marge de progression tient à la
+    maîtrise foncière effective du périmètre et à la transparence de sa structure.
+fiabilite: >
+  Faits vérifiés (sources Conservatoire d'espaces naturels Occitanie, Wikipédia et
+  Réserves naturelles de France, consultées en mai 2026) : réserve naturelle
+  régionale de 491,34 hectares sur la commune de Sanilhac-Sagriès dans le Gard,
+  créée en réserve naturelle volontaire en 2001 et classée réserve naturelle
+  régionale en 2007, cogérée par le CEN Occitanie et la commune, plus de 1 200
+  espèces dont l'aigle de Bonelli et le vautour percnoptère. Non confirmé :
+  structure de propriété du foncier classé, mode d'acquisition, existence de baux
+  ou de conventions foncières, régime financier, durée des conventions de
+  cogestion.
+chaine:
+  porteurs: [federation-cen]
+  usufruitiers: [cen-occitanie]
+sources:
+  - titre: "Réserve Naturelle Régionale des Gorges du Gardon — Conservatoire d'espaces naturels Occitanie"
+    url: "https://www.cen-occitanie.org/gorges-du-gardon/"
+  - titre: "Réserve naturelle régionale des gorges du Gardon — Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/R%C3%A9serve_naturelle_r%C3%A9gionale_des_gorges_du_Gardon"

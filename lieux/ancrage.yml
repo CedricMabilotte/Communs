@@ -1,0 +1,130 @@
+uid: ancrage
+categorie: lieu
+nom: "Ancrage"
+sous_titre: "Immeuble de quartier à Nancy, sorti du marché par le fonds de dotation Antidote"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Nancy"
+  departement: "Meurthe-et-Moselle (54)"
+  region: "Grand Est"
+annee: 2020
+url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  Immeuble de quatre étages, environ 360 m², dans le quartier des Trois Maisons
+  à Nancy. Le collectif Ancrage et le couple propriétaire se sont rencontrés
+  lors d'une lutte de quartier contre la gentrification ; le bâtiment a été
+  acquis pour y regrouper des activités jusque-là précaires. On y trouve trois
+  logements à loyers modérés — dont un en partenariat avec une association
+  d'aide aux personnes exilées —, un atelier d'imprimerie, une
+  bibliothèque-librairie et un espace d'éducation populaire, de rencontre et de
+  débat. La propriété a vocation à être portée hors marché par le fonds de
+  dotation Antidote, qui en confie l'usage à l'association Ancrage par bail
+  emphytéotique de longue durée.
+montage:
+  type: demembrement
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "Ancrage (association loi 1901)"
+  description: >
+    Le montage suit le modèle Antidote : l'association des lieux a signé un
+    compromis puis acquis le bâtiment grâce à des dons, un emprunt bancaire et
+    des subventions de fondations ; le fonds de dotation Antidote a organisé une
+    campagne de dons (environ 68 000 euros collectés, reversés à l'association)
+    et a vocation à porter durablement la propriété du foncier hors marché ;
+    l'usage est confié à l'association Ancrage par un bail emphytéotique de
+    longue durée — l'engagement décrit par Antidote culminant dans un bail de
+    99 ans. Le montage dissocie la propriété sanctuarisée par le fonds de
+    l'usage autogéré par le collectif. La date de signature du bail sur ce lieu
+    n'est pas précisée par les sources consultées.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Propriété portée par un fonds de dotation de droit privé non lucratif ;
+    usage confié à une association citoyenne par un bail emphytéotique de longue
+    durée. La signature effective du bail sur ce lieu n'est pas confirmée par
+    les sources.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a vocation à être porté par le fonds de dotation Antidote, structure non spéculative qui le détient hors marché, sans destination de revente."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le modèle — propriété Antidote, bail emphytéotique à l'association des lieux — est public et documenté ; la date de signature du bail sur ce lieu n'est pas précisée par les sources."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation et le bail de longue durée soustraient durablement le lieu ; le caractère consomptible ou non de la dotation d'Antidote n'est pas confirmé par les sources."
+  - critere: origine_non_speculative
+    valeur: partiel
+    note: "L'acquisition a mobilisé des dons et des subventions hors logique de plus-value, mais aussi un emprunt bancaire ; les loyers des logements assurent une part d'autofinancement."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni le fonds de dotation Antidote ni l'association ne comportent de capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fonds de dotation et association loi 1901 : aucun maillon du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : un fonds de dotation porte le foncier, une association en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le lieu est porté par le collectif Ancrage, qui valorise la culture d'horizontalité du réseau Antidote et décide collectivement des usages."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le projet est né d'une lutte de quartier et travaille en partenariat avec d'autres associations locales ; l'association formelle du voisinage ou des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le projet prévoit l'accueil de nouvelles propositions à l'initiative des habitant·es du quartier ; les dispositifs formalisés de transmission et de renouvellement ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Logements à loyers modérés, accueil de personnes exilées, imprimerie, bibliothèque et espace d'éducation populaire servent un intérêt général social et culturel."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le lieu vise une dynamique de quartier ouverte sur la rue (temps conviviaux, zone de gratuité, activités créatives) en partenariat avec d'autres associations locales."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Une part non marchande coexiste (zone de gratuité, éducation populaire) avec une part marchande assumée : les loyers des logements assurent l'autofinancement du lieu."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Le modèle Antidote prévoit un loyer symbolique versé au fonds ; les loyers internes des logements sont déclarés modérés, mais leurs montants ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le modèle confie l'usage par bail emphytéotique de longue durée — jusqu'à 99 ans ; la signature effective du bail sur ce lieu n'est pas confirmée par les sources."
+analyse:
+  forces:
+    - "Foncier sorti du marché par un fonds de dotation non lucratif."
+    - "Lieu d'intérêt général combinant habitat solidaire, imprimerie et éducation populaire."
+    - "Projet né d'une lutte de quartier, ancré et ouvert sur la rue."
+  fragilites:
+    - "Signature effective du bail emphytéotique sur ce lieu non confirmée par les sources."
+    - "Recours à un emprunt bancaire et autofinancement par les loyers : modèle économique partiellement marchand."
+    - "Montants des loyers, régime d'usage et caractère consomptible de la dotation non documentés."
+  leviers:
+    - "Confirmer et publier la signature du bail emphytéotique et sa durée."
+    - "Documenter les montants des loyers modérés et le régime d'usage du lieu."
+    - "Formaliser les dispositifs de transmission et d'accueil de nouvelles propositions."
+  synthese: >
+    Ancrage illustre le modèle Antidote en milieu urbain : un immeuble de
+    quartier sorti du marché par un fonds de dotation, voué à l'habitat
+    solidaire et à l'éducation populaire, et confié pour longtemps à
+    l'association des usager·es. Sa singularité — un modèle économique
+    partiellement adossé aux loyers — appelle l'explicitation publique du
+    régime d'usage et la confirmation de la signature du bail.
+fiabilite: >
+  Faits vérifiés (sources La Foncière Antidote, Récits de l'Anthropocène et
+  presse spécialisée, consultées en mai 2026) : immeuble d'environ 360 m² à
+  quatre étages dans le quartier des Trois Maisons à Nancy, projet né d'une
+  lutte de quartier contre la gentrification, acquisition par dons, emprunt
+  bancaire et subventions, campagne de dons via Antidote (environ 68 000 euros),
+  activités prévues — trois logements à loyers modérés dont un pour personnes
+  exilées, imprimerie, bibliothèque, espace d'éducation populaire —, modèle
+  Antidote de propriété au fonds de dotation et usage par bail emphytéotique de
+  longue durée. Non confirmé : date de signature et durée précise du bail sur ce
+  lieu, montants des loyers, caractère consomptible de la dotation.
+chaine:
+  porteurs: [fonciere-antidote]
+  usufruitiers: [association-ancrage]
+sources:
+  - titre: "La Foncière Antidote — Les lieux"
+    url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
+    url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"

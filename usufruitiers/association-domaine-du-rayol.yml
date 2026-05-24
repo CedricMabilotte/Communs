@@ -1,0 +1,128 @@
+uid: association-domaine-du-rayol
+categorie: usufruitier
+nom: "Association du Domaine du Rayol"
+sous_titre: "Association loi 1901 gestionnaire du Domaine du Rayol pour le Conservatoire du littoral"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation:
+  commune: "Le Rayol-Canadel-sur-Mer"
+  departement: "Var (83)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 1989
+url: "https://www.domainedurayol.org/"
+resume: >
+  Association loi 1901 créée en 1989, avec l'accord et l'appui des
+  collectivités locales, pour assurer la gestion et la mise en valeur du
+  Domaine du Rayol au moment où le Conservatoire du littoral acquérait ce
+  domaine côtier d'environ 20 hectares dans le Var. Administrée et gérée par
+  des bénévoles, elle se réfère à une convention pluriannuelle d'objectifs
+  signée avec le Conservatoire du littoral. Son activité : sauvegarder
+  l'espace côtier, respecter le site naturel et l'équilibre écologique, ouvrir
+  le domaine au public dans des limites compatibles avec cette protection, et
+  conduire les projets d'aménagement et de gestion, dont le Jardin des
+  Méditerranées de Gilles Clément. Déclarée d'intérêt général, elle tient son
+  assemblée générale chaque année.
+montage:
+  type: propriete_publique
+  nu_proprietaire: "Conservatoire de l'espace littoral et des rivages lacustres (établissement public)"
+  usufruitier: "Association du Domaine du Rayol (association loi 1901)"
+  description: >
+    La propriété du Domaine du Rayol est portée durablement par le
+    Conservatoire du littoral, établissement public, qui la place dans son
+    domaine inaliénable. La gestion du site est confiée à l'Association du
+    Domaine du Rayol par une convention pluriannuelle d'objectifs régulièrement
+    renouvelée, qui fixe la mission de protection, d'ouverture au public et de
+    valorisation. L'association fait vivre le lieu et peut, selon son objet,
+    étendre son activité à la gestion d'autres propriétés du Conservatoire sur
+    la côte des Maures.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 sans capital appropriable, déclarée d'intérêt général,
+    à gouvernance par un conseil d'administration et une assemblée générale
+    plutôt que par une autogestion des usager·es du lieu.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété reste au Conservatoire du littoral : l'association ne peut ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif, déclarée d'intérêt général : les ressources servent l'objet et l'entretien du domaine, sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "Association loi 1901 : les membres délibèrent en assemblée générale sur le principe d'une voix par adhérent·e, sans pouvoir indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: partiel
+    note: "L'association est administrée par des bénévoles via un conseil d'administration et une assemblée générale ; les usager·es ou visiteur·ses du lieu ne participent pas en tant que tels aux décisions."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Les modalités d'adhésion et d'accueil de nouveaux membres au sein de l'association ne sont pas détaillées par les sources."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "L'association tient une assemblée générale annuelle ; la publication régulière de ses comptes et rapports d'activité au public n'est pas documentée."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — sauvegarde d'un espace côtier, respect de l'équilibre écologique, ouverture au public et pédagogie de l'environnement — porte un intérêt général écologique et culturel."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le domaine est ouvert au public toute l'année et accueille environ 95 000 visiteur·ses par an : les bénéfices du lieu ne profitent pas à un cercle restreint."
+  - critere: duree_usage
+    valeur: partiel
+    note: "La gestion est confiée par une convention pluriannuelle d'objectifs régulièrement renouvelée, et dure depuis 1989 ; ce n'est pas un titre d'usage long et sécurisé de type bail emphytéotique."
+  - critere: clauses_usage
+    valeur: partiel
+    note: "La convention fixe des objectifs de sauvegarde de l'espace côtier et de respect de l'équilibre écologique ; le détail des clauses d'usage formalisées n'est pas documenté."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association est liée au Conservatoire du littoral par une convention d'objectifs claire et régulièrement renouvelée, sans confusion entre propriété et gestion."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "L'accès au domaine est payant, à un tarif de visite de site culturel, et non fondé sur la gratuité ou une contribution modique."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'existence et le montant d'une redevance versée par l'association au Conservatoire du littoral ne sont pas documentés par les sources."
+analyse:
+  forces:
+    - "Personne morale de droit civil non lucrative, déclarée d'intérêt général."
+    - "Articulation claire avec le porteur par une convention d'objectifs régulièrement renouvelée."
+    - "Domaine largement ouvert au public, à forte vocation pédagogique et écologique."
+  fragilites:
+    - "Accès au domaine payant : régime d'usage marchand au sens de la grille."
+    - "Gouvernance par conseil d'administration et bénévoles, sans participation des usager·es du lieu."
+    - "Gestion par convention pluriannuelle, moins sécurisée qu'un titre d'usage long."
+  leviers:
+    - "Documenter publiquement les statuts, les comptes et la clause de dévolution."
+    - "Préciser des modalités de gratuité ou d'accès solidaire au domaine."
+    - "Sécuriser la gestion par une convention de plus longue durée et publier ses clauses."
+  synthese: >
+    L'Association du Domaine du Rayol illustre le maillon gestionnaire du modèle
+    du Conservatoire du littoral : une association d'intérêt général qui fait
+    vivre un domaine côtier dont la propriété est sanctuarisée par un
+    établissement public. Sa distance au commun citoyen tient à l'accès payant
+    et à une gouvernance institutionnelle plutôt qu'autogérée par les usager·es.
+fiabilite: >
+  Faits vérifiés (sources Conservatoire du littoral, Association du Domaine du
+  Rayol et presse régionale, consultées en mai 2026) : association loi 1901
+  créée en 1989 avec l'appui des collectivités locales, administrée par des
+  bénévoles, gestion du Domaine du Rayol confiée par convention pluriannuelle
+  d'objectifs avec le Conservatoire du littoral, objet de sauvegarde de
+  l'espace côtier et d'ouverture au public, statut d'intérêt général,
+  assemblée générale annuelle, possibilité statutaire d'étendre la gestion à
+  d'autres propriétés du Conservatoire sur la côte des Maures. Non confirmé :
+  montant d'une redevance, durée exacte et clauses de la convention, clause de
+  dévolution, modalités d'adhésion.
+voir_aussi: [conservatoire-littoral]
+sources:
+  - titre: "Présentation de l'Association — Domaine du Rayol"
+    url: "https://www.domainedurayol.org/un-siecle-dhistoire/lassociation-du-domaine-du-rayol/presentation-de-l-association/"
+  - titre: "Domaine du Rayol — Conservatoire du littoral"
+    url: "https://www.conservatoire-du-littoral.fr/siteLittoral/202/28-domaine-du-rayol-83_var.htm"

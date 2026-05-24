@@ -1,0 +1,130 @@
+uid: la-talvere
+categorie: lieu
+nom: "La Talvère"
+sous_titre: "Maison et grange des causses du Quercy, sorties du marché par le fonds de dotation Antidote"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Bio"
+  departement: "Lot (46)"
+  region: "Occitanie"
+annee: 2019
+url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  Ancienne maison, grande grange et quelques dépendances sur un coteau des
+  causses du Quercy, dans le Lot, sur la commune de Bio. Le lieu est né dans le
+  sillage de la reprise d'une ferme voisine par Terre de Liens : restait à
+  acquérir et faire vivre les bâtiments que Terre de Liens ne rachetait pas.
+  Une association, La Talvère, a réuni des fonds participatifs pour l'achat ;
+  la propriété a vocation à être portée hors marché par le fonds de dotation
+  Antidote, qui en confie l'usage à l'association par un bail emphytéotique de
+  longue durée. Le lieu, autogéré, accueille stages, rencontres, réunions,
+  hébergements ponctuels et télétravail, et s'inscrit dans un écosystème local
+  de communs (ferme Terre de Liens, projet d'habitat collectif voisin).
+montage:
+  type: demembrement
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "La Talvère (association loi 1901)"
+  description: >
+    Le montage suit le modèle Antidote en trois temps : une association des
+    lieux réunit des apports et achète le bien (ici via un crédit vendeur), le
+    fonds de dotation Antidote organise une campagne de dons puis reçoit la
+    propriété du foncier qu'il conserve durablement hors marché, et l'usage est
+    confié à l'association par un bail emphytéotique de longue durée — jusqu'à
+    99 ans. Le montage dissocie la propriété sanctuarisée par le fonds de
+    l'usage autogéré par le collectif, sans recourir à l'usufruit civil plafonné
+    à 30 ans. Les sources publiques confirment le principe et la convention
+    engageant l'association vers le bail emphytéotique ; la signature du bail
+    sur ce lieu précis n'est pas datée par les sources consultées.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Propriété portée par un fonds de dotation de droit privé non lucratif ;
+    usage confié à une association citoyenne autogérée par un bail emphytéotique
+    de longue durée. La signature effective du bail sur ce lieu n'est pas
+    confirmée par les sources.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a vocation à être porté par le fonds de dotation Antidote, structure non spéculative qui le détient hors marché, sans destination de revente."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le modèle — propriété Antidote, bail emphytéotique à l'association des lieux — est public et documenté, mais la date de signature du bail sur ce lieu n'est pas précisée par les sources."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation et le bail de longue durée soustraient durablement le lieu ; le caractère consomptible ou non de la dotation d'Antidote n'est pas confirmé par les sources."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis par des apports militants et une campagne de dons (plus de 100 000 euros collectés), hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni le fonds de dotation Antidote ni l'association ne comportent de capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fonds de dotation et association loi 1901 : aucun maillon du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : un fonds de dotation porte le foncier, une association en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le lieu est autogéré : l'association des lieux, une dizaine de personnes actives, décide collectivement des usages, dans une attention déclarée à l'horizontalité."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le lieu s'inscrit dans un écosystème local de communs (ferme Terre de Liens, projet d'habitat voisin) ; l'association formelle du voisinage ou des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'association vise explicitement à accueillir avec soin de nouvelles personnes ; les dispositifs formalisés de transmission et de renouvellement ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Stages, rencontres, débats, cercles et hébergements ponctuels font du lieu un espace d'éducation populaire et de lien social qui dépasse ses occupant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le lieu cherche explicitement à accroître sa visibilité sur son territoire et participe d'un écosystème local de communs autour de Clayrac."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et la mise en commun du lieu relèvent d'une logique de partage ; le régime d'accès aux fruits du lieu et la tarification des accueils ne sont pas précisément documentés."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Le modèle Antidote prévoit un loyer symbolique versé par l'association au fonds ; son montant pour ce lieu n'est pas documenté par les sources."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le modèle confie l'usage par bail emphytéotique de longue durée ; la signature effective du bail sur ce lieu et sa durée précise ne sont pas confirmées par les sources."
+analyse:
+  forces:
+    - "Foncier sorti du marché par un fonds de dotation non lucratif."
+    - "Lieu autogéré, attentif à l'horizontalité et à l'accueil de nouvelles personnes."
+    - "Ancrage dans un écosystème local de communs (Terre de Liens, habitat collectif voisin)."
+  fragilites:
+    - "Signature effective du bail emphytéotique sur ce lieu non confirmée par les sources."
+    - "Acquisition non encore bouclée selon les sources les plus récentes consultées."
+    - "Régime d'usage, montant du loyer et caractère consomptible de la dotation non documentés."
+  leviers:
+    - "Confirmer et publier la signature du bail emphytéotique et sa durée."
+    - "Documenter le régime d'usage et le montant du loyer symbolique."
+    - "Formaliser les dispositifs de transmission et d'accueil des nouvelles personnes."
+  synthese: >
+    La Talvère illustre le modèle Antidote en construction : un collectif a
+    acquis des bâtiments que Terre de Liens ne rachetait pas, et le foncier a
+    vocation à être sanctuarisé par un fonds de dotation puis confié pour
+    longtemps à l'association des lieux. Sa marge de progression tient à la
+    confirmation publique de la signature du bail et à l'explicitation du
+    régime d'usage.
+fiabilite: >
+  Faits vérifiés (sources La Foncière Antidote, Récits de l'Anthropocène et
+  presse spécialisée, consultées en mai 2026) : ancienne maison, grande grange
+  et dépendances sur la commune de Bio dans le Lot, lieu né en 2019 dans le
+  sillage d'une reprise Terre de Liens, association La Talvère de loi 1901,
+  acquisition par apports militants et campagne de dons via Antidote (plus de
+  100 000 euros collectés), modèle Antidote de propriété au fonds de dotation
+  et usage par bail emphytéotique de longue durée, lieu autogéré accueillant
+  stages, rencontres et hébergements ponctuels. Non confirmé : date de signature
+  et durée précise du bail emphytéotique sur ce lieu, bouclage définitif de
+  l'acquisition, montant du loyer, caractère consomptible de la dotation.
+chaine:
+  porteurs: [fonciere-antidote]
+  usufruitiers: [association-la-talvere]
+sources:
+  - titre: "La Foncière Antidote — Les lieux"
+    url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
+    url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"

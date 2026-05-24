@@ -85,13 +85,67 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/l/ancrage.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/captage-cheze-canut.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/chantemerle.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/domaine-du-rayol.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/ferme-de-pommiers.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/gorges-du-gardon.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/l/hameau-des-buis.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/l/la-cabrery.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/la-durette.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/l/la-marinie.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/la-talvere.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -109,6 +163,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/l/logements-chenelet-flocques.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/magnantru.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/mas-de-granier.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/l/nddl.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,6 +188,12 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/l/toussacq.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/treynas.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -211,7 +289,37 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/u/association-ancrage.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/association-domaine-du-rayol.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/association-la-talvere.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/cen-occitanie.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/u/champs-des-possibles.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/commune-flocques.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -229,7 +337,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/u/earl-ferme-de-magnantru.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/u/ecosite-villarceaux.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/exploitants-brce-cheze-canut.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/gaec-bergers-de-la-sure.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/gaec-ferme-la-durette.html</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

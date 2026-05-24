@@ -1,0 +1,127 @@
+uid: ferme-de-pommiers
+categorie: lieu
+nom: "La Ferme de Pommiers"
+sous_titre: "Ferme d'élevage ovin de moyenne montagne, sécurisée par donation et acquisition de la Fondation Terre de Liens"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "La Sure en Chartreuse"
+  departement: "Isère (38)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2018
+url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
+resume: >
+  Ferme d'élevage ovin de moyenne montagne, sur le territoire de La Sure en
+  Chartreuse (ancienne commune de Pommiers-la-Placette, fusionnée au 1er janvier
+  2017), à une vingtaine de kilomètres de Grenoble, au pied du massif de la
+  Chartreuse. La ferme tient son foncier d'un double dispositif Terre de Liens :
+  en 2015, Eliane et Félix Genève, éleveur·ses et cofondateur·rices d'Accueil
+  Paysan, ont engagé un projet de donation de leur ferme à la Fondation Terre de
+  Liens pour en préserver la vocation agricole et d'accueil ; la Fondation a par
+  ailleurs acquis, par une collecte de dons lancée en décembre 2018, 6 hectares
+  de prairie complémentaires nécessaires à la pérennité de l'élevage. La ferme
+  est exploitée par un couple d'éleveur·ses installé·es depuis 2016, qui y
+  élèvent une centaine de brebis et transforment leur lait en yaourts et
+  fromages.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fondation Terre de Liens (fondation reconnue d'utilité publique)"
+  usufruitier: "GAEC des Bergers de la Sure (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la Ferme de Pommiers est destiné à être porté durablement par
+    la Fondation Terre de Liens, fondation reconnue d'utilité publique habilitée
+    à recevoir dons et legs : la famille Genève a engagé la donation de la ferme,
+    et la Fondation a acquis par collecte de dons 6 hectares de prairie
+    complémentaires. L'usage est confié par bail rural au GAEC des Bergers de la
+    Sure, qui exploite la ferme. Le montage repose sur une propriété
+    sanctuarisée — par donation et acquisition — et un bail rural.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une fondation reconnue d'utilité publique, structure
+    de droit civil non lucrative ; sa gouvernance est descendante, exercée par
+    un conseil et alimentée par les donateur·rices.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier est sanctuarisé par la Fondation Terre de Liens, fondation reconnue d'utilité publique non spéculative, par donation et acquisition complémentaire."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — projet de donation par la famille Genève, acquisition de 6 hectares par la Fondation, usage confié à un GAEC — est public et documenté par Terre de Liens."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage par la Fondation Terre de Liens, dont la mission statutaire est de préserver durablement le foncier agricole, soustrait les terres au marché de façon pérenne."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier provient d'un projet de donation de la famille Genève et d'une acquisition par collecte de dons lancée en décembre 2018, hors toute logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "La Fondation Terre de Liens est une fondation sans capital appropriable : aucune part ne porte la valeur foncière des terres qu'elle détient."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "La Fondation Terre de Liens ne capte aucune plus-value foncière privée ; le GAEC exploitant ne détient pas la terre et ne peut s'en approprier la valeur."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "Le porteur est une fondation reconnue d'utilité publique, de droit civil non lucratif ; le GAEC exploitant est une société civile agricole, non une société commerciale."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est exploitée par le GAEC des Bergers de la Sure, groupement agricole où les associé·es décident collectivement, à raison d'une voix chacun·e."
+  - critere: tripartisme
+    valeur: partiel
+    note: "L'acquisition des 6 hectares a reposé sur une large mobilisation de donateur·rices citoyen·nes ; l'association du voisinage à la gouvernance courante n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: oui
+    note: "Le dispositif Terre de Liens a justement permis la transmission de la ferme à de nouveaux·elles éleveur·ses, installé·es depuis 2016 — la transmission est au cœur du montage."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Élevage ovin laitier en agriculture biologique, transformation fromagère, vocation d'accueil paysan : le lieu sert un intérêt général agricole et social."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Ferme emblématique de l'agriculture paysanne de moyenne montagne, en vente directe locale (marché, magasins de producteurs, Biocoop) et liée à Accueil Paysan."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production fromagère est vendue en circuit court ; l'accueil paysan relève d'une logique de partage sans rendre l'usage du lieu pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et le montant d'un fermage versé par le GAEC à la Fondation ne sont pas documentés par les sources consultées."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé par une fondation reconnue d'utilité publique, sans capital appropriable."
+    - "Donation et collecte de dons : origine pleinement non spéculative."
+    - "Le montage a permis la transmission effective de la ferme à de nouveaux·elles éleveur·ses."
+  fragilites:
+    - "Gouvernance du porteur descendante (conseil, donateur·rices), non citoyenne autogérée."
+    - "Existence et niveau du fermage non documentés."
+    - "Usage partiellement marchand (vente fromagère en circuit court)."
+  leviers:
+    - "Documenter le fermage versé à la Fondation et son caractère non rentier."
+    - "Associer le voisinage et la collectivité à la gouvernance du lieu."
+    - "Confirmer publiquement la finalisation de la donation et son périmètre."
+  synthese: >
+    La Ferme de Pommiers illustre le rôle de la Fondation Terre de Liens :
+    recueillir dons et donations pour sanctuariser un foncier agricole et en
+    assurer la transmission. Donation et collecte de dons en font un montage
+    pleinement non lucratif ; sa réserve tient à la gouvernance descendante du
+    porteur et au manque de documentation sur le régime du loyer.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Accueil Paysan et presse spécialisée,
+  consultées en mai 2026) : ferme d'élevage ovin de moyenne montagne sur le
+  territoire de La Sure en Chartreuse (ancienne commune de Pommiers-la-Placette,
+  fusionnée au 1er janvier 2017), à une vingtaine de kilomètres de Grenoble,
+  projet de donation engagé en 2015 par Eliane et Félix Genève, cofondateur·rices
+  d'Accueil Paysan, acquisition de 6 hectares de prairie par la Fondation Terre
+  de Liens, collecte de dons lancée en décembre 2018, exploitant·es installé·es
+  depuis janvier 2016, GAEC des Bergers de la Sure, élevage d'une centaine de
+  brebis et transformation laitière bio. Non confirmé : finalisation et date de
+  la donation, surface totale exacte, existence et niveau du fermage.
+chaine:
+  porteurs: [fondation-terre-de-liens]
+  usufruitiers: [gaec-bergers-de-la-sure]
+sources:
+  - titre: "La Ferme de Pommiers — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
+  - titre: "La collecte de dons pour la ferme de Pommiers est lancée ! — Terre de Liens"
+    url: "https://terredeliens.org/rhone-alpes/actu/la-collecte-de-dons-pour-la-ferme-de-pommiers-est-lancee-10-12-2018/"
