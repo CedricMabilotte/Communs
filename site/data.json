@@ -224,6 +224,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "toussacq",
+    "nom": "Domaine de Toussacq",
+    "categorie": "lieu",
+    "sous_titre": "Ferme collective et couveuse agricole sur foncier sanctuarisé en Seine-et-Marne",
+    "idl": 83,
+    "idl_brut": 83,
+    "idl_intrinseque": 83,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 88,
+      "2": 75,
+      "3": 86,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 75,
+      "3": 86,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "village-vertical",
     "nom": "Le Village Vertical",
     "categorie": "lieu",
@@ -452,8 +484,8 @@
     "nom": "Foncière Terre de Liens",
     "categorie": "porteur",
     "sous_titre": "Société d'actionnariat solidaire portant les terres agricoles",
-    "idl": 57,
-    "idl_brut": 59,
+    "idl": 56,
+    "idl_brut": 58,
     "idl_intrinseque": 57,
     "score_type": "calcule",
     "completude": 0.941,
@@ -462,7 +494,7 @@
       "2": 65,
       "3": 64,
       "4": 71,
-      "5": 75
+      "5": 74
     },
     "axes_intrinseques": {
       "1": 31,

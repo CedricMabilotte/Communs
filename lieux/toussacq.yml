@@ -1,0 +1,120 @@
+uid: toussacq
+categorie: lieu
+nom: "Domaine de Toussacq"
+sous_titre: "Ferme collective et couveuse agricole sur foncier sanctuarisé en Seine-et-Marne"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Villenauxe-la-Petite"
+  departement: "Seine-et-Marne (77)"
+  region: "Île-de-France"
+annee: 2011
+url: "https://www.leschampsdespossibles.fr/lieu/la-ferme-collective-de-toussacq/"
+resume: >
+  Ferme de polyculture-élevage d'environ 74 hectares à Villenauxe-la-Petite, en
+  Seine-et-Marne. Son foncier a été acquis en 2011 par la Foncière Terre de
+  Liens, grâce à l'épargne solidaire citoyenne, qui l'a retiré du marché et en
+  a confié l'usage à la coopérative Les Champs des Possibles. Toussacq est
+  devenu une ferme collective dédiée au test et à l'accompagnement de
+  l'installation agricole — maraîchage, élevage, boulangerie, transformation —
+  avec magasin de ferme, formations et événements. Premier tiers-lieu nourricier
+  d'Île-de-France, il a bénéficié d'une nouvelle collecte en 2022-2024 pour
+  sécuriser les dernières parcelles et bâtiments.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "Les Champs des Possibles (coopérative et couveuse d'activités agricoles)"
+  description: >
+    Le foncier de Toussacq est porté durablement par la Foncière Terre de Liens,
+    structure non spéculative qui l'a acquis par l'épargne citoyenne. Son usage
+    est confié par bail rural à la coopérative Les Champs des Possibles, qui en
+    fait une ferme collective et une couveuse : des porteur·ses de projet y
+    testent leur activité avant de s'installer. La Foncière y a aussi construit
+    un bâtiment polyvalent de 400 m² (transformation, formation, magasin).
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est toutefois une société en commandite par
+    actions à actionnariat solidaire et lucrativité encadrée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis en 2011 par la Foncière Terre de Liens, structure non spéculative, et retiré du marché spéculatif."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition par la Foncière Terre de Liens, usage confié à la coopérative Les Champs des Possibles — est public et largement documenté."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière et la vocation agricole préservée des terres soustraient durablement le foncier ; une collecte 2022-2024 a sécurisé les dernières parcelles."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis grâce à l'épargne solidaire citoyenne, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier est porté par la Foncière Terre de Liens, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Les actions de la Foncière ne versent pas de dividende et la coopérative Les Champs des Possibles est non lucrative : aucune plus-value foncière privée n'est captée."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions — société commerciale à actionnariat solidaire et lucrativité encadrée."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est gérée collectivement par la coopérative Les Champs des Possibles, qui réunit porteur·ses de projet en test et paysan·nes installé·es."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Tiers-lieu nourricier soutenu par la Région, le lieu associe partenaires institutionnels et public ; l'association systématique du voisinage n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: oui
+    note: "La couveuse organise par construction le renouvellement : des porteur·ses de projet testent leur activité, s'installent, et de nouveaux·elles arrivent."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Accompagnement et formation à l'installation agricole, maraîchage, élevage, transformation : le lieu sert un intérêt général agricole et alimentaire."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Premier tiers-lieu nourricier d'Île-de-France, avec magasin de ferme, formations et événements ouverts au public."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Le lieu mêle production agricole vendue, formation et événements ouverts : l'usage relève d'une logique de partage sans être pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage ; les actions de la Foncière ne versent pas de dividende, mais le caractère soutenable du loyer n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : la coopérative dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2011."
+    - "Couveuse agricole : le renouvellement des paysan·nes est organisé par construction."
+    - "Tiers-lieu nourricier ancré dans son territoire, ouvert au public."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Caractère soutenable du fermage non documenté."
+    - "Usage partiellement marchand (vente, formation), non pleinement non marchand."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Renforcer l'association du voisinage à la gouvernance du lieu."
+    - "Privilégier, pour les parcelles les plus exposées, un portage par la Fondation."
+  synthese: >
+    Toussacq illustre le modèle Terre de Liens à l'échelle d'une ferme : un
+    foncier sanctuarisé par l'épargne citoyenne, confié à une coopérative qui en
+    fait une couveuse agricole et un tiers-lieu nourricier. Sa principale réserve
+    tient à la nature sociétaire du porteur, la Foncière.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Les Champs des Possibles et presse
+  spécialisée, consultées en mai 2026) : ferme de polyculture-élevage à
+  Villenauxe-la-Petite, foncier acquis par la Foncière Terre de Liens en 2011,
+  usage confié à la coopérative Les Champs des Possibles, couveuse d'activités
+  agricoles, bâtiment polyvalent de 400 m² construit par la Foncière, premier
+  tiers-lieu nourricier d'Île-de-France, collecte 2022-2024 pour les dernières
+  parcelles. Non confirmé : surface définitive après la collecte, niveau du
+  fermage.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [champs-des-possibles]
+sources:
+  - titre: "Les Champs des Possibles — La Ferme collective de Toussacq"
+    url: "https://www.leschampsdespossibles.fr/lieu/la-ferme-collective-de-toussacq/"
+  - titre: "Toussacq — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/ile-de-france/fermes-de-la-r%C3%A9gion-ile-de-france/toussacq/"
