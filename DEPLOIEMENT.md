@@ -10,7 +10,7 @@ nommé **`Communs`** — vide, sans README initial (le projet en contient déjà
 
 ## 2. Pousser le projet
 
-Depuis le dossier `liberation-des-terres/` :
+Depuis le dossier `Communs/` :
 
 ```bash
 git init
@@ -21,10 +21,9 @@ git remote add origin https://github.com/CedricMabilotte/Communs.git
 git push -u origin main
 ```
 
-> Le dossier `liberation-des-terres/` est aujourd'hui imbriqué dans le dépôt
-> « Agent recup web github ». Pour en faire un dépôt autonome, le plus simple
-> est de le copier hors de ce dossier avant le `git init`, ou d'utiliser
-> `git subtree`.
+> Fait (24 mai 2026) : ce dépôt est désormais autonome. Le dossier
+> `Communs/` n'est plus imbriqué dans un autre projet — l'édition et la
+> publication se font directement ici.
 
 ## 3. Activer GitHub Pages
 
