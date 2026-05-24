@@ -13,7 +13,6 @@ Régions et types de montage absents ou faiblement couverts (≤ 1 fiche). Les c
 - Île-de-France — 1 fiche·s
 - Normandie — 0 fiche·s
 - Nouvelle-Aquitaine — 1 fiche·s
-- Occitanie — 1 fiche·s
 - Pays de la Loire — 1 fiche·s
 - Provence-Alpes-Côte d'Azur — 1 fiche·s
 
