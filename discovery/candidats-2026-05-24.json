@@ -442,7 +442,7 @@
       "Bretagne"
     ],
     "fiche_existante": false,
-    "domaine_connu": true,
+    "domaine_connu": false,
     "statut": "revu"
   },
   {
@@ -612,7 +612,7 @@
     ],
     "angle_mort": [],
     "fiche_existante": false,
-    "domaine_connu": true,
+    "domaine_connu": false,
     "statut": "revu"
   },
   {
@@ -693,7 +693,7 @@
     ],
     "angle_mort": [],
     "fiche_existante": false,
-    "domaine_connu": true,
+    "domaine_connu": false,
     "statut": "revu"
   },
   {
