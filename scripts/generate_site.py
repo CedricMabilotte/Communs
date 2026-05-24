@@ -82,6 +82,23 @@ def load_fiches():
     return fiches
 
 
+def verifier_uids(fiches):
+    """Garde-fou (leçon session #2) : aucun uid ne doit désigner deux fiches.
+    L'index by_uid est plat — un uid en doublon écraserait silencieusement une
+    fiche, et les chaînes pointant vers cet uid deviendraient ambiguës. Tout
+    doublon fait échouer la génération."""
+    vus = {}
+    fautes = []
+    for f in fiches:
+        u = f.get("uid")
+        loc = f"{f.get('categorie','?')}/{f.get('_file','?')}"
+        if u in vus:
+            fautes.append(f"{u} — {vus[u]} ET {loc}")
+        else:
+            vus[u] = loc
+    return fautes
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Scoring — l'Indice de libération
 # ─────────────────────────────────────────────────────────────────────────────
@@ -3547,6 +3564,12 @@ def main():
     if cfg_url:
         BASE_URL = cfg_url.rstrip("/")
     fiches = load_fiches()
+    doublons = verifier_uids(fiches)
+    if doublons:
+        print(f"ÉCHEC — {len(doublons)} uid en doublon (un uid = une fiche) :")
+        for d in doublons:
+            print(f"  {d}")
+        raise SystemExit(1)
     gidx = grille_index(cfg["grilles"])
     ranking = cfg["ranking"]
 
