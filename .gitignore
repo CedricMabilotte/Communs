@@ -11,3 +11,10 @@ Thumbs.db
 # Fichiers de travail (les rapports de recherche restent versionnés)
 *.tmp
 *.log
+
+# Pilotage de session Cowork (notes de travail internes, non versionnées)
+CLAUDE.md
+routine-fin.md
+etat-projet-*.md
+lecons-*.md
+brief-cadre-conceptuel-*.md
