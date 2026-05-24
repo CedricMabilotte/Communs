@@ -1,0 +1,118 @@
+uid: la-marinie
+categorie: lieu
+nom: "La Marinie"
+sous_titre: "Ferme collective sortie du marché par le fonds de dotation Antidote"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Causse-et-Diège"
+  departement: "Aveyron (12)"
+  region: "Occitanie"
+annee: 2021
+url: "https://lescommunsdelamarinie.fr/"
+resume: >
+  Ferme du hameau de la Marinie, à Causse-et-Diège dans le nord de l'Aveyron :
+  environ 27 hectares de terres agricoles avec bâtiments, dont un fournil et des
+  habitations. La propriété a été acquise par le fonds de dotation Antidote, qui
+  la soustrait au marché ; l'usage en est confié pour 99 ans, par bail
+  emphytéotique, à l'association Les Communs de la Marinie, qui réunit les
+  usager·es du lieu et le fait vivre en autogestion. On y cultive céréales
+  anciennes et oléagineux, on y produit pain et savons (« Aux Prés en bulles »),
+  et le lieu accueille ventes à la ferme et propositions culturelles.
+montage:
+  type: demembrement
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "Les Communs de la Marinie (association loi 1901)"
+  description: >
+    Le fonds de dotation Antidote a acquis la propriété de la ferme, par dons et
+    collecte solidaire, et la conserve durablement hors marché. L'usage est
+    confié à l'association Les Communs de la Marinie par un bail emphytéotique
+    de 99 ans, qui ouvre au collectif un droit réel long sur le lieu sans lui en
+    transférer la propriété. Le montage dissocie nettement la propriété protégée
+    de l'usage autogéré, sans recourir à l'usufruit civil plafonné à 30 ans.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Propriété portée par un fonds de dotation de droit privé non lucratif ;
+    usage confié à une association citoyenne autogérée par un bail emphytéotique
+    de 99 ans qui sécurise la jouissance bien au-delà du plafond civil.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis par le fonds de dotation Antidote, structure non spéculative qui le détient hors marché ; il n'est pas destiné à la revente."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — propriété Antidote, bail emphytéotique de 99 ans à l'association Les Communs de la Marinie — est public et documenté."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation et le bail de 99 ans soustraient durablement le lieu ; le caractère consomptible ou non de la dotation d'Antidote n'est pas confirmé par les sources."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis par dons et collecte solidaire, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni le fonds de dotation Antidote ni l'association ne comportent de capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fonds de dotation et association loi 1901 : aucun maillon du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : un fonds de dotation porte le foncier, une association en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Les usager·es, réuni·es dans l'association Les Communs de la Marinie, décident collectivement des usages du lieu en autogestion."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "L'association du voisinage et des collectivités à la gouvernance du lieu n'est pas documentée par les sources."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'association organise la décision collective et l'attribution des espaces ; les dispositifs de transmission et de renouvellement ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Agriculture paysanne, boulangerie, savonnerie et activités culturelles : le lieu sert un intérêt général agricole et social qui dépasse ses occupant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Ventes à la ferme et propositions culturelles font du lieu un espace de lien social ancré dans son territoire."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et la mise en commun du lieu relèvent d'une logique de partage ; le régime d'accès aux fruits du lieu n'est pas précisément documenté."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Le bail emphytéotique prévoit une redevance modique, écartant toute logique de rendement ; son montant n'est pas documenté par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "Le bail emphytéotique de 99 ans assure au collectif usager une jouissance longue et sécurisée, bien au-delà du plafond de 30 ans des démembrements civils."
+analyse:
+  forces:
+    - "Foncier sorti du marché par un fonds de dotation non lucratif."
+    - "Usage confié pour 99 ans : sécurité de jouissance de très long terme."
+    - "Lieu autogéré par l'association des usager·es, ancré dans son territoire."
+  fragilites:
+    - "Caractère consomptible ou non de la dotation d'Antidote non confirmé."
+    - "Régime d'accès aux fruits du lieu et montant de la redevance non documentés."
+    - "Association d'usage jeune (2021) : transmission non encore formalisée."
+  leviers:
+    - "Confirmer et publier le caractère non consomptible de la dotation d'Antidote."
+    - "Documenter le régime d'usage et les clauses du bail emphytéotique."
+    - "Formaliser l'accueil de nouveaux·elles usager·es et la transmission du lieu."
+  synthese: >
+    La Marinie est un montage de propriété d'usage abouti : un foncier agricole
+    sanctuarisé par un fonds de dotation, confié pour un siècle à une association
+    citoyenne qui le fait vivre en autogestion. Sa marge de progression tient à
+    l'explicitation du régime d'usage et des verrous internes au fonds Antidote.
+fiabilite: >
+  Faits vérifiés (sources Les Communs de la Marinie, La Foncière Antidote et
+  presse spécialisée, consultées en mai 2026) : ferme d'environ 27 hectares avec
+  bâtiments (fournil, habitations) à Causse-et-Diège, propriété acquise par le
+  fonds de dotation Antidote, usage confié par bail emphytéotique de 99 ans à
+  l'association Les Communs de la Marinie créée en 2021, activités agricoles,
+  boulangères et culturelles. Non confirmé : année exacte de l'acquisition,
+  surface définitive, montant de la redevance, clauses du bail.
+chaine:
+  porteurs: [fonciere-antidote]
+  usufruitiers: [communs-la-marinie]
+sources:
+  - titre: "Les Communs de la Marinie — site officiel"
+    url: "https://lescommunsdelamarinie.fr/"
+  - titre: "La Foncière Antidote — Les communs de la Marinie"
+    url: "https://www.helloasso.com/associations/la-fonciere-antidote/collectes/les-communs-de-la-marinie"

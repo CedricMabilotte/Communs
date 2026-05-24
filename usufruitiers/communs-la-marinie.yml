@@ -1,0 +1,120 @@
+uid: communs-la-marinie
+categorie: usufruitier
+nom: "Les Communs de la Marinie"
+sous_titre: "Association d'usager·es autogérant la ferme de la Marinie en Aveyron"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation:
+  commune: "Causse-et-Diège"
+  departement: "Aveyron (12)"
+  region: "Occitanie"
+annee: 2021
+url: "https://lescommunsdelamarinie.fr/"
+resume: >
+  Association loi 1901 créée le 22 mars 2021, qui reçoit l'usage de la ferme de
+  la Marinie (Causse-et-Diège, nord Aveyron) dont la propriété a été acquise par
+  le fonds de dotation Antidote. L'association réunit les usager·es du lieu pour
+  en pérenniser la vocation collective et l'autogestion : elle leur donne à la
+  fois le pouvoir de décider ensemble des usages et la responsabilité d'en
+  prendre soin. Un conseil arbitre l'attribution des espaces, les travaux
+  importants et la désignation des représentant·es. L'usager principal, « Aux
+  Prés en bulles », y développe céréales et oléagineux, boulangerie et
+  savonnerie.
+montage:
+  type: demembrement
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "Les Communs de la Marinie (association loi 1901)"
+  description: >
+    La propriété de la ferme est portée durablement par le fonds de dotation
+    Antidote ; son usage est confié à l'association Les Communs de la Marinie
+    par un bail emphytéotique de 99 ans, contre une redevance modique.
+    L'association fait vivre le lieu en autogestion et, comme chaque lieu du
+    réseau Antidote, participe à l'orientation du fonds via l'association
+    « Les Passagères de l'usage ».
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, à gouvernance citoyenne
+    autogérée : les usager·es du lieu décident collectivement de ses usages.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété reste au fonds de dotation Antidote : les usager·es ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : les ressources servent l'objet et l'entretien du lieu, sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "L'association réunit les usager·es sur le principe d'une décision collective ; le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "L'objet même de l'association est de donner aux usager·es le pouvoir de décider ensemble des usages du lieu ; un conseil arbitre l'attribution des espaces et les travaux."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "L'association vise à diversifier les activités et les usages du lieu ; les modalités d'accueil de nouveaux·elles usager·es ne sont pas détaillées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — autogestion d'un lieu agricole, artisanal et culturel, pérennisation de sa vocation collective — porte un intérêt général agricole et social."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "Le lieu est un espace de lien social ouvert au territoire (ventes à la ferme, propositions culturelles) ; l'ouverture au-delà du cercle des usager·es n'est pas pleinement documentée."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail emphytéotique de 99 ans : jouissance longue, bien au-delà du plafond de 30 ans de l'usufruit d'une personne morale."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans le bail n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association est liée au fonds de dotation Antidote par un bail emphytéotique clair ; chaque lieu du réseau intègre la gouvernance du fonds via « Les Passagères de l'usage »."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion et la mise en commun du lieu relèvent d'une logique de partage ; le régime d'accès aux fruits du lieu n'est pas précisément documenté."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le bail emphytéotique prévoit une redevance modique, écartant toute logique de rendement ; son montant exact n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Gouvernance citoyenne autogérée : les usager·es décident ensemble des usages du lieu."
+    - "Usage sécurisé pour 99 ans par bail emphytéotique."
+    - "Propriété verrouillée hors marché par le fonds de dotation Antidote."
+  fragilites:
+    - "Association jeune (2021) : dispositifs de transmission et de renouvellement non documentés."
+    - "Transparence comptable et clause de dévolution non documentées."
+    - "Régime d'accès aux fruits du lieu et montant de la redevance non documentés."
+  leviers:
+    - "Documenter publiquement les statuts, les comptes et la clause de dévolution."
+    - "Formaliser l'accueil des nouveaux·elles usager·es et la transmission."
+    - "Préciser le régime d'usage et les clauses environnementales du bail."
+  synthese: >
+    Les Communs de la Marinie illustrent le maillon usufruitier du modèle
+    Antidote : une association d'usager·es, à gouvernance citoyenne autogérée,
+    qui fait vivre un lieu dont la propriété est sanctuarisée par un fonds de
+    dotation et l'usage sécurisé pour un siècle. Sa marge de progression tient
+    surtout à la publication de son fonctionnement interne.
+fiabilite: >
+  Faits vérifiés (sources Les Communs de la Marinie, La Foncière Antidote et
+  presse spécialisée, consultées en mai 2026) : association loi 1901 créée le
+  22 mars 2021 à Causse-et-Diège, gestion du lieu confiée par bail, objet
+  d'autogestion par les usager·es, conseil arbitrant l'attribution des espaces,
+  activité principale « Aux Prés en bulles » (céréales, oléagineux, boulangerie,
+  savonnerie). Non confirmé : montant de la redevance, clauses du bail,
+  transparence comptable, clause de dévolution.
+voir_aussi: [fonciere-antidote]
+sources:
+  - titre: "Les Communs de la Marinie — site officiel"
+    url: "https://lescommunsdelamarinie.fr/presentation/qui-sommes-nous/"
+  - titre: "La Foncière Antidote — Les communs de la Marinie"
+    url: "https://www.helloasso.com/associations/la-fonciere-antidote/collectes/les-communs-de-la-marinie"

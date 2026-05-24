@@ -32,6 +32,38 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "la-marinie",
+    "nom": "La Marinie",
+    "categorie": "lieu",
+    "sous_titre": "Ferme collective sortie du marché par le fonds de dotation Antidote",
+    "idl": 84,
+    "idl_brut": 87,
+    "idl_intrinseque": 84,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 88,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "demembrement",
+    "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "larzac",
     "nom": "Terres du Larzac",
     "categorie": "lieu",
@@ -356,8 +388,8 @@
     "nom": "Antidote",
     "categorie": "porteur",
     "sous_titre": "Fonds de dotation cédant l'usage de lieux par bail emphytéotique de 99 ans",
-    "idl": 74,
-    "idl_brut": 76,
+    "idl": 73,
+    "idl_brut": 75,
     "idl_intrinseque": 74,
     "score_type": "calcule",
     "completude": 0.941,
@@ -366,7 +398,7 @@
       "2": 100,
       "3": 71,
       "4": 75,
-      "5": 75
+      "5": 69
     },
     "axes_intrinseques": {
       "1": 65,
@@ -702,6 +734,38 @@
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "communs-la-marinie",
+    "nom": "Les Communs de la Marinie",
+    "categorie": "usufruitier",
+    "sous_titre": "Association d'usager·es autogérant la ferme de la Marinie en Aveyron",
+    "idl": 77,
+    "idl_brut": 85,
+    "idl_intrinseque": 78,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 75,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "demembrement",
+    "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Commun citoyen"
   },
   {
     "uid": "cooperative-oasis",
