@@ -21,12 +21,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -52,12 +49,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -82,12 +76,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -112,12 +103,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -142,12 +130,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -172,12 +157,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -202,12 +184,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -232,12 +211,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -262,12 +238,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -292,12 +265,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -322,12 +292,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -352,12 +319,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -382,12 +346,9 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
@@ -412,57 +373,12 @@
     ],
     "angle_mort": [
       "Bourgogne-Franche-Comté",
-      "Bretagne",
       "Centre-Val de Loire",
       "Hauts-de-France",
-      "Normandie",
-      "Pays de la Loire",
-      "Provence-Alpes-Côte d'Azur"
+      "Pays de la Loire"
     ],
     "fiche_existante": false,
     "domaine_connu": true,
-    "statut": "revu"
-  },
-  {
-    "titre_page": "Voyages Oasis - Coopérative Oasis",
-    "texte": "Voyages Oasis",
-    "url": "https://cooperative-oasis.org/nos-offres/voyages-oasis/",
-    "source_id": "cooperative-oasis",
-    "categorie_probable": [
-      "lieu",
-      "usufruitier"
-    ],
-    "score": 4,
-    "mots_cles": [
-      "foncière",
-      "oasis",
-      "écolieu"
-    ],
-    "angle_mort": [
-      "Bretagne"
-    ],
-    "fiche_existante": false,
-    "domaine_connu": false,
-    "statut": "revu"
-  },
-  {
-    "titre_page": "",
-    "texte": "location Ferme en arboriculture à transmettre 14 Ha Flamanville (76970) • Normandie Voir l'annonce",
-    "url": "https://www.objectif-terres.org/annonces/9966",
-    "source_id": "terre-de-liens",
-    "categorie_probable": [
-      "lieu",
-      "porteur"
-    ],
-    "score": 3,
-    "mots_cles": [
-      "ferme"
-    ],
-    "angle_mort": [
-      "Normandie"
-    ],
-    "fiche_existante": false,
-    "domaine_connu": false,
     "statut": "revu"
   },
   {
@@ -480,26 +396,6 @@
     ],
     "angle_mort": [
       "Hauts-de-France"
-    ],
-    "fiche_existante": false,
-    "domaine_connu": false,
-    "statut": "revu"
-  },
-  {
-    "titre_page": "",
-    "texte": "location Ferme Terre de Liens en Haute-Vienne cherche repreneurs 60 Ha Ladignac-le-Long (87500) • Nouvelle-Aquitaine Voir l'annonce",
-    "url": "https://www.objectif-terres.org/annonces/9963",
-    "source_id": "terre-de-liens",
-    "categorie_probable": [
-      "lieu",
-      "porteur"
-    ],
-    "score": 3,
-    "mots_cles": [
-      "ferme"
-    ],
-    "angle_mort": [
-      "Nouvelle-Aquitaine"
     ],
     "fiche_existante": false,
     "domaine_connu": false,
