@@ -1,0 +1,15 @@
+# discovery/ignore.txt — candidats écartés durablement de la veille
+#
+# Une URL par ligne. Tout ce qui suit « # » est un commentaire.
+# La veille (scripts/watch.py) normalise chaque ligne : on peut donc coller
+# une URL brute (https://, www., paramètres utm_…), elle sera reconnue.
+#
+# Un candidat dont l'URL figure ici reçoit le statut « ignore » : il ne
+# réapparaît plus dans candidats-AAAA-MM-JJ.md, mais reste compté dans
+# l'en-tête de la passe (« N écarté·s via discovery/ignore.txt »).
+#
+# Pour réintégrer un candidat : retirer sa ligne ci-dessous, puis éditer
+# discovery/_seen.json pour repasser son statut de « ignore » à « nouveau »
+# (ou supprimer son entrée).
+#
+# — Liste (vide au départ) ———————————————————————————————————————————————

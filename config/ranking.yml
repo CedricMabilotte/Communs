@@ -191,9 +191,10 @@ option_a:
     chaîne renseignée, l'indice effectif égale l'indice intrinsèque.
 
 # ── Paliers (tiers) de lecture de l'Indice ───────────────────────────────────
-# Seuils PROVISOIRES : l'agrégation géométrique abaisse mécaniquement les
-# scores par rapport à la moyenne arithmétique. À recalibrer sur la dispersion
-# réelle du corpus après la première régénération du modèle v2.
+# Seuils VALIDÉS (session #2, 24 mai 2026). La distribution réelle des 28
+# entrées notées a été mesurée : moyenne 63,9 — l'agrégation géométrique n'a
+# pas écrasé le corpus — et les seuils hauts coïncident avec les quintiles
+# observés. Conservés tels quels. Voir audit/B1-paliers-distribution.md.
 paliers:
   - id: abouti
     min: 78

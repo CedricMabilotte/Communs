@@ -12,7 +12,9 @@ Améliorations cycle D (audit veille) :
  - P1 : analyse de la page candidate (titre, meta, corps), pas que l'ancre ;
  - P2 : scoring pondéré + signaux négatifs anti-bruit ;
  - P3 : détecteur d'angles morts (régions / montages sous-représentés) ;
- - P4 : mémoire des passes (discovery/_seen.json) + dédup par URL normalisée.
+ - P4 : mémoire des passes (discovery/_seen.json) + dédup par URL normalisée ;
+ - P7 : statut « ignore » durable, tenu à la main (discovery/ignore.txt) ;
+        dédup d'URL préservant les paramètres signifiants (session #2).
 
 Volontairement sans dépendance lourde (urllib + html.parser de la stdlib ;
 PyYAML pour la config). Aucune clé d'API requise. La promotion d'un candidat
@@ -32,7 +34,7 @@ import urllib.error
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
 
 import yaml
 
@@ -172,9 +174,19 @@ def normalise(text: str) -> str:
     return re.sub(r"\s+", " ", text.lower()).strip()
 
 
+# Paramètres de requête purement publicitaires / analytiques : retirés de
+# l'URL normalisée. Tout préfixe « utm_ » est également retiré (voir norm_url).
+TRACKING_PARAMS = {"fbclid", "gclid", "gbraid", "wbraid", "msclkid", "yclid",
+                   "dclid", "mc_cid", "mc_eid", "igshid", "ref_src",
+                   "_hsenc", "_hsmi", "vero_id", "oly_enc_id", "oly_anon_id"}
+
+
 def norm_url(u: str) -> str:
     """URL normalisée pour la déduplication : sans schéma, sans www., sans
-    paramètres de tracking, sans fragment, sans barre oblique finale."""
+    fragment, sans barre oblique finale, et sans paramètres de tracking
+    (utm_*, fbclid, gclid…). Les paramètres porteurs de sens — identifiant
+    d'article, numéro de page — sont CONSERVÉS : deux pages distinguées par
+    un tel paramètre ne sont pas fusionnées à tort en doublon."""
     try:
         p = urlparse(u)
     except ValueError:
@@ -183,7 +195,11 @@ def norm_url(u: str) -> str:
     if netloc.startswith("www."):
         netloc = netloc[4:]
     path = p.path.rstrip("/") or "/"
-    return f"{netloc}{path}"
+    keep = [(k, v) for k, v in parse_qsl(p.query, keep_blank_values=True)
+            if not k.lower().startswith("utm_")
+            and k.lower() not in TRACKING_PARAMS]
+    query = urlencode(sorted(keep))
+    return f"{netloc}{path}?{query}" if query else f"{netloc}{path}"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -323,6 +339,25 @@ def save_seen(seen):
         encoding="utf-8")
 
 
+def load_ignore():
+    """URLs à écarter durablement de la veille — liste tenue à la main.
+
+    Fichier `discovery/ignore.txt` : une URL par ligne, « # » pour un
+    commentaire. Chaque ligne est passée par norm_url, donc on peut y coller
+    une URL brute (avec schéma, www., paramètres) : elle sera reconnue. C'est
+    le moyen propre de dire « ne me re-propose plus jamais ce candidat »,
+    sans éditer _seen.json à la main."""
+    fp = DISCOVERY / "ignore.txt"
+    if not fp.exists():
+        return set()
+    out = set()
+    for line in fp.read_text(encoding="utf-8").splitlines():
+        line = line.split("#", 1)[0].strip()
+        if line:
+            out.add(norm_url(line))
+    return out
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Orchestration
 # ─────────────────────────────────────────────────────────────────────────────
@@ -339,6 +374,7 @@ def main():
     mont_labels = montage_labels()
     faibles_r, faibles_m = blind_spots(regions, montages, mont_labels)
     seen = load_seen()
+    ignored = load_ignore()
     today = dt.date.today().isoformat()
 
     # ── 1. moisson des liens, premier filtre sur l'ancre ─────────────────────
@@ -386,6 +422,7 @@ def main():
     # priorité aux meilleurs scores d'ancre, plafonné pour garder le run court.
     prelim.sort(key=lambda c: c["anchor_score"], reverse=True)
     candidates = []
+    n_ignores = 0
     for c in prelim[:MAX_DEEP_FETCH]:
         src = c["src"]
         page_html = fetch(c["link"])
@@ -410,11 +447,23 @@ def main():
         net = urlparse(c["link"]).netloc.lower()
         net = net[4:] if net.startswith("www.") else net
         deja = c["norm"] in known_exact
-        # mémoire : nouveauté réelle vs récurrence
+        # mémoire : nouveauté, récurrence, ou candidat écarté durablement
         mem = seen.get(c["norm"])
-        statut = "revu" if mem else "nouveau"
-        if mem and mem.get("statut") == "ignore":
-            statut = "ignore"
+        ecarte = c["norm"] in ignored or (mem is not None
+                                          and mem.get("statut") == "ignore")
+        statut = "ignore" if ecarte else ("revu" if mem else "nouveau")
+        # la mémoire suit TOUT — y compris les candidats écartés, pour que le
+        # statut « ignore » colle une fois posé.
+        prev = seen.get(c["norm"], {})
+        seen[c["norm"]] = {
+            "premiere_detection": prev.get("premiere_detection", today),
+            "derniere_detection": today,
+            "dernier_score": score,
+            "statut": "ignore" if ecarte else prev.get("statut", "nouveau"),
+        }
+        if ecarte:                          # écarté : hors des candidats produits
+            n_ignores += 1
+            continue
         candidates.append({
             "titre_page": title[:200],
             "texte": c["anchor"],
@@ -428,14 +477,6 @@ def main():
             "domaine_connu": net in known_domains,
             "statut": statut,
         })
-        # mise à jour de la mémoire
-        prev = seen.get(c["norm"], {})
-        seen[c["norm"]] = {
-            "premiere_detection": prev.get("premiere_detection", today),
-            "derniere_detection": today,
-            "dernier_score": score,
-            "statut": prev.get("statut", "nouveau"),
-        }
 
     # tri : score décroissant, nouveautés (jamais vues) et angles morts d'abord
     candidates.sort(
@@ -456,7 +497,8 @@ def main():
     lines = [f"# Veille — candidats du {today}", "",
              f"{len(candidates)} candidat·s repéré·s sur {len(sources)} sources "
              f"({len(nouveaux)} hors fiches existantes, {len(am)} sur un angle "
-             "mort). Score pondéré ; à examiner et promouvoir manuellement.", ""]
+             f"mort ; {n_ignores} écarté·s via discovery/ignore.txt). Score "
+             "pondéré ; à examiner et promouvoir manuellement.", ""]
     lines.append(f"## Nouveautés possibles ({len(nouveaux)})\n")
     for c in nouveaux[:60]:
         tag = " · ANGLE MORT" if c["angle_mort"] else ""
@@ -505,7 +547,8 @@ def main():
         encoding="utf-8")
 
     print(f"\nVeille terminée : {len(candidates)} candidats "
-          f"({len(nouveaux)} hors fiches, {len(am)} sur angle mort).")
+          f"({len(nouveaux)} hors fiches, {len(am)} sur angle mort, "
+          f"{n_ignores} écartés).")
     print(f"→ {out_md}")
 
 
