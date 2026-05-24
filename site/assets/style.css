@@ -142,6 +142,7 @@ main.wrap{padding-bottom:4rem;}
 .tag-porteur{background:var(--terra-dk);}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
+.tag-reseau{background:var(--ink);}
 
 /* pentagone radar de profil à cinq axes */
 .tri{width:118px;height:auto;display:block;flex:0 0 auto;}

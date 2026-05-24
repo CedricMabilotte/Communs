@@ -1,5 +1,5 @@
 uid: lurzaindia
-categorie: lieu
+categorie: reseau
 nom: "Lurzaindia — terres du Pays Basque"
 sous_titre: "Foncière citoyenne d'installation paysanne"
 statut_fiche: publie
@@ -105,9 +105,7 @@ fiabilite: >
   Ces chiffres datent du bilan publié par la foncière et évoluent au fil de ses
   campagnes de financement. Non confirmé : clauses statutaires d'inaliénabilité,
   modalités de gouvernance et de transmission.
-chaine:
-  porteurs: [lurzaindia-sca]
-  usufruitiers: []
+membres: [lurzaindia-sca]
 sources:
   - titre: "Lurzaindia — site officiel"
     url: "https://lurzaindia.eu/"

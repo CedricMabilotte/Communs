@@ -1,5 +1,5 @@
 uid: reseau-terre-de-liens
-categorie: lieu
+categorie: reseau
 nom: "Fermes Terre de Liens"
 sous_titre: "Réseau national de fermes sur foncier sanctuarisé"
 statut_fiche: publie
@@ -103,9 +103,7 @@ fiabilite: >
   par an, recours au bail rural environnemental. Non confirmé : total du
   mouvement à jour, situation parcelle par parcelle, fiches individuelles de
   fermes emblématiques.
-chaine:
-  porteurs: [fondation-terre-de-liens, fonciere-terre-de-liens]
-  usufruitiers: [gfa-mutuels, reneta]
+membres: [fondation-terre-de-liens, fonciere-terre-de-liens, gfa-mutuels, reneta]
 sources:
   - titre: "Terre de Liens — site officiel"
     url: "https://terredeliens.org/"

@@ -32,7 +32,7 @@
       <span class="brand-txt"><span class="brand-name">Terres Libérées</span>
       <span class="baseline">Annuaire critique des montages de libération des terres en France.</span></span>
     </a>
-    <nav class="topnav"><a href="index.html">Accueil</a><a href="lieux.html" class="active" aria-current="page">Lieux</a><a href="porteurs.html">Porteurs</a><a href="usufruitiers.html">Usufruitiers</a><a href="classement.html">Classement</a><a href="methode.html">Méthode</a></nav>
+    <nav class="topnav"><a href="index.html">Accueil</a><a href="lieux.html" class="active" aria-current="page">Lieux</a><a href="porteurs.html">Porteurs</a><a href="usufruitiers.html">Usufruitiers</a><a href="reseaux.html">Réseaux</a><a href="classement.html">Classement</a><a href="methode.html">Méthode</a></nav>
   </div>
 </header>
 <main class="wrap" id="contenu">
@@ -48,7 +48,7 @@
     <option value="nom">Par nom (A→Z)</option>
     <option value="ax1">Par axe 1 — Soustraction au marché</option><option value="ax2">Par axe 2 — Nature civile et non lucrative</option><option value="ax3">Par axe 3 — Gouvernance citoyenne</option><option value="ax4">Par axe 4 — Vocation d&#x27;intérêt général</option><option value="ax5">Par axe 5 — Régime non marchand et sécurité</option>
   </select>
-  <span class="count" id="cnt" aria-live="polite"><b id="cntn">10</b><span id="cntl"> entrées affichées</span></span>
+  <span class="count" id="cnt" aria-live="polite"><b id="cntn">7</b><span id="cntl"> entrées affichées</span></span>
 </div>
 <p id="sort-status" role="status" class="visually-hidden"></p>
 <details class="filter-details">
@@ -56,9 +56,9 @@
   <div class="filter-bar">
     <div class="filter-row" role="group" aria-label="Filtrer par palier"><span class="filter-lab">Palier</span>
       <button class="fbtn active" data-fk="palier" data-fv="all" aria-pressed="true">Tous</button>
-      <button class="fbtn" data-fk="palier" data-fv="abouti" aria-pressed="false">Libération aboutie</button><button class="fbtn" data-fk="palier" data-fv="solide" aria-pressed="false">Montage solide</button><button class="fbtn" data-fk="palier" data-fv="engage" aria-pressed="false">Engagement réel</button><button class="fbtn" data-fk="palier" data-fv="partiel" aria-pressed="false">Libération partielle</button></div>
+      <button class="fbtn" data-fk="palier" data-fv="abouti" aria-pressed="false">Libération aboutie</button><button class="fbtn" data-fk="palier" data-fv="engage" aria-pressed="false">Engagement réel</button><button class="fbtn" data-fk="palier" data-fv="partiel" aria-pressed="false">Libération partielle</button></div>
     <div class="filter-row" role="group" aria-label="Filtrer par montage"><span class="filter-lab">Montage</span><button class="fbtn active" data-fk="montage" data-fv="all" aria-pressed="true">Tous</button><button class="fbtn" data-fk="montage" data-fv="propriete_publique" aria-pressed="false">Propriété publique inaliénable</button><button class="fbtn" data-fk="montage" data-fv="propriete_collective" aria-pressed="false">Propriété collective verrouillée</button><button class="fbtn" data-fk="montage" data-fv="demembrement" aria-pressed="false"><a class="gloss-link" href="glossaire.html#g-demembrement">Démembrement</a> nue-propriété / <a class="gloss-link" href="glossaire.html#g-usufruit">usufruit</a></button><button class="fbtn" data-fk="montage" data-fv="propriete_sanctuarisee" aria-pressed="false">Propriété sanctuarisée + bail de long terme</button></div>
-    <div class="filter-row" role="group" aria-label="Filtrer par région"><span class="filter-lab">Région</span><button class="fbtn active" data-fk="region" data-fv="all" aria-pressed="true">Toutes</button><button class="fbtn" data-fk="region" data-fv="Auvergne-Rhône-Alpes" aria-pressed="false">Auvergne-Rhône-Alpes</button><button class="fbtn" data-fk="region" data-fv="Nouvelle-Aquitaine" aria-pressed="false">Nouvelle-Aquitaine</button><button class="fbtn" data-fk="region" data-fv="Occitanie" aria-pressed="false">Occitanie</button><button class="fbtn" data-fk="region" data-fv="Pays de la Loire" aria-pressed="false">Pays de la Loire</button><button class="fbtn" data-fk="region" data-fv="Provence-Alpes-Côte d&#x27;Azur" aria-pressed="false">Provence-Alpes-Côte d&#x27;Azur</button><button class="fbtn" data-fk="region" data-fv="Île-de-France" aria-pressed="false">Île-de-France</button></div>
+    <div class="filter-row" role="group" aria-label="Filtrer par région"><span class="filter-lab">Région</span><button class="fbtn active" data-fk="region" data-fv="all" aria-pressed="true">Toutes</button><button class="fbtn" data-fk="region" data-fv="Auvergne-Rhône-Alpes" aria-pressed="false">Auvergne-Rhône-Alpes</button><button class="fbtn" data-fk="region" data-fv="Occitanie" aria-pressed="false">Occitanie</button><button class="fbtn" data-fk="region" data-fv="Pays de la Loire" aria-pressed="false">Pays de la Loire</button><button class="fbtn" data-fk="region" data-fv="Île-de-France" aria-pressed="false">Île-de-France</button></div>
   </div>
 </details>
 <p class="axe-legend cat-legend">Profil à cinq axes : <span class="axe-dot axe-1"></span> 1 — Le sol<span class="axe-dot axe-2"></span> 2 — La structure<span class="axe-dot axe-3"></span> 3 — Le pouvoir<span class="axe-dot axe-4"></span> 4 — La finalité<span class="axe-dot axe-5"></span> 5 — L&#x27;usage</p>
@@ -70,9 +70,7 @@
   <h3><a class="card-link" href="l/larzac.html">Terres du Larzac</a></h3>
   <p class="card-sub">Plateau agricole géré par une société civile de droit privé</p>
   <p class="card-meta">La Cavalerie / Millau · Aveyron (12) · Propriété publique inaliénable</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 100, La structure 100, Le pouvoir 86, La finalité 100, L&#x27;usage 100"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,12.0 105.7,45.2 84.3,93.4 31.8,98.8 14.3,45.2"/></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 100, La structure 100, Le pouvoir 86, La finalité 100, L&#x27;usage 100"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,12.0 105.7,45.2 84.3,93.4 31.8,98.8 14.3,45.2"/></svg></div>
 </li><li class="card" data-idl="85" data-nom="Le Village Vertical" data-palier="abouti" data-region="Auvergne-Rhône-Alpes" data-montage="propriete_collective" data-ax1="100" data-ax2="75" data-ax3="71" data-ax4="100" data-ax5="81">
   <div class="card-head">
     <span class="tag tag-lieu">Lieu</span>
@@ -81,9 +79,7 @@
   <h3><a class="card-link" href="l/village-vertical.html">Le Village Vertical</a></h3>
   <p class="card-sub">Première coopérative d&#x27;habitants de France au XXIe siècle</p>
   <p class="card-meta">Villeurbanne · Rhône (69) · Propriété collective verrouillée</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 100, La structure 75, Le pouvoir 71, La finalité 100, L&#x27;usage 81"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,12.0 94.2,48.9 80.0,87.6 31.8,98.8 23.0,48.0"/></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 100, La structure 75, Le pouvoir 71, La finalité 100, L&#x27;usage 81"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,12.0 94.2,48.9 80.0,87.6 31.8,98.8 23.0,48.0"/></svg></div>
 </li><li class="card" data-idl="84" data-nom="La Marinie" data-palier="abouti" data-region="Occitanie" data-montage="demembrement" data-ax1="88" data-ax2="100" data-ax3="80" data-ax4="100" data-ax5="69">
   <div class="card-head">
     <span class="tag tag-lieu">Lieu</span>
@@ -92,9 +88,7 @@
   <h3><a class="card-link" href="l/la-marinie.html">La Marinie</a></h3>
   <p class="card-sub">Ferme collective sortie du marché par le <a class="gloss-link" href="glossaire.html#g-fonds-de-dotation">fonds de dotation</a> Antidote</p>
   <p class="card-meta">Causse-et-Diège · Aveyron (12) · Démembrement nue-propriété / usufruit</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 88, La structure 100, Le pouvoir 80, La finalité 100, L&#x27;usage 69"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,17.8 105.7,45.2 82.6,91.1 31.8,98.8 28.5,49.8"/></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 88, La structure 100, Le pouvoir 80, La finalité 100, L&#x27;usage 69"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,17.8 105.7,45.2 82.6,91.1 31.8,98.8 28.5,49.8"/></svg></div>
 </li><li class="card" data-idl="83" data-nom="Domaine de Toussacq" data-palier="abouti" data-region="Île-de-France" data-montage="propriete_sanctuarisee" data-ax1="88" data-ax2="75" data-ax3="86" data-ax4="100" data-ax5="69">
   <div class="card-head">
     <span class="tag tag-lieu">Lieu</span>
@@ -103,31 +97,7 @@
   <h3><a class="card-link" href="l/toussacq.html">Domaine de Toussacq</a></h3>
   <p class="card-sub">Ferme collective et couveuse agricole sur foncier sanctuarisé en Seine-et-Marne</p>
   <p class="card-meta">Villenauxe-la-Petite · Seine-et-Marne (77) · Propriété sanctuarisée + bail de long terme</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 88, La structure 75, Le pouvoir 86, La finalité 100, L&#x27;usage 69"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,17.8 94.2,48.9 84.3,93.4 31.8,98.8 28.5,49.8"/></svg>
-  </div>
-</li><li class="card" data-idl="77" data-nom="Fermes Terre de Liens" data-palier="solide" data-region="" data-montage="propriete_sanctuarisee" data-ax1="88" data-ax2="75" data-ax3="64" data-ax4="100" data-ax5="80">
-  <div class="card-head">
-    <span class="tag tag-lieu">Lieu</span>
-    <span class="idl-badge" style="--pal:#4a7a3a"><svg class="idl-ring" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle class="idl-track" cx="20.0" cy="20.0" r="16" stroke-width="4"/><circle class="idl-arc" cx="20.0" cy="20.0" r="16" stroke-width="4" stroke-dasharray="100.5" stroke-dashoffset="23.1" transform="rotate(-90 20.0 20.0)"/><text class="idl-num" x="20.0" y="20.0" style="font-size:.82rem">77</text></svg><span class="visually-hidden">Indice de libération 77 sur 100, Montage solide.</span><span class="idl-pal">Montage solide</span></span>
-  </div>
-  <h3><a class="card-link" href="l/reseau-terre-de-liens.html">Fermes Terre de Liens</a></h3>
-  <p class="card-sub">Réseau national de fermes sur foncier sanctuarisé</p>
-  <p class="card-meta">Réseau national · Propriété sanctuarisée + bail de long terme</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 88, La structure 75, Le pouvoir 64, La finalité 100, L&#x27;usage 80"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,17.8 94.2,48.9 78.1,84.9 31.8,98.8 23.5,48.1"/></svg>
-  </div>
-</li><li class="card" data-idl="65" data-nom="Longo Maï" data-palier="solide" data-region="Provence-Alpes-Côte d&#x27;Azur" data-montage="propriete_sanctuarisee" data-ax1="92" data-ax2="100" data-ax3="57" data-ax4="50" data-ax5="50">
-  <div class="card-head">
-    <span class="tag tag-lieu">Lieu</span>
-    <span class="idl-badge" style="--pal:#4a7a3a"><svg class="idl-ring" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle class="idl-track" cx="20.0" cy="20.0" r="16" stroke-width="4"/><circle class="idl-arc" cx="20.0" cy="20.0" r="16" stroke-width="4" stroke-dasharray="100.5" stroke-dashoffset="35.2" transform="rotate(-90 20.0 20.0)"/><text class="idl-num" x="20.0" y="20.0" style="font-size:.82rem">65</text></svg><span class="visually-hidden">Indice de libération 65 sur 100, Montage solide.</span><span class="idl-pal">Montage solide</span></span>
-  </div>
-  <h3><a class="card-link" href="l/longo-mai.html">Longo Maï</a></h3>
-  <p class="card-sub">Réseau de coopératives autogérées sur foncier sanctuarisé</p>
-  <p class="card-meta">Limans · Alpes-de-Haute-Provence (04) · Propriété sanctuarisée + bail de long terme</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 92, La structure 100, Le pouvoir 57, La finalité 50, L&#x27;usage 50"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,15.8 105.7,45.2 76.1,82.1 45.9,79.4 37.2,52.6"/></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 88, La structure 75, Le pouvoir 86, La finalité 100, L&#x27;usage 69"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,17.8 94.2,48.9 84.3,93.4 31.8,98.8 28.5,49.8"/></svg></div>
 </li><li class="card" data-idl="63" data-nom="ZAD de Notre-Dame-des-Landes" data-palier="engage" data-region="Pays de la Loire" data-montage="propriete_sanctuarisee" data-ax1="81" data-ax2="100" data-ax3="50" data-ax4="100" data-ax5="50">
   <div class="card-head">
     <span class="tag tag-lieu">Lieu</span>
@@ -136,20 +106,7 @@
   <h3><a class="card-link" href="l/nddl.html">ZAD de Notre-Dame-des-Landes</a></h3>
   <p class="card-sub">Bocage acquis par un fonds de dotation après l&#x27;abandon de l&#x27;aéroport</p>
   <p class="card-meta">Notre-Dame-des-Landes · Loire-Atlantique (44) · Propriété sanctuarisée + bail de long terme</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 81, La structure 100, Le pouvoir 50, La finalité 100, L&#x27;usage 50"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,21.1 105.7,45.2 74.1,79.4 31.8,98.8 37.2,52.6"/></svg>
-  </div>
-</li><li class="card" data-idl="62" data-nom="Lurzaindia — terres du Pays Basque" data-palier="engage" data-region="Nouvelle-Aquitaine" data-montage="propriete_sanctuarisee" data-ax1="65" data-ax2="50" data-ax3="50" data-ax4="100" data-ax5="80">
-  <div class="card-head">
-    <span class="tag tag-lieu">Lieu</span>
-    <span class="idl-badge" style="--pal:#b08431"><svg class="idl-ring" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle class="idl-track" cx="20.0" cy="20.0" r="16" stroke-width="4"/><circle class="idl-arc" cx="20.0" cy="20.0" r="16" stroke-width="4" stroke-dasharray="100.5" stroke-dashoffset="38.2" transform="rotate(-90 20.0 20.0)"/><text class="idl-num" x="20.0" y="20.0" style="font-size:.82rem">62</text></svg><span class="visually-hidden">Indice de libération 62 sur 100, Engagement réel.</span><span class="idl-pal">Engagement réel</span></span>
-  </div>
-  <h3><a class="card-link" href="l/lurzaindia.html">Lurzaindia — terres du Pays Basque</a></h3>
-  <p class="card-sub">Foncière citoyenne d&#x27;installation paysanne</p>
-  <p class="card-meta">Pays Basque · Pyrénées-Atlantiques (64) · Propriété sanctuarisée + bail de long terme</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 65, La structure 50, Le pouvoir 50, La finalité 100, L&#x27;usage 80"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,28.8 82.8,52.6 74.1,79.4 31.8,98.8 23.5,48.1"/></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 81, La structure 100, Le pouvoir 50, La finalité 100, L&#x27;usage 50"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,21.1 105.7,45.2 74.1,79.4 31.8,98.8 37.2,52.6"/></svg></div>
 </li><li class="card" data-idl="60" data-nom="Le Hameau des Buis" data-palier="engage" data-region="Auvergne-Rhône-Alpes" data-montage="propriete_collective" data-ax1="58" data-ax2="50" data-ax3="80" data-ax4="100" data-ax5="0">
   <div class="card-head">
     <span class="tag tag-lieu">Lieu</span>
@@ -158,9 +115,7 @@
   <h3><a class="card-link" href="l/hameau-des-buis.html">Le Hameau des Buis</a></h3>
   <p class="card-sub">Habitat intergénérationnel et ferme-école en Ardèche</p>
   <p class="card-meta">Lablachère · Ardèche (07) · Propriété collective verrouillée</p>
-  <div class="card-viz">
-    <svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 58, La structure 50, Le pouvoir 80, La finalité 100, L&#x27;usage non renseigné"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,32.2 82.8,52.6 82.6,91.1 31.8,98.8 60.0,60.0"/><line class="tri-edge-na" x1="31.8" y1="98.8" x2="60.0" y2="60.0"/><line class="tri-edge-na" x1="60.0" y1="60.0" x2="60.0" y2="32.2"/></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 58, La structure 50, Le pouvoir 80, La finalité 100, L&#x27;usage non renseigné"><use href="#tri-base"/><polygon class="tri-fill" points="60.0,32.2 82.8,52.6 82.6,91.1 31.8,98.8 60.0,60.0"/><line class="tri-edge-na" x1="31.8" y1="98.8" x2="60.0" y2="60.0"/><line class="tri-edge-na" x1="60.0" y1="60.0" x2="60.0" y2="32.2"/></svg></div>
 </li><li class="card" data-idl="47" data-nom="Bergerie de Villarceaux" data-palier="partiel" data-region="Île-de-France" data-montage="propriete_sanctuarisee" data-ax1="81" data-ax2="25" data-ax3="0" data-ax4="100" data-ax5="0">
   <div class="card-head">
     <span class="tag tag-lieu">Lieu</span>
@@ -169,9 +124,7 @@
   <h3><a class="card-link" href="l/villarceaux.html">Bergerie de Villarceaux</a></h3>
   <p class="card-sub">Domaine agroécologique du Vexin français</p>
   <p class="card-meta">Chaussy · Val-d&#x27;Oise (95) · Propriété sanctuarisée + bail de long terme</p>
-  <div class="card-viz">
-    <svg class="tri compact tri-incomplet" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 81, La structure 25, Le pouvoir non renseigné, La finalité 100, L&#x27;usage non renseigné — profil incomplet"><use href="#tri-base"/><text class="tri-incomplet-txt" x="60.0" y="60.0">profil incomplet</text></svg>
-  </div>
+  <div class="card-viz"><svg class="tri compact tri-incomplet" viewBox="0 0 120 120" role="img" focusable="false" aria-label="Profil à cinq axes — Le sol 81, La structure 25, Le pouvoir non renseigné, La finalité 100, L&#x27;usage non renseigné — profil incomplet"><use href="#tri-base"/><text class="tri-incomplet-txt" x="60.0" y="60.0">profil incomplet</text></svg></div>
 </li></ul>
 <p class="no-result" id="noresult" role="status" hidden>Aucune entrée ne correspond à ces filtres. Élargissez la sélection.</p>
 <p class="cat-foot"><a href="suggerer.html">Un lieu manque ou une fiche est incomplète ? Signalez-le →</a></p>

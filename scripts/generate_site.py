@@ -37,10 +37,17 @@ SITE = ROOT / "site"
 ASSETS = SITE / "assets"
 
 CAT_DIR = {"lieu": "lieux", "porteur": "porteurs",
-           "usufruitier": "usufruitiers", "modele": "modeles"}
-CAT_SLUG = {"lieu": "l", "porteur": "p", "usufruitier": "u", "modele": "m"}
+           "usufruitier": "usufruitiers", "modele": "modeles",
+           "reseau": "reseaux"}
+CAT_SLUG = {"lieu": "l", "porteur": "p", "usufruitier": "u", "modele": "m",
+            "reseau": "r"}
 CAT_PAGE = {"lieu": "lieux.html", "porteur": "porteurs.html",
-            "usufruitier": "usufruitiers.html", "modele": "modeles.html"}
+            "usufruitier": "usufruitiers.html", "modele": "modeles.html",
+            "reseau": "reseaux.html"}
+# Libellé court de chaque catégorie — source unique, réutilisée partout.
+CAT_LABEL = {"lieu": "Lieu", "porteur": "Porteur de nue-propriété",
+             "usufruitier": "Organisme usufruitier", "modele": "Modèle voisin",
+             "reseau": "Réseau"}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Chargement
@@ -118,6 +125,13 @@ def score_fiche(fiche, gidx, ranking):
     valeurs = ranking["valeurs"]
     cat = fiche["categorie"]
     aids = axes_ids(ranking)
+
+    if cat == "reseau":
+        # un réseau n'est pas une chaîne : il ne porte pas d'Indice (cf. R1).
+        # Sa fiche est un hub qui présente l'entité et relie ses membres.
+        return {"axes": {aid: None for aid in aids}, "idl": None,
+                "idl_brut": None, "palier": None, "completude": None,
+                "estime": False, "score_type": "reseau", "criteres_evalues": {}}
 
     if cat == "modele":
         ax = fiche.get("axes_estimes", {}) or {}
@@ -448,6 +462,7 @@ NAV = [
     ("lieux.html", "Lieux"),
     ("porteurs.html", "Porteurs"),
     ("usufruitiers.html", "Usufruitiers"),
+    ("reseaux.html", "Réseaux"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
 ]
@@ -905,9 +920,11 @@ def card(fiche, sc, axes_cfg, depth=0, concepts=None):
     elif fiche.get("forme_juridique"):
         loc = clean(fiche["forme_juridique"])
     if not loc:
-        loc = "Réseau national" if cat == "lieu" else (fiche.get("pays") or "—")
+        loc = "Réseau national" if cat in ("lieu", "reseau") \
+            else (fiche.get("pays") or "—")
     catlabel = {"lieu": "Lieu", "porteur": "Porteur",
-                "usufruitier": "Usufruitier", "modele": "Modèle voisin"}[cat]
+                "usufruitier": "Usufruitier", "modele": "Modèle voisin",
+                "reseau": "Réseau"}.get(cat, cat)
     # attributs data-* pour tri / filtres
     mont = fiche.get("montage", {}) or {}
     montage_id = mont.get("type", "") or ""
@@ -926,9 +943,7 @@ def card(fiche, sc, axes_cfg, depth=0, concepts=None):
   <h3><a class="card-link" href="{href}">{e(fiche['nom'])}</a></h3>
   <p class="card-sub">{e(clean(fiche.get('sous_titre','')))}</p>
   <p class="card-meta">{e(loc)}{(' · ' + e(montage_lab)) if montage_lab else ''}</p>
-  <div class="card-viz">
-    {axis_triangle(axes_cfg, sc['axes'], compact=True)}
-  </div>
+  {'' if cat == "reseau" else f'<div class="card-viz">{axis_triangle(axes_cfg, sc["axes"], compact=True)}</div>'}
 </li>"""
 
 
@@ -1328,6 +1343,144 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
 # Pages — catalogues
 # ─────────────────────────────────────────────────────────────────────────────
 
+def render_reseau(fiche, cfg, by_uid, sc_by_uid):
+    """Rend la fiche d'un RÉSEAU : un hub non noté (cf. décision R1). Il
+    présente l'entité-réseau, relie ses membres documentés et donnera la
+    distribution de ses lieux concrets à mesure qu'ils sont carvés."""
+    project = cfg["concepts"]["project"]
+    axes_cfg = cfg["ranking"]["axes"]
+    uid = fiche["uid"]
+
+    head = f"""<nav class="crumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a> ›
+  <a href="../reseaux.html">Réseaux</a> ›
+  <span aria-current="page">{e(fiche['nom'])}</span>
+</nav>
+<div class="fiche-head">
+  <span class="tag tag-reseau">Réseau</span>
+  <h1>{e(fiche['nom'])}</h1>
+  <p class="fiche-sub">{e(clean(fiche.get('sous_titre', '')))}</p>
+</div>"""
+
+    intro = ('<section><p class="lead"><strong>Réseau.</strong> Cette entité '
+             'fédère ou démultiplie plusieurs lieux : elle n\'est pas une chaîne '
+             'unique et ne porte donc pas d\'Indice de libération. Sa fiche est '
+             'un hub — elle présente l\'entité, relie ses membres documentés et '
+             'donnera la distribution de ses lieux concrets à mesure qu\'ils '
+             'sont détaillés. <a href="../methode.html#chaine">La chaîne et le '
+             'domiciliage des axes →</a></p></section>')
+
+    resume = ""
+    if fiche.get("resume"):
+        resume = (f'<section><h2 class="sec">Présentation</h2>'
+                  f'<p class="prose">{e(clean(fiche["resume"]))}</p></section>')
+
+    montage_html = ""
+    mont = fiche.get("montage", {}) or {}
+    if mont.get("description"):
+        montage_html = (f'<section><h2 class="sec">Le montage</h2>'
+                        f'<p class="prose">{e(clean(mont["description"]))}</p>'
+                        f'</section>')
+
+    chips, lieux_membres = [], []
+    for muid in (fiche.get("membres", []) or []):
+        tgt = by_uid.get(muid)
+        if not tgt:
+            continue
+        tcat = tgt["categorie"]
+        tsc = sc_by_uid.get(muid)
+        if tcat == "lieu":
+            lieux_membres.append((tgt, tsc))
+        tri = (axis_triangle(axes_cfg, tsc["axes"], compact=True)
+               if (tsc and tsc.get("idl") is not None) else "")
+        chips.append(
+            f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{muid}.html">'
+            f'{tri}<span class="chip-txt">{e(tgt["nom"])}'
+            f'<span class="chip-cat">{e(CAT_LABEL.get(tcat, tcat))}</span>'
+            f'</span></a>')
+    membres_html = ""
+    if chips:
+        membres_html = (f'<section><h2 class="sec">Membres dans l\'annuaire</h2>'
+                        f'<p class="lead">Entités de ce réseau déjà documentées '
+                        f'par l\'annuaire.</p>'
+                        f'<div class="chips">{"".join(chips)}</div></section>')
+
+    if lieux_membres:
+        rep = {}
+        for _, tsc in lieux_membres:
+            lab = tsc["palier"]["label"] if (tsc and tsc["palier"]) else "Non noté"
+            rep[lab] = rep.get(lab, 0) + 1
+        rows = "".join(f"<li>{e(k)} — {v}</li>" for k, v in rep.items())
+        distrib_html = (f'<section><h2 class="sec">Distribution des lieux</h2>'
+                        f'<p class="lead">{len(lieux_membres)} lieu·x concret·s '
+                        f'détaillé·s, répartis par palier de l\'Indice :</p>'
+                        f'<ul>{rows}</ul></section>')
+    else:
+        distrib_html = ('<section><h2 class="sec">Distribution des lieux</h2>'
+                        '<p class="prose">Aucun lieu concret de ce réseau n\'est '
+                        'encore détaillé dans l\'annuaire. Les chaînes réelles '
+                        'sont carvées progressivement, fiche par fiche.</p>'
+                        '</section>')
+
+    an = fiche.get("analyse", {}) or {}
+    analyse_html = ""
+    if an:
+        def lst(items):
+            return "".join(f"<li>{e(clean(x))}</li>" for x in (items or []))
+        synth = (f'<p class="prose synthese">{e(clean(an.get("synthese","")))}</p>'
+                 if an.get("synthese") else "")
+        analyse_html = (
+            f'<section><h2 class="sec">Analyse stratégique</h2>{synth}'
+            f'<div class="analyse-grid">'
+            f'<div class="an-col an-forces"><h3>Forces</h3><ul>{lst(an.get("forces"))}</ul></div>'
+            f'<div class="an-col an-frag"><h3>Fragilités</h3><ul>{lst(an.get("fragilites"))}</ul></div>'
+            f'<div class="an-col an-lev"><h3>Leviers</h3><ul>{lst(an.get("leviers"))}</ul></div>'
+            f'</div></section>')
+
+    fiab = ""
+    if fiche.get("fiabilite"):
+        fiab = (f'<section class="fiab-box"><h3>Fiabilité des informations</h3>'
+                f'<p>{e(clean(fiche["fiabilite"]))}</p></section>')
+    src_items = "".join(
+        f'<li><a href="{e(s.get("url",""))}" target="_blank" rel="noopener">'
+        f'{e(clean(s.get("titre","")))}</a></li>'
+        for s in (fiche.get("sources", []) or []))
+    sources_html = (f'<section><h2 class="sec">Sources</h2>'
+                    f'<ul class="src-list">{src_items}</ul></section>'
+                    if src_items else "")
+    backlink = ('<p class="backlink"><a href="../reseaux.html">← Retour aux '
+                'réseaux</a></p>')
+
+    defs = tri_defs(axes_cfg) if chips else ""
+    body = (defs + head + intro + resume + montage_html + membres_html
+            + distrib_html + analyse_html + fiab + sources_html + backlink)
+    fdesc = meta_desc(fiche.get("resume", "") or fiche.get("sous_titre", ""), 250)
+    return page(fiche["nom"], body, "reseaux.html", depth=1, project=project,
+                description=fdesc, path=f"r/{uid}.html", og_type="website")
+
+
+def render_reseaux(reseaux_sc, cfg):
+    """Page catalogue des réseaux — liste simple, sans tri ni filtre par note :
+    les réseaux ne sont pas notés."""
+    project = cfg["concepts"]["project"]
+    axes_cfg = cfg["ranking"]["axes"]
+    concepts = cfg["concepts"]
+    fiches = sorted((f for f, _ in reseaux_sc), key=lambda f: f["nom"])
+    cards = cards_grid([(f, {"idl": None, "palier": None,
+                             "axes": {a["id"]: None for a in axes_cfg}})
+                        for f in fiches], axes_cfg, depth=0, concepts=concepts)
+    body = f"""<h1>Réseaux</h1>
+<p class="lead">Les réseaux fédèrent ou démultiplient plusieurs lieux —
+mouvements, foncières multi-sites, dispositifs de financement. Ils ne portent
+pas d'Indice de libération : ce sont des hubs qui relient leurs membres et
+dont les lieux concrets sont détaillés un à un. {len(fiches)} réseau·x
+recensé·s.</p>
+{cards}"""
+    return page("Réseaux", body, "reseaux.html", depth=0, project=project,
+                description="Les réseaux de la libération des terres recensés "
+                            "par l'annuaire.", path="reseaux.html")
+
+
 def render_catalogue(cat, fiches_sc, cfg):
     project = cfg["concepts"]["project"]
     concepts = cfg["concepts"]
@@ -1435,7 +1588,8 @@ def render_classement(all_sc, cfg):
     project = cfg["concepts"]["project"]
     ranking = cfg["ranking"]
     axes_cfg = ranking["axes"]
-    core = [(f, s) for f, s in all_sc if f["categorie"] != "modele"]
+    core = [(f, s) for f, s in all_sc
+            if f["categorie"] not in ("modele", "reseau")]
     core = sorted(core, key=lambda x: x[1]["idl"] or 0, reverse=True)
     catlabel = {"lieu": "Lieu", "porteur": "Porteur", "usufruitier": "Usufruitier"}
 
@@ -2223,6 +2377,8 @@ def render_comparer(all_sc, cfg):
     project = cfg["concepts"]["project"]
     groups = {"lieu": [], "porteur": [], "usufruitier": [], "modele": []}
     for f, _ in all_sc:
+        if f["categorie"] == "reseau":
+            continue  # les réseaux ne sont pas notés : hors comparateur
         groups[f["categorie"]].append((f["uid"], f["nom"]))
     catlab = {"lieu": "Lieux", "porteur": "Porteurs",
               "usufruitier": "Usufruitiers", "modele": "Modèles voisins"}
@@ -2274,7 +2430,8 @@ def render_index(all_sc, cfg, n_by_cat):
     concepts = cfg["concepts"]
     ranking = cfg["ranking"]
     axes_cfg = ranking["axes"]
-    core = sorted([(f, s) for f, s in all_sc if f["categorie"] != "modele"],
+    core = sorted([(f, s) for f, s in all_sc
+                   if f["categorie"] not in ("modele", "reseau")],
                   key=lambda x: x[1]["idl"] or 0, reverse=True)
     top = core[:6]
     modeles = sorted([(f, s) for f, s in all_sc if f["categorie"] == "modele"],
@@ -2597,6 +2754,7 @@ main.wrap{padding-bottom:4rem;}
 .tag-porteur{background:var(--terra-dk);}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
+.tag-reseau{background:var(--ink);}
 
 /* pentagone radar de profil à cinq axes */
 .tri{width:118px;height:auto;display:block;flex:0 0 auto;}
@@ -3346,6 +3504,10 @@ def verifier_chaines(fiches):
             ch = f.get("chaine", {}) or {}
             cites.update(ch.get("porteurs") or [])
             cites.update(ch.get("usufruitiers") or [])
+        elif f["categorie"] == "reseau":
+            # une entité membre d'un réseau est couverte : elle n'est pas
+            # orpheline, elle attend que les lieux du réseau soient carvés.
+            cites.update(f.get("membres") or [])
     avert = []
     for f in sorted(fiches, key=lambda x: (x["categorie"], x["uid"])):
         cat, uid = f["categorie"], f["uid"]
@@ -3418,18 +3580,23 @@ def main():
     write(SITE / "favicon.svg", FAVICON_SVG)
 
     n_by_cat = {c: sum(1 for f in fiches if f["categorie"] == c)
-                for c in ("lieu", "porteur", "usufruitier", "modele")}
+                for c in ("lieu", "porteur", "usufruitier", "modele", "reseau")}
 
     # fiches individuelles
     for f, sc in all_sc:
         cat = f["categorie"]
-        html_doc = render_fiche(f, sc, cfg, by_uid, sc_by_uid)
+        if cat == "reseau":
+            html_doc = render_reseau(f, cfg, by_uid, sc_by_uid)
+        else:
+            html_doc = render_fiche(f, sc, cfg, by_uid, sc_by_uid)
         write(SITE / CAT_SLUG[cat] / f'{f["uid"]}.html', html_doc)
 
     # catalogues
     for cat in ("lieu", "porteur", "usufruitier", "modele"):
         subset = [(f, sc) for f, sc in all_sc if f["categorie"] == cat]
         write(SITE / CAT_PAGE[cat], render_catalogue(cat, subset, cfg))
+    write(SITE / "reseaux.html", render_reseaux(
+        [(f, sc) for f, sc in all_sc if f["categorie"] == "reseau"], cfg))
 
     # pages transverses
     write(SITE / "index.html", render_index(all_sc, cfg, n_by_cat))
@@ -3448,7 +3615,7 @@ def main():
 
     # robots.txt + sitemap.xml
     sitemap_paths = [("index.html", "1.0")]
-    for cat in ("lieu", "porteur", "usufruitier", "modele"):
+    for cat in ("lieu", "porteur", "usufruitier", "modele", "reseau"):
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
     for p in ("classement.html", "regimes.html", "grilles.html",
               "methode.html", "themes.html", "comparer.html", "glossaire.html",
@@ -3464,6 +3631,8 @@ def main():
     # ajoutés, aucun retiré : l'export reste rétro-compatible.
     data = []
     for f, sc in all_sc:
+        if f["categorie"] == "reseau":
+            continue  # un réseau n'est pas une entité notée : hors export data
         mont = f.get("montage", {}) or {}
         # intégrité du montage : nouvelle clé, repli sur l'ancienne.
         im = f.get("integrite_montage", {}) or f.get("purete_juridique", {}) or {}
@@ -3496,7 +3665,8 @@ def main():
     total = len(fiches)
     print(f"Site généré : {total} fiches, "
           f"{n_by_cat['lieu']} lieux / {n_by_cat['porteur']} porteurs / "
-          f"{n_by_cat['usufruitier']} usufruitiers / {n_by_cat['modele']} modèles.")
+          f"{n_by_cat['usufruitier']} usufruitiers / {n_by_cat['reseau']} réseaux "
+          f"/ {n_by_cat['modele']} modèles.")
     print(f"→ {SITE}")
 
     # garde-fou — aucune entité HTML ne doit avoir été cassée par la typographie

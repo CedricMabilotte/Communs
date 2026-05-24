@@ -1,5 +1,5 @@
 uid: longo-mai
-categorie: lieu
+categorie: reseau
 nom: "Longo Maï"
 sous_titre: "Réseau de coopératives autogérées sur foncier sanctuarisé"
 statut_fiche: publie
@@ -104,9 +104,7 @@ fiabilite: >
   détention inaliénable du foncier par le Fonds de Terre Européenne, autogestion
   des coopératives. Non confirmé : nature exacte des actes d'usage, existence d'un
   démembrement de droit français, dispositifs de transmission.
-chaine:
-  porteurs: [fonds-terre-europeenne]
-  usufruitiers: [cooperatives-longo-mai]
+membres: [fonds-terre-europeenne, cooperatives-longo-mai]
 sources:
   - titre: "Pro Longo Maï"
     url: "https://www.prolongomaif.ch/"

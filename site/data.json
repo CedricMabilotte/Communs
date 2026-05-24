@@ -96,70 +96,6 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
-    "uid": "longo-mai",
-    "nom": "Longo Maï",
-    "categorie": "lieu",
-    "sous_titre": "Réseau de coopératives autogérées sur foncier sanctuarisé",
-    "idl": 65,
-    "idl_brut": 67,
-    "idl_intrinseque": 65,
-    "score_type": "calcule",
-    "completude": 0.933,
-    "axes": {
-      "1": 92,
-      "2": 100,
-      "3": 57,
-      "4": 50,
-      "5": 50
-    },
-    "axes_intrinseques": {
-      "1": 92,
-      "2": 100,
-      "3": 57,
-      "4": 50,
-      "5": 50
-    },
-    "palier": "solide",
-    "palier_label": "Montage solide",
-    "palier_couleur": "#4a7a3a",
-    "forme_juridique": "",
-    "montage_type": "propriete_sanctuarisee",
-    "montage_label": "Propriété sanctuarisée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
-  },
-  {
-    "uid": "lurzaindia",
-    "nom": "Lurzaindia — terres du Pays Basque",
-    "categorie": "lieu",
-    "sous_titre": "Foncière citoyenne d'installation paysanne",
-    "idl": 62,
-    "idl_brut": 66,
-    "idl_intrinseque": 62,
-    "score_type": "calcule",
-    "completude": 0.867,
-    "axes": {
-      "1": 65,
-      "2": 50,
-      "3": 50,
-      "4": 100,
-      "5": 80
-    },
-    "axes_intrinseques": {
-      "1": 65,
-      "2": 50,
-      "3": 50,
-      "4": 100,
-      "5": 80
-    },
-    "palier": "engage",
-    "palier_label": "Engagement réel",
-    "palier_couleur": "#b08431",
-    "forme_juridique": "",
-    "montage_type": "propriete_sanctuarisee",
-    "montage_label": "Propriété sanctuarisée + bail de long terme",
-    "nature_juridique": "Économie sociale marchande"
-  },
-  {
     "uid": "nddl",
     "nom": "ZAD de Notre-Dame-des-Landes",
     "categorie": "lieu",
@@ -186,38 +122,6 @@
     "palier": "engage",
     "palier_label": "Engagement réel",
     "palier_couleur": "#b08431",
-    "forme_juridique": "",
-    "montage_type": "propriete_sanctuarisee",
-    "montage_label": "Propriété sanctuarisée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
-  },
-  {
-    "uid": "reseau-terre-de-liens",
-    "nom": "Fermes Terre de Liens",
-    "categorie": "lieu",
-    "sous_titre": "Réseau national de fermes sur foncier sanctuarisé",
-    "idl": 77,
-    "idl_brut": 80,
-    "idl_intrinseque": 77,
-    "score_type": "calcule",
-    "completude": 0.933,
-    "axes": {
-      "1": 88,
-      "2": 75,
-      "3": 64,
-      "4": 100,
-      "5": 80
-    },
-    "axes_intrinseques": {
-      "1": 88,
-      "2": 75,
-      "3": 64,
-      "4": 100,
-      "5": 80
-    },
-    "palier": "solide",
-    "palier_label": "Montage solide",
-    "palier_couleur": "#4a7a3a",
     "forme_juridique": "",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
@@ -526,7 +430,7 @@
       "2": 65,
       "3": 64,
       "4": 71,
-      "5": 74
+      "5": 69
     },
     "axes_intrinseques": {
       "1": 31,
@@ -580,14 +484,14 @@
     "nom": "Fondation Terre de Liens",
     "categorie": "porteur",
     "sous_titre": "Fondation reconnue d'utilité publique portant le foncier agricole",
-    "idl": 79,
-    "idl_brut": 84,
+    "idl": 86,
+    "idl_brut": 91,
     "idl_intrinseque": 86,
     "score_type": "calcule",
     "completude": 0.882,
     "axes": {
       "1": 85,
-      "2": 75,
+      "2": 100,
       "3": 79,
       "4": 100,
       "5": null
@@ -644,8 +548,8 @@
     "nom": "Fonds de Terre Européenne",
     "categorie": "porteur",
     "sous_titre": "Fondation de droit suisse détenant les terres de Longo Maï",
-    "idl": 58,
-    "idl_brut": 66,
+    "idl": 64,
+    "idl_brut": 72,
     "idl_intrinseque": 64,
     "score_type": "calcule",
     "completude": 0.765,
@@ -653,7 +557,7 @@
       "1": 100,
       "2": 100,
       "3": 50,
-      "4": 50,
+      "4": 75,
       "5": 50
     },
     "axes_intrinseques": {
@@ -663,9 +567,9 @@
       "4": 75,
       "5": 50
     },
-    "palier": "engage",
-    "palier_label": "Engagement réel",
-    "palier_couleur": "#b08431",
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
     "forme_juridique": "Fondation de droit suisse",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
@@ -996,14 +900,14 @@
     "nom": "RENETA — Réseau national des espaces-test agricoles",
     "categorie": "usufruitier",
     "sous_titre": "Réseau des structures d'usage transitoire pour le test d'activité agricole",
-    "idl": 70,
-    "idl_brut": 75,
+    "idl": 74,
+    "idl_brut": 79,
     "idl_intrinseque": 74,
     "score_type": "calcule",
     "completude": 0.875,
     "axes": {
       "1": 100,
-      "2": 75,
+      "2": 100,
       "3": 62,
       "4": 100,
       "5": 50
