@@ -1,92 +1,80 @@
-# Chantier D — worklist des chaînes à compléter
+# Chantier D — worklist des chaînes
 
-*Établi en session #3 (24 mai 2026), à partir du contrôle `verifier_chaines()`
-et d'une passe de recherche. Pour chaque trou de chaîne : le maillon manquant
-identifié, la chaîne proposée, la source, le niveau de confiance et la ou les
-fiches à créer. Le contrôle signale 13 trous restants (7 orphelins, 6 lieux à
-chaîne incomplète) — le 14ᵉ, Antidote, est résolu : voir la fiche `la-marinie`.*
+*Mis à jour en session #3 (24 mai 2026). Suit le contrôle `verifier_chaines()`
+et une passe de recherche. État courant : 11 signalements.*
 
-## Résolu cette session
+## Résolu — session #3
 
-**fonciere-antidote** — orphelin sauvé. Fiche lieu `la-marinie` créée (ferme de
-27 ha à Causse-et-Diège, Aveyron) + usufruitier `communs-la-marinie`. Chaîne :
-La Marinie → porteur Antidote → usufruitier Les Communs de la Marinie.
-*Antidote détient d'autres lieux* — Ancrage (Nancy), La Talvère — à carver
-ensuite (page « Nos lieux » de lafonciereantidote.org).
+- **fonciere-antidote** — lieu `la-marinie` + usufruitier `communs-la-marinie`.
+- **champs-des-possibles** — lieu `toussacq` (porteur : Foncière Terre de Liens).
+- **larzac** — porteur `etat-larzac` créé (l'État, collectivité publique).
+- **village-vertical** — usufruitier `le-village-vertical` créé ; chaîne intégrée
+  (porteur ≡ usufruitier). Effet de bord assumé : `habicoop`, simple fédération
+  d'accompagnement, sort de la chaîne et devient orphelin — c'est correct, voir
+  plus bas.
 
-## Orphelins porteurs — un lieu concret à carver
+## Réseaux — 3 chaînes concrètes à établir par réseau
 
-**champs-des-possibles** *(usufruitier, mais résolu par le même lieu)* —
-confiance haute. Le domaine du **Toussacq** (Seine-et-Marne, ~74 ha) a été
-transféré à Terre de Liens en 2011 ; Les Champs des Possibles y exploite
-l'ensemble en couveuse agricole. Chaîne : Toussacq → porteur Terre de Liens
-(Fondation ou Foncière, à confirmer) → usufruitier `champs-des-possibles`.
-*Fiche à créer :* lieu `toussacq`. Source : lelabo-ess.org, leschampsdespossibles.fr.
+Principe : un réseau ne se note pas comme un lieu ; il se rend lisible par
+quelques chaînes réelles carvées en fiches `lieu`. Cible : 3 cas concrets par
+réseau, choisis pour couvrir l'éventail (un cas fort, un cas hybride).
 
-**conservatoire-littoral** — porteur d'échelle réseau (~750 sites, ~250 000 ha).
-Carver un site emblématique géré par convention avec une collectivité ou une
-association (marais, pointe littorale). *Recherche à mener* sur le site retenu.
+**Antidote** (porteur multi-lieux) — 1/3 fait.
+La Marinie ✓. À carver : **Ancrage** (Nancy), **La Talvère**. Source : page
+« Nos lieux » de lafonciereantidote.org.
 
-**federation-cen** — réseau des Conservatoires d'espaces naturels. Même logique :
-carver un site CEN géré par bail emphytéotique ou convention. *Recherche à mener.*
+**Terre de Liens** (réseau) — 1/3 fait.
+Toussacq ✓. À carver : 2 fermes emblématiques, idéalement une portée par la
+Fondation (cas pur) et une par la Foncière (cas hybride, société en commandite).
+Source : fermes.terredeliens.org.
 
-**feve** (Fermes en Vie) — foncière finançant l'achat de fermes. Carver une ferme
-de son portefeuille (l'usufruitier est le·la paysan·ne installé·e).
-*Recherche à mener* sur une ferme documentée.
+**Longo Maï** (réseau) — 0/3.
+Trois sites parmi les cinq déjà nommés dans la fiche réseau : **Limans** (siège
+historique), **La Cabrery**, **Treynas**. Suppose le reclassement préalable de
+`longo-mai` en catégorie `reseau` (chantier D1).
 
-**fonciere-chenelet** — foncière de logement très social écologique. Carver une
-opération de logement (l'usufruitier est l'organisme locataire ou les
-habitant·es). *Recherche à mener.*
+**Coopérative Oasis** (réseau / dispositif de financement) — 0/3.
+Cas identifié : **Demain en main** (Locoal-Mendon, Morbihan). À rechercher : 2
+autres oasis financées et documentées. Rappel : la Coopérative Oasis est un
+financeur, pas un maillon de chaîne — à reclasser en `reseau` (D1).
 
-**scic-terres-de-sources** — SCIC protégeant le foncier des aires de captage
-autour de Rennes. Le « lieu » est une aire de captage / exploitation agricole
-sous le dispositif Terres de Sources. *Recherche à mener.*
+**Conservatoire du littoral** et **Conservatoires d'espaces naturels** —
+porteurs d'échelle réseau. 3 sites emblématiques chacun, gérés par convention
+ou bail emphytéotique avec une collectivité ou une association. Recherche à
+mener.
 
-## Orphelin usufruitier — cas particulier
+## Lieux à chaîne incomplète — restants
 
-**cooperative-oasis** — la Coopérative Oasis est un **financeur** (apports
-remboursables à taux faible), non un usufruitier de chaîne : elle finance, elle
-n'occupe pas. Recommandation : la traiter en catégorie `reseau`/dispositif
-(décision R1), pas la forcer dans une chaîne. Exemple d'oasis financée à
-documenter par ailleurs : « Demain en main » à Locoal-Mendon (Morbihan).
-Confiance haute sur le diagnostic.
+- **hameau-des-buis** (ni porteur ni usufruitier) — porteur : la société civile
+  « Le Hameau des Buis » (parts détenues par deux associations sans but
+  lucratif, dont La Ferme des Enfants) ; usufruitier : les habitant·es,
+  créanciers via prêt viager, et l'Association Le Hameau des Buis. Montage
+  complexe (un conflit interne est documenté) — recherche soigneuse requise.
+- **lurzaindia** (pas d'usufruitier) — se résout par le reclassement en `reseau`
+  (D1).
+- **nddl** (pas d'usufruitier) — usufruitier : l'Assemblée des usages de la ZAD
+  (baux ruraux de 9 ans, environnementaux, sur ~350 ha depuis 2019). Fiche
+  usufruitier à créer.
 
-## Lieux à chaîne incomplète
+## Orphelins porteurs / usufruitiers — restants
 
-**hameau-des-buis** *(ni porteur ni usufruitier)* — confiance moyenne, montage
-complexe (un conflit interne est documenté). Porteur : la **société civile
-« Le Hameau des Buis »**, propriétaire du foncier, dont les parts sont détenues
-par deux associations sans but lucratif (dont La Ferme des Enfants).
-Usufruitier : les habitant·es, créanciers de la SC via un prêt viager, et
-l'**Association Le Hameau des Buis**. *Fiches à créer :* porteur + usufruitier —
-recherche soigneuse requise vu la complexité et le conflit.
+- **conservatoire-littoral**, **federation-cen** — voir « Réseaux » ci-dessus.
+- **feve** (Fermes en Vie) — foncière finançant des fermes ; carver une ferme du
+  portefeuille. Recherche à mener.
+- **fonciere-chenelet** — foncière de logement très social écologique ; carver
+  une opération de logement. Recherche à mener.
+- **scic-terres-de-sources** — SCIC protégeant le foncier des aires de captage
+  près de Rennes ; le « lieu » est une aire de captage. Recherche à mener.
+- **cooperative-oasis** — financeur, pas un maillon de chaîne : à reclasser en
+  `reseau` (D1), non à raccrocher de force à une chaîne.
+- **habicoop** — fédération française des coopératives d'habitants. Comme la
+  Coopérative Oasis, c'est un acteur d'échelle réseau, non un porteur de lieu :
+  à traiter en `reseau` (D1). Son apparition comme orphelin est le signe que la
+  chaîne de Village Vertical a été corrigée.
 
-**larzac** *(pas de porteur)* — les terres du Larzac, achetées par l'État après
-la lutte, relèvent du domaine public ; la Société Civile des Terres du Larzac
-(`sctl`, déjà fiche, usufruitier-gestionnaire) en assure la gestion. *À créer :*
-un porteur « État — terres du Larzac », ou rattachement explicite au pôle
-propriété publique. Confiance haute sur le diagnostic.
+## Prochaine étape recommandée
 
-**lurzaindia** *(pas d'usufruitier)* — se résout par le reclassement : `lurzaindia`
-passe en catégorie `reseau` (D1) ; le contrôle cessera alors de le signaler.
-
-**nddl** *(pas d'usufruitier)* — l'usage des ~350 ha est porté depuis 2019 par
-des baux ruraux de 9 ans, souvent environnementaux, coordonnés par
-l'**Assemblée des usages** de la ZAD. *À créer :* un usufruitier « Assemblée des
-usages de la ZAD de NDDL » (ou COPAIN 44). Confiance moyenne. Source :
-cairn.info, reporterre.net.
-
-**village-vertical** *(pas d'usufruitier)* — l'usufruitier est la **coopérative
-d'habitants Le Village Vertical** elle-même ; `habicoop` reste la fédération
-porteuse. *Fiche à créer :* usufruitier `village-vertical-cooperative`.
-Confiance haute sur le diagnostic.
-
-## Synthèse
-
-Carver une chaîne complète demande en général **deux fiches** (un lieu + son
-usufruitier, ou un lieu + un porteur). Sur les 13 trous restants : 1 se résout
-sans recherche (lurzaindia → `reseau`), 4 ont un diagnostic à confiance haute
-prêt à exécuter (toussacq, larzac, village-vertical, cooperative-oasis→reseau),
-les autres demandent une passe de recherche dédiée. La cible « une douzaine de
-lieux par gros porteur » reste un programme pluri-session ; ce worklist en est
-le point de départ exécutable.
+**D1 — créer la catégorie `reseau`.** Elle débloque d'un seul build cinq fiches
+(`longo-mai`, `reseau-terre-de-liens`, `lurzaindia`, `cooperative-oasis`,
+`habicoop`) et conditionne le carvage des chaînes Longo Maï et Oasis. C'est le
+point de plus fort levier du chantier D.
