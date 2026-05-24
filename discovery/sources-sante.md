@@ -5,7 +5,7 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - terre-de-liens — ok — 18 lien·s pré-retenu·s
 - terre-de-liens-ressources — ok — 1 lien·s pré-retenu·s
 - encommun — ok — 1 lien·s pré-retenu·s
-- cooperative-oasis — ok — 16 lien·s pré-retenu·s
+- cooperative-oasis — échec ⚠ — 0 lien·s pré-retenu·s
 - lurzaindia — ok — 0 lien·s pré-retenu·s
 - larzac — ok — 3 lien·s pré-retenu·s
 - reseau-cen — ok — 5 lien·s pré-retenu·s
