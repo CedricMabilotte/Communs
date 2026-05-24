@@ -3296,6 +3296,19 @@ def build_sitemap(paths):
             + urls + "</urlset>\n")
 
 
+def verifier_entites_html():
+    """Garde-fou (leçon du 2026-05-24) : la passe typographique ne doit jamais
+    insérer d'espace avant le point-virgule d'une entité HTML — « &#x27 ; » au
+    lieu de « &#x27; » casse l'entité à l'affichage. On scanne le site produit ;
+    toute entité malformée fait échouer la génération."""
+    pat = re.compile(r"&#?[0-9A-Za-z]+[   ]+;")
+    fautes = []
+    for fp in sorted(SITE.rglob("*.html")):
+        for m in pat.finditer(fp.read_text(encoding="utf-8")):
+            fautes.append(f"{fp.relative_to(SITE)} : {m.group(0)!r}")
+    return fautes
+
+
 def main():
     global BASE_URL
     cfg = load_config()
@@ -3423,6 +3436,15 @@ def main():
           f"{n_by_cat['lieu']} lieux / {n_by_cat['porteur']} porteurs / "
           f"{n_by_cat['usufruitier']} usufruitiers / {n_by_cat['modele']} modèles.")
     print(f"→ {SITE}")
+
+    # garde-fou — aucune entité HTML ne doit avoir été cassée par la typographie
+    fautes = verifier_entites_html()
+    if fautes:
+        print(f"ÉCHEC — {len(fautes)} entité(s) HTML malformée(s) détectée(s) :")
+        for f in fautes[:20]:
+            print(f"  {f}")
+        raise SystemExit(1)
+    print("Contrôle des entités HTML : aucune anomalie.")
 
 
 if __name__ == "__main__":
