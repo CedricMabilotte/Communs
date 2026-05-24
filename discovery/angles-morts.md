@@ -4,11 +4,8 @@ Régions et types de montage absents ou faiblement couverts (≤ 1 fiche). Les c
 
 ## Régions sous-représentées
 
-- Bourgogne-Franche-Comté — 0 fiche·s
-- Centre-Val de Loire — 0 fiche·s
 - Corse — 0 fiche·s
 - Hauts-de-France — 0 fiche·s
-- Pays de la Loire — 1 fiche·s
 
 ## Types de montage sous-représentés
 
