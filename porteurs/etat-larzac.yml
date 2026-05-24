@@ -1,0 +1,120 @@
+uid: etat-larzac
+categorie: porteur
+nom: "État — domaine du Larzac"
+sous_titre: "Collectivité publique propriétaire des 6 300 hectares du plateau"
+statut_fiche: publie
+forme_juridique: "Propriété publique de l'État"
+localisation:
+  commune: "La Cavalerie / Millau"
+  departement: "Aveyron (12)"
+  region: "Occitanie"
+annee: 1985
+url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
+resume: >
+  L'État détient environ 6 300 hectares du plateau du Larzac, rachetés dans les
+  années 1970 pour l'extension d'un camp militaire — projet abandonné en 1981
+  après dix ans de lutte paysanne. Plutôt que de revendre, l'État a choisi de
+  conserver le foncier et d'en confier la gestion aux intéressé·es eux-mêmes :
+  il a consenti en 1985 un bail emphytéotique à la Société Civile des Terres du
+  Larzac (SCTL), prolongé en 2013 jusqu'en 2083. Une collectivité publique peut
+  être un porteur de nue-propriété : c'est ici le cas le plus protecteur de
+  l'échelle, la personne publique.
+montage:
+  type: propriete_publique
+  description: >
+    L'État demeure propriétaire de l'ensemble du foncier et ne le met pas en
+    vente. Il en confie l'usage et la gestion, par un bail emphytéotique de
+    99 ans, à la Société Civile des Terres du Larzac, qui détient dès lors tous
+    les droits d'un propriétaire sauf ceux de vendre et d'hypothéquer. Le
+    démembrement n'est pas civil : c'est la propriété publique, doublée d'un
+    bail emphytéotique, qui soustrait durablement le foncier au marché.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Propriété publique de l'État : le niveau de protection foncière le plus
+    élevé. La gouvernance de l'usage a été déléguée aux usager·es eux-mêmes,
+    mais la propriété relève de la puissance publique.
+grille:
+  - critere: inalienabilite
+    valeur: oui
+    note: "Le foncier relève de la propriété publique de l'État, qui s'est engagé à le conserver ; la SCTL en détient tous les droits sauf ceux de vendre et d'hypothéquer."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Propriété publique : aucun capital ni part appropriable, aucune valeur foncière captable par un titre."
+  - critere: nature_protectrice
+    valeur: oui
+    note: "Personne publique : le plus haut niveau de l'échelle de protection foncière, devant la fondation reconnue d'utilité publique et le fonds de dotation."
+  - critere: clause_devolution
+    valeur: oui
+    note: "Le foncier étant propriété publique, il n'existe aucun patrimoine privé vers lequel il pourrait revenir."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "L'État, personne publique, n'est pas une structure lucrative et ne poursuit aucun but de profit sur ce foncier."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Aucun capital n'est rémunéré : la propriété publique ne distribue ni dividende, ni intérêt, ni plus-value."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "L'État a délégué la gestion à la SCTL dans un but désintéressé de revitalisation du plateau, sans tirer de profit du foncier."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Aucun investisseur n'attend de rendement : la propriété est publique et le foncier n'est pas un actif spéculatif."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "L'État n'a pas d'organe de direction propre à ce domaine ; sa gestion est entièrement déléguée à la SCTL."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "Par le bail emphytéotique, l'État a confié la gestion du foncier aux usager·es eux-mêmes, réuni·es dans la SCTL."
+  - critere: transparence
+    valeur: partiel
+    note: "Le montage — bail emphytéotique État-SCTL, échéance 2083 — est public et documenté ; le détail de la gestion patrimoniale par l'État ne l'est pas."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "L'État n'a pas d'objet statutaire de protection foncière ; mais le choix de conserver le foncier et de le confier par bail emphytéotique en soustrait durablement l'usage au marché."
+  - critere: agrement_ig
+    valeur: oui
+    note: "La propriété publique relève par nature de l'intérêt général ; il s'agit ici d'un tag informatif, non d'un gage de libération."
+  - critere: risque_requalification
+    valeur: oui
+    note: "Propriété publique : aucun risque de requalification fiscale ne pèse sur la qualité d'intérêt général du foncier."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "L'État rend compte de sa gestion patrimoniale dans le cadre public général ; une reddition de comptes spécifique à ce domaine n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: oui
+    note: "L'État confie l'usage à la SCTL contre une redevance emphytéotique modique, sans rechercher de revenu locatif de marché."
+  - critere: securite_usage_offerte
+    valeur: oui
+    note: "Le bail emphytéotique, signé en 1985 et prolongé jusqu'en 2083, offre à la SCTL un titre d'usage exceptionnellement long et sécurisé."
+analyse:
+  forces:
+    - "Propriété publique : le niveau de protection foncière le plus élevé."
+    - "Gestion entièrement déléguée aux usager·es, réuni·es dans la SCTL."
+    - "Bail emphytéotique de 99 ans : sécurité d'usage de très long terme."
+  fragilites:
+    - "Le bail a un terme (2083) : sa reconduction dépendra d'une volonté publique future."
+    - "Aucun objet statutaire ne consacre la protection foncière : le maintien dépend d'un choix politique."
+    - "La reddition de comptes spécifique à ce domaine n'est pas documentée."
+  leviers:
+    - "Anticiper et sécuriser la reconduction du bail emphytéotique avant 2083."
+    - "Consacrer la vocation agricole et collective du domaine dans un acte pérenne."
+    - "Documenter publiquement la gestion du domaine."
+  synthese: >
+    L'État illustre qu'une collectivité publique peut être un excellent porteur
+    de nue-propriété : la propriété publique offre la protection foncière la
+    plus forte, et le choix de déléguer la gestion aux usager·es eux-mêmes en
+    fait un modèle. Sa dépendance reste la volonté politique de reconduire le
+    bail à son terme.
+fiabilite: >
+  Faits vérifiés (sources Larzac.org et AGTER, consultées en mai 2026) : rachat
+  du foncier par l'État pour l'extension avortée du camp militaire, propriété
+  publique d'environ 6 300 hectares, bail emphytéotique consenti à la SCTL en
+  1985 pour 60 ans puis prolongé en 2013 jusqu'en 2083, délégation de la
+  gestion aux usager·es. Non confirmé : statut domanial précis (domaine public
+  ou privé de l'État), montant de la redevance emphytéotique.
+voir_aussi: [sctl]
+sources:
+  - titre: "SCTL — Larzac.org"
+    url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
+  - titre: "AGTER — La Société Civile des Terres du Larzac"
+    url: "https://www.agter.org/bdf/fr/corpus_chemin/fiche-chemin-9.html"

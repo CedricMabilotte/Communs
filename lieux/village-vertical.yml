@@ -110,8 +110,9 @@ fiabilite: >
   accompagnement par Habicoop comme projet pilote. Non confirmé : modalités
   détaillées de renouvellement des coopérateur·rices.
 chaine:
-  porteurs: [habicoop]
-  usufruitiers: []
+  porteurs: [le-village-vertical]
+  usufruitiers: [le-village-vertical]
+voir_aussi: [habicoop]
 sources:
   - titre: "Le Village Vertical — Présentation"
     url: "https://www.village-vertical.org/index.php?page=presentation"

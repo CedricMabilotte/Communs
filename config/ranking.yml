@@ -154,9 +154,19 @@ chaine:
   coherence: >
     Une chaîne est saine tant qu'aucun maillon ne bascule dans le régime
     commercial, idéalement avec une entité du pôle « commun citoyen » à
-    l'extrémité usage. Une collectivité publique en nue-propriété et une
-    association citoyenne en usufruit forment une excellente chaîne :
-    l'adversaire est le commerce, non l'institution.
+    l'extrémité usage. Une collectivité publique en nue-propriété (commune,
+    région, État) et une association citoyenne en usufruit forment une
+    excellente chaîne : l'adversaire est le commerce, non l'institution.
+  cas_integre: >
+    Le porteur et l'usufruitier peuvent être une seule et même entité : c'est
+    le cas de la coopérative d'habitants, propriétaire de son immeuble et
+    gouvernée par ses usager·es. Ce cas est légitime et le modèle l'admet — la
+    chaîne est dite « intégrée ». Il a une force (aucune précarité locative
+    vis-à-vis d'un tiers) et une faiblesse propre (l'entité est juge et partie,
+    sans contre-pouvoir externe entre propriété et usage, ce qui fragilise la
+    pérennité du modèle). La chaîne intégrée est signalée comme telle sur la
+    fiche du lieu, et l'axe 5 (critère d'articulation porteur/usufruitier) en
+    porte la nuance.
 
 # ── Option A intelligente : indice intrinsèque et indice effectif ────────────
 # Un porteur (ou un usufruitier) noté seul est jugé sur ce qu'il EST, mais

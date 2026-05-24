@@ -352,6 +352,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "etat-larzac",
+    "nom": "État — domaine du Larzac",
+    "categorie": "porteur",
+    "sous_titre": "Collectivité publique propriétaire des 6 300 hectares du plateau",
+    "idl": 84,
+    "idl_brut": 87,
+    "idl_intrinseque": 84,
+    "score_type": "calcule",
+    "completude": 0.941,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 80,
+      "4": 64,
+      "5": 100
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 80,
+      "4": 64,
+      "5": 100
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "Propriété publique de l'État",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "federation-cen",
     "nom": "Conservatoires d'espaces naturels",
     "categorie": "porteur",
@@ -644,14 +676,14 @@
     "nom": "Habicoop",
     "categorie": "porteur",
     "sous_titre": "Fédération française des coopératives d'habitants",
-    "idl": 65,
-    "idl_brut": 69,
+    "idl": 70,
+    "idl_brut": 74,
     "idl_intrinseque": 70,
     "score_type": "calcule",
     "completude": 0.882,
     "axes": {
       "1": 65,
-      "2": 75,
+      "2": 100,
       "3": 64,
       "4": 71,
       "5": null
@@ -926,6 +958,38 @@
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "le-village-vertical",
+    "nom": "Coopérative Le Village Vertical",
+    "categorie": "usufruitier",
+    "sous_titre": "Coopérative d'habitants propriétaire et usagère de son immeuble à Villeurbanne",
+    "idl": 80,
+    "idl_brut": 80,
+    "idl_intrinseque": 80,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 100,
+      "2": 75,
+      "3": 81,
+      "4": 75,
+      "5": 73
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 75,
+      "3": 81,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "Société coopérative d'habitants à capital variable",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "reneta",

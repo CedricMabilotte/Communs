@@ -1,0 +1,120 @@
+uid: le-village-vertical
+categorie: usufruitier
+nom: "Coopérative Le Village Vertical"
+sous_titre: "Coopérative d'habitants propriétaire et usagère de son immeuble à Villeurbanne"
+statut_fiche: publie
+forme_juridique: "Société coopérative d'habitants à capital variable"
+localisation:
+  commune: "Villeurbanne"
+  departement: "Rhône (69)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2010
+url: "https://www.village-vertical.org/"
+resume: >
+  Société coopérative d'habitants à capital variable, créée en 2010 à
+  Villeurbanne et première coopérative d'habitants française du XXIᵉ siècle. La
+  coopérative est l'unique propriétaire du bâti et du foncier de son immeuble,
+  livré en 2013 : elle est à la fois le porteur de la nue-propriété et
+  l'usufruitier qui en gouverne l'usage. Chaque ménage est coopérateur·rice,
+  détenteur·rice de parts sociales remboursées au nominal sans plus-value, et
+  locataire de son logement dans un cadre démocratique « une personne, une
+  voix » qui interdit toute spéculation.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Coopérative Le Village Vertical"
+  usufruitier: "Coopérative Le Village Vertical (ménages coopérateur·rices)"
+  description: >
+    Le porteur et l'usufruitier sont ici une seule et même personne morale : la
+    coopérative d'habitants détient l'immeuble et en gouverne l'usage. Les
+    ménages signent un contrat coopératif leur conférant un droit de jouissance
+    durable, contre des parts sociales plafonnées au nominal et une redevance.
+    Cette chaîne intégrée écarte toute précarité locative vis-à-vis d'un tiers,
+    mais elle réunit en une même main la propriété et l'usage.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société coopérative d'habitants : forme sociétaire dont le bénéficiaire est
+    le sociétariat, mais à lucrativité verrouillée par des statuts
+    anti-spéculatifs plafonnant les parts au nominal.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Les ménages ne peuvent capter la valeur du bâti : les parts sociales sont remboursées au nominal, déconnectées de la valeur du bien."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Les parts sont remboursées à leur valeur nominale, sans plus-value : la valeur foncière n'est captable par aucun titre."
+  - critere: devolution_usufruitier
+    valeur: oui
+    note: "Les statuts interdisent la distribution du surplus aux membres en cas de revente : aucun retour de valeur vers un patrimoine privé."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "Société coopérative à capital variable : forme sociétaire, mais coopérative à lucrativité verrouillée par des statuts anti-spéculatifs."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "L'anti-spéculation est statutaire : aucun bénéfice ni plus-value foncière n'est distribué aux membres."
+  - critere: une_voix
+    valeur: oui
+    note: "La coopérative d'habitants fonctionne sur le principe « une personne, une voix », indépendamment du capital détenu."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les ménages coopérateur·rices décident collectivement et démocratiquement de la vie de l'immeuble."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "L'entrée de nouveaux·elles coopérateur·rices passe par le remboursement et la reprise des parts ; les modalités de renouvellement ne sont pas toutes documentées."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "La gestion est démocratique et le modèle largement documenté comme projet pilote ; le détail de la publication des comptes n'est pas confirmé."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — un habitat digne et non spéculatif, dont 9 logements sociaux et 4 très sociaux — porte un intérêt général du logement abordable."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "Le logement bénéficie d'abord aux ménages coopérateur·rices ; sa dimension sociale et son articulation à des logements voisins en accession sociale en élargissent la portée."
+  - critere: duree_usage
+    valeur: oui
+    note: "Copropriétaires collectifs, les ménages disposent d'un droit de jouissance durable sur leur logement, sans terme ni précarité locative."
+  - critere: clauses_usage
+    valeur: partiel
+    note: "Le contrat coopératif encadre l'usage du logement ; l'existence de clauses environnementales formalisées n'est pas documentée."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Chaîne intégrée : la coopérative est à la fois porteuse et usufruitière. L'articulation écarte toute précarité — le collectif n'est pas locataire d'un tiers — mais l'entité est juge et partie, sans contre-pouvoir externe, ce qui fragilise la pérennité du modèle."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Chaque ménage verse une redevance pour son logement : l'accès n'est pas gratuit, mais la redevance est non spéculative et une logique de logement abordable domine."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "La redevance couvre les charges courantes et le remboursement de l'emprunt collectif, sans nourrir aucune logique de rendement."
+analyse:
+  forces:
+    - "Propriété et usage réunis : aucune précarité locative vis-à-vis d'un tiers."
+    - "Parts plafonnées au nominal : sortie du marché spéculatif verrouillée statutairement."
+    - "Gouvernance « une personne, une voix » réellement démocratique."
+  fragilites:
+    - "Chaîne intégrée : la coopérative est juge et partie, sans contre-pouvoir externe."
+    - "Forme sociétaire : l'anti-spéculation dépend du maintien des clauses statutaires."
+    - "Dispositifs de renouvellement des coopérateur·rices peu documentés."
+  leviers:
+    - "Inscrire un contrôle ou un tiers garant pour compenser la confusion porteur/usufruitier."
+    - "Documenter l'accueil et le renouvellement des coopérateur·rices."
+    - "Capitaliser l'expérience comme modèle reproductible d'habitat coopératif."
+  synthese: >
+    La Coopérative Le Village Vertical illustre la chaîne intégrée : une seule
+    entité porte et habite l'immeuble. Le gain est une sécurité d'usage totale ;
+    le coût, l'absence de contre-pouvoir entre propriété et usage. Sa solidité
+    tient au verrouillage statutaire de l'anti-spéculation.
+fiabilite: >
+  Faits vérifiés (sources Le Village Vertical, Habicoop et Le Labo de l'ESS,
+  consultées en mai 2026) : société coopérative d'habitants à capital variable
+  créée en 2010, immeuble livré en 2013, première coopérative d'habitants
+  française du XXIᵉ siècle, propriété unique du bâti et du foncier par la
+  coopérative, 14 logements dont 9 sociaux et 4 très sociaux, parts remboursées
+  au nominal sans plus-value, gouvernance « une personne, une voix »,
+  accompagnement par Habicoop. Non confirmé : modalités détaillées de
+  renouvellement des coopérateur·rices, transparence comptable.
+voir_aussi: [habicoop]
+sources:
+  - titre: "Le Village Vertical — Présentation"
+    url: "https://www.village-vertical.org/index.php?page=presentation"
+  - titre: "Le Labo de l'ESS — Le Village Vertical de Villeurbanne"
+    url: "https://www.lelabo-ess.org/le-village-vertical-de-villeurbanne-un-habitat-solidaire-et-non-speculatif"

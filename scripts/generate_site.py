@@ -1145,6 +1145,17 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         if mont.get("usufruitier"):
             extra.append(f'<p><strong>Usufruit / usage :</strong> '
                          f'{e(clean(mont["usufruitier"]))}</p>')
+        # chaîne intégrée : une même entité est porteur ET usufruitier. Le cas
+        # est légitime (coopérative d'habitants) mais on le signale — l'entité
+        # est juge et partie. Cf. ranking.yml § chaine.cas_integre.
+        ch_int = fiche.get("chaine", {}) or {}
+        if set(ch_int.get("porteurs") or []) & set(ch_int.get("usufruitiers") or []):
+            extra.append(
+                '<p class="chaine-note"><strong>Chaîne intégrée :</strong> le '
+                'porteur et l\'usufruitier sont une seule et même entité. La '
+                'propriété et l\'usage ne sont pas dissociés : le collectif '
+                'n\'est pas un locataire précaire, mais il est aussi juge et '
+                'partie, sans contre-pouvoir externe entre les deux rôles.</p>')
         montage_html = (f'<section><h2 class="sec">Le montage</h2>'
                         f'<p class="prose">{e(clean(mont["description"]))}</p>'
                         + "".join(extra) + '</section>')
