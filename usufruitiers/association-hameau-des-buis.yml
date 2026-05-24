@@ -1,0 +1,141 @@
+uid: association-hameau-des-buis
+categorie: usufruitier
+nom: "Association des habitant·es du Hameau des Buis"
+sous_titre: "Association d'usage des habitant·es de l'écovillage intergénérationnel"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation:
+  commune: "Lablachère"
+  departement: "Ardèche (07)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2009
+url: "https://hameaudesbuis.org/"
+resume: >
+  Association loi 1901 créée en 2009, réservée aux habitant·es de l'écovillage
+  intergénérationnel du Hameau des Buis, en sud Ardèche. Elle représente les
+  intérêts des résident·es dans la vie du lieu et la gouvernance partagée du
+  projet, dont le foncier était porté par une société civile puis, depuis le
+  28 janvier 2023, par la SAS coopérative Hameau des Buis. Les habitant·es ne
+  sont pas propriétaires de leur logement : ils ont prêté sans intérêt à la
+  structure porteuse et disposent d'un droit d'usage de leur logement par un
+  contrat de résident. Cette fiche documente la structure d'usage des
+  habitant·es ; le portage du foncier relève d'une fiche distincte. Un conflit
+  interne, ayant opposé de 2018 à 2021 des habitant·es à l'association
+  cofondatrice La Ferme des Enfants, est documenté publiquement par les deux
+  parties et traité ici sans prise de parti.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Société Civile le Hameau des Buis, puis SAS coopérative Hameau des Buis (depuis le 28 janvier 2023)"
+  usufruitier: "Habitant·es du Hameau des Buis, réuni·es notamment dans l'association des habitant·es créée en 2009"
+  description: >
+    Le foncier et le bâti du Hameau des Buis ont été portés par une société
+    civile, dont les parts étaient quasi intégralement détenues par
+    l'association La Ferme des Enfants, puis par la SAS coopérative Hameau des
+    Buis constituée le 28 janvier 2023. Les habitant·es financent le lieu par
+    un prêt sans intérêt à la structure porteuse et occupent leur logement par
+    un contrat de résident, sans en être propriétaires. L'association des
+    habitant·es, créée en 2009, est la structure de représentation collective
+    des résident·es ; elle s'articule avec la gouvernance partagée portée
+    aujourd'hui par la SAS coopérative.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 sans capital appropriable, mais réservée aux seul·es
+    habitant·es du lieu : la gouvernance de l'usage relève d'un cercle de
+    résident·es plus que d'un commun ouvert, et le foncier est porté par une
+    SAS coopérative.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Les habitant·es ne sont pas propriétaires de leur logement : ils prêtent sans intérêt à la structure porteuse et ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable au titre de l'association."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association des habitant·es en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : aucun partage de bénéfices documenté ; les ressources servent la représentation des habitant·es et la vie du lieu."
+  - critere: une_voix
+    valeur: partiel
+    note: "L'association loi 1901 fonctionne par principe sur « une personne = une voix » ; les modalités de décision propres au Hameau et leur articulation avec la SAS coopérative ne sont pas détaillées par les sources."
+  - critere: usagers_decident
+    valeur: oui
+    note: "L'association regroupe les habitant·es du lieu et porte leurs intérêts ; le Hameau fonctionne en gouvernance partagée associant les résident·es aux décisions."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu organise une procédure de candidature pour les nouveaux·elles habitant·es ; l'association des habitant·es étant réservée aux résident·es, son ouverture dépend de l'entrée dans le lieu."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association des habitant·es n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "Le lieu associe habitat intergénérationnel, ferme-école et activités pédagogiques : un objet d'intérêt général social et éducatif dépassant les seul·es résident·es."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "Le Hameau accueille une école, des volontaires et des activités ouvertes au territoire ; l'association des habitant·es elle-même est réservée aux résident·es."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Les habitant·es disposent d'un contrat de résident leur assurant l'usage de leur logement ; la durée et les conditions de renouvellement de ce titre ne sont pas détaillées par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans le contrat de résident n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "L'association des habitant·es s'articule avec la structure porteuse du foncier ; le conflit interne de 2018-2021 a montré que cette articulation a connu de fortes tensions, dénouées par la transformation en SAS coopérative en 2023."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "Le contrat de résident prévoit un montant mensuel correspondant au marché locatif local, ce qui relève d'un régime d'usage marchand plutôt que de la gratuité ou d'une contribution modique."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le contrat de résident est calé sur le marché locatif local, sans logique de rendement affichée puisque les habitant·es ont préalablement prêté sans intérêt à la structure ; le caractère soutenable du montant n'est pas documenté."
+analyse:
+  forces:
+    - "Association loi 1901 sans capital appropriable, regroupant les habitant·es du lieu."
+    - "Habitant·es non propriétaires : ils prêtent sans intérêt et occupent par contrat de résident, hors logique spéculative."
+    - "Vocation intergénérationnelle, pédagogique et écologique d'intérêt général."
+  fragilites:
+    - "Association réservée aux seul·es résident·es : gouvernance de l'usage centrée sur un cercle d'habitant·es."
+    - "Contrat de résident calé sur le marché locatif local : régime d'usage marchand."
+    - "Conflit interne 2018-2021 ayant fortement tendu l'articulation avec la structure porteuse."
+  leviers:
+    - "Documenter et publier les statuts, les comptes et le régime d'usage des logements."
+    - "Clarifier la durée et le renouvellement des contrats de résident."
+    - "Stabiliser l'articulation avec la SAS coopérative après la sortie de crise de 2023."
+  synthese: >
+    L'association des habitant·es du Hameau des Buis est la structure de
+    représentation collective des résident·es d'un écovillage dont le foncier
+    est porté hors de leur propriété. Son montage — prêt sans intérêt et contrat
+    de résident — soustrait le logement à la spéculation, mais le régime d'usage
+    reste calé sur le marché locatif, et le conflit interne de 2018-2021 a
+    révélé la fragilité de l'articulation entre habitant·es et structure
+    porteuse, depuis reconfigurée en SAS coopérative.
+fiabilite: >
+  Faits vérifiés (sources Hameau des Buis, Mouvement Colibris et Revue Silence,
+  consultées en mai 2026) : association des habitant·es créée en 2009 et
+  réservée aux résident·es du lieu, écovillage intergénérationnel d'environ
+  6 hectares associant habitat et ferme-école, habitant·es non propriétaires
+  finançant le lieu par un prêt sans intérêt indexé sur l'indice de référence
+  des loyers, occupation des logements par un contrat de résident dont le
+  montant mensuel correspond au marché locatif local, foncier porté par une
+  société civile puis par la SAS coopérative Hameau des Buis constituée le
+  28 janvier 2023, conflit interne ayant opposé des habitant·es à l'association
+  cofondatrice La Ferme des Enfants de 2018 à son départ en 2021. Non confirmé :
+  statuts et comptes de l'association des habitant·es, clause de dévolution,
+  modalités de décision propres au Hameau et leur articulation avec la SAS
+  coopérative, durée et renouvellement des contrats de résident, clauses
+  d'usage. Le conflit interne, documenté publiquement par les deux parties, est
+  traité ici sans prise de parti : seuls les faits relatifs au montage et à la
+  gouvernance de l'usage sont retenus.
+voir_aussi: [hameau-des-buis, sc-hameau-des-buis]
+sources:
+  - titre: "Le Hameau des Buis — site officiel"
+    url: "https://hameaudesbuis.org/"
+  - titre: "Le Hameau des Buis — Mouvement Colibris"
+    url: "https://www.colibris-lemouvement.org/projets/projet-oasis/oasis-a-decouvrir/hameau-buis"
+  - titre: "Tempête sur le Hameau des Buis — Revue Silence"
+    url: "https://www.revuesilence.net/numeros/499-L-ecologie-du-livre/tempete-sur-le-hameau-des-buis"

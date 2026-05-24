@@ -1,0 +1,122 @@
+uid: gaec-eyssal
+categorie: usufruitier
+nom: "GAEC d'Eyssal"
+sous_titre: "Groupement agricole exploitant la ferme laitière d'Eyssal, en biodynamie, en Dordogne"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "Bergerac (Périgord pourpre)"
+  departement: "Dordogne (24)"
+  region: "Nouvelle-Aquitaine"
+annee: 2010
+url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
+resume: >
+  Groupement agricole d'exploitation en commun (GAEC) qui exploite la ferme
+  d'Eyssal, dans le Bergeracois, animé par Hugues Doche — installé jeune comme
+  éleveur-transformateur laitier — et sa compagne Fanny. Le GAEC conduit un
+  élevage laitier en agriculture biodynamique et transforme sa production en
+  fromages, écoulés en vente directe (paniers, marchés, magasins bio,
+  artisans). En 2010, plutôt que de s'endetter pour acheter des terres mises
+  en vente, le GAEC a choisi d'investir dans son outil de travail et de
+  recevoir par bail rural les 18 hectares acquis par la Foncière Terre de
+  Liens.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC d'Eyssal (groupement agricole d'exploitation en commun)"
+  description: >
+    Le GAEC d'Eyssal reçoit par bail rural l'usage des 18 hectares acquis en
+    2010 par la Foncière Terre de Liens grâce à un groupe local de citoyen·nes.
+    Le GAEC est une société civile agricole ; il possède par ailleurs ses
+    bâtiments et une partie des terres, le foncier Terre de Liens venant
+    consolider une exploitation préexistante.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Le GAEC est une société civile agricole de droit civil à gouvernance de
+    couple ; il s'articule à un porteur, la Foncière Terre de Liens, de nature
+    sociétaire, et reste par ailleurs propriétaire d'une part de son foncier.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "Le GAEC ne peut capter la valeur des 18 hectares portés par la Foncière, dont il n'a que l'usage ; il reste en revanche propriétaire de ses bâtiments et d'une partie des terres."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le GAEC est une société civile dont les parts sociales sont cessibles avec l'agrément des associés ; leur prix n'est pas statutairement plafonné."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de droit civil, et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le GAEC est une société civile agricole : les excédents d'exploitation rémunèrent le travail des associés et peuvent être partagés, sans logique de rendement du capital."
+  - critere: une_voix
+    valeur: oui
+    note: "Le GAEC repose statutairement sur l'égalité des associés exploitants, qui participent tous au travail ; le pouvoir n'y est pas indexé sur le capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les associé·es exploitant·es du GAEC — Hugues Doche et Fanny — décident directement de la conduite de la ferme."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Les modalités d'accueil de nouveaux associés et de renouvellement du GAEC ne sont pas documentées par les sources."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions du GAEC au-delà de ses associés n'est pas documentée."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — élevage laitier en biodynamie, transformation fromagère, préservation d'un environnement à forte biodiversité — porte un intérêt général agricole et écologique."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme vend en circuit court et a été soutenue par un groupe local de citoyen·nes ; le GAEC reste une exploitation dont les bénéfices profitent d'abord à ses associés."
+  - critere: duree_usage
+    valeur: oui
+    note: "Le GAEC dispose, pour les 18 hectares portés par la Foncière, d'un bail rural dont le renouvellement est d'ordre public : jouissance longue et sécurisée."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses environnementales formalisées dans le bail rural (bail rural environnemental) n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le GAEC est lié à la Foncière Terre de Liens par un bail rural clair, conclu lors de l'acquisition des 18 hectares en 2010."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "La production laitière et fromagère est vendue en circuit court ; l'activité relève d'une logique paysanne de proximité sans être non marchande."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le recours à Terre de Liens visait à éviter l'endettement pour acheter les terres, ce qui suppose un fermage modéré ; son montant n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Société civile agricole de droit civil, sans logique de rendement du capital."
+    - "Usage des 18 hectares Terre de Liens sécurisé par bail rural d'ordre public."
+    - "Élevage laitier en biodynamie : objet agricole et écologique d'intérêt général."
+  fragilites:
+    - "GAEC de couple : gouvernance resserrée sur les deux exploitant·es."
+    - "Le GAEC reste propriétaire d'une part de son foncier, hors verrou non lucratif."
+    - "Transparence comptable, clause de dévolution, transmission et clauses du bail non documentées."
+  leviers:
+    - "Documenter publiquement les statuts, l'accueil de nouveaux associés et la transmission."
+    - "Étendre la sanctuarisation Terre de Liens au reste du foncier exploité."
+    - "Préciser les clauses environnementales du bail rural et le niveau du fermage."
+  synthese: >
+    Le GAEC d'Eyssal est un maillon usufruitier solide sur le plan civil — une
+    société civile agricole conduisant un élevage laitier biodynamique — mais
+    sa chaîne n'est libérée que pour partie : seuls 18 hectares sont portés par
+    la Foncière, le reste du foncier restant en propriété du GAEC. Sa
+    gouvernance, resserrée sur un couple, et son fonctionnement interne sont
+    peu documentés.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens et acteurs locaux de l'agriculture
+  biologique, consultées en mai 2026) : exploitation de la ferme d'Eyssal sous
+  la forme du GAEC d'Eyssal, associé·es Hugues Doche et Fanny, élevage laitier
+  en biodynamie, transformation fromagère, vente en circuit court, acquisition
+  par la Foncière Terre de Liens en 2010 de 18 hectares menacés de vente.
+  Non confirmé : surface totale exploitée par le GAEC, montant du fermage,
+  clauses du bail rural, transparence comptable, clause de dévolution,
+  modalités d'accueil de nouveaux associés.
+voir_aussi: [fonciere-terre-de-liens]
+sources:
+  - titre: "Eyssal — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
+  - titre: "Eyssal — Terre de Liens"
+    url: "https://terredeliens.org/eyssal.html"

@@ -1,0 +1,129 @@
+uid: gaec-de-riglanne
+categorie: usufruitier
+nom: "GAEC de Riglanne"
+sous_titre: "Groupement agricole reprenant la ferme fromagère de Riglanne en Loire-Atlantique"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "Campbon"
+  departement: "Loire-Atlantique (44)"
+  region: "Pays de la Loire"
+annee: 2025
+url: "https://terredeliens-paysdelaloire.org/les-fermes/riglanne/"
+resume: >
+  Groupement agricole d'exploitation en commun reprenant la ferme fromagère de
+  Riglanne, à Campbon (Loire-Atlantique). Anne et Christian Bastard, éleveur·ses
+  laitier·es en agriculture biologique depuis 2002, ont pris leur retraite en
+  octobre 2025 ; depuis février de la même année, ils avaient accueilli en
+  parrainage trois porteuses de projet — Loréna Serra, Nolwenn Thiriet et
+  Valentine Temple — qui ont repris l'exploitation. Le collectif diversifie la
+  ferme, qui associe désormais un troupeau bovin laitier et un troupeau caprin,
+  et prévoit d'accueillir au sein du GAEC deux paysans boulangers, ainsi que de
+  salarier un mécanicien mutualisant l'atelier de la ferme pour des formations
+  et services low-tech. La ferme transforme son lait en fromages, beurre, crème
+  et yaourts vendus en circuits courts.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC de Riglanne (groupement agricole d'exploitation en commun)"
+  description: >
+    Une partie du foncier de la ferme de Riglanne est portée durablement par la
+    Foncière Terre de Liens, qui l'a acquise en 2013 — rachat de la moitié des
+    terres exploitées, à la demande des éleveur·ses alors en place. Son usage
+    est confié par bail rural au groupement agricole qui exploite la ferme,
+    aujourd'hui repris par les trois nouvelles paysannes. Le GAEC est une
+    société civile agricole dont les associé·es exploitent en commun et
+    travaillent toutes sur la ferme. La structuration juridique précise du
+    collectif repreneur et la nature exacte du bail ne sont pas pleinement
+    documentées par les sources consultées.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Le GAEC est une société civile agricole d'exploitation : ses parts sont
+    détenues par les paysan·nes associé·es qui exploitent la ferme en commun ;
+    l'usage du foncier sanctuarisé par la Foncière reste octroyé par bail.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Le foncier acquis par la Foncière Terre de Liens en 2013 en reste la propriété : le GAEC en a l'usage par bail rural et ne peut ni le revendre ni en capter la valeur."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le GAEC est une société civile dont les parts ne portent pas la valeur foncière ; leur cession est soumise à l'agrément des associé·es, sans plafonnement au nominal documenté."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de droit civil, dont les associé·es sont des personnes physiques exploitant en commun, à lucrativité limitée par les textes régissant les GAEC."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le GAEC est une société civile d'exploitation : il ne capte pas la valeur foncière, mais le revenu agricole dégagé est partagé entre les associé·es."
+  - critere: une_voix
+    valeur: oui
+    note: "Le GAEC repose sur le principe d'égalité entre associé·es exploitant·es, indépendamment de leurs apports en capital, conformément au régime légal des GAEC."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les associé·es du GAEC sont les exploitant·es de la ferme : les trois repreneuses décident elles-mêmes des choix de l'exploitation."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "Le collectif prévoit d'accueillir au sein du GAEC deux paysans boulangers et d'autres personnes pourraient le rejoindre pour développer de nouvelles activités."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes ou des décisions du GAEC au-delà du cercle des associé·es n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — élevage laitier et caprin en agriculture biologique, transmission de ferme, transformation fromagère, vente en circuits courts — porte un intérêt général agricole et alimentaire."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme produit pour le territoire via la vente directe et des circuits courts ; le GAEC reste une exploitation au bénéfice de ses associé·es."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail rural : durée minimale de neuf ans et droit au renouvellement d'ordre public assurent une jouissance durable."
+  - critere: clauses_usage
+    valeur: partiel
+    note: "La ferme est conduite en agriculture biologique depuis 2002, conformément à la charte de Terre de Liens ; l'inscription formelle de clauses environnementales dans le bail n'est pas documentée."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le GAEC est lié à la Foncière Terre de Liens par un bail rural clair ; tout fermier Terre de Liens adhère à la charte du mouvement."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "L'activité du GAEC est une production agricole et fromagère vendue en circuits courts au prix du marché ; l'usage n'est pas non marchand."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant du fermage versé par le GAEC à la Foncière n'est pas documenté par les sources consultées."
+analyse:
+  forces:
+    - "Reprise collective d'une ferme par trois nouvelles paysannes en 2025."
+    - "Foncier partiellement sanctuarisé hors marché par la Foncière Terre de Liens depuis 2013."
+    - "Ouverture organisée : accueil prévu de paysans boulangers et d'autres activités."
+  fragilites:
+    - "GAEC : société civile d'exploitation dont le revenu agricole est partagé entre associé·es."
+    - "Structuration juridique précise du collectif repreneur non pleinement documentée."
+    - "Montant du fermage et clause de dévolution non documentés."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère soutenable."
+    - "Publier les statuts du collectif et sa clause de dévolution."
+    - "Formaliser les modalités d'accueil des nouvelles activités annoncées."
+  synthese: >
+    Le GAEC de Riglanne est le maillon usufruitier d'une ferme fromagère Terre
+    de Liens en pleine transmission : un collectif de trois paysannes reprend en
+    2025 une exploitation laitière biologique installée depuis 2002. Sa nature
+    de groupement d'exploitation — bénéfice partagé entre associé·es — le situe
+    du côté du mutualisme, mais son ouverture annoncée à de nouvelles activités
+    est un atout.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Terre de Liens Pays de la Loire et
+  presse spécialisée, consultées en mai 2026) : ferme fromagère de Riglanne à
+  Campbon, élevage laitier biologique conduit depuis 2002 par Anne et Christian
+  Bastard, foncier partiellement acquis par la Foncière Terre de Liens en 2013,
+  parrainage de Loréna Serra, Nolwenn Thiriet et Valentine Temple à partir de
+  février 2025, retraite des cédant·es en octobre 2025, reprise par le collectif,
+  diversification bovin laitier et caprin, projet d'accueil de deux paysans
+  boulangers. Non confirmé : forme et statuts précis du collectif repreneur,
+  montant du fermage, nature exacte du bail, clause de dévolution.
+voir_aussi: [fonciere-terre-de-liens]
+sources:
+  - titre: "Riglanne — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/pays-de-la-loire/fermes-de-la-r%C3%A9gion-pays-de-la-loire/riglanne/"
+  - titre: "Riglanne — Terre de Liens Pays de la Loire"
+    url: "https://terredeliens-paysdelaloire.org/les-fermes/riglanne/"

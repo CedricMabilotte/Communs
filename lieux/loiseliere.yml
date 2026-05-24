@@ -1,0 +1,125 @@
+uid: loiseliere
+categorie: lieu
+nom: "L'Oiselière"
+sous_titre: "Ferme d'élevage de porc de Bayeux sur foncier sanctuarisé en Normandie"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Normandie (commune non documentée)"
+  departement: "Calvados (14) — à confirmer"
+  region: "Normandie"
+annee: 2020
+url: "https://fermes.terredeliens.org/normandie/fermes-de-la-r%C3%A9gion-normandie/loiseliere/"
+resume: >
+  Ferme d'élevage d'environ quarante-deux hectares en Normandie, dédiée au porc
+  de Bayeux — race locale menacée — élevé en plein air. Une ferme laitière
+  conventionnelle a été reprise en 2020 par Côme Pascal pour la convertir en
+  agriculture biologique. La Foncière Terre de Liens a acquis quarante hectares
+  de la ferme grâce à l'épargne solidaire citoyenne, les retirant du marché ;
+  l'éleveur a acheté la maison, les bâtiments agricoles et deux hectares de
+  terres. L'élevage compte un verrat, douze truies et environ quatre-vingts
+  cochons en plein air sur dix hectares, nourris des céréales (orge et avoine)
+  produites sur trente hectares en bio, complétés par un élevage ovin. La viande
+  est vendue en vente directe à des boucher·es, restaurateur·rices et
+  particulier·es.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "Exploitation de L'Oiselière (exploitation paysanne de Côme Pascal)"
+  description: >
+    Quarante hectares de la ferme L'Oiselière sont portés durablement par la
+    Foncière Terre de Liens, structure non spéculative qui les a acquis en 2020
+    par l'épargne citoyenne et les a retirés du marché spéculatif ; leur usage
+    est confié par bail rural à l'exploitation de Côme Pascal. L'éleveur a par
+    ailleurs acquis en propre la maison, les bâtiments agricoles et deux
+    hectares de terres. Le montage combine donc une part de foncier sanctuarisé
+    et une part de propriété privée du bâti et d'une parcelle.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    L'essentiel du foncier est sanctuarisé par la Foncière Terre de Liens, mais
+    le bâti et deux hectares restent en propriété privée de l'exploitant ; le
+    porteur est une société en commandite par actions à actionnariat solidaire.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Quarante hectares ont été acquis par la Foncière Terre de Liens et retirés du marché ; le bâti et deux hectares restent en propriété privée de l'exploitant."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition de quarante hectares par la Foncière, achat du bâti et de deux hectares par l'éleveur, usage par bail rural — est public et documenté par Terre de Liens."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Les quarante hectares portés par la Foncière sont durablement soustraits au marché ; le bâti et la parcelle privés peuvent en revanche être revendus."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Les quarante hectares ont été acquis grâce à une collecte d'épargne solidaire citoyenne, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions dont les actions sont cessibles ; la forme juridique de l'exploitation et le régime de ses éventuelles parts ne sont pas documentés."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "La Foncière ne verse pas de dividende, mais l'exploitation est une ferme commerciale dégageant un revenu agricole pour l'exploitant, et le bâti reste un actif privé."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions à actionnariat solidaire ; l'exploitation usufruitière est une ferme commerciale dont la forme juridique n'est pas documentée."
+  - critere: gouvernance_collective
+    valeur: non
+    note: "La ferme paraît exploitée par un éleveur seul, Côme Pascal ; aucune gouvernance collective n'est documentée par les sources."
+  - critere: tripartisme
+    valeur: non
+    note: "La conduite de la ferme repose sur l'exploitant ; l'association du voisinage ou des collectivités à sa gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission de la ferme et de renouvellement de l'exploitant ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Installation paysanne, élevage en agriculture biologique, préservation de la race menacée du porc de Bayeux : la ferme sert un intérêt général agricole et de biodiversité."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La ferme approvisionne le territoire en vente directe et organise chaque année une porte ouverte ainsi que des soirées repas à la ferme."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'activité de la ferme est une production agricole vendue en vente directe au prix du marché ; l'usage n'est pas non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Les actions de la Foncière ne versent pas de dividende, écartant une logique de rendement ; le montant du fermage versé par l'exploitation n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage des terres de la Foncière est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitation dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Quarante hectares sanctuarisés hors marché par l'épargne citoyenne depuis 2020."
+    - "Élevage en agriculture biologique préservant une race locale menacée, le porc de Bayeux."
+    - "Ferme ancrée dans son territoire, ouverte au public (porte ouverte, repas à la ferme)."
+  fragilites:
+    - "Le bâti et deux hectares restent en propriété privée de l'exploitant, hors sanctuarisation."
+    - "Exploitation a priori individuelle, sans gouvernance collective documentée."
+    - "Forme juridique de l'exploitation et montant du fermage non documentés."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Préciser la forme juridique de l'exploitation et anticiper la transmission."
+    - "Envisager une structuration collective ouvrant la gouvernance de la ferme."
+  synthese: >
+    L'Oiselière illustre le modèle Terre de Liens appliqué à une ferme
+    d'élevage : quarante hectares sanctuarisés par l'épargne citoyenne, confiés
+    par bail rural à un éleveur qui y préserve une race locale menacée. La
+    sanctuarisation partielle — le bâti reste privé — et l'absence de structure
+    collective documentée situent la ferme du côté du mutualisme.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens et presse spécialisée, consultées en
+  mai 2026) : reprise en 2020 d'une ferme laitière conventionnelle convertie en
+  agriculture biologique, installation de Côme Pascal, élevage de porc de Bayeux
+  en plein air (un verrat, douze truies, environ quatre-vingts cochons sur dix
+  hectares), céréales bio sur trente hectares, élevage ovin complémentaire,
+  vente directe, quarante hectares acquis par la Foncière Terre de Liens, bâti
+  et deux hectares achetés par l'éleveur, porte ouverte annuelle. Non confirmé :
+  commune et département exacts, forme juridique de l'exploitation, montant du
+  fermage.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [exploitation-loiseliere]
+sources:
+  - titre: "L'Oiselière — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/normandie/fermes-de-la-r%C3%A9gion-normandie/loiseliere/"
+  - titre: "L'Oiselière — Terre de Liens"
+    url: "https://terredeliens.org/l-oiseliere.html"

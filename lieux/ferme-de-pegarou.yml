@@ -1,0 +1,122 @@
+uid: ferme-de-pegarou
+categorie: lieu
+nom: "Ferme de Pégarou"
+sous_titre: "Ferme collective de maraîchage, céréales et brassage sur foncier Terre de Liens, en Ariège"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "La Bastide-de-Besplas"
+  departement: "Ariège (09)"
+  region: "Occitanie"
+annee: 2022
+url: "https://fermedescroquants.fr/"
+resume: >
+  Ferme collective d'environ 32 hectares — terres, prairies et bois — dans la
+  vallée de l'Arize, au pied des Pyrénées. Son foncier a été acquis en 2022 par
+  la Foncière Terre de Liens, qui l'a retiré du marché ; les bâtiments ont été
+  achetés par le collectif exploitant. La ferme est animée par le GAEC Les
+  Croquants, collectif de six paysan·nes installé·es en agriculture biologique
+  depuis l'été 2022. Le collectif a mené plus de dix mois de travaux pour
+  équiper le lieu — fournil, silos, trieurs, moulin, brasserie, serres,
+  irrigation — et y cultive blé, orge, sarrasin et une quarantaine de variétés
+  de légumes, transformés en pain au levain, bière artisanale et paniers.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC Les Croquants (collectif paysan de six associé·es)"
+  description: >
+    Le foncier de la ferme de Pégarou — environ 32 hectares — a été acquis en
+    2022 par la Foncière Terre de Liens, structure non spéculative qui le porte
+    durablement. Les bâtiments ont, eux, été acquis par le collectif. L'usage
+    des terres est confié par bail rural au GAEC Les Croquants ; le collectif
+    avait d'abord signé un bail rural dans l'attente de l'acquisition par la
+    Foncière. Le montage est une propriété sanctuarisée assortie d'un bail
+    rural.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est toutefois une société en commandite par
+    actions à actionnariat solidaire et lucrativité encadrée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis en 2022 par la Foncière Terre de Liens, structure non spéculative, et retiré du marché spéculatif."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition du foncier par la Foncière, achat des bâtiments par le collectif, usage confié au GAEC par bail rural — est public et documenté par Terre de Liens et la ferme."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière et la vocation agricole préservée des terres soustraient durablement le foncier au marché."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis grâce à une collecte d'épargne solidaire citoyenne mobilisée par la Foncière Terre de Liens, hors logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier est porté par la Foncière Terre de Liens, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Les actions de la Foncière ne versent pas de dividende et le GAEC est une société civile agricole : aucune plus-value foncière privée n'est captée."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions — société commerciale à actionnariat solidaire et lucrativité encadrée ; le GAEC est une société civile."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est gérée collectivement par le GAEC Les Croquants, qui réunit six paysan·nes associé·es décidant ensemble de la conduite du lieu."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Collectif militant ancré localement, la ferme associe partenaires et public via marchés et accueil ; l'association systématique du voisinage à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le GAEC à six associé·es élargit la base de gouvernance, mais les dispositifs explicites de transmission et de renouvellement ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "La ferme produit une alimentation paysanne biologique diversifiée (pain, légumes, bière, œufs) et restaure la biodiversité d'un foncier de 32 hectares."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La ferme vend en circuit court (marché à la ferme, marchés locaux, paniers à Foix, magasin de producteurs à Toulouse) et participe à des opérations d'accueil du public."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production (pain, légumes, bière) est vendue en circuit court ; l'usage relève d'une logique paysanne de proximité sans être pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage ; les actions de la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2022."
+    - "Ferme réellement collective : GAEC de six paysan·nes décidant ensemble."
+    - "Production diversifiée et circuits courts ancrés dans le territoire."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Dispositifs de transmission et de renouvellement du collectif non documentés."
+    - "Niveau du fermage non documenté."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Formaliser les dispositifs de transmission et d'accueil de nouveaux associés."
+    - "Privilégier, pour les parcelles les plus exposées, un portage par la Fondation."
+  synthese: >
+    La ferme de Pégarou illustre une chaîne Terre de Liens portée par un
+    véritable collectif : un foncier sanctuarisé par l'épargne citoyenne,
+    confié par bail rural à un GAEC de six paysan·nes qui en gouvernent l'usage
+    ensemble. Sa principale réserve tient à la nature sociétaire du porteur, la
+    Foncière.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Ferme des Croquants et presse
+  régionale, consultées en mai 2026) : ferme collective d'environ 32 hectares
+  à La Bastide-de-Besplas, vallée de l'Arize, foncier acquis en 2022 par la
+  Foncière Terre de Liens, bâtiments achetés par le collectif, exploitation par
+  le GAEC Les Croquants créé à l'été 2022 et réunissant six associé·es,
+  activités de maraîchage, céréales, boulangerie et brasserie en agriculture
+  biologique. Non confirmé : niveau du fermage, clauses du bail rural,
+  dispositifs de transmission du collectif.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-les-croquants]
+sources:
+  - titre: "La ferme de Pégarou — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/midi-pyrenees/fermes-de-la-r%C3%A9gion-midi-pyr%C3%A9n%C3%A9es/la-ferme-du-pegarou/"
+  - titre: "Les Croquants, une ferme collective en Ariège — Ferme des Croquants"
+    url: "https://fermedescroquants.fr/les-croquants-une-ferme-collective-en-ariege/"

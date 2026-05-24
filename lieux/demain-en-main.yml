@@ -1,0 +1,129 @@
+uid: demain-en-main
+categorie: lieu
+nom: "Demain en main — écovillage de Keruzerh"
+sous_titre: "Écovillage nourricier porté par une SCIC, financé par la Coopérative Oasis"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Locoal-Mendon"
+  departement: "Morbihan (56)"
+  region: "Bretagne"
+annee: 2021
+url: "https://demainenmain.fr/"
+resume: >
+  Écovillage du hameau de Keruzerh, à Locoal-Mendon dans le Morbihan : une
+  vingtaine d'hectares, dont une dizaine de terres agricoles et le reste en
+  forêt, et un ancien hameau de bâtiments avec four à pain. Né d'une intention
+  formulée fin 2016 par Julien et son frère Fanch, le projet associe habitat,
+  production agricole et accueil. Le foncier a été acquis début 2021 par la SCIC
+  Écovillage de Keruzerh ; une coopérative d'habitants loue les logements à la
+  SCIC et une SCOP agricole encadre le maraîchage et la ferme-auberge. La
+  Coopérative Oasis a soutenu l'acquisition par un apport financier (100 000 €
+  en 2020 sur 7 ans, puis 125 000 € en 2024 sur 10 ans), en complément des
+  capitaux propres des habitant·es.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCIC Écovillage de Keruzerh (société coopérative d'intérêt collectif)"
+  usufruitier: "Coopérative d'habitants de Keruzerh (collectif d'habitant·es)"
+  description: >
+    Le foncier et le bâti du hameau de Keruzerh sont détenus en pleine propriété
+    par la SCIC Écovillage de Keruzerh, société coopérative d'intérêt collectif
+    à sociétariat multiple (habitant·es, salarié·es, collectivités,
+    investisseur·ses solidaires). Une coopérative d'habitants distincte loue les
+    logements à la SCIC et porte l'usage habitant. La Coopérative Oasis est
+    intervenue comme financeur de l'acquisition, non comme maillon de la chaîne.
+    La nature et la durée du titre d'usage liant la coopérative d'habitants à la
+    SCIC ne sont pas documentées par les sources.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Chaîne entièrement coopérative : une SCIC porte le foncier, une coopérative
+    d'habitants en porte l'usage. Formes sociétaires à lucrativité encadrée,
+    sociétariat de type mutualiste.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est porté par une SCIC non spéculative et n'est pas destiné à la revente ; aucune clause d'inaliénabilité documentée ne verrouille toutefois cette soustraction."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — SCIC propriétaire, coopérative d'habitants locataire, SCOP agricole — est public et présenté par le collectif et la Coopérative Oasis."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Le statut SCIC impose des réserves impartageables qui freinent la captation de valeur ; aucune clause d'inaliénabilité du foncier ni de dévolution n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis par capital coopératif, épargne solidaire et l'apport de la Coopérative Oasis, hors endettement spéculatif."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "SCIC et coopérative d'habitants ont un capital en parts à lucrativité encadrée par le statut coopératif ; le détail du verrouillage des parts n'est pas documenté."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Aucun maillon ne recherche de plus-value foncière, mais la chaîne est composée de sociétés coopératives à capital social, et non de structures structurellement non lucratives."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La chaîne est entièrement coopérative : SCIC et coopérative d'habitants sont des sociétés commerciales de forme coopérative, à lucrativité encadrée."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le collectif de huit familles vit et gouverne le lieu en démocratie participative ; les habitant·es décident ensemble de son devenir."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le statut SCIC associe des collectivités au sociétariat ; une gouvernance tripartite formalisée avec le voisinage n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Les formes coopératives organisent la durée et le projet prévoit l'accueil de nouveaux habitant·es ; les dispositifs précis de renouvellement ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Maraîchage, ferme-auberge, accueil et habitat écologique : l'activité du lieu sert un intérêt général agricole, social et de transition écologique."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "L'écovillage se veut un projet de territoire mobilisant les citoyen·nes ; sa reconnaissance ESUS et son ancrage local en attestent."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'usage habitant repose sur un loyer et l'accueil sur des activités économiques ; une logique de mise en commun coexiste avec une part marchande."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant du loyer versé par la coopérative d'habitants à la SCIC et son caractère non rentier ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant la coopérative d'habitants à la SCIC propriétaire ne sont pas documentées par les sources."
+analyse:
+  forces:
+    - "Chaîne entièrement coopérative, sans maillon marchand à lucrativité ouverte."
+    - "Gouvernance habitante en démocratie participative, ancrée sur le territoire."
+    - "Foncier acquis hors spéculation, par capital coopératif et épargne solidaire."
+  fragilites:
+    - "Aucune clause d'inaliénabilité ni de dévolution documentée : la soustraction au marché repose sur les statuts coopératifs."
+    - "Titre d'usage liant la coopérative d'habitants à la SCIC non documenté."
+    - "Montant du loyer et régime d'usage non documentés."
+  leviers:
+    - "Inscrire et publier une clause d'inaliénabilité du foncier porté par la SCIC."
+    - "Documenter et publier le titre d'usage et le régime du loyer."
+    - "Formaliser les dispositifs de renouvellement des habitant·es."
+  synthese: >
+    Demain en main est un écovillage à chaîne entièrement coopérative : une SCIC
+    porte le foncier, une coopérative d'habitants en porte l'usage, le tout
+    gouverné en démocratie participative et financé hors spéculation. Sa
+    silhouette est solide sur la gouvernance et la finalité ; sa marge de
+    progression tient à l'absence de verrou d'inaliénabilité et à la
+    non-publication de la convention d'usage interne au montage.
+fiabilite: >
+  Faits vérifiés (sources Demain en main, Coopérative Oasis et presse régionale,
+  consultées en mai 2026) : écovillage du hameau de Keruzerh à Locoal-Mendon,
+  foncier d'une vingtaine d'hectares dont une dizaine agricoles, intention
+  formulée fin 2016, foncier acquis début 2021 par la SCIC Écovillage de
+  Keruzerh, coopérative d'habitants louant les logements à la SCIC, SCOP
+  agricole, reconnaissance ESUS, apport de la Coopérative Oasis (100 000 € en
+  2020, 125 000 € en 2024). Non confirmé : clause d'inaliénabilité et de
+  dévolution, nature et durée du titre d'usage, montant du loyer, publication
+  des comptes.
+chaine:
+  porteurs: [scic-keruzerh]
+  usufruitiers: [habitants-keruzerh]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Demain en main — site officiel"
+    url: "https://demainenmain.fr/"
+  - titre: "Demain en main — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/demain-en-main/"
+  - titre: "À Locoal-Mendon, un éco-hameau pour reprendre « demain en main » — Eco-Bretons"
+    url: "https://www.eco-bretons.info/a-locoal-mendon-un-eco-hameau-pour-reprendre-demain-en-mains/"

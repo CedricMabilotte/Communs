@@ -1,0 +1,130 @@
+uid: ecolectif
+categorie: lieu
+nom: "Écolectif"
+sous_titre: "Écohameau autoconstruit en Haute-Garonne, du réseau de la Coopérative Oasis"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Gensac-de-Boulogne"
+  departement: "Haute-Garonne (31)"
+  region: "Occitanie"
+annee: 2009
+url: "https://ecolectif.jimdofree.com/"
+resume: >
+  Écolectif est un écohameau fondé en 2009 et implanté sur un domaine agricole
+  d'environ 46 hectares à Gensac-de-Boulogne, en Haute-Garonne, entre Toulouse et
+  Tarbes. Une vingtaine d'adultes et une vingtaine d'enfants y vivent et y
+  cultivent une « écologie relationnelle » — prendre soin de la personne, de la
+  famille, du collectif et de la terre. L'habitat y est en grande partie
+  autoconstruit en matériaux locaux et de réemploi (bois rond, murs en
+  terre-paille, finitions en terre), lors de chantiers participatifs et
+  pédagogiques. Le foncier est porté par la SCI Terres d'Ecolectif, gérée par
+  l'association collégiale Chemins d'Ecolectif, qui gouverne le lieu au
+  consentement ; les résident·es y sont prêteur·ses, locataires et co-gérant·es.
+  Écolectif fait partie du réseau d'écolieux animé par la Coopérative Oasis et le
+  mouvement Colibris.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCI Terres d'Ecolectif (parts détenues par l'association et par la société MV Finance)"
+  usufruitier: "Association Chemins d'Ecolectif (association loi 1901 à statut collégial)"
+  description: >
+    Le foncier et le bâti de l'écohameau sont détenus par la SCI Terres
+    d'Ecolectif, créée en 2012, dont le capital est partagé entre l'association
+    collégiale Chemins d'Ecolectif et la société MV Finance. L'association est
+    l'associée gérante de la SCI et porte la gouvernance et la vie du lieu : les
+    résident·es louent logements et terres par des baux d'occupation à loyers
+    modiques et contribuent au capital par des prêts d'entrée restituables au
+    départ. Le montage articule étroitement SCI foncière et association d'usage,
+    qui partagent la même base humaine — une chaîne en grande partie intégrée,
+    dont une fraction du capital de la SCI reste détenue par une société tierce.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Chaîne dont le maillon foncier est une SCI à parts non négociables, gérée
+    par une association collégiale d'usage ; le maillon d'usage relève du commun
+    citoyen, mais une fraction du capital de la SCI est détenue par une société.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est porté par une SCI dédiée à parts non négociables, soustrait au marché libre ; une fraction du capital reste détenue par une société tierce."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — SCI Terres d'Ecolectif propriétaire, association Chemins d'Ecolectif gérante et d'usage — est public et détaillé sur le site du projet."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Les parts de la SCI ne sont pas librement négociables et les apports d'entrée sont restitués au nominal ; aucune clause d'inaliénabilité explicite n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis et est financé par les apports-prêts des résident·es, restituables au nominal, hors logique d'endettement spéculatif."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts de la SCI ne sont pas librement négociables et leur cession est soumise à agrément, mais leur prix n'est pas plafonné et une société tierce en détient une fraction."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "L'association d'usage est non lucrative, mais le foncier est porté par une SCI de forme civile classique dont une part du capital appartient à une société."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le maillon foncier est une société civile et une fraction de son capital est détenue par une société tierce ; le maillon d'usage est une association non lucrative."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "L'association collégiale Chemins d'Ecolectif décide « au consentement » : les résident·es gouvernent collectivement et horizontalement l'usage du lieu."
+  - critere: tripartisme
+    valeur: partiel
+    note: "L'écohameau pratique des chantiers participatifs ouverts et une vocation pédagogique ; une gouvernance associant voisinage ou collectivités n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'écohameau accueille de nouveaux membres et souhaite s'agrandir ; les dispositifs explicites de transmission et de renouvellement ne sont pas tous documentés."
+  - critere: usage_interet_general
+    valeur: partiel
+    note: "Habitat écologique autoconstruit et chantiers pédagogiques portent un intérêt général d'écologie et de transmission ; le lieu est d'abord un lieu de vie résidentiel."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "L'écohameau organise des chantiers participatifs et une « école du collectif » ouverts sur l'extérieur ; le degré d'ouverture au territoire n'est pas pleinement documenté."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Les loyers d'occupation sont modiques et contributifs (de 60 à 200 euros tout compris) ; l'usage relève d'une logique de partage sans gratuité généralisée."
+  - critere: loyer_non_rentier
+    valeur: oui
+    note: "Les résident·es versent à la SCI des loyers modiques, de 60 à 200 euros tout compris, soutenables et sans logique de rendement."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Les résident·es disposent d'un bail d'occupation de leur espace de vie ; la durée et les conditions de renouvellement de ces baux ne sont pas documentées."
+analyse:
+  forces:
+    - "Gouvernance collégiale horizontale, décidant au consentement."
+    - "Foncier porté par une SCI à parts non négociables, apports restitués au nominal."
+    - "Loyers d'occupation modiques et habitat écologique autoconstruit."
+  fragilites:
+    - "Une fraction du capital de la SCI est détenue par une société tierce, MV Finance."
+    - "Maillon foncier de forme civile classique, non structurellement non lucrative."
+    - "Durée des baux d'occupation et clause de dévolution non documentées."
+  leviers:
+    - "Verrouiller la totalité du capital de la SCI au sein de structures non lucratives."
+    - "Inscrire une clause d'inaliénabilité et un objet foncier dans les statuts de la SCI."
+    - "Documenter la durée des baux d'occupation et la clause de dévolution."
+  synthese: >
+    Écolectif est un écohameau ancien à la gouvernance collégiale exemplaire, dont
+    le foncier est porté par une SCI gérée par les résident·es eux-mêmes. La part
+    de capital détenue par une société tierce et la forme civile classique du
+    porteur tempèrent une sortie du marché par ailleurs sincère et lisible.
+fiabilite: >
+  Faits vérifiés (sources ecolectif.jimdofree.com, passerelleco.info,
+  Coopérative Oasis et base de données Habitat Participatif et Oasis, consultées
+  en mai 2026) : écohameau Écolectif fondé en 2009 à Gensac-de-Boulogne
+  (Haute-Garonne), domaine d'environ 46 hectares, une vingtaine d'adultes et une
+  vingtaine d'enfants, habitat largement autoconstruit en matériaux locaux,
+  foncier porté par la SCI Terres d'Ecolectif créée en 2012, capital de la SCI
+  partagé entre l'association collégiale Chemins d'Ecolectif et la société MV
+  Finance, gouvernance au consentement, loyers d'occupation de 60 à 200 euros
+  tout compris, écohameau référencé dans le réseau de la Coopérative Oasis et de
+  Colibris. Non confirmé : financement direct par la Coopérative Oasis, clause de
+  dévolution, durée des baux d'occupation, rôle exact de la société MV Finance.
+chaine:
+  porteurs: [sci-terres-ecolectif]
+  usufruitiers: [chemins-ecolectif]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Cadre légal — Site de Ecolectif"
+    url: "https://ecolectif.jimdofree.com/pr%C3%A9sentation/cadre-l%C3%A9gal/"
+  - titre: "Écolectif — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/ecolectif/"

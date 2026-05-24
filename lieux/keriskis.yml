@@ -1,0 +1,124 @@
+uid: keriskis
+categorie: lieu
+nom: "Keriskis"
+sous_titre: "Ancienne ferme autogérée en Centre-Bretagne, transmise au fonds de dotation Antidote"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Centre-Bretagne"
+  departement: "Morbihan (56)"
+  region: "Bretagne"
+annee: 2024
+url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  Keriskis (« chez les chelous » en breton) est un lieu autogéré à la campagne,
+  en Centre-Bretagne, ancienne ferme acquise en 2017 puis transmise au fonds de
+  dotation Antidote en novembre 2024 — au terme de plusieurs années de travail
+  pour la sortir de la propriété privée et pérenniser sa vocation collective. Le
+  lieu cherche à générer entraide et lien social entre des personnes qui se
+  sentent isolées ou marginalisées dans la ruralité, à faire circuler pratiques
+  et connaissances, et à offrir un espace de mise au vert, de rencontres
+  politiques et de chantiers collectifs souvent en mixité choisie. Le collectif
+  rénove la ferme par chantiers participatifs et mène des activités agricoles
+  non marchandes (verger, potager, vannerie, bûcheronnage, transformation des
+  fruits) ; il se réunit à chaque saison en assemblée générale, avec des
+  commissions thématiques (accessibilité, travaux, juridique).
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "Association d'usager·es de Keriskis (association loi 1901)"
+  description: >
+    La ferme de Keriskis, acquise en propriété privée en 2017, a été transmise
+    par donation au fonds de dotation Antidote en novembre 2024, ce qui la
+    soustrait durablement au marché. Comme pour les autres lieux du réseau
+    Antidote, l'usage en est confié à une association d'usager·es par un bail
+    emphytéotique de longue durée. Le nom et les statuts précis de l'association
+    gestionnaire ne sont pas documentés publiquement par les sources consultées.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Foncier porté par un fonds de dotation non lucratif ; lieu autogéré en
+    assemblée par un collectif d'usager·es de droit civil, sans maillon
+    commercial identifié dans la chaîne.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "La ferme a été transmise au fonds de dotation Antidote, structure non spéculative qui la détient hors marché."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le principe — propriété Antidote, usage confié par bail emphytéotique — est public ; le détail de l'acte et la structure gestionnaire ne sont pas documentés."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation soustrait durablement le lieu ; le caractère consomptible ou non de la dotation et les clauses anti-revente ne sont pas confirmés par les sources."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le lieu a été transmis à Antidote par donation, hors logique d'endettement attendant une plus-value ; une levée de fonds finance les travaux."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni le fonds de dotation Antidote ni une association loi 1901 ne comportent de capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fonds de dotation et collectif associatif : aucun maillon documenté du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale identifiée : un fonds de dotation porte le foncier, un collectif d'usager·es en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le lieu est autogéré : le collectif se réunit à chaque saison en assemblée générale, avec des commissions thématiques restituant leur travail."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "L'association du voisinage ou des collectivités à la gouvernance du lieu n'est pas documentée par les sources."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Les assemblées saisonnières et les commissions organisent la décision collective ; les dispositifs formels de transmission ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Entraide et lien social pour des personnes isolées en ruralité, circulation de savoirs, rencontres politiques : le lieu sert un intérêt général social qui dépasse ses occupant·es."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "Le lieu vise à ouvrir ses espaces à des groupes et collectifs extérieurs ; l'ampleur de son ancrage local n'est pas précisément documentée."
+  - critere: usage_non_marchand
+    valeur: oui
+    note: "Les activités agricoles du lieu sont explicitement décrites comme « agricool non marchandes » et le lieu repose sur l'entraide et le partage."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant et l'existence même d'une redevance versée à Antidote ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Comme les autres lieux Antidote, l'usage relève d'un bail emphytéotique de longue durée ; la durée exacte et le renouvellement ne sont pas confirmés pour Keriskis."
+analyse:
+  forces:
+    - "Foncier sorti du marché par transmission à un fonds de dotation non lucratif."
+    - "Lieu autogéré en assemblée saisonnière, avec commissions thématiques."
+    - "Activités agricoles explicitement non marchandes."
+  fragilites:
+    - "Structure gestionnaire (nom, statuts) non documentée publiquement."
+    - "Clauses du bail, redevance et durée d'usage non confirmées."
+    - "Transfert récent (2024) : montage et gouvernance encore en consolidation."
+  leviers:
+    - "Publier le nom et les statuts de l'association d'usager·es gestionnaire."
+    - "Documenter les clauses du bail emphytéotique et la redevance."
+    - "Formaliser les dispositifs de transmission du lieu."
+  synthese: >
+    Keriskis est un lieu autogéré récemment sorti de la propriété privée par
+    transmission à Antidote. Le foncier est verrouillé et l'usage non marchand
+    affirmé, mais le montage juridique fin et la structure gestionnaire restent
+    peu documentés publiquement, ce qui laisse plusieurs angles morts.
+fiabilite: >
+  Faits vérifiés (sources Antidote / aventure-antidote.org, presse, consultées
+  en mai 2026) : ancienne ferme en Centre-Bretagne (Morbihan), acquise en 2017,
+  transmise au fonds de dotation Antidote en novembre 2024, lieu autogéré à
+  vocation d'entraide et de lien social, rénovation par chantiers participatifs,
+  activités agricoles non marchandes, gouvernance par assemblées saisonnières et
+  commissions. Non confirmé : nom et statuts de l'association gestionnaire,
+  durée et clauses du bail emphytéotique, montant de la redevance, commune
+  exacte. Fiche partiellement lacunaire, à compléter quand le montage sera
+  publié.
+chaine:
+  porteurs: [fonciere-antidote]
+  usufruitiers: [association-keriskis]
+sources:
+  - titre: "Antidote — Les lieux (Keriskis)"
+    url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "Antidote — Actualités : transferts de propriété et nouvelles de Keriskis"
+    url: "https://aventure-antidote.org/"

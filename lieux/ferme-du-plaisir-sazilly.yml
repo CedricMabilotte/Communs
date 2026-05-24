@@ -1,0 +1,125 @@
+uid: ferme-du-plaisir-sazilly
+categorie: lieu
+nom: "Ferme du Plaisir"
+sous_titre: "Ferme paysanne de polyculture et d'agroforesterie sur foncier Terre de Liens, en Indre-et-Loire"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Sazilly"
+  departement: "Indre-et-Loire (37)"
+  region: "Centre-Val de Loire"
+annee: 2018
+url: "https://www.fermeduplaisir.fr/"
+resume: >
+  Ferme de polyculture d'environ 23 hectares à Sazilly, dans le sud de la
+  Touraine. À l'abandon depuis plus de vingt ans après le départ en retraite
+  des précédents exploitants, son foncier a été acquis fin 2018 par la Foncière
+  Terre de Liens grâce à l'épargne citoyenne, permettant à François de la
+  Monneraye, paysan-boulanger, de relancer la ferme en limitant son
+  endettement. La ferme cultive des variétés anciennes de céréales
+  panifiables, transformées en farine et en pain au levain cuit au four à
+  bois ; un petit élevage complète l'activité. En février 2022, plus d'un
+  millier d'arbres ont été plantés sur 13 hectares de terres céréalières pour
+  engager la ferme dans l'agroforesterie, réponse à l'érosion des sols
+  aggravée par les pluies intenses.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC Ferme du Plaisir (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la Ferme du Plaisir — environ 23 hectares — a été acquis fin
+    2018 par la Foncière Terre de Liens, structure non spéculative qui le porte
+    durablement et l'a retiré du marché. Son usage est confié par bail rural au
+    GAEC Ferme du Plaisir, animé par François et Sophie de la Monneraye. Le
+    montage est une propriété sanctuarisée par la Foncière assortie d'un bail
+    rural, et non un démembrement au sens strict du Code civil.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est toutefois une société en commandite par
+    actions à actionnariat solidaire et lucrativité encadrée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis fin 2018 par la Foncière Terre de Liens, structure non spéculative, et retiré du marché spéculatif."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition du foncier par la Foncière Terre de Liens, usage confié au GAEC par bail rural — est public et documenté par Terre de Liens et la ferme."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière et la vocation agricole préservée des terres soustraient durablement le foncier au marché."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis grâce à l'épargne solidaire citoyenne mobilisée par la Foncière Terre de Liens, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier est porté par la Foncière Terre de Liens, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Les actions de la Foncière ne versent pas de dividende et le GAEC est une société civile agricole : aucune plus-value foncière privée n'est captée."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions — société commerciale à actionnariat solidaire et lucrativité encadrée ; le GAEC est une société civile."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "La ferme est exploitée par le GAEC Ferme du Plaisir, structure familiale réunissant François et Sophie de la Monneraye ; la gouvernance dépasse peu le couple exploitant."
+  - critere: tripartisme
+    valeur: partiel
+    note: "L'agroforesterie a mobilisé une trentaine de bénévoles et l'appui d'associations spécialisées (AFAC, SEPANT) ; l'association du voisinage à la gouvernance du lieu n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission de la ferme et de renouvellement des exploitant·es ne sont pas documentés par les sources consultées."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "La ferme produit une alimentation paysanne (céréales anciennes, pain au levain) et a engagé une démarche d'agroforesterie de restauration des sols, d'une portée qui dépasse ses exploitant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La ferme relance un site agricole laissé à l'abandon vingt ans, vend en circuit court et a mobilisé une trentaine de bénévoles pour les plantations d'arbres."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production de farine et de pain est vendue ; l'usage relève d'une logique paysanne de circuit court sans être pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage ; les actions de la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis fin 2018."
+    - "Relance d'une ferme à l'abandon depuis vingt ans, avec endettement limité."
+    - "Démarche d'agroforesterie de restauration des sols, ouverte aux bénévoles."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Exploitation portée par un GAEC familial : gouvernance peu collective."
+    - "Niveau du fermage et dispositifs de transmission non documentés."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Préciser les dispositifs de transmission de la ferme."
+    - "Privilégier, pour les parcelles les plus exposées, un portage par la Fondation."
+  synthese: >
+    La Ferme du Plaisir illustre le modèle Terre de Liens à l'échelle d'une
+    ferme familiale : un foncier sanctuarisé par l'épargne citoyenne, confié
+    par bail rural à un GAEC qui relance un site agricole abandonné et y engage
+    l'agroforesterie. Ses réserves tiennent à la nature sociétaire du porteur
+    et au caractère familial, peu collectif, de l'exploitation.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Ferme du Plaisir et registres
+  d'entreprises, consultées en mai 2026) : ferme de polyculture à Sazilly,
+  environ 23 hectares, foncier acquis fin 2018 par la Foncière Terre de Liens,
+  ferme à l'abandon depuis plus de vingt ans, exploitation par le GAEC Ferme du
+  Plaisir, activité de paysan-boulanger (céréales anciennes, pain au levain au
+  four à bois), plantation de plus d'un millier d'arbres en février 2022 sur
+  13 hectares dans une démarche d'agroforesterie. Non confirmé : niveau du
+  fermage, clauses du bail rural, dispositifs de transmission.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-ferme-du-plaisir]
+sources:
+  - titre: "Le Plaisir — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/centre/fermes-de-la-r%C3%A9gion-centre/le-plaisir/"
+  - titre: "L'agroforesterie sur la ferme du Plaisir, propriété Terre de Liens à Sazilly — Terre de Liens Centre-Val de Loire"
+    url: "https://terredeliens.org/centre/actu/lagroforesterie-sur-la-ferme-du-plaisir-propri%C3%A9t%C3%A9-terre-de-liens-%C3%A0-sazilly-en-indre-et-loire-23-08-2024/"
+  - titre: "Ferme du Plaisir — site officiel"
+    url: "https://www.fermeduplaisir.fr/"

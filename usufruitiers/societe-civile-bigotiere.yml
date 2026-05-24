@@ -1,0 +1,131 @@
+uid: societe-civile-bigotiere
+categorie: usufruitier
+nom: "Société civile de la Bigotière"
+sous_titre: "Société civile d'habitant·es propriétaire et usagère de l'écohameau de la Bigotière"
+statut_fiche: publie
+forme_juridique: "Société civile (d'attribution)"
+localisation:
+  commune: "Épiniac"
+  departement: "Ille-et-Vilaine (35)"
+  region: "Bretagne"
+annee: 2016
+url: "https://www.bigotiere.fr/"
+resume: >
+  Société civile constituée par les habitant·es de l'écohameau de la Bigotière,
+  ancienne grande ferme de la commune d'Épiniac en Ille-et-Vilaine, achetée en
+  septembre 2016 par un groupe de couples ami·es de la région rennaise. La
+  société civile détient le foncier — un ensemble de 4,3 hectares dont 1,5 ha de
+  terres agricoles, 0,5 ha de bois et environ 1 000 m² de bâtiments — et porte
+  l'habitat participatif réhabilité : neuf logements, un gîte locatif, des
+  logements d'accueil social, un fournil. Les habitant·es sont à la fois
+  associé·es de la société civile propriétaire et usager·es du lieu : la chaîne
+  est intégrée. Les activités de transition écologique et alimentaire sont
+  portées par une structure distincte, la SCIC Le Ruisseau.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Société civile de la Bigotière (société civile d'habitant·es)"
+  usufruitier: "Société civile de la Bigotière — chaîne intégrée : les habitant·es sont à la fois associé·es et usager·es"
+  description: >
+    Les habitant·es de la Bigotière se sont réuni·es dans une société civile —
+    décrite par les sources tantôt comme société civile d'attribution, tantôt
+    comme société civile immobilière — pour acquérir et réhabiliter l'écohameau.
+    Cette société civile détient le foncier et le bâti et les attribue en
+    jouissance à ses associé·es habitant·es : propriété et usage sont portés par
+    la même entité collective. La SCIC Le Ruisseau, structure distincte, porte
+    les activités d'accueil et de transition et n'est pas propriétaire de
+    l'habitat.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société civile d'habitant·es : structure collective de droit civil, sans
+    lucrativité spéculative documentée, mais dont le bénéfice — la jouissance
+    des logements — profite à ses associé·es. Chaîne intégrée propriétaire ≡
+    usagère.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "Le foncier est porté collectivement par la société civile ; dans une société civile d'attribution, les parts ouvrent toutefois un droit de jouissance attaché à une valeur potentiellement appropriable, sans verrou anti-spéculatif documenté."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une société civile a un capital en parts ; la cession est généralement soumise à l'agrément des associé·es, mais sans plafonnement de prix documenté par les sources."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de la société civile en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Société civile : personne morale de droit civil, et non société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Aucune recherche de profit spéculatif n'est documentée ; une société civile d'attribution n'a toutefois pas de verrou statutaire de non-lucrativité comparable à celui d'une association."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Le mode de décision de la société civile — proportionnel aux parts ou « une personne, une voix » — n'est pas documenté par les sources."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les habitant·es sont les associé·es de la société civile propriétaire : ils gouvernent eux-mêmes le lieu et son habitat."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "L'écohameau est passé de six couples à vingt-deux résident·es et accueille de nouveaux habitant·es ; les modalités d'admission au capital ne sont pas détaillées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de la société civile n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — habitat partagé écologique, accueil de mères isolées avec enfants, fournil, activités liées à la commune — porte un intérêt général d'habitat digne et de lien social."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Au-delà des associé·es habitant·es, le lieu accueille des mères isolées avec enfants, des activités culturelles et une distribution de produits fermiers à une centaine d'adhérent·es."
+  - critere: duree_usage
+    valeur: oui
+    note: "Les habitant·es détiennent leur jouissance via leur qualité d'associé·es de la société civile propriétaire : l'usage n'est pas précaire et n'est pas plafonné dans le temps."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales inscrites dans les statuts ou les conventions n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Chaîne intégrée : la société civile est à la fois propriétaire et entité d'usage, ce qui supprime toute précarité locative vis-à-vis d'un tiers, mais prive le montage d'un contre-pouvoir externe entre propriété et usage."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'usage habitant relève du partage entre associé·es ; une part marchande coexiste — gîte locatif, distribution de produits fermiers — sans tarification de marché documentée pour le lieu lui-même."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Les modalités financières entre la société civile et ses associé·es habitant·es — redevance, charges — ne sont pas documentées par les sources."
+analyse:
+  forces:
+    - "Foncier porté collectivement par les habitant·es eux-mêmes, en société civile."
+    - "Chaîne intégrée : aucune précarité locative vis-à-vis d'un tiers."
+    - "Lieu réellement ouvert : accueil social, fournil, distribution de produits fermiers."
+  fragilites:
+    - "Société civile d'attribution sans verrou anti-spéculatif documenté sur la valeur des parts."
+    - "Chaîne intégrée : pas de contre-pouvoir externe entre propriété et usage."
+    - "Mode de décision, transparence comptable et clause de dévolution non documentés."
+  leviers:
+    - "Documenter et, le cas échéant, plafonner la valeur de cession des parts."
+    - "Publier les statuts, le mode de décision et la clause de dévolution."
+    - "Articuler une garantie foncière externe pour pérenniser la sortie du marché."
+  synthese: >
+    La société civile de la Bigotière est une chaîne intégrée : les habitant·es
+    sont à la fois propriétaires, via la société civile, et usager·es de
+    l'écohameau. Sa force tient à l'absence de précarité locative et à une
+    réelle ouverture sociale du lieu ; sa fragilité, à l'absence de verrou
+    anti-spéculatif documenté et de contre-pouvoir externe entre propriété et
+    usage.
+fiabilite: >
+  Faits vérifiés (sources la Bigotière, Le Ruisseau Coopérative, Coopérative
+  Oasis et presse, consultées en mai 2026) : écohameau d'Épiniac acheté en
+  septembre 2016 par un groupe de couples, ensemble de 4,3 hectares dont 1,5 ha
+  agricoles et 0,5 ha de bois, environ 1 000 m² de bâtiments, habitat
+  participatif réhabilité (neuf logements, gîte, logements d'accueil social,
+  fournil), constitution d'une société civile par les habitant·es pour acquérir
+  et rénover le lieu, SCIC Le Ruisseau portant les activités de transition.
+  Non confirmé : forme exacte de la société civile (société civile d'attribution
+  ou société civile immobilière), mode de décision, modalités de cession des
+  parts, clause de dévolution, transparence comptable.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "La Bigotière — L'Habitat Participatif"
+    url: "https://www.bigotiere.fr/habitat-participatif/"
+  - titre: "Bigotière — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/bigotiere/"
+  - titre: "Le Ruisseau Coopérative — Les Scic"
+    url: "https://www.les-scic.coop/le-ruisseau-cooperative"

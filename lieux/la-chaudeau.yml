@@ -1,0 +1,124 @@
+uid: la-chaudeau
+categorie: lieu
+nom: "Ferme de la Chaudeau"
+sous_titre: "Ferme maraîchère biologique sur foncier acquis par la Foncière Terre de Liens en Meurthe-et-Moselle"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Pierre-la-Treiche"
+  departement: "Meurthe-et-Moselle (54)"
+  region: "Grand Est"
+annee: 2013
+url: "https://fermes.terredeliens.org/lorraine/fermes-de-la-r%C3%A9gion-lorraine/la-chaudeau/"
+resume: >
+  Ferme maraîchère biologique à Pierre-la-Treiche, petit village près de Toul.
+  Ancienne exploitation de cresson et de pisciculture puis ferme maraîchère
+  semi-industrielle, le site avait été abandonné après la tempête de 1999 qui
+  détruisit ses serres et mit fin à une dizaine d'emplois. En 2013, la Foncière
+  Terre de Liens a acquis les 3,66 hectares et les bâtiments grâce à une
+  souscription publique d'environ 160 000 euros, retirant la terre du marché et
+  la confiant par bail rural à un porteur de projet, Sébastien, en maraîchage
+  biologique. La ferme produit légumes, safran, champignons et endives,
+  écoulés via une AMAP et en circuit court.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "Exploitation maraîchère de la Chaudeau (exploitation individuelle)"
+  description: >
+    Le foncier de la Chaudeau — 3,66 hectares et environ 1 200 m² de bâtiments
+    avec espace de vente et de transformation — a été acquis en 2013 par la
+    Foncière Terre de Liens, structure non spéculative, grâce à une souscription
+    publique citoyenne. Son usage est confié par bail rural au maraîcher
+    installé, qui devient fermier de la Foncière. L'exploitation n'est pas
+    portée par une structure collective documentée : il s'agit d'une
+    exploitation maraîchère individuelle.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est une société en commandite par actions à
+    actionnariat solidaire. L'usage est exploité à titre individuel, sans
+    gouvernance collective documentée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Les 3,66 hectares et les bâtiments ont été acquis en 2013 par la Foncière Terre de Liens, structure non spéculative, et retirés du marché."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — achat par la Foncière en 2013 via une souscription publique, usage confié par bail au maraîcher — est public et documenté."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière et la vocation agricole maintenue soustraient durablement le foncier au marché spéculatif."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition a été financée par une souscription publique citoyenne d'environ 160 000 euros, hors logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier est porté par la Foncière Terre de Liens, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Les actions de la Foncière ne versent pas de dividende, mais l'usage est exploité par une exploitation maraîchère individuelle dont le résultat revient à l'exploitant."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions — société commerciale à actionnariat solidaire et lucrativité encadrée."
+  - critere: gouvernance_collective
+    valeur: non
+    note: "L'exploitation est conduite individuellement par le maraîcher installé : il n'y a pas de gouvernance collective du lieu."
+  - critere: tripartisme
+    valeur: partiel
+    note: "L'acquisition a mobilisé une souscription publique citoyenne et la ferme s'appuie sur une AMAP ; l'association du voisinage à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission de la ferme et de renouvellement de l'exploitant ne sont pas documentés par les sources consultées."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Maraîchage biologique nourricier, remise en culture d'une terre abandonnée et approvisionnement d'une AMAP : le lieu sert un intérêt général agricole et alimentaire."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La ferme approvisionne une AMAP de plusieurs dizaines de familles et vend en circuit court à des commerces et restaurants du territoire."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production est vendue, y compris via une AMAP qui relève d'une logique de soutien ; l'usage n'est pas pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage ; les actions de la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitant dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2013."
+    - "Remise en culture d'une terre abandonnée après la tempête de 1999."
+    - "Maraîchage biologique nourricier ancré dans le territoire via une AMAP."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Exploitation individuelle : pas de gouvernance collective du lieu."
+    - "Niveau du fermage et dispositifs de transmission non documentés."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère soutenable."
+    - "Anticiper et formaliser la transmission de la ferme."
+    - "Associer plus largement le voisinage et la collectivité à la vie du lieu."
+  synthese: >
+    La Chaudeau illustre le modèle Terre de Liens appliqué à une installation
+    individuelle : un foncier maraîcher abandonné, sanctuarisé par l'épargne
+    citoyenne et remis en culture par un porteur de projet. Le foncier est
+    libéré du marché et l'usage sécurisé, mais l'absence de structure
+    collective limite la gouvernance partagée du lieu.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens Lorraine, Banque des Territoires et
+  presse régionale, consultées en mai 2026) : ferme maraîchère à
+  Pierre-la-Treiche, ancien site de cresson et pisciculture abandonné après la
+  tempête de 1999, acquisition par la Foncière Terre de Liens en 2013, 3,66
+  hectares et environ 1 200 m² de bâtiments, souscription publique d'environ
+  160 000 euros, installation d'un maraîcher en agriculture biologique,
+  production de légumes, safran, champignons et endives, approvisionnement
+  d'une AMAP. Non confirmé : existence d'une structure d'exploitation
+  collective, niveau du fermage, dispositifs de transmission.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [exploitation-maraichere-la-chaudeau]
+sources:
+  - titre: "La Chaudeau — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/lorraine/fermes-de-la-r%C3%A9gion-lorraine/la-chaudeau/"
+  - titre: "À Pierre-la-Treiche, une exploitation agricole reprend vie grâce à Terre de Liens (54) — Banque des Territoires"
+    url: "https://www.banquedesterritoires.fr/pierre-la-treiche-une-exploitation-agricole-reprend-vie-grace-terre-de-liens-54"

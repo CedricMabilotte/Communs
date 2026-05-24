@@ -32,6 +32,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "archipel-de-la-vallee",
+    "nom": "L'Archipel de la vallée",
+    "categorie": "lieu",
+    "sous_titre": "Tiers-lieu inclusif de trois associations à Chevreuse, financé par la Coopérative Oasis",
+    "idl": 75,
+    "idl_brut": 83,
+    "idl_intrinseque": 75,
+    "score_type": "calcule",
+    "completude": 0.8,
+    "axes": {
+      "1": 65,
+      "2": 75,
+      "3": 80,
+      "4": 100,
+      "5": 100
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 75,
+      "3": 80,
+      "4": 100,
+      "5": 100
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "captage-cheze-canut",
     "nom": "Captage de la Chèze-Canut",
     "categorie": "lieu",
@@ -96,6 +128,102 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "chateau-de-la-mhotte",
+    "nom": "Château de la Mhotte",
+    "categorie": "lieu",
+    "sous_titre": "Domaine éducatif et habitat partagé sanctuarisé par un fonds de dotation",
+    "idl": 79,
+    "idl_brut": 82,
+    "idl_intrinseque": 79,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 88,
+      "2": 100,
+      "3": 71,
+      "4": 80,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 71,
+      "4": 80,
+      "5": 75
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "demain-en-main",
+    "nom": "Demain en main — écovillage de Keruzerh",
+    "categorie": "lieu",
+    "sous_titre": "Écovillage nourricier porté par une SCIC, financé par la Coopérative Oasis",
+    "idl": 61,
+    "idl_brut": 65,
+    "idl_intrinseque": 61,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "domaine-des-eveils",
+    "nom": "Domaine des Éveils",
+    "categorie": "lieu",
+    "sous_titre": "Domaine d'accueil et habitat groupé porté par une SAS et une SCIC, en Bresse bourguignonne",
+    "idl": 50,
+    "idl_brut": 54,
+    "idl_intrinseque": 50,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 38,
+      "2": 50,
+      "3": 71,
+      "4": 70,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 38,
+      "2": 50,
+      "3": 71,
+      "4": 70,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Économie sociale marchande"
+  },
+  {
     "uid": "domaine-du-rayol",
     "nom": "Domaine du Rayol",
     "categorie": "lieu",
@@ -128,6 +256,134 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "ecolectif",
+    "nom": "Écolectif",
+    "categorie": "lieu",
+    "sous_titre": "Écohameau autoconstruit en Haute-Garonne, du réseau de la Coopérative Oasis",
+    "idl": 59,
+    "idl_brut": 59,
+    "idl_intrinseque": 59,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 50,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 50,
+      "5": 62
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "ecolieu-de-la-gasnerie",
+    "nom": "L'Écolieu de la Gasnerie",
+    "categorie": "lieu",
+    "sous_titre": "Jeune écolieu de Maine-et-Loire, oasis financée par la Coopérative Oasis",
+    "idl": 34,
+    "idl_brut": 47,
+    "idl_intrinseque": 34,
+    "score_type": "calcule",
+    "completude": 0.467,
+    "axes": {
+      "1": 25,
+      "2": null,
+      "3": 80,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 25,
+      "2": null,
+      "3": 80,
+      "4": 50,
+      "5": 50
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "ecolieu-la-filerie",
+    "nom": "Écolieu la Filerie",
+    "categorie": "lieu",
+    "sous_titre": "Écolieu solognot financé par la Coopérative Oasis, sur un foncier privé en bail à construction",
+    "idl": 55,
+    "idl_brut": 57,
+    "idl_intrinseque": 55,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 35,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 35,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "ferme-de-pegarou",
+    "nom": "Ferme de Pégarou",
+    "categorie": "lieu",
+    "sous_titre": "Ferme collective de maraîchage, céréales et brassage sur foncier Terre de Liens, en Ariège",
+    "idl": 80,
+    "idl_brut": 80,
+    "idl_intrinseque": 80,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 88,
+      "2": 75,
+      "3": 71,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 75,
+      "3": 71,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "ferme-de-pommiers",
     "nom": "La Ferme de Pommiers",
     "categorie": "lieu",
@@ -154,6 +410,102 @@
     "palier": "abouti",
     "palier_label": "Libération aboutie",
     "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "ferme-du-berquet",
+    "nom": "La Ferme du Berquet — La Faille",
+    "categorie": "lieu",
+    "sous_titre": "Lieu collectif agricole et culturel autogéré en Sud-Cévennes, porté par le fonds de dotation Antidote",
+    "idl": 82,
+    "idl_brut": 88,
+    "idl_intrinseque": 82,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 88,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 75
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "ferme-du-plaisir-sazilly",
+    "nom": "Ferme du Plaisir",
+    "categorie": "lieu",
+    "sous_titre": "Ferme paysanne de polyculture et d'agroforesterie sur foncier Terre de Liens, en Indre-et-Loire",
+    "idl": 72,
+    "idl_brut": 74,
+    "idl_intrinseque": 72,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 88,
+      "2": 75,
+      "3": 50,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 75,
+      "3": 50,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "ferme-eyssal",
+    "nom": "Ferme d'Eyssal",
+    "categorie": "lieu",
+    "sous_titre": "Ferme d'élevage laitier en biodynamie consolidée par un foncier Terre de Liens, en Dordogne",
+    "idl": 63,
+    "idl_brut": 65,
+    "idl_intrinseque": 63,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 50,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 50,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
     "forme_juridique": "",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
@@ -224,6 +576,134 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "jardin-petit-pessicart",
+    "nom": "Jardin du Petit Pessicart",
+    "categorie": "lieu",
+    "sous_titre": "Tiers-lieu de permaculture acquis comptant par une coopérative, au-dessus de Nice",
+    "idl": 72,
+    "idl_brut": 72,
+    "idl_intrinseque": 72,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 81
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 81
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "keriskis",
+    "nom": "Keriskis",
+    "categorie": "lieu",
+    "sous_titre": "Ancienne ferme autogérée en Centre-Bretagne, transmise au fonds de dotation Antidote",
+    "idl": 77,
+    "idl_brut": 83,
+    "idl_intrinseque": 77,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 81,
+      "2": 100,
+      "3": 80,
+      "4": 80,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 81,
+      "2": 100,
+      "3": 80,
+      "4": 80,
+      "5": 75
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "l-aube",
+    "nom": "L'Aube",
+    "categorie": "lieu",
+    "sous_titre": "Écolieu d'accueil légué à un fonds de dotation, dans la Drôme",
+    "idl": 62,
+    "idl_brut": 66,
+    "idl_intrinseque": 62,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 69,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 69,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "la-bigotiere",
+    "nom": "La Bigotière",
+    "categorie": "lieu",
+    "sous_titre": "Écohameau d'habitat participatif en Ille-et-Vilaine, financé par la Coopérative Oasis",
+    "idl": 67,
+    "idl_brut": 69,
+    "idl_intrinseque": 67,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 58,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 58,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 75
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "la-cabrery",
     "nom": "Longo Maï — La Cabrery",
     "categorie": "lieu",
@@ -256,6 +736,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "la-chaudeau",
+    "nom": "Ferme de la Chaudeau",
+    "categorie": "lieu",
+    "sous_titre": "Ferme maraîchère biologique sur foncier acquis par la Foncière Terre de Liens en Meurthe-et-Moselle",
+    "idl": 55,
+    "idl_brut": 57,
+    "idl_intrinseque": 55,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 88,
+      "2": 50,
+      "3": 20,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 50,
+      "3": 20,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "la-durette",
     "nom": "La Durette",
     "categorie": "lieu",
@@ -278,6 +790,38 @@
       "3": 71,
       "4": 100,
       "5": 75
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "la-licorne",
+    "nom": "Ferme de la Licorne",
+    "categorie": "lieu",
+    "sous_titre": "Ferme collective de polyculture-élevage sur foncier acquis par la Foncière Terre de Liens dans l'Allier",
+    "idl": 79,
+    "idl_brut": 85,
+    "idl_intrinseque": 79,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 88,
+      "2": 75,
+      "3": 100,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 75,
+      "3": 100,
+      "4": 100,
+      "5": 69
     },
     "palier": "abouti",
     "palier_label": "Libération aboutie",
@@ -384,6 +928,70 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "le-jointout",
+    "nom": "Ferme du Jointout",
+    "categorie": "lieu",
+    "sous_titre": "Ferme collective d'élevage et de polyculture sur foncier Terre de Liens, en Bresse bourguignonne",
+    "idl": 82,
+    "idl_brut": 82,
+    "idl_intrinseque": 82,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 81,
+      "2": 75,
+      "3": 86,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 81,
+      "2": 75,
+      "3": 86,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "les-petites-berouettes",
+    "nom": "Les Petites Berouettes",
+    "categorie": "lieu",
+    "sous_titre": "Ferme maraîchère bio sur foncier sanctuarisé en Ille-et-Vilaine",
+    "idl": 63,
+    "idl_brut": 63,
+    "idl_intrinseque": 63,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 88,
+      "2": 50,
+      "3": 57,
+      "4": 80,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 50,
+      "3": 57,
+      "4": 80,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "limans",
     "nom": "Longo Maï — Limans",
     "categorie": "lieu",
@@ -448,6 +1056,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "loiseliere",
+    "nom": "L'Oiselière",
+    "categorie": "lieu",
+    "sous_titre": "Ferme d'élevage de porc de Bayeux sur foncier sanctuarisé en Normandie",
+    "idl": 27,
+    "idl_brut": 28,
+    "idl_intrinseque": 27,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 0,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 0,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "magnantru",
     "nom": "Ferme de Magnantru",
     "categorie": "lieu",
@@ -478,6 +1118,38 @@
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "maison-blanche-antre-toit",
+    "nom": "La Maison Blanche — L'Antre Toit",
+    "categorie": "lieu",
+    "sous_titre": "Maison d'accueil autogérée pour jeunes exilé·es à Gaillac, portée par le fonds de dotation Antidote",
+    "idl": 88,
+    "idl_brut": 91,
+    "idl_intrinseque": 88,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 88,
+      "2": 100,
+      "3": 71,
+      "4": 100,
+      "5": 100
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 71,
+      "4": 100,
+      "5": 100
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
   },
   {
     "uid": "mas-de-granier",
@@ -541,6 +1213,102 @@
     "forme_juridique": "",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "oasis-coq-a-lame",
+    "nom": "Oasis du Coq à l'Âme",
+    "categorie": "lieu",
+    "sous_titre": "Écolieu charentais accompagné par la Coopérative Oasis, futur ÉcoQuartier citoyen",
+    "idl": 68,
+    "idl_brut": 70,
+    "idl_intrinseque": 68,
+    "score_type": "calcule",
+    "completude": 0.933,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 75
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "riglanne",
+    "nom": "Ferme de Riglanne",
+    "categorie": "lieu",
+    "sous_titre": "Ferme fromagère bio en transmission sur foncier partiellement sanctuarisé en Loire-Atlantique",
+    "idl": 65,
+    "idl_brut": 65,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "tera",
+    "nom": "TERA",
+    "categorie": "lieu",
+    "sous_titre": "Écosystème coopératif rural en Lot-et-Garonne, financé par la Coopérative Oasis",
+    "idl": 63,
+    "idl_brut": 67,
+    "idl_intrinseque": 63,
+    "score_type": "calcule",
+    "completude": 0.867,
+    "axes": {
+      "1": 65,
+      "2": 50,
+      "3": 86,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 50,
+      "3": 86,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -804,8 +1572,8 @@
     "nom": "Antidote",
     "categorie": "porteur",
     "sous_titre": "Fonds de dotation cédant l'usage de lieux par bail emphytéotique de 99 ans",
-    "idl": 68,
-    "idl_brut": 70,
+    "idl": 74,
+    "idl_brut": 76,
     "idl_intrinseque": 74,
     "score_type": "calcule",
     "completude": 0.941,
@@ -814,7 +1582,7 @@
       "2": 100,
       "3": 71,
       "4": 75,
-      "5": 50
+      "5": 72
     },
     "axes_intrinseques": {
       "1": 65,
@@ -878,7 +1646,7 @@
       "2": 65,
       "3": 64,
       "4": 71,
-      "5": 72
+      "5": 69
     },
     "axes_intrinseques": {
       "1": 31,
@@ -960,6 +1728,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "fonds-fraternite-pour-demain",
+    "nom": "Fonds de dotation Fraternité pour Demain",
+    "categorie": "porteur",
+    "sous_titre": "Fonds de dotation qui sanctuarise le foncier des oasis hors marché",
+    "idl": 59,
+    "idl_brut": 67,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 0.765,
+    "axes": {
+      "1": 69,
+      "2": 75,
+      "3": 50,
+      "4": 83,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 69,
+      "2": 100,
+      "3": 50,
+      "4": 83,
+      "5": 75
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Fonds de dotation (loi du 4 août 2008)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "fonds-la-terre-en-commun",
     "nom": "Fonds de dotation « La Terre en commun »",
     "categorie": "porteur",
@@ -989,6 +1789,38 @@
     "forme_juridique": "Fonds de dotation (loi du 4 août 2008)",
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "fonds-sdh",
+    "nom": "Fonds de dotation SDH",
+    "categorie": "porteur",
+    "sous_titre": "Fonds de dotation portant le foncier de l'écosystème TERA en Lot-et-Garonne",
+    "idl": 49,
+    "idl_brut": 60,
+    "idl_intrinseque": 55,
+    "score_type": "calcule",
+    "completude": 0.647,
+    "axes": {
+      "1": 62,
+      "2": 50,
+      "3": 50,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 62,
+      "2": 85,
+      "3": 50,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "Fonds de dotation (loi du 4 août 2008)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -1024,6 +1856,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "le-temps-des-possibles",
+    "nom": "SAS Le Temps des Possibles",
+    "categorie": "porteur",
+    "sous_titre": "Société par actions propriétaire du foncier du Domaine des Éveils",
+    "idl": 10,
+    "idl_brut": 14,
+    "idl_intrinseque": 10,
+    "score_type": "calcule",
+    "completude": 0.471,
+    "axes": {
+      "1": 19,
+      "2": 38,
+      "3": 50,
+      "4": 0,
+      "5": null
+    },
+    "axes_intrinseques": {
+      "1": 19,
+      "2": 38,
+      "3": 50,
+      "4": 0,
+      "5": null
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "Société par actions simplifiée (SAS)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Économie sociale marchande"
+  },
+  {
     "uid": "lurzaindia-sca",
     "nom": "Lurzaindia (SCA)",
     "categorie": "porteur",
@@ -1054,6 +1918,134 @@
     "montage_type": "propriete_sanctuarisee",
     "montage_label": "Propriété sanctuarisée + bail de long terme",
     "nature_juridique": "Économie sociale marchande"
+  },
+  {
+    "uid": "sc-hameau-des-buis",
+    "nom": "Société Civile le Hameau des Buis",
+    "categorie": "porteur",
+    "sous_titre": "Société civile propriétaire du foncier de l'écovillage, aux parts détenues par une association",
+    "idl": 33,
+    "idl_brut": 37,
+    "idl_intrinseque": 34,
+    "score_type": "calcule",
+    "completude": 0.765,
+    "axes": {
+      "1": 38,
+      "2": 50,
+      "3": 50,
+      "4": 30,
+      "5": 25
+    },
+    "axes_intrinseques": {
+      "1": 38,
+      "2": 65,
+      "3": 50,
+      "4": 30,
+      "5": 25
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "Société civile",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "sci-terres-ecolectif",
+    "nom": "SCI Terres d'Ecolectif",
+    "categorie": "porteur",
+    "sous_titre": "Société civile portant le foncier de l'écohameau Écolectif en Haute-Garonne",
+    "idl": 51,
+    "idl_brut": 54,
+    "idl_intrinseque": 53,
+    "score_type": "calcule",
+    "completude": 0.882,
+    "axes": {
+      "1": 50,
+      "2": 40,
+      "3": 86,
+      "4": 42,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 40,
+      "3": 86,
+      "4": 42,
+      "5": 75
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Société civile immobilière (SCI)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "scic-coq-a-lame",
+    "nom": "SCIC de l'Oasis du Coq à l'Âme",
+    "categorie": "porteur",
+    "sous_titre": "Société coopérative propriétaire du domaine d'Echoisy en Charente",
+    "idl": 53,
+    "idl_brut": 56,
+    "idl_intrinseque": 53,
+    "score_type": "calcule",
+    "completude": 0.882,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 50,
+      "4": 58,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 50,
+      "3": 50,
+      "4": 58,
+      "5": 75
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "scic-keruzerh",
+    "nom": "SCIC Écovillage de Keruzerh",
+    "categorie": "porteur",
+    "sous_titre": "Coopérative d'intérêt collectif propriétaire du hameau de l'écovillage Demain en main",
+    "idl": 49,
+    "idl_brut": 57,
+    "idl_intrinseque": 49,
+    "score_type": "calcule",
+    "completude": 0.706,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 86,
+      "4": 58,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 50,
+      "3": 86,
+      "4": 58,
+      "5": 50
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "scic-terres-de-sources",
@@ -1088,6 +2080,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "assemblee-des-usages-nddl",
+    "nom": "Assemblée des usages de la ZAD de Notre-Dame-des-Landes",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif de gestion de l'usage des terres de l'ancienne ZAD",
+    "idl": 73,
+    "idl_brut": 75,
+    "idl_intrinseque": 81,
+    "score_type": "calcule",
+    "completude": 0.938,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 94,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 50,
+      "3": 94,
+      "4": 100,
+      "5": 88
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Collectif sans personnalité juridique propre",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
     "uid": "association-ancrage",
     "nom": "Ancrage",
     "categorie": "usufruitier",
@@ -1117,6 +2141,38 @@
     "forme_juridique": "Association loi 1901",
     "montage_type": "demembrement",
     "montage_label": "Démembrement nue-propriété / usufruit",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "association-antre-toit",
+    "nom": "L'Antre Toit",
+    "categorie": "usufruitier",
+    "sous_titre": "Association d'usager·es gérant la Maison Blanche de Gaillac",
+    "idl": 85,
+    "idl_brut": 97,
+    "idl_intrinseque": 85,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 100,
+      "5": 100
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 100,
+      "5": 100
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
     "nature_juridique": "Commun citoyen"
   },
   {
@@ -1150,6 +2206,102 @@
     "montage_type": "propriete_publique",
     "montage_label": "Propriété publique inaliénable",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "association-hameau-des-buis",
+    "nom": "Association des habitant·es du Hameau des Buis",
+    "categorie": "usufruitier",
+    "sous_titre": "Association d'usage des habitant·es de l'écovillage intergénérationnel",
+    "idl": 57,
+    "idl_brut": 63,
+    "idl_intrinseque": 65,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 71,
+      "4": 75,
+      "5": 36
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 71,
+      "4": 75,
+      "5": 36
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "association-keriskis",
+    "nom": "Association d'usager·es de Keriskis",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif autogérant le lieu de Keriskis en Centre-Bretagne",
+    "idl": 72,
+    "idl_brut": 82,
+    "idl_intrinseque": 73,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 100,
+      "2": 75,
+      "3": 86,
+      "4": 75,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 75,
+      "3": 86,
+      "4": 75,
+      "5": 81
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901 (présumée — statuts non publiés)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "association-la-faille",
+    "nom": "La Faille",
+    "categorie": "usufruitier",
+    "sous_titre": "Association d'usager·es autogérant la ferme du Berquet en Sud-Cévennes",
+    "idl": 80,
+    "idl_brut": 92,
+    "idl_intrinseque": 81,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 100,
+      "5": 81
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
   },
   {
     "uid": "association-la-talvere",
@@ -1248,6 +2400,102 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "chemins-ecolectif",
+    "nom": "Association Chemins d'Ecolectif",
+    "categorie": "usufruitier",
+    "sous_titre": "Association collégiale gouvernant l'écohameau Écolectif en Haute-Garonne",
+    "idl": 62,
+    "idl_brut": 66,
+    "idl_intrinseque": 80,
+    "score_type": "calcule",
+    "completude": 0.875,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 81,
+      "4": 50,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 81,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901 à statut collégial",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "collectif-aubascule",
+    "nom": "Collectif de l'Aubascule",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif d'habitant·es animant l'écolieu de l'Aube, dans la Drôme",
+    "idl": 60,
+    "idl_brut": 74,
+    "idl_intrinseque": 63,
+    "score_type": "calcule",
+    "completude": 0.625,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 86,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 50,
+      "3": 86,
+      "4": 100,
+      "5": 64
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Collectif d'habitant·es (forme juridique non documentée)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "collectif-gasnerie",
+    "nom": "Collectif de l'Écolieu de la Gasnerie",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif d'habitant·es-usager·es de l'écolieu de la Gasnerie, en Maine-et-Loire",
+    "idl": 38,
+    "idl_brut": 56,
+    "idl_intrinseque": 44,
+    "score_type": "calcule",
+    "completude": 0.375,
+    "axes": {
+      "1": null,
+      "2": null,
+      "3": 71,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": null,
+      "2": null,
+      "3": 71,
+      "4": 75,
+      "5": 50
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
     "uid": "commune-flocques",
     "nom": "Commune de Flocques",
     "categorie": "usufruitier",
@@ -1310,6 +2558,38 @@
     "montage_type": "demembrement",
     "montage_label": "Démembrement nue-propriété / usufruit",
     "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "coop-du-tilleul",
+    "nom": "Coop du Tilleul",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif d'usage exploitant la ferme de Lartel au cœur de TERA",
+    "idl": 57,
+    "idl_brut": 67,
+    "idl_intrinseque": 57,
+    "score_type": "calcule",
+    "completude": 0.688,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 50,
+      "3": 71,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "cooperatives-longo-mai",
@@ -1440,6 +2720,70 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "exploitation-loiseliere",
+    "nom": "Exploitation de L'Oiselière",
+    "categorie": "usufruitier",
+    "sous_titre": "Exploitation paysanne de Côme Pascal, éleveur de porc de Bayeux en Normandie",
+    "idl": 26,
+    "idl_brut": 33,
+    "idl_intrinseque": 27,
+    "score_type": "calcule",
+    "completude": 0.562,
+    "axes": {
+      "1": 100,
+      "2": 0,
+      "3": 100,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 0,
+      "3": 100,
+      "4": 75,
+      "5": 60
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "exploitation-maraichere-la-chaudeau",
+    "nom": "Exploitation maraîchère de la Chaudeau",
+    "categorie": "usufruitier",
+    "sous_titre": "Exploitation maraîchère individuelle fermière de la Foncière Terre de Liens, à Pierre-la-Treiche",
+    "idl": 22,
+    "idl_brut": 23,
+    "idl_intrinseque": 22,
+    "score_type": "calcule",
+    "completude": 0.875,
+    "axes": {
+      "1": 38,
+      "2": 0,
+      "3": 30,
+      "4": 75,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 38,
+      "2": 0,
+      "3": 30,
+      "4": 75,
+      "5": 69
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "Exploitation agricole individuelle",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "gaec-bergers-de-la-sure",
     "nom": "GAEC des Bergers de la Sure",
     "categorie": "usufruitier",
@@ -1472,6 +2816,166 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "gaec-de-la-licorne",
+    "nom": "GAEC Reconnu de la Licorne",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole d'exploitation en commun de la ferme de la Licorne, à Chouvigny",
+    "idl": 71,
+    "idl_brut": 78,
+    "idl_intrinseque": 71,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 69
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "gaec-de-riglanne",
+    "nom": "GAEC de Riglanne",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole reprenant la ferme fromagère de Riglanne en Loire-Atlantique",
+    "idl": 62,
+    "idl_brut": 68,
+    "idl_intrinseque": 69,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 100,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 60
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "gaec-du-jointout",
+    "nom": "GAEC du Jointout",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole d'exploitation en commun de la ferme collective du Jointout, à Torpes",
+    "idl": 71,
+    "idl_brut": 76,
+    "idl_intrinseque": 71,
+    "score_type": "calcule",
+    "completude": 0.875,
+    "axes": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 62
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 62
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "gaec-eyssal",
+    "nom": "GAEC d'Eyssal",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole exploitant la ferme laitière d'Eyssal, en biodynamie, en Dordogne",
+    "idl": 58,
+    "idl_brut": 66,
+    "idl_intrinseque": 64,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 100,
+      "4": 75,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "gaec-ferme-du-plaisir",
+    "nom": "GAEC Ferme du Plaisir",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole exploitant la Ferme du Plaisir, sur foncier Terre de Liens en Indre-et-Loire",
+    "idl": 68,
+    "idl_brut": 78,
+    "idl_intrinseque": 69,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "gaec-ferme-la-durette",
     "nom": "GAEC de la ferme de la Durette",
     "categorie": "usufruitier",
@@ -1494,6 +2998,70 @@
       "3": 86,
       "4": 75,
       "5": 62
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "gaec-les-croquants",
+    "nom": "GAEC Les Croquants",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif paysan de six associé·es exploitant la ferme de Pégarou, en Ariège",
+    "idl": 68,
+    "idl_brut": 78,
+    "idl_intrinseque": 69,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 75,
+      "3": 100,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "gaec-les-ptites-berouettes",
+    "nom": "GAEC Les P'tites Berouettes",
+    "categorie": "usufruitier",
+    "sous_titre": "Groupement agricole maraîcher exploitant la ferme Les Petites Berouettes en Ille-et-Vilaine",
+    "idl": 60,
+    "idl_brut": 66,
+    "idl_intrinseque": 67,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 86,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 75,
+      "3": 86,
+      "4": 75,
+      "5": 60
     },
     "palier": "engage",
     "palier_label": "Engagement réel",
@@ -1534,6 +3102,70 @@
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective verrouillée",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "habitants-echoisy",
+    "nom": "Association des habitants du domaine d'Echoisy",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif habitant l'Oasis du Coq à l'Âme en bail emphytéotique",
+    "idl": 69,
+    "idl_brut": 74,
+    "idl_intrinseque": 80,
+    "score_type": "calcule",
+    "completude": 0.875,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 81,
+      "4": 75,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 81,
+      "4": 75,
+      "5": 75
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Commun citoyen"
+  },
+  {
+    "uid": "habitants-keruzerh",
+    "nom": "Coopérative d'habitants de Keruzerh",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif d'habitant·es locataire des logements de l'écovillage Demain en main",
+    "idl": 56,
+    "idl_brut": 66,
+    "idl_intrinseque": 59,
+    "score_type": "calcule",
+    "completude": 0.688,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 86,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 50,
+      "3": 86,
+      "4": 75,
+      "5": 70
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Coopérative d'habitants",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "le-village-vertical",
@@ -1600,6 +3232,134 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "sci-archipel-vallee",
+    "nom": "SCI de l'Archipel de la vallée",
+    "categorie": "usufruitier",
+    "sous_titre": "Société civile immobilière de trois associations, propriétaire et usagère du tiers-lieu inclusif de Chevreuse",
+    "idl": 64,
+    "idl_brut": 82,
+    "idl_intrinseque": 64,
+    "score_type": "calcule",
+    "completude": 0.562,
+    "axes": {
+      "1": 50,
+      "2": 75,
+      "3": 100,
+      "4": 100,
+      "5": 100
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 75,
+      "3": 100,
+      "4": 100,
+      "5": 100
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Société civile immobilière (SCI)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "scic-domaine-des-eveils",
+    "nom": "SCIC Le Domaine des Éveils",
+    "categorie": "usufruitier",
+    "sous_titre": "Coopérative d'intérêt collectif exploitant le Domaine des Éveils, en Bresse bourguignonne",
+    "idl": 53,
+    "idl_brut": 61,
+    "idl_intrinseque": 54,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 100,
+      "4": 70,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 50,
+      "3": 100,
+      "4": 75,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC) sous forme de SAS",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "scic-e3p-pessicart",
+    "nom": "SCIC E3P — École de Permaculture du Petit Pessicart",
+    "categorie": "usufruitier",
+    "sous_titre": "Coopérative d'intérêt collectif propriétaire et usagère du Jardin du Petit Pessicart",
+    "idl": 68,
+    "idl_brut": 72,
+    "idl_intrinseque": 68,
+    "score_type": "calcule",
+    "completude": 0.875,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 100,
+      "4": 100,
+      "5": 77
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 50,
+      "3": 100,
+      "4": 100,
+      "5": 77
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC) sous forme de SAS à capital variable",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "scic-semeurs-de-graines",
+    "nom": "SCIC Les Semeurs de Graines",
+    "categorie": "usufruitier",
+    "sous_titre": "Coopérative occupant l'Écolieu la Filerie par un bail à construction",
+    "idl": 59,
+    "idl_brut": 63,
+    "idl_intrinseque": 59,
+    "score_type": "calcule",
+    "completude": 0.875,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 81,
+      "4": 100,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 50,
+      "3": 81,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "sctl",
     "nom": "Société Civile des Terres du Larzac",
     "categorie": "usufruitier",
@@ -1630,6 +3390,70 @@
     "montage_type": "propriete_publique",
     "montage_label": "Propriété publique inaliénable",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "societe-civile-bigotiere",
+    "nom": "Société civile de la Bigotière",
+    "categorie": "usufruitier",
+    "sous_titre": "Société civile d'habitant·es propriétaire et usagère de l'écohameau de la Bigotière",
+    "idl": 57,
+    "idl_brut": 68,
+    "idl_intrinseque": 63,
+    "score_type": "calcule",
+    "completude": 0.688,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 80,
+      "4": 100,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 75,
+      "3": 80,
+      "4": 100,
+      "5": 81
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Société civile (d'attribution)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective verrouillée",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "usagers-la-mhotte",
+    "nom": "École de la Mhotte et association Acoeur",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif usager du domaine du Château de la Mhotte, dans l'Allier",
+    "idl": 78,
+    "idl_brut": 86,
+    "idl_intrinseque": 81,
+    "score_type": "calcule",
+    "completude": 0.812,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 75,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 86,
+      "4": 75,
+      "5": 85
+    },
+    "palier": "abouti",
+    "palier_label": "Libération aboutie",
+    "palier_couleur": "#356026",
+    "forme_juridique": "Associations loi 1901",
+    "montage_type": "propriete_sanctuarisee",
+    "montage_label": "Propriété sanctuarisée + bail de long terme",
+    "nature_juridique": "Commun citoyen"
   },
   {
     "uid": "clt-bruxelles",

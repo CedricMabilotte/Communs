@@ -1,0 +1,128 @@
+uid: sci-terres-ecolectif
+categorie: porteur
+nom: "SCI Terres d'Ecolectif"
+sous_titre: "Société civile portant le foncier de l'écohameau Écolectif en Haute-Garonne"
+statut_fiche: publie
+forme_juridique: "Société civile immobilière (SCI)"
+localisation:
+  commune: "Gensac-de-Boulogne"
+  departement: "Haute-Garonne (31)"
+  region: "Occitanie"
+annee: 2012
+url: "https://ecolectif.jimdofree.com/"
+resume: >
+  La SCI Terres d'Ecolectif, créée en 2012, est la société civile immobilière
+  qui détient le foncier de l'écohameau Écolectif — un domaine agricole d'environ
+  46 hectares à Gensac-de-Boulogne, en Haute-Garonne, entre Toulouse et Tarbes.
+  Ses parts sociales sont détenues par l'association collégiale Chemins
+  d'Ecolectif et par la société MV Finance. La SCI loue le foncier et les
+  habitations aux résident·es de l'écohameau, qui sont tout à la fois prêteur·ses,
+  locataires et co-gérant·es du lieu : à l'entrée, les nouveaux membres apportent
+  une somme à la SCI sous forme de prêt, restituée dans les six mois aux membres
+  qui partent. La SCI est gérée par l'association Chemins d'Ecolectif, désignée
+  comme associée gérante.
+montage:
+  type: propriete_collective
+  description: >
+    La SCI Terres d'Ecolectif détient le foncier et le bâti de l'écohameau
+    Écolectif. Son capital est partagé entre l'association collégiale Chemins
+    d'Ecolectif et la société MV Finance ; l'association en est l'associée
+    gérante. La SCI loue logements et terres aux résident·es, qui contribuent au
+    capital par des prêts d'entrée restituables au départ. Le montage est une
+    propriété collective verrouillée par une société civile à parts non
+    négociables, mais une fraction du capital est détenue par une société tierce
+    et la SCI demeure une structure de forme civile et non non lucrative.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société civile immobilière à parts non librement négociables, gérée par une
+    association collégiale ; une fraction du capital est toutefois détenue par
+    une société tierce, et la SCI n'est pas une structure structurellement non
+    lucrative.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le foncier est porté par une SCI dédiée à l'écohameau ; aucune clause statutaire d'inaliénabilité explicite n'est documentée par les sources."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts d'une SCI ne sont pas librement négociables sur un marché et leur cession est soumise à agrément ; le prix de cession n'est toutefois pas plafonné et une société tierce en détient une fraction."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "La société civile figure au bas de l'échelle de protection foncière, en dessous de la fondation, du fonds de dotation et de la personne publique."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence d'une clause de dévolution désintéressée du patrimoine de la SCI n'est pas documentée par les sources consultées."
+  - critere: forme_non_lucrative
+    valeur: non
+    note: "La SCI est une société civile de forme classique, et non une structure structurellement non lucrative (fondation, fonds de dotation, association)."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Les apports des résident·es sont des prêts restituables et non du capital rémunéré ; la part détenue par la société MV Finance et son régime de rémunération ne sont pas documentés."
+  - critere: gestion_desinteressee
+    valeur: partiel
+    note: "La SCI est gérée par l'association collégiale Chemins d'Ecolectif, à but non lucratif ; le rôle de la société MV Finance dans la gestion n'est pas documenté."
+  - critere: independance_rendement
+    valeur: partiel
+    note: "Les résident·es-prêteur·ses n'attendent pas de rendement, leurs apports étant restituables au nominal ; la logique de la société MV Finance vis-à-vis de la SCI n'est pas documentée."
+  - critere: ca_collegial
+    valeur: oui
+    note: "La SCI est gérée par l'association Chemins d'Ecolectif, dirigée par un Cercle d'administration collégial décidant au consentement."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "Les résident·es de l'écohameau sont associé·es à la gouvernance : ils sont tout à la fois prêteur·ses, locataires et co-gérant·es du lieu."
+  - critere: transparence
+    valeur: partiel
+    note: "Le projet publie en ligne son cadre légal et ses statuts ; la publication régulière des comptes de la SCI n'est pas confirmée par les sources."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "La SCI a pour fonction de porter le foncier de l'écohameau ; un objet statutaire explicite de soustraction au marché n'est pas documenté par les sources."
+  - critere: agrement_ig
+    valeur: non
+    note: "La SCI Terres d'Ecolectif ne bénéficie d'aucune reconnaissance d'utilité publique ni d'agrément d'intérêt général documenté."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de la SCI à un risque de requalification fiscale n'est pas documentée par les sources consultées."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "Le projet rend compte de son fonctionnement par un site public détaillant son cadre légal ; une reddition de comptes formelle au-delà des membres n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: oui
+    note: "La SCI loue logements et terres aux résident·es à des loyers modiques (de 60 à 200 euros tout compris), sans rechercher de revenu locatif de marché."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Les résident·es disposent d'un bail d'occupation de leur espace de vie ; la durée et les conditions de renouvellement de ces baux ne sont pas documentées."
+analyse:
+  forces:
+    - "Foncier porté par une société civile dédiée, gérée par une association collégiale."
+    - "Parts non librement négociables, apports d'entrée restitués au nominal."
+    - "Loyers modiques : usage offert hors logique de rendement locatif."
+  fragilites:
+    - "Une fraction du capital de la SCI est détenue par une société tierce, MV Finance."
+    - "Forme de société civile classique, non structurellement non lucrative."
+    - "Clause de dévolution et objet foncier statutaire non documentés."
+  leviers:
+    - "Verrouiller la totalité du capital de la SCI au sein de structures non lucratives."
+    - "Inscrire dans les statuts une clause d'inaliénabilité et un objet foncier explicites."
+    - "Documenter la clause de dévolution et publier les comptes de la SCI."
+  synthese: >
+    La SCI Terres d'Ecolectif porte le foncier de l'écohameau Écolectif par une
+    société civile à parts non négociables, gérée par une association collégiale
+    et offrant des loyers modiques. La part de capital détenue par une société
+    tierce et la forme civile non lucrative invitent à un verrouillage statutaire
+    plus complet.
+fiabilite: >
+  Faits vérifiés (sources ecolectif.jimdofree.com, base de données Habitat
+  Participatif et Oasis et registres d'entreprises, consultées en mai 2026) : SCI
+  Terres d'Ecolectif créée en 2012, propriétaire du foncier de l'écohameau
+  Écolectif à Gensac-de-Boulogne (Haute-Garonne), domaine d'environ 46 hectares,
+  parts détenues par l'association Chemins d'Ecolectif et la société MV Finance,
+  association gérante de la SCI, résident·es prêteur·ses-locataires-cogérant·es,
+  apport d'entrée restitué dans les six mois au départ, loyers de 60 à 200 euros
+  tout compris. Non confirmé : clause de dévolution, objet statutaire de la SCI,
+  rôle exact de MV Finance, durée des baux, publication des comptes.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Cadre légal — Site de Ecolectif"
+    url: "https://ecolectif.jimdofree.com/pr%C3%A9sentation/cadre-l%C3%A9gal/"
+  - titre: "Écolectif — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/ecolectif/"

@@ -118,6 +118,10 @@ indice:
   formule: >
     IdL_brut = (score_1 × score_2 × … × score_k) ^ (1 / k), où k est le nombre
     d'axes effectivement renseignés (axes entièrement « inconnu » exclus).
+    Chaque axe est planché à 1 dans le produit : un axe nul écrase l'Indice
+    très bas, sans l'annuler purement — un montage fort sur quatre axes et
+    effondré sur un cinquième vaut « éloigné », non « rien ». Le profil affiché
+    conserve le 0 réel de l'axe.
   justification_agregation: >
     L'agrégation est NON COMPENSATOIRE. Une moyenne arithmétique laisserait un
     montage solide sur quatre axes mais commercial de nature (axe 2 effondré)

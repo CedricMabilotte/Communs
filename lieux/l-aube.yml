@@ -1,0 +1,128 @@
+uid: l-aube
+categorie: lieu
+nom: "L'Aube"
+sous_titre: "Écolieu d'accueil légué à un fonds de dotation, dans la Drôme"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: null
+  departement: "Drôme (26)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2022
+url: "https://www.aubascule.fr/"
+resume: >
+  L'Aube est un écolieu niché dans une combe aux pieds des Trois Becs, dans la
+  Drôme : un lieu de vie partagée qui abrite une quinzaine d'habitant·es. Son
+  histoire commence à la fin des années 1970, quand Louis et Mary, venus de
+  Belgique, s'y installent et en font un lieu de stages et de partages,
+  transmis ensuite à un collectif jusqu'en 2022. Cette année-là, le lieu fait
+  l'objet d'une donation au fonds de dotation Fraternité pour Demain, qui en
+  confie la gestion à la Coopérative Oasis ; celle-ci y installe le collectif
+  de l'Aubascule. Le lieu fait vivre trois pôles : accueil de stages, accueil
+  solidaire de personnes en situation de vulnérabilité, et pôle permacole. Il
+  est engagé dans une démarche Oasis de Biodiversité via une Obligation Réelle
+  Environnementale. L'Aube est à l'origine du projet de foncière de la
+  Coopérative Oasis.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de dotation Fraternité pour Demain"
+  usufruitier: "Collectif de l'Aubascule (collectif d'habitant·es)"
+  description: >
+    En 2022, l'écolieu de l'Aube a fait l'objet d'une donation au fonds de
+    dotation Fraternité pour Demain, structure non lucrative qui en conserve la
+    propriété sanctuarisée hors marché. Le fonds en a confié la gestion à la
+    Coopérative Oasis, laquelle — n'ayant pas vocation à gérer directement un
+    écolieu — y a installé le collectif de l'Aubascule, qui en assure l'usage
+    et l'animation en autogestion. La nature et la durée exactes du titre
+    d'usage liant le collectif au foncier ne sont pas documentées par les
+    sources publiques.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Propriété portée par un fonds de dotation de droit privé non lucratif ;
+    usage assuré par un collectif citoyen autogéré, dont la forme juridique
+    précise n'est pas documentée par les sources.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le lieu a fait l'objet en 2022 d'une donation au fonds de dotation Fraternité pour Demain, structure non lucrative qui le sanctuarise hors marché."
+  - critere: montage_documente
+    valeur: partiel
+    note: "La donation au fonds de dotation et la gestion confiée à la Coopérative Oasis sont publiques ; la nature du titre d'usage liant le collectif au foncier n'est pas documentée."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation à objet de sanctuarisation soustrait durablement le lieu ; le caractère consomptible ou non de la dotation du fonds n'est pas confirmé."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier est entré dans le fonds de dotation par donation, hors tout endettement ou logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le fonds de dotation n'a pas de capital appropriable ; la forme juridique du collectif de l'Aubascule n'étant pas documentée, l'absence de parts cessibles à ce maillon ne peut être pleinement établie."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Le fonds de dotation est non lucratif ; la forme juridique du collectif usager n'étant pas documentée, le caractère non lucratif de toute la chaîne ne peut être pleinement vérifié."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le porteur est un fonds de dotation non commercial ; la forme du collectif de l'Aubascule n'étant pas documentée, on ne peut exclure qu'un maillon soit de nature commerciale."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le collectif de l'Aubascule, intergénérationnel et autogéré, décide collectivement des usages du lieu et consacre des temps réguliers au soin du lien collectif."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le lieu est accompagné par la Coopérative Oasis et accueille des rencontres régionales du réseau ; l'association du voisinage et des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le lieu a connu plusieurs transmissions depuis les années 1970 et le collectif s'est élargi de six à une quinzaine de membres ; les dispositifs formels de renouvellement ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Accueil de stages, accueil solidaire de personnes en situation de vulnérabilité et pôle permacole servent un intérêt général social et écologique."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le lieu accueille des rencontres régionales des oasis Drôme-Ardèche-Isère et des séminaires de réseau : il est un point d'ancrage actif de son territoire."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'accueil solidaire et le pôle permacole relèvent d'une logique de partage ; le pôle d'accueil de stages comporte une part marchande qui coexiste avec cette logique."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et le montant d'une redevance versée au fonds de dotation ou à la Coopérative Oasis ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant le collectif de l'Aubascule au foncier ne sont pas documentées : la sécurité de jouissance dans le temps ne peut être appréciée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé par donation à un fonds de dotation non lucratif."
+    - "Pôle d'accueil solidaire ouvrant le lieu à des personnes en situation de vulnérabilité."
+    - "Obligation Réelle Environnementale inscrivant l'écologie dans le droit du lieu."
+  fragilites:
+    - "Forme juridique du collectif usager et titre d'usage non documentés : sécurité de jouissance inconnue."
+    - "Gestion intermédiée par la Coopérative Oasis : articulation directe collectif-porteur non documentée."
+    - "Caractère consomptible de la dotation du fonds non confirmé."
+  leviers:
+    - "Documenter et publier la forme juridique du collectif et le titre d'usage sur le foncier."
+    - "Formaliser une articulation directe entre le collectif et le fonds de dotation."
+    - "Confirmer le caractère non consomptible de la dotation du fonds."
+  synthese: >
+    L'Aube est un écolieu d'accueil dont le foncier a été sanctuarisé par
+    donation à un fonds de dotation : un montage solide côté propriété et
+    ouvert par son pôle solidaire. Sa principale zone d'ombre est la
+    formalisation du maillon usager — forme du collectif et titre d'usage —
+    qui reste à documenter et à sécuriser.
+fiabilite: >
+  Faits vérifiés (sources Coopérative Oasis et l'Aubascule, consultées en mai
+  2026) : écolieu de l'Aube dans la Drôme aux pieds des Trois Becs, une
+  quinzaine d'habitant·es, installation initiale de Louis et Mary à la fin des
+  années 1970, donation du lieu en 2022 au fonds de dotation Fraternité pour
+  Demain, gestion confiée à la Coopérative Oasis qui y installe le collectif de
+  l'Aubascule, trois pôles d'activité, Obligation Réelle Environnementale,
+  lieu à l'origine du projet de foncière de la Coopérative Oasis. Non
+  confirmé : forme juridique du collectif, nature et durée du titre d'usage,
+  montant d'une éventuelle redevance, caractère consomptible de la dotation.
+chaine:
+  porteurs: [fonds-fraternite-pour-demain]
+  usufruitiers: [collectif-aubascule]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Coopérative Oasis — L'Aube"
+    url: "https://cooperative-oasis.org/oasis/aube/"
+  - titre: "L'Aube / L'Aubascule — site officiel"
+    url: "https://www.aubascule.fr/"

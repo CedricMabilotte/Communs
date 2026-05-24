@@ -1,0 +1,123 @@
+uid: association-antre-toit
+categorie: usufruitier
+nom: "L'Antre Toit"
+sous_titre: "Association d'usager·es gérant la Maison Blanche de Gaillac"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation:
+  commune: "Gaillac"
+  departement: "Tarn (81)"
+  region: "Occitanie"
+annee: null
+url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  L'Antre Toit est l'association d'usager·es qui reçoit l'usage de la « Maison
+  Blanche », maison collective et autogérée d'environ 100 m² à Gaillac, dans le
+  Tarn, dont la propriété a été acquise par le fonds de dotation Antidote.
+  L'association coordonne les activités du lieu et le met à disposition de
+  l'association d'accueil L'Antre d'Eux, qui héberge et accompagne des jeunes
+  exilé·es en attente de reconnaissance de leur minorité. Le lieu fonctionne en
+  autogestion : les jeunes qui y vivent prennent soin de l'espace et participent
+  aux décisions concernant l'avenir de leur maison. L'Antre Toit s'inscrit dans
+  le réseau Antidote, qui lui confie l'usage du lieu par un bail emphytéotique de
+  longue durée.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "L'Antre Toit (association loi 1901)"
+  description: >
+    La propriété de la Maison Blanche est portée durablement par le fonds de
+    dotation Antidote ; son usage est confié à l'association L'Antre Toit par un
+    bail emphytéotique de longue durée. L'Antre Toit, association d'usager·es du
+    lieu, en coordonne les activités et le met à disposition de l'association
+    d'accueil L'Antre d'Eux. Comme chaque lieu du réseau Antidote, le collectif
+    participe à l'orientation du fonds via l'association faîtière « Les
+    Passagères de l'usage ».
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, à gouvernance autogérée :
+    les habitant·es du lieu participent aux décisions qui les concernent.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété reste au fonds de dotation Antidote : les usager·es ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : les ressources, dont l'autofinancement par événements de soutien, servent l'objet et le lieu, sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "L'association réunit les usager·es sur le principe d'une décision collective ; le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le lieu est autogéré ; les jeunes qui y vivent participent aux décisions concernant l'avenir de leur maison, et le collectif se forme à la décision collective."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu accueille en continu de nouveaux·elles habitant·es exilé·es ; les modalités d'entrée dans l'association gestionnaire elle-même ne sont pas détaillées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — héberger et accompagner des jeunes exilé·es vers leurs droits fondamentaux — porte un intérêt général social manifeste."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le lieu bénéficie à des jeunes exilé·es au-delà du cercle des membres fondateurs ; plus de 250 personnes ont été accueillies en cinq ans."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail emphytéotique de longue durée : jouissance longue, bien au-delà du plafond de 30 ans de l'usufruit d'une personne morale."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage formalisées dans le bail n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association est liée au fonds de dotation Antidote par un bail emphytéotique clair ; chaque lieu du réseau intègre la gouvernance du fonds via « Les Passagères de l'usage »."
+  - critere: regime_usage_non_marchand
+    valeur: oui
+    note: "L'accueil et l'hébergement des jeunes sont gratuits ; le projet est autofinancé par des événements de soutien, hors toute tarification de marché."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant de la redevance versée à Antidote n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Gouvernance autogérée : les habitant·es participent aux décisions du lieu."
+    - "Usage sécurisé pour le long terme par bail emphytéotique."
+    - "Vocation d'accueil de jeunes exilé·es à fort intérêt général social."
+  fragilites:
+    - "Année de création et statuts de L'Antre Toit non documentés."
+    - "Transparence comptable, clause de dévolution et redevance non documentées."
+    - "Articulation formelle avec l'association d'accueil L'Antre d'Eux non détaillée."
+  leviers:
+    - "Publier les statuts, les comptes et la clause de dévolution de l'association."
+    - "Documenter le bail emphytéotique et le montant de la redevance."
+    - "Préciser l'articulation entre L'Antre Toit et L'Antre d'Eux."
+  synthese: >
+    L'Antre Toit illustre le maillon usufruitier du modèle Antidote appliqué à
+    un lieu d'accueil social : une association d'usager·es qui coordonne un
+    bâtiment sanctuarisé par un fonds de dotation et le met au service de
+    l'hébergement de jeunes exilé·es. Sa marge de progression tient à la
+    publication de son fonctionnement interne et de son lien avec L'Antre d'Eux.
+fiabilite: >
+  Faits vérifiés (sources Antidote / aventure-antidote.org, collecte HelloAsso,
+  presse, consultées en mai 2026) : association d'usager·es de la Maison Blanche
+  à Gaillac (Tarn), maison d'environ 100 m² dont la propriété est acquise par le
+  fonds de dotation Antidote, usage confié par bail emphytéotique, coordination
+  du lieu et mise à disposition de l'association d'accueil L'Antre d'Eux,
+  autogestion par les habitant·es, autofinancement par événements de soutien.
+  Non confirmé : année de création, statuts, transparence comptable, clause de
+  dévolution, montant de la redevance, durée précise du bail.
+voir_aussi: [fonciere-antidote]
+sources:
+  - titre: "Antidote — Les lieux (L'Antre Toit)"
+    url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "La Foncière Antidote — La Maison Blanche de l'Antre Toit (collecte)"
+    url: "https://www.helloasso.com/associations/la-fonciere-antidote/collectes/la-maison-blanche-de-l-antre-toit"

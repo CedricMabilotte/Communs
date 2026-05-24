@@ -1,0 +1,126 @@
+uid: les-petites-berouettes
+categorie: lieu
+nom: "Les Petites Berouettes"
+sous_titre: "Ferme maraîchère bio sur foncier sanctuarisé en Ille-et-Vilaine"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Luitré-Dompierre"
+  departement: "Ille-et-Vilaine (35)"
+  region: "Bretagne"
+annee: 2022
+url: "https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-petites-berouettes/"
+resume: >
+  Ferme maraîchère d'environ 7 hectares à Luitré-Dompierre, à une quinzaine de
+  minutes de Fougères, en Ille-et-Vilaine. Son foncier a été acquis en 2022 par
+  la Foncière Terre de Liens, grâce à une collecte d'épargne solidaire
+  citoyenne, qui l'a retiré du marché et en a confié l'usage par bail rural au
+  GAEC Les P'tites Berouettes, constitué la même année par David Lécrivain et
+  Jonas Cadieu. La ferme est conduite en agriculture biologique : une
+  quarantaine de légumes cultivés toute l'année sur environ 3 hectares de plein
+  champ et 1 200 m² de serres, complétés par une production d'œufs et d'agneau,
+  vendus en circuits courts à des restaurateur·rices et des magasins
+  spécialisés.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC Les P'tites Berouettes (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la ferme est porté durablement par la Foncière Terre de Liens,
+    structure non spéculative qui l'a acquis en 2022 par l'épargne citoyenne et
+    l'a retiré du marché spéculatif. Son usage est confié par bail rural au
+    GAEC Les P'tites Berouettes, société civile agricole dont les associé·es
+    exploitent eux-mêmes la ferme en maraîchage biologique. La collecte
+    publique visait environ 47 728 euros pour couvrir 60 % du prix total
+    d'acquisition, travaux et frais inclus.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; mais le porteur est
+    une société en commandite par actions à actionnariat solidaire, et
+    l'usufruitier un GAEC, société civile d'exploitation dont le bénéfice est
+    partagé entre les paysan·nes associé·es.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le foncier a été acquis en 2022 par la Foncière Terre de Liens, structure non spéculative, et retiré du marché."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition par la Foncière Terre de Liens, usage confié au GAEC par bail rural — est public et documenté par Terre de Liens."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière, structure non spéculative dédiée à la préservation du foncier agricole, soustrait durablement la terre au marché."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis grâce à une collecte d'épargne solidaire citoyenne, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions dont les actions sont cessibles ; les parts du GAEC, sans valeur foncière, sont cédées sous agrément des associé·es."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "La Foncière ne verse pas de dividende, mais le GAEC est une société civile d'exploitation dont le revenu agricole est partagé entre les associé·es."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions à actionnariat solidaire ; le GAEC est une société civile agricole — aucun maillon n'est une société commerciale à lucrativité ouverte, mais la chaîne est entièrement sociétaire."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est exploitée par le GAEC Les P'tites Berouettes : les associé·es paysan·nes décident ensemble des choix de l'exploitation, avec des réunions de coordination régulières."
+  - critere: tripartisme
+    valeur: non
+    note: "La gouvernance de la ferme repose sur les deux associé·es du GAEC ; l'association du voisinage ou des collectivités n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le GAEC a accueilli un second associé en 2022 ; les dispositifs de transmission et de renouvellement de l'exploitation ne sont pas documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Installation paysanne, maraîchage diversifié en agriculture biologique, vente en circuits courts : la ferme sert un intérêt général agricole et alimentaire."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "La ferme approvisionne le territoire via des circuits courts (restaurateur·rices, magasins spécialisés) ; son ouverture au public au-delà de la vente n'est pas documentée."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'activité de la ferme est une production maraîchère vendue en circuits courts au prix du marché ; l'usage n'est pas non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Les actions de la Foncière ne versent pas de dividende, écartant une logique de rendement ; le montant du fermage versé par le GAEC n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2022."
+    - "Ferme exploitée directement par ses paysan·nes, en agriculture biologique."
+    - "Usage sécurisé par bail rural, au renouvellement d'ordre public."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "L'usufruitier est un GAEC : société civile d'exploitation dont le bénéfice est partagé entre associé·es."
+    - "Usage marchand ; fermage et ouverture au territoire non documentés."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Associer le voisinage et la collectivité à la vie de la ferme."
+    - "Inscrire des clauses environnementales formelles dans le bail."
+  synthese: >
+    Les Petites Berouettes illustrent le modèle Terre de Liens appliqué à une
+    petite ferme maraîchère : un foncier sanctuarisé par l'épargne citoyenne,
+    confié par bail rural à un GAEC qui l'exploite en bio. La chaîne, entièrement
+    sociétaire — société en commandite par actions en amont, GAEC en aval —
+    libère effectivement la terre du marché sans atteindre le profil du commun
+    citoyen.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, GAEC Les P'tites Berouettes et presse
+  agricole spécialisée, consultées en mai 2026) : ferme maraîchère à
+  Luitré-Dompierre, environ 7 hectares, foncier acquis par la Foncière Terre de
+  Liens en 2022, usage confié au GAEC Les P'tites Berouettes constitué la même
+  année par David Lécrivain et Jonas Cadieu, maraîchage diversifié en
+  agriculture biologique, environ 3 hectares de plein champ et 1 200 m² de
+  serres, vente en circuits courts, collecte d'environ 47 728 euros. Non
+  confirmé : montant du fermage, nature exacte du bail, surface définitive
+  cultivée.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-les-ptites-berouettes]
+sources:
+  - titre: "Les Petites Berouettes — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-petites-berouettes/"
+  - titre: "GAEC Les P'tites Berouettes — boutique en ligne"
+    url: "https://lesptitesberouettes.fr/"

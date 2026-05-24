@@ -1,0 +1,126 @@
+uid: scic-keruzerh
+categorie: porteur
+nom: "SCIC Écovillage de Keruzerh"
+sous_titre: "Coopérative d'intérêt collectif propriétaire du hameau de l'écovillage Demain en main"
+statut_fiche: publie
+forme_juridique: "Société coopérative d'intérêt collectif (SCIC)"
+localisation:
+  commune: "Locoal-Mendon"
+  departement: "Morbihan (56)"
+  region: "Bretagne"
+annee: 2021
+url: "https://demainenmain.fr/"
+resume: >
+  Société coopérative d'intérêt collectif constituée début 2021 par le collectif
+  Demain en main pour acquérir et porter le hameau de Keruzerh, à Locoal-Mendon
+  dans le Morbihan : une vingtaine d'hectares dont une dizaine de terres
+  agricoles, le reste en forêt, et un ancien hameau de bâtiments. La SCIC achète
+  la propriété et en gère le patrimoine ; elle réunit habitant·es, salarié·es,
+  collectivités et investisseur·ses solidaires, et a été reconnue Entreprise
+  solidaire d'utilité sociale (ESUS). Le foncier appartient à la SCIC depuis le
+  début de 2021. La Coopérative Oasis a soutenu l'acquisition par un apport
+  financier (100 000 € en 2020 sur 7 ans, puis 125 000 € en 2024 sur 10 ans).
+montage:
+  type: propriete_collective
+  description: >
+    La SCIC Écovillage de Keruzerh détient en pleine propriété le foncier et le
+    bâti du hameau. Une coopérative d'habitants distincte loue les logements à
+    la SCIC ; une SCOP agricole encadre la production maraîchère et l'accueil.
+    Le foncier est porté par une société commerciale de forme coopérative dont
+    les statuts SCIC encadrent la lucrativité, sans qu'une clause
+    d'inaliénabilité du foncier soit documentée par les sources.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société coopérative d'intérêt collectif : forme sociétaire à lucrativité
+    encadrée, sociétariat multiple incluant habitant·es, collectivités et
+    investisseur·ses solidaires.
+grille:
+  - critere: inalienabilite
+    valeur: inconnu
+    note: "L'existence d'une clause statutaire d'inaliénabilité du foncier détenu par la SCIC n'est pas documentée par les sources publiques."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une SCIC a un capital social en parts ; les statuts SCIC encadrent la cession et la lucrativité, mais le détail du verrouillage des parts n'est pas documenté."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Société civile de forme coopérative (SCIC) : protection foncière inférieure à une fondation ou à un fonds de dotation, sans dotation inaliénable."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "Le sort de l'actif de la SCIC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: forme_non_lucrative
+    valeur: partiel
+    note: "La SCIC est une société commerciale de forme coopérative : non lucrative au sens strict elle ne l'est pas, mais sa lucrativité est statutairement encadrée."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le statut SCIC impose des réserves impartageables et plafonne la rémunération du capital ; le capital souscrit par les investisseur·ses solidaires reste toutefois un capital social."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "Le caractère bénévole ou encadré de la direction de la SCIC n'est pas documenté par les sources."
+  - critere: independance_rendement
+    valeur: partiel
+    note: "La SCIC accueille des investisseur·ses solidaires prenant du capital ; la rémunération de ce capital est plafonnée par le statut coopératif, sans logique de plus-value."
+  - critere: ca_collegial
+    valeur: oui
+    note: "La SCIC réunit un sociétariat multiple — habitant·es, salarié·es, collectivités, investisseur·ses solidaires — caractéristique d'une gouvernance coopérative pluraliste."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "Le statut SCIC associe par construction plusieurs catégories de parties prenantes, dont des collectivités, au capital et à la gouvernance."
+  - critere: transparence
+    valeur: partiel
+    note: "Le projet et son montage sont publiquement présentés ; la publication régulière des comptes de la SCIC n'est pas documentée par les sources."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "L'objet de la SCIC est un projet de territoire d'écovillage ; un objet statutaire explicite de soustraction du foncier au marché n'est pas documenté."
+  - critere: agrement_ig
+    valeur: oui
+    note: "La SCIC Écovillage de Keruzerh est reconnue Entreprise solidaire d'utilité sociale (ESUS) ; tag informatif, non gage de libération."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de la SCIC à un risque de requalification fiscale n'est pas documentée par les sources."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "Le projet communique largement sur son fonctionnement ; une reddition de comptes formalisée au-delà du sociétariat n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "La SCIC loue les logements à la coopérative d'habitants ; le loyer existe mais son montant et son caractère non rentier ne sont pas documentés par les sources."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant la SCIC à la coopérative d'habitants ne sont pas documentées par les sources."
+analyse:
+  forces:
+    - "Sociétariat multiple associant habitant·es, collectivités et investisseur·ses solidaires."
+    - "Foncier acquis par capital coopératif et épargne solidaire, hors logique spéculative."
+    - "Reconnaissance ESUS attestant l'utilité sociale du projet."
+  fragilites:
+    - "Forme sociétaire SCIC : pas de dotation inaliénable, protection foncière intermédiaire."
+    - "Absence de clause d'inaliénabilité et de dévolution documentée."
+    - "Convention d'usage avec la coopérative d'habitants non documentée publiquement."
+  leviers:
+    - "Documenter et, le cas échéant, inscrire une clause d'inaliénabilité du foncier."
+    - "Publier les statuts, les comptes et la clause de dévolution."
+    - "Formaliser et publier le titre d'usage liant la SCIC à la coopérative d'habitants."
+  synthese: >
+    La SCIC Écovillage de Keruzerh est un porteur de type mutualiste : une
+    coopérative d'intérêt collectif qui a acquis le hameau par capital
+    coopératif et épargne solidaire. Sa solidité tient à son sociétariat
+    pluraliste et à sa reconnaissance ESUS ; sa marge de progression, à
+    l'absence de verrou d'inaliénabilité et à la non-publication de la
+    convention d'usage.
+fiabilite: >
+  Faits vérifiés (sources Demain en main, Coopérative Oasis et presse régionale,
+  consultées en mai 2026) : SCIC constituée début 2021, propriétaire du hameau
+  de Keruzerh à Locoal-Mendon depuis le début 2021, foncier d'une vingtaine
+  d'hectares dont une dizaine de terres agricoles, reconnaissance ESUS, soutien
+  de la Coopérative Oasis (apport de 100 000 € en 2020 puis 125 000 € en 2024),
+  coopérative d'habitants louant les logements à la SCIC. Non confirmé : clause
+  d'inaliénabilité, clause de dévolution, montant du loyer, durée du titre
+  d'usage, publication des comptes.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Demain en main — site officiel"
+    url: "https://demainenmain.fr/"
+  - titre: "Demain en main — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/demain-en-main/"
+  - titre: "À Locoal-Mendon, un éco-hameau pour reprendre « demain en main » — Eco-Bretons"
+    url: "https://www.eco-bretons.info/a-locoal-mendon-un-eco-hameau-pour-reprendre-demain-en-mains/"

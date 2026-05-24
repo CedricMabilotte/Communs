@@ -1,0 +1,119 @@
+uid: habitants-keruzerh
+categorie: usufruitier
+nom: "Coopérative d'habitants de Keruzerh"
+sous_titre: "Collectif d'habitant·es locataire des logements de l'écovillage Demain en main"
+statut_fiche: publie
+forme_juridique: "Coopérative d'habitants"
+localisation:
+  commune: "Locoal-Mendon"
+  departement: "Morbihan (56)"
+  region: "Bretagne"
+annee: 2021
+url: "https://demainenmain.fr/"
+resume: >
+  Coopérative d'habitants réunissant les ménages de l'écovillage Demain en main,
+  au hameau de Keruzerh à Locoal-Mendon (Morbihan). Dans le montage du projet,
+  cette coopérative loue les logements à la SCIC Écovillage de Keruzerh, qui est
+  propriétaire du foncier et du bâti. Le collectif réunit huit familles d'âges
+  et d'horizons variés ; il vit le lieu en démocratie participative et porte
+  l'usage habitant de l'écovillage, tandis qu'une SCOP agricole encadre la
+  production maraîchère et l'accueil. Le projet vise à terme sept logements à
+  haute performance énergétique.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCIC Écovillage de Keruzerh (société coopérative d'intérêt collectif)"
+  usufruitier: "Coopérative d'habitants de Keruzerh (collectif d'habitant·es)"
+  description: >
+    La SCIC Écovillage de Keruzerh est propriétaire du foncier et du bâti du
+    hameau. La coopérative d'habitants, structure distincte, loue les logements
+    à la SCIC et porte l'usage habitant du lieu. La nature exacte du titre
+    d'usage — bail, convention, contrat coopératif — et sa durée ne sont pas
+    documentées par les sources publiques.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Coopérative d'habitants : structure collective de gouvernance des habitant·es,
+    locataire des logements auprès de la SCIC propriétaire ; forme coopérative à
+    lucrativité encadrée.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Le foncier reste la propriété de la SCIC ; les habitant·es, locataires, ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une coopérative d'habitants comporte un capital en parts à lucrativité encadrée ; le détail du verrouillage des parts n'est pas documenté par les sources."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de la coopérative d'habitants en cas de dissolution n'est pas documenté par les sources."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "Coopérative d'habitants : forme coopérative à lucrativité verrouillée, notée « partiel » comme société à lucrativité encadrée."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le statut coopératif encadre la lucrativité et impose des réserves ; le détail de l'absence de partage de bénéfices n'est pas documenté."
+  - critere: une_voix
+    valeur: oui
+    note: "La coopérative d'habitants repose par construction sur le principe « une personne, une voix », indépendamment du capital apporté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les habitant·es vivent et gouvernent le lieu en démocratie participative ; le collectif de huit familles décide collectivement des usages."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le projet prévoit sept logements à terme et a communiqué sur l'accueil de nouveaux habitant·es ; les modalités précises d'admission ne sont pas documentées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de la coopérative d'habitants n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — habitat écologique partagé articulé à un écovillage nourricier et d'accueil — porte un intérêt général d'habitat digne et de transition écologique."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "L'écovillage accueille du public (ferme, accueil) ; l'usage habitant porté par la coopérative profite d'abord à ses ménages membres."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant la coopérative d'habitants à la SCIC propriétaire ne sont pas documentées par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans le titre d'usage n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "La coopérative d'habitants et la SCIC propriétaire sont issues d'un même projet collectif ; leur relation locative est clairement énoncée, même si ses clauses ne sont pas publiées."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'usage habitant repose sur un loyer versé à la SCIC ; son montant et son caractère non rentier ne sont pas documentés par les sources."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant du loyer versé par la coopérative d'habitants à la SCIC n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Gouvernance habitante en démocratie participative, « une personne, une voix »."
+    - "Foncier verrouillé hors appropriation privée par la propriété de la SCIC."
+    - "Collectif diversifié de huit familles, issu d'un projet collectif structuré."
+  fragilites:
+    - "Nature et durée du titre d'usage non documentées : sécurité de jouissance incertaine."
+    - "Montant du loyer et régime d'usage non documentés."
+    - "Transparence comptable et clause de dévolution non documentées."
+  leviers:
+    - "Documenter et publier le titre d'usage liant la coopérative d'habitants à la SCIC."
+    - "Préciser le régime du loyer et son caractère soutenable."
+    - "Formaliser et publier les modalités d'accueil de nouveaux habitant·es."
+  synthese: >
+    La coopérative d'habitants de Keruzerh est le maillon usufruitier du montage
+    Demain en main : un collectif qui gouverne en démocratie participative
+    l'usage habitant d'un écovillage dont la SCIC porte la propriété. Sa solidité
+    tient à sa gouvernance horizontale ; sa fragilité, à la non-publication du
+    titre d'usage qui la lie à la SCIC.
+fiabilite: >
+  Faits vérifiés (sources Demain en main, Coopérative Oasis et presse régionale,
+  consultées en mai 2026) : montage à plusieurs structures dont une coopérative
+  d'habitants louant les logements à la SCIC propriétaire, collectif de huit
+  familles, fonctionnement en démocratie participative, projet de sept logements
+  à haute performance énergétique. Non confirmé : forme juridique précise et
+  date de constitution de la coopérative d'habitants, nature et durée du titre
+  d'usage, montant du loyer, clause de dévolution, publication des comptes.
+voir_aussi: [scic-keruzerh, cooperative-oasis]
+sources:
+  - titre: "Demain en main — site officiel"
+    url: "https://demainenmain.fr/"
+  - titre: "Demain en main — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/demain-en-main/"

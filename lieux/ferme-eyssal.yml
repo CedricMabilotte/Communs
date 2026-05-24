@@ -1,0 +1,126 @@
+uid: ferme-eyssal
+categorie: lieu
+nom: "Ferme d'Eyssal"
+sous_titre: "Ferme d'élevage laitier en biodynamie consolidée par un foncier Terre de Liens, en Dordogne"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Bergerac (Périgord pourpre)"
+  departement: "Dordogne (24)"
+  region: "Nouvelle-Aquitaine"
+annee: 2010
+url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
+resume: >
+  Ferme d'élevage laitier du Périgord pourpre, dans le Bergeracois, conduite
+  depuis une dizaine d'années en agriculture biodynamique et tournée vers la
+  transformation fromagère et la vente directe. En 2010, la mise en vente
+  d'une partie des terres cultivées menace l'équilibre économique de
+  l'exploitation : plutôt que de s'endetter pour acheter le foncier, les
+  éleveur·ses Hugues Doche et Fanny choisissent d'investir dans leur outil de
+  travail. C'est la Foncière Terre de Liens, grâce à un groupe local de
+  citoyen·nes, qui acquiert les 18 hectares de terres essentiels pour
+  consolider la ferme et les confie aux éleveur·ses par bail rural. La ferme
+  écoule sa production laitière et fromagère en circuit court (paniers,
+  marchés, magasins bio, artisans).
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC d'Eyssal (groupement agricole d'exploitation en commun)"
+  description: >
+    En 2010, la Foncière Terre de Liens, mobilisée par un groupe local de
+    citoyen·nes, a acquis 18 hectares de terres cultivées menacées de vente,
+    pour consolider la ferme d'Eyssal. Ces terres sont confiées par bail rural
+    au GAEC d'Eyssal, qui exploite l'ensemble. Les éleveur·ses possèdent par
+    ailleurs leurs bâtiments et une partie des terres : le foncier Terre de
+    Liens consolide une exploitation préexistante plutôt qu'il n'en porte la
+    totalité. Le montage est une propriété sanctuarisée par la Foncière
+    assortie d'un bail rural.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est toutefois une société en commandite par
+    actions à actionnariat solidaire et lucrativité encadrée. Seule une partie
+    du foncier de la ferme est portée par la Foncière.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Les 18 hectares acquis en 2010 par la Foncière Terre de Liens sont soustraits au marché ; les autres terres et les bâtiments de la ferme appartiennent aux éleveur·ses."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition de 18 hectares par la Foncière en 2010, usage confié par bail rural — est public et documenté par Terre de Liens."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Les 18 hectares portés par la Foncière sont durablement soustraits au marché ; le reste du foncier de la ferme reste en propriété privée et n'est pas verrouillé."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Les 18 hectares ont été acquis par la Foncière Terre de Liens grâce à l'épargne solidaire d'un groupe local de citoyen·nes, hors logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier Terre de Liens est porté par la Foncière, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "La part Terre de Liens du foncier ne capte aucune plus-value privée ; les terres et bâtiments restés en propriété des éleveur·ses demeurent un patrimoine privé valorisable."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions à actionnariat solidaire et lucrativité encadrée ; le GAEC d'Eyssal est une société civile agricole."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "La ferme est exploitée par le GAEC d'Eyssal, animé par Hugues Doche et sa compagne Fanny ; la gouvernance dépasse peu le couple exploitant."
+  - critere: tripartisme
+    valeur: partiel
+    note: "L'acquisition a été portée par un groupe local de citoyen·nes mobilisés par Terre de Liens ; leur association continue à la gouvernance du lieu n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission de la ferme et de renouvellement des exploitant·es ne sont pas documentés par les sources consultées."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "La ferme produit en biodynamie une alimentation locale (lait, fromages) et préserve un environnement à forte biodiversité, d'une portée qui dépasse ses exploitant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Ferme vitrine de l'agriculture biologique du Bergeracois, elle écoule sa production en circuit court (paniers, marchés, magasins bio, artisans) et a été soutenue par un groupe local de citoyen·nes."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production laitière et fromagère est vendue en circuit court ; l'usage relève d'une logique paysanne de proximité sans être pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage des 18 hectares est confié par bail rural moyennant un fermage ; les actions de la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage des 18 hectares est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier menacé sauvegardé hors marché par l'épargne citoyenne dès 2010."
+    - "Élevage laitier en biodynamie, ancré dans le Bergeracois et ses circuits courts."
+    - "Acquisition portée par un groupe local de citoyen·nes."
+  fragilites:
+    - "Seuls 18 hectares sont portés par la Foncière ; le reste du foncier reste un patrimoine privé."
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Exploitation portée par un GAEC de couple : gouvernance peu collective."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère non rentier."
+    - "Étendre la sanctuarisation au reste du foncier de la ferme."
+    - "Préciser les dispositifs de transmission de l'exploitation."
+  synthese: >
+    La ferme d'Eyssal illustre un usage défensif du modèle Terre de Liens :
+    la Foncière y a acquis 18 hectares menacés de vente pour consolider une
+    ferme d'élevage laitier biodynamique préexistante. Le foncier sauvegardé
+    est verrouillé hors marché, mais le reste de l'exploitation demeure en
+    propriété privée, et la chaîne n'est libérée que pour partie.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens et acteurs locaux de l'agriculture
+  biologique, consultées en mai 2026) : ferme d'élevage laitier du Périgord
+  pourpre, en biodynamie depuis une dizaine d'années, acquisition par la
+  Foncière Terre de Liens en 2010 de 18 hectares menacés de vente, mobilisation
+  d'un groupe local de citoyen·nes, exploitation au sein du GAEC d'Eyssal animé
+  par Hugues Doche et Fanny, transformation fromagère et vente en circuit
+  court. Non confirmé : commune précise de la ferme, surface totale exploitée,
+  niveau du fermage, clauses du bail rural, dispositifs de transmission.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-eyssal]
+sources:
+  - titre: "Eyssal — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
+  - titre: "Eyssal — Terre de Liens"
+    url: "https://terredeliens.org/eyssal.html"

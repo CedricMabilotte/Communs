@@ -1,0 +1,136 @@
+uid: assemblee-des-usages-nddl
+categorie: usufruitier
+nom: "Assemblée des usages de la ZAD de Notre-Dame-des-Landes"
+sous_titre: "Collectif de gestion de l'usage des terres de l'ancienne ZAD"
+statut_fiche: publie
+forme_juridique: "Collectif sans personnalité juridique propre"
+localisation:
+  commune: "Notre-Dame-des-Landes"
+  departement: "Loire-Atlantique (44)"
+  region: "Pays de la Loire"
+annee: 2017
+url: "https://zad.nadir.org/spip.php?article5076="
+resume: >
+  Collectif de gestion né à l'été 2017 sur la ZAD de Notre-Dame-des-Landes, qui
+  réunit les usager·es réguliers du territoire — habitant·es, voisin·es,
+  paysan·nes des environs, porteur·ses de projet et composantes du mouvement —
+  pour penser et organiser la gestion collective du bocage de l'ancienne zone à
+  défendre. L'Assemblée des usages s'est donné pour cadre les « six points »
+  arrêtés par le mouvement en 2017 pour l'après-aéroport. Depuis 2019, l'usage
+  d'environ 350 hectares de l'ancienne ZAD est porté par des baux ruraux, le
+  plus souvent assortis de clauses environnementales, coordonnés par cette
+  assemblée. C'est elle aussi qui mandate les administrateur·rices du fonds de
+  dotation « La Terre en commun », qui acquiert le foncier.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de dotation « La Terre en commun » (acquisitions progressives) ; État et collectivités pour la part non rachetée"
+  usufruitier: "Assemblée des usages de la ZAD, et titulaires des baux ruraux de l'ancienne ZAD"
+  description: >
+    Après l'abandon du projet d'aéroport en 2018, l'usage des terres de
+    l'ancienne ZAD a été régularisé : à partir de 2019, des baux ruraux de neuf
+    ans renouvelables, le plus souvent assortis de clauses environnementales,
+    ont été signés sur environ 350 hectares pour des projets issus du mouvement.
+    Le fonds de dotation « La Terre en commun », créé fin 2018, rachète
+    progressivement le foncier mis en vente pour le soustraire à l'appropriation
+    privée. L'Assemblée des usages coordonne la gestion collective de ce
+    territoire et mandate les administrateur·rices du fonds : elle est l'organe
+    de gouvernance de l'usage, sans être elle-même propriétaire ni titulaire
+    d'un titre unique.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Collectif autogéré sans personnalité juridique propre, ouvert à tout·e
+    usager·e régulier du territoire, qui gouverne l'usage par assemblée et
+    commissions thématiques : une gouvernance citoyenne horizontale.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "L'usage des terres relève de baux ruraux et de conventions ; le foncier racheté est porté par le fonds de dotation « La Terre en commun », sans appropriation privée possible par les usager·es."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "L'Assemblée des usages est un collectif sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "L'Assemblée des usages n'ayant pas de personnalité juridique propre, la question d'une clause de dévolution d'actif ne se pose pas dans les termes documentés par les sources."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "L'Assemblée des usages est un collectif de fait sans personnalité juridique propre ; les titres d'usage sont portés par les titulaires de baux ruraux, personnes physiques ou morales, et le foncier par un fonds de dotation non lucratif."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "L'Assemblée des usages n'a pas d'activité lucrative ; les exploitations agricoles titulaires des baux relèvent toutefois de statuts variés, dont la non-lucrativité n'est pas documentée de façon homogène."
+  - critere: une_voix
+    valeur: oui
+    note: "L'Assemblée des usages fonctionne par délibération collective, ouverte à tout·e usager·e régulier du territoire ; le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "L'assemblée réunit habitant·es, paysan·nes, voisin·es et porteur·ses de projet, qui décident ensemble de la gestion du territoire et préparent leurs décisions en commissions thématiques."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "L'Assemblée des usages est ouverte à toute personne régulièrement engagée sur le territoire, qu'elle y réside ou non : son périmètre n'est pas fermé."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "Le fonctionnement de l'assemblée — six points, commissions thématiques, allers-retours entre composantes — est exposé publiquement ; la publication régulière de comptes rendus et de décisions n'est pas documentée de façon systématique."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — gestion collective du bocage, agriculture paysanne, préservation environnementale, accueil — porte un intérêt général agricole et écologique."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "L'assemblée est ouverte au-delà des seul·es habitant·es de la ZAD — voisin·es, paysan·nes des environs, composantes du mouvement — et la gestion du territoire ne profite pas à un cercle restreint."
+  - critere: duree_usage
+    valeur: oui
+    note: "Depuis 2019, l'usage d'environ 350 hectares repose sur des baux ruraux de neuf ans assortis d'un droit au renouvellement d'ordre public : une jouissance durable et sécurisée."
+  - critere: clauses_usage
+    valeur: oui
+    note: "Les baux ruraux de l'ancienne ZAD sont, à une exception près, assortis de clauses environnementales ; les loyers sont d'autant plus dégressifs que les pratiques sont respectueuses de l'environnement."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'Assemblée des usages mandate les administrateur·rices du fonds de dotation « La Terre en commun » : le lien entre l'organe d'usage et le porteur du foncier est explicite et documenté."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "La gestion collective du territoire relève d'une logique de commun et de partage ; les exploitations titulaires des baux ont toutefois une activité agricole en partie marchande."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "Les baux ruraux prévoient des loyers dégressifs selon l'engagement environnemental des exploitant·es, écartant toute logique de rendement et restant soutenables pour les collectifs."
+analyse:
+  forces:
+    - "Gouvernance citoyenne horizontale, ouverte à tout·e usager·e régulier du territoire."
+    - "Usage sécurisé par des baux ruraux de neuf ans renouvelables, assortis de clauses environnementales."
+    - "Articulation explicite avec le fonds de dotation « La Terre en commun », dont l'assemblée mandate les administrateur·rices."
+  fragilites:
+    - "Collectif sans personnalité juridique propre : l'assemblée ne porte aucun titre en son nom."
+    - "Titres d'usage dispersés entre de nombreux titulaires de baux aux statuts variés."
+    - "Coexistence d'une part de foncier non encore rachetée, restée propriété de l'État et des collectivités."
+  leviers:
+    - "Consolider l'articulation entre l'assemblée, les titulaires de baux et le fonds de dotation."
+    - "Documenter et publier les décisions et comptes rendus de l'assemblée."
+    - "Sécuriser le rachat de la part du foncier encore détenue par la puissance publique."
+  synthese: >
+    L'Assemblée des usages de la ZAD de Notre-Dame-des-Landes est un organe de
+    gouvernance citoyenne horizontale qui coordonne l'usage collectif du bocage
+    de l'ancienne zone à défendre. Sa force tient à l'ouverture de sa
+    gouvernance, à des baux ruraux longs et environnementaux et à son lien
+    explicite avec le fonds de dotation porteur du foncier ; sa fragilité tient
+    à son absence de personnalité juridique propre et à la dispersion des titres
+    d'usage entre de nombreux titulaires.
+fiabilite: >
+  Faits vérifiés (sources ZAD Nadir, Reporterre, Terre-net et La Gazette des
+  communes, consultées en mai 2026) : Assemblée des usages née à l'été 2017,
+  réunissant les usager·es réguliers du territoire autour des « six points »
+  arrêtés en 2017 pour l'après-aéroport, fonctionnement par assemblée et
+  commissions thématiques, abandon du projet d'aéroport en 2018, signature à
+  partir de 2019 de baux ruraux de neuf ans renouvelables — 24 baux dont un seul
+  sans clause environnementale, loyers dégressifs selon l'engagement
+  environnemental — stabilisant environ 350 hectares pour des projets issus du
+  mouvement, mandatement par l'assemblée des administrateur·rices du fonds de
+  dotation « La Terre en commun » créé fin 2018. Non confirmé : statut juridique
+  exact et stable de l'assemblée, modalités précises de décision, surfaces et
+  baux les plus récents, répartition exacte entre foncier racheté par le fonds
+  et foncier resté public.
+voir_aussi: [nddl, fonds-la-terre-en-commun]
+sources:
+  - titre: "Assemblée des Usages — Zone A Défendre"
+    url: "https://zad.nadir.org/spip.php?article5076="
+  - titre: "Notre-Dame-des-Landes : 24 baux ruraux signés sur le territoire de l'ancienne ZAD — Terre-net"
+    url: "https://www.terre-net.fr/actualite-agricole/economie-social/article/24-baux-ruraux-signes-sur-le-territoire-de-l-ancienne-zad-202-152580.html"
+  - titre: "Des actions agroenvironnementales germent doucement sur l'ancienne ZAD — La Gazette des communes"
+    url: "https://www.lagazettedescommunes.com/718568/des-actions-agroenvironnementales-germent-doucement-sur-lancienne-zad/"

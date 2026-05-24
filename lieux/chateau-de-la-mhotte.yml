@@ -1,0 +1,124 @@
+uid: chateau-de-la-mhotte
+categorie: lieu
+nom: "Château de la Mhotte"
+sous_titre: "Domaine éducatif et habitat partagé sanctuarisé par un fonds de dotation"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Saint-Menoux"
+  departement: "Allier (03)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2026
+url: "https://www.lamhotte.fr/"
+resume: >
+  Le domaine du Château de la Mhotte, à Saint-Menoux dans l'Allier, s'étend sur
+  une quinzaine d'hectares — bois, parc, prairies, mare — au cœur du Bocage
+  Bourbonnais. Il abrite deux projets associatifs : l'École Steiner-Waldorf de
+  la Mhotte, école indépendante créée en 1976 accueillant environ 120 élèves de
+  la maternelle au collège, et l'habitat participatif et solidaire Acoeur,
+  créé en 2021, comptant une douzaine de foyers, des ateliers, un potager et un
+  verger. En 2026, au terme d'une campagne internationale de collecte de dons,
+  le domaine a été acquis par le fonds de dotation Fraternité pour Demain, qui
+  le met à disposition des deux associations par un bail emphytéotique de
+  99 ans. C'est une oasis du réseau de la Coopérative Oasis, engagée dans la
+  démarche Oasis de Biodiversité.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Fonds de dotation Fraternité pour Demain"
+  usufruitier: "École de la Mhotte et association Acoeur (associations loi 1901)"
+  description: >
+    Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour
+    Demain, structure non lucrative qui le conserve hors marché. L'usage est
+    confié aux deux associations usagères — École de la Mhotte et Acoeur — par
+    un bail emphytéotique de 99 ans, qui leur ouvre un droit réel long sur le
+    lieu sans leur en transférer la propriété. Le montage dissocie la propriété
+    sanctuarisée, portée par le fonds, et l'usage collégial des associations.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Propriété portée par un fonds de dotation de droit privé non lucratif ;
+    usage confié à deux associations citoyennes à fonctionnement collégial par
+    un bail emphytéotique de 99 ans.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour Demain, structure non lucrative qui le sanctuarise hors marché."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — propriété du fonds de dotation, bail emphytéotique de 99 ans aux deux associations — est public et documenté par la Coopérative Oasis."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation à objet de sanctuarisation et le bail de 99 ans soustraient durablement le lieu ; le caractère consomptible ou non de la dotation du fonds n'est pas confirmé."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le domaine a été acquis au terme d'une campagne internationale de collecte de dons, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Fonds de dotation et associations loi 1901 : aucun maillon ne comporte de capital ni de parts appropriables portant la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fonds de dotation et associations loi 1901 : aucun maillon du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : un fonds de dotation porte le foncier, deux associations en assurent l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Les deux associations ont un fonctionnement collégial ; familles de l'école et habitant·es d'Acoeur prennent soin du lieu et participent aux décisions."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le projet est accompagné par la Coopérative Oasis et engagé dans une démarche Oasis de Biodiversité ; l'association du voisinage et des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'école fonctionne depuis 1976 et Acoeur accueille des foyers depuis 2021 ; les dispositifs formels de transmission et de renouvellement ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Éducation indépendante, habitat participatif et solidaire, jardins nourriciers et démarche de sensibilisation à la nature servent un intérêt général éducatif, social et écologique."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "L'école accueille environ 120 élèves et le domaine s'engage dans une démarche pédagogique tournée vers la nature ; le degré d'ouverture au territoire au-delà des familles n'est pas pleinement documenté."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Chantiers participatifs et jardins entretenus par les habitant·es relèvent d'une logique de partage ; l'école hors contrat repose toutefois sur une contribution financière des familles."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et le montant d'une redevance emphytéotique versée au fonds de dotation ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "Le bail emphytéotique de 99 ans assure aux deux associations une jouissance longue et sécurisée, bien au-delà du plafond de 30 ans des démembrements civils."
+analyse:
+  forces:
+    - "Foncier sanctuarisé en 2026 par un fonds de dotation non lucratif."
+    - "Usage confié pour 99 ans : sécurité de jouissance de très long terme."
+    - "Obligation Réelle Environnementale inscrivant l'écologie dans le droit du lieu."
+  fragilites:
+    - "Caractère consomptible ou non de la dotation du fonds non confirmé."
+    - "Acoeur est une association jeune (2021) : transmission non encore formalisée."
+    - "Existence et montant de la redevance emphytéotique non documentés."
+  leviers:
+    - "Confirmer et publier le caractère non consomptible de la dotation du fonds."
+    - "Documenter le régime de la redevance et les clauses du bail emphytéotique."
+    - "Formaliser l'accueil de nouveaux·elles habitant·es et la transmission du lieu."
+  synthese: >
+    Le Château de la Mhotte est un montage de propriété d'usage abouti : un
+    domaine éducatif et d'habitat sanctuarisé en 2026 par un fonds de dotation,
+    confié pour un siècle à deux associations citoyennes. Sa marge de
+    progression tient à la publication du régime de la redevance et des verrous
+    internes au fonds Fraternité pour Demain.
+fiabilite: >
+  Faits vérifiés (sources Coopérative Oasis et École de la Mhotte, consultées
+  en mai 2026) : domaine d'une quinzaine d'hectares à Saint-Menoux, École
+  Steiner-Waldorf de la Mhotte créée en 1976 (environ 120 élèves), association
+  Acoeur créée en 2021 (douzaine de foyers), acquisition du domaine en 2026 par
+  le fonds de dotation Fraternité pour Demain, bail emphytéotique de 99 ans,
+  Obligation Réelle Environnementale, oasis du réseau de la Coopérative Oasis.
+  Non confirmé : montant de la redevance, caractère consomptible de la
+  dotation, transparence comptable, modalités de transmission.
+chaine:
+  porteurs: [fonds-fraternite-pour-demain]
+  usufruitiers: [usagers-la-mhotte]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Coopérative Oasis — Château de la Mhotte"
+    url: "https://cooperative-oasis.org/oasis/chateau-de-la-mhotte/"
+  - titre: "École Steiner-Waldorf de la Mhotte — site officiel"
+    url: "https://www.lamhotte.fr/"

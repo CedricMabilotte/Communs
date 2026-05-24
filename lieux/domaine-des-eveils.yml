@@ -1,0 +1,128 @@
+uid: domaine-des-eveils
+categorie: lieu
+nom: "Domaine des Éveils"
+sous_titre: "Domaine d'accueil et habitat groupé porté par une SAS et une SCIC, en Bresse bourguignonne"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Bruailles"
+  departement: "Saône-et-Loire (71)"
+  region: "Bourgogne-Franche-Comté"
+annee: null
+url: "https://www.domainedeseveils.fr/"
+resume: >
+  Le Domaine des Éveils, à Bruailles en Saône-et-Loire, s'étend sur 16 hectares
+  de prairies, forêts et jardins au cœur de la Bresse bourguignonne. Ancien
+  Domaine de Chardenoux, ancien centre de retraites spirituelles renommé, le
+  lieu ouvre une nouvelle phase de son histoire : espace de ressourcement et
+  d'expérimentation collective, il accueille un gîte de 100 places en activité
+  et poursuit un projet d'habitat groupé. La vie au domaine s'organise autour
+  d'un noyau de sept habitant·es et salarié·es réuni·es dans une gouvernance
+  coopérative. Le foncier est porté par la SAS Le Temps des Possibles, dont la
+  Coopérative Oasis est actionnaire ; l'exploitation est assurée par la SCIC Le
+  Domaine des Éveils. Le projet bénéficie d'un accompagnement de la Coopérative
+  Oasis sur la coopération et l'intelligence collective.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SAS Le Temps des Possibles"
+  usufruitier: "SCIC Le Domaine des Éveils (SCIC sous forme de SAS)"
+  description: >
+    Le foncier du Domaine des Éveils est détenu par la SAS Le Temps des
+    Possibles, société par actions dont les titres sont proposés à la valeur
+    nominale aux personnes souhaitant soutenir le projet et dont la Coopérative
+    Oasis est actionnaire. L'exploitation du domaine — gîte et activités
+    d'accueil — est assurée par la SCIC Le Domaine des Éveils, coopérative
+    d'intérêt collectif sous forme de SAS. Le montage repose ainsi sur deux
+    sociétés commerciales distinctes : l'une détient le foncier, l'autre
+    l'exploite. La nature et la durée du titre d'usage liant les deux ne sont
+    pas documentées par les sources publiques.
+integrite_montage:
+  niveau: economie_marchande
+  commentaire: >
+    Chaîne entièrement sociétaire : une SAS commerciale détient le foncier,
+    une SCIC sous forme de SAS l'exploite. Aucun maillon non lucratif ; les
+    actions de la SAS sont proposées à la valeur nominale.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est détenu par la SAS Le Temps des Possibles, société par actions ; les actions à valeur nominale tempèrent la spéculation, mais aucune structure non lucrative ni inaliénabilité ne le soustrait pleinement au marché."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le montage à deux sociétés — SAS propriétaire, SCIC exploitante — est public ; la nature du titre d'usage liant les deux et les statuts des sociétés ne sont pas documentés."
+  - critere: irreversibilite
+    valeur: non
+    note: "Le foncier est porté par une SAS qui peut en principe céder ses actifs ; aucun dispositif d'inaliénabilité, droit de veto ou clause anti-spéculative n'est documenté."
+  - critere: origine_non_speculative
+    valeur: partiel
+    note: "Les actions de la SAS sont souscrites à la valeur nominale dans une logique de soutien au projet ; les modalités exactes du financement de l'acquisition ne sont pas documentées."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les actions de la SAS sont proposées à la valeur nominale et les parts de la SCIC remboursées au nominal ; mais une SAS permet en principe la cession des actions et les statuts ne sont pas documentés."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Le statut SCIC encadre la lucrativité de l'exploitante ; la SAS Le Temps des Possibles est une société commerciale dont aucun verrou anti-lucratif n'est documenté."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Les deux maillons sont des sociétés commerciales — une SAS et une SCIC sous forme de SAS — à lucrativité au mieux encadrée : la chaîne est entièrement sociétaire."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La vie au domaine s'organise autour d'un noyau de sept habitant·es et salarié·es réuni·es dans la gouvernance coopérative de la SCIC."
+  - critere: tripartisme
+    valeur: partiel
+    note: "La Coopérative Oasis, actionnaire de la SAS, accompagne le projet ; l'association du voisinage et des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le domaine cherche activement à accueillir de nouveaux·elles habitant·es ; les dispositifs formels de transmission du lieu ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: partiel
+    note: "Le domaine est un espace de ressourcement, d'expérimentation collective et d'accueil ; sa vocation d'intérêt général coexiste avec une activité de gîte commercial."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le gîte de 100 places accueille retraites, formations, ateliers, séminaires, cousinades et festivals : le lieu est largement ouvert et ancré dans son territoire."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La vie collective et le projet d'habitat groupé relèvent d'une logique de partage ; l'activité de gîte (retraites, séminaires, festivals) est tarifée et comporte une part marchande nette."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "L'existence et le montant d'un loyer ou d'une redevance versés par la SCIC à la SAS Le Temps des Possibles ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant la SCIC exploitante à la SAS propriétaire ne sont pas documentées : la sécurité de jouissance ne peut être appréciée."
+analyse:
+  forces:
+    - "Gouvernance coopérative réunissant habitant·es et salarié·es du domaine."
+    - "Lieu largement ouvert : gîte de 100 places accueillant retraites, formations et festivals."
+    - "Actions de la SAS proposées à la valeur nominale, ce qui tempère la logique spéculative."
+  fragilites:
+    - "Chaîne entièrement sociétaire : aucun maillon non lucratif ni structure protectrice du foncier."
+    - "Aucun dispositif d'inaliénabilité ou clause anti-spéculative documenté."
+    - "Titre d'usage liant la SCIC à la SAS non documenté : sécurité de jouissance inconnue."
+  leviers:
+    - "Transférer le foncier vers une structure non lucrative tierce, ou verrouiller statutairement la SAS."
+    - "Formaliser et publier un titre d'usage long entre la SCIC et la SAS."
+    - "Publier les statuts, les clauses de dévolution et les comptes des deux sociétés."
+  synthese: >
+    Le Domaine des Éveils est un lieu d'accueil vivant, à gouvernance
+    coopérative et largement ouvert. Mais son montage — une SAS commerciale
+    propriétaire, une SCIC exploitante — est entièrement sociétaire, sans
+    maillon non lucratif ni verrou foncier : il emprunte au modèle de la
+    libération des terres sans en réunir les garanties structurelles.
+fiabilite: >
+  Faits vérifiés (sources Coopérative Oasis et Domaine des Éveils, consultées
+  en mai 2026) : domaine de 16 hectares à Bruailles (ancien Domaine de
+  Chardenoux), gîte de 100 places en activité, noyau de sept habitant·es et
+  salarié·es, gouvernance coopérative SCIC sous forme de SAS, foncier porté par
+  la SAS Le Temps des Possibles, Coopérative Oasis actionnaire de la SAS,
+  accueil de retraites, formations, séminaires et festivals, projet d'habitat
+  groupé en développement. Non confirmé : date de création des sociétés,
+  statuts, clauses de dévolution, nature et durée du titre d'usage entre SCIC
+  et SAS, montant d'un loyer, transparence comptable.
+chaine:
+  porteurs: [le-temps-des-possibles]
+  usufruitiers: [scic-domaine-des-eveils]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Coopérative Oasis — Domaine des Éveils"
+    url: "https://cooperative-oasis.org/oasis/domaine-des-eveils/"
+  - titre: "Domaine des Éveils — site officiel"
+    url: "https://www.domainedeseveils.fr/"

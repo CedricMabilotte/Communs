@@ -1,0 +1,128 @@
+uid: chemins-ecolectif
+categorie: usufruitier
+nom: "Association Chemins d'Ecolectif"
+sous_titre: "Association collégiale gouvernant l'écohameau Écolectif en Haute-Garonne"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 à statut collégial"
+localisation:
+  commune: "Gensac-de-Boulogne"
+  departement: "Haute-Garonne (31)"
+  region: "Occitanie"
+annee: 2012
+url: "https://ecolectif.jimdofree.com/"
+resume: >
+  L'association Chemins d'Ecolectif, créée le 29 janvier 2012, est l'association
+  collégiale qui porte la gouvernance et la vie de l'écohameau Écolectif, à
+  Gensac-de-Boulogne, en Haute-Garonne. Son objet est de réaliser le projet
+  Écolectif : créer et organiser un écohameau, lieu de vie pour des personnes
+  désirant vivre de façon plus harmonieuse sur les plans personnel, social et
+  environnemental. L'association est dirigée par un Cercle d'administration qui
+  décide « au consentement », sans objection : il arrête les orientations, le
+  mode de fonctionnement et la gestion quotidienne, et anime la vie de
+  l'association. Chemins d'Ecolectif détient une part du capital de la SCI
+  Terres d'Ecolectif, propriétaire du foncier, et en est l'associée gérante :
+  l'écohameau, fondé en 2009, accueille une vingtaine d'adultes et une vingtaine
+  d'enfants.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCI Terres d'Ecolectif (parts détenues par l'association et par la société MV Finance)"
+  usufruitier: "Association Chemins d'Ecolectif (association loi 1901 à statut collégial)"
+  description: >
+    Le foncier de l'écohameau est détenu par la SCI Terres d'Ecolectif, dont
+    l'association Chemins d'Ecolectif détient une part du capital et qu'elle gère
+    en qualité d'associée gérante. L'association porte la gouvernance et la vie
+    du lieu ; les résident·es y louent leur logement et leurs terres par des
+    baux d'occupation à loyers modiques. Le montage articule étroitement la SCI
+    foncière et l'association d'usage, qui partagent la même base humaine — une
+    chaîne en grande partie intégrée, dont une fraction du capital de la SCI
+    reste néanmoins détenue par une société tierce.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 à statut collégial, sans capital appropriable, à
+    gouvernance horizontale décidant au consentement : les résident·es
+    gouvernent collectivement l'usage de l'écohameau.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Le foncier reste la propriété de la SCI Terres d'Ecolectif ; l'association ne peut ni le revendre ni en capter la valeur à titre privé."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 à statut collégial, sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable par ce maillon."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association Chemins d'Ecolectif en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901 à statut collégial, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : ses ressources servent le projet d'écohameau et l'animation de la vie collective, sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "L'association est collégiale et décide « au consentement » : le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le Cercle d'administration, composé des résident·es, arrête les orientations, le fonctionnement et la gestion quotidienne de l'écohameau."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "L'écohameau accueille de nouveaux membres, qui apportent une somme d'entrée à la SCI restituée au départ ; les modalités précises de cooptation ne sont pas détaillées."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "Le projet publie en ligne ses statuts et son cadre légal ; la publication régulière de ses comptes n'est pas confirmée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — créer et organiser un écohameau, lieu de vie écologique, social et personnel — porte un intérêt général d'habitat et d'écologie."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "L'écohameau pratique des chantiers participatifs et une vocation pédagogique (« l'école du collectif ») ; l'habitat lui-même bénéficie d'abord à ses résident·es."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Les résident·es disposent d'un bail d'occupation de leur espace de vie ; la durée et les conditions de renouvellement de ces baux ne sont pas documentées."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans les baux d'occupation n'est pas documentée par les sources consultées."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association est l'associée gérante de la SCI Terres d'Ecolectif et en détient une part : l'articulation entre usage et propriété est étroite et formalisée."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Les loyers d'occupation sont modiques (de 60 à 200 euros tout compris) et relèvent d'une logique contributive, sans gratuité ni troc généralisés."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "Les résident·es versent des loyers modiques, de 60 à 200 euros tout compris, soutenables et sans logique de rendement."
+analyse:
+  forces:
+    - "Association collégiale décidant au consentement : gouvernance horizontale effective."
+    - "Articulation étroite avec la SCI foncière, dont l'association est gérante."
+    - "Loyers d'occupation modiques, soutenables pour les résident·es."
+  fragilites:
+    - "Une fraction du capital de la SCI échappe à l'association, détenue par MV Finance."
+    - "Durée et clauses des baux d'occupation non documentées."
+    - "Clause de dévolution et comptes de l'association non documentés."
+  leviers:
+    - "Documenter la durée et les clauses des baux d'occupation des résident·es."
+    - "Publier les statuts, les comptes et la clause de dévolution de l'association."
+    - "Renforcer la maîtrise de l'association sur l'ensemble du capital de la SCI."
+  synthese: >
+    L'association Chemins d'Ecolectif gouverne l'écohameau Écolectif en collège
+    horizontal et en assure l'articulation étroite avec la SCI foncière dont elle
+    est gérante. Sa solidité gagnerait à une maîtrise complète du capital de la
+    SCI et à la documentation des baux d'occupation.
+fiabilite: >
+  Faits vérifiés (sources ecolectif.jimdofree.com, passerelleco.info et base de
+  données Habitat Participatif et Oasis, consultées en mai 2026) : association
+  Chemins d'Ecolectif créée le 29 janvier 2012, association loi 1901 à statut
+  collégial dirigée par un Cercle d'administration décidant au consentement,
+  objet de réalisation de l'écohameau Écolectif à Gensac-de-Boulogne
+  (Haute-Garonne), association gérante et associée de la SCI Terres d'Ecolectif,
+  écohameau fondé en 2009 sur un domaine d'environ 46 hectares, une vingtaine
+  d'adultes et une vingtaine d'enfants, loyers d'occupation de 60 à 200 euros
+  tout compris. Non confirmé : clause de dévolution, durée et clauses des baux
+  d'occupation, publication des comptes.
+voir_aussi: [sci-terres-ecolectif, cooperative-oasis]
+sources:
+  - titre: "Cadre légal — Site de Ecolectif"
+    url: "https://ecolectif.jimdofree.com/pr%C3%A9sentation/cadre-l%C3%A9gal/"
+  - titre: "Statuts de l'association « Chemins d'Ecolectif » — Passerelle Éco"
+    url: "https://www.passerelleco.info/article.php?id_article=2213"

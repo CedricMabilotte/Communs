@@ -1,0 +1,123 @@
+uid: scic-domaine-des-eveils
+categorie: usufruitier
+nom: "SCIC Le Domaine des Éveils"
+sous_titre: "Coopérative d'intérêt collectif exploitant le Domaine des Éveils, en Bresse bourguignonne"
+statut_fiche: publie
+forme_juridique: "Société coopérative d'intérêt collectif (SCIC) sous forme de SAS"
+localisation:
+  commune: "Bruailles"
+  departement: "Saône-et-Loire (71)"
+  region: "Bourgogne-Franche-Comté"
+annee: null
+url: "https://www.domainedeseveils.fr/"
+resume: >
+  La SCIC Le Domaine des Éveils est la société coopérative d'intérêt collectif,
+  constituée sous forme de SAS, qui exploite le Domaine des Éveils à Bruailles
+  en Saône-et-Loire. Ancien Domaine de Chardenoux, ancien centre de retraites
+  spirituelles, le lieu s'étend sur 16 hectares de prairies, forêts et jardins
+  et comprend un gîte de 100 places en activité. La vie au domaine s'organise
+  autour d'un noyau de sept habitant·es et salarié·es réuni·es dans la
+  gouvernance coopérative ; le lieu accueille retraites, formations, ateliers,
+  séminaires et festivals, et poursuit un projet d'habitat groupé. Le foncier
+  appartient à la SAS Le Temps des Possibles, dont la Coopérative Oasis est
+  actionnaire.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SAS Le Temps des Possibles"
+  usufruitier: "SCIC Le Domaine des Éveils (SCIC sous forme de SAS)"
+  description: >
+    Le foncier du Domaine des Éveils est porté par la SAS Le Temps des
+    Possibles ; son exploitation est assurée par la SCIC Le Domaine des Éveils,
+    coopérative d'intérêt collectif sous forme de SAS, qui gère le gîte et les
+    activités d'accueil. Les deux structures sont distinctes : l'une détient le
+    foncier, l'autre l'exploite. La nature et la durée du titre d'usage liant
+    la SCIC à la SAS ne sont pas documentées par les sources publiques.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société coopérative d'intérêt collectif sous forme de SAS : forme
+    sociétaire commerciale, à lucrativité encadrée par le statut SCIC
+    (réserves impartageables, lucrativité limitée).
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "Le foncier est porté par la SAS Le Temps des Possibles, société commerciale, et non par une structure non lucrative inaliénable : la sortie du marché n'est pas pleinement verrouillée."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une SCIC à capital variable rembourse les parts à leur valeur nominale et place ses excédents en réserves impartageables ; la cession est encadrée sans être verrouillée comme dans une structure non lucrative."
+  - critere: devolution_usufruitier
+    valeur: partiel
+    note: "Le statut SCIC prévoit en principe une dévolution désintéressée du boni de liquidation ; la clause statutaire propre à la SCIC Le Domaine des Éveils n'est pas documentée."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "La SCIC est une société commerciale (ici sous forme de SAS) à lucrativité encadrée : selon la grille, ce maillon est noté « partiel »."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le statut SCIC limite la lucrativité et impose des réserves impartageables, mais autorise une rémunération encadrée du capital : la non-lucrativité n'est pas totale."
+  - critere: une_voix
+    valeur: oui
+    note: "La SCIC fonctionne sur le principe coopératif « une personne, une voix » en assemblée, indépendamment du capital apporté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "La vie au domaine s'organise autour d'un noyau de sept habitant·es et salarié·es réuni·es dans la gouvernance coopérative de la SCIC."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "Le Domaine des Éveils cherche activement à accueillir de nouveaux·elles habitant·es pour renforcer la dynamique collective, après une période d'expérimentation sur place."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de la SCIC n'est pas documentée par les sources consultées."
+  - critere: objet_ig
+    valeur: partiel
+    note: "Le domaine est un espace de ressourcement, d'expérimentation collective et d'accueil ; sa vocation d'intérêt général coexiste avec une activité de gîte commercial."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le gîte de 100 places accueille retraites, formations, ateliers, séminaires, cousinades et festivals : le lieu est largement ouvert au-delà de ses habitant·es."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant la SCIC à la SAS Le Temps des Possibles ne sont pas documentées par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant la SCIC au foncier n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "La SCIC exploitante et la SAS propriétaire sont deux structures distinctes ; la Coopérative Oasis, actionnaire de la SAS, est un point de liaison, mais le contrat liant les deux n'est pas documenté."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "La vie collective et le projet d'habitat groupé relèvent d'une logique de partage ; l'activité de gîte (retraites, séminaires, festivals) est tarifée et comporte une part marchande nette."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'existence et le montant d'un loyer ou d'une redevance versés par la SCIC à la SAS Le Temps des Possibles ne sont pas documentés par les sources."
+analyse:
+  forces:
+    - "Gouvernance coopérative « une personne, une voix » réunissant habitant·es et salarié·es."
+    - "Lieu largement ouvert : gîte de 100 places accueillant retraites, formations et festivals."
+    - "Ouverture active à de nouveaux·elles habitant·es pour renforcer le collectif."
+  fragilites:
+    - "Foncier porté par une SAS commerciale, non par une structure non lucrative."
+    - "Titre d'usage liant la SCIC à la SAS non documenté : sécurité de jouissance inconnue."
+    - "Activité de gîte tarifée : part marchande nette du régime d'usage."
+  leviers:
+    - "Formaliser et publier un titre d'usage long entre la SCIC et la SAS."
+    - "Publier les statuts, la clause de dévolution et les comptes de la coopérative."
+    - "Documenter le régime de la redevance versée à la SAS propriétaire."
+synthese: >
+  La SCIC Le Domaine des Éveils est le maillon usager d'un montage à deux
+  sociétés : une SAS détient le foncier, une SCIC l'exploite. La gouvernance
+  coopérative et l'ouverture du lieu sont réelles, mais l'absence de structure
+  non lucrative dans la chaîne et l'opacité du titre d'usage placent ce montage
+  en retrait du modèle de la libération des terres.
+fiabilite: >
+  Faits vérifiés (sources Coopérative Oasis et Domaine des Éveils, consultées
+  en mai 2026) : domaine de 16 hectares à Bruailles (ancien Domaine de
+  Chardenoux), gîte de 100 places, noyau de sept habitant·es et salarié·es,
+  gouvernance coopérative SCIC sous forme de SAS, foncier porté par la SAS Le
+  Temps des Possibles, accueil de retraites, formations, séminaires et
+  festivals, projet d'habitat groupé en développement. Non confirmé : date de
+  création de la SCIC, statuts, clause de dévolution, nature et durée du titre
+  d'usage liant la SCIC à la SAS, montant d'un loyer, transparence comptable.
+voir_aussi: [le-temps-des-possibles]
+sources:
+  - titre: "Coopérative Oasis — Domaine des Éveils"
+    url: "https://cooperative-oasis.org/oasis/domaine-des-eveils/"
+  - titre: "Domaine des Éveils — site officiel"
+    url: "https://www.domainedeseveils.fr/"

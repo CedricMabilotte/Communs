@@ -1,0 +1,127 @@
+uid: archipel-de-la-vallee
+categorie: lieu
+nom: "L'Archipel de la vallée"
+sous_titre: "Tiers-lieu inclusif de trois associations à Chevreuse, financé par la Coopérative Oasis"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Chevreuse"
+  departement: "Yvelines (78)"
+  region: "Île-de-France"
+annee: 2025
+url: "https://asso-alc.com/archipel-de-la-vallee"
+resume: >
+  Tiers-lieu inclusif de l'Archipel de la vallée, à Chevreuse dans les Yvelines,
+  au cœur du parc naturel régional de la haute vallée de Chevreuse : une maison
+  et quatre hectares de prairies. Le projet a été lancé en 2023 par trois
+  associations — Handi deuxmains, Accueil Loisirs Culture (ALC) et Quintette —
+  pour créer un espace adapté aux handicaps mentaux, cognitifs et sensoriels,
+  favorisant la rencontre entre la communauté du handicap et les habitant·es du
+  territoire. Le foncier a été acquis en copropriété via une société civile
+  immobilière réunissant les trois associations, l'acquisition définitive ayant
+  eu lieu en juillet 2025. La Coopérative Oasis a soutenu le projet par un
+  apport financier de 200 000 € sur 11 ans, en complément de dons, mécénat,
+  subventions et prêts bancaires.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCI de l'Archipel de la vallée (société civile immobilière des trois associations)"
+  usufruitier: "SCI de l'Archipel de la vallée — chaîne intégrée : associations associées et usagères"
+  description: >
+    Le foncier — maison et quatre hectares — est détenu par une société civile
+    immobilière dont les associé·es sont les trois associations Handi
+    deuxmains, ALC et Quintette. Ces mêmes associations exploitent ensemble le
+    tiers-lieu, chacune dans son champ d'action : propriété et usage sont portés
+    par la même configuration collective, la chaîne est intégrée. La Coopérative
+    Oasis est intervenue comme financeur (apport de 200 000 € sur 11 ans), non
+    comme maillon de la chaîne.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Foncier porté par une société civile immobilière dont le sociétariat est
+    composé de trois associations non lucratives ; chaîne intégrée propriétaire
+    ≡ usagère.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est porté par une SCI dont les seul·es associé·es sont trois associations non lucratives ; aucune clause d'inaliénabilité ni de verrou anti-spéculatif n'est documentée."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — SCI réunissant trois associations, acquisition de juillet 2025, sources de financement — est public et présenté par les associations et la Coopérative Oasis."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La détention par une SCI dont les associé·es sont des associations non lucratives freine le retour au marché ; aucune clause d'inaliénabilité ni de dévolution n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition a réuni dons, mécénat, subventions, apports personnels, prêts bancaires et apport solidaire de la Coopérative Oasis, hors logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts de la SCI sont cessibles sous agrément ; détenues par des associations, leur cession à un tiers privé est peu probable, mais sans plafonnement de prix documenté."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Les associé·es de la SCI sont des associations non lucratives ; la SCI elle-même n'a pas de verrou statutaire de non-lucrativité documenté."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : une société civile immobilière porte le foncier, trois associations en sont les associé·es et les usagères."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Les trois associations qui exploitent le lieu sont les associé·es de la SCI propriétaire : les usagères gouvernent elles-mêmes le tiers-lieu."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le projet est porté par trois associations et soutenu par le parc naturel régional ; une gouvernance associant formellement le voisinage et les collectivités n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission et de renouvellement des personnes gouvernant le lieu ne sont pas documentés par les sources."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Tiers-lieu inclusif adapté aux handicaps, favorisant la rencontre entre la communauté du handicap et les habitant·es : l'usage sert un intérêt général social affirmé."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le lieu, au cœur du parc naturel régional, est conçu pour tisser des liens avec les habitant·es du territoire autour de projets collectifs."
+  - critere: usage_non_marchand
+    valeur: inconnu
+    note: "Le régime d'accès au tiers-lieu et à ses activités — gratuité, contribution, tarification — n'est pas documenté par les sources."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Les modalités financières entre la SCI et les associations usagères ne sont pas documentées par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "Les associations exploitent le lieu en leur qualité d'associé·es de la SCI propriétaire : l'usage n'est ni précaire ni plafonné dans le temps."
+analyse:
+  forces:
+    - "Foncier porté par une SCI dont les seul·es associé·es sont trois associations non lucratives."
+    - "Objet social fort : tiers-lieu inclusif adapté aux handicaps, ouvert au territoire."
+    - "Acquisition financée hors spéculation, par dons, subventions et apport solidaire."
+  fragilites:
+    - "SCI sans verrou de non-lucrativité ni clause de dévolution documentés."
+    - "Chaîne intégrée : pas de contre-pouvoir externe entre propriété et usage."
+    - "Régime d'accès au lieu et dispositifs de transmission non documentés."
+  leviers:
+    - "Inscrire dans les statuts de la SCI un verrou de non-lucrativité et une clause de dévolution."
+    - "Documenter le régime d'accès au tiers-lieu et les dispositifs de transmission."
+    - "Articuler une garantie foncière externe pérennisant la soustraction au marché."
+  synthese: >
+    L'Archipel de la vallée est un tiers-lieu inclusif récent à chaîne intégrée :
+    le foncier est porté par une société civile immobilière dont les associé·es
+    sont trois associations, elles-mêmes usagères du lieu. Sa silhouette est
+    forte sur la finalité et la nature civile du montage ; sa marge de
+    progression tient à l'absence de verrous statutaires dans la SCI et à la
+    non-documentation du régime d'usage.
+fiabilite: >
+  Faits vérifiés (sources ALC de Chevreuse, Coopérative Oasis et presse locale,
+  consultées en mai 2026) : tiers-lieu inclusif à Chevreuse, maison et quatre
+  hectares de prairies, projet lancé en 2023 par les associations Handi
+  deuxmains, ALC et Quintette, foncier acquis en copropriété via une SCI
+  réunissant les trois associations, acquisition définitive en juillet 2025,
+  financement d'environ un million d'euros, apport de la Coopérative Oasis de
+  200 000 € sur 11 ans. Non confirmé : statuts et verrous anti-spéculatifs de la
+  SCI, clause de dévolution, régime d'accès au tiers-lieu, dispositifs de
+  transmission, transparence comptable.
+chaine:
+  porteurs: [sci-archipel-vallee]
+  usufruitiers: [sci-archipel-vallee]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Archipel de la Vallée — ALC de Chevreuse"
+    url: "https://asso-alc.com/archipel-de-la-vallee"
+  - titre: "Archipel de la vallée — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/archipel-de-la-vallee/"

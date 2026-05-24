@@ -1,0 +1,132 @@
+uid: tera
+categorie: lieu
+nom: "TERA"
+sous_titre: "Écosystème coopératif rural en Lot-et-Garonne, financé par la Coopérative Oasis"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Masquières / Tournon-d'Agenais / Trentels"
+  departement: "Lot-et-Garonne (47)"
+  region: "Nouvelle-Aquitaine"
+annee: 2015
+url: "https://www.tera.coop/"
+resume: >
+  TERA — « Tous Ensemble vers un Revenu d'Autonomie » — est un écosystème
+  coopératif territorial né en 2015 de deux tours de France en van et vélo, et
+  installé sur le domaine du Tilleul, au lieu-dit Lartel à Masquières
+  (Lot-et-Garonne). Le projet vise à relocaliser les activités en zone rurale et
+  se déploie sur trois communes : Tournon-d'Agenais (siège, bureaux, épicerie
+  « l'Alvéole »), Masquières (ferme de Lartel et activités alimentaires) et
+  Trentels (quartier rural de Lustrac, en construction). Le foncier productif
+  est porté par la SCI Le Tilleul, dont le fonds de dotation SDH détient la
+  majorité des parts ; la Coop du Tilleul en assure l'usage. La Coopérative
+  Oasis a placé 180 000 euros sur dix ans dans le compte courant de la SCI Le
+  Tilleul, permettant l'achat d'une parcelle de 4 hectares pour le quartier
+  rural de Lustrac.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCI Le Tilleul, majoritairement détenue par le fonds de dotation SDH"
+  usufruitier: "Coop du Tilleul (collectif d'usage de la ferme de Lartel)"
+  description: >
+    Le foncier productif de TERA — ferme de Lartel à Masquières, terres de
+    Lustrac à Trentels — appartient à la SCI Le Tilleul, société civile dont le
+    fonds de dotation SDH détient la majorité des parts depuis 2017. La SCI loue
+    ces biens aux structures d'usage du projet, dont la Coop du Tilleul, qui
+    porte les activités nourricières. Le montage est une propriété collective
+    dont le maillon dominant est un fonds de dotation non lucratif, mais qui
+    transite par une société civile à usage locatif et mobilise une dizaine de
+    structures juridiques. Pour le quartier rural de Lustrac, une SCIC créée en
+    2021 doit revendre la partie habitat à une coopérative d'habitant·es.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Chaîne dont le maillon foncier dominant est un fonds de dotation non
+    lucratif, mais qui passe par une SCI à usage locatif et une SCIC ; la
+    gouvernance du foncier relève des instances des structures, non directement
+    des usager·es du lieu.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier productif est porté par une SCI majoritairement détenue par le fonds de dotation SDH, structure non spéculative, mais une fraction des parts reste hors du fonds."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage est largement documenté : un wiki public détaille les structures juridiques de l'écosystème TERA, le rôle du fonds SDH et de la SCI Le Tilleul."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La détention majoritaire de la SCI par un fonds de dotation soustrait durablement le foncier ; aucune clause d'inaliénabilité explicite n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition repose sur les dons reçus par le fonds SDH, l'épargne solidaire et le placement de la Coopérative Oasis, hors logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le fonds de dotation n'a pas de capital appropriable, mais le foncier transite par une SCI dont une fraction des parts reste cessible hors du fonds."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Le fonds de dotation et les associations du projet sont non lucratifs, mais la SCI Le Tilleul est qualifiée par TERA de société à usage locatif lucratif."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le maillon foncier dominant est un fonds de dotation, mais la chaîne comporte une SCI à usage locatif et une SCIC : des sociétés civiles et commerciales à lucrativité encadrée."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "TERA revendique une gouvernance coopérative et partagée ; environ 400 adhérent·es participent aux décisions et activités du projet."
+  - critere: tripartisme
+    valeur: oui
+    note: "Le projet associe les communes (quartier rural de Trentels en partenariat avec la commune) et la Région Nouvelle-Aquitaine à plusieurs de ses chantiers."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "TERA accueille de nouveaux·elles « Terian·es » et structure ses instances ; les dispositifs explicites de transmission ne sont pas tous documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Maraîchage, forêt-jardin, épicerie de proximité, centre de formation, quartier rural : le projet sert un intérêt général alimentaire, social et territorial."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Déployé sur trois communes du Lot-et-Garonne et soutenu par les collectivités, TERA est explicitement un projet de relocalisation des activités en zone rurale."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "TERA vise un revenu d'autonomie et la coopération hors marché, mais l'épicerie et les productions relèvent en partie d'une logique marchande."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant du loyer versé par les structures d'usage à la SCI Le Tilleul n'est pas documenté par les sources consultées."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature et la durée des titres d'usage liant la SCI Le Tilleul aux structures d'usage de TERA ne sont pas documentées par les sources."
+analyse:
+  forces:
+    - "Montage largement documenté par un wiki public détaillé."
+    - "Foncier productif piloté par un fonds de dotation non lucratif à objet protecteur."
+    - "Projet territorial vaste, ancré sur trois communes et soutenu par les collectivités."
+  fragilites:
+    - "Le foncier transite par une SCI à usage locatif qualifiée de lucrative par TERA."
+    - "Une dizaine de structures juridiques : montage complexe et difficile à verrouiller."
+    - "Nature, durée et montant des titres d'usage non documentés."
+  leviers:
+    - "Verrouiller la SCI Le Tilleul au sein du fonds de dotation SDH."
+    - "Publier la nature et la durée des baux liant la SCI aux structures d'usage."
+    - "Simplifier et rendre plus lisible la chaîne des structures juridiques."
+  synthese: >
+    TERA est un écosystème coopératif rural ambitieux dont le foncier productif
+    est piloté par un fonds de dotation non lucratif. Sa complexité — une dizaine
+    de structures, une SCI à usage locatif — et le manque de documentation sur
+    les titres d'usage tempèrent un montage par ailleurs sincère et bien
+    documenté dans son principe.
+fiabilite: >
+  Faits vérifiés (sources tera.coop, wiki TERA, SDH-lefonds.org, Coopérative
+  Oasis et presse, consultées en mai 2026) : projet TERA né en 2015, installé au
+  lieu-dit Lartel à Masquières et déployé sur Tournon-d'Agenais et Trentels,
+  foncier productif porté par la SCI Le Tilleul majoritairement détenue par le
+  fonds de dotation SDH depuis 2017, ferme de Lartel exploitée par la Coop du
+  Tilleul, SCIC créée en 2021 pour le quartier rural de Lustrac, placement de
+  180 000 euros sur dix ans par la Coopérative Oasis dans le compte courant de
+  la SCI Le Tilleul pour l'achat de 4 hectares. Non confirmé : nature et durée
+  des baux, montant des loyers, clauses d'usage, clause de dévolution du fonds.
+chaine:
+  porteurs: [fonds-sdh]
+  usufruitiers: [coop-du-tilleul]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "TERA — Habitons le présent"
+    url: "https://www.tera.coop/"
+  - titre: "Les structures juridiques de l'écosystème Tera — Wiki TERA"
+    url: "https://wiki.tera.coop/tera:structures_juridiques"
+  - titre: "TERA — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/tera/"

@@ -1,0 +1,122 @@
+uid: gaec-les-croquants
+categorie: usufruitier
+nom: "GAEC Les Croquants"
+sous_titre: "Collectif paysan de six associé·es exploitant la ferme de Pégarou, en Ariège"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "La Bastide-de-Besplas"
+  departement: "Ariège (09)"
+  region: "Occitanie"
+annee: 2022
+url: "https://fermedescroquants.fr/"
+resume: >
+  Groupement agricole d'exploitation en commun (GAEC) créé à l'été 2022,
+  réunissant six paysan·nes — Margot Schaad, Fanny Guillot, Loric Ferreri,
+  Arthur Braun, Merlin Leppens et Quentin Hunt. Le collectif exploite la ferme
+  de Pégarou, à La Bastide-de-Besplas, dont le foncier a été acquis en 2022 par
+  la Foncière Terre de Liens. Le GAEC y conduit, en agriculture biologique, du
+  maraîchage (une quarantaine de variétés de légumes), des céréales (blé, orge,
+  sarrasin) transformées en pain au levain et en bière artisanale, ainsi qu'un
+  petit élevage de poules pondeuses. Le collectif vend en circuit court sur les
+  marchés locaux et en paniers.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC Les Croquants (collectif paysan de six associé·es)"
+  description: >
+    Le GAEC Les Croquants reçoit l'usage du foncier de la ferme de Pégarou par
+    bail rural conclu avec la Foncière Terre de Liens, qui en a acquis la
+    propriété en 2022 grâce à l'épargne citoyenne ; le collectif a d'abord
+    signé un bail rural dans l'attente de cette acquisition. Le GAEC est une
+    société civile agricole ; il a acheté les bâtiments de la ferme et exploite
+    les terres en collectif.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Le GAEC est une société civile agricole à gouvernance collective réelle ;
+    il s'articule à un porteur, la Foncière Terre de Liens, de nature
+    sociétaire à actionnariat solidaire.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété du foncier reste à la Foncière Terre de Liens : le GAEC en a l'usage par bail rural et ne peut ni le revendre ni en capter la valeur."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le GAEC est une société civile dont les parts sociales sont cessibles avec l'agrément des associés ; leur prix n'est pas statutairement plafonné, mais le GAEC ne détient pas le foncier."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de droit civil, et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le GAEC est une société civile agricole : les excédents d'exploitation rémunèrent le travail des six associés et peuvent être partagés, sans logique de rendement du capital."
+  - critere: une_voix
+    valeur: oui
+    note: "Le GAEC repose statutairement sur l'égalité des associés exploitants, qui participent tous au travail ; le pouvoir n'y est pas indexé sur le capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les six paysan·nes associé·es du GAEC décident directement et collectivement de la conduite de la ferme."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Les modalités d'accueil de nouveaux associés et de renouvellement du collectif ne sont pas documentées par les sources."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions du GAEC au-delà de ses associés n'est pas documentée."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — agriculture biologique paysanne, maraîchage, céréales, boulangerie, restauration de la biodiversité — porte un intérêt général agricole et écologique."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme vend en circuit court et accueille du public ; le GAEC reste une exploitation dont les bénéfices profitent d'abord à ses six associés."
+  - critere: duree_usage
+    valeur: oui
+    note: "Le GAEC dispose d'un bail rural, dont le renouvellement est d'ordre public : jouissance longue et sécurisée des terres."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses environnementales formalisées dans le bail rural (bail rural environnemental) n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le GAEC est lié à la Foncière Terre de Liens par un bail rural clair, conclu autour de l'acquisition du foncier en 2022."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "La production (pain, légumes, bière, œufs) est vendue en circuit court ; l'activité relève d'une logique paysanne de proximité sans être non marchande."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le recours à Terre de Liens visait à ancrer le projet sans alourdir l'endettement à l'installation, ce qui suppose un fermage modéré ; son montant n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Collectif réellement pluriel : six associé·es décidant ensemble dans un GAEC."
+    - "Société civile agricole de droit civil, sans logique de rendement du capital."
+    - "Usage du foncier sécurisé par bail rural à renouvellement d'ordre public."
+  fragilites:
+    - "Ouverture aux nouveaux entrants et transmission du collectif non documentées."
+    - "Transparence comptable, clause de dévolution et clauses du bail non documentées."
+    - "Niveau du fermage non documenté."
+  leviers:
+    - "Documenter publiquement les statuts, l'accueil de nouveaux associés et la transmission."
+    - "Préciser les clauses environnementales du bail rural."
+    - "Documenter le niveau du fermage et son caractère soutenable."
+  synthese: >
+    Le GAEC Les Croquants est un maillon usufruitier solide : un collectif
+    paysan pluriel, société civile agricole à gouvernance réellement partagée,
+    qui exploite par bail rural un foncier sanctuarisé par la Foncière. Sa
+    marge de progression tient surtout à la publication de son fonctionnement
+    interne et de ses dispositifs de renouvellement.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Ferme des Croquants et presse
+  régionale, consultées en mai 2026) : GAEC créé à l'été 2022, six associé·es
+  nommé·es, exploitation de la ferme de Pégarou à La Bastide-de-Besplas,
+  foncier acquis en 2022 par la Foncière Terre de Liens, achat des bâtiments
+  par le collectif, activités de maraîchage, céréales, boulangerie, brasserie
+  et élevage de poules en agriculture biologique, vente en circuit court. Non
+  confirmé : montant du fermage, clauses du bail rural, transparence comptable,
+  clause de dévolution, modalités d'accueil de nouveaux associés.
+voir_aussi: [fonciere-terre-de-liens]
+sources:
+  - titre: "La ferme de Pégarou — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/midi-pyrenees/fermes-de-la-r%C3%A9gion-midi-pyr%C3%A9n%C3%A9es/la-ferme-du-pegarou/"
+  - titre: "Les Croquants, une ferme collective en Ariège — Ferme des Croquants"
+    url: "https://fermedescroquants.fr/les-croquants-une-ferme-collective-en-ariege/"

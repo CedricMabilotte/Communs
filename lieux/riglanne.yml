@@ -1,0 +1,128 @@
+uid: riglanne
+categorie: lieu
+nom: "Ferme de Riglanne"
+sous_titre: "Ferme fromagère bio en transmission sur foncier partiellement sanctuarisé en Loire-Atlantique"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Campbon"
+  departement: "Loire-Atlantique (44)"
+  region: "Pays de la Loire"
+annee: 2013
+url: "https://fermes.terredeliens.org/pays-de-la-loire/fermes-de-la-r%C3%A9gion-pays-de-la-loire/riglanne/"
+resume: >
+  Ferme d'élevage laitier et fromagère à Campbon, en Loire-Atlantique, conduite
+  en agriculture biologique depuis 2002. Anne et Christian Bastard y élevaient
+  un troupeau de vaches laitières sur une exploitation d'environ soixante-dix
+  hectares, en grande majorité de prairies. En 2012, ils ont fait appel à Terre
+  de Liens pour racheter la moitié des terres exploitées ; la Foncière Terre de
+  Liens en a acquis le foncier en 2013, le retirant du marché. Après le
+  parrainage, à partir de février 2025, de trois porteuses de projet, les
+  cédant·es ont pris leur retraite en octobre 2025 et la ferme a été reprise par
+  ce collectif, qui la diversifie — élevage bovin laitier et caprin — et la
+  transforme en fromages, beurre, crème et yaourts vendus en circuits courts.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC de Riglanne (groupement agricole d'exploitation en commun)"
+  description: >
+    Une partie du foncier de la ferme de Riglanne — la moitié des terres
+    exploitées — est portée durablement par la Foncière Terre de Liens, qui l'a
+    acquise en 2013 grâce à l'épargne solidaire citoyenne, à la demande des
+    éleveur·ses alors en place. Son usage est confié par bail rural au
+    groupement agricole qui exploite la ferme, aujourd'hui repris par trois
+    nouvelles paysannes. La part du foncier restée hors du portage de la
+    Foncière et la nature exacte du bail ne sont pas pleinement documentées par
+    les sources consultées.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Une partie du foncier est sanctuarisée par la Foncière Terre de Liens,
+    société en commandite par actions à actionnariat solidaire ; l'usufruitier
+    est un GAEC, société civile d'exploitation dont le bénéfice est partagé
+    entre les paysan·nes associé·es.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "La Foncière Terre de Liens a acquis en 2013 la moitié des terres exploitées et les a retirées du marché ; l'autre moitié n'est pas portée par la Foncière."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition par la Foncière Terre de Liens en 2013 de la moitié des terres, usage confié par bail rural — est public et documenté par Terre de Liens."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Les terres portées par la Foncière sont durablement soustraites au marché ; la part du foncier restée hors de ce portage n'est pas sécurisée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Les terres ont été acquises en 2013 grâce à l'épargne solidaire citoyenne, hors tout endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions dont les actions sont cessibles ; les parts du GAEC, sans valeur foncière, sont cédées sous agrément des associé·es."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "La Foncière ne verse pas de dividende, mais le GAEC est une société civile d'exploitation dont le revenu agricole est partagé entre les associé·es."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions à actionnariat solidaire ; le GAEC est une société civile agricole — la chaîne est entièrement sociétaire, sans société commerciale à lucrativité ouverte."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est exploitée par le GAEC de Riglanne : les trois paysannes repreneuses décident ensemble des choix de l'exploitation."
+  - critere: tripartisme
+    valeur: non
+    note: "La gouvernance de la ferme repose sur les associé·es du GAEC ; l'association du voisinage ou des collectivités n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: oui
+    note: "La ferme vient d'organiser sa transmission — parrainage des repreneuses en 2025, retraite des cédant·es — et prévoit d'accueillir de nouvelles activités au sein du GAEC."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Transmission de ferme, élevage laitier et caprin en agriculture biologique, transformation fromagère, vente en circuits courts : la ferme sert un intérêt général agricole et alimentaire."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La ferme transforme et vend ses produits laitiers en circuits courts sur le territoire nantais, en lien avec des AMAP."
+  - critere: usage_non_marchand
+    valeur: non
+    note: "L'activité de la ferme est une production agricole et fromagère vendue en circuits courts au prix du marché ; l'usage n'est pas non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Les actions de la Foncière ne versent pas de dividende, écartant une logique de rendement ; le montant du fermage versé par le GAEC n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage des terres de la Foncière est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Transmission de ferme réussie : reprise collective par trois paysannes en 2025."
+    - "Foncier partiellement sanctuarisé hors marché par l'épargne citoyenne depuis 2013."
+    - "Ferme diversifiée et ouverte à de nouvelles activités (paysans boulangers, atelier mutualisé)."
+  fragilites:
+    - "Seule la moitié des terres exploitées est portée par la Foncière Terre de Liens."
+    - "L'usufruitier est un GAEC : société civile d'exploitation au bénéfice partagé entre associé·es."
+    - "Montant du fermage, statuts du collectif et clause de dévolution non documentés."
+  leviers:
+    - "Documenter la part du foncier restée hors du portage de la Foncière."
+    - "Préciser le niveau du fermage et son caractère non rentier."
+    - "Publier les statuts du collectif repreneur et formaliser l'accueil des nouvelles activités."
+  synthese: >
+    Riglanne illustre le modèle Terre de Liens au service de la transmission :
+    un foncier partiellement sanctuarisé dès 2013, qui permet, plus de dix ans
+    plus tard, la reprise collective d'une ferme fromagère par trois nouvelles
+    paysannes. La sanctuarisation partielle du foncier et la nature de
+    groupement d'exploitation de l'usufruitier situent la ferme du côté du
+    mutualisme.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, Terre de Liens Pays de la Loire,
+  AMAP44 et presse spécialisée, consultées en mai 2026) : ferme fromagère de
+  Riglanne à Campbon, élevage laitier biologique conduit depuis 2002 par Anne et
+  Christian Bastard, environ soixante-dix hectares majoritairement en prairies,
+  appel à Terre de Liens en 2012, acquisition par la Foncière Terre de Liens en
+  2013 de la moitié des terres exploitées, parrainage de Loréna Serra, Nolwenn
+  Thiriet et Valentine Temple dès février 2025, retraite des cédant·es en
+  octobre 2025, reprise collective, diversification bovin et caprin. Non
+  confirmé : surface exacte portée par la Foncière, montant du fermage, statuts
+  du collectif repreneur.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-de-riglanne]
+sources:
+  - titre: "Riglanne — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/pays-de-la-loire/fermes-de-la-r%C3%A9gion-pays-de-la-loire/riglanne/"
+  - titre: "Riglanne — Terre de Liens Pays de la Loire"
+    url: "https://terredeliens-paysdelaloire.org/les-fermes/riglanne/"

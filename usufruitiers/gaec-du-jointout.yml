@@ -1,0 +1,128 @@
+uid: gaec-du-jointout
+categorie: usufruitier
+nom: "GAEC du Jointout"
+sous_titre: "Groupement agricole d'exploitation en commun de la ferme collective du Jointout, à Torpes"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "Torpes"
+  departement: "Saône-et-Loire (71)"
+  region: "Bourgogne-Franche-Comté"
+annee: 2010
+url: "http://www.fermedujointout.fr/"
+resume: >
+  Groupement agricole d'exploitation en commun (GAEC) qui exploite la ferme
+  collective du Jointout, à Torpes, en Bresse bourguignonne. Exploitation
+  collective depuis 2010, le GAEC réunit six associé·es autour de plusieurs
+  ateliers : élevage d'une centaine de brebis Basco-Béarnaises et d'une
+  quarantaine de chèvres alpines avec transformation fromagère, maraîchage sur
+  environ 1,5 hectare et 1 000 m² de serres, trois hectares de blé pour la
+  boulangerie, porcs plein air et élevage-dressage de chevaux de trait. Le GAEC
+  est titulaire de l'usage du foncier — environ 50 hectares — dont la propriété
+  a été acquise en 2011 par Terre de Liens, et qui lui est confié par bail
+  rural. Le collectif a accueilli de nouveaux·elles associé·es en 2021, 2022 et
+  2024.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Terre de Liens — Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire), porteur non confirmé"
+  usufruitier: "GAEC du Jointout (groupement agricole d'exploitation en commun)"
+  description: >
+    La propriété du foncier du Jointout est portée durablement par Terre de
+    Liens — vraisemblablement la Foncière Terre de Liens, sans que les sources
+    publiques le confirment ; son usage est confié au GAEC du Jointout par un
+    bail rural. Le GAEC est une société civile agricole : il exploite la terre
+    de façon collective sans en être propriétaire et n'en capte pas la valeur
+    foncière.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Le GAEC est une société civile agricole non lucrative dont les associé·es
+    sont des exploitant·es ; sa gouvernance est collective et son
+    renouvellement effectif, mais centrée sur le cercle des associé·es du
+    groupement.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété du foncier reste à Terre de Liens : les associé·es du GAEC ne peuvent ni revendre ni capter à titre privé la valeur de la terre."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Un GAEC a un capital social divisé en parts ; leur cession est soumise à l'agrément des associé·es et au contrôle d'agrément du GAEC, mais le prix de cession n'est pas plafonné par les sources consultées."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de droit civil, à objet non commercial, et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Un GAEC partage les résultats de l'exploitation entre ses associé·es exploitant·es ; il n'est pas structurellement non lucratif, mais ne capte pas la valeur du foncier porté par Terre de Liens."
+  - critere: une_voix
+    valeur: oui
+    note: "Le GAEC repose sur le principe d'égalité des associé·es, qui sont tous chef·fes d'exploitation : le pouvoir de décision n'est pas indexé sur le capital apporté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les six associé·es exploitant·es décident collectivement de la conduite de la ferme qu'ils et elles travaillent, en exploitation commune depuis 2010."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "Le GAEC a accueilli de nouveaux·elles associé·es au fil des années — notamment Raphaël en 2021, Marie en 2022 et Charline en 2024 — organisant son renouvellement."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions du GAEC n'est pas documentée par les sources consultées."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — agriculture paysanne biologique, élevage laitier, transformation fromagère, boulangerie et maraîchage nourriciers — porte un intérêt général agricole et alimentaire."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme vend en circuit court et se conçoit comme un lieu d'échanges culturels ouvert au territoire ; le GAEC profite d'abord à ses associé·es exploitant·es."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail rural, d'une durée minimale de neuf ans avec droit au renouvellement d'ordre public : la jouissance est durable depuis 2010-2011."
+  - critere: clauses_usage
+    valeur: partiel
+    note: "Terre de Liens conclut en principe des baux ruraux environnementaux imposant l'agriculture biologique ; les clauses précises du bail du Jointout ne sont pas documentées."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Le GAEC est lié à Terre de Liens par un bail rural ; l'articulation est claire dans son principe, mais le véhicule porteur exact n'est pas précisé par les sources."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "La production fromagère, boulangère et maraîchère est vendue en circuit court ; l'usage relève d'une logique nourricière de proximité sans être pleinement non marchand."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le fermage versé à Terre de Liens relève d'une logique non rentière ; son montant exact n'est pas documenté par les sources consultées."
+analyse:
+  forces:
+    - "Exploitation collective diversifiée réunissant six associé·es en GAEC depuis 2010."
+    - "Renouvellement effectif du collectif, avec de nouveaux·elles associé·es en 2021, 2022 et 2024."
+    - "Usage du foncier sécurisé par bail rural et propriété verrouillée hors marché par Terre de Liens."
+  fragilites:
+    - "Le GAEC partage les résultats entre associé·es : il n'est pas structurellement non lucratif."
+    - "Véhicule porteur exact (Foncière ou Fondation) non confirmé par les sources."
+    - "Transparence comptable et clause de dévolution non documentées."
+  leviers:
+    - "Documenter publiquement les statuts, les comptes et la clause de dévolution du GAEC."
+    - "Préciser le véhicule porteur et le montant du fermage."
+    - "Inscrire les clauses environnementales du bail dans un cadre public lisible."
+  synthese: >
+    Le GAEC du Jointout est le maillon usufruitier d'une ferme collective Terre
+    de Liens éprouvée : un groupement de six associé·es qui exploite en commun
+    depuis 2010 un foncier sanctuarisé, avec un renouvellement régulier du
+    collectif. Société civile agricole à gouvernance égalitaire, il offre une
+    gouvernance collective réelle, mais centrée sur le cercle des exploitant·es
+    et non structurellement non lucrative.
+fiabilite: >
+  Faits vérifiés (sources ferme du Jointout, Terre de Liens
+  Bourgogne-Franche-Comté et presse agricole, consultées en mai 2026) :
+  exploitation collective de la ferme du Jointout à Torpes par un GAEC depuis
+  2010, six associé·es, ateliers d'élevage de brebis et chèvres laitières avec
+  transformation fromagère, céréales et boulangerie, porcs plein air,
+  maraîchage et chevaux de trait, foncier d'environ 50 hectares acquis par
+  Terre de Liens en 2011 et confié par bail rural, arrivées de nouveaux·elles
+  associé·es en 2021, 2022 et 2024. Non confirmé : véhicule porteur exact,
+  statuts et comptes du GAEC, clause de dévolution, clauses du bail, montant du
+  fermage.
+voir_aussi: [fonciere-terre-de-liens]
+sources:
+  - titre: "Ferme du Jointout — site officiel"
+    url: "http://www.fermedujointout.fr/"
+  - titre: "Le Jointout — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/le-jointout/"

@@ -1,0 +1,125 @@
+uid: le-temps-des-possibles
+categorie: porteur
+nom: "SAS Le Temps des Possibles"
+sous_titre: "Société par actions propriétaire du foncier du Domaine des Éveils"
+statut_fiche: publie
+forme_juridique: "Société par actions simplifiée (SAS)"
+localisation:
+  commune: "Bruailles"
+  departement: "Saône-et-Loire (71)"
+  region: "Bourgogne-Franche-Comté"
+annee: null
+url: "https://www.domainedeseveils.fr/"
+resume: >
+  La SAS Le Temps des Possibles est la société propriétaire du foncier du
+  Domaine des Éveils, à Bruailles en Saône-et-Loire — 16 hectares de prairies,
+  forêts et jardins de la Bresse bourguignonne, sur l'ancien Domaine de
+  Chardenoux. Elle réunit ses actionnaires autour de l'acquisition et de la
+  conservation des terres et bâtiments, dont la jouissance est confiée à la
+  SCIC Le Domaine des Éveils qui les exploite. La Coopérative Oasis figure
+  parmi les actionnaires de la SAS et accompagne le projet sur la coopération
+  et l'intelligence collective. Les personnes souhaitant participer au projet
+  peuvent acquérir des actions de la SAS à leur valeur nominale.
+montage:
+  type: propriete_collective
+  description: >
+    Le foncier du Domaine des Éveils est détenu par la SAS Le Temps des
+    Possibles, société par actions dont les titres sont proposés à la valeur
+    nominale aux personnes souhaitant soutenir le projet. La société conserve
+    la propriété des terres et bâtiments et en confie l'exploitation à la SCIC
+    Le Domaine des Éveils. Le montage repose sur une société commerciale dont
+    la lucrativité et la cessibilité des actions sont, selon les sources,
+    encadrées par la valeur nominale, sans que les statuts soient publiquement
+    documentés.
+integrite_montage:
+  niveau: economie_marchande
+  commentaire: >
+    Société par actions simplifiée : forme commerciale de droit privé. Les
+    actions sont proposées à la valeur nominale, mais la SAS n'est pas une
+    structure non lucrative et ses statuts ne sont pas documentés.
+grille:
+  - critere: inalienabilite
+    valeur: non
+    note: "Le foncier est détenu par une SAS, société par actions qui peut en principe vendre ses actifs : aucun dispositif d'inaliénabilité n'est documenté."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les actions de la SAS sont proposées à la valeur nominale, ce qui encadre la captation de plus-value ; mais une SAS permet en principe la cession des actions et les statuts ne sont pas publiquement documentés."
+  - critere: nature_protectrice
+    valeur: non
+    note: "La SAS est une société commerciale : c'est le degré le plus faible de l'échelle de protection foncière, loin de la fondation ou de la personne publique."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence d'une clause de dévolution désintéressée dans les statuts de la SAS n'est pas documentée par les sources."
+  - critere: forme_non_lucrative
+    valeur: non
+    note: "Une SAS est une société commerciale par nature : ce n'est pas une forme structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Les actions sont proposées à la valeur nominale, ce qui limite la rémunération du capital ; mais une SAS peut distribuer des dividendes et aucun verrou statutaire n'est documenté."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "Le caractère désintéressé de la gestion de la SAS et la rémunération de ses dirigeant·es ne sont pas documentés par les sources."
+  - critere: independance_rendement
+    valeur: partiel
+    note: "Les actionnaires souscrivent à la valeur nominale dans une logique de soutien au projet ; rien n'exclut toutefois statutairement une attente de rendement, les statuts n'étant pas documentés."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La composition et le fonctionnement de l'organe de direction de la SAS ne sont pas documentés par les sources."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "La Coopérative Oasis figure parmi les actionnaires de la SAS ; la représentation d'autres parties prenantes — habitant·es, usager·es — dans la gouvernance n'est pas documentée."
+  - critere: transparence
+    valeur: inconnu
+    note: "La publication des comptes et des statuts de la SAS n'est pas documentée par les sources consultées."
+  - critere: objet_foncier_protecteur
+    valeur: inconnu
+    note: "L'inscription dans les statuts de la SAS d'un objet de protection foncière ou de soustraction au marché n'est pas documentée par les sources."
+  - critere: agrement_ig
+    valeur: non
+    note: "Une SAS ne relève pas par sa forme du régime de l'intérêt général ; aucun agrément n'est documenté."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de la SAS à un risque de requalification fiscale n'est pas un enjeu documenté, la société étant déjà de nature commerciale."
+  - critere: redevabilite_publique
+    valeur: inconnu
+    note: "Une reddition de comptes de la SAS au-delà de ses actionnaires n'est pas documentée par les sources."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "Les conditions — gratuité, loyer, redevance — auxquelles la SAS confie l'usage du foncier à la SCIC ne sont pas documentées par les sources."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage accordé par la SAS à la SCIC Le Domaine des Éveils ne sont pas documentées par les sources."
+analyse:
+  forces:
+    - "Actions proposées à la valeur nominale, ce qui encadre la captation de plus-value."
+    - "La Coopérative Oasis, actionnaire, apporte un accompagnement en coopération et intelligence collective."
+    - "La propriété collective via une société de personnes a permis l'acquisition d'un domaine de 16 hectares."
+  fragilites:
+    - "SAS : société commerciale de droit privé, sans nature non lucrative ni protection foncière statutaire documentée."
+    - "Statuts, clause de dévolution, objet foncier et gouvernance non documentés publiquement."
+    - "Nature et durée du titre d'usage liant la SAS à la SCIC non documentées."
+  leviers:
+    - "Publier les statuts de la SAS et y inscrire un objet de protection foncière et un verrou anti-spéculatif."
+    - "Formaliser et publier le titre d'usage liant la SAS à la SCIC exploitante."
+    - "Envisager un transfert du foncier vers une structure non lucrative tierce."
+synthese: >
+  La SAS Le Temps des Possibles porte le foncier du Domaine des Éveils sous une
+  forme commerciale : une société par actions, où la Coopérative Oasis est
+  actionnaire. Les actions à valeur nominale tempèrent la logique spéculative,
+  mais le montage reste, par sa forme, le maillon le plus éloigné du modèle de
+  la libération des terres, faute de structure non lucrative et de verrous
+  statutaires documentés.
+fiabilite: >
+  Faits vérifiés (sources Coopérative Oasis et Domaine des Éveils, consultées
+  en mai 2026) : SAS Le Temps des Possibles propriétaire du foncier du Domaine
+  des Éveils à Bruailles (16 hectares), actions proposées à la valeur
+  nominale, Coopérative Oasis parmi les actionnaires, exploitation confiée à la
+  SCIC Le Domaine des Éveils. Non confirmé : date de création de la SAS,
+  statuts, clause de dévolution, objet statutaire, gouvernance, nature et
+  durée du titre d'usage accordé à la SCIC.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Coopérative Oasis — Domaine des Éveils"
+    url: "https://cooperative-oasis.org/oasis/domaine-des-eveils/"
+  - titre: "Domaine des Éveils — site officiel"
+    url: "https://www.domainedeseveils.fr/"

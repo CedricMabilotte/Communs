@@ -1,0 +1,126 @@
+uid: fonds-sdh
+categorie: porteur
+nom: "Fonds de dotation SDH"
+sous_titre: "Fonds de dotation portant le foncier de l'écosystème TERA en Lot-et-Garonne"
+statut_fiche: publie
+forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
+localisation:
+  commune: "Masquières / Tournon-d'Agenais"
+  departement: "Lot-et-Garonne (47)"
+  region: "Nouvelle-Aquitaine"
+annee: null
+url: "https://sdh-lefonds.org/"
+resume: >
+  Le fonds de dotation « Solidarité pour un Développement Humain » (SDH) est la
+  structure foncière sur laquelle s'appuie l'écosystème coopératif TERA depuis
+  ses débuts en Lot-et-Garonne. Sa mission affichée est de préserver, renouveler
+  et transmettre aux générations futures un milieu naturel propice à la vie, et
+  d'en garantir l'accès, notamment aux habitant·es les plus vulnérables des
+  zones de revitalisation rurale. SDH détient la majorité des parts sociales de
+  la SCI Le Tilleul, société civile immobilière qui possède la ferme de Lartel à
+  Masquières et les terres de Lustrac à Trentels ; la SCI lui a été transmise en
+  2017. Le fonds sert aussi d'intermédiaire pour les dons destinés aux
+  associations membres du projet et a été labellisé « 1 % pour la planète »
+  depuis décembre 2023.
+montage:
+  type: propriete_collective
+  description: >
+    Le foncier de TERA n'est pas détenu directement par le fonds : il appartient
+    à la SCI Le Tilleul, dont le fonds de dotation SDH détient la majorité des
+    parts sociales depuis 2017. SDH est donc un porteur indirect, propriétaire
+    majoritaire de la société civile qui possède la ferme de Lartel et les
+    terres de Lustrac. La SCI loue ces biens aux structures d'usage du projet.
+    Le montage est une propriété collective dont le maillon dominant est un
+    fonds de dotation non lucratif, mais qui transite par une société civile à
+    usage locatif.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Fonds de dotation non lucratif, mais propriétaire majoritaire d'une société
+    civile immobilière à usage locatif ; gouvernance portée par les instances du
+    fonds et non directement par les usager·es du lieu.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le fonds de dotation est une structure protectrice du foncier, mais celui-ci est détenu via une SCI dont le caractère inaliénable des biens n'est pas documenté."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le fonds de dotation n'a pas de capital appropriable, mais il détient des parts d'une SCI dont une fraction reste hors du fonds : le verrouillage n'est pas total."
+  - critere: nature_protectrice
+    valeur: oui
+    note: "Le fonds de dotation, structure non lucrative créée par la loi du 4 août 2008, figure dans la partie haute de l'échelle de protection foncière."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "La clause de dévolution de l'actif du fonds de dotation SDH en cas de dissolution n'est pas documentée par les sources consultées."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "SDH est un fonds de dotation, forme structurellement non lucrative ; il ne poursuit aucun but de profit sur le foncier."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le fonds est non lucratif, mais il détient des parts d'une SCI à usage locatif dont le régime des revenus n'est pas documenté."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "Le fonds poursuit une mission désintéressée de préservation d'un milieu naturel et d'accès à la terre pour les habitant·es vulnérables des zones rurales."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Le fonds est alimenté par des dons et non par des investisseurs attendant un rendement ; il sert d'intermédiaire pour les dons aux associations membres."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La composition de l'organe de gouvernance du fonds de dotation SDH n'est pas documentée par les sources consultées."
+  - critere: parties_prenantes
+    valeur: inconnu
+    note: "L'association des usager·es de TERA à la gouvernance du fonds de dotation n'est pas documentée par les sources."
+  - critere: transparence
+    valeur: partiel
+    note: "Le fonds dispose d'un site public et le montage est documenté ; la publication régulière de ses comptes n'est pas confirmée par les sources."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet du fonds vise explicitement à préserver, renouveler et transmettre aux générations futures un milieu naturel et à en garantir l'accès."
+  - critere: agrement_ig
+    valeur: oui
+    note: "Le fonds de dotation SDH a été labellisé « 1 % pour la planète » depuis décembre 2023 ; ce label est un tag informatif, non un gage de libération."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition du fonds à un risque de requalification fiscale n'est pas documentée par les sources consultées."
+  - critere: redevabilite_publique
+    valeur: inconnu
+    note: "Les modalités de reddition de comptes du fonds au-delà de ses membres ne sont pas documentées par les sources."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le foncier porté par la SCI est loué aux structures d'usage de TERA ; le caractère modéré ou rentier du loyer n'est pas documenté par les sources."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "La nature et la durée des titres d'usage accordés aux structures de TERA ne sont pas documentées par les sources consultées."
+analyse:
+  forces:
+    - "Fonds de dotation non lucratif à objet statutaire explicite de protection foncière."
+    - "Détention majoritaire de la SCI foncière : pilotage stable du patrimoine."
+    - "Mission désintéressée d'accès à la terre pour les habitant·es des zones rurales."
+  fragilites:
+    - "Le foncier transite par une SCI à usage locatif dont une fraction des parts reste hors du fonds."
+    - "Gouvernance du fonds et association des usager·es non documentées."
+    - "Clause de dévolution, comptes et régime de location non documentés."
+  leviers:
+    - "Documenter publiquement les statuts, la gouvernance et les comptes du fonds."
+    - "Renforcer le verrouillage de la SCI au sein du fonds."
+    - "Préciser le régime de location et la durée des titres d'usage accordés."
+  synthese: >
+    Le fonds de dotation SDH est un porteur foncier non lucratif à objet
+    protecteur clair, qui pilote l'écosystème TERA via la détention majoritaire
+    d'une SCI. Sa solidité gagnerait à un verrouillage complet de la société
+    civile et à la publication de sa gouvernance et de ses comptes.
+fiabilite: >
+  Faits vérifiés (sources SDH-lefonds.org, wiki TERA et presse, consultées en
+  mai 2026) : fonds de dotation « Solidarité pour un Développement Humain », rôle
+  de structure foncière de l'écosystème TERA, détention majoritaire des parts de
+  la SCI Le Tilleul transmise au fonds en 2017, SCI propriétaire de la ferme de
+  Lartel (Masquières) et des terres de Lustrac (Trentels), mission de
+  préservation d'un milieu naturel, label « 1 % pour la planète » depuis
+  décembre 2023. Non confirmé : année de création du fonds, composition de sa
+  gouvernance, clause de dévolution, publication des comptes, régime des loyers.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "S.D.H. — Le fonds de dotation de la Solidarité pour un Développement Humain"
+    url: "https://sdh-lefonds.org/"
+  - titre: "Les structures juridiques de l'écosystème Tera — Wiki TERA"
+    url: "https://wiki.tera.coop/tera:structures_juridiques"

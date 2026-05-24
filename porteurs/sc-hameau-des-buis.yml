@@ -1,0 +1,142 @@
+uid: sc-hameau-des-buis
+categorie: porteur
+nom: "Société Civile le Hameau des Buis"
+sous_titre: "Société civile propriétaire du foncier de l'écovillage, aux parts détenues par une association"
+statut_fiche: publie
+forme_juridique: "Société civile"
+localisation:
+  commune: "Lablachère"
+  departement: "Ardèche (07)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2004
+url: "https://hameaudesbuis.org/lhistoire/"
+resume: >
+  Société civile constituée le 12 février 2004 pour porter le foncier et le bâti
+  de l'écovillage intergénérationnel du Hameau des Buis, en sud Ardèche. Sa
+  particularité tient à la détention de ses parts : sur 520 parts sociales, 519
+  étaient détenues par l'association loi 1901 La Ferme des Enfants, la dernière
+  par une société financière. Le pouvoir de décision était ainsi placé in fine
+  dans une structure associative sans but lucratif, montage conçu pour soustraire
+  le foncier à la spéculation et préserver la vocation du lieu. À la suite d'un
+  conflit interne ayant conduit au départ de La Ferme des Enfants en 2021, le
+  collectif a transformé la société civile en SAS coopérative, constituée le
+  28 janvier 2023. La société civile décrite ici est donc le porteur historique
+  du foncier, aujourd'hui remplacé par cette coopérative.
+montage:
+  type: propriete_collective
+  description: >
+    Le foncier et le bâti du Hameau des Buis étaient portés par une société
+    civile dont le capital — environ 2,3 millions d'euros apportés par les
+    personnes réservant un logement et 52 000 euros par La Ferme des Enfants —
+    se répartissait en 520 parts sociales. L'association La Ferme des Enfants en
+    détenait 519, une société financière la dernière : le pouvoir de décision
+    était ainsi verrouillé dans une association sans but lucratif. Les
+    habitant·es finançaient le lieu par un prêt sans intérêt indexé sur l'indice
+    de référence des loyers, sans devenir propriétaires, et disposaient d'un
+    droit d'usage de leur logement par un contrat de résident. Le démembrement
+    n'est pas civil au sens du Code civil : c'est la propriété collective d'une
+    société civile, contrôlée par une association, qui tient lieu de verrou.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Société civile dont les parts étaient quasi intégralement détenues par une
+    association loi 1901 : la nature non lucrative du contrôle reposait sur ce
+    montage de parts, et non sur des verrous statutaires propres à la société
+    civile, non documentés par les sources.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le foncier était porté par une société civile dont les parts étaient quasi intégralement détenues par une association, ce qui en freinait la sortie ; aucune clause statutaire d'inaliénabilité n'est documentée par les sources."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts de la société civile étaient concentrées à 519 sur 520 dans une association loi 1901 ; les sources ne documentent ni clause de plafonnement du prix de cession, ni interdiction statutaire de cession libre."
+  - critere: nature_protectrice
+    valeur: non
+    note: "La société civile occupe le dernier rang de l'échelle de protection foncière, derrière la personne publique, la fondation reconnue d'utilité publique et le fonds de dotation."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "Le sort de l'actif de la société civile en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: forme_non_lucrative
+    valeur: partiel
+    note: "La société civile n'est pas une forme structurellement non lucrative ; sa non-lucrativité reposait sur la détention de 519 parts sur 520 par l'association loi 1901 La Ferme des Enfants."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Les habitant·es finançaient le lieu par un prêt sans intérêt indexé sur l'indice de référence des loyers, sans plus-value attendue ; l'absence de rémunération du capital n'est pas confirmée par des clauses statutaires documentées."
+  - critere: gestion_desinteressee
+    valeur: partiel
+    note: "La société civile était dirigée par des cogérants liés au projet, dans une logique annoncée d'intérêt général ; le caractère bénévole ou encadré de la gestion n'est pas documenté par les sources."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Aucun investisseur en rendement n'est documenté : le capital provenait de prêts sans intérêt des habitant·es et de l'apport de l'association, hors logique de plus-value foncière."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "L'existence d'un organe de direction collégial et indépendant au sein de la société civile n'est pas documentée par les sources."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Le pouvoir de décision était placé dans l'association La Ferme des Enfants ; l'association des habitant·es, créée en 2009, représentait les résident·es, mais son rôle dans la gouvernance de la société civile n'est pas documenté."
+  - critere: transparence
+    valeur: partiel
+    note: "Le principe du montage — parts détenues par une association, prêts sans intérêt — est public et documenté par le lieu ; les comptes et la liste des biens portés ne le sont pas."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "Le montage est présenté comme conçu pour éviter la spéculation foncière et préserver la vocation du lieu ; l'objet statutaire précis de la société civile n'est pas documenté par les sources."
+  - critere: agrement_ig
+    valeur: inconnu
+    note: "Aucune reconnaissance publique ni éligibilité au régime fiscal de l'intérêt général de la société civile n'est documentée par les sources."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de la société civile à un risque de requalification fiscale n'est pas documentée par les sources consultées."
+  - critere: redevabilite_publique
+    valeur: non
+    note: "Aucune reddition de comptes au-delà des membres et associés de la société civile n'est documentée par les sources."
+  - critere: regime_usage_offert
+    valeur: non
+    note: "Le contrat de résident prévoyait un montant mensuel correspondant au marché locatif local, ce qui s'écarte d'un usage offert à des conditions non rentières — même si les habitant·es avaient préalablement prêté à la structure sans intérêt."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Les habitant·es disposaient d'un contrat de résident leur garantissant l'usage de leur logement ; la durée et les conditions de renouvellement de ce titre ne sont pas détaillées, et le conflit a montré la fragilité de la sécurité d'usage offerte."
+analyse:
+  forces:
+    - "Parts de la société civile détenues à 519 sur 520 par une association loi 1901 sans but lucratif."
+    - "Foncier financé par des prêts sans intérêt des habitant·es, hors logique spéculative."
+    - "Montage public et documenté, conçu pour préserver la vocation du lieu."
+  fragilites:
+    - "Société civile : dernier rang de l'échelle de protection foncière, sans verrou statutaire documenté."
+    - "Concentration du pouvoir dans l'association La Ferme des Enfants, source du conflit ayant conduit à son départ en 2021."
+    - "Contrat de résident calé sur le marché locatif local ; sécurité d'usage fragilisée par le conflit."
+  leviers:
+    - "Inscrire des clauses statutaires d'inaliénabilité et de dévolution désintéressée."
+    - "Documenter et publier les comptes et le régime d'usage des logements."
+    - "Confier le portage du foncier à une structure de rang supérieur (fonds de dotation, fondation)."
+  synthese: >
+    La Société Civile le Hameau des Buis illustre un montage de propriété
+    collective où la non-lucrativité reposait non sur la forme juridique du
+    porteur, mais sur la détention de ses parts par une association. Ce montage
+    a verrouillé le foncier sans le sanctuariser au plus haut niveau, et la
+    concentration du pouvoir décisionnel dans une seule association s'est
+    révélée un point de tension, conduisant au conflit interne puis à la
+    transformation de la société civile en SAS coopérative en 2023.
+fiabilite: >
+  Faits vérifiés (sources Hameau des Buis, Mouvement Colibris et Revue Silence,
+  consultées en mai 2026) : société civile constituée le 12 février 2004 pour
+  porter le foncier et le bâti du Hameau des Buis, capital d'environ 2,3 millions
+  d'euros apportés par les futur·es habitant·es et 52 000 euros par La Ferme des
+  Enfants, 520 parts sociales dont 519 détenues par l'association loi 1901 La
+  Ferme des Enfants et une par une société financière, pouvoir de décision placé
+  in fine dans cette association, financement des habitant·es par prêt sans
+  intérêt indexé sur l'indice de référence des loyers, contrat de résident avec
+  montant calé sur le marché locatif local, conflit interne et départ de La
+  Ferme des Enfants en 2021, transformation en SAS coopérative le 28 janvier
+  2023. Non confirmé : objet statutaire précis de la société civile, clauses
+  d'inaliénabilité et de dévolution, transparence comptable, durée et
+  renouvellement du contrat de résident. Le conflit interne au Hameau des Buis,
+  documenté publiquement par les deux parties, est traité ici sans prise de
+  parti : seuls les faits relatifs au montage juridique sont retenus.
+voir_aussi: [hameau-des-buis]
+sources:
+  - titre: "Le Hameau des Buis — L'histoire"
+    url: "https://hameaudesbuis.org/lhistoire/"
+  - titre: "Le Hameau des Buis — Mouvement Colibris"
+    url: "https://www.colibris-lemouvement.org/projets/projet-oasis/oasis-a-decouvrir/hameau-buis"
+  - titre: "Tempête sur le Hameau des Buis — Revue Silence"
+    url: "https://www.revuesilence.net/numeros/499-L-ecologie-du-livre/tempete-sur-le-hameau-des-buis"

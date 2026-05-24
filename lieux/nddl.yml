@@ -104,7 +104,7 @@ fiabilite: >
   dotation, montages d'usage et gouvernance.
 chaine:
   porteurs: [fonds-la-terre-en-commun]
-  usufruitiers: []
+  usufruitiers: [assemblee-des-usages-nddl]
 sources:
   - titre: "La Terre en commun — encommun.eco"
     url: "https://encommun.eco/"

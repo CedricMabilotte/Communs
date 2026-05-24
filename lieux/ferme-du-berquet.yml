@@ -1,0 +1,125 @@
+uid: ferme-du-berquet
+categorie: lieu
+nom: "La Ferme du Berquet — La Faille"
+sous_titre: "Lieu collectif agricole et culturel autogéré en Sud-Cévennes, porté par le fonds de dotation Antidote"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Monoblet"
+  departement: "Gard (30)"
+  region: "Occitanie"
+annee: 2024
+url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  La Ferme du Berquet est un lieu collectif autogéré situé à Monoblet, en
+  Sud-Cévennes dans le Gard, qui mène des activités agricoles et culturelles
+  depuis plus de douze ans. C'est un lieu ouvert, attaché à l'accueil, à
+  l'entraide et au lien social, doté d'une gouvernance que le collectif veut
+  toujours plus horizontale et inclusive. On y organise concerts et spectacles
+  vivants à bas coût pour favoriser l'accès à la culture en milieu rural, et
+  l'on met à disposition à prix libre des espaces de résidence pour des
+  compagnies peu ou pas subventionnées. Le maraîchage en traction animale nourrit
+  les habitant·es et les personnes accueillies ; la culture et la transformation
+  de la châtaigne constituent l'activité économique principale. La propriété du
+  lieu a été acquise par le fonds de dotation Antidote, qui en confie l'usage à
+  l'association La Faille par un bail emphytéotique.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "La Faille (association loi 1901)"
+  description: >
+    La propriété de la ferme du Berquet a été transmise au fonds de dotation
+    Antidote — la donation à La Faille a été annoncée comme signée le 19 mars,
+    parmi les premiers transferts de biens du réseau —, ce qui la soustrait
+    durablement au marché. L'usage est confié à l'association La Faille par un
+    bail emphytéotique de longue durée. L'objet de l'association est de réunir
+    les usager·es des lieux qui lui sont confiés afin de pérenniser leur
+    vocation collective et leur autogestion.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Foncier porté par un fonds de dotation non lucratif ; usage confié par bail
+    emphytéotique à une association d'usager·es de droit civil, à gouvernance
+    autogérée ; aucun maillon commercial dans la chaîne.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "La propriété de la ferme a été transmise au fonds de dotation Antidote, structure non spéculative qui la détient hors marché."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — propriété Antidote, bail emphytéotique à l'association La Faille — est public et documenté par Antidote."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La propriété par un fonds de dotation soustrait durablement le lieu ; le caractère consomptible ou non de la dotation d'Antidote n'est pas confirmé par les sources."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "La ferme a été transmise à Antidote par donation, hors logique d'endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni le fonds de dotation Antidote ni l'association loi 1901 ne comportent de capital appropriable : aucune part ne porte la valeur foncière."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Fonds de dotation et association loi 1901 : aucun maillon du montage ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "La chaîne ne comporte aucune société commerciale : un fonds de dotation porte le foncier, une association en assure l'usage."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le lieu est autogéré ; le collectif travaille une gouvernance qu'il veut toujours plus horizontale et inclusive."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "L'association du voisinage ou des collectivités à la gouvernance du lieu n'est pas documentée par les sources."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'objet de l'association vise à pérenniser la vocation collective du lieu ; les dispositifs formels de transmission ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Accès à la culture en milieu rural, accueil de compagnies, maraîchage nourricier : le lieu sert un intérêt général culturel et agricole qui dépasse ses occupant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Lieu ouvert depuis plus de douze ans, attaché à l'accueil et au lien social, qui favorise l'accès à la culture en milieu rural sud-cévenol."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Concerts à bas coût et résidences à prix libre relèvent d'une logique de partage ; la châtaigne est une activité économique commercialisée, et le régime d'accès aux fruits du lieu n'est pas pleinement documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant et l'existence d'une redevance versée à Antidote ne sont pas documentés par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail emphytéotique de longue durée, qui sécurise la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements civils."
+analyse:
+  forces:
+    - "Foncier sorti du marché par un fonds de dotation non lucratif."
+    - "Lieu collectif autogéré de longue date (plus de douze ans d'activité)."
+    - "Vocation culturelle et agricole d'intérêt général, ouverte au territoire."
+  fragilites:
+    - "Caractère consomptible ou non de la dotation d'Antidote non confirmé."
+    - "Montant de la redevance et clauses du bail non documentés."
+    - "Régime d'accès aux fruits du lieu partiellement documenté."
+  leviers:
+    - "Publier les clauses du bail emphytéotique et le montant de la redevance."
+    - "Documenter le régime d'usage et l'ouverture du lieu au-delà des usager·es."
+    - "Confirmer et publier le caractère non consomptible de la dotation d'Antidote."
+  synthese: >
+    La Ferme du Berquet est un lieu collectif éprouvé, agricole et culturel, dont
+    la propriété a été sanctuarisée par le fonds de dotation Antidote et l'usage
+    confié pour longtemps à l'association La Faille. Sa marge de progression
+    tient surtout à l'explicitation du bail et du régime d'usage du lieu.
+fiabilite: >
+  Faits vérifiés (sources Antidote / aventure-antidote.org, annuaires
+  associatifs, consultées en mai 2026) : lieu collectif autogéré à Monoblet
+  (Gard), en Sud-Cévennes, en activité depuis plus de douze ans, géré par
+  l'association La Faille dont l'objet est de réunir les usager·es des lieux
+  confiés, propriété acquise par le fonds de dotation Antidote (donation
+  annoncée signée le 19 mars), activités culturelles (concerts, résidences à
+  prix libre) et agricoles (maraîchage en traction animale, châtaigne). Non
+  confirmé : surface et composition du foncier, montant de la redevance,
+  clauses et durée précise du bail emphytéotique, année exacte du transfert.
+chaine:
+  porteurs: [fonciere-antidote]
+  usufruitiers: [association-la-faille]
+sources:
+  - titre: "Antidote — Les lieux (La Faille)"
+    url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "La Faille — fiche association (Gralon)"
+    url: "https://www.gralon.net/mairies-france/gard/association-la-faille-monoblet_W303005610.htm"

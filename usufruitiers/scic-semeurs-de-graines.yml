@@ -1,0 +1,124 @@
+uid: scic-semeurs-de-graines
+categorie: usufruitier
+nom: "SCIC Les Semeurs de Graines"
+sous_titre: "Coopérative occupant l'Écolieu la Filerie par un bail à construction"
+statut_fiche: publie
+forme_juridique: "Société coopérative d'intérêt collectif (SCIC)"
+localisation:
+  commune: "Controis-en-Sologne"
+  departement: "Loir-et-Cher (41)"
+  region: "Centre-Val de Loire"
+annee: 2022
+url: "https://www.lafilerie.org/"
+resume: >
+  La SCIC Les Semeurs de Graines, créée en décembre 2022, est la société
+  coopérative d'intérêt collectif qui fait vivre l'Écolieu la Filerie, en
+  Sologne, à une vingtaine de kilomètres au sud de Blois. La famille Bargue, à
+  l'origine du projet, est propriétaire des lieux et y habite ; elle a signé
+  avec la SCIC un bail à construction de dix-huit ans qui confère à la
+  coopérative la qualité de « quasi-propriétaire » du site sur cette durée. La
+  SCIC, qui réunit vingt-huit sociétaires pour la plupart habitant le territoire,
+  gère à la Filerie un centre de formation aux métiers de la transition — maître
+  composteur, certificat de permaculture, cuisine, isolation chanvre — et un
+  centre d'écotourisme proposant des immersions dans les tiers-lieux du
+  territoire.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Famille Bargue (propriétaire privée)"
+  usufruitier: "SCIC Les Semeurs de Graines"
+  description: >
+    La propriété de l'Écolieu la Filerie appartient à la famille Bargue, qui
+    habite sur place. La SCIC Les Semeurs de Graines occupe le site par un bail
+    à construction de dix-huit ans : ce titre lui confère un droit réel sur les
+    constructions qu'elle édifie et la rend « quasi-propriétaire » pendant la
+    durée du bail, sans transfert de la propriété du sol. Le foncier n'est donc
+    pas porté par une structure non lucrative dédiée : le maillon coopératif est
+    ici l'occupant, lié à un propriétaire privé.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société coopérative d'intérêt collectif à lucrativité encadrée, occupant un
+    site dont la propriété demeure privée et familiale ; le sociétariat réunit
+    surtout des habitant·es du territoire.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "Le bail à construction confère à la SCIC un droit réel sur les constructions, mais la propriété du sol demeure à la famille Bargue ; aucune appropriation spéculative par la SCIC n'est en jeu."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts d'une SCIC ne sont pas librement négociables et leur valeur nominale est encadrée par le statut coopératif ; les modalités de cession propres à cette SCIC ne sont pas documentées."
+  - critere: devolution_usufruitier
+    valeur: partiel
+    note: "Le statut SCIC impose des réserves impartageables ; la clause de dévolution propre à cette société n'est pas documentée par les sources."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "La SCIC est une société commerciale à lucrativité encadrée par le statut de l'économie sociale et solidaire — notée « partiel » dans la grille du modèle."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le statut SCIC encadre la rémunération du capital et impose des réserves impartageables, sans interdire toute lucrativité ; le régime des excédents n'est pas documenté."
+  - critere: une_voix
+    valeur: oui
+    note: "La SCIC fonctionne sur le principe coopératif « une personne, une voix » : le pouvoir n'est pas proportionnel au capital apporté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les vingt-huit sociétaires, pour la plupart habitant·es du territoire, décident collectivement des activités menées à l'Écolieu la Filerie."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "La SCIC, par nature ouverte à de nouveaux sociétaires et organisée en cercles de gouvernance, accueille de nouveaux membres ; les modalités précises ne sont pas détaillées."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "Le projet documente publiquement son montage juridique et ses cercles de gouvernance ; la publication régulière de ses comptes n'est pas confirmée."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — formation aux métiers de la transition écologique et écotourisme — porte un intérêt général écologique et de transmission de savoir-faire."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le centre de formation et le centre d'écotourisme s'adressent à un large public de stagiaires et de visiteur·ses, au-delà des seuls sociétaires."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Le bail à construction court sur dix-huit ans : durée significative mais limitée, et le renouvellement au-delà n'est pas garanti par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales dans le bail à construction n'est pas documentée par les sources consultées."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "La SCIC est liée à la famille Bargue par un bail à construction clair, mais le propriétaire est une personne privée et non une structure non lucrative tierce."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Les activités de formation et d'écotourisme relèvent en partie d'une logique marchande, tempérée par la vocation de transition et le label Fabrique de territoire."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant de la redevance versée par la SCIC à la famille Bargue au titre du bail à construction n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Coopérative ancrée localement, vingt-huit sociétaires en majorité du territoire."
+    - "Gouvernance coopérative « une personne, une voix » en cercles de décision."
+    - "Objet de formation et d'écotourisme au service de la transition écologique."
+  fragilites:
+    - "Le foncier reste une propriété privée familiale, hors structure non lucrative."
+    - "Bail à construction de dix-huit ans : durée limitée, renouvellement non garanti."
+    - "Redevance, clauses d'usage et comptes non documentés."
+  leviers:
+    - "Sécuriser une jouissance de long terme au-delà des dix-huit ans du bail."
+    - "Envisager un porteur foncier non lucratif pour soustraire le sol au marché."
+    - "Documenter la redevance, les clauses du bail et les comptes de la SCIC."
+  synthese: >
+    La SCIC Les Semeurs de Graines fait vivre l'Écolieu la Filerie en coopérative
+    ancrée dans son territoire, mais sur un foncier qui demeure une propriété
+    privée familiale et un bail à construction limité à dix-huit ans. La sécurité
+    de jouissance et la sortie du marché du sol restent à consolider.
+fiabilite: >
+  Faits vérifiés (sources lafilerie.org, Coopérative Oasis et presse, consultées
+  en mai 2026) : SCIC Les Semeurs de Graines créée en décembre 2022, vingt-huit
+  sociétaires, gestion d'un centre de formation aux métiers de la transition et
+  d'un centre d'écotourisme à l'Écolieu la Filerie, propriété des lieux détenue
+  par la famille Bargue, bail à construction de dix-huit ans liant la famille et
+  la SCIC, accompagnement annuel par la Coopérative Oasis. Non confirmé :
+  montant de la redevance, clauses du bail, clause de dévolution, publication
+  des comptes.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "La Société Coopérative d'Intérêt Collectif (SCIC) — Écolieu La Filerie"
+    url: "https://www.lafilerie.org/rejoindre-la-scic-ls2g/la-soci%C3%A9t%C3%A9-coop%C3%A9rative-d-int%C3%A9r%C3%AAt-collectif-scic/"
+  - titre: "Écolieu la Filerie — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/ecolieu-la-filerie/"

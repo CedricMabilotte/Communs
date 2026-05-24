@@ -1,0 +1,124 @@
+uid: association-keriskis
+categorie: usufruitier
+nom: "Association d'usager·es de Keriskis"
+sous_titre: "Collectif autogérant le lieu de Keriskis en Centre-Bretagne"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 (présumée — statuts non publiés)"
+localisation:
+  commune: "Centre-Bretagne"
+  departement: "Morbihan (56)"
+  region: "Bretagne"
+annee: null
+url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+resume: >
+  Collectif autogéré qui fait vivre le lieu de Keriskis, ancienne ferme du
+  Centre-Bretagne acquise en 2017 puis transmise au fonds de dotation Antidote
+  en novembre 2024. Le collectif réunit les usager·es du lieu, qui en assurent
+  l'autogestion : rénovation par chantiers participatifs souvent en mixité
+  choisie, activités agricoles non marchandes au fil des saisons (verger,
+  potager, vannerie, transformation des fruits, bûcheronnage). Il se réunit à
+  chaque saison en assemblée générale, où des commissions thématiques —
+  accessibilité, travaux, juridique — restituent leur travail. Comme les autres
+  lieux du réseau Antidote, il reçoit l'usage du lieu par bail emphytéotique de
+  longue durée. Le nom officiel et les statuts de la structure gestionnaire ne
+  sont pas documentés publiquement par les sources consultées.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Antidote (fonds de dotation)"
+  usufruitier: "Association d'usager·es de Keriskis (association loi 1901)"
+  description: >
+    La propriété du lieu de Keriskis est portée durablement par le fonds de
+    dotation Antidote ; son usage est confié au collectif d'usager·es par un
+    bail emphytéotique de longue durée. Le collectif fait vivre le lieu en
+    autogestion et, comme chaque lieu du réseau Antidote, participe à
+    l'orientation du fonds via l'association faîtière « Les Passagères de
+    l'usage ». Le détail du montage et la forme juridique exacte de la structure
+    gestionnaire ne sont pas documentés publiquement.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Collectif d'usager·es sans capital appropriable, à gouvernance citoyenne
+    autogérée par assemblées saisonnières ; statuts précis non publiés.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété reste au fonds de dotation Antidote : les usager·es ne peuvent ni revendre ni capter à titre privé la valeur du foncier."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Une association loi 1901 ne comporte ni capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable ; la forme associative est cohérente avec le réseau Antidote, sans être confirmée par des statuts publiés."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de la structure en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "Le lieu est porté par un collectif d'usager·es ; la forme associative loi 1901 est cohérente avec le réseau Antidote mais n'est pas confirmée par des statuts publics."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Les activités du lieu sont explicitement non marchandes ; aucune distribution de bénéfices n'est documentée ni envisageable dans un tel collectif."
+  - critere: une_voix
+    valeur: oui
+    note: "Le lieu est autogéré : les décisions sont prises collectivement en assemblée, sans pouvoir indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le collectif se réunit à chaque saison en assemblée générale, et des commissions thématiques restituent leur travail : les usager·es décident des choix qui les concernent."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu prévoit de s'ouvrir à des groupes et collectifs extérieurs ; les modalités d'accueil de nouveaux·elles usager·es ne sont pas détaillées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de la structure n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — entraide et lien social pour des personnes isolées en ruralité, circulation de savoirs, rencontres politiques — porte un intérêt général social."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "Le lieu vise explicitement à offrir entraide et accueil au-delà du cercle des membres ; l'ampleur de cette ouverture n'est pas pleinement documentée."
+  - critere: duree_usage
+    valeur: partiel
+    note: "L'usage relève, comme pour les autres lieux Antidote, d'un bail emphytéotique de longue durée ; la durée exacte et le renouvellement ne sont pas confirmés pour Keriskis."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans le bail n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le collectif est lié au fonds de dotation Antidote ; chaque lieu du réseau intègre la gouvernance du fonds via « Les Passagères de l'usage »."
+  - critere: regime_usage_non_marchand
+    valeur: oui
+    note: "Les activités agricoles du lieu sont explicitement décrites comme « agricool non marchandes » : le régime d'usage repose sur l'entraide et le partage."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant de la redevance versée à Antidote n'est pas documenté par les sources."
+analyse:
+  forces:
+    - "Gouvernance citoyenne autogérée par assemblées saisonnières et commissions."
+    - "Régime d'usage explicitement non marchand."
+    - "Propriété verrouillée hors marché par le fonds de dotation Antidote."
+  fragilites:
+    - "Forme juridique et statuts non publiés : structure peu documentée."
+    - "Transparence comptable, clause de dévolution et redevance non documentées."
+    - "Durée et clauses du bail emphytéotique non confirmées pour Keriskis."
+  leviers:
+    - "Publier le nom, la forme juridique et les statuts de la structure."
+    - "Documenter les comptes, la clause de dévolution et le bail."
+    - "Formaliser l'accueil de nouveaux·elles usager·es."
+  synthese: >
+    Le collectif de Keriskis est un usufruitier autogéré, à gouvernance
+    citoyenne et régime d'usage non marchand affirmé, qui fait vivre un lieu
+    sanctuarisé par Antidote. Sa fiche reste lacunaire : sa forme juridique et
+    son fonctionnement interne ne sont pas publiés, ce qui laisse plusieurs
+    angles morts à lever.
+fiabilite: >
+  Faits vérifiés (sources Antidote / aventure-antidote.org, presse, consultées
+  en mai 2026) : collectif autogéré faisant vivre le lieu de Keriskis en
+  Centre-Bretagne (Morbihan), lieu acquis en 2017 et transmis à Antidote en
+  novembre 2024, activités agricoles non marchandes, gouvernance par assemblées
+  saisonnières et commissions thématiques. Non confirmé : nom officiel, forme
+  juridique et statuts de la structure gestionnaire, année de création,
+  transparence comptable, clause de dévolution, montant de la redevance,
+  clauses et durée du bail emphytéotique. Fiche signalée comme à compléter.
+voir_aussi: [fonciere-antidote]
+sources:
+  - titre: "Antidote — Les lieux (Keriskis)"
+    url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
+  - titre: "Antidote — Actualités : transferts de propriété et nouvelles de Keriskis"
+    url: "https://aventure-antidote.org/"

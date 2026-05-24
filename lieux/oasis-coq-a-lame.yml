@@ -1,0 +1,130 @@
+uid: oasis-coq-a-lame
+categorie: lieu
+nom: "Oasis du Coq à l'Âme"
+sous_titre: "Écolieu charentais accompagné par la Coopérative Oasis, futur ÉcoQuartier citoyen"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Cellettes"
+  departement: "Charente (16)"
+  region: "Nouvelle-Aquitaine"
+annee: 2021
+url: "https://oasis-ducoqalame.fr/"
+resume: >
+  L'Oasis du Coq à l'Âme est un écolieu installé depuis 2021 sur le domaine
+  d'Echoisy, ancien hameau de la commune de Cellettes, en Charente, à une
+  trentaine de minutes au nord d'Angoulême. Le collectif réunit une vingtaine de
+  foyers autour des cinq invariants des oasis — autonomie alimentaire,
+  mutualisation, ouverture sur le monde, gouvernance partagée, sobriété
+  énergétique et écoconstruction. Les membres ont mis leur épargne en commun
+  pour acquérir le domaine — bâtiments et 26 hectares de terres — pour près de
+  800 000 euros, via une SCIC qui en porte la propriété ; l'association des
+  habitant·es en reçoit l'usage par bail emphytéotique. Le lieu, retenu parmi les
+  premiers ÉcoQuartiers citoyens, vise la « sobriété heureuse » et a signé le
+  28 août 2025, avec l'accompagnement technique, juridique et financier de la
+  Coopérative Oasis, une Obligation Réelle Environnementale.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCIC de l'Oasis du Coq à l'Âme"
+  usufruitier: "Association des habitants du domaine d'Echoisy (association loi 1901)"
+  description: >
+    Le domaine d'Echoisy — bâtiments et 26 hectares — est la propriété de la
+    SCIC de l'Oasis du Coq à l'Âme, financée par les apports des membres en
+    comptes courants d'associés remboursables sur vingt-cinq ans. La SCIC confie
+    l'usage du domaine à l'association des habitant·es par un bail emphytéotique.
+    Le montage dissocie la propriété coopérative de l'usage associatif, au sein
+    d'un écosystème de plusieurs structures. Le foncier est en outre grevé d'une
+    Obligation Réelle Environnementale signée avec la Coopérative Oasis, qui
+    attache durablement à la terre des engagements de préservation de la
+    biodiversité.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Chaîne dont le maillon foncier est une SCIC — société coopérative à
+    lucrativité encadrée — et le maillon d'usage une association loi 1901 ;
+    bénéficiaire encore largement centré sur le sociétariat et le collectif.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le domaine est porté par une SCIC dédiée, non spéculative, mais grevé d'apports remboursables sur vingt-cinq ans ; aucune clause d'inaliénabilité explicite n'est documentée."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — SCIC propriétaire, association des habitant·es en bail emphytéotique — est public et détaillé sur le site du projet et celui de la Coopérative Oasis."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "L'ORE signée avec la Coopérative Oasis attache des engagements environnementaux au foncier ; aucune clause anti-spéculative explicite sur la revente n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le domaine a été acquis par la mise en commun de l'épargne des membres, sans endettement bancaire attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts de la SCIC ne sont pas librement négociables et l'association n'a pas de capital ; les modalités précises de cession des parts SCIC ne sont pas documentées."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "L'association des habitant·es est non lucrative, mais la SCIC est une société coopérative à lucrativité encadrée et non une structure structurellement non lucrative."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le maillon foncier est une SCIC : société commerciale à lucrativité encadrée par le statut de l'économie sociale et solidaire."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La gouvernance partagée est l'un des cinq invariants des oasis : les foyers décident collectivement de l'usage du lieu."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le projet a été retenu parmi les premiers ÉcoQuartiers citoyens, ce qui l'articule à une démarche publique ; une gouvernance tripartite formalisée n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'écolieu organise sa vie collective par un règlement intérieur public ; les dispositifs explicites de transmission du lieu ne sont pas tous documentés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Autonomie alimentaire, écoconstruction, sensibilisation à la nature, expérimentation agroécologique : le lieu sert un intérêt général écologique et social."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le domaine accueille déjà une ferme pédagogique et une ferme de spiruline, reçoit des visiteur·ses et s'inscrit dans une démarche d'ÉcoQuartier citoyen."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'écolieu vise une « sobriété heureuse » fondée sur la mutualisation, mais son modèle économique repose en partie sur des activités marchandes."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant de la redevance versée par l'association à la SCIC au titre du bail emphytéotique n'est pas documenté par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'association des habitant·es dispose d'un bail emphytéotique, titre d'usage long pouvant courir jusqu'à 99 ans : jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Domaine acquis par la mise en commun de l'épargne des membres, hors spéculation."
+    - "Usage confié par bail emphytéotique : sécurité de jouissance de long terme."
+    - "ORE signée avec la Coopérative Oasis : engagements écologiques attachés à la terre."
+  fragilites:
+    - "Le maillon foncier est une SCIC, société à lucrativité encadrée et non structure non lucrative."
+    - "Apports remboursables sur vingt-cinq ans : dette de long terme adossée au foncier."
+    - "Redevance emphytéotique et clause de dévolution non documentées."
+  leviers:
+    - "Inscrire dans les statuts de la SCIC une clause d'inaliénabilité et un objet foncier."
+    - "Documenter la redevance et les clauses du bail emphytéotique."
+    - "Confirmer la portée anti-spéculative du montage au-delà de l'ORE."
+  synthese: >
+    L'Oasis du Coq à l'Âme est un écolieu charentais au montage abouti dans son
+    principe : une SCIC porte le foncier, une association d'habitant·es en reçoit
+    l'usage par bail emphytéotique, et une ORE y attache des engagements
+    écologiques. La forme sociétaire du porteur et la dette de long terme
+    adossée au domaine tempèrent la sortie du marché.
+fiabilite: >
+  Faits vérifiés (sources oasis-ducoqalame.fr, Coopérative Oasis et presse,
+  consultées en mai 2026) : écolieu installé en 2021 sur le domaine d'Echoisy à
+  Cellettes (Charente), domaine de 26 hectares avec bâtiments acquis pour près de
+  800 000 euros via la mise en commun de l'épargne des membres, propriété portée
+  par une SCIC, usage confié à l'association des habitant·es par bail
+  emphytéotique, collectif d'une vingtaine de foyers, projet retenu parmi les
+  premiers ÉcoQuartiers citoyens, Obligation Réelle Environnementale signée le
+  28 août 2025 avec l'accompagnement de la Coopérative Oasis. Non confirmé :
+  montant de la redevance emphytéotique, clauses du bail, clause de dévolution,
+  publication des comptes de la SCIC.
+chaine:
+  porteurs: [scic-coq-a-lame]
+  usufruitiers: [habitants-echoisy]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Le modèle économique et juridique — Oasis du Coq à l'Âme"
+    url: "https://oasis-ducoqalame.fr/presentation-de-loasis-du-coq-a-lame/les-structures/"
+  - titre: "Oasis du Coq à l'Âme — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/oasis-du-coq-a-lame/"

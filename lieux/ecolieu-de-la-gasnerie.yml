@@ -1,0 +1,122 @@
+uid: ecolieu-de-la-gasnerie
+categorie: lieu
+nom: "L'Écolieu de la Gasnerie"
+sous_titre: "Jeune écolieu de Maine-et-Loire, oasis financée par la Coopérative Oasis"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Morannes-sur-Sarthe-Daumeray"
+  departement: "Maine-et-Loire (49)"
+  region: "Pays de la Loire"
+annee: null
+url: "https://www.ecolieudelagasnerie.fr/"
+resume: >
+  Écolieu de la Gasnerie, à Morannes-sur-Sarthe en Maine-et-Loire, à 5 km de la
+  gare TER reliant Angers et Le Mans : un jardin arboré et fleuri d'un peu plus
+  d'un hectare. Le projet, initié par Lucile et Pauline et rejoint par Lucas et
+  Lénou, veut déployer un mode de vie écologique, équitable et solidaire :
+  espace de vie coopératif et lieu d'accueil ouvert pour des séjours, ateliers,
+  formations et résidences d'artistes. Une association, La Grainerie, « en
+  construction » selon les sources, doit porter la fonction de tiers-lieu. Le
+  lieu figure parmi les oasis financées par la Coopérative Oasis et faisait
+  l'objet en 2025 de travaux de rénovation. Son montage juridique n'est pas
+  documenté publiquement : cette fiche est lacunaire et signalée comme telle.
+montage:
+  type: propriete_collective
+  description: >
+    L'Écolieu de la Gasnerie est habité et rénové par son collectif. Les sources
+    publiques ne documentent pas la structure juridique détenant le foncier, ni
+    le titre d'usage, ni la forme juridique du collectif. La Coopérative Oasis
+    est intervenue comme financeur et accompagnateur — l'écolieu figure parmi
+    ses oasis financées — sans être un maillon de la chaîne. Faute de structure
+    foncière distincte documentée, la chaîne est provisoirement renseignée comme
+    intégrée sur le collectif, sous réserve de confirmation.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Écolieu porté par un collectif citoyen ; la nature juridique du portage du
+    foncier n'étant pas documentée, ce niveau est indicatif et provisoire.
+grille:
+  - critere: foncier_hors_marche
+    valeur: inconnu
+    note: "La structure détenant le foncier et son caractère spéculatif ou non ne sont pas documentés par les sources."
+  - critere: montage_documente
+    valeur: non
+    note: "Le montage juridique — qui détient le foncier, par quel acte, sous quelle forme — n'est pas documenté publiquement."
+  - critere: irreversibilite
+    valeur: inconnu
+    note: "Aucun dispositif d'irréversibilité ne peut être constaté faute de montage juridique documenté."
+  - critere: origine_non_speculative
+    valeur: partiel
+    note: "L'écolieu figure parmi les oasis financées par l'épargne solidaire de la Coopérative Oasis ; le plan de financement global n'est toutefois pas documenté."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "La forme des structures du montage n'étant pas documentée, l'existence de parts cessibles est inconnue."
+  - critere: non_lucratif_global
+    valeur: inconnu
+    note: "Le caractère non lucratif de l'ensemble du montage ne peut être vérifié faute de structures documentées."
+  - critere: montage_non_commercial
+    valeur: inconnu
+    note: "La nature commerciale ou civile des maillons du montage n'est pas documentée par les sources."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le lieu est porté et habité par le collectif lui-même, qui se réclame de valeurs de partage et de coopération."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le projet de tiers-lieu vise à créer des liens avec le voisinage ; l'association La Grainerie qui doit le porter n'est pas encore opérationnelle."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission et de renouvellement du collectif ne sont pas documentés par les sources."
+  - critere: usage_interet_general
+    valeur: partiel
+    note: "Le projet — mode de vie écologique, tiers-lieu d'accueil, ateliers et résidences — porte un intérêt général écologique et social encore largement en devenir."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "L'écolieu se veut un lieu de rencontre ouvert au territoire ; l'association La Grainerie destinée à l'animer est annoncée « en construction »."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Le collectif se réclame du partage et de la coopération ; les séjours, ateliers et formations envisagés comportent une part marchande, sans régime d'usage documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Les modalités financières liées à l'usage du lieu ne sont pas documentées par les sources."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "Le titre par lequel le collectif a l'usage du lieu et sa durée ne sont pas documentés par les sources."
+analyse:
+  forces:
+    - "Lieu porté et habité par son collectif, qui en décide les usages."
+    - "Projet écologique et social affirmé, tiers-lieu ouvert au territoire visé."
+    - "Écolieu retenu et financé par la Coopérative Oasis."
+  fragilites:
+    - "Montage juridique non documenté publiquement : structure foncière, titre d'usage, formes inconnus."
+    - "Projet jeune, en rénovation, association tiers-lieu encore « en construction »."
+    - "Aucun dispositif d'irréversibilité ni de soustraction au marché documenté."
+  leviers:
+    - "Publier le montage juridique : structure portant le foncier, titre d'usage, formes."
+    - "Finaliser l'association La Grainerie et rendre publique sa gouvernance."
+    - "Documenter le plan de financement et l'apport de la Coopérative Oasis."
+  synthese: >
+    L'Écolieu de la Gasnerie est un jeune écolieu de Maine-et-Loire, oasis
+    financée par la Coopérative Oasis et encore en rénovation. Sa fiche est
+    volontairement lacunaire : le montage juridique n'est pas documenté
+    publiquement. Sa silhouette ne pourra être appréciée qu'à la publication de
+    la structure portant le foncier et du titre d'usage du collectif.
+fiabilite: >
+  Faits vérifiés (sources Écolieu de la Gasnerie et Coopérative Oasis,
+  consultées en mai 2026) : écolieu à Morannes-sur-Sarthe en Maine-et-Loire,
+  jardin arboré d'un peu plus d'un hectare à 5 km de la gare TER de Morannes,
+  projet initié par Lucile et Pauline puis rejoint par Lucas et Lénou,
+  association La Grainerie annoncée « en construction », travaux de rénovation
+  en 2025, écolieu figurant parmi les oasis financées par la Coopérative Oasis.
+  Non confirmé : structure détenant le foncier, montage juridique, montant et
+  date de l'apport de la Coopérative Oasis, titre et durée de l'usage, plan de
+  financement. Fiche à compléter dès publication de ces éléments.
+chaine:
+  porteurs: [collectif-gasnerie]
+  usufruitiers: [collectif-gasnerie]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "L'Écolieu de la Gasnerie — site officiel"
+    url: "https://www.ecolieudelagasnerie.fr/"
+  - titre: "Écolieu de la Gasnerie — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/ecolieu-de-la-gasnerie/"

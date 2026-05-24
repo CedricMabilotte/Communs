@@ -1,0 +1,121 @@
+uid: la-licorne
+categorie: lieu
+nom: "Ferme de la Licorne"
+sous_titre: "Ferme collective de polyculture-élevage sur foncier acquis par la Foncière Terre de Liens dans l'Allier"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Chouvigny"
+  departement: "Allier (03)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2024
+url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/la-licorne/"
+resume: >
+  Ferme collective de polyculture-élevage située au lieu-dit Péraclos, sur la
+  commune de Chouvigny, près des gorges de la Sioule. Ses quelque 50 hectares
+  ont été acquis fin 2024 par la Foncière Terre de Liens, grâce à une collecte
+  d'épargne citoyenne couvrant environ 60 % du prix total. C'est la 18e ferme
+  portée par Terre de Liens en Auvergne. Le foncier, retiré du marché, est
+  confié par bail rural au collectif qui l'exploite : cinq associé·es y
+  conduisent élevage (vaches, brebis, porcs, volailles), maraîchage, céréales,
+  boulangerie paysanne et transformation fromagère, avec un marché à la ferme.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC Reconnu de la Licorne (groupement agricole d'exploitation en commun)"
+  description: >
+    Le foncier de la Licorne — environ 50 hectares — a été acquis fin 2024 par
+    la Foncière Terre de Liens, structure non spéculative qui mobilise l'épargne
+    solidaire citoyenne pour retirer les terres du marché. Son usage est confié
+    par bail rural — un bail rural environnemental selon le cadre Terre de Liens
+    — au collectif paysan qui l'exploite, structuré en GAEC. La Foncière reste
+    propriétaire durable ; le GAEC n'achète pas la terre et n'en capte pas la
+    valeur.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncière Terre de Liens, est toutefois une société en commandite par
+    actions à actionnariat solidaire et lucrativité encadrée.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Les quelque 50 hectares ont été acquis fin 2024 par la Foncière Terre de Liens, structure non spéculative, et retirés du marché."
+  - critere: montage_documente
+    valeur: oui
+    note: "Le montage — acquisition par la Foncière fin 2024, usage confié au collectif exploitant — est public et documenté par Terre de Liens."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le portage de long terme par la Foncière et la vocation agricole maintenue soustraient durablement le foncier au marché spéculatif."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition a été financée par une collecte d'épargne solidaire citoyenne couvrant environ 60 % du prix total, hors logique de plus-value."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Le foncier est porté par la Foncière Terre de Liens, société en commandite par actions dont les actions sont cessibles ; leur revalorisation rend la valeur foncière partiellement captable."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Les actions de la Foncière ne versent pas de dividende et le GAEC est une société civile agricole sans appropriation de la valeur foncière : aucune plus-value foncière privée n'est captée."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "La Foncière Terre de Liens est une société en commandite par actions — société commerciale à actionnariat solidaire et lucrativité encadrée."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "La ferme est exploitée collectivement par cinq associé·es réuni·es en GAEC, qui décident ensemble de la conduite du lieu."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "L'association du voisinage, des citoyen·nes ou des collectivités à la gouvernance du lieu n'est pas documentée par les sources consultées."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission de la ferme et de renouvellement des associé·es du GAEC ne sont pas documentés par les sources consultées."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Polyculture-élevage nourricière, maraîchage, boulangerie et transformation fromagère en agriculture biologique : le lieu sert un intérêt général agricole et alimentaire."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "La ferme tient un marché à la ferme et accueille des activités d'agritourisme, ouverts au territoire et au public."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "La production est vendue (marché à la ferme, agritourisme) ; l'usage relève d'une logique nourricière de proximité sans être pleinement non marchand."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "L'usage est confié par bail rural moyennant un fermage ; les actions de la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas documenté."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le collectif dispose d'une jouissance durable et sécurisée."
+analyse:
+  forces:
+    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis fin 2024."
+    - "Exploitation collective diversifiée — élevage, maraîchage, boulangerie, fromage — réunie en GAEC."
+    - "Marché à la ferme et agritourisme ancrant le lieu dans son territoire."
+  fragilites:
+    - "Le porteur, la Foncière Terre de Liens, est une société en commandite par actions à actionnariat solidaire."
+    - "Niveau du fermage et caractère non rentier non documentés."
+    - "Dispositifs de transmission du GAEC et association du voisinage non documentés."
+  leviers:
+    - "Documenter le niveau du fermage et son caractère soutenable."
+    - "Formaliser et publier les dispositifs de renouvellement des associé·es."
+    - "Associer le voisinage et les collectivités à la gouvernance du lieu."
+  synthese: >
+    La Licorne illustre une acquisition récente du modèle Terre de Liens : un
+    foncier de polyculture-élevage sanctuarisé fin 2024 par l'épargne citoyenne
+    et confié par bail rural à un collectif paysan en GAEC. Sa principale
+    réserve tient à la nature sociétaire du porteur, la Foncière, et aux angles
+    morts d'une ferme acquise depuis peu.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens Auvergne, consultées en mai 2026) :
+  ferme de polyculture-élevage au lieu-dit Péraclos à Chouvigny, environ 50
+  hectares acquis par la Foncière Terre de Liens fin 2024, 18e ferme portée par
+  Terre de Liens en Auvergne, collecte d'épargne citoyenne couvrant environ 60 %
+  du prix, cinq associé·es, activités d'élevage, maraîchage, céréales,
+  boulangerie et transformation fromagère, marché à la ferme. Non confirmé :
+  surface exacte (50 ha annoncés, mention secondaire de 54 ha), niveau du
+  fermage, statut précis du bail, dispositifs de transmission du GAEC.
+chaine:
+  porteurs: [fonciere-terre-de-liens]
+  usufruitiers: [gaec-de-la-licorne]
+sources:
+  - titre: "La Licorne — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/la-licorne/"
+  - titre: "Retour en images sur la fête de l'acquisition de la Ferme de La Licorne — Terre de Liens Auvergne"
+    url: "https://terredeliens.org/auvergne/actu/retour-en-images-sur-la-f%C3%AAte-de-lacquisition-de-la-ferme-de-la-licorne-18-03-2025/"

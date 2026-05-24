@@ -105,9 +105,18 @@ def axes_ids(ranking):
     return [a["id"] for a in ranking["axes"]]
 
 
+# Plancher d'axe pour l'agrégation géométrique. Un axe à 0 (dimension
+# entièrement échouée) doit faire chuter l'Indice très bas — c'est le principe
+# non compensatoire — mais sans l'annuler purement : un montage fort sur quatre
+# axes et nul sur un cinquième vaut « éloigné », pas « rien ». On plancher donc
+# chaque axe à 1 dans le PRODUIT seulement ; le profil affiché garde le 0 réel.
+AXE_PLANCHER_GEO = 1
+
+
 def geometric_idl(axes_scores):
     """Moyenne géométrique des scores d'axes renseignés (agrégation NON
-    compensatoire). Un score nul annule le produit → idl 0. Aucun axe
+    compensatoire). Chaque axe est planché à AXE_PLANCHER_GEO dans le produit
+    pour qu'un axe nul écrase fortement l'Indice sans l'annihiler. Aucun axe
     renseigné → None."""
     known = [v for v in axes_scores.values() if v is not None]
     k = len(known)
@@ -115,7 +124,7 @@ def geometric_idl(axes_scores):
         return None
     produit = 1.0
     for v in known:
-        produit *= v
+        produit *= max(v, AXE_PLANCHER_GEO)
     return round(produit ** (1.0 / k))
 
 

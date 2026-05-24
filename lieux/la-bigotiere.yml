@@ -1,0 +1,128 @@
+uid: la-bigotiere
+categorie: lieu
+nom: "La Bigotière"
+sous_titre: "Écohameau d'habitat participatif en Ille-et-Vilaine, financé par la Coopérative Oasis"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Épiniac"
+  departement: "Ille-et-Vilaine (35)"
+  region: "Bretagne"
+annee: 2016
+url: "https://www.bigotiere.fr/"
+resume: >
+  Écohameau de la Bigotière, ancienne grande ferme de la commune d'Épiniac dans
+  le pays de Dol-de-Bretagne : un ensemble de 4,3 hectares, dont 1,5 ha de
+  terres agricoles, 0,5 ha de bois et environ 1 000 m² de bâtiments. Le lieu a
+  été acheté en septembre 2016 par un groupe de couples ami·es de la région
+  rennaise et réhabilité en habitat participatif — neuf logements, un gîte, des
+  logements d'accueil social, un fournil. Le foncier est porté par une société
+  civile d'habitant·es ; la SCIC Le Ruisseau, créée en 2021, porte les
+  activités de transition écologique et alimentaire, l'accueil et la rénovation
+  d'une grange. La Coopérative Oasis a soutenu le projet par un apport en compte
+  courant d'associé de 160 000 € accordé en 2022.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Société civile de la Bigotière (société civile d'habitant·es)"
+  usufruitier: "Société civile de la Bigotière — chaîne intégrée : habitant·es associé·es et usager·es"
+  description: >
+    Le foncier et le bâti de l'écohameau sont détenus collectivement par une
+    société civile constituée par les habitant·es — décrite par les sources
+    tantôt comme société civile d'attribution, tantôt comme société civile
+    immobilière. Les habitant·es sont à la fois associé·es de la société civile
+    propriétaire et usager·es du lieu : la chaîne est intégrée. La SCIC Le
+    Ruisseau porte les activités d'accueil et de transition, sans détenir
+    l'habitat. La Coopérative Oasis est intervenue comme financeur (apport de
+    160 000 € en 2022), non comme maillon de la chaîne.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Foncier porté par une société civile d'habitant·es ; chaîne intégrée
+    propriétaire ≡ usagère. Forme civile collective, sans verrou anti-spéculatif
+    documenté.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est porté collectivement par la société civile des habitant·es et n'est pas destiné à la revente ; aucun verrou anti-spéculatif sur la valeur des parts n'est documenté."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le montage — société civile d'habitant·es propriétaire, SCIC Le Ruisseau pour les activités — est public, mais la forme exacte de la société civile n'est pas tranchée par les sources."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "La détention collective en société civile freine la sortie individuelle ; aucune clause d'inaliénabilité ni de plafonnement de la valeur des parts n'est documentée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'écohameau a été acquis par l'apport des couples fondateurs, puis l'apport solidaire de la Coopérative Oasis, hors endettement spéculatif."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Les parts de la société civile sont généralement cessibles sous agrément des associé·es, mais à un prix non plafonné documenté."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "Aucun maillon ne recherche de plus-value spéculative ; la chaîne est composée d'une société civile et d'une SCIC, sans structure structurellement non lucrative."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Le foncier de l'habitat est porté par une société civile (non commerciale) ; la SCIC Le Ruisseau, qui porte les activités, est une société commerciale de forme coopérative à lucrativité encadrée."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Les habitant·es, associé·es de la société civile propriétaire, gouvernent eux-mêmes l'écohameau et son habitat."
+  - critere: tripartisme
+    valeur: partiel
+    note: "La SCIC Le Ruisseau associe citoyen·nes, associations et entreprises du territoire aux activités ; une gouvernance tripartite de l'habitat lui-même n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "L'écohameau accueille de nouveaux habitant·es — de six couples à vingt-deux résident·es ; les dispositifs formels de transmission et d'admission ne sont pas détaillés."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Habitat écologique, accueil de mères isolées avec enfants, fournil, activités culturelles : le lieu sert un intérêt général d'habitat digne et de lien social."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le lieu est fortement lié à la commune et au territoire : distribution de produits fermiers à une centaine d'adhérent·es, événements culturels, SCIC d'envergure locale."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'usage habitant relève du partage entre associé·es ; une part marchande coexiste (gîte locatif, distribution de produits, activités) sans tarification de marché documentée du lieu."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Les modalités financières entre la société civile et ses associé·es habitant·es ne sont pas documentées par les sources."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "Les habitant·es détiennent leur jouissance via leur qualité d'associé·es de la société civile propriétaire : l'usage n'est ni précaire ni plafonné dans le temps."
+analyse:
+  forces:
+    - "Foncier porté collectivement par les habitant·es eux-mêmes, sans bailleur tiers."
+    - "Lieu réellement ouvert : accueil social, fournil, distribution de produits fermiers."
+    - "Ancrage territorial fort, relayé par la SCIC Le Ruisseau."
+  fragilites:
+    - "Forme exacte de la société civile non tranchée par les sources."
+    - "Pas de verrou anti-spéculatif documenté sur la valeur des parts."
+    - "Chaîne intégrée : pas de contre-pouvoir externe entre propriété et usage."
+  leviers:
+    - "Préciser et publier la forme et les statuts de la société civile."
+    - "Plafonner la valeur de cession des parts pour verrouiller la sortie du marché."
+    - "Articuler une garantie foncière externe pérennisant la soustraction au marché."
+  synthese: >
+    La Bigotière est un écohameau d'habitat participatif à chaîne intégrée : les
+    habitant·es sont à la fois propriétaires, via une société civile, et
+    usager·es du lieu. Sa force est une réelle ouverture sociale et un fort
+    ancrage territorial ; sa marge de progression tient à l'absence de verrou
+    anti-spéculatif documenté sur les parts de la société civile.
+fiabilite: >
+  Faits vérifiés (sources la Bigotière, Le Ruisseau Coopérative, Coopérative
+  Oasis et presse, consultées en mai 2026) : écohameau d'Épiniac acheté en
+  septembre 2016, ensemble de 4,3 hectares dont 1,5 ha agricoles et 0,5 ha de
+  bois, environ 1 000 m² de bâtiments, habitat participatif réhabilité (neuf
+  logements, gîte, logements d'accueil social, fournil), foncier porté par une
+  société civile d'habitant·es, SCIC Le Ruisseau créée en 2021 pour les
+  activités, apport de la Coopérative Oasis de 160 000 € en 2022. Non confirmé :
+  forme exacte de la société civile, modalités de cession des parts, clause de
+  dévolution, modalités financières internes, transparence comptable.
+chaine:
+  porteurs: [societe-civile-bigotiere]
+  usufruitiers: [societe-civile-bigotiere]
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "La Bigotière — L'Habitat Participatif"
+    url: "https://www.bigotiere.fr/habitat-participatif/"
+  - titre: "Bigotière — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/bigotiere/"
+  - titre: "Épargner écolo : 3 exemples où l'épargne solidaire finance la transition écologique — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/articles/ecolieux-exemples-epargne-solidaire-finance-la-transition-ecologique/"

@@ -113,8 +113,8 @@ fiabilite: >
   caractère anti-spéculatif du verrouillage des parts, nature exacte des titres
   d'occupation des logements.
 chaine:
-  porteurs: []
-  usufruitiers: []
+  porteurs: [sc-hameau-des-buis]
+  usufruitiers: [association-hameau-des-buis]
 sources:
   - titre: "Le Hameau des Buis — L'histoire"
     url: "https://hameaudesbuis.org/lhistoire/"

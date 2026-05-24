@@ -1,0 +1,119 @@
+uid: gaec-de-la-licorne
+categorie: usufruitier
+nom: "GAEC Reconnu de la Licorne"
+sous_titre: "Groupement agricole d'exploitation en commun de la ferme de la Licorne, à Chouvigny"
+statut_fiche: publie
+forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+localisation:
+  commune: "Chouvigny"
+  departement: "Allier (03)"
+  region: "Auvergne-Rhône-Alpes"
+annee: null
+url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/la-licorne/"
+resume: >
+  Groupement agricole d'exploitation en commun (GAEC) qui exploite la ferme de
+  la Licorne, au lieu-dit Péraclos à Chouvigny (Allier). Le collectif réunit
+  cinq associé·es autour d'une polyculture-élevage diversifiée : élevage de
+  vaches, brebis, porcs et volailles, maraîchage, céréales, boulangerie
+  paysanne et transformation fromagère, avec un marché à la ferme. Le GAEC est
+  titulaire de l'usage du foncier — environ 50 hectares — dont la propriété a
+  été acquise fin 2024 par la Foncière Terre de Liens, et qui lui est confié
+  par bail rural.
+montage:
+  type: propriete_sanctuarisee
+  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
+  usufruitier: "GAEC Reconnu de la Licorne (groupement agricole d'exploitation en commun)"
+  description: >
+    La propriété du foncier de la Licorne est portée durablement par la
+    Foncière Terre de Liens ; son usage est confié au GAEC de la Licorne par un
+    bail rural — bail rural environnemental selon le cadre Terre de Liens. Le
+    GAEC est une société civile agricole : il exploite la terre sans en être
+    propriétaire et n'en capte pas la valeur foncière.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Le GAEC est une société civile agricole non lucrative dont les associé·es
+    sont des exploitant·es ; sa gouvernance est collective mais centrée sur le
+    cercle des associé·es du groupement.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété du foncier reste à la Foncière Terre de Liens : les associé·es du GAEC ne peuvent ni revendre ni capter à titre privé la valeur de la terre."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Un GAEC a un capital social divisé en parts ; leur cession est soumise à l'agrément des associé·es et au contrôle d'agrément du GAEC, mais le prix de cession n'est pas plafonné par les sources consultées."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif du GAEC en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le GAEC est une société civile agricole de droit civil, à objet non commercial, et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Un GAEC partage les résultats de l'exploitation entre ses associé·es exploitant·es ; il n'est pas structurellement non lucratif, mais ne capte pas la valeur du foncier porté par la Foncière."
+  - critere: une_voix
+    valeur: oui
+    note: "Le GAEC repose sur le principe d'égalité des associé·es, qui sont tous chef·fes d'exploitation : le pouvoir de décision n'est pas indexé sur le capital apporté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les cinq associé·es exploitant·es décident collectivement de la conduite de la ferme qu'ils et elles travaillent."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Les modalités d'accueil de nouveaux·elles associé·es et d'organisation du renouvellement ne sont pas documentées par les sources consultées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions du GAEC n'est pas documentée par les sources consultées."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — agriculture paysanne biologique, élevage, maraîchage et boulangerie nourriciers — porte un intérêt général agricole et alimentaire."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme tient un marché à la ferme et accueille de l'agritourisme, ouverts au territoire ; le GAEC profite d'abord à ses associé·es exploitant·es."
+  - critere: duree_usage
+    valeur: oui
+    note: "L'usage est confié par bail rural, d'une durée minimale de neuf ans avec droit au renouvellement d'ordre public : la jouissance est durable."
+  - critere: clauses_usage
+    valeur: partiel
+    note: "Terre de Liens conclut en principe des baux ruraux environnementaux imposant l'agriculture biologique ; les clauses précises du bail de la Licorne ne sont pas documentées."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Le GAEC est lié à la Foncière Terre de Liens par un bail rural clair, sans confusion entre la propriété du foncier et son exploitation."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "La production est vendue en circuit court (marché à la ferme) ; l'usage relève d'une logique nourricière de proximité sans être pleinement non marchand."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le fermage versé à la Foncière relève d'une logique non rentière ; son montant exact n'est pas documenté par les sources consultées."
+analyse:
+  forces:
+    - "Exploitation collective diversifiée réunissant cinq associé·es en GAEC."
+    - "Usage du foncier sécurisé par bail rural au renouvellement d'ordre public."
+    - "Propriété de la terre verrouillée hors marché par la Foncière Terre de Liens."
+  fragilites:
+    - "Le GAEC partage les résultats entre associé·es : il n'est pas structurellement non lucratif."
+    - "Modalités d'accueil de nouveaux·elles associé·es non documentées."
+    - "Transparence comptable et clause de dévolution non documentées."
+  leviers:
+    - "Documenter publiquement les statuts, les comptes et la clause de dévolution du GAEC."
+    - "Formaliser l'accueil de nouveaux·elles associé·es et la transmission."
+    - "Préciser le montant du fermage et les clauses environnementales du bail."
+  synthese: >
+    Le GAEC de la Licorne est le maillon usufruitier d'une ferme Terre de Liens
+    récente : un collectif paysan qui exploite en commun un foncier sanctuarisé
+    par la Foncière. Société civile agricole à gouvernance égalitaire entre
+    associé·es, il offre une gouvernance collective réelle, mais centrée sur le
+    cercle des exploitant·es et non structurellement non lucrative.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens Auvergne et registre des entreprises,
+  consultés en mai 2026) : exploitation de la ferme de la Licorne à Chouvigny
+  par un GAEC, cinq associé·es, polyculture-élevage diversifiée (élevage,
+  maraîchage, céréales, boulangerie, fromage), foncier d'environ 50 hectares
+  acquis par la Foncière Terre de Liens fin 2024 et confié par bail rural. Non
+  confirmé : date de constitution du GAEC, identité complète des associé·es,
+  statuts et comptes, clause de dévolution, clauses du bail, montant du fermage.
+voir_aussi: [fonciere-terre-de-liens]
+sources:
+  - titre: "La Licorne — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/la-licorne/"
+  - titre: "GAEC Reconnu de la Licorne — annuaire des entreprises (societe.com)"
+    url: "https://www.societe.com/societe/groupement-agricole-d-exploitation-en-commun-reconnu-de-la-licorne-420321218.html"

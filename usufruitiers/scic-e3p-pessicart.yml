@@ -1,0 +1,128 @@
+uid: scic-e3p-pessicart
+categorie: usufruitier
+nom: "SCIC E3P — École de Permaculture du Petit Pessicart"
+sous_titre: "Coopérative d'intérêt collectif propriétaire et usagère du Jardin du Petit Pessicart"
+statut_fiche: publie
+forme_juridique: "Société coopérative d'intérêt collectif (SCIC) sous forme de SAS à capital variable"
+localisation:
+  commune: "Nice"
+  departement: "Alpes-Maritimes (06)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 2021
+url: "https://cooperative-oasis.org/oasis/jardin-du-petit-pessicart/"
+resume: >
+  La SCIC E3P (École de Permaculture du Petit Pessicart) est une société
+  coopérative d'intérêt collectif constituée sous forme de SAS à capital
+  variable le 21 juin 2021. Elle réunit une vingtaine de coopérateur·rices —
+  parents, éducateur·rices, permaculteur·rices, porteur·ses de projets — autour
+  du Jardin du Petit Pessicart, tiers-lieu d'un hectare perché au-dessus de
+  Nice, dédié à la régénération des écosystèmes. À l'été 2020, le lieu ayant
+  été mis en vente, la coopérative s'est constituée pour réunir les fonds et a
+  acheté le Jardin en septembre 2021 pour 420 000 €, sans emprunt bancaire. La
+  SCIC est donc à la fois propriétaire du foncier et usagère du lieu, qu'elle
+  fait vivre autour de trois pôles : Centre de Permaculture, École de la Forêt
+  et Agora du Design Régénératif. Le Jardin est une oasis financée par la
+  Coopérative Oasis à hauteur de 130 000 €.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SCIC E3P — École de Permaculture du Petit Pessicart"
+  usufruitier: "SCIC E3P — École de Permaculture du Petit Pessicart (chaîne intégrée)"
+  description: >
+    La SCIC E3P a acquis en septembre 2021 la pleine propriété du Jardin du
+    Petit Pessicart, grâce à une collecte de fonds réunis dans la coopérative
+    et sans recours à l'emprunt bancaire. La coopérative est ainsi à la fois
+    propriétaire du foncier et collectif usager du lieu : la chaîne est
+    intégrée, sans tiers entre la propriété et l'usage. La sortie du marché
+    repose sur les statuts coopératifs ; aucune structure non lucrative tierce
+    ne porte le foncier en nue-propriété.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Société coopérative d'intérêt collectif sous forme de SAS à capital
+    variable : forme sociétaire commerciale, à lucrativité encadrée par le
+    statut SCIC (réserves impartageables, lucrativité limitée).
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "Le foncier est porté par la SCIC elle-même : la sortie du marché dépend de ses statuts coopératifs et non d'une structure tierce inaliénable ; la valeur reste théoriquement attachée à la coopérative."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une SCIC à capital variable rembourse les parts à leur valeur nominale et place ses excédents en réserves impartageables ; la cession des parts est encadrée mais le statut SCIC ne verrouille pas tout à fait comme une fondation."
+  - critere: devolution_usufruitier
+    valeur: partiel
+    note: "Le statut SCIC prévoit en principe une dévolution désintéressée du boni de liquidation ; la clause statutaire propre à E3P n'est pas documentée par les sources."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "La SCIC est une société commerciale (ici sous forme de SAS) à lucrativité encadrée : selon la grille, ce maillon est noté « partiel » et non « oui »."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Le statut SCIC limite la lucrativité et impose des réserves impartageables, mais autorise une rémunération encadrée du capital : la non-lucrativité n'est pas totale."
+  - critere: une_voix
+    valeur: oui
+    note: "La SCIC fonctionne sur le principe coopératif « une personne, une voix » en assemblée, indépendamment du capital apporté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "La vingtaine de coopérateur·rices — parents, éducateur·rices, permaculteur·rices — qui font vivre le Jardin participent à sa gouvernance, sur un modèle inspiré de l'holacratie à trois pôles."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "La SCIC à capital variable permet par construction l'entrée de nouveaux·elles coopérateur·rices ; le collectif est passé d'un noyau fondateur à une vingtaine de membres."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de la SCIC n'est pas documentée par les sources consultées."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — entraîner à la régénération des écosystèmes naturels et humains, par la permaculture, une école de la forêt et un design régénératif — porte un intérêt général écologique et éducatif."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le Jardin est ferme pédagogique de l'Éducation nationale, accueille des classes, des formations ouvertes à tous niveaux et des chantiers participatifs : les bénéfices dépassent le cercle des coopérateur·rices."
+  - critere: duree_usage
+    valeur: oui
+    note: "La SCIC est propriétaire du foncier : son usage n'est borné par aucun titre à terme, la chaîne étant intégrée."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales formelles attachées au foncier n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Chaîne intégrée : la SCIC est à la fois propriétaire et usagère, sans tiers entre propriété et usage — ce qui supprime toute précarité locative mais prive le montage d'un contre-pouvoir externe."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Chantiers participatifs et accueil de classes relèvent d'une logique de partage ; formations certifiantes et accueil de groupes en team-building comportent une part marchande."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "Chaîne intégrée : la SCIC étant propriétaire du foncier, aucun loyer n'est versé à un tiers et le lieu a été acquis sans emprunt bancaire."
+analyse:
+  forces:
+    - "Foncier acquis comptant en 2021, sans emprunt bancaire, par une collecte de fonds."
+    - "Chaîne intégrée : aucune précarité locative vis-à-vis d'un tiers propriétaire."
+    - "Gouvernance coopérative « une personne, une voix » ouverte aux nouveaux entrants."
+  fragilites:
+    - "SCIC sous forme de SAS : société commerciale à lucrativité seulement encadrée, non une structure non lucrative."
+    - "Chaîne intégrée : la coopérative est juge et partie, sans contre-pouvoir externe entre propriété et usage."
+    - "Clause de dévolution propre et transparence comptable non documentées."
+  leviers:
+    - "Renforcer le verrou anti-spéculatif statutaire du foncier au-delà du seul cadre SCIC."
+    - "Publier les statuts, la clause de dévolution et les comptes de la coopérative."
+    - "Envisager un porteur non lucratif tiers pour introduire un contre-pouvoir entre propriété et usage."
+synthese: >
+  La SCIC E3P illustre une chaîne intégrée : une coopérative d'intérêt
+  collectif qui a acheté comptant son lieu et le gouverne elle-même. Le
+  montage est solide sur le pouvoir et l'usage, mais la sortie du marché
+  repose sur les seuls statuts d'une société commerciale, sans verrou tiers ni
+  contre-pouvoir externe entre propriété et usage.
+fiabilite: >
+  Faits vérifiés (sources Coopérative Oasis, societe.com et Zeste, consultées
+  en mai 2026) : SCIC E3P constituée sous forme de SAS à capital variable le
+  21 juin 2021, achat du Jardin du Petit Pessicart en septembre 2021 pour
+  420 000 € sans emprunt bancaire, tiers-lieu d'un hectare au-dessus de Nice,
+  une vingtaine de coopérateur·rices, trois pôles d'activité, ferme pédagogique
+  de l'Éducation nationale, financement de 130 000 € par la Coopérative Oasis.
+  Non confirmé : clause de dévolution statutaire, transparence comptable,
+  clauses d'usage environnementales attachées au foncier.
+voir_aussi: [cooperative-oasis]
+sources:
+  - titre: "Coopérative Oasis — Jardin du Petit Pessicart"
+    url: "https://cooperative-oasis.org/oasis/jardin-du-petit-pessicart/"
+  - titre: "E3P — École de Permaculture du Petit Pessicart (societe.com)"
+    url: "https://www.societe.com/societe/e3p-ecole-de-permaculture-du-petit-pessicart-900960964.html"
+  - titre: "Zeste — École de permaculture du Petit Pessicart"
+    url: "https://www.zeste.coop/en/e3p"
