@@ -9,3 +9,5 @@ Régions et types de montage absents ou faiblement couverts (≤ 1 fiche). Les c
 
 ## Types de montage sous-représentés
 
+- Propriété privée individuelle — 1 fiche·s
+- Propriété privée commerciale — 0 fiche·s
