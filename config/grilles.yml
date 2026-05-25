@@ -10,11 +10,11 @@
 # ces critères via une liste `grille:` (valeur : oui | partiel | non | inconnu).
 #
 # Les cinq axes (définis dans ranking.yml) :
-#   1 — Le sol         soustraction durable au marché
+#   1 — Le sol         soustraction à l'exploitation abusive (marché + dégradation)
 #   2 — La structure   nature civile et non lucrative
 #   3 — Le pouvoir     gouvernance citoyenne et collective
-#   4 — La finalité    vocation d'intérêt général ouverte
-#   5 — L'usage        régime non marchand et sécurité dans le temps
+#   4 — La finalité    finalité ouverte — intérêt général et habitat du vivant
+#   5 — L'usage        usage non marchand, non abusif et hospitalier
 # ─────────────────────────────────────────────────────────────────────────────
 version: 2
 date: 2026-05-23
@@ -33,7 +33,7 @@ grilles:
       général et la qualité des usages qu'il rend possibles.
     familles:
       - id: sol
-        label: "Le sol — soustraction au marché"
+        label: "Le sol — soustraction à l'exploitation abusive"
         axe: 1
         criteres:
           - id: inalienabilite
@@ -131,7 +131,7 @@ grilles:
               Publication régulière des comptes, rapports d'activité, liste
               des biens portés.
       - id: finalite
-        label: "La finalité — vocation d'intérêt général"
+        label: "La finalité — intérêt général et du vivant"
         axe: 4
         criteres:
           - id: objet_foncier_protecteur
@@ -165,8 +165,19 @@ grilles:
             definition: >
               L'organisme rend compte de son action au-delà de ses membres :
               reddition de comptes au public, rapports accessibles à tous.
+          - id: vivant_finalite
+            label: "Le vivant non-humain dans la finalité"
+            axe: 4
+            poids: 2
+            definition: >
+              La vocation inclut explicitement le vivant non-humain comme
+              cohabitant — non comme décor ni ressource : préservation ou
+              accueil de la biodiversité affiché parmi les finalités, dans les
+              statuts, la charte ou l'activité même. « oui » : finalité affirmée
+              et agie ; « partiel » : présente dans le discours sans traduction
+              concrète ; « non » : pensé pour ses seuls usagers humains.
       - id: usage
-        label: "L'usage — régime et sécurité"
+        label: "L'usage — régime non marchand et hospitalier"
         axe: 5
         criteres:
           - id: regime_usage_offert
@@ -217,7 +228,7 @@ grilles:
       régime d'usage qu'elle fait vivre.
     familles:
       - id: sol
-        label: "Le sol — soustraction au marché"
+        label: "Le sol — soustraction à l'exploitation abusive"
         axe: 1
         criteres:
           - id: non_appropriation
@@ -297,7 +308,7 @@ grilles:
               Comptes et décisions accessibles aux membres et, autant que
               possible, au public.
       - id: finalite
-        label: "La finalité — vocation d'intérêt général"
+        label: "La finalité — intérêt général et du vivant"
         axe: 4
         criteres:
           - id: objet_ig
@@ -314,8 +325,19 @@ grilles:
             definition: >
               Le lieu et ses bénéfices ne profitent pas exclusivement aux seuls
               membres fondateurs ou à leurs familles.
+          - id: vivant_finalite
+            label: "Le vivant non-humain dans la finalité"
+            axe: 4
+            poids: 2
+            definition: >
+              La vocation inclut explicitement le vivant non-humain comme
+              cohabitant — non comme décor ni ressource : préservation ou
+              accueil de la biodiversité affiché parmi les finalités, dans les
+              statuts, la charte ou l'activité même. « oui » : finalité affirmée
+              et agie ; « partiel » : présente dans le discours sans traduction
+              concrète ; « non » : pensé pour ses seuls usagers humains.
       - id: usage
-        label: "L'usage — régime et sécurité"
+        label: "L'usage — régime non marchand et hospitalier"
         axe: 5
         criteres:
           - id: duree_usage
@@ -388,12 +410,12 @@ grilles:
     titre: "Grille de lecture — Lieu"
     objet: >
       Apprécier un lieu concret à travers toute sa chaîne : son foncier est-il
-      sorti du marché, le montage est-il de nature civile, la gouvernance
-      citoyenne, la finalité d'intérêt général, et l'usage non marchand et
-      sécurisé ?
+      soustrait à l'exploitation abusive, le montage est-il de nature civile, la
+      gouvernance citoyenne, la finalité ouverte à l'intérêt général et au
+      vivant, et l'usage non marchand, non dégradant et hospitalier ?
     familles:
       - id: sol
-        label: "Le sol — soustraction au marché"
+        label: "Le sol — soustraction à l'exploitation abusive"
         axe: 1
         criteres:
           - id: foncier_hors_marche
@@ -435,6 +457,19 @@ grilles:
               strictement encadrée. « oui » : aucune part appropriable, ou
               cession au nominal ; « partiel » : cession sous agrément à prix
               non plafonné ; « non » : parts librement cessibles.
+          - id: milieu_protege
+            label: "Protection durable du milieu"
+            axe: 1
+            poids: 2
+            definition: >
+              Le milieu du lieu — sol, eau, biodiversité — est protégé de la
+              dégradation par un dispositif durable et opposable : obligation
+              réelle environnementale (ORE), statut d'espace protégé, clause
+              environnementale inscrite au bail ou à la convention. C'est, pour
+              la face matérielle de l'abusus, l'équivalent de l'inaliénabilité
+              pour sa face juridique. « oui » : dispositif opposable et durable
+              en place ; « partiel » : engagement sans portée contraignante
+              (charte, intention) ; « non » : aucun dispositif.
       - id: structure
         label: "La structure — nature civile et non lucrative"
         axe: 2
@@ -480,7 +515,7 @@ grilles:
               Des dispositifs assurent la transmission du lieu et le
               renouvellement des personnes qui le gouvernent.
       - id: finalite
-        label: "La finalité — vocation d'intérêt général"
+        label: "La finalité — intérêt général et du vivant"
         axe: 4
         criteres:
           - id: usage_interet_general
@@ -498,8 +533,19 @@ grilles:
             definition: >
               Le lieu est utile à son territoire et ouvert, à un degré ou un
               autre, au-delà de ses seuls résidents.
+          - id: vivant_finalite
+            label: "Le vivant non-humain dans la finalité"
+            axe: 4
+            poids: 2
+            definition: >
+              La vocation du lieu inclut explicitement le vivant non-humain
+              comme cohabitant — non comme décor ni ressource : préservation ou
+              accueil de la biodiversité affiché parmi les finalités, dans les
+              statuts, la charte ou l'activité même. « oui » : finalité affirmée
+              et agie ; « partiel » : présente dans le discours sans traduction
+              concrète ; « non » : pensé pour ses seuls usagers humains.
       - id: usage
-        label: "L'usage — régime et sécurité"
+        label: "L'usage — régime non marchand et hospitalier"
         axe: 5
         criteres:
           - id: usage_non_marchand
@@ -526,6 +572,31 @@ grilles:
               Le collectif usager dispose d'un titre d'usage long et au
               renouvellement sécurisé ; il peut maîtriser le lieu dans la durée
               sans précarité locative.
+          - id: usage_non_degradant
+            label: "Usage non dégradant, le fonds préservé"
+            axe: 5
+            poids: 3
+            definition: >
+              L'usage quotidien ne dégrade pas le fonds : les pratiques —
+              agricoles, d'entretien, de construction — prélèvent sans épuiser
+              et entretiennent la capacité du sol, de l'eau et du milieu à se
+              régénérer. Le critère n'est pas « prélever » — tout lieu prélève —
+              mais « laisser le lieu aussi vivant qu'on l'a reçu ». « oui » :
+              pratiques de maintien ou de régénération attestées ; « partiel » :
+              pratiques mixtes ; « non » : pratiques manifestement extractives
+              (sol épuisé, milieu dégradé).
+          - id: place_au_vivant
+            label: "Place faite au vivant à son échelle"
+            axe: 5
+            poids: 3
+            definition: >
+              Le lieu fait concrètement une place au vivant non-humain, à la
+              mesure de ce qu'il est, rural ou urbain : haies, mares, friches,
+              continuités écologiques ; en ville, une cour, un pied d'immeuble,
+              un toit végétalisé comptent. Critère relatif à l'échelle du lieu :
+              il ne pénalise pas l'urbain. « oui » : des espaces sont
+              effectivement laissés ou aménagés pour le vivant ; « partiel » :
+              quelques gestes marginaux ; « non » : aucune place au non-humain.
     lecture_strategique:
       enjeu: >
         Le lieu est le point où le montage juridique devient une réalité
@@ -540,7 +611,9 @@ grilles:
         - "Un lieu peut se refermer sur ses occupants et perdre son intérêt général."
         - "Un usage tarifé au marché trahit la promesse de libération."
         - "Sans sécurité de jouissance, le collectif reste un locataire précaire."
+        - "Un lieu hors-marché et autogéré peut malgré tout épuiser son sol ou n'accueillir aucun vivant non-humain."
       leviers:
         - "Documenter et publier le montage : la transparence est un verrou."
         - "Associer le voisinage et la collectivité pour ancrer l'intérêt général."
         - "Sécuriser un titre d'usage long et un régime d'usage non marchand."
+        - "Protéger durablement le milieu et lui laisser une place — à l'échelle du lieu, rural ou urbain."

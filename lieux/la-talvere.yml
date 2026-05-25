@@ -22,9 +22,12 @@ resume: >
   hébergements ponctuels et télétravail, et s'inscrit dans un écosystème local
   de communs (ferme Terre de Liens, projet d'habitat collectif voisin).
 montage:
-  type: demembrement
-  nu_proprietaire: "Antidote (fonds de dotation)"
-  usufruitier: "La Talvère (association loi 1901)"
+  type: propriete_sanctuarisee
+  articulations:
+    - usufruitier: association-la-talvere
+      titre: bail_emphyteotique
+      duree: "longue durée, jusqu'à 99 ans"
+      note: "Signature du bail sur ce lieu précis non datée par les sources consultées."
   description: >
     Le montage suit le modèle Antidote en trois temps : une association des
     lieux réunit des apports et achète le bien (ici via un crédit vendeur), le

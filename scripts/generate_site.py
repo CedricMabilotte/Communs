@@ -397,7 +397,7 @@ GLOSS_TERMS = [
     ("bail emphytéotique", "bail-emphyteotique"),
     ("fonds de dotation", "fonds-de-dotation"),
     ("utilité publique", "utilite-publique"),
-    ("commun citoyen", "commun"),
+    ("commun libre et vivant", "commun"),
     ("intérêt général", "interet-general"),
     ("fondation RUP", "fondation-rup"),
     ("nue-propriété", "nue-propriete"),
@@ -613,6 +613,154 @@ def montage_label(mid, concepts):
         if m["id"] == mid:
             return m["label"]
     return mid
+
+
+def titre_label(tid, concepts):
+    """Libellé d'un titre d'articulation (vocabulaire `titres` de concepts.yml)."""
+    if not tid:
+        return "—"
+    for t in concepts.get("titres", []) or []:
+        if t["id"] == tid:
+            return t["label"]
+    return tid
+
+
+def _entite_lien(uid, by_uid):
+    """Nom d'une entité lié à sa fiche, suivi de sa forme juridique si connue."""
+    ent = by_uid.get(uid)
+    if not ent:
+        return e(uid)
+    slug = CAT_SLUG.get(ent.get("categorie", ""), "l")
+    lien = f'<a href="../{slug}/{uid}.html">{e(ent.get("nom", uid))}</a>'
+    fj = clean(ent.get("forme_juridique") or "")
+    return f"{lien} ({e(fj)})" if fj else lien
+
+
+def montage_section(fiche, concepts, by_uid):
+    """Section « Le montage » d'une fiche de lieu : silhouette typologique +
+    chaîne réelle (porteur, articulations typées, usufruitiers) + liants.
+    Dégradation gracieuse si `articulations:` est absent."""
+    mont = fiche.get("montage", {}) or {}
+    ch = fiche.get("chaine", {}) or {}
+    if fiche.get("categorie") != "lieu":
+        if mont.get("description"):
+            return ('<section><h2 class="sec">Le montage</h2><p class="prose">'
+                    + e(clean(mont["description"])) + "</p></section>")
+        return ""
+    if not mont and not ch:
+        return ""
+    blocs = []
+    # 1 — silhouette typologique
+    sil = next((m for m in concepts.get("montages", []) or []
+                if m["id"] == mont.get("type")), None)
+    if sil:
+        if sil.get("en_clair"):
+            blocs.append('<p class="enclair">' + e(clean(sil["en_clair"])) + "</p>")
+        blocs.append('<p class="prose"><strong>' + e(clean(sil["label"]))
+                     + ".</strong> " + e(clean(sil.get("definition", ""))) + "</p>")
+    # 2 — la chaîne réelle
+    porteurs = ch.get("porteurs") or []
+    usufs = ch.get("usufruitiers") or []
+    phr = []
+    if porteurs:
+        phr.append("Le foncier est porté par "
+                   + ", ".join(_entite_lien(u, by_uid) for u in porteurs) + ".")
+    arts = mont.get("articulations") or []
+    if arts:
+        for a in arts:
+            seg = ("L'usage est confié à "
+                   + _entite_lien(a.get("usufruitier"), by_uid)
+                   + " par un titre de type « "
+                   + e(titre_label(a.get("titre"), concepts)) + " »")
+            duree = clean(a.get("duree") or "")
+            if duree:
+                seg += " (" + e(duree) + ")"
+            note = clean(a.get("note") or "")
+            seg += (" — " + e(note)) if note else "."
+            phr.append(seg)
+    elif usufs:
+        phr.append("L'usage est confié à "
+                   + ", ".join(_entite_lien(u, by_uid) for u in usufs)
+                   + " — le titre précis de l'articulation reste à documenter.")
+    if phr:
+        blocs.append('<p class="prose">' + " ".join(phr) + "</p>")
+    # chaîne intégrée
+    if set(porteurs) & set(usufs):
+        blocs.append('<p class="chaine-note"><strong>Chaîne intégrée :</strong> '
+                     "le porteur et l'usufruitier sont une seule et même entité. "
+                     "La propriété et l'usage ne sont pas dissociés : le collectif "
+                     "n'est pas un locataire précaire, mais il est aussi juge et "
+                     "partie, sans contre-pouvoir externe entre les deux rôles.</p>")
+    # 3 — liants
+    liants = mont.get("liants") or []
+    if liants:
+        lis = []
+        for l in liants:
+            txt = "<strong>" + e(clean(l.get("intitule", ""))) + "</strong>"
+            niv = clean(l.get("niveau") or "")
+            if niv:
+                txt += " — niveau " + e(niv)
+            portee = clean(l.get("portee") or "")
+            if portee:
+                txt += ", portée " + e(portee)
+            desc = clean(l.get("description") or "")
+            if desc:
+                txt += " : " + e(desc)
+            lis.append("<li>" + txt + "</li>")
+        blocs.append('<p class="prose">Éléments qui lient le montage :</p>'
+                     '<ul class="prose">' + "".join(lis) + "</ul>")
+    # 4 — description libre, en complément
+    if mont.get("description"):
+        blocs.append('<p class="prose">' + e(clean(mont["description"])) + "</p>")
+    if not blocs:
+        return ""
+    return '<section><h2 class="sec">Le montage</h2>' + "".join(blocs) + "</section>"
+
+
+def dossier_section(fiche):
+    """Section « Dossier » d'une fiche de porteur ou d'usufruitier : les pièces
+    du montage et leur statut de publicité (public / non public / inconnu).
+    Bloc documentaire de transparence — non noté."""
+    if fiche.get("categorie") not in ("porteur", "usufruitier"):
+        return ""
+    dossier = fiche.get("dossier", {}) or {}
+    pieces = dossier.get("pieces") or []
+    if not pieces:
+        return ""
+    types = [("statuts", "Statuts"),
+             ("reglement_interieur", "Règlement intérieur"),
+             ("charte", "Charte"),
+             ("acte_montage", "Acte de montage"),
+             ("rapport_financier", "Rapport financier / comptes"),
+             ("bail", "Bail / convention d'usage")]
+    by_type = {p.get("type"): p for p in pieces if p.get("type")}
+    smap = {"public": ("Public", "crit-oui"),
+            "non_public": ("Non public", "crit-non"),
+            "inconnu": ("Inconnu", "crit-inconnu")}
+    trs = []
+    for tid, tlabel in types:
+        p = by_type.get(tid) or {}
+        statut = p.get("statut", "inconnu")
+        slab, scls = smap.get(statut, smap["inconnu"])
+        cell = slab
+        if statut == "public" and p.get("lien"):
+            cell += (' — <a href="' + e(p["lien"]) + '" rel="noopener" '
+                     'target="_blank">consulter</a>')
+        note = clean(p.get("note") or "")
+        if note:
+            cell += ' <span class="note">(' + e(note) + ')</span>'
+        trs.append('<tr><th scope="row">' + e(tlabel) + '</th>'
+                   '<td class="' + scls + '">' + cell + "</td></tr>")
+    return ('<section><h2 class="sec">Dossier</h2>'
+            '<p class="prose">Les pièces du montage et leur accessibilité '
+            "publique. Le statut de chaque pièce — publique, non publique ou "
+            "inconnu — est lui-même une information.</p>"
+            '<div class="table-scroll" tabindex="0" role="region" '
+            'aria-label="Dossier — pièces et statut de publicité">'
+            '<table class="rank-tbl small">'
+            '<thead><tr><th scope="col">Pièce</th>'
+            '<th scope="col">Statut</th></tr></thead>'
+            "<tbody>" + "".join(trs) + "</tbody></table></div></section>")
 
 
 def _fmtnum(val):
@@ -861,9 +1009,12 @@ def idl_scale(sc, ranking):
     if brut is not None and brut != idl:
         ghost = (f'<span class="idl-ghost" style="left:{brut}%" '
                  f'title="Indice brut {brut}, avant pénalité de complétude"></span>')
+    # curseur et marqueur « indice brut » placés HORS de la piste (qui est en
+    # overflow:hidden) pour ne pas être rognés — chantier 7.
     return (f'<div class="idl-scale" aria-hidden="true">'
-            f'<span class="idl-scale-track">{segs}{ghost}'
-            f'<span class="idl-cursor" style="left:{idl}%"></span></span>'
+            f'<span class="idl-scale-track">{segs}</span>'
+            f'{ghost}'
+            f'<span class="idl-cursor" style="left:{idl}%"></span>'
             f'<span class="idl-scale-ends"><span>0</span><span>100</span></span>'
             f'</div>')
 
@@ -1099,43 +1250,8 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                      f'axes sur {n_axes} — les autres sont entièrement '
                      f'« inconnu ».</p>')
 
-    pal_col = sc["palier"]["couleur"] if sc["palier"] else "var(--green)"
-    score_block = f"""<section class="score-panel" style="--pal:{pal_col}">
-  <div class="score-main">
-    <p class="score-cap"><a href="../methode.html#indice">Indice de libération</a></p>
-    {idl_badge(sc, big=True)}
-    {axes_note}
-    {axis_triangle(axes_cfg, sc['axes'])}
-  </div>
-  <div class="score-axes">
-    {axis_bar(axes_cfg, sc['axes'])}
-    {idl_scale(sc, ranking)}
-    <p class="fiab fiab-{fcls}">{e(flabel)}</p>
-    {comp}
-    {chaine_html}
-  </div>
-</section>"""
-
-    # clé de lecture compacte de la fiche — repliée par défaut, sobre
-    # (audit pédagogie C, I1/I3).
-    grille_line = ("</li>\n  <li><strong>Grille détaillée</strong> — chaque "
-                   "critère est évalué oui · partiel · non ; le score en "
-                   "découle.") if (cat != "modele" and sc["criteres_evalues"]) else ""
-    axes_enum = ", ".join(f"{a['id']} {a['label']}" for a in axes_cfg)
-    lecture = f"""<details class="fiche-key">
-  <summary>Comment lire cette fiche</summary>
-  <ul>
-  <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
-  indique le palier. L'Indice est la moyenne géométrique (non compensatoire)
-  des axes renseignés : l'axe le plus faible commande le résultat.</li>
-  <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
-  l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
-  est noté sur cet axe.</li>
-  <li><strong>Barres d'axe</strong> — le détail chiffré des cinq axes.{grille_line}</li>
-  </ul>
-</details>"""
-
-    # en bref
+    # « Repères » — construits ici pour être intégrés au panneau de score comme
+    # 3e colonne compacte (chantier 7, TAF 3).
     rows = []
     if fiche.get("forme_juridique"):
         rows.append(("Forme juridique", e(clean(fiche["forme_juridique"]))))
@@ -1163,12 +1279,72 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                      f'<a href="../regimes.html#poles">{e(plab)}</a></span>'))
     if fiche.get("url"):
         rows.append(("Site", f'<a href="{e(fiche["url"])}" rel="noopener" '
-                             f'target="_blank">{e(fiche["url"])}</a>'))
-    bref_items = "".join(
-        f'<div class="bref-item"><dt>{k}</dt><dd>{v}</dd></div>'
+                             f'target="_blank">Voir le site</a>'))
+    # géoportail (lieu) et bloc dossier — identité, échelle — chantier 6
+    loc6 = fiche.get("localisation", {}) or {}
+    if loc6.get("geoportail"):
+        rows.append(("Géoportail", f'<a href="{e(loc6["geoportail"])}" '
+                     f'rel="noopener" target="_blank">Voir la parcelle</a>'))
+    dossier = fiche.get("dossier", {}) or {}
+    ident = dossier.get("identite", {}) or {}
+    if ident.get("siren"):
+        rows.append(("SIREN / SIRET", e(clean(str(ident["siren"])))))
+    if ident.get("rna"):
+        rows.append(("N° RNA", e(clean(str(ident["rna"])))))
+    if ident.get("adresse"):
+        rows.append(("Siège", e(clean(ident["adresse"]))))
+    ech = dossier.get("echelle", {}) or {}
+    if ech.get("personnes"):
+        rows.append(("Collectif", f'{e(ech["personnes"])} personnes'))
+    if ech.get("lieux"):
+        rows.append(("Lieux portés", e(str(ech["lieux"]))))
+    if ech.get("surface"):
+        rows.append(("Surface", e(clean(str(ech["surface"])))))
+    bref_compact = "".join(
+        f'<div class="sb-item"><dt>{k}</dt><dd>{v}</dd></div>'
         for k, v in rows)
-    enbref = (f'<section class="enbref"><h2 class="bref-titre">Repères</h2>'
-              f'<dl>{bref_items}</dl></section>')
+    bref_col = (f'<div class="score-bref"><p class="score-cap">Repères</p>'
+                f'<dl>{bref_compact}</dl></div>') if rows else ""
+
+    pal_col = sc["palier"]["couleur"] if sc["palier"] else "var(--green)"
+    score_block = f"""<section class="score-panel" style="--pal:{pal_col}">
+  <div class="score-main">
+    <p class="score-cap"><a href="../methode.html#indice">Indice de libération</a></p>
+    {idl_badge(sc, big=True)}
+    {axes_note}
+    {axis_triangle(axes_cfg, sc['axes'])}
+  </div>
+  <div class="score-axes">
+    {axis_bar(axes_cfg, sc['axes'])}
+    {idl_scale(sc, ranking)}
+    <p class="fiab fiab-{fcls}">{e(flabel)}</p>
+    {comp}
+    {chaine_html}
+  </div>
+  {bref_col}
+</section>"""
+
+    # clé de lecture compacte de la fiche — repliée par défaut, sobre
+    # (audit pédagogie C, I1/I3).
+    grille_line = ("</li>\n  <li><strong>Grille détaillée</strong> — chaque "
+                   "critère est évalué oui · partiel · non ; le score en "
+                   "découle.") if (cat != "modele" and sc["criteres_evalues"]) else ""
+    axes_enum = ", ".join(f"{a['id']} {a['label']}" for a in axes_cfg)
+    lecture = f"""<details class="fiche-key">
+  <summary>Comment lire cette fiche</summary>
+  <ul>
+  <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
+  indique le palier. L'Indice est la moyenne géométrique (non compensatoire)
+  des axes renseignés : l'axe le plus faible commande le résultat.</li>
+  <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
+  l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
+  est noté sur cet axe.</li>
+  <li><strong>Barres d'axe</strong> — le détail chiffré des cinq axes.{grille_line}</li>
+  </ul>
+</details>"""
+
+    # (les « Repères » sont désormais construits plus haut et intégrés au
+    # panneau de score comme 3e colonne — chantier 7, TAF 3.)
 
     # résumé
     resume = ""
@@ -1176,30 +1352,10 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         resume = (f'<section><h2 class="sec">Présentation</h2>'
                   f'<p class="prose">{e(clean(fiche["resume"]))}</p></section>')
 
-    # montage
-    montage_html = ""
-    if mont.get("description"):
-        extra = []
-        if mont.get("nu_proprietaire"):
-            extra.append(f'<p><strong>Nue-propriété / propriété :</strong> '
-                         f'{e(clean(mont["nu_proprietaire"]))}</p>')
-        if mont.get("usufruitier"):
-            extra.append(f'<p><strong>Usufruit / usage :</strong> '
-                         f'{e(clean(mont["usufruitier"]))}</p>')
-        # chaîne intégrée : une même entité est porteur ET usufruitier. Le cas
-        # est légitime (coopérative d'habitants) mais on le signale — l'entité
-        # est juge et partie. Cf. ranking.yml § chaine.cas_integre.
-        ch_int = fiche.get("chaine", {}) or {}
-        if set(ch_int.get("porteurs") or []) & set(ch_int.get("usufruitiers") or []):
-            extra.append(
-                '<p class="chaine-note"><strong>Chaîne intégrée :</strong> le '
-                'porteur et l\'usufruitier sont une seule et même entité. La '
-                'propriété et l\'usage ne sont pas dissociés : le collectif '
-                'n\'est pas un locataire précaire, mais il est aussi juge et '
-                'partie, sans contre-pouvoir externe entre les deux rôles.</p>')
-        montage_html = (f'<section><h2 class="sec">Le montage</h2>'
-                        f'<p class="prose">{e(clean(mont["description"]))}</p>'
-                        + "".join(extra) + '</section>')
+    # montage — silhouette typologique + chaîne réelle (porteur, articulations
+    # typées, usufruitiers, liants). Cf. chantier 5, conception-refonte-3.md §8.
+    montage_html = montage_section(fiche, cfg["concepts"], by_uid)
+    dossier_html = dossier_section(fiche)
 
     # grille détaillée + récapitulatif par axe
     grille_html = ""
@@ -1273,7 +1429,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         if me in (other.get("voir_aussi", []) or []):
             rel_uids.add(other_uid)
     rel_uids.discard(me)
-    chips = []
+    chips_par_cat = {}
     for uid in sorted(rel_uids):
         tgt = by_uid.get(uid)
         if not tgt:
@@ -1282,16 +1438,28 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         tsc = sc_by_uid.get(uid)
         tri = (axis_triangle(axes_cfg, tsc["axes"], compact=True)
                if tsc else "")
-        chips.append(
-            f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{uid}.html">'
-            f'{tri}<span class="chip-txt">{e(tgt["nom"])}'
-            f'<span class="chip-cat">{e(tcat)}</span></span></a>')
-    if chips:
-        liens_html = (f'<section><h2 class="sec">Reliés dans l\'annuaire</h2>'
-                      f'<p class="lead">Montages directement reliés à cette '
-                      f'fiche ; le profil à cinq axes permet la comparaison '
-                      f'visuelle.</p>'
-                      f'<div class="chips">{"".join(chips)}</div></section>')
+        chip = (f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{uid}.html">'
+                f'{tri}<span class="chip-txt">{e(tgt["nom"])}'
+                f'<span class="chip-cat">{e(tcat)}</span></span></a>')
+        chips_par_cat.setdefault(tcat, []).append(chip)
+    if chips_par_cat:
+        # reliés groupés par nature plutôt que mélangés (chantier 7, TAF 5)
+        ordre_grp = [("lieu", "Lieux"),
+                     ("porteur", "Porteurs de nue-propriété"),
+                     ("usufruitier", "Organismes usufruitiers"),
+                     ("reseau", "Réseaux"),
+                     ("modele", "Modèles voisins")]
+        groupes = []
+        for gid, gtitre in ordre_grp:
+            lot = chips_par_cat.get(gid)
+            if lot:
+                groupes.append(f'<h3 class="rel-grp">{e(gtitre)}</h3>'
+                               f'<div class="chips">{"".join(lot)}</div>')
+        liens_html = ('<section><h2 class="sec">Reliés dans l\'annuaire</h2>'
+                      '<p class="lead">Montages directement reliés à cette '
+                      'fiche, regroupés par nature ; le profil à cinq axes '
+                      'permet la comparaison visuelle.</p>'
+                      + "".join(groupes) + '</section>')
 
     # fiabilité + sources
     fiab = ""
@@ -1314,13 +1482,13 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                 f' · <a href="../classement.html">Voir le classement</a></p>')
     # le <defs> tri-base n'est utile que si la fiche rend au moins un triangle
     # compact, c'est-à-dire si elle a des chips reliés (audit fonctionnel C, M2).
-    defs = tri_defs(axes_cfg) if chips else ""
-    # ordre de lecture (session #3, chantier C1) : le récit avant la preuve —
-    # présentation, repères, montage, analyse, chaîne, puis la grille (matériau
-    # de référence) reléguée en fin, avant fiabilité et sources.
-    body = (defs + head + score_block + lecture + resume + enbref
-            + montage_html + analyse_html + liens_html + grille_html + fiab
-            + sources_html + backlink)
+    defs = tri_defs(axes_cfg) if chips_par_cat else ""
+    # ordre de lecture (session #3) : le récit avant la preuve — les « Repères »
+    # sont intégrés au panneau de score (chantier 7) ; puis présentation,
+    # montage, analyse, chaîne, dossier, et la grille reléguée en fin.
+    body = (defs + head + score_block + lecture + resume
+            + montage_html + analyse_html + liens_html + grille_html
+            + dossier_html + fiab + sources_html + backlink)
 
     # données structurées : fil d'Ariane + entité principale
     fpath = f"{CAT_SLUG[cat]}/{fiche['uid']}.html"
@@ -1854,7 +2022,29 @@ sept critères.</caption>
                     f'<strong>Un régime n\'est pas une fatalité.</strong> '
                     f'{e(clean(reg["paradoxe"]))}</p></div>')
 
-    # cinq pôles — lus depuis concepts["poles"].
+    # triptyque usus / fructus / abusus — ossature, lu depuis concepts["triptyque"].
+    tri = cfg["concepts"].get("triptyque", {}) or {}
+    triptyque_html = ""
+    if tri.get("droits"):
+        droit_cards = "".join(
+            f"""<div class="regime-card">
+  <h3>{e(clean(d.get('label','')))}</h3>
+  <p class="enclair">{e(clean(d.get('en_clair','')))}</p>
+  <p class="regime-but"><strong>Au sens du droit.</strong> {e(clean(d.get('definition','')))}</p>
+  <p class="regime-role">{e(clean(d.get('portee_modele','')))}</p>
+</div>""" for d in tri["droits"])
+        verif = ""
+        if tri.get("verification"):
+            verif = (f'<p class="prose"><strong>Vérifier la posture par la '
+                     f'nature.</strong> {e(clean(tri["verification"]))}</p>')
+        triptyque_html = f"""<section><h2 class="sec" id="triptyque">Le triptyque : usus, fructus, abusus</h2>
+<p class="lead">{e(clean(tri.get('en_clair','')))}</p>
+<p class="prose">{e(clean(tri.get('chapeau','')))}</p>
+<div class="regime-grid">{droit_cards}</div>
+{verif}
+</section>"""
+
+    # cinq pôles — profils de référence sur le triptyque, lus depuis concepts["poles"].
     poles = cfg["concepts"].get("poles", {}) or {}
     poles_liste = poles.get("liste", []) or []
     poles_html = ""
@@ -1863,26 +2053,25 @@ sept critères.</caption>
             f"""<div class="pole-card">
   <p class="pole-rang">Pôle {p.get('rang','')}</p>
   <h3>{e(clean(p.get('label','')))}</h3>
+  <p class="enclair">{e(clean(p.get('en_clair','')))}</p>
   <p class="pole-role">{e(clean(p.get('role','')))}</p>
-  <p class="pole-line"><strong>Décision.</strong> {e(clean(p.get('decision','')))}</p>
-  <p class="pole-line"><strong>Bénéficiaire.</strong> {e(clean(p.get('beneficiaire','')))}</p>
-  <p class="pole-line"><strong>Logique.</strong> {e(clean(p.get('logique','')))}</p>
+  <p class="pole-line"><strong>Usus.</strong> {e(clean(p.get('usus','')))}</p>
+  <p class="pole-line"><strong>Fructus.</strong> {e(clean(p.get('fructus','')))}</p>
+  <p class="pole-line"><strong>Abusus.</strong> {e(clean(p.get('abusus','')))}</p>
+  <p class="pole-line"><strong>En un mot.</strong> {e(clean(p.get('logique','')))}</p>
 </div>""" for p in poles_liste)
         registres = poles.get("registres", {}) or {}
         reg_html = ""
-        if registres:
-            reg_html = f"""<p class="prose">{e(clean(registres.get('chapeau','')))}</p>
-<ul class="prose">
-  <li><strong>Nature.</strong> {e(clean(registres.get('nature','')))}</li>
-  <li><strong>Posture.</strong> {e(clean(registres.get('posture','')))}</li>
-  <li><strong>Modèle économique.</strong> {e(clean(registres.get('modele_economique','')))}</li>
-</ul>"""
+        if registres.get("chapeau"):
+            reg_html = f"""<p class="prose">{e(clean(registres.get('chapeau','')))}</p>"""
         poles_html = f"""<section><h2 class="sec" id="poles">Les cinq pôles</h2>
-<p class="prose">Ces trois régimes se précisent en cinq pôles : ils dédoublent
-les deux régimes où la qualification se joue — le droit civil d'intérêt général
-se scinde entre le commun citoyen et l'intérêt général institué, le droit
-commercial entre le mutualisme d'usagers et l'économie sociale marchande — la
-propriété privée demeurant un pôle unique.</p>
+<p class="lead">{e(clean(poles.get('en_clair','')))}</p>
+<p class="prose">Ces trois régimes se précisent en cinq pôles : cinq profils de
+référence sur le triptyque. Ils dédoublent les deux régimes où la qualification
+se joue — le droit civil d'intérêt général se scinde entre le commun libre et
+vivant et l'intérêt général institué, le droit commercial entre le mutualisme
+d'usagers et l'économie sociale marchande — la propriété privée demeurant un
+pôle unique.</p>
 <p class="prose">{e(clean(poles.get('chapeau','')))}</p>
 <div class="pole-grid">{pole_cards}</div>
 {reg_html}
@@ -1899,6 +2088,8 @@ propriété privée demeurant un pôle unique.</p>
 <section><h2 class="sec">Tableau comparatif</h2>
 {table}
 </section>
+
+{triptyque_html}
 
 {poles_html}
 
@@ -1953,6 +2144,7 @@ def render_methode(cfg, n_by_cat, all_sc):
     axes_html = "".join(
         f"""<div class="axe-card" style="--c:{a['couleur']}">
   <h3>Axe {a['id']} — {e(a['label'])}</h3>
+  <p class="enclair">{e(clean(a.get('en_clair','')))}</p>
   <p class="axe-q">{e(clean(a['question']))}</p>
   <p>{e(clean(a['description']))}</p>
 </div>""" for a in ranking["axes"])
@@ -1964,25 +2156,54 @@ def render_methode(cfg, n_by_cat, all_sc):
     domiciliage_html = "".join(
         f'<li><strong>Axe {d["axe"]}</strong> — {e(clean(d["regle"]))}</li>'
         for d in ranking.get("chaine", {}).get("domiciliage", []))
+    tri = cfg["concepts"].get("triptyque", {}) or {}
+    ed = ((cfg["concepts"].get("editorial", {}) or {})
+          .get("registres_d_ecriture", {}) or {})
+    droits_li = "".join(
+        f'<li><strong>{e(clean(d.get("label","")))}</strong> — '
+        f'{e(clean(d.get("definition","")))}</li>'
+        for d in tri.get("droits", []) or [])
+    triptyque_html = f"""<section id="triptyque"><h2 class="sec">Le triptyque : usus, fructus, abusus</h2>
+<p class="enclair">{e(clean(tri.get('en_clair','')))}</p>
+<p class="prose"><strong>La formule.</strong> {e(clean(cc.get('formule','')))}</p>
+<p class="prose">{e(clean(tri.get('chapeau','')))}</p>
+<ul class="prose">{droits_li}</ul>
+<p class="prose">Les cinq pôles se profilent sur ce triptyque ; il est exposé en
+détail, avec les pôles et la typologie de montage, sur la page
+<a href="regimes.html#triptyque">Régimes et pôles du sol</a>.</p>
+</section>"""
+    ecriture_html = f"""<section id="ecriture"><h2 class="sec">Les deux voix</h2>
+<p class="prose">{e(clean(ed.get('chapeau','')))}</p>
+<ul class="prose">
+<li><strong>La voix exacte.</strong> {e(clean(ed.get('voix_exacte','')))}</li>
+<li><strong>La voix incarnée.</strong> {e(clean(ed.get('voix_incarnee','')))}</li>
+</ul>
+<p class="prose"><strong>Règle d'or.</strong> {e(clean(ed.get('regle_d_or','')))}</p>
+</section>"""
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
 libération des terres.</p>
 <nav class="page-toc" aria-label="Sommaire de la page">
   <a href="#corpus">Ce que recense l'annuaire</a>
+  <a href="#triptyque">Le triptyque usus / fructus / abusus</a>
   <a href="#indice">L'Indice de libération</a>
   <a href="#chaine">La chaîne et le domiciliage des axes</a>
   <a href="#integrite">L'intégrité du montage</a>
+  <a href="#ecriture">Les deux voix</a>
   <a href="#limites">Limites</a>
   <a href="#etat">État du corpus</a>
 </nav>
 
 <section id="corpus"><h2 class="sec">Ce que recense l'annuaire</h2>
+<p class="enclair">{e(clean(cc.get('en_clair','')))}</p>
 <p class="prose">« Terres Libérées » recense des lieux français où le foncier a
 été soustrait au marché spéculatif par dissociation de la propriété et de
 l'usage. {e(clean(cc['definition']))}</p>
 <p class="prose"><strong>Ressort juridique.</strong> {e(clean(cc['ressort_juridique']))}</p>
 <p class="prose"><strong>Verrou central.</strong> {e(clean(cc['verrou_cle']))}</p>
 </section>
+
+{triptyque_html}
 
 <section id="indice"><h2 class="sec">L'Indice de libération</h2>
 <p class="prose">Chaque entrée est notée de 0 à 100 sur <strong>cinq axes</strong>
@@ -2065,6 +2286,8 @@ montage par l'axe 2. Le cadre des régimes et des cinq pôles est exposé sur la
 page <a href="regimes.html#poles">Régimes et pôles du sol</a>.</p>
 </section>
 
+{ecriture_html}
+
 <section id="limites"><h2 class="sec">Limites</h2>
 <ul class="prose">
 <li>Les fiches reposent sur des sources publiques ; les montages réels peuvent
@@ -2080,6 +2303,13 @@ associatif) est un idéal-type ; peu de lieux réels le réalisent à la lettre.
 de la mouvance Terre de Liens, sous-représentation de l'habitat et de
 l'Outre-mer — est détaillée dans l'<a href="#etat">État du corpus</a>.</li>
 </ul>
+<p class="prose"><strong>Ce que le modèle ne mesure pas.</strong> L'exploitation
+par le travail n'est lue que dans le cas des usufruitiers commerciaux — la
+subordination d'un travail salarié à une autorité de marché. L'auto-exploitation
+d'un collectif non lucratif — l'épuisement militant — reste hors champ : un
+groupe qui s'autodétermine ainsi porte sa responsabilité et ses raisons ; c'est
+une anomalie d'ordre sociologique, à une autre échelle que la qualification d'un
+montage, qui ne se laisse pas normaliser.</p>
 </section>
 
 <section id="etat"><h2 class="sec">État du corpus</h2>
@@ -2214,10 +2444,17 @@ GLOSSAIRE = [
      "en étant structurellement commerciale et lucrative au profit d'un cercle "
      "fermé. On parle aussi de « communs-washing ». Cas-type : la société "
      "coopérative dont le bénéficiaire réel est le seul sociétariat."),
+    ("Triptyque usus / fructus / abusus",
+     "Les trois droits que le droit civil reconnaît sur une chose : l'usus — "
+     "s'en servir —, le fructus — en percevoir les revenus —, l'abusus — en "
+     "disposer, jusqu'à vendre, transformer ou épuiser. Le commun n'invente pas "
+     "un quatrième droit : il ré-agence les trois — fructus supprimé ou "
+     "réinvesti, abusus neutralisé dans ses deux faces, usus partagé, y compris "
+     "avec le vivant non-humain. C'est l'ossature du cadre d'évaluation."),
     ("Cinq pôles",
      "À l'intérieur et au travers des trois régimes du sol, le cadre situe cinq "
-     "pôles, du resserrement le plus large au plus étroit de la décision et du "
-     "bénéfice : le commun citoyen, l'intérêt général institué, le mutualisme "
+     "pôles — cinq profils de référence sur le triptyque usus/fructus/abusus : "
+     "le commun libre et vivant, l'intérêt général institué, le mutualisme "
      "d'usagers, l'économie sociale marchande, la propriété marchande. Ce sont "
      "des profils de référence, non des cases."),
     ("Verrou d'actif (asset-lock)",
@@ -2266,8 +2503,8 @@ GLOSSAIRE = [
      "commande le résultat. Voir la page Méthode."),
     ("Intégrité du montage",
      "Indicateur complémentaire, non noté et non hiérarchique : il situe la "
-     "chaîne du montage parmi cinq pôles, du commun citoyen à la propriété "
-     "marchande, sans les classer. La protection effective du foncier est "
+     "chaîne du montage parmi cinq pôles, du commun libre et vivant à la "
+     "propriété marchande, sans les classer. La protection effective du foncier est "
      "mesurée à part, par l'axe 1 (le sol) de l'Indice ; la nature civile non "
      "lucrative, par l'axe 2 (la structure)."),
     ("Modèle voisin",
@@ -2846,15 +3083,16 @@ main.wrap{padding-bottom:4rem;}
  font-size:.8rem;}
 
 /* jauge linéaire idl */
-.idl-scale{margin:.8rem 0 .2rem;}
+.idl-scale{position:relative;margin:.8rem 0 .2rem;}
 .idl-scale-track{position:relative;display:block;height:12px;border-radius:6px;
  overflow:hidden;background:var(--beige-dk);}
 .idl-seg{position:absolute;top:0;height:100%;}
-.idl-cursor{position:absolute;top:-3px;width:3px;height:18px;background:var(--ink);
- border-radius:2px;transform:translateX(-50%);}
-.idl-ghost{position:absolute;top:-2px;width:0;height:0;
- border-left:4px solid transparent;border-right:4px solid transparent;
- border-top:6px solid rgba(34,31,26,.45);transform:translateX(-50%);}
+.idl-cursor{position:absolute;top:-3px;width:5px;height:18px;background:var(--ink);
+ border-radius:2px;box-shadow:0 0 0 1.6px #fff,0 1px 3px rgba(0,0,0,.4);
+ transform:translateX(-50%);}
+.idl-ghost{position:absolute;top:-6px;width:0;height:0;
+ border-left:3.5px solid transparent;border-right:3.5px solid transparent;
+ border-top:5px solid rgba(34,31,26,.34);transform:translateX(-50%);}
 .idl-scale-ends{display:flex;justify-content:space-between;font-size:.68rem;
  color:var(--faint);font-family:-apple-system,system-ui,sans-serif;margin-top:.15rem;}
 
@@ -2932,7 +3170,15 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .score-cap{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
  color:var(--muted);margin:0 0 .35rem;}
 /* un seul séparateur : le gap suffit, le filet gauche est retiré (design B, M5) */
-.score-axes{flex:1;min-width:260px;}
+.score-axes{flex:1;min-width:240px;}
+/* 3e colonne du panneau de score — repères compacts (chantier 7) */
+.score-bref{flex:0 0 12rem;font-size:.8rem;}
+.score-bref dl{margin:.1rem 0 0;}
+.sb-item{display:flex;justify-content:space-between;gap:.7rem;
+ padding:.26rem 0;border-bottom:1px solid var(--line);}
+.sb-item:last-child{border-bottom:none;}
+.sb-item dt{color:var(--faint);}
+.sb-item dd{margin:0;text-align:right;overflow-wrap:anywhere;}
 .fiab{font-size:.82rem;margin:.6rem 0 0;font-weight:600;}
 .fiab-ok{color:var(--green-dk);}
 .fiab-gold{color:var(--gold-dk);}
@@ -3060,6 +3306,9 @@ th.sortable[aria-sort=descending]::after{content:" \\25BC";opacity:1;}
 
 /* chips — montages reliés avec profil */
 .chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;}
+.rel-grp{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;
+ color:var(--faint);font-weight:700;margin:1.1rem 0 .1rem;
+ font-family:-apple-system,system-ui,sans-serif;}
 .chip{display:inline-block;background:var(--card);border:1px solid var(--line);
  border-radius:var(--radius-pill);padding:.3rem .8rem;font-size:.85rem;
  text-decoration:none;color:var(--ink);
@@ -3096,6 +3345,9 @@ th.sortable[aria-sort=descending]::after{content:" \\25BC";opacity:1;}
 .axe-card h3{font-size:1.05rem;}
 .axe-q{font-style:italic;color:var(--muted);font-size:.92rem;}
 .axe-card p{font-size:.9rem;}
+/* voix incarnée du double registre — glose en clair d'un concept */
+.enclair{color:var(--ink);border-left:3px solid var(--gold);padding-left:.75rem;
+ margin:.55rem 0;}
 code{background:var(--beige);padding:.1rem .35rem;border-radius:var(--radius-sm);font-size:.86rem;}
 .note{font-size:.83rem;color:var(--faint);}
 
@@ -3543,6 +3795,13 @@ def verifier_chaines(fiches):
                 avert.append(f"  lieu {uid} — aucun porteur dans la chaîne")
             if not (ch.get("usufruitiers") or []):
                 avert.append(f"  lieu {uid} — aucun usufruitier dans la chaîne")
+            # articulations : tout usufruitier articulé doit figurer dans la chaîne
+            usufs_ch = set(ch.get("usufruitiers") or [])
+            for art in ((f.get("montage", {}) or {}).get("articulations") or []):
+                au = art.get("usufruitier")
+                if au and au not in usufs_ch:
+                    avert.append(f"  lieu {uid} — articulation vers «{au}», "
+                                 f"absent de la chaîne")
         elif cat in ("porteur", "usufruitier"):
             if uid not in cites:
                 avert.append(f"  {cat} {uid} — orphelin : cité par aucune chaîne")

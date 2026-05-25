@@ -208,15 +208,16 @@ main.wrap{padding-bottom:4rem;}
  font-size:.8rem;}
 
 /* jauge linéaire idl */
-.idl-scale{margin:.8rem 0 .2rem;}
+.idl-scale{position:relative;margin:.8rem 0 .2rem;}
 .idl-scale-track{position:relative;display:block;height:12px;border-radius:6px;
  overflow:hidden;background:var(--beige-dk);}
 .idl-seg{position:absolute;top:0;height:100%;}
-.idl-cursor{position:absolute;top:-3px;width:3px;height:18px;background:var(--ink);
- border-radius:2px;transform:translateX(-50%);}
-.idl-ghost{position:absolute;top:-2px;width:0;height:0;
- border-left:4px solid transparent;border-right:4px solid transparent;
- border-top:6px solid rgba(34,31,26,.45);transform:translateX(-50%);}
+.idl-cursor{position:absolute;top:-3px;width:5px;height:18px;background:var(--ink);
+ border-radius:2px;box-shadow:0 0 0 1.6px #fff,0 1px 3px rgba(0,0,0,.4);
+ transform:translateX(-50%);}
+.idl-ghost{position:absolute;top:-6px;width:0;height:0;
+ border-left:3.5px solid transparent;border-right:3.5px solid transparent;
+ border-top:5px solid rgba(34,31,26,.34);transform:translateX(-50%);}
 .idl-scale-ends{display:flex;justify-content:space-between;font-size:.68rem;
  color:var(--faint);font-family:-apple-system,system-ui,sans-serif;margin-top:.15rem;}
 
@@ -294,7 +295,15 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .score-cap{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
  color:var(--muted);margin:0 0 .35rem;}
 /* un seul séparateur : le gap suffit, le filet gauche est retiré (design B, M5) */
-.score-axes{flex:1;min-width:260px;}
+.score-axes{flex:1;min-width:240px;}
+/* 3e colonne du panneau de score — repères compacts (chantier 7) */
+.score-bref{flex:0 0 12rem;font-size:.8rem;}
+.score-bref dl{margin:.1rem 0 0;}
+.sb-item{display:flex;justify-content:space-between;gap:.7rem;
+ padding:.26rem 0;border-bottom:1px solid var(--line);}
+.sb-item:last-child{border-bottom:none;}
+.sb-item dt{color:var(--faint);}
+.sb-item dd{margin:0;text-align:right;overflow-wrap:anywhere;}
 .fiab{font-size:.82rem;margin:.6rem 0 0;font-weight:600;}
 .fiab-ok{color:var(--green-dk);}
 .fiab-gold{color:var(--gold-dk);}
@@ -422,6 +431,9 @@ th.sortable[aria-sort=descending]::after{content:" \25BC";opacity:1;}
 
 /* chips — montages reliés avec profil */
 .chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;}
+.rel-grp{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;
+ color:var(--faint);font-weight:700;margin:1.1rem 0 .1rem;
+ font-family:-apple-system,system-ui,sans-serif;}
 .chip{display:inline-block;background:var(--card);border:1px solid var(--line);
  border-radius:var(--radius-pill);padding:.3rem .8rem;font-size:.85rem;
  text-decoration:none;color:var(--ink);
@@ -458,6 +470,9 @@ th.sortable[aria-sort=descending]::after{content:" \25BC";opacity:1;}
 .axe-card h3{font-size:1.05rem;}
 .axe-q{font-style:italic;color:var(--muted);font-size:.92rem;}
 .axe-card p{font-size:.9rem;}
+/* voix incarnée du double registre — glose en clair d'un concept */
+.enclair{color:var(--ink);border-left:3px solid var(--gold);padding-left:.75rem;
+ margin:.55rem 0;}
 code{background:var(--beige);padding:.1rem .35rem;border-radius:var(--radius-sm);font-size:.86rem;}
 .note{font-size:.83rem;color:var(--faint);}
 

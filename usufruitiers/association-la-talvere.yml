@@ -10,6 +10,13 @@ localisation:
   region: "Occitanie"
 annee: 2019
 url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
+dossier:
+  echelle:
+    personnes: 10
+  pieces:
+    - type: bail
+      statut: non_public
+      note: "Bail emphytéotique engagé vers l'association ; non publié, signature non datée par les sources."
 resume: >
   Association loi 1901 née en 2019 pour acquérir et faire vivre une ancienne
   maison, une grange et quelques dépendances sur les causses du Quercy, à Bio

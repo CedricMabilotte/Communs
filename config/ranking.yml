@@ -5,11 +5,15 @@
 # rapproche d'une libération réelle des terres. Il décompose le montage en CINQ
 # axes indépendants, du sol vers les gens puis vers le temps :
 #
-#   1 — Le sol        soustraction durable au marché
+#   1 — Le sol        soustraction à l'exploitation abusive (marché + dégradation)
 #   2 — La structure  nature civile et non lucrative du montage
 #   3 — Le pouvoir    gouvernance citoyenne et collective de l'usage
-#   4 — La finalité   vocation d'intérêt général ouverte
-#   5 — L'usage       régime d'usage non marchand et sécurité dans le temps
+#   4 — La finalité   finalité ouverte — intérêt général et habitat du vivant
+#   5 — L'usage       usage non marchand, non abusif et hospitalier
+#
+# Refonte #3 (mai 2026) : l'axe 1 passe de « soustraction au marché » à
+# « soustraction à l'exploitation abusive » (abusus, deux faces) ; les axes 4 et
+# 5 accueillent l'habitat du vivant. Référence : conception-refonte-3.md.
 #
 # Chaque critère des grilles (grilles.yml) est rattaché à un axe et pondéré.
 # Pour une fiche : score_axe = Σ(poids × facteur) / Σ(poids) × 100, où le
@@ -38,16 +42,26 @@ valeurs:
 axes:
   - id: 1
     label: "Le sol"
-    court: "Soustraction au marché"
+    court: "Soustraction à l'exploitation abusive"
     couleur: "#bc5d3a"
     domicile: porteur
     question: >
-      Le foncier est-il durablement soustrait à la sphère marchande et
-      spéculative, et la sortie est-elle irréversible ?
+      Le foncier est-il soustrait à l'exploitation abusive — ni vendu ni
+      spéculé, ni épuisé ni dégradé — et cette sortie est-elle irréversible ?
     description: >
-      Mesure la soustraction effective au marché : inaliénabilité, parts ou
-      titres non cessibles, nature protectrice du porteur, clause de dévolution
-      désintéressée, origine non spéculative de l'acquisition.
+      Mesure la neutralisation de l'abusus dans ses deux faces. Face juridique :
+      la soustraction au marché — inaliénabilité, parts ou titres non cessibles,
+      nature protectrice du porteur, clause de dévolution désintéressée, origine
+      non spéculative de l'acquisition. Face matérielle (refonte #3) : la
+      non-dégradation du fonds — le sol et le milieu ne sont ni épuisés ni
+      consumés. Les critères de la face juridique se lisent chez le porteur ;
+      ceux de la face matérielle, sur le lieu lui-même.
+    en_clair: >
+      Une terre libérée est une terre qu'on ne peut plus ni vendre, ni abîmer.
+      Cet axe regarde les deux verrous : celui qui empêche de la remettre sur
+      le marché, et celui qui empêche d'en épuiser le sol. Le second est
+      l'apport de la refonte — un sol qu'on cultive doit pouvoir se transmettre
+      aussi vivant qu'on l'a reçu.
   - id: 2
     label: "La structure"
     court: "Nature civile et non lucrative"
@@ -61,7 +75,15 @@ axes:
       Mesure la nature juridique : forme non lucrative, non-lucrativité
       effective (capital non rémunéré), indépendance vis-à-vis d'une logique de
       rendement, gestion désintéressée. C'est l'axe qui démasque les « faux
-      amis ». Lu sur toute la chaîne : le maillon le plus faible commande.
+      amis ». La nature commerciale s'y lit aussi, concrètement, comme la
+      subordination d'un travail salarié à une autorité de marché (refonte #3 —
+      une lecture, sans critère neuf). Lu sur toute la chaîne : le maillon le
+      plus faible commande.
+    en_clair: >
+      Cet axe vérifie que le montage est vraiment de nature non lucrative, et
+      non une société qui se donne le vocabulaire du social. Là où un travail
+      est subordonné à une logique de rendement, c'est cette nature commerciale
+      qui parle.
   - id: 3
     label: "Le pouvoir"
     court: "Gouvernance citoyenne"
@@ -74,36 +96,60 @@ axes:
     description: >
       Mesure la gouvernance citoyenne : décision collective, principe « une
       personne = une voix », usager·es décideur·ses, ouverture aux nouveaux
-      entrants, transparence interne.
+      entrants, transparence interne. Un travail subordonné à une autorité
+      marchande — qui n'est pas une gouvernance d'usager·es — pèse ici aussi.
+    en_clair: >
+      Cet axe regarde qui décide de l'usage du lieu : celles et ceux qui
+      l'habitent et le font vivre, à égalité de voix — ou un conseil, un
+      employeur, un actionnariat.
   - id: 4
     label: "La finalité"
-    court: "Vocation d'intérêt général"
+    court: "Intérêt général et du vivant"
     couleur: "#4a7a3a"
     domicile: chaine_min
     question: >
-      Le projet porte-t-il une finalité d'intérêt général ouverte — un
-      bénéficiaire au-delà du cercle des membres — affirmée indépendamment de
-      toute reconnaissance d'État ?
+      Le projet porte-t-il une finalité ouverte — un bénéficiaire au-delà du
+      cercle des membres, et au-delà du seul cercle des humains — affirmée
+      indépendamment de toute reconnaissance d'État ?
     description: >
       Mesure la vocation d'intérêt général d'initiative citoyenne : objet
       d'intérêt général, public non restreint, ancrage territorial et
       ouverture, redevabilité publique. La reconnaissance d'État est un simple
-      tag informatif, jamais un bonus. Lu sur toute la chaîne.
+      tag informatif, jamais un bonus. La refonte #3 élargit le cercle des
+      bénéficiaires : faire du lieu un habitat pour le vivant non-humain —
+      cohabitant, et non décor — est une finalité à part entière. Lu sur toute
+      la chaîne.
+    en_clair: >
+      Cet axe demande pour qui le lieu existe : pour ses seuls membres, ou
+      au-delà — un voisinage, un territoire ? Et, depuis la refonte, pas
+      seulement pour les humains : un lieu qui fait place aux vivants qui
+      l'habitent porte, lui aussi, une finalité ouverte.
   - id: 5
     label: "L'usage"
-    court: "Régime non marchand et sécurité"
+    court: "Usage non marchand et hospitalier"
     couleur: "#b0822f"
     domicile: convention
     question: >
       L'usage repose-t-il sur la gratuité, le don ou le troc — ou un loyer
-      modéré intégralement réinvesti — plutôt que sur une rentabilité ? Et le
-      collectif usager peut-il maîtriser le lieu durablement ?
+      modéré intégralement réinvesti — plutôt que sur une rentabilité ?
+      N'épuise-t-il pas le lieu, et fait-il une place au vivant à son échelle ?
+      Et le collectif usager peut-il maîtriser le lieu durablement ?
     description: >
-      Mesure le régime d'usage et sa sécurité dans le temps : usage non
-      marchand (gratuité, don, troc) ou loyer soutenable et réinvesti,
-      durée et renouvellement de l'usage, sécurité de jouissance, articulation
-      loyale avec le porteur. C'est l'axe relationnel : il se joue dans la
-      convention qui lie porteur et usufruitier.
+      Mesure le régime d'usage et sa sécurité dans le temps. Non marchand :
+      gratuité, don, troc, ou loyer soutenable et réinvesti. Non abusif
+      (refonte #3) : l'usage ne dégrade pas le lieu — il prélève sans épuiser.
+      Hospitalier (refonte #3) : le lieu fait une place au vivant non-humain à
+      son échelle, qu'il soit rural ou urbain — une haie, une mare, une cour
+      comptent. Et sûr : durée et renouvellement de l'usage, sécurité de
+      jouissance, articulation loyale avec le porteur. C'est l'axe relationnel,
+      et le plus dense : il se joue dans la convention qui lie porteur et
+      usufruitier ; ses faces « non abusif » et « hospitalier » se lisent aussi
+      sur le lieu.
+    en_clair: >
+      Cet axe regarde comment le lieu est habité au jour le jour : si l'on y
+      paie un loyer de marché ou si l'usage y est libre et soutenable, si l'on
+      en prend soin sans l'épuiser, si l'on y laisse vivre autre chose que des
+      humains — et si le collectif peut compter y rester.
 
 # ── Composition de l'Indice de libération ───────────────────────────────────
 indice:
@@ -144,7 +190,11 @@ indice:
 chaine:
   domiciliage:
     - axe: 1
-      regle: "Lu chez le PORTEUR — seul détenteur de la nue-propriété."
+      regle: "Face juridique (soustraction au marché) lue chez le PORTEUR —
+              seul détenteur de la nue-propriété. Face matérielle
+              (non-dégradation du fonds, refonte #3) lue sur le LIEU —
+              réalisée par le critère `milieu_protege` logé dans la grille du
+              lieu."
     - axe: 2
       regle: "Lu sur TOUTE la chaîne — maillon le plus faible : un seul lien
               commercial contamine l'axe."
@@ -153,8 +203,11 @@ chaine:
     - axe: 4
       regle: "Lu sur TOUTE la chaîne — maillon le plus faible."
     - axe: 5
-      regle: "Lu dans la CONVENTION porteur/usufruitier — bail, loyer,
-              sécurité de jouissance."
+      regle: "Régime marchand et sécurité lus dans la CONVENTION porteur/
+              usufruitier — bail, loyer, sécurité de jouissance. Le caractère
+              non abusif et hospitalier de l'usage (refonte #3) se lit sur le
+              LIEU — critères `usage_non_degradant` et `place_au_vivant` logés
+              dans la grille du lieu."
   coherence: >
     Une chaîne est saine tant qu'aucun maillon ne bascule dans le régime
     commercial, idéalement avec une entité du pôle « commun citoyen » à
@@ -261,8 +314,8 @@ integrite_montage:
     seulement le pôle dominant du montage (voir la page « Cinq pôles »).
   niveaux:
     - id: commun_citoyen
-      label: "Commun citoyen"
-      sens: "Chaîne entièrement en droit civil non lucratif, gouvernance citoyenne autogérée."
+      label: "Commun libre et vivant"
+      sens: "Chaîne entièrement en droit civil non lucratif, gouvernance citoyenne autogérée ; le lieu est soustrait à l'exploitation abusive et ouvert au vivant."
     - id: ig_institue
       label: "Intérêt général institué"
       sens: "Droit civil non lucratif, mais gouvernance descendante (conseil, tutelle, donateurs)."

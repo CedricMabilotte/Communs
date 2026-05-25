@@ -7,6 +7,11 @@
 # général ou d'utilité publique, et l'USUFRUIT / l'usage confié à une personne
 # morale de droit civil (association loi 1901, société civile, coopérative).
 # Interface publique : français.
+#
+# Refonte #3 (mai 2026) : le cadre est ré-adossé au triptyque usus/fructus/
+# abusus ; « libérer » est élargi — soustraire à l'exploitation abusive ET
+# préserver le lieu comme habitat pour le vivant. Référence : conception-
+# refonte-3.md.
 # ─────────────────────────────────────────────────────────────────────────────
 project:
   name: "terres-liberees"
@@ -32,13 +37,26 @@ project:
 # ─────────────────────────────────────────────────────────────────────────────
 concept_central:
   terme: "libération des terres"
+  formule: >
+    Une terre est libérée lorsqu'elle est soustraite à l'exploitation abusive
+    et préservée comme habitat pour le vivant — humain et non-humain.
   definition: >
     Ensemble de pratiques visant à soustraire durablement un foncier — agricole
-    le plus souvent, mais aussi bâti, naturel ou d'habitat — à la logique
-    spéculative et marchande, pour le placer au service d'un usage défini
-    collectivement et d'intérêt général. Le terme n'est pas un concept juridique
-    codifié : il appartient au vocabulaire des mouvements de l'agriculture
-    paysanne, des communs et de l'éducation populaire.
+    le plus souvent, mais aussi bâti, naturel ou d'habitat — à l'exploitation
+    abusive : ni vendu ni spéculé (sortie du marché), ni épuisé ni dégradé
+    (préservation du fonds) ; et à le placer au service d'un usage défini
+    collectivement, d'intérêt général, partagé avec le vivant non-humain. Le
+    terme n'est pas un concept juridique codifié : il appartient au vocabulaire
+    des mouvements de l'agriculture paysanne, des communs et de l'éducation
+    populaire. La refonte #3 en élargit le sens — « libérer » ne se borne plus
+    à « soustraire au marché », qui n'est qu'une forme d'exploitation abusive
+    parmi d'autres ; un collectif hors-marché peut, lui aussi, épuiser son sol.
+  en_clair: >
+    Posséder une terre, aujourd'hui, c'est pouvoir la vendre, en tirer le
+    maximum, et l'épuiser si cela rapporte. La libérer, c'est lui retirer ce
+    sort : faire qu'on ne puisse plus ni la vendre, ni la surexploiter, ni la
+    vider de sa vie — et qu'elle reste un lieu habité, partagé entre les humains
+    et le reste du vivant.
   ressort_juridique: >
     La distinction entre la PROPRIÉTÉ (qui reste au collectif non lucratif) et
     l'USAGE (confié à des usagers). Le démembrement du droit de propriété
@@ -55,6 +73,83 @@ concept_central:
     mais droit au renouvellement d'ordre public), ni aux baux emphytéotiques
     (jusqu'à 99 ans), ni à la propriété publique. La fragilité des 30 ans est
     donc propre aux montages réellement démembrés, et non commune à tout montage.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Le triptyque usus / fructus / abusus — ossature conceptuelle (refonte #3)
+# ─────────────────────────────────────────────────────────────────────────────
+# Le droit civil reconnaît trois droits sur une chose. Le commun n'invente pas un
+# quatrième droit : il ré-agence collectivement les trois. Le triptyque est la
+# colonne vertébrale du modèle — les cinq pôles s'y profilent, les cinq axes de
+# l'Indice s'y projettent (axe 1 → abusus ; axe 2 → fructus + abusus ; axe 3 →
+# usus ; axe 4 → usus ; axe 5 → les trois).
+triptyque:
+  chapeau: >
+    Posséder une chose, en droit, c'est tenir trois droits distincts : l'usus,
+    le fructus, l'abusus. La libération des terres se lit tout entière comme un
+    ré-agencement collectif de ces trois droits — fructus socialisé ou supprimé,
+    abusus neutralisé, usus partagé.
+  en_clair: >
+    Posséder, en droit, ce n'est pas une seule chose mais trois pouvoirs : se
+    servir du bien, en tirer un revenu, et en disposer — jusqu'à le détruire.
+    Libérer une terre, c'est remettre ces trois pouvoirs en des mains
+    collectives, et désarmer le plus dangereux.
+  droits:
+    - id: usus
+      label: "L'usus — le droit d'utiliser"
+      definition: >
+        Le droit de se servir de la chose : l'habiter, la cultiver, s'y réunir,
+        y travailler. Le commun le confie à un collectif d'usager·es qui le
+        gouverne ; et — c'est un apport de la refonte #3 — il cesse d'en faire
+        un monopole humain : le vivant non-humain est reconnu cohabitant du
+        lieu, dont l'usage est pris en compte.
+      en_clair: >
+        L'usus, c'est le droit de se servir du lieu : l'habiter, le cultiver,
+        s'y réunir. Dans un commun, ce droit appartient à celles et ceux qui
+        vivent le lieu — et pas seulement à eux : les oiseaux, les insectes, les
+        arbres, le sol lui-même y ont aussi leur place. On n'y est pas seuls.
+      portee_modele: "Sa gouvernance se note à l'axe 3 ; son ouverture au vivant, à l'axe 4."
+    - id: fructus
+      label: "Le fructus — le droit aux fruits"
+      definition: >
+        Le droit de percevoir les fruits et les revenus de la chose. Le commun
+        le supprime (gratuité, don, troc) ou le redirige intégralement vers la
+        mission ; il interdit son accumulation privée. C'est le droit que police
+        l'échelle de marchandisation.
+      en_clair: >
+        Le fructus, c'est ce que la terre rapporte — une récolte, un loyer, une
+        valeur. La question n'est pas qu'elle rapporte, mais où cela va : dans
+        la poche de quelqu'un, ou de retour au lieu et à celles et ceux qui en
+        vivent. Dans un commun, les fruits ne s'accumulent pas — ils reviennent.
+      portee_modele: "Se note aux axes 2 et 5."
+    - id: abusus
+      label: "L'abusus — le droit d'en disposer"
+      definition: >
+        Le droit de disposer de la chose : la vendre, la transformer, la
+        consumer, la détruire. C'est le droit le plus lourd de conséquences. Il
+        a deux faces. Une face juridique — aliéner, spéculer — que le projet
+        neutralise déjà par l'inaliénabilité. Une face matérielle — épuiser,
+        dégrader le fonds — que la refonte #3 neutralise à son tour.
+        « Soustraire à l'exploitation abusive », c'est désarmer l'abusus dans
+        ses deux faces.
+      en_clair: >
+        L'abusus, c'est le droit d'en faire ce qu'on veut, jusqu'à l'abîmer : la
+        vendre, la bétonner, l'épuiser. C'est le pouvoir le plus dangereux. Une
+        terre libérée est une terre sur laquelle ce pouvoir a été désarmé — on
+        ne peut plus ni la vendre, ni la vider de sa vie. Le sol qu'on cultive,
+        on doit pouvoir le transmettre aussi vivant qu'on l'a reçu.
+      portee_modele: "Se note à l'axe 1 (les deux faces) et à l'axe 5."
+  verification: >
+    Chacun des trois droits se lit deux fois : par la POSTURE (ce que l'entité
+    déclare de son orientation) et par la NATURE (ce que ses statuts établissent
+    — verrou d'actif, réserves impartageables, forme juridique). La nature
+    vérifie la posture ; l'écart entre une posture haute et une nature effondrée
+    démasque le « communs-washing ».
+  garde_fou: >
+    usus/fructus/abusus est un vocabulaire de la propriété. L'élan le plus
+    profond de la préservation du vivant conteste, lui, que la terre soit une
+    propriété. Le triptyque reste le bon outil — le projet travaille de
+    l'intérieur du droit, qu'il dissocie et ré-attache sans l'abolir — mais
+    cette tension est réelle et tenue vive, non résolue.
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Les 3 catégories référencées
@@ -109,31 +204,116 @@ categories:
       - pédagogie / accueil / éducation populaire
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Modalités de montage observées (typologie)
+# Typologie de montage — les silhouettes (refonte #3, chantier 5)
 # ─────────────────────────────────────────────────────────────────────────────
+# Typologie DESCRIPTIVE, distincte de la typologie normative des pôles : elle dit
+# la forme juridique du montage, jamais le pôle. Une même silhouette peut servir
+# un commun libre comme un intérêt général institué. Première couche du modèle à
+# deux couches ; la seconde est l'articulation structurée (voir `titres` et le
+# bloc `montage:` des fiches de lieu).
 montages:
   - id: "demembrement"
     label: "Démembrement nue-propriété / usufruit"
-    description: >
-      Séparation stricte au sens du Code civil : un organisme reçoit la
-      nue-propriété, un autre l'usufruit. Modèle de référence de l'annuaire.
+    definition: >
+      Séparation au sens strict du Code civil : un organisme reçoit la
+      nue-propriété, un autre l'usufruit (articles 578 et suivants). Le porteur
+      détient le sol sans en avoir l'usage ; l'usufruitier en a l'usage sans en
+      être propriétaire. L'usufruit constitué au profit d'une personne morale
+      est plafonné à 30 ans (article 619).
+    en_clair: >
+      La terre et son usage sont confiés à deux mains différentes : l'une garde
+      le sol pour qu'il ne reparte jamais au marché, l'autre le fait vivre.
+      Personne ne tient les deux à la fois — et c'est ce partage qui protège
+      le lieu.
+    outils: "Démembrement de propriété (art. 544 et 578 C. civ.), acte notarié constitutif d'usufruit."
+    titres_frequents: [usufruit]
   - id: "propriete_sanctuarisee"
     label: "Propriété sanctuarisée + bail de long terme"
-    description: >
-      L'organisme non lucratif reste pleinement propriétaire ; l'usage est
-      confié par bail rural (souvent environnemental), bail emphytéotique ou
-      convention. Modalité dominante (Terre de Liens, Lurzaindia).
+    definition: >
+      L'organisme non lucratif reste pleinement propriétaire du foncier, qu'il
+      sanctuarise par ses statuts ; l'usage est confié par un bail de longue
+      durée — bail rural, souvent environnemental, ou bail emphytéotique — ou
+      par convention. Modalité dominante de l'annuaire.
+    en_clair: >
+      Une structure non lucrative achète la terre et s'engage à ne jamais la
+      revendre ; elle en remet l'usage, pour longtemps, à celles et ceux qui la
+      font vivre. La propriété ne bouge plus ; seul l'usage circule.
+    outils: "Pleine propriété + clause statutaire de sanctuarisation ; bail rural (≥ 9 ans), bail rural environnemental, bail emphytéotique (jusqu'à 99 ans), convention."
+    titres_frequents: [bail_rural, bail_emphyteotique, bail_reel_solidaire, convention]
   - id: "propriete_publique"
     label: "Propriété publique inaliénable"
-    description: >
+    definition: >
       Le foncier appartient à une personne publique et entre dans un domaine
-      inaliénable ; la gestion est déléguée (Conservatoire du littoral, Larzac).
+      inaliénable ; la gestion ou l'usage est délégué à un tiers par convention
+      domaniale, autorisation d'occupation ou délégation.
+    en_clair: >
+      La terre est dans le domaine public — par construction, on ne peut pas la
+      vendre. Une collectivité la garde ; elle en confie l'usage à un collectif
+      qui l'anime.
+    outils: "Domanialité publique, convention d'occupation domaniale, autorisation d'occupation temporaire, délégation de gestion."
+    titres_frequents: [domanialite, convention]
   - id: "propriete_collective"
     label: "Propriété collective verrouillée"
-    description: >
-      Le foncier est porté par une structure collective (société civile,
-      coopérative, GFA) dont les statuts verrouillent la revente et la
-      lucrativité.
+    definition: >
+      Le foncier est porté par une structure collective — société civile,
+      coopérative, groupement foncier agricole — dont les statuts verrouillent
+      la revente et la lucrativité. Souvent une chaîne intégrée : le collectif
+      qui détient est aussi celui qui use.
+    en_clair: >
+      Celles et ceux qui vivent le lieu en sont aussi, ensemble, les
+      propriétaires — à travers une structure dont les règles interdisent de
+      revendre pour un gain privé. Pas de propriétaire au-dessus d'eux : le
+      collectif se tient lui-même.
+    outils: "Société civile, coopérative (SCIC), groupement foncier agricole ; statuts à verrou d'actif et clause anti-spéculative."
+    titres_frequents: [integre, convention]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Vocabulaire des titres d'articulation (refonte #3, chantier 5)
+# ─────────────────────────────────────────────────────────────────────────────
+# Seconde couche du modèle : l'ACTE qui relie le porteur à un usufruitier dans
+# la chaîne d'un lieu. Énuméré, extensible. Une fiche de lieu déclare ses
+# articulations dans son bloc `montage.articulations:`.
+titres:
+  - id: usufruit
+    label: "Usufruit"
+    definition: >
+      Droit réel d'usage et de jouissance constitué par démembrement ; plafonné
+      à 30 ans pour une personne morale (art. 619 C. civ.).
+  - id: bail_rural
+    label: "Bail rural"
+    definition: >
+      Bail d'au moins 9 ans, avec droit au renouvellement d'ordre public ; le
+      bail rural environnemental y inscrit des clauses écologiques.
+  - id: bail_emphyteotique
+    label: "Bail emphytéotique"
+    definition: >
+      Bail de très longue durée — 18 à 99 ans — conférant un droit réel à
+      l'usufruitier.
+  - id: bail_reel_solidaire
+    label: "Bail réel solidaire (BRS)"
+    definition: >
+      Bail de longue durée consenti par un organisme de foncier solidaire,
+      dissociant durablement le bâti du foncier.
+  - id: convention
+    label: "Convention d'usage"
+    definition: >
+      Convention de mise à disposition ou d'occupation ; sa solidité dépend de
+      sa durée et de ses clauses de renouvellement.
+  - id: commodat
+    label: "Commodat (prêt à usage)"
+    definition: >
+      Prêt à usage à titre gratuit (art. 1875 C. civ.) ; gratuit, mais précaire
+      — le prêteur peut reprendre le bien.
+  - id: domanialite
+    label: "Occupation domaniale"
+    definition: >
+      Titre d'occupation du domaine public — convention domaniale ou
+      autorisation d'occupation.
+  - id: integre
+    label: "Chaîne intégrée"
+    definition: >
+      Le porteur et l'usufruitier sont une seule entité : la propriété et
+      l'usage ne sont pas dissociés (coopérative d'habitants propriétaire).
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Modèles voisins de référence (comparaison — hors des 3 catégories)
@@ -190,69 +370,100 @@ regimes:
     en fait.
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Les cinq pôles — profils de référence du cadre d'évaluation
+# Les cinq pôles — profils de référence sur le triptyque
 # ─────────────────────────────────────────────────────────────────────────────
-# Les trois régimes du sol se précisent en cinq pôles, engendrés par un principe
-# unique : le resserrement progressif de la DÉCISION (qui décide de l'usage du
-# sol) et du BÉNÉFICE (à qui cet usage profite). Les pôles ne sont pas des
-# cases : ce sont des profils de référence sur les cinq axes de l'Indice. Une
-# entité réelle, presque toujours hybride, reçoit un profil — non une étiquette.
+# Les trois régimes du sol se précisent en cinq pôles : cinq PROFILS DE RÉFÉRENCE
+# sur le triptyque usus/fructus/abusus. Les pôles ne sont pas des cases — une
+# entité réelle, presque toujours hybride, reçoit un profil, et l'écart entre ce
+# profil et le pôle le plus proche est lui-même une information. Le pôle de tête,
+# refondé par la refonte #3, n'est plus un commun purement humain : c'est le
+# commun LIBRE ET VIVANT. (Son id reste `commun_citoyen` — identifiant historique
+# conservé, leçon L2 : seul le label évolue, aucune fiche à migrer.)
 poles:
   chapeau: >
-    Du commun citoyen, repère du cadre, à la propriété marchande qu'il affronte,
-    cinq pôles jalonnent le resserrement de la décision et du bénéfice. Le repère
+    Du commun libre et vivant — repère du cadre — à la propriété marchande
+    qu'il affronte, cinq pôles jalonnent le ré-agencement du triptyque. Le repère
     n'est pas l'intérêt général d'État mais la gouvernance citoyenne collective
-    de droit civil : une troisième voie, ni étatique ni marchande.
+    de droit civil, ouverte au vivant : une troisième voie, ni étatique ni
+    marchande.
+  en_clair: >
+    Entre le commun le plus abouti et la pure propriété de marché, on peut
+    repérer cinq grandes figures. Aucun lieu réel ne s'y range proprement :
+    chacun tient un peu de plusieurs. Ces cinq repères servent à dire de quel
+    côté un montage penche — pas à le ranger dans une case.
   liste:
     - id: commun_citoyen
       rang: 1
-      label: "Le commun citoyen"
+      label: "Le commun libre et vivant"
       regime: civil_commun
       role: "Pôle de référence."
-      decision: "Le collectif citoyen usager, autogéré."
-      beneficiaire: "Ouvert, au-delà des membres — intérêt général d'initiative citoyenne."
-      logique: "Le commun — troisième voie, ni État ni commerce."
+      usus: >
+        Partagé : gouverné par le collectif citoyen usager, autogéré et
+        horizontal, et ouvert au vivant non-humain reconnu cohabitant du lieu.
+      fructus: "Supprimé — gratuité, don, troc — ou intégralement réinvesti dans la mission."
+      abusus: "Neutralisé dans ses deux faces : le lieu ne peut être ni vendu, ni épuisé."
+      logique: "Le commun — troisième voie, ni État ni commerce, ni purement humaine."
+      en_clair: >
+        Le cas le plus abouti : un lieu gouverné par celles et ceux qui
+        l'habitent, que personne ne peut vendre ni épuiser, dont les fruits
+        reviennent au lieu, et qui fait place au vivant autant qu'aux humains.
+        C'est le repère — pas une moyenne, un horizon.
     - id: ig_institue
       rang: 2
       label: "L'intérêt général institué"
       regime: civil_commun
       role: "Allié du pôle de référence — même régime, gouvernance descendante."
-      decision: "Une instance mandatée (conseil, donateurs, tutelle)."
-      beneficiaire: "Un intérêt général défini institutionnellement, ouvert mais octroyé."
+      usus: >
+        Gouverné par une instance mandatée — conseil, tutelle, donateurs — non
+        par les usager·es eux-mêmes ; cercle de souci resté humain.
+      fructus: "Non lucratif : pas d'appropriation des fruits."
+      abusus: "Neutralisé dans sa face juridique (inaliénabilité) ; face matérielle variable, non garantie."
       logique: "L'intérêt général administré."
+      en_clair: >
+        Un lieu non lucratif et protégé, mais décidé d'en haut — par un conseil,
+        des donateurs, une tutelle — plutôt que par ses usager·es.
     - id: mutualisme
       rang: 3
       label: "Le mutualisme d'usagers"
       regime: commercial
       role: "Pôle des « faux amis » — lexique social, bénéfice fermé."
-      decision: "Les sociétaires."
-      beneficiaire: "Les membres — cercle fermé."
+      usus: "Gouverné par les sociétaires — cercle fermé."
+      fructus: "Lucrativité plafonnée mais réelle : les fruits servent le sociétariat."
+      abusus: "Partiellement actif : parts cessibles, le foncier reste mobilisable."
       logique: "L'entraide entre membres ; SCIC, coopérative, SCOP."
+      en_clair: >
+        Le piège des mots : on y parle d'entraide et d'utilité sociale, mais
+        c'est une société, ses fruits vont à ses membres, et le foncier reste
+        mobilisable.
     - id: economie_marchande
       rang: 4
       label: "L'économie sociale marchande"
       regime: commercial
       role: "Posture sociale, structure de rentabilité."
-      decision: "Dirigeants et investisseurs « patients »."
-      beneficiaire: "La mission affichée et un rendement servi au capital."
+      usus: "Décidé par les dirigeants et les investisseurs « patients »."
+      fructus: "Un rendement est servi au capital."
+      abusus: "Actif : le foncier est un actif que l'on valorise."
       logique: "Rentabilité tempérée par une posture sociale."
+      en_clair: >
+        Une posture sociale sincère, mais une structure faite pour rapporter :
+        un rendement, même modéré, est servi au capital.
     - id: propriete_marchande
       rang: 5
       label: "La propriété marchande"
       regime: propriete_privee
-      role: "Pôle repoussoir — c'est lui que le commun citoyen affronte."
-      decision: "Le propriétaire."
-      beneficiaire: "Lui-même — plus-value, spéculation."
+      role: "Pôle repoussoir — c'est lui que le commun libre affronte."
+      usus: "Le propriétaire seul."
+      fructus: "Plus-value, spéculation."
+      abusus: "Plein et entier — vendre, transformer, épuiser sans frein."
       logique: "Le marché."
+      en_clair: >
+        La terre comme placement : on l'achète, on la revend, on en tire le
+        maximum. C'est ce que le commun cherche à défaire.
   registres:
     chapeau: >
-      Une entité se lit à travers trois registres. La nature (faits statutaires)
-      sert à vérifier la posture (orientation déclarée) ; le modèle économique
-      dit le régime d'usage. L'écart entre une posture haute et une nature
-      effondrée révèle le « communs-washing ».
-    nature: "Faits statutaires : droit civil ou commercial, verrou d'actif, réserves impartageables, gouvernance."
-    posture: "Orientation déclarée vers le bien commun ; ouverture du bénéficiaire."
-    modele_economique: "Régime d'usage : gratuité, don, troc ↔ loyer modéré réinvesti ↔ loyer de marché."
+      Chaque pôle se profile sur les trois droits du triptyque — usus, fructus,
+      abusus (voir la section « Le triptyque »). Les profils ci-dessus disent,
+      droit par droit, ce qui caractérise chaque pôle.
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Anti-concepts — ce que l'annuaire ne référence PAS
@@ -269,7 +480,28 @@ anti_concepts:
 # Ligne éditoriale
 # ─────────────────────────────────────────────────────────────────────────────
 editorial:
-  voice: "factuel, rigoureux, sobre — registre documentaire et juridique"
+  registres_d_ecriture:
+    chapeau: >
+      Le site s'écrit à deux voix, appariées partout (voir conception-refonte-3.md
+      §7). Tout concept porte sa définition exacte et son champ `en_clair:`.
+    voix_exacte: >
+      Le mot juste — usus/fructus/abusus, les axes, les pôles, les critères.
+      Elle fait l'autorité de l'annuaire ; elle tient la méthodologie, les
+      définitions et les concepts.
+    voix_incarnee: >
+      La même chose, dite par ce qu'elle change dans une vie : le sol qu'on
+      transmet, le loyer qui revient, les oiseaux qu'on entend, la sécurité de
+      rester. Elle domine le front du site ; elle est portée par les champs
+      `en_clair:`.
+    regle_d_or: >
+      La voix incarnée ajoute de la chaleur et du concret ; elle ne remplace
+      jamais la rigueur et ne moralise jamais. On décrit une vie meilleure, on
+      n'exhorte pas. Si elle fragilise la crédibilité de l'annuaire, elle a
+      échoué.
+  voice: >
+    factuel, rigoureux, sobre pour la voix exacte ; concret, calme et sensible
+    pour la voix incarnée — registre documentaire et juridique d'un côté, récit
+    de la vie quotidienne d'un lieu de l'autre.
   audience: >
     Porteur·ses de projet foncier, juristes, collectivités, donateur·rices,
     chercheur·ses et militant·es de l'accès à la terre qui cherchent un
@@ -279,3 +511,4 @@ editorial:
     - "Ne jamais inventer un montage, un chiffre ou un article de loi."
     - "Le ranking est une grille d'analyse explicite, pas un jugement de valeur."
     - "Citer les sources ; respecter le droit d'auteur (reformuler)."
+    - "Écrire à deux voix : tout concept porte sa définition exacte et son `en_clair:`."
