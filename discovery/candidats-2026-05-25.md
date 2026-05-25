@@ -1,4 +1,4 @@
-# Veille — candidats du 2026-05-24
+# Veille — candidats du 2026-05-25
 
 26 candidat·s repéré·s sur 15 sources (25 hors fiches existantes, 15 sur un angle mort ; 0 écarté·s via discovery/ignore.txt). Score pondéré ; à examiner et promouvoir manuellement.
 

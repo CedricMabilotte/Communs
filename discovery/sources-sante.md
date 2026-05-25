@@ -1,4 +1,4 @@
-# Santé des sources — 2026-05-24
+# Santé des sources — 2026-05-25
 
 Par source : état du dernier scan et nombre de liens retenus pour approfondissement.
 
@@ -16,4 +16,4 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - labo-ess — ok — 8 lien·s pré-retenu·s
 - reseau-ecolieux — échec ⚠ — 0 lien·s pré-retenu·s
 - fonciere-chenelet — ok — 0 lien·s pré-retenu·s
-- terres-de-sources — échec ⚠ — 0 lien·s pré-retenu·s
+- terres-de-sources — ok — 4 lien·s pré-retenu·s
