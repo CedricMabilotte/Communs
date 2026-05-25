@@ -4,6 +4,7 @@ nom: "Lurzaindia (SCA)"
 sous_titre: "Foncière citoyenne du Pays Basque portant les terres agricoles"
 statut_fiche: publie
 forme_juridique: "Société en commandite par actions (SCA)"
+nature_interet: commerciale_encadree
 localisation: null
 annee: 2013
 url: "https://lurzaindia.eu/"
@@ -16,7 +17,7 @@ resume: >
   détient environ 486 hectares répartis sur de nombreuses fermes, où environ
   41 exploitant·es sont installé·es selon son bilan public.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     Lurzaindia, foncière citoyenne, achète les terres grâce à l'épargne
     populaire et en conserve la propriété sur le long terme. L'usage est confié
@@ -81,6 +82,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "Lurzaindia communique sur son activité auprès de ses actionnaires, mais ne relève pas d'un contrôle public comparable à celui d'une fondation reconnue d'utilité publique."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La finalité est l'achat et le portage de terres agricoles pour l'installation paysanne ; aucune finalité de préservation de la biodiversité n'est affichée par les sources."
 analyse:
   forces:
     - "Foncière citoyenne ancrée régionalement, forte mobilisation d'épargne populaire."
@@ -108,6 +112,27 @@ fiabilite: >
   évoluent au fil de ses campagnes de financement. Non confirmé : clauses
   statutaires d'inaliénabilité, composition de la gouvernance, clause de
   dévolution.
+dossier:
+  identite:
+    siren: "318723483"
+    adresse: "Maison Zuentzat, 64220 Ainhice-Mongelos"
+  echelle:
+    personnes: "Environ 41 agriculteur·rices installé·es ; environ 3 775 actionnaires solidaires."
+    surface: "Environ 486 hectares répartis sur de nombreuses fermes."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+      note: "Lurzaindia publie un bilan de son activité ; l'accès en ligne d'états financiers détaillés n'est pas confirmé."
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Lurzaindia — site officiel"
     url: "https://lurzaindia.eu/"

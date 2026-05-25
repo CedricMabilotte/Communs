@@ -4,6 +4,7 @@ nom: "GAEC Les P'tites Berouettes"
 sous_titre: "Groupement agricole maraîcher exploitant la ferme Les Petites Berouettes en Ille-et-Vilaine"
 statut_fiche: publie
 forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+nature_interet: commerciale
 localisation:
   commune: "Luitré-Dompierre"
   departement: "Ille-et-Vilaine (35)"
@@ -21,7 +22,7 @@ resume: >
   foncier a été acquis en 2022 par la Foncière Terre de Liens. L'exploitation
   associe aux légumes une production complémentaire d'œufs et d'agneau.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
   usufruitier: "GAEC Les P'tites Berouettes (groupement agricole d'exploitation en commun)"
   description: >
@@ -89,6 +90,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant du fermage versé par le GAEC à la Foncière n'est pas documenté par les sources consultées."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le maraîchage diversifié est conduit en agriculture biologique, pratique écologique revendiquée, sans que la préservation de la biodiversité non-humaine figure parmi les finalités affichées du GAEC."
 analyse:
   forces:
     - "Foncier sanctuarisé hors marché par la Foncière Terre de Liens depuis 2022."
@@ -117,6 +121,30 @@ fiabilite: >
   par la Foncière Terre de Liens. Non confirmé : montant du fermage, nature
   exacte du bail, clause de dévolution, transparence comptable.
 voir_aussi: [fonciere-terre-de-liens]
+dossier:
+  identite:
+    siren: "909517377"
+    adresse: "665 Le Bas Rocher, 35133 Luitré-Dompierre"
+  echelle:
+    personnes: "2 associé·es exploitant·es (David Lécrivain et Jonas Cadieu)"
+    surface: "Environ 3 hectares de plein champ et 1 200 m² de serres"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts du GAEC non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+      note: "Tout fermier Terre de Liens adhère à la charte du mouvement, non jointe à la fiche."
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail rural liant le GAEC à la Foncière Terre de Liens, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail rural ; nature exacte et montant du fermage non documentés."
 sources:
   - titre: "Les Petites Berouettes — Fermes Terre de Liens"
     url: "https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-petites-berouettes/"

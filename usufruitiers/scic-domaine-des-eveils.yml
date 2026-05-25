@@ -4,6 +4,7 @@ nom: "SCIC Le Domaine des Éveils"
 sous_titre: "Coopérative d'intérêt collectif exploitant le Domaine des Éveils, en Bresse bourguignonne"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'intérêt collectif (SCIC) sous forme de SAS"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Bruailles"
   departement: "Saône-et-Loire (71)"
@@ -87,6 +88,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "L'existence et le montant d'un loyer ou d'une redevance versés par la SCIC à la SAS Le Temps des Possibles ne sont pas documentés par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La SCIC exploite un domaine d'accueil — gîte, retraites, formations, habitat groupé — pensé pour ses usager·es humain·es ; la préservation de la biodiversité non-humaine n'est pas affichée parmi ses finalités."
 analyse:
   forces:
     - "Gouvernance coopérative « une personne, une voix » réunissant habitant·es et salarié·es."
@@ -116,6 +120,30 @@ fiabilite: >
   création de la SCIC, statuts, clause de dévolution, nature et durée du titre
   d'usage liant la SCIC à la SAS, montant d'un loyer, transparence comptable.
 voir_aussi: [le-temps-des-possibles]
+dossier:
+  identite:
+    siren: "911252914"
+    adresse: "30 Rue de Chardenoux, 71500 Bruailles"
+  echelle:
+    personnes: "Noyau de 7 habitant·es et salarié·es"
+    lieux: "1 domaine (gîte de 100 places)"
+    surface: "16 hectares de prairies, forêts et jardins"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de la SCIC non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Titre d'usage liant la SCIC à la SAS Le Temps des Possibles propriétaire ; nature et durée non documentées."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Existence et montant d'un loyer ou d'une redevance versés à la SAS non documentés."
 sources:
   - titre: "Coopérative Oasis — Domaine des Éveils"
     url: "https://cooperative-oasis.org/oasis/domaine-des-eveils/"

@@ -8,6 +8,7 @@ localisation:
   commune: "Campbon"
   departement: "Loire-Atlantique (44)"
   region: "Pays de la Loire"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.9676,47.4123&z=16"
 annee: 2013
 url: "https://fermes.terredeliens.org/pays-de-la-loire/fermes-de-la-r%C3%A9gion-pays-de-la-loire/riglanne/"
 resume: >
@@ -22,9 +23,11 @@ resume: >
   ce collectif, qui la diversifie — élevage bovin laitier et caprin — et la
   transforme en fromages, beurre, crème et yaourts vendus en circuits courts.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "GAEC de Riglanne (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-de-riglanne
+      titre: bail_rural
+      note: "Nature exacte du bail non pleinement documentée ; ne porte que sur la part du foncier acquise par la Foncière (la moitié des terres exploitées)."
   description: >
     Une partie du foncier de la ferme de Riglanne — la moitié des terres
     exploitées — est portée durablement par la Foncière Terre de Liens, qui l'a
@@ -87,6 +90,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage des terres de la Foncière est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Les terres portées par la Foncière Terre de Liens font souvent l'objet de baux ruraux à clauses environnementales, mais la nature exacte du bail de Riglanne n'est pas documentée : aucun dispositif opposable n'est confirmé."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La conduite en agriculture biologique ménage le milieu, mais la préservation de la biodiversité non-humaine n'est pas affichée comme une finalité propre du lieu dans les sources."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Élevage laitier et caprin conduit en agriculture biologique depuis 2002, prairies majoritaires : des pratiques de maintien attestées, sans logique extractive."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "La ferme est majoritairement en prairies, mais aucun aménagement explicite en faveur du vivant (haies, mares, continuités écologiques) n'est documenté par les sources."
 analyse:
   forces:
     - "Transmission de ferme réussie : reprise collective par trois paysannes en 2025."

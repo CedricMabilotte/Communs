@@ -8,6 +8,7 @@ localisation:
   commune: "Luitré-Dompierre"
   departement: "Ille-et-Vilaine (35)"
   region: "Bretagne"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.1170,48.2845&z=16"
 annee: 2022
 url: "https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-petites-berouettes/"
 resume: >
@@ -22,9 +23,10 @@ resume: >
   vendus en circuits courts à des restaurateur·rices et des magasins
   spécialisés.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "GAEC Les P'tites Berouettes (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-les-ptites-berouettes
+      titre: bail_rural
   description: >
     Le foncier de la ferme est porté durablement par la Foncière Terre de Liens,
     structure non spéculative qui l'a acquis en 2022 par l'épargne citoyenne et
@@ -86,6 +88,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucune clause environnementale, ORE ou statut protégé n'est inscrit au bail rural ; la fiche note d'ailleurs parmi ses leviers d'« inscrire des clauses environnementales formelles dans le bail »."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La vocation documentée du lieu est une production maraîchère destinée aux circuits courts ; le vivant non-humain n'apparaît pas parmi les finalités affichées."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "La ferme est conduite en agriculture biologique : les pratiques culturales attestées entretiennent la capacité régénérative du sol sans recours aux intrants de synthèse."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "L'existence de haies, mares, friches ou continuités écologiques sur les 7 hectares de la ferme n'est pas documentée par les sources."
 analyse:
   forces:
     - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2022."

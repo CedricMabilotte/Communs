@@ -4,6 +4,7 @@ nom: "SCIC Écovillage de Keruzerh"
 sous_titre: "Coopérative d'intérêt collectif propriétaire du hameau de l'écovillage Demain en main"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'intérêt collectif (SCIC)"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Locoal-Mendon"
   departement: "Morbihan (56)"
@@ -87,6 +88,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: inconnu
     note: "La nature et la durée du titre d'usage liant la SCIC à la coopérative d'habitants ne sont pas documentées par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La SCIC porte le foncier d'un écovillage destiné à ses habitant·es et à ses activités ; aucune finalité de préservation de la biodiversité n'est documentée par les sources."
 analyse:
   forces:
     - "Sociétariat multiple associant habitant·es, collectivités et investisseur·ses solidaires."
@@ -117,6 +121,27 @@ fiabilite: >
   d'inaliénabilité, clause de dévolution, montant du loyer, durée du titre
   d'usage, publication des comptes.
 voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "883723207"
+    adresse: "Keruzerh, 56550 Locoal-Mendon"
+  echelle:
+    personnes: "Collectif Demain en main d'environ 7 familles."
+    surface: "Une vingtaine d'hectares, dont une dizaine de terres agricoles, le reste en forêt."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "La SCIC loue les logements à une coopérative d'habitants ; titre d'usage non documenté."
 sources:
   - titre: "Demain en main — site officiel"
     url: "https://demainenmain.fr/"

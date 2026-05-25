@@ -4,6 +4,7 @@ nom: "L'Antre Toit"
 sous_titre: "Association d'usager·es gérant la Maison Blanche de Gaillac"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Gaillac"
   departement: "Tarn (81)"
@@ -22,7 +23,7 @@ resume: >
   le réseau Antidote, qui lui confie l'usage du lieu par un bail emphytéotique de
   longue durée.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Antidote (fonds de dotation)"
   usufruitier: "L'Antre Toit (association loi 1901)"
   description: >
@@ -87,6 +88,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant de la redevance versée à Antidote n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La structure est dédiée à l'hébergement et à l'accompagnement de jeunes exilé·es : sa finalité est sociale et humaine, sans dimension biodiversité affichée."
 analyse:
   forces:
     - "Gouvernance autogérée : les habitant·es participent aux décisions du lieu."
@@ -116,6 +120,23 @@ fiabilite: >
   Non confirmé : année de création, statuts, transparence comptable, clause de
   dévolution, montant de la redevance, durée précise du bail.
 voir_aussi: [fonciere-antidote]
+dossier:
+  echelle:
+    lieux: "la « Maison Blanche », maison collective d'environ 100 m² à Gaillac"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Usage confié par bail emphytéotique de longue durée dans le modèle Antidote ; non publié."
 sources:
   - titre: "Antidote — Les lieux (L'Antre Toit)"
     url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"

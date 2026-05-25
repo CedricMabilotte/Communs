@@ -8,6 +8,7 @@ localisation:
   commune: "Épiniac"
   departement: "Ille-et-Vilaine (35)"
   region: "Bretagne"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.696,48.511&z=16"
 annee: 2016
 url: "https://www.bigotiere.fr/"
 resume: >
@@ -23,8 +24,9 @@ resume: >
   courant d'associé de 160 000 € accordé en 2022.
 montage:
   type: propriete_collective
-  nu_proprietaire: "Société civile de la Bigotière (société civile d'habitant·es)"
-  usufruitier: "Société civile de la Bigotière — chaîne intégrée : habitant·es associé·es et usager·es"
+  articulations:
+    - usufruitier: societe-civile-bigotiere
+      titre: integre
   description: >
     Le foncier et le bâti de l'écohameau sont détenus collectivement par une
     société civile constituée par les habitant·es — décrite par les sources
@@ -86,6 +88,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "Les habitant·es détiennent leur jouissance via leur qualité d'associé·es de la société civile propriétaire : l'usage n'est ni précaire ni plafonné dans le temps."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable (ORE, statut d'espace protégé, clause environnementale) protégeant le milieu n'est documenté ; la chaîne étant intégrée, aucun bail tiers ne porte de clause de ce type."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'écohameau affiche une vocation de transition écologique et alimentaire portée par la SCIC Le Ruisseau ; l'accueil de la biodiversité non-humaine comme cohabitant n'est pas explicité parmi les finalités."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "Le lieu cultive 1,5 ha de terres agricoles et distribue des produits fermiers dans une logique de transition ; le mode de conduite (bio, agroécologique) n'est pas explicitement attesté par les sources."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Sur 4,3 hectares, l'ensemble comprend 1,5 ha de terres agricoles et 0,5 ha de bois : des espaces non bâtis laissés au vivant existent effectivement."
 analyse:
   forces:
     - "Foncier porté collectivement par les habitant·es eux-mêmes, sans bailleur tiers."

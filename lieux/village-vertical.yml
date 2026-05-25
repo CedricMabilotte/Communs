@@ -8,6 +8,7 @@ localisation:
   commune: "Villeurbanne"
   departement: "Rhône (69)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.8740,45.7565&z=16"
 annee: 2010
 url: "https://www.village-vertical.org/"
 resume: >
@@ -21,8 +22,10 @@ resume: >
   d'habitants créée en France au XXIe siècle.
 montage:
   type: propriete_collective
-  nu_proprietaire: "Le Village Vertical (société coopérative d'habitants à capital variable)"
-  usufruitier: "Titulaire de l'usage : ménages coopérateur·rices, locataires de leur logement et détenteur·rices de parts sociales"
+  articulations:
+    - usufruitier: le-village-vertical
+      titre: integre
+      note: "Chaîne intégrée : la coopérative d'habitants est à la fois propriétaire et titulaire de l'usage ; chaque ménage signe un contrat coopératif conférant un droit de jouissance."
   description: >
     La coopérative d'habitants est l'unique propriétaire de l'immeuble et du
     foncier. Chaque ménage signe un contrat coopératif lui conférant un droit
@@ -82,6 +85,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "Chaque ménage signe un contrat coopératif lui conférant un droit de jouissance durable sur son logement, sans précarité locative de marché."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Le lieu est un immeuble d'habitat coopératif urbain ; aucun dispositif opposable de protection d'un milieu (ORE, clause environnementale) n'est documenté ni n'a d'objet évident à cette échelle."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Le projet — coopérative d'habitants, logement abordable et non spéculatif — est pensé pour ses usager·es humain·es ; l'accueil du vivant non-humain ne figure pas parmi ses finalités."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Immeuble BBC en ossature bois-béton, sobre par conception : l'usage d'habitation ne dégrade pas le fonds."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "À l'échelle d'un immeuble urbain, le critère s'évalue par les espaces de pleine terre, cour ou toiture ; les sources ne documentent aucun aménagement de ce type pour le vivant non-humain."
 analyse:
   forces:
     - "Parts plafonnées au nominal : sortie du marché spéculatif garantie statutairement."

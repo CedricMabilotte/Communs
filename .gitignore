@@ -12,6 +12,9 @@ Thumbs.db
 *.tmp
 *.log
 
+# Aperçus HTML autonomes de revue (artefacts de session, non versionnés)
+apercu/
+
 # Pilotage de session Cowork (notes de travail internes, non versionnées)
 CLAUDE.md
 routine-fin.md

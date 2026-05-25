@@ -8,6 +8,7 @@ localisation:
   commune: "Saint-Chaffrey (Chantemerle)"
   departement: "Hautes-Alpes (05)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=6.5905,44.9326&z=16"
 annee: 1976
 url: "https://filature-longomai.org/"
 resume: >
@@ -21,9 +22,11 @@ resume: >
   inaliénable par le Fonds de Terre Européenne ; la coopérative autogérée en
   assure l'usage.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
-  usufruitier: "Coopérative Longo Maï de Chantemerle (collectif autogéré)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: cooperatives-longo-mai
+      titre: convention
+      note: "Titre précis non documenté par les sources : le démembrement civil n'est pas formalisé et les actes liant la fondation à la coopérative ne sont pas détaillés."
   description: >
     Le foncier et les bâtiments de la filature de Chantemerle sont détenus de
     façon inaliénable par le Fonds de Terre Européenne, fondation de droit
@@ -84,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1976, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+  - critere: milieu_protege
+    valeur: non
+    note: "Site industriel d'une ancienne filature ; aucun dispositif opposable et durable de protection d'un milieu (ORE, espace protégé, clause environnementale) n'est documenté."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La vocation du site est la filière laine, de la tonte à la confection ; le vivant non-humain n'est pas affiché comme cohabitant parmi les finalités du lieu."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "L'activité, ancrée depuis 1976 dans des pratiques écologiques revendiquées — laines naturelles non teintes, production hydroélectrique sur place, filière éthique —, relève d'un usage de transformation non extractif du fonds."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "Le site est un atelier industriel ; les sources ne documentent ni surface du lieu ni espace laissé ou aménagé pour le vivant non-humain."
 analyse:
   forces:
     - "Foncier et bâtiments sanctuarisés de façon inaliénable depuis 1976."

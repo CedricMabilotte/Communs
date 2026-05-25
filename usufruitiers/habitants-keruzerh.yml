@@ -4,6 +4,7 @@ nom: "Coopérative d'habitants de Keruzerh"
 sous_titre: "Collectif d'habitant·es locataire des logements de l'écovillage Demain en main"
 statut_fiche: publie
 forme_juridique: "Coopérative d'habitants"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Locoal-Mendon"
   departement: "Morbihan (56)"
@@ -84,6 +85,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant du loyer versé par la coopérative d'habitants à la SCIC n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La coopérative d'habitants porte l'usage habitant d'un écovillage pensé pour ses ménages membres ; la préservation de la biodiversité non-humaine n'est pas affichée parmi les finalités de ce maillon, l'activité maraîchère relevant d'une SCOP agricole distincte."
 analyse:
   forces:
     - "Gouvernance habitante en démocratie participative, « une personne, une voix »."
@@ -112,6 +116,26 @@ fiabilite: >
   date de constitution de la coopérative d'habitants, nature et durée du titre
   d'usage, montant du loyer, clause de dévolution, publication des comptes.
 voir_aussi: [scic-keruzerh, cooperative-oasis]
+dossier:
+  echelle:
+    personnes: "8 familles"
+    lieux: "1 écovillage (hameau de Keruzerh) ; sept logements visés à terme"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Forme juridique précise et statuts de la coopérative d'habitants non documentés."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Titre d'usage liant la coopérative d'habitants à la SCIC propriétaire ; nature et durée non documentées."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Nature exacte du titre locatif non documentée (bail, convention ou contrat coopératif)."
 sources:
   - titre: "Demain en main — site officiel"
     url: "https://demainenmain.fr/"

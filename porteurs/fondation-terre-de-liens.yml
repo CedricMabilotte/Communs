@@ -4,6 +4,7 @@ nom: "Fondation Terre de Liens"
 sous_titre: "Fondation reconnue d'utilité publique portant le foncier agricole"
 statut_fiche: publie
 forme_juridique: "Fondation reconnue d'utilité publique (FRUP)"
+nature_interet: non_lucrative
 localisation: null
 annee: 2013
 url: "https://terredeliens.org/national/foire-aux-questions/tout-savoir-sur-les-donations/"
@@ -78,6 +79,9 @@ grille:
   - critere: redevabilite_publique
     valeur: oui
     note: "Le statut de FRUP impose un contrôle de l'État et la publication d'un rapport annuel ; la Fondation rend compte publiquement de son activité."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La finalité centrale est le portage et la transmission du foncier agricole ; l'agroécologie et les baux environnementaux portent une dimension favorable au vivant non-humain, sans en faire une finalité centrale."
 analyse:
   forces:
     - "Statut de fondation reconnue d'utilité publique, le plus protecteur en droit français."
@@ -105,6 +109,22 @@ fiabilite: >
   collectivités. Non confirmé : clauses d'inaliénabilité parcelle par parcelle,
   composition détaillée de la gouvernance.
 voir_aussi: [fonciere-terre-de-liens, gfa-mutuels]
+dossier:
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Fondation reconnue d'utilité publique par décret après instruction de l'État."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+      note: "La Fondation publie un rapport annuel détaillant son activité et ses acquisitions ; URL directe non relevée verbatim."
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Terre de Liens — Tout savoir sur les donations"
     url: "https://terredeliens.org/national/foire-aux-questions/tout-savoir-sur-les-donations/"

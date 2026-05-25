@@ -4,6 +4,7 @@ nom: "Ancrage"
 sous_titre: "Association de quartier autogérant un immeuble commun à Nancy"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Nancy"
   departement: "Meurthe-et-Moselle (54)"
@@ -90,6 +91,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le modèle Antidote prévoit un loyer symbolique versé au fonds ; les loyers internes des logements sont déclarés modérés mais leurs montants ne sont pas documentés par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'objet — habitat solidaire, imprimerie, bibliothèque, éducation populaire dans un immeuble urbain — est pensé pour ses usager·es humain·es, sans dimension biodiversité affichée."
 analyse:
   forces:
     - "Gouvernance citoyenne autogérée, dans la culture d'horizontalité du réseau Antidote."
@@ -121,6 +125,27 @@ fiabilite: >
   emphytéotique de longue durée. Non confirmé : date de signature et durée du
   bail, montants des loyers, transparence comptable, clause de dévolution.
 voir_aussi: [fonciere-antidote]
+dossier:
+  identite:
+    siren: "888168697"
+    adresse: "48 rue Vayringe, 54000 Nancy"
+  echelle:
+    lieux: "un immeuble de quatre étages, environ 360 m², rue de Vayringe à Nancy"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Convention engageant vers le bail emphytéotique avec le fonds de dotation Antidote ; non publiée."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique de longue durée prévu dans le modèle Antidote ; signature non confirmée ni publiée."
 sources:
   - titre: "La Foncière Antidote — Les lieux"
     url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"

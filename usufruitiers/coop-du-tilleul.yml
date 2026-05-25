@@ -4,6 +4,7 @@ nom: "Coop du Tilleul"
 sous_titre: "Collectif d'usage exploitant la ferme de Lartel au cœur de TERA"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Masquières"
   departement: "Lot-et-Garonne (47)"
@@ -88,6 +89,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant du loyer versé par la Coop du Tilleul à la SCI Le Tilleul n'est pas documenté par les sources consultées."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Les activités nourricières — maraîchage, forêt-jardin, compost — relèvent de pratiques écologiques ; la finalité affichée est alimentaire et territoriale, sans biodiversité comme objet central."
 analyse:
   forces:
     - "Collectif d'usage qui fait vivre concrètement la ferme de Lartel."
@@ -115,6 +119,28 @@ fiabilite: >
   précise de la Coop du Tilleul, année de création, nature et durée du bail,
   montant du loyer, gouvernance interne, comptes.
 voir_aussi: [fonds-sdh, cooperative-oasis]
+dossier:
+  identite:
+    siren: "829556232"
+    adresse: "Lartel, 47370 Masquières"
+  echelle:
+    lieux: "la ferme de Lartel et l'épicerie « l'Alvéole » à Tournon-d'Agenais"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Forme juridique exacte de la Coop du Tilleul non confirmée par les sources."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Ferme de Lartel détenue par la SCI Le Tilleul, majoritairement détenue par le fonds de dotation SDH ; actes non publiés."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail de location liant la SCI Le Tilleul à la Coop du Tilleul ; nature et durée non documentées."
 sources:
   - titre: "TERA — Habitons le présent"
     url: "https://www.tera.coop/"

@@ -4,6 +4,7 @@ nom: "Association des habitants du domaine d'Echoisy"
 sous_titre: "Collectif habitant l'Oasis du Coq à l'Âme en bail emphytéotique"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Cellettes"
   departement: "Charente (16)"
@@ -89,6 +90,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant de la redevance versée par l'association à la SCIC au titre du bail emphytéotique n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'écolieu pratique l'autonomie alimentaire et la sensibilisation à la nature, et s'est engagé dans une ORE signée avec la Coopérative Oasis ; la biodiversité non-humaine n'est toutefois pas affichée comme une finalité centrale parmi les cinq invariants des oasis, axés sur le collectif humain."
 analyse:
   forces:
     - "Usage reçu par bail emphytéotique : jouissance longue et sécurisée."
@@ -117,6 +121,29 @@ fiabilite: >
   Non confirmé : année de création de l'association, montant de la redevance,
   clauses du bail, clause de dévolution, publication des comptes.
 voir_aussi: [scic-coq-a-lame, cooperative-oasis]
+dossier:
+  identite:
+    adresse: "Domaine d'Echoisy, 16230 Cellettes"
+  echelle:
+    personnes: "Une vingtaine de foyers"
+    lieux: "1 écolieu (l'Oasis du Coq à l'Âme)"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Le projet publie son modèle juridique ; les statuts de l'association des habitant·es ne sont pas joints à la fiche."
+    - type: reglement_interieur
+      statut: inconnu
+      note: "Le projet présente publiquement le règlement intérieur de l'association ; aucun lien stable n'est documenté."
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique conclu avec la SCIC propriétaire, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique ; durée et redevance non documentées."
 sources:
   - titre: "Le modèle économique et juridique — Oasis du Coq à l'Âme"
     url: "https://oasis-ducoqalame.fr/presentation-de-loasis-du-coq-a-lame/les-structures/"

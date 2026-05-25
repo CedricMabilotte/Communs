@@ -8,6 +8,7 @@ localisation:
   commune: "Le Rayol-Canadel-sur-Mer"
   departement: "Var (83)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=6.4809,43.1559&z=16"
 annee: 1989
 url: "https://www.domainedurayol.org/"
 resume: >
@@ -24,8 +25,10 @@ resume: >
   culturelles.
 montage:
   type: propriete_publique
-  nu_proprietaire: "Conservatoire de l'espace littoral et des rivages lacustres (établissement public)"
-  usufruitier: "Association du Domaine du Rayol (association loi 1901)"
+  articulations:
+    - usufruitier: association-domaine-du-rayol
+      titre: convention
+      note: "Gestion confiée par convention pluriannuelle d'objectifs, régulièrement renouvelée ; durée exacte et clauses non documentées par les sources."
   description: >
     Le foncier appartient au Conservatoire du littoral, établissement public,
     et entre dans son domaine propre, inaliénable et imprescriptible. La gestion
@@ -88,6 +91,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "La convention d'objectifs est régulièrement renouvelée et la gestion dure depuis 1989, mais la convention est pluriannuelle et non un titre d'usage long de type bail emphytéotique."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Le domaine relève du domaine propre du Conservatoire du littoral, inaliénable et imprescriptible ; la convention de gestion fixe une mission de sauvegarde de l'espace côtier — dispositif opposable et durable."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La sauvegarde de l'espace côtier des Maures et la valorisation pédagogique du Jardin des Méditerranées inscrivent la préservation du milieu vivant parmi les finalités assumées et agies du lieu."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le site est géré comme jardin botanique et propose des ateliers de jardinage écologique ; la gestion conservatoire d'un espace naturel protégé relève d'un usage de maintien du milieu."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Espace naturel côtier d'environ 20 hectares géré en jardin botanique sous statut de protection : le lieu fait pleinement place au vivant non-humain."
 analyse:
   forces:
     - "Foncier sanctuarisé dans le domaine inaliénable d'un établissement public depuis 1989."

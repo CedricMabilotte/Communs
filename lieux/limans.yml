@@ -8,6 +8,7 @@ localisation:
   commune: "Limans"
   departement: "Alpes-de-Haute-Provence (04)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.7311,43.9852&z=16"
 annee: 1973
 url: "https://www.prolongomaif.ch/"
 resume: >
@@ -20,9 +21,11 @@ resume: >
   ovin, agriculture, vigne, transformation (conserves, laine, cosmétiques),
   artisanat et accueil.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
-  usufruitier: "Coopérative Longo Maï de Limans (collectif autogéré)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: cooperatives-longo-mai
+      titre: convention
+      note: "Titre précis non documenté par les sources : les actes formalisant l'usage collectif liant la coopérative au foncier de la fondation ne sont pas détaillés."
   description: >
     Le foncier de Limans est détenu de façon inaliénable par le Fonds de Terre
     Européenne, fondation de droit suisse qui sanctuarise la propriété des
@@ -82,6 +85,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1973, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "La détention inaliénable par la fondation sanctuarise la propriété mais n'est pas un dispositif de protection du milieu ; aucune ORE, clause environnementale ou statut d'espace protégé n'est documenté."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Les sources décrivent une coopérative d'autosubsistance — élevage, agriculture, transformation, artisanat — sans mention du vivant non-humain parmi les finalités déclarées."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Le site pratique élevage ovin, céréales et vigne dans une logique d'autosubsistance, mais les sources ne précisent ni label bio ni mode de conduite : l'effet des pratiques sur le fonds n'est pas attesté."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "Le domaine de 270 hectares comporte des terres labourables et de la forêt, mais aucun espace effectivement dédié au vivant non-humain (haies, mares, friches) n'est documenté."
 analyse:
   forces:
     - "Foncier sanctuarisé de façon inaliénable depuis 1973."

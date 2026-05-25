@@ -8,6 +8,7 @@ localisation:
   commune: "Chouvigny"
   departement: "Allier (03)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=2.99111,46.1261&z=16"
 annee: 2024
 url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/la-licorne/"
 resume: >
@@ -20,9 +21,11 @@ resume: >
   conduisent élevage (vaches, brebis, porcs, volailles), maraîchage, céréales,
   boulangerie paysanne et transformation fromagère, avec un marché à la ferme.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "GAEC Reconnu de la Licorne (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-de-la-licorne
+      titre: bail_rural
+      note: "Bail rural environnemental selon le cadre Terre de Liens ; statut précis du bail non confirmé par les sources."
   description: >
     Le foncier de la Licorne — environ 50 hectares — a été acquis fin 2024 par
     la Foncière Terre de Liens, structure non spéculative qui mobilise l'épargne
@@ -83,6 +86,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le collectif dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: oui
+    note: "L'usage est confié par un bail rural environnemental selon le cadre Terre de Liens : dispositif opposable et durable inscrivant la préservation du milieu dans le contrat de location."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La conduite en agriculture biologique limite les atteintes au milieu, mais la vocation documentée est nourricière ; l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Polyculture-élevage, maraîchage et céréales conduits en agriculture biologique : pratiques de prélèvement sans intrants de synthèse, entretenant la capacité du sol à se régénérer."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Ferme de quelque 50 hectares de polyculture-élevage près des gorges de la Sioule, milieu diversifié ; aucun aménagement écologique délibéré (haies, mares) n'est documenté par les sources."
 analyse:
   forces:
     - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis fin 2024."

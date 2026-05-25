@@ -8,6 +8,7 @@ localisation:
   commune: "Flocques"
   departement: "Seine-Maritime (76)"
   region: "Normandie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=1.3640,50.0370&z=16"
 annee: 2021
 url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"
 resume: >
@@ -23,9 +24,7 @@ resume: >
   projet de revitalisation rurale porté avec la commune, qui a fourni le terrain
   et joue un rôle de garante locative.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Chênelet (SAS, foncière solidaire agréée maîtrise d'ouvrage d'insertion / bailleur social)"
-  usufruitier: "Commune de Flocques (collectivité publique)"
+  type: propriete_protegee
   description: >
     La commune de Flocques est propriétaire du terrain et l'a confié à la
     Foncière Chênelet par un bail emphytéotique de 99 ans : la Foncière construit
@@ -90,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Les locataires bénéficient d'un bail d'habitation de logement social adossé à une foncière pérenne et au bail emphytéotique de 99 ans ; la durée et les modalités de renouvellement des baux d'habitation ne sont pas documentées."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucune clause environnementale opposable, ORE ou statut protégé n'est documenté pour le terrain de l'opération de logements."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'opération est un programme de logement très social pensé pour ses habitant·es ; le vivant non-humain n'est pas affiché parmi ses finalités."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le procédé constructif Chênelet — ossature bois, isolation paille, terre crue, toiture végétalisée, récupération d'eau de pluie — repose sur des matériaux biosourcés peu dégradants à l'échelle de cet habitat."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "À l'échelle d'un habitat de cœur de village : les toitures végétalisées et l'implantation bordant le verger communal font quelques gestes vers le vivant, sans espace spécifiquement aménagé documenté."
 analyse:
   forces:
     - "Logement très social et écologique à charges très réduites pour des ménages à bas revenus."

@@ -4,6 +4,7 @@ nom: "EARL La Ferme de Magnantru"
 sous_titre: "Société agricole de Camille Touzeau et Raphaël Marquet, exploitant la ferme de Magnantru"
 statut_fiche: publie
 forme_juridique: "EARL (Exploitation agricole à responsabilité limitée — société civile)"
+nature_interet: commerciale
 localisation:
   commune: "Périgné"
   departement: "Deux-Sèvres (79)"
@@ -21,7 +22,7 @@ resume: >
   bovin viande, les grandes cultures, la transformation et la vente à la ferme,
   l'accueil en chambres d'hôtes, et a introduit un élevage d'oies.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Foncière de FEVE — Fermes en Vie (société en commandite par actions à actionnariat solidaire)"
   usufruitier: "EARL La Ferme de Magnantru (société civile agricole)"
   description: >
@@ -88,6 +89,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le fermage versé à la foncière est encadré par arrêté préfectoral, écartant un loyer de marché ; son caractère soutenable pour l'EARL n'est pas documenté."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le bail rural environnemental inscrit des clauses en faveur de la biodiversité et le maintien de l'agriculture biologique ; la finalité de l'EARL reste l'exploitation agricole, non la protection de la nature."
 analyse:
   forces:
     - "Usage sécurisé par un bail rural environnemental long et renouvelable."
@@ -119,6 +123,29 @@ fiabilite: >
   de vente à la ferme et d'accueil en chambres d'hôtes. Non confirmé : montant
   du fermage, durée exacte du bail, clauses détaillées, comptes de la société.
 voir_aussi: [feve]
+dossier:
+  identite:
+    siren: "901915868"
+    adresse: "Magnantru, 79170 Périgné"
+  echelle:
+    personnes: "deux paysan·nes co-gérant·es (Camille Touzeau et Raphaël Marquet)"
+    lieux: "la ferme de Magnantru, à Périgné"
+    surface: "environ 47 hectares en agriculture biologique"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts et immatriculation de l'EARL publics au registre des entreprises ; non mis en ligne par l'exploitation."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail rural environnemental conclu avec la foncière de FEVE, avec option d'achat à sept ans ; non publié."
 sources:
   - titre: "La ferme de Magnantru — site officiel"
     url: "https://www.lafermedemagnantru.com/a-propos-de-nous"

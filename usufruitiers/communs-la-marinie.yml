@@ -4,6 +4,7 @@ nom: "Les Communs de la Marinie"
 sous_titre: "Association d'usager·es autogérant la ferme de la Marinie en Aveyron"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Causse-et-Diège"
   departement: "Aveyron (12)"
@@ -85,6 +86,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le bail emphytéotique prévoit une redevance modique, écartant toute logique de rendement ; son montant exact n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'activité du lieu — céréales, oléagineux, boulangerie, savonnerie — est agricole et artisanale, au bénéfice de ses usager·es, sans dimension biodiversité affichée."
 analyse:
   forces:
     - "Gouvernance citoyenne autogérée : les usager·es décident ensemble des usages du lieu."
@@ -113,6 +117,25 @@ fiabilite: >
   savonnerie). Non confirmé : montant de la redevance, clauses du bail,
   transparence comptable, clause de dévolution.
 voir_aussi: [fonciere-antidote]
+dossier:
+  identite:
+    adresse: "La Marinie, 12700 Causse-et-Diège"
+  echelle:
+    lieux: "la ferme de la Marinie, à Causse-et-Diège (nord Aveyron)"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Usage confié par bail emphytéotique de 99 ans dans le modèle Antidote ; non publié."
 sources:
   - titre: "Les Communs de la Marinie — site officiel"
     url: "https://lescommunsdelamarinie.fr/presentation/qui-sommes-nous/"

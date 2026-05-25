@@ -8,6 +8,7 @@ localisation:
   commune: "Normandie (commune non documentée)"
   departement: "Calvados (14) — à confirmer"
   region: "Normandie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.3920,48.8950&z=16"
 annee: 2020
 url: "https://fermes.terredeliens.org/normandie/fermes-de-la-r%C3%A9gion-normandie/loiseliere/"
 resume: >
@@ -23,9 +24,11 @@ resume: >
   est vendue en vente directe à des boucher·es, restaurateur·rices et
   particulier·es.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "Exploitation de L'Oiselière (exploitation paysanne de Côme Pascal)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: exploitation-loiseliere
+      titre: bail_rural
+      note: "Le bail rural ne porte que sur les 40 hectares de la Foncière ; le bâti et 2 hectares restent en propriété privée de l'exploitant, hors articulation."
   description: >
     Quarante hectares de la ferme L'Oiselière sont portés durablement par la
     Foncière Terre de Liens, structure non spéculative qui les a acquis en 2020
@@ -86,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage des terres de la Foncière est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitation dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé n'est documenté pour le foncier de la ferme."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La ferme préserve une race locale menacée, le porc de Bayeux ; le vivant non-humain est présent dans le projet via cette conservation, sans accueil plus large affiché de la biodiversité."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Élevage en plein air et céréales conduits en agriculture biologique sur l'ensemble du foncier : des pratiques de maintien de la capacité régénérative du sol sont attestées."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "L'élevage en plein air sur dix hectares est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
 analyse:
   forces:
     - "Quarante hectares sanctuarisés hors marché par l'épargne citoyenne depuis 2020."

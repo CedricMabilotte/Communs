@@ -4,6 +4,7 @@ nom: "Fonds de dotation SDH"
 sous_titre: "Fonds de dotation portant le foncier de l'écosystème TERA en Lot-et-Garonne"
 statut_fiche: publie
 forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
+nature_interet: non_lucrative
 localisation:
   commune: "Masquières / Tournon-d'Agenais"
   departement: "Lot-et-Garonne (47)"
@@ -91,6 +92,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: inconnu
     note: "La nature et la durée des titres d'usage accordés aux structures de TERA ne sont pas documentées par les sources consultées."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'objet affiché — préserver, renouveler et transmettre un milieu naturel propice à la vie — porte une dimension de préservation du vivant dans le discours, mais reste orienté vers l'accès à la terre des habitant·es humain·es plutôt que vers la biodiversité comme cohabitant."
 analyse:
   forces:
     - "Fonds de dotation non lucratif à objet statutaire explicite de protection foncière."
@@ -119,6 +123,23 @@ fiabilite: >
   décembre 2023. Non confirmé : année de création du fonds, composition de sa
   gouvernance, clause de dévolution, publication des comptes, régime des loyers.
 voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "882460652"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "SCI Le Tilleul transmise au fonds en 2017 ; acte non accessible en ligne."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "S.D.H. — Le fonds de dotation de la Solidarité pour un Développement Humain"
     url: "https://sdh-lefonds.org/"

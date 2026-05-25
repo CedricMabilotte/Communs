@@ -8,6 +8,7 @@ localisation:
   commune: "Masquières / Tournon-d'Agenais / Trentels"
   departement: "Lot-et-Garonne (47)"
   region: "Nouvelle-Aquitaine"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=1.0360,44.3935&z=16"
 annee: 2015
 url: "https://www.tera.coop/"
 resume: >
@@ -25,8 +26,10 @@ resume: >
   rural de Lustrac.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SCI Le Tilleul, majoritairement détenue par le fonds de dotation SDH"
-  usufruitier: "Coop du Tilleul (collectif d'usage de la ferme de Lartel)"
+  articulations:
+    - usufruitier: coop-du-tilleul
+      titre: convention
+      note: "La SCI Le Tilleul loue les biens aux structures d'usage ; nature et durée du titre liant la SCI à la Coop du Tilleul non documentées par les sources."
   description: >
     Le foncier productif de TERA — ferme de Lartel à Masquières, terres de
     Lustrac à Trentels — appartient à la SCI Le Tilleul, société civile dont le
@@ -90,6 +93,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "La nature et la durée des titres d'usage liant la SCI Le Tilleul aux structures d'usage de TERA ne sont pas documentées par les sources."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Le foncier productif est conduit en agroécologie, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté pour les terres de TERA."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La forêt-jardin et l'agroécologie ménagent le vivant, mais la préservation de la biodiversité non-humaine n'est pas affichée comme une finalité propre du projet, centré sur le revenu d'autonomie et la relocalisation."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Maraîchage et forêt-jardin en agroécologie : des pratiques de maintien attestées, sans logique extractive."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "La forêt-jardin constitue un espace à dimension écologique, mais aucun aménagement explicite plus large en faveur du vivant (haies, mares, continuités) n'est documenté."
 analyse:
   forces:
     - "Montage largement documenté par un wiki public détaillé."

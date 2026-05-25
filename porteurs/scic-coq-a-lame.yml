@@ -4,6 +4,7 @@ nom: "SCIC de l'Oasis du Coq à l'Âme"
 sous_titre: "Société coopérative propriétaire du domaine d'Echoisy en Charente"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'intérêt collectif (SCIC)"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Cellettes"
   departement: "Charente (16)"
@@ -90,6 +91,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: oui
     note: "La SCIC accorde à l'association des habitant·es un bail emphytéotique, titre d'usage long pouvant courir jusqu'à 99 ans."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La SCIC porte le foncier d'un écolieu destiné à son collectif d'habitant·es et à ses activités économiques ; aucune finalité de préservation de la biodiversité n'est documentée par les sources."
 analyse:
   forces:
     - "Foncier porté par une coopérative dédiée, hors propriété privée individuelle."
@@ -119,6 +123,28 @@ fiabilite: >
   gouvernance, clause de dévolution, montant de la redevance emphytéotique,
   publication des comptes.
 voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "903703700"
+    adresse: "Domaine d'Echoisy, 16230 Cellettes"
+  echelle:
+    surface: "26 hectares de terres et plusieurs bâtiments (domaine d'Echoisy)."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: public
+      lien: "https://oasis-ducoqalame.fr/presentation-de-loasis-du-coq-a-lame/les-structures/"
+      note: "Le projet publie en ligne son modèle juridique et son règlement intérieur."
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Usage du domaine confié à l'association des habitant·es par bail emphytéotique ; acte non publié."
 sources:
   - titre: "Le modèle économique et juridique — Oasis du Coq à l'Âme"
     url: "https://oasis-ducoqalame.fr/presentation-de-loasis-du-coq-a-lame/les-structures/"

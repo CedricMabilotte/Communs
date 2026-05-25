@@ -8,6 +8,7 @@ localisation:
   commune: "Saint-Menoux"
   departement: "Allier (03)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=3.1151,46.5724&z=16"
 annee: 2026
 url: "https://www.lamhotte.fr/"
 resume: >
@@ -23,9 +24,16 @@ resume: >
   99 ans. C'est une oasis du réseau de la Coopérative Oasis, engagée dans la
   démarche Oasis de Biodiversité.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de dotation Fraternité pour Demain"
-  usufruitier: "École de la Mhotte et association Acoeur (associations loi 1901)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: usagers-la-mhotte
+      titre: bail_emphyteotique
+      duree: "99 ans"
+  liants:
+    - intitule: "Obligation Réelle Environnementale"
+      niveau: lieu
+      portee: contraignante
+      description: "Une Obligation Réelle Environnementale inscrit l'engagement écologique dans le droit du lieu."
   description: >
     Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour
     Demain, structure non lucrative qui le conserve hors marché. L'usage est
@@ -85,6 +93,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "Le bail emphytéotique de 99 ans assure aux deux associations une jouissance longue et sécurisée, bien au-delà du plafond de 30 ans des démembrements civils."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Une Obligation Réelle Environnementale inscrit l'engagement écologique dans le droit du lieu : dispositif opposable et durable de protection du milieu."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le domaine est engagé dans la démarche Oasis de Biodiversité et porte une pédagogie tournée vers la nature : la préservation du vivant figure parmi les finalités assumées et agies."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le domaine est cultivé en potager et verger entretenus par les habitant·es, dans une logique de jardins nourriciers ; aucune pratique extractive n'est documentée."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Le domaine d'une quinzaine d'hectares comprend bois, parc, prairies et mare ; engagé dans une démarche Oasis de Biodiversité, il laisse effectivement des espaces au vivant non-humain."
 analyse:
   forces:
     - "Foncier sanctuarisé en 2026 par un fonds de dotation non lucratif."

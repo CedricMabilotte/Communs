@@ -4,6 +4,7 @@ nom: "SCI Terres d'Ecolectif"
 sous_titre: "Société civile portant le foncier de l'écohameau Écolectif en Haute-Garonne"
 statut_fiche: publie
 forme_juridique: "Société civile immobilière (SCI)"
+nature_interet: commerciale
 localisation:
   commune: "Gensac-de-Boulogne"
   departement: "Haute-Garonne (31)"
@@ -91,6 +92,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: partiel
     note: "Les résident·es disposent d'un bail d'occupation de leur espace de vie ; la durée et les conditions de renouvellement de ces baux ne sont pas documentées."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La SCI porte le foncier d'un écohameau destiné à ses résident·es humain·es ; aucune finalité de préservation de la biodiversité n'est documentée par les sources."
 analyse:
   forces:
     - "Foncier porté par une société civile dédiée, gérée par une association collégiale."
@@ -121,6 +125,26 @@ fiabilite: >
   tout compris. Non confirmé : clause de dévolution, objet statutaire de la SCI,
   rôle exact de MV Finance, durée des baux, publication des comptes.
 voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "751111386"
+    adresse: "Le Paoule-Bernadaou, 31350 Gensac-de-Boulogne"
+  echelle:
+    surface: "Environ 46 hectares (domaine agricole de l'écohameau Écolectif)."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Résident·es titulaires d'un bail d'occupation ; durée non documentée."
 sources:
   - titre: "Cadre légal — Site de Ecolectif"
     url: "https://ecolectif.jimdofree.com/pr%C3%A9sentation/cadre-l%C3%A9gal/"

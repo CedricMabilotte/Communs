@@ -8,6 +8,7 @@ localisation:
   commune: "Causse-et-Diège"
   departement: "Aveyron (12)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=2.04929,44.5138&z=16"
 annee: 2021
 url: "https://lescommunsdelamarinie.fr/"
 resume: >
@@ -20,9 +21,11 @@ resume: >
   anciennes et oléagineux, on y produit pain et savons (« Aux Prés en bulles »),
   et le lieu accueille ventes à la ferme et propositions culturelles.
 montage:
-  type: demembrement
-  nu_proprietaire: "Antidote (fonds de dotation)"
-  usufruitier: "Les Communs de la Marinie (association loi 1901)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: communs-la-marinie
+      titre: bail_emphyteotique
+      duree: "99 ans"
   description: >
     Le fonds de dotation Antidote a acquis la propriété de la ferme, par dons et
     collecte solidaire, et la conserve durablement hors marché. L'usage est
@@ -82,6 +85,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "Le bail emphytéotique de 99 ans assure au collectif usager une jouissance longue et sécurisée, bien au-delà du plafond de 30 ans des démembrements civils."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Les clauses du bail emphytéotique ne sont pas documentées : l'existence d'une clause environnementale ou d'un autre dispositif opposable de protection du milieu n'est pas établie."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'agriculture paysanne et la culture de céréales anciennes traduisent un soin du vivant cultivé, mais l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités du lieu."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "Le lieu pratique une agriculture paysanne de céréales anciennes et d'oléagineux, peu intensive ; le mode de conduite précis (bio, agroécologie) n'est pas attesté par les sources."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Ferme de quelque 27 hectares de terres agricoles offrant des espaces non bâtis favorables au vivant ; aucun aménagement écologique délibéré (haies, mares, friches) n'est documenté."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."

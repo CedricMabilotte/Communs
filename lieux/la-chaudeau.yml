@@ -8,6 +8,7 @@ localisation:
   commune: "Pierre-la-Treiche"
   departement: "Meurthe-et-Moselle (54)"
   region: "Grand Est"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.93158,48.6428&z=16"
 annee: 2013
 url: "https://fermes.terredeliens.org/lorraine/fermes-de-la-r%C3%A9gion-lorraine/la-chaudeau/"
 resume: >
@@ -21,9 +22,10 @@ resume: >
   biologique. La ferme produit légumes, safran, champignons et endives,
   écoulés via une AMAP et en circuit court.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "Exploitation maraîchère de la Chaudeau (exploitation individuelle)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: exploitation-maraichere-la-chaudeau
+      titre: bail_rural
   description: >
     Le foncier de la Chaudeau — 3,66 hectares et environ 1 200 m² de bâtiments
     avec espace de vente et de transformation — a été acquis en 2013 par la
@@ -85,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitant dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "L'usage est confié par bail rural sans que les sources précisent s'il s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable de protection du milieu n'est documenté."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La conduite en agriculture biologique limite les atteintes au milieu, mais la vocation documentée est nourricière ; l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "La ferme est exploitée en maraîchage biologique : pratiques de prélèvement sans recours aux intrants de synthèse, entretenant la capacité du sol à se régénérer."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Ancien site de cresson et de pisciculture remis en culture sur 3,66 hectares ; aucune trace d'aménagement délibéré (haies, mares, friches) pour le vivant non-humain dans les sources."
 analyse:
   forces:
     - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2013."

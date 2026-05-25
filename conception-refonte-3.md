@@ -368,3 +368,77 @@ elle rouvre l'étape 1 (cadre normatif, désormais le triptyque), exécute l'ét
 3 (typologie de montage), et réécrit la méthodologie (étape 6). Le brief sera
 mis à jour au chantier 8 ; jusque-là, **ce document fait foi** pour tout ce qui
 touche la refonte #3.
+
+## 13. Chantier 1bis — typologie purifiée et axe de lucrativité (session #4)
+
+Le chantier 9 (repli sur le corpus) a fait apparaître que la typologie de
+montage de la refonte #3 était insuffisante sur deux points. D'abord, la
+silhouette `propriete_sanctuarisee` glissait dans sa définition même un jugement
+de qualité — « l'organisme **non lucratif** reste pleinement propriétaire » —
+alors qu'une douzaine de lieux de l'annuaire sont portés par la Foncière Terre
+de Liens, **société en commandite par actions** : une forme commerciale. Une
+silhouette descriptive ne peut pas présupposer la nature de son porteur. Ensuite,
+le mot « privé » mêlait sans distinction la petite propriété individuelle et le
+patrimoine commercial — deux « fausses libérations » de nature très différente.
+
+Le chantier 1bis corrige ces deux points en séparant nettement **trois
+instruments** là où la refonte #3 en mêlait deux. Il révise les §5 et §8.
+
+**a — La silhouette ne nomme que le mécanisme de dissociation.** `montage.type`
+décrit la *forme* de l'assemblage, jamais sa réussite. Conséquences :
+`propriete_sanctuarisee` est renommée **`propriete_protegee`** — le mécanisme
+« un porteur dédié conserve la pleine propriété et confie l'usage par bail long
+ou convention », sans rien promettre de la pureté du porteur ; sa définition est
+purgée de toute mention de non-lucrativité. `propriete_collective` est purgée de
+même. La silhouette privée est scindée en deux — **`propriete_privee_individuelle`**
+(propriétaire personne physique) et **`propriete_privee_commerciale`** (société),
+ce qui prolonge le principe de classement déjà à l'œuvre pour
+`propriete_publique` et `propriete_collective` : classer par le propriétaire.
+Six silhouettes au total ; `demembrement` et `propriete_publique` inchangées.
+
+**b — Un axe orthogonal de lucrativité, porté par les entités.** Chaque fiche de
+porteur et d'usufruitier reçoit un champ énuméré `nature_interet:` — la nature
+lucrative ou non du maillon, indépendante de la forme du montage :
+`non_lucrative` (association, fondation, fonds de dotation, personne publique) ;
+`commerciale_desactivee` (société dont **100 %** des parts ou actions sont
+détenues par des organismes non lucratifs d'intérêt général ou d'utilité
+publique — l'intérêt privé y est désactivé) ; `commerciale_encadree`
+(lucrativité statutairement bornée mais capital partiellement privé — SCIC, SCA
+à actionnariat solidaire, foncière solidaire ESUS) ; `commerciale` (société à
+lucrativité ouverte) ; `privee_individuelle` (personne physique). Le critère de
+**désactivation** — 100 % du capital aux mains d'un OIG/RUP — est le seuil
+puriste : en deçà, l'intérêt privé reste actif, fût-il discipliné.
+
+**c — Le verdict calculé du lieu — et le sanctuaire.** Le mot « sanctuarisé »
+quitte le `montage.type` : il n'est plus une forme, mais un **verdict**, calculé
+et jamais saisi — une seule source de vérité, donc aucune contradiction possible
+entre la carte et le radar. Le générateur calcule pour chaque lieu un verdict à
+trois degrés : **`marchand`** (un maillon `commerciale` ou `privee_individuelle`
+dans la chaîne) ; **`hybride`** (un maillon `commerciale_encadree`, aucun maillon
+marchand) ; **`sanctuaire`** — le sommet. Un lieu est un `sanctuaire` lorsque la
+formule fondatrice (§2) est *entièrement* tenue : foncier irréversiblement
+hors-marché, **toute** la chaîne en `non_lucrative` ou `commerciale_desactivee`,
+**et** l'habitat du vivant (D-B) au vert. Le sanctuaire est l'incarnation visible
+du pôle de tête « Le commun libre et vivant » ; il se mérite sur les cinq axes,
+il ne se déclare pas. Son extrême le plus pur inclut la terre rendue à la vie
+sauvage, accès humain volontairement exclu (modèle ASPAS — Réserves de Vie
+Sauvage) : la D-B y est à son maximum, l'usus entièrement cédé au vivant
+non-humain.
+
+**Garde-fous.** `montage.type: propriete_privee_individuelle` doit s'accorder
+avec un porteur d'axe `privee_individuelle` (cohérence vérifiée à la génération).
+Le verdict `sanctuaire` ne peut s'allumer tant que les critères D-B d'un lieu
+sont `inconnu` — il émerge au fil du peuplement du chantier 9, jamais par défaut.
+
+**Le cas des exploitations agricoles (arbitrage session #4).** Les GAEC, EARL et
+sociétés civiles d'exploitation agricole reçoivent la nature `commerciale` : ce
+sont des structures productivistes qui valorisent un intérêt collectif lucratif,
+propriété de leurs associé·es exploitant·es — non un intérêt général
+désintéressé. L'`exploitation` individuelle (une seule personne physique) reçoit
+`privee_individuelle`. Conséquence assumée : une chaîne dont l'usufruitier est
+une exploitation agricole est au mieux `hybride`, jamais `sanctuaire` — le
+sanctuaire est réservé aux lieux qui font effectivement habitat pour le vivant,
+non aux exploitations, fussent-elles hors-marché et paysannes. La nature
+`commerciale` mesure la lucrativité de la structure ; elle ne préjuge pas du
+caractère abusif ou non des pratiques agricoles, lu séparément à l'axe 1
+(critère `usage_non_degradant`).

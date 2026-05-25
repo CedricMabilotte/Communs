@@ -8,6 +8,7 @@ localisation:
   commune: "Nancy"
   departement: "Meurthe-et-Moselle (54)"
   region: "Grand Est"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=6.1844,48.6921&z=16"
 annee: 2020
 url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
 resume: >
@@ -22,9 +23,12 @@ resume: >
   dotation Antidote, qui en confie l'usage à l'association Ancrage par bail
   emphytéotique de longue durée.
 montage:
-  type: demembrement
-  nu_proprietaire: "Antidote (fonds de dotation)"
-  usufruitier: "Ancrage (association loi 1901)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: association-ancrage
+      titre: bail_emphyteotique
+      duree: "longue durée, jusqu'à 99 ans"
+      note: "Date de signature du bail sur ce lieu non précisée par les sources consultées."
   description: >
     Le montage suit le modèle Antidote : l'association des lieux a signé un
     compromis puis acquis le bâtiment grâce à des dons, un emprunt bancaire et
@@ -89,6 +93,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le modèle confie l'usage par bail emphytéotique de longue durée — jusqu'à 99 ans ; la signature effective du bail sur ce lieu n'est pas confirmée par les sources."
+  - critere: milieu_protege
+    valeur: non
+    note: "Immeuble urbain ; aucun dispositif opposable et durable de protection d'un milieu (ORE, espace protégé, clause environnementale au bail) n'est documenté."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Les finalités affichées — habitat solidaire, imprimerie, bibliothèque, éducation populaire — sont pensées pour les usager·es humain·es ; le vivant non-humain n'est pas mentionné parmi les vocations du lieu."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Lieu urbain sans usage agricole ; les sources ne documentent pas les pratiques d'entretien ou de rénovation du bâti au regard de leur empreinte sur le fonds."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Le bâtiment dispose d'un jardin à l'arrière ; aucun aménagement délibéré pour le vivant (végétalisation, mare) n'est documenté au-delà de cet espace."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."

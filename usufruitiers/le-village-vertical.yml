@@ -4,6 +4,7 @@ nom: "Coopérative Le Village Vertical"
 sous_titre: "Coopérative d'habitants propriétaire et usagère de son immeuble à Villeurbanne"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'habitants à capital variable"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Villeurbanne"
   departement: "Rhône (69)"
@@ -85,6 +86,9 @@ grille:
   - critere: loyer_soutenable
     valeur: oui
     note: "La redevance couvre les charges courantes et le remboursement de l'emprunt collectif, sans nourrir aucune logique de rendement."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La coopérative est un habitat urbain non spéculatif pensé pour ses ménages coopérateur·rices ; la biodiversité non-humaine n'est pas affichée parmi ses finalités."
 analyse:
   forces:
     - "Propriété et usage réunis : aucune précarité locative vis-à-vis d'un tiers."
@@ -113,6 +117,28 @@ fiabilite: >
   accompagnement par Habicoop. Non confirmé : modalités détaillées de
   renouvellement des coopérateur·rices, transparence comptable.
 voir_aussi: [habicoop]
+dossier:
+  identite:
+    adresse: "3 rue Raymond Terracher, 69100 Villeurbanne"
+  echelle:
+    personnes: "14 logements (dont 9 sociaux et 4 très sociaux)"
+    lieux: "1 immeuble coopératif"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de la coopérative d'habitants non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Chaîne intégrée : la coopérative est propriétaire ; contrat coopératif conférant le droit de jouissance, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Pas de bail vis-à-vis d'un tiers : les ménages disposent d'un droit de jouissance via leur qualité de coopérateur·rice."
 sources:
   - titre: "Le Village Vertical — Présentation"
     url: "https://www.village-vertical.org/index.php?page=presentation"

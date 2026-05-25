@@ -4,6 +4,7 @@ nom: "GAEC d'Eyssal"
 sous_titre: "Groupement agricole exploitant la ferme laitière d'Eyssal, en biodynamie, en Dordogne"
 statut_fiche: publie
 forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+nature_interet: commerciale
 localisation:
   commune: "Bergerac (Périgord pourpre)"
   departement: "Dordogne (24)"
@@ -21,7 +22,7 @@ resume: >
   recevoir par bail rural les 18 hectares acquis par la Foncière Terre de
   Liens.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
   usufruitier: "GAEC d'Eyssal (groupement agricole d'exploitation en commun)"
   description: >
@@ -85,6 +86,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le recours à Terre de Liens visait à éviter l'endettement pour acheter les terres, ce qui suppose un fermage modéré ; son montant n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'élevage laitier est conduit en agriculture biodynamique sur un environnement à forte biodiversité, pratique écologique revendiquée, sans que l'accueil du vivant non-humain soit posé comme une finalité centrale du GAEC."
 analyse:
   forces:
     - "Société civile agricole de droit civil, sans logique de rendement du capital."
@@ -115,6 +119,29 @@ fiabilite: >
   clauses du bail rural, transparence comptable, clause de dévolution,
   modalités d'accueil de nouveaux associés.
 voir_aussi: [fonciere-terre-de-liens]
+dossier:
+  identite:
+    siren: "447817974"
+    adresse: "Lieu-dit Domaine d'Eyssal, 24520 Lamonzie-Montastruc"
+  echelle:
+    personnes: "2 associé·es exploitant·es (Hugues Doche et Fanny)"
+    surface: "18 hectares portés par la Foncière Terre de Liens ; surface totale exploitée non documentée"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts du GAEC non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail rural conclu en 2010 lors de l'acquisition des 18 hectares, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail rural ; clauses et montant du fermage non documentés."
 sources:
   - titre: "Eyssal — Fermes Terre de Liens"
     url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"

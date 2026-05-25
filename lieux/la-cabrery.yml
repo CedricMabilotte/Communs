@@ -8,6 +8,7 @@ localisation:
   commune: "Vitrolles-en-Lubéron"
   departement: "Vaucluse (84)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.599893,43.78773&z=16"
 annee: 1993
 url: "https://www.lacabrery.org/"
 resume: >
@@ -21,9 +22,11 @@ resume: >
   pris en charge par la communauté. Le foncier est détenu de façon inaliénable
   par le Fonds de Terre Européenne ; la coopérative autogérée en assure l'usage.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
-  usufruitier: "Coopérative Longo Maï de La Cabrery (collectif autogéré)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: cooperatives-longo-mai
+      titre: convention
+      note: "Titre précis non documenté par les sources ; le démembrement civil n'est pas formalisé, il s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif."
   description: >
     Le foncier de La Cabrery est détenu de façon inaliénable par le Fonds de
     Terre Européenne, fondation de droit suisse qui sanctuarise la propriété
@@ -83,6 +86,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1993, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "L'usage n'est pas formalisé par un acte documenté ; l'existence d'une clause environnementale ou d'un autre dispositif opposable de protection du milieu n'est pas établie par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La démarche revendiquée de vins nature et d'anticapitalisme suppose un soin du vivant cultivé ; l'accueil de la biodiversité non-humaine comme finalité affirmée n'est pas explicité par les sources."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Production de vins nature attestée, complétée de maraîchage et d'élevage à échelle communautaire : pratiques de faible intrant, peu compatibles avec un usage extractif du sol."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Ferme de 23 hectares mêlant vigne, maraîchage, céréales, bois et élevage : la diversité des milieux ménage de fait des espaces au vivant, sans aménagement écologique délibéré documenté."
 analyse:
   forces:
     - "Foncier sanctuarisé de façon inaliénable depuis 1993."

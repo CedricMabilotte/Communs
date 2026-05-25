@@ -4,6 +4,7 @@ nom: "Collectif de l'Écolieu de la Gasnerie"
 sous_titre: "Collectif d'habitant·es-usager·es de l'écolieu de la Gasnerie, en Maine-et-Loire"
 statut_fiche: publie
 forme_juridique: null
+nature_interet: inconnu
 localisation:
   commune: "Morannes-sur-Sarthe-Daumeray"
   departement: "Maine-et-Loire (49)"
@@ -85,6 +86,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Les modalités financières liées à l'usage du lieu ne sont pas documentées par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le collectif revendique un mode de vie écologique sur un jardin arboré ; le vivant non-humain n'est pas affiché comme finalité centrale de protection de la nature."
 analyse:
   forces:
     - "Lieu porté et habité par le collectif lui-même, qui en décide les usages."
@@ -116,6 +120,26 @@ fiabilite: >
   Coopérative Oasis, titre et durée de l'usage, gouvernance formelle. Fiche à
   compléter dès publication de ces éléments.
 voir_aussi: [cooperative-oasis]
+dossier:
+  echelle:
+    lieux: "l'Écolieu de la Gasnerie, à Morannes-sur-Sarthe"
+    surface: "un jardin arboré d'un peu plus d'un hectare"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "L'association La Grainerie, destinée à porter le tiers-lieu, est annoncée « en construction » ; aucune forme juridique immatriculée n'est documentée."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Structure détenant le foncier non documentée par les sources."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Titre par lequel le collectif a l'usage du lieu non documenté."
 sources:
   - titre: "L'Écolieu de la Gasnerie — site officiel"
     url: "https://www.ecolieudelagasnerie.fr/"

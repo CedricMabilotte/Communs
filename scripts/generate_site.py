@@ -1117,7 +1117,7 @@ def card(fiche, sc, axes_cfg, depth=0, concepts=None):
     <span class="tag tag-{cat}">{catlabel}</span>
     {idl_badge(sc)}
   </div>
-  <h3><a class="card-link" href="{href}">{e(fiche['nom'])}</a></h3>
+  <h3><a class="card-link" href="{href}">{e(fiche['nom'])}</a>{ctx_labels_html(fiche, up)}</h3>
   <p class="card-sub">{e(clean(fiche.get('sous_titre','')))}</p>
   <p class="card-meta">{e(loc)}{(' · ' + e(montage_lab)) if montage_lab else ''}</p>
   {'' if cat == "reseau" else f'<div class="card-viz">{axis_triangle(axes_cfg, sc["axes"], compact=True)}</div>'}
@@ -1149,6 +1149,127 @@ def purete_label(niv, ranking):
     return integrite_label(niv, ranking)
 
 
+def nature_label(nid, concepts):
+    """Libellé de l'axe de lucrativité `nature_interet` (chantier 1bis)."""
+    if not nid:
+        return "—"
+    for n in concepts.get("nature_interet", []) or []:
+        if n["id"] == nid:
+            return n["label"]
+    return nid
+
+
+def compute_verdict(fiche, by_uid):
+    """Verdict calculé d'un lieu — `marchand` / `hybride` / `sanctuaire`, ou None
+    si la chaîne comporte un maillon de nature non établie. Jamais saisi : il se
+    déduit de la nature_interet de chaque maillon de la chaîne, de
+    l'irréversibilité du foncier et des critères d'habitat du vivant (D-B).
+    Cf. conception-refonte-3.md §13."""
+    if fiche.get("categorie") != "lieu":
+        return None
+    ch = fiche.get("chaine", {}) or {}
+    maillons = list(ch.get("porteurs") or []) + list(ch.get("usufruitiers") or [])
+    if not maillons:
+        return None
+    natures = [((by_uid.get(u) or {}).get("nature_interet") or "inconnu")
+               for u in maillons]
+    if any(n in ("commerciale", "privee_individuelle") for n in natures):
+        return "marchand"
+    if any(n == "commerciale_encadree" for n in natures):
+        return "hybride"
+    if any(n == "inconnu" for n in natures):
+        return None  # chaîne non entièrement établie — verdict à établir
+    # chaîne entièrement non_lucrative / commerciale_desactivee
+    g = {c.get("critere"): c.get("valeur") for c in (fiche.get("grille") or [])}
+    irrev = g.get("foncier_hors_marche") == "oui" and g.get("irreversibilite") == "oui"
+    db_vert = g.get("vivant_finalite") == "oui" and g.get("place_au_vivant") == "oui"
+    return "sanctuaire" if (irrev and db_vert) else "hybride"
+
+
+def verdict_badge(vid, concepts):
+    """Badge du verdict d'un lieu. vid None → verdict non encore établi."""
+    if not vid:
+        return ('<span class="verdict verdict-na" title="Verdict non encore '
+                'établi : la nature d\'au moins un maillon de la chaîne n\'est '
+                'pas documentée.">Verdict à établir</span>')
+    for d in (concepts.get("verdict", {}) or {}).get("degres", []) or []:
+        if d["id"] == vid:
+            return (f'<span class="verdict verdict-{e(vid)}" '
+                    f'title="{e(clean(d.get("definition", "")))}">'
+                    f'{e(d["label"])}</span>')
+    return ""
+
+
+def compute_chain_context(fiches, by_uid):
+    """Attache à chaque fiche un champ `_ctx` — la liste des entités de contexte
+    de chaîne à montrer en étiquettes grisées (session #4, UI). Un lieu montre
+    ses porteurs ; un usufruitier, les porteurs des lieux où il intervient ; un
+    porteur, les réseaux dont il est membre."""
+    usuf_porteurs = {}
+    for f in fiches:
+        if f["categorie"] != "lieu":
+            continue
+        ch = f.get("chaine", {}) or {}
+        ports = ch.get("porteurs") or []
+        for u in (ch.get("usufruitiers") or []):
+            lst = usuf_porteurs.setdefault(u, [])
+            for p in ports:
+                if p not in lst:
+                    lst.append(p)
+    membre_reseaux = {}
+    for f in fiches:
+        if f["categorie"] != "reseau":
+            continue
+        for m in (f.get("membres") or []):
+            lst = membre_reseaux.setdefault(m, [])
+            if f["uid"] not in lst:
+                lst.append(f["uid"])
+
+    def lab(uid, kind, owner):
+        ent = by_uid.get(uid)
+        if not ent or uid == owner:
+            return None
+        return {"kind": kind, "uid": uid, "nom": ent.get("nom", uid),
+                "slug": CAT_SLUG.get(ent.get("categorie", ""), "l")}
+
+    for f in fiches:
+        cat, uid = f["categorie"], f["uid"]
+        ctx = []
+        if cat == "lieu":
+            for p in ((f.get("chaine", {}) or {}).get("porteurs") or []):
+                x = lab(p, "porteur", uid)
+                if x and x not in ctx:
+                    ctx.append(x)
+        elif cat == "usufruitier":
+            for p in usuf_porteurs.get(uid, []):
+                x = lab(p, "porteur", uid)
+                if x and x not in ctx:
+                    ctx.append(x)
+        elif cat == "porteur":
+            for r in membre_reseaux.get(uid, []):
+                x = lab(r, "reseau", uid)
+                if x and x not in ctx:
+                    ctx.append(x)
+        f["_ctx"] = ctx
+
+
+def ctx_labels_html(fiche, up=""):
+    """Étiquettes grisées de contexte de chaîne (porteur, réseau)."""
+    ctx = fiche.get("_ctx") or []
+    if not ctx:
+        return ""
+    pre = {"porteur": "Porteur", "reseau": "Réseau"}
+    parts = []
+    for c in ctx:
+        p = pre.get(c["kind"], "")
+        parts.append(
+            f'<a class="ctx-lab ctx-{e(c["kind"])}" '
+            f'href="{up}{c["slug"]}/{e(c["uid"])}.html" '
+            f'title="{p} : {e(c["nom"])}">'
+            f'<span class="ctx-k">{p}</span>&nbsp;{e(c["nom"])}</a>')
+    return '<span class="ctx-labs">' + "".join(parts) + "</span>"
+
+
 def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     concepts = cfg["concepts"]["concept_central"]
     project = cfg["concepts"]["project"]
@@ -1160,6 +1281,12 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                 "usufruitier": "Organisme usufruitier",
                 "modele": "Modèle voisin"}[cat]
 
+    # verdict calculé du lieu — badge dans l'entête (chantier 1bis)
+    verdict_html = ""
+    if cat == "lieu":
+        verdict_html = "\n  " + verdict_badge(compute_verdict(fiche, by_uid),
+                                              cfg["concepts"])
+
     # fil d'Ariane complet : Accueil › Catégorie › Fiche
     head = f"""<nav class="crumb" aria-label="Fil d'Ariane">
   <a href="../index.html">Accueil</a> ›
@@ -1167,8 +1294,8 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
   <span aria-current="page">{e(fiche['nom'])}</span>
 </nav>
 <div class="fiche-head">
-  <span class="tag tag-{cat}">{e(catlabel)}</span>
-  <h1>{e(fiche['nom'])}</h1>
+  <span class="tag tag-{cat}">{e(catlabel)}</span>{verdict_html}
+  <h1>{e(fiche['nom'])}{ctx_labels_html(fiche, "../")}</h1>
   <p class="fiche-sub">{e(clean(fiche.get('sous_titre', '')))}</p>
 </div>"""
     sub = clean(fiche.get("sous_titre", ""))
@@ -1255,6 +1382,13 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     rows = []
     if fiche.get("forme_juridique"):
         rows.append(("Forme juridique", e(clean(fiche["forme_juridique"]))))
+    if fiche.get("nature_interet") and cat in ("porteur", "usufruitier"):
+        rows.append(("Nature de l'intérêt",
+                     e(nature_label(fiche["nature_interet"], cfg["concepts"]))))
+    if cat == "porteur":
+        n_lieux_p = len(sc.get("chaine_uids", []) or [])
+        if n_lieux_p:
+            rows.append(("Lieux reliés", e(f"{n_lieux_p} dans l'annuaire")))
     if fiche.get("localisation"):
         l = fiche["localisation"]
         loc = ", ".join(x for x in [l.get("commune"), l.get("departement"),
@@ -1592,6 +1726,28 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
             f'{tri}<span class="chip-txt">{e(tgt["nom"])}'
             f'<span class="chip-cat">{e(CAT_LABEL.get(tcat, tcat))}</span>'
             f'</span></a>')
+    # Repères du réseau — nombre de porteurs et de lieux (session #4)
+    n_porteurs_res = sum(
+        1 for m in (fiche.get("membres") or [])
+        if (by_uid.get(m) or {}).get("categorie") == "porteur")
+    lieux_res = set(t["uid"] for t, _ in lieux_membres)
+    for m in (fiche.get("membres") or []):
+        msc = sc_by_uid.get(m)
+        if msc:
+            lieux_res |= set(msc.get("chaine_uids", []) or [])
+    rep_items = []
+    if n_porteurs_res:
+        rep_items.append(("Porteurs du réseau", str(n_porteurs_res)))
+    if lieux_res:
+        rep_items.append(("Lieux du réseau", str(len(lieux_res))))
+    reperes_html = ""
+    if rep_items:
+        dl = "".join(f'<div class="sb-item"><dt>{e(k)}</dt><dd>{e(v)}</dd></div>'
+                     for k, v in rep_items)
+        reperes_html = (f'<section><div class="score-bref reseau-reperes">'
+                        f'<p class="score-cap">Repères</p><dl>{dl}</dl>'
+                        f'</div></section>')
+
     membres_html = ""
     if chips:
         membres_html = (f'<section><h2 class="sec">Membres dans l\'annuaire</h2>'
@@ -1646,8 +1802,9 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
                 'réseaux</a></p>')
 
     defs = tri_defs(axes_cfg) if chips else ""
-    body = (defs + head + intro + resume + montage_html + membres_html
-            + distrib_html + analyse_html + fiab + sources_html + backlink)
+    body = (defs + head + intro + reperes_html + resume + montage_html
+            + membres_html + distrib_html + analyse_html + fiab + sources_html
+            + backlink)
     fdesc = meta_desc(fiche.get("resume", "") or fiche.get("sous_titre", ""), 250)
     return page(fiche["nom"], body, "reseaux.html", depth=1, project=project,
                 description=fdesc, path=f"r/{uid}.html", og_type="website")
@@ -1805,6 +1962,7 @@ def render_classement(all_sc, cfg):
         rows.append(f"""<tr data-cat="{cat}">
   <td class="rank">{i}</td>
   <td class="name"><a href="{href}">{e(f['nom'])}</a>
+      {ctx_labels_html(f, "")}
       <span class="row-sub">{e(clean(f.get('sous_titre','')))}</span></td>
   <td><span class="tag tag-{cat}">{catlabel[cat]}</span></td>
   {axes_cells}
@@ -3018,6 +3176,24 @@ main.wrap{padding-bottom:4rem;}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
 .tag-reseau{background:var(--ink);}
+/* verdict calculé du lieu — chantier 1bis */
+.verdict{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
+ font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-pill);
+ white-space:nowrap;border:1.5px solid currentColor;}
+.verdict-sanctuaire{color:var(--green-dk);background:rgba(53,96,38,.10);}
+.verdict-hybride{color:var(--gold-dk);background:rgba(138,100,32,.10);}
+.verdict-marchand{color:var(--terra-dk);background:rgba(143,63,37,.10);}
+.verdict-na{color:var(--faint);background:transparent;font-weight:600;}
+/* étiquettes de contexte de chaîne — porteur / réseau (session #4) */
+.ctx-labs{display:inline;}
+.ctx-lab{display:inline-block;vertical-align:middle;white-space:nowrap;
+ margin:.1rem 0 .1rem .4rem;font-size:.68rem;font-weight:400;
+ padding:.13rem .5rem;border-radius:var(--radius-pill);background:var(--beige);
+ color:var(--muted)!important;border:1px solid var(--line);
+ text-decoration:none;line-height:1.4;}
+.ctx-lab:hover{border-color:var(--muted);color:var(--ink)!important;}
+.ctx-k{font-size:.58rem;text-transform:uppercase;letter-spacing:.05em;
+ font-weight:700;color:var(--faint);}
 
 /* pentagone radar de profil à cinq axes */
 .tri{width:118px;height:auto;display:block;flex:0 0 auto;}
@@ -3786,6 +3962,7 @@ def verifier_chaines(fiches):
             # une entité membre d'un réseau est couverte : elle n'est pas
             # orpheline, elle attend que les lieux du réseau soient carvés.
             cites.update(f.get("membres") or [])
+    nature = {f["uid"]: f.get("nature_interet") for f in fiches}
     avert = []
     for f in sorted(fiches, key=lambda x: (x["categorie"], x["uid"])):
         cat, uid = f["categorie"], f["uid"]
@@ -3802,6 +3979,17 @@ def verifier_chaines(fiches):
                 if au and au not in usufs_ch:
                     avert.append(f"  lieu {uid} — articulation vers «{au}», "
                                  f"absent de la chaîne")
+            # garde-fou chantier 1bis : un montage privé doit s'accorder avec
+            # la nature_interet de son porteur.
+            mtype = ((f.get("montage", {}) or {}).get("type") or "")
+            if mtype.startswith("propriete_privee"):
+                want = ("privee_individuelle" if mtype.endswith("individuelle")
+                        else "commerciale")
+                for p in (ch.get("porteurs") or []):
+                    if nature.get(p) not in (want, None):
+                        avert.append(f"  lieu {uid} — montage «{mtype}» mais "
+                                     f"porteur «{p}» de nature «{nature.get(p)}» "
+                                     f"(attendu «{want}»)")
         elif cat in ("porteur", "usufruitier"):
             if uid not in cites:
                 avert.append(f"  {cat} {uid} — orphelin : cité par aucune chaîne")
@@ -3838,6 +4026,9 @@ def main():
         sc = score_fiche(f, gidx, ranking)
         all_sc.append((f, sc))
         by_uid[f["uid"]] = f
+
+    # contexte de chaîne — étiquettes grisées porteur / réseau (session #4, UI)
+    compute_chain_context(fiches, by_uid)
 
     # chaîne / Option A : relit l'indice des porteurs et usufruitiers à
     # travers leurs lieux reliés (indice intrinsèque → indice effectif).

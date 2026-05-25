@@ -8,6 +8,7 @@ localisation:
   commune: "Notre-Dame-des-Landes"
   departement: "Loire-Atlantique (44)"
   region: "Pays de la Loire"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.7100,47.3810&z=16"
 annee: 2018
 url: "https://encommun.eco/"
 resume: >
@@ -18,9 +19,7 @@ resume: >
   avaient été collectés moins d'un an après sa création. Les collectifs
   d'habitant·es et les activités collectives nées de la lutte en assurent l'usage.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de dotation « La Terre en commun »"
-  usufruitier: "Collectifs d'habitant·es et activités collectives de la ZAD"
+  type: propriete_protegee
   description: >
     Le fonds de dotation « La Terre en commun », personne morale créée par la loi
     du 4 août 2008, acquiert progressivement bâtis et terres pour en faire une
@@ -79,6 +78,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "La nature et la durée des titres d'usage des collectifs d'habitant·es ne sont pas documentées ; les conventions d'usage ne sont pas confirmées."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Les terres agricoles de la commune sont depuis 2019 dans un périmètre de protection des espaces agricoles et naturels, qui freine l'urbanisation ; mais aucun dispositif opposable spécifique (ORE, classement) attaché aux terres du fonds de dotation n'est documenté."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le fonds de dotation a été créé pour soustraire les terres à l'agriculture intensive et préserver le bocage humide ; la préservation de cette biodiversité remarquable est une finalité affichée et agie du lieu."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Les activités agricoles nées de la lutte récusent l'agriculture intensive ; le maintien du bocage et des pratiques non extractives est un objectif explicite du projet."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Le bocage humide — haies, mares, prairies — est conservé comme tel ; les naturalistes y ont relevé des populations-sources d'espèces protégées, et le lieu fait du maintien de ce milieu une part centrale de son projet."
 analyse:
   forces:
     - "Foncier acquis par un fonds de dotation non lucratif, sur la base de dons."

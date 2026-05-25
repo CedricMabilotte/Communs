@@ -8,6 +8,7 @@ localisation:
   commune: null
   departement: "Drôme (26)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.097,44.699&z=16"
 annee: 2022
 url: "https://www.aubascule.fr/"
 resume: >
@@ -24,9 +25,11 @@ resume: >
   Environnementale. L'Aube est à l'origine du projet de foncière de la
   Coopérative Oasis.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de dotation Fraternité pour Demain"
-  usufruitier: "Collectif de l'Aubascule (collectif d'habitant·es)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: collectif-aubascule
+      titre: convention
+      note: "Titre précis non documenté par les sources : la nature et la durée du titre d'usage liant le collectif au foncier ne sont pas publiques."
   description: >
     En 2022, l'écolieu de l'Aube a fait l'objet d'une donation au fonds de
     dotation Fraternité pour Demain, structure non lucrative qui en conserve la
@@ -88,6 +91,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "La nature et la durée du titre d'usage liant le collectif de l'Aubascule au foncier ne sont pas documentées : la sécurité de jouissance dans le temps ne peut être appréciée."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Une Obligation Réelle Environnementale a été signée fin 2024 pour 99 ans : dispositif opposable et durable interdisant les intrants chimiques, encadrant fauche et coupes, avec contrôle périodique."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le lieu est engagé dans une démarche Oasis de Biodiversité, dispose d'un pôle permacole et a sanctuarisé par ORE la nature des lieux : le vivant non-humain est une finalité affirmée et agie."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "L'ORE proscrit les intrants chimiques et prévoit une fauche raisonnée et saisonnière pour préserver les orchidées ; le pôle permacole atteste de pratiques de maintien du sol."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "L'écolieu, niché en combe, laisse une place effective au vivant — orchidées en nombre, arbres feuillus, espaces sanctuarisés par l'ORE pour 99 ans."
 analyse:
   forces:
     - "Foncier sanctuarisé par donation à un fonds de dotation non lucratif."

@@ -4,6 +4,7 @@ nom: "SCIC Les Semeurs de Graines"
 sous_titre: "Coopérative occupant l'Écolieu la Filerie par un bail à construction"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'intérêt collectif (SCIC)"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Controis-en-Sologne"
   departement: "Loir-et-Cher (41)"
@@ -89,6 +90,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant de la redevance versée par la SCIC à la famille Bargue au titre du bail à construction n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La SCIC forme aux métiers de la transition écologique, dont la permaculture, pratiques écologiques revendiquées ; la préservation de la biodiversité non-humaine n'est pas affichée comme une finalité centrale de la coopérative."
 analyse:
   forces:
     - "Coopérative ancrée localement, vingt-huit sociétaires en majorité du territoire."
@@ -117,6 +121,27 @@ fiabilite: >
   montant de la redevance, clauses du bail, clause de dévolution, publication
   des comptes.
 voir_aussi: [cooperative-oasis]
+dossier:
+  echelle:
+    personnes: "28 sociétaires, en majorité habitant·es du territoire"
+    lieux: "1 écolieu (la Filerie)"
+    surface: "Environ 1 hectare, entouré de 100 hectares de forêt"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Le projet documente publiquement son montage juridique ; les statuts de la SCIC ne sont pas joints à la fiche."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail à construction de dix-huit ans liant la SCIC à la famille Bargue, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail à construction de dix-huit ans ; clauses et redevance non documentées."
 sources:
   - titre: "La Société Coopérative d'Intérêt Collectif (SCIC) — Écolieu La Filerie"
     url: "https://www.lafilerie.org/rejoindre-la-scic-ls2g/la-soci%C3%A9t%C3%A9-coop%C3%A9rative-d-int%C3%A9r%C3%AAt-collectif-scic/"

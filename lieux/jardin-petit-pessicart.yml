@@ -8,6 +8,7 @@ localisation:
   commune: "Nice"
   departement: "Alpes-Maritimes (06)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=7.25040,43.71418&z=16"
 annee: 2021
 url: "https://cooperative-oasis.org/oasis/jardin-du-petit-pessicart/"
 resume: >
@@ -25,8 +26,9 @@ resume: >
   la Coopérative Oasis à hauteur de 130 000 €.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SCIC E3P — École de Permaculture du Petit Pessicart"
-  usufruitier: "SCIC E3P — École de Permaculture du Petit Pessicart (chaîne intégrée)"
+  articulations:
+    - usufruitier: scic-e3p-pessicart
+      titre: integre
   description: >
     La SCIC E3P, société coopérative d'intérêt collectif constituée sous forme
     de SAS à capital variable, a acquis en septembre 2021 la pleine propriété
@@ -87,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "La SCIC est propriétaire du foncier : son usage n'est borné par aucun titre à terme, la chaîne étant intégrée."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, statut d'espace protégé, clause environnementale) n'est documenté ; la chaîne étant intégrée, aucun bail ni convention ne porte de clause de cette nature."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le lieu est dédié à « la compréhension et à la régénération des écosystèmes » ; École de la Forêt et recherche sur la revégétalisation périurbaine traduisent concrètement cette finalité."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Centre de permaculture et démarche de design régénératif : les pratiques visent explicitement à entretenir et régénérer le sol et le milieu."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Tiers-lieu d'un hectare conduit en permaculture avec une École de la Forêt et une recherche sur la revégétalisation : des espaces sont effectivement aménagés pour le vivant."
 analyse:
   forces:
     - "Foncier acquis comptant en 2021, sans emprunt bancaire, par une collecte de fonds."

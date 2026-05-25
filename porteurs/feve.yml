@@ -4,6 +4,7 @@ nom: "FEVE — Fermes en Vie"
 sous_titre: "Foncière solidaire citoyenne portant le foncier agricole"
 statut_fiche: publie
 forme_juridique: "Foncière solidaire de l'économie sociale et solidaire"
+nature_interet: commerciale_encadree
 localisation: null
 annee: 2020
 url: "https://www.feve.co/"
@@ -20,7 +21,7 @@ resume: >
   sur environ 3 300 hectares accompagnés en transition agroécologique, pour
   plus de 60 millions d'euros collectés depuis sa création.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     FEVE acquiert la pleine propriété des fermes grâce à l'épargne citoyenne et
     en conserve la propriété pendant la durée du bail. L'usage est confié au
@@ -87,6 +88,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "FEVE communique sur son activité auprès de ses épargnant·es, mais ne relève pas d'un contrôle public comparable à celui d'une fondation reconnue d'utilité publique."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La finalité centrale est l'installation paysanne, mais FEVE conditionne l'éligibilité à une charte agroécologique et inscrit systématiquement des clauses environnementales dans ses baux : le vivant non-humain est présent via les pratiques, sans être une finalité centrale."
 analyse:
   forces:
     - "Foncière récente mobilisant largement l'épargne citoyenne pour l'installation paysanne."
@@ -119,6 +123,28 @@ fiabilite: >
   gouvernance, clause de dévolution, encadrement anti-spéculatif de l'option
   d'achat. Les chiffres d'activité évoluent rapidement.
 voir_aussi: [lurzaindia-sca, fonciere-terre-de-liens]
+dossier:
+  identite:
+    siren: "889353223"
+  echelle:
+    personnes: "Près de 78 agriculteur·rices installé·es ; environ 53 fermes financées."
+    lieux: "Environ 53 fermes."
+    surface: "Environ 3 300 hectares accompagnés en transition agroécologique."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+      note: "FEVE conditionne l'éligibilité à une charte agroécologique ; texte non localisé en ligne."
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail rural à clauses environnementales assorti d'une option d'achat ; acte type non publié."
 sources:
   - titre: "FEVE — Fermes en Vie, site officiel"
     url: "https://www.feve.co/"

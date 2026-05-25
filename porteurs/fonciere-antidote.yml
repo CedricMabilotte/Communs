@@ -4,6 +4,7 @@ nom: "Antidote"
 sous_titre: "Fonds de dotation cédant l'usage de lieux par bail emphytéotique de 99 ans"
 statut_fiche: publie
 forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
+nature_interet: non_lucrative
 localisation: null
 annee: 2021
 url: "https://aventure-antidote.org/comment-ca-marche/notre-fonctionnement/"
@@ -82,6 +83,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "Un fonds de dotation est soumis à des obligations déclaratives auprès de l'État ; la reddition de comptes au public n'est pas détaillée par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'objet du fonds est de transformer la propriété de lieux en propriété d'usage au profit des collectifs occupant·es ; aucune finalité de préservation de la biodiversité n'est affichée."
 analyse:
   forces:
     - "Fonctionnement non capitaliste, sans parts sociales ni rémunération du capital."
@@ -113,6 +117,24 @@ fiabilite: >
   dotation, détail des statuts, composition du conseil d'administration,
   éligibilité fiscale à l'intérêt général.
 voir_aussi: [fonds-la-terre-en-commun]
+dossier:
+  identite:
+    siren: "888226743"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+      note: "Le fonds se réfère à un « Manifeste Antidote » fixant ses valeurs ; texte non localisé en ligne."
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Cession d'usage par bail emphytéotique de 99 ans ; acte type non publié."
 sources:
   - titre: "Aventure Antidote — Notre fonctionnement"
     url: "https://aventure-antidote.org/comment-ca-marche/notre-fonctionnement/"

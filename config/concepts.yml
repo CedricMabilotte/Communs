@@ -204,13 +204,15 @@ categories:
       - pédagogie / accueil / éducation populaire
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Typologie de montage — les silhouettes (refonte #3, chantier 5)
+# Typologie de montage — les silhouettes (refonte #3, chantier 5 ; #4, ch. 1bis)
 # ─────────────────────────────────────────────────────────────────────────────
-# Typologie DESCRIPTIVE, distincte de la typologie normative des pôles : elle dit
-# la forme juridique du montage, jamais le pôle. Une même silhouette peut servir
-# un commun libre comme un intérêt général institué. Première couche du modèle à
-# deux couches ; la seconde est l'articulation structurée (voir `titres` et le
-# bloc `montage:` des fiches de lieu).
+# Typologie DESCRIPTIVE : chaque silhouette nomme le MÉCANISME de dissociation —
+# la forme de l'assemblage —, jamais sa réussite ni la nature de son porteur.
+# Le chantier 1bis (session #4) l'a purifiée : la qualité lucrative ou non d'un
+# maillon se lit sur l'axe orthogonal `nature_interet`, et le caractère puriste
+# d'un lieu sur le `verdict` calculé — pas sur la silhouette. Première couche du
+# modèle à deux couches ; la seconde est l'articulation structurée (voir `titres`
+# et le bloc `montage:` des fiches de lieu).
 montages:
   - id: "demembrement"
     label: "Démembrement nue-propriété / usufruit"
@@ -227,18 +229,22 @@ montages:
       le lieu.
     outils: "Démembrement de propriété (art. 544 et 578 C. civ.), acte notarié constitutif d'usufruit."
     titres_frequents: [usufruit]
-  - id: "propriete_sanctuarisee"
-    label: "Propriété sanctuarisée + bail de long terme"
+  - id: "propriete_protegee"
+    label: "Propriété conservée + bail de long terme"
     definition: >
-      L'organisme non lucratif reste pleinement propriétaire du foncier, qu'il
-      sanctuarise par ses statuts ; l'usage est confié par un bail de longue
-      durée — bail rural, souvent environnemental, ou bail emphytéotique — ou
-      par convention. Modalité dominante de l'annuaire.
+      Un porteur dédié conserve la pleine propriété du foncier et en confie
+      l'usage par un bail de longue durée — bail rural, souvent environnemental,
+      ou bail emphytéotique — ou par convention. La silhouette décrit ce
+      mécanisme ; la nature du porteur — non lucrative, désactivée ou
+      commerciale — se lit sur l'axe de lucrativité, et le caractère effectif
+      de la sanctuarisation sur le verdict du lieu. Modalité dominante de
+      l'annuaire.
     en_clair: >
-      Une structure non lucrative achète la terre et s'engage à ne jamais la
-      revendre ; elle en remet l'usage, pour longtemps, à celles et ceux qui la
-      font vivre. La propriété ne bouge plus ; seul l'usage circule.
-    outils: "Pleine propriété + clause statutaire de sanctuarisation ; bail rural (≥ 9 ans), bail rural environnemental, bail emphytéotique (jusqu'à 99 ans), convention."
+      Une structure garde la propriété de la terre et en remet l'usage, pour
+      longtemps, à celles et ceux qui la font vivre. La propriété ne circule
+      pas ; seul l'usage circule. Reste à savoir qui tient cette propriété — et
+      si elle est vraiment hors d'atteinte du marché.
+    outils: "Pleine propriété conservée + clause statutaire ; bail rural (≥ 9 ans), bail rural environnemental, bail emphytéotique (jusqu'à 99 ans), convention."
     titres_frequents: [bail_rural, bail_emphyteotique, bail_reel_solidaire, convention]
   - id: "propriete_publique"
     label: "Propriété publique inaliénable"
@@ -253,19 +259,50 @@ montages:
     outils: "Domanialité publique, convention d'occupation domaniale, autorisation d'occupation temporaire, délégation de gestion."
     titres_frequents: [domanialite, convention]
   - id: "propriete_collective"
-    label: "Propriété collective verrouillée"
+    label: "Propriété collective"
     definition: >
-      Le foncier est porté par une structure collective — société civile,
-      coopérative, groupement foncier agricole — dont les statuts verrouillent
-      la revente et la lucrativité. Souvent une chaîne intégrée : le collectif
-      qui détient est aussi celui qui use.
+      Le foncier est détenu par une structure collective — société civile,
+      coopérative, groupement foncier agricole. Souvent une chaîne intégrée :
+      le collectif qui détient est aussi celui qui use. Le degré de verrouillage
+      anti-spéculatif et la nature lucrative de la structure se lisent sur l'axe
+      de lucrativité, non sur la silhouette.
     en_clair: >
       Celles et ceux qui vivent le lieu en sont aussi, ensemble, les
-      propriétaires — à travers une structure dont les règles interdisent de
-      revendre pour un gain privé. Pas de propriétaire au-dessus d'eux : le
-      collectif se tient lui-même.
-    outils: "Société civile, coopérative (SCIC), groupement foncier agricole ; statuts à verrou d'actif et clause anti-spéculative."
+      propriétaires — à travers une structure qu'ils tiennent collectivement.
+      Pas de propriétaire au-dessus d'eux ; reste à savoir si leurs règles
+      interdisent vraiment de revendre pour un gain privé.
+    outils: "Société civile, coopérative (SCIC), groupement foncier agricole."
     titres_frequents: [integre, convention]
+  - id: "propriete_privee_individuelle"
+    label: "Propriété privée individuelle"
+    definition: >
+      Le foncier reste la pleine propriété d'une ou plusieurs personnes
+      physiques ; il n'est pas soustrait au marché. L'usage peut être confié par
+      un titre — bail, convention, commodat —, mais le sol demeure un patrimoine
+      privé, transmissible et vendable. Cas-limite de l'annuaire : une terre que
+      le montage ne libère pas.
+    en_clair: >
+      La terre appartient à une famille, à une personne — elle peut être vendue,
+      transmise, héritée comme n'importe quel bien. Un collectif peut l'occuper
+      et l'animer, mais rien n'empêche, un jour, sa mise en vente. La libération
+      n'a pas eu lieu.
+    outils: "Pleine propriété individuelle (art. 544 C. civ.) ; usage éventuellement confié par bail, convention ou commodat."
+    titres_frequents: [bail_rural, convention, commodat]
+  - id: "propriete_privee_commerciale"
+    label: "Propriété privée commerciale"
+    definition: >
+      Le foncier est détenu par une société à but lucratif — SCI patrimoniale,
+      société commerciale — dont les parts portent la valeur du bien et restent
+      cessibles. Le sol est un actif. L'usage peut être conventionné, mais le
+      montage valorise un patrimoine privé plutôt qu'il ne libère une terre.
+      Cas-limite de l'annuaire.
+    en_clair: >
+      La terre est logée dans une société : ce qu'on possède, ce sont des parts,
+      et ces parts valent ce que vaut le bien. Le lieu peut se présenter en
+      collectif ou en écolieu — il sert d'abord un patrimoine. C'est la « fausse
+      libération » la plus trompeuse.
+    outils: "Société commerciale ou SCI patrimoniale, parts cessibles portant la valeur du foncier ; usage éventuellement conventionné."
+    titres_frequents: [convention, bail_rural]
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Vocabulaire des titres d'articulation (refonte #3, chantier 5)
@@ -294,6 +331,12 @@ titres:
     definition: >
       Bail de longue durée consenti par un organisme de foncier solidaire,
       dissociant durablement le bâti du foncier.
+  - id: bail_a_construction
+    label: "Bail à construction"
+    definition: >
+      Bail de 18 à 99 ans par lequel le preneur s'engage à édifier des
+      constructions ; il en a la propriété et un droit réel pendant la durée du
+      bail, sans transfert de la propriété du sol (art. L. 251-1 C. constr.).
   - id: convention
     label: "Convention d'usage"
     definition: >
@@ -314,6 +357,130 @@ titres:
     definition: >
       Le porteur et l'usufruitier sont une seule entité : la propriété et
       l'usage ne sont pas dissociés (coopérative d'habitants propriétaire).
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Axe de lucrativité — `nature_interet` (refonte #3, chantier 1bis)
+# ─────────────────────────────────────────────────────────────────────────────
+# Axe DESCRIPTIF orthogonal à la silhouette : il qualifie la nature lucrative ou
+# non d'un maillon — porteur ou usufruitier —, indépendamment de la forme du
+# montage. Chaque fiche de porteur et d'usufruitier déclare son `nature_interet:`.
+# Le seuil puriste est la DÉSACTIVATION : l'intérêt privé n'est neutralisé que
+# lorsque 100 % du capital d'une société est détenu par des organismes non
+# lucratifs d'intérêt général ou d'utilité publique.
+nature_interet:
+  - id: non_lucrative
+    label: "Non lucrative"
+    definition: >
+      Personne morale structurellement non lucrative : association loi 1901,
+      fondation, fonds de dotation, personne publique ou établissement public.
+      L'intérêt privé est absent par construction — pas de capital appropriable.
+    en_clair: >
+      Une structure qui, par sa forme même, n'appartient à personne et ne
+      rapporte à personne : rien à revendre, rien à empocher.
+  - id: commerciale_desactivee
+    label: "Commerciale à intérêt privé désactivé"
+    definition: >
+      Société — commerciale ou civile — dont la totalité des parts ou actions
+      est détenue par un ou des organismes non lucratifs d'intérêt général ou
+      d'utilité publique. La forme est commerciale, mais l'intérêt privé y est
+      entièrement désactivé : aucune personne privée ne peut capter la valeur.
+    en_clair: >
+      Une société sur le papier, mais dont chaque part est aux mains d'une
+      fondation ou d'un organisme d'intérêt général : la coquille est
+      commerciale, le contenu ne profite à aucun particulier.
+  - id: commerciale_encadree
+    label: "Commerciale à lucrativité encadrée"
+    definition: >
+      Société à lucrativité statutairement bornée mais à capital partiellement
+      privé : SCIC, société en commandite par actions à actionnariat solidaire,
+      foncière solidaire agréée ESUS. L'intérêt privé y est présent mais
+      discipliné — plus-value plafonnée, verrou d'actif, agrément.
+    en_clair: >
+      Une société qui s'impose des règles : pas de gros gains, un cadre
+      solidaire. L'intérêt privé n'a pas disparu — il est tenu en bride.
+  - id: commerciale
+    label: "Commerciale à lucrativité ouverte"
+    definition: >
+      Société à but lucratif non bornée par les statuts : société commerciale
+      ordinaire à parts cessibles ; mais aussi société civile d'exploitation
+      agricole — GAEC, EARL, SC agricole — qui valorise un intérêt collectif
+      lucratif, propriété de ses associé·es exploitant·es, et non un intérêt
+      général désintéressé.
+    en_clair: >
+      Une structure faite pour rapporter à ses membres : une société de marché,
+      ou une exploitation agricole dont les associé·es vivent du produit. Rien
+      d'illégitime — mais ce n'est pas un commun désintéressé.
+  - id: privee_individuelle
+    label: "Privée individuelle"
+    definition: >
+      Personne physique détenant un foncier en propre — patrimoine privé
+      individuel, transmissible et vendable.
+    en_clair: >
+      Une personne, une famille : la terre est leur bien, comme une maison ou
+      un terrain ordinaire.
+  - id: inconnu
+    label: "Nature non établie"
+    definition: >
+      La nature lucrative ou non du maillon n'est pas établie par les sources :
+      statuts non publiés, forme juridique ambiguë (société civile d'habitants,
+      GFA, collectif sans forme juridique publiée). Valeur par défaut — jamais
+      fabriquée. Un maillon de nature inconnue empêche le verdict `sanctuaire`.
+    en_clair: >
+      On ne sait pas encore si cette structure laisse ou non capter un intérêt
+      privé : faute de statuts publics, on ne tranche pas.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Le verdict du lieu — `verdict` calculé (refonte #3, chantier 1bis)
+# ─────────────────────────────────────────────────────────────────────────────
+# Le verdict n'est JAMAIS saisi : le générateur le calcule pour chaque lieu, à
+# partir de la chaîne (axe `nature_interet` de chaque maillon), de
+# l'irréversibilité du foncier et des critères d'habitat du vivant (D-B). Une
+# seule source de vérité — la carte ne peut plus contredire le radar. « Sanctuariser »
+# n'est pas une forme : c'est ce verdict, à son sommet.
+verdict:
+  regle: >
+    `marchand` si la chaîne compte un maillon `commerciale` ou
+    `privee_individuelle`. Sinon `hybride` si elle compte un maillon
+    `commerciale_encadree`. Sinon — chaîne entièrement `non_lucrative` ou
+    `commerciale_desactivee` — `sanctuaire` lorsque, de plus, le foncier est
+    irréversiblement hors-marché ET les critères d'habitat du vivant (D-B) sont
+    au vert ; à défaut de cette dernière condition, le lieu reste `hybride`
+    (commun juridiquement abouti, mais habitat du vivant non établi). Le verdict
+    `sanctuaire` ne s'allume jamais tant qu'un maillon de la chaîne est de
+    nature `inconnu`, ni tant que les critères D-B sont `inconnu` : il émerge
+    au fil du peuplement du corpus, jamais par défaut.
+  degres:
+    - id: marchand
+      label: "Montage marchand"
+      definition: >
+        La chaîne comporte un maillon à lucrativité ouverte ou un propriétaire
+        privé individuel : la valeur du foncier reste captable.
+      en_clair: >
+        Quelque part dans le montage, quelqu'un peut encore gagner de l'argent
+        sur cette terre. Elle n'est pas libérée.
+    - id: hybride
+      label: "Montage hybride"
+      definition: >
+        La chaîne ne comporte aucun maillon marchand, mais au moins un maillon
+        à lucrativité encadrée : intérêt privé discipliné, non désactivé. Y
+        figure aussi le commun juridiquement abouti dont l'habitat du vivant
+        n'est pas encore établi.
+      en_clair: >
+        Un montage solide et de bonne foi, mais pas tout à fait pur : un maillon
+        garde une part d'intérêt privé, ou la place faite au vivant reste à
+        confirmer.
+    - id: sanctuaire
+      label: "Sanctuaire"
+      definition: >
+        La formule fondatrice est entièrement tenue : foncier irréversiblement
+        hors-marché, chaîne entièrement non lucrative ou à intérêt privé
+        désactivé, et habitat du vivant (D-B) établi. Incarnation visible du
+        pôle « Le commun libre et vivant ». Son extrême le plus pur inclut la
+        terre rendue à la vie sauvage, accès humain volontairement exclu.
+      en_clair: >
+        Une terre vraiment libre : nul ne peut la vendre, nul ne peut en tirer
+        un gain privé, et la vie — humaine et non-humaine — y a sa place
+        pleine. C'est l'aboutissement, rare, de la démarche.
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Modèles voisins de référence (comparaison — hors des 3 catégories)

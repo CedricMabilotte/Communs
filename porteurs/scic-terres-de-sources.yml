@@ -4,6 +4,7 @@ nom: "SCIC Terres de Sources"
 sous_titre: "Coopérative territoriale protégeant le foncier des aires de captage"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'intérêt collectif (SCIC) multi-acteurs"
+nature_interet: commerciale_encadree
 localisation: null
 annee: 2022
 url: "https://www.eaudubassinrennais-collectivite.fr/blog/la-scic-terres-de-sources-est-creee/"
@@ -83,6 +84,9 @@ grille:
   - critere: redevabilite_publique
     valeur: oui
     note: "La collectivité Eau du Bassin Rennais rend compte publiquement de sa politique foncière et la SCIC associe collectivités et citoyen·nes."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La finalité centrale est la protection de la ressource en eau potable ; l'aménagement des terres en haies, mares et boisements porte une action favorable au vivant non-humain, sans que la biodiversité en soit la finalité centrale."
 analyse:
   forces:
     - "Foncier des aires de captage acquis en propriété publique, fortement protégé."
@@ -110,6 +114,25 @@ fiabilite: >
   de clauses de pratiques, débouchés via les marchés publics de restauration
   collective. Non confirmé : surfaces acquises à jour, détail des comptes de la
   SCIC.
+dossier:
+  identite:
+    siren: "912047271"
+    adresse: "Neway Mabilais, 2 rue de la Mabilais, 35000 Rennes"
+  echelle:
+    personnes: "105 sociétaires à la création, répartis en six collèges."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Eau du Bassin Rennais — La SCIC Terres de Sources est créée"
     url: "https://www.eaudubassinrennais-collectivite.fr/blog/la-scic-terres-de-sources-est-creee/"

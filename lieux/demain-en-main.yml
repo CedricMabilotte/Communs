@@ -8,6 +8,7 @@ localisation:
   commune: "Locoal-Mendon"
   departement: "Morbihan (56)"
   region: "Bretagne"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-3.1,47.7167&z=16"
 annee: 2021
 url: "https://demainenmain.fr/"
 resume: >
@@ -23,8 +24,10 @@ resume: >
   capitaux propres des habitant·es.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SCIC Écovillage de Keruzerh (société coopérative d'intérêt collectif)"
-  usufruitier: "Coopérative d'habitants de Keruzerh (collectif d'habitant·es)"
+  articulations:
+    - usufruitier: habitants-keruzerh
+      titre: convention
+      note: "La coopérative d'habitants loue les logements à la SCIC ; nature et durée précises du titre d'usage non documentées par les sources."
   description: >
     Le foncier et le bâti du hameau de Keruzerh sont détenus en pleine propriété
     par la SCIC Écovillage de Keruzerh, société coopérative d'intérêt collectif
@@ -86,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "La nature et la durée du titre d'usage liant la coopérative d'habitants à la SCIC propriétaire ne sont pas documentées par les sources."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale au titre d'usage) n'est documenté par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'écovillage affiche une vocation de transition écologique ; la préservation ou l'accueil de la biodiversité comme finalité propre n'est pas explicitement documenté."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "Le projet associe maraîchage et écovillage dans une logique de transition écologique ; le mode de production agricole précis (biologique, agroécologique) n'est pas documenté par les sources."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Le foncier d'une vingtaine d'hectares comprend une dizaine d'hectares de forêt aux côtés des terres agricoles ; aucun aménagement délibéré pour le vivant n'est documenté."
 analyse:
   forces:
     - "Chaîne entièrement coopérative, sans maillon marchand à lucrativité ouverte."

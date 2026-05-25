@@ -4,6 +4,7 @@ nom: "État — domaine du Larzac"
 sous_titre: "Collectivité publique propriétaire des 6 300 hectares du plateau"
 statut_fiche: publie
 forme_juridique: "Propriété publique de l'État"
+nature_interet: non_lucrative
 localisation:
   commune: "La Cavalerie / Millau"
   departement: "Aveyron (12)"
@@ -86,6 +87,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: oui
     note: "Le bail emphytéotique, signé en 1985 et prolongé jusqu'en 2083, offre à la SCTL un titre d'usage exceptionnellement long et sécurisé."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Le domaine a été conservé puis confié dans une finalité de revitalisation agricole et collective humaine du plateau ; aucune finalité de préservation de la biodiversité n'est affichée par l'État sur ce domaine."
 analyse:
   forces:
     - "Propriété publique : le niveau de protection foncière le plus élevé."
@@ -113,6 +117,24 @@ fiabilite: >
   gestion aux usager·es. Non confirmé : statut domanial précis (domaine public
   ou privé de l'État), montant de la redevance emphytéotique.
 voir_aussi: [sctl]
+dossier:
+  echelle:
+    surface: "Environ 6 300 hectares du plateau du Larzac."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique État-SCTL signé en 1985, prolongé en 2013 jusqu'en 2083 ; texte non accessible en ligne."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique consenti par l'État à la SCTL, échéance 2083 ; acte non accessible en ligne."
 sources:
   - titre: "SCTL — Larzac.org"
     url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"

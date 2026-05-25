@@ -8,6 +8,7 @@ localisation:
   commune: "Chanéac (Treynas)"
   departement: "Ardèche (07)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.2991,44.9160&z=16"
 annee: 1989
 url: "https://www.prolongomaif.ch/longo-ma%C3%AF/coop%C3%A9ratives/treynas-fr/"
 resume: >
@@ -22,9 +23,11 @@ resume: >
   inaliénable par le Fonds de Terre Européenne ; la coopérative autogérée en
   assure l'usage.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
-  usufruitier: "Coopérative Longo Maï de Treynas (collectif autogéré)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: cooperatives-longo-mai
+      titre: convention
+      note: "Titre précis non documenté par les sources : les actes formalisant l'usage de Treynas ne sont pas détaillés."
   description: >
     Le foncier de Treynas est détenu de façon inaliénable par le Fonds de Terre
     Européenne, fondation de droit suisse qui sanctuarise la propriété des
@@ -84,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis la fin des années 1980, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Le site mêle forêt et terres agricoles, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté pour le foncier de Treynas."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La gestion d'une forêt de 100 hectares et l'agriculture entretiennent un milieu de montagne, mais la préservation de la biodiversité non-humaine n'est pas affichée comme une finalité propre du lieu dans les sources."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "L'agriculture et le maraîchage relèvent de pratiques de maintien, mais la sylviculture porte sur une douglasaie, plantation résineuse exploitée, dont le caractère régénérant n'est pas documenté : pratiques mixtes."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Le site comporte une forêt et un milieu de montagne au bout d'une vallée enclavée, mais aucun aménagement explicite en faveur du vivant ni gestion conservatoire de la forêt n'est documenté."
 analyse:
   forces:
     - "Foncier de 200 hectares sanctuarisé de façon inaliénable."

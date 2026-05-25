@@ -8,6 +8,7 @@ localisation:
   commune: "Bruailles"
   departement: "Saône-et-Loire (71)"
   region: "Bourgogne-Franche-Comté"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.2842,46.5732&z=16"
 annee: null
 url: "https://www.domainedeseveils.fr/"
 resume: >
@@ -24,8 +25,10 @@ resume: >
   Oasis sur la coopération et l'intelligence collective.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SAS Le Temps des Possibles"
-  usufruitier: "SCIC Le Domaine des Éveils (SCIC sous forme de SAS)"
+  articulations:
+    - usufruitier: scic-domaine-des-eveils
+      titre: convention
+      note: "Titre précis non documenté par les sources : la nature et la durée du titre d'usage liant la SCIC exploitante à la SAS propriétaire ne sont pas publiées."
   description: >
     Le foncier du Domaine des Éveils est détenu par la SAS Le Temps des
     Possibles, société par actions dont les titres sont proposés à la valeur
@@ -88,6 +91,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "La nature et la durée du titre d'usage liant la SCIC exploitante à la SAS propriétaire ne sont pas documentées : la sécurité de jouissance ne peut être appréciée."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté par les sources."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le domaine affiche la préservation de la biodiversité parmi ses engagements — sauvegarde des grands arbres, espaces sauvages laissés à toutes les espèces, maintien de la mare — finalité présente et agie."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "Le domaine entretient un grand potager et un verger ancien dans une logique de soin du lieu ; le mode de culture précis et l'empreinte de l'activité de gîte ne sont pas documentés."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Sur ses 16 hectares de prairies, forêts et jardins, le domaine maintient une mare et préserve des espaces sauvages laissés à toutes les espèces : des espaces sont effectivement laissés au vivant."
 analyse:
   forces:
     - "Gouvernance coopérative réunissant habitant·es et salarié·es du domaine."

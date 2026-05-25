@@ -8,6 +8,7 @@ localisation:
   commune: "Saint-Martin-de-Crau"
   departement: "Bouches-du-Rhône (13)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.8127,43.6396&z=16"
 annee: 1990
 url: "https://www.prolongomaif.ch/longo-ma%C3%AF/coop%C3%A9ratives/mas-de-granier-fr/"
 resume: >
@@ -23,9 +24,11 @@ resume: >
   inaliénable par le Fonds de Terre Européenne ; la coopérative autogérée en
   assure l'usage.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
-  usufruitier: "Coopérative Longo Maï du Mas de Granier (collectif autogéré)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: cooperatives-longo-mai
+      titre: convention
+      note: "Titre précis non documenté par les sources : les actes formalisant l'usage collectif liant la coopérative au foncier de la fondation ne sont pas détaillés."
   description: >
     Le foncier du Mas de Granier est détenu de façon inaliénable par le Fonds
     de Terre Européenne, fondation de droit suisse qui sanctuarise la propriété
@@ -85,6 +88,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1990, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "La ferme conduit ses prairies et cultures en bio, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale au bail) n'est documenté pour le foncier du Mas de Granier."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Les prairies naturelles à foin de Crau (AOC) et le maraîchage biologique ménagent le vivant, mais la préservation de la biodiversité non-humaine n'est pas affichée comme une finalité propre du lieu dans les sources."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Maraîchage biologique, prairies naturelles irrigables et cultures céréalières et oléicoles : des pratiques de maintien attestées, sans logique extractive."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Les prairies naturelles de la plaine de la Crau accueillent une faune et une flore propres, mais aucun aménagement explicite en faveur du vivant (haies, mares, friches gérées) n'est documenté."
 analyse:
   forces:
     - "Foncier sanctuarisé de façon inaliénable depuis 1990."

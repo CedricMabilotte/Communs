@@ -4,6 +4,7 @@ nom: "Société Civile des Terres du Larzac"
 sous_titre: "Office foncier local gérant les terres publiques du Larzac"
 statut_fiche: publie
 forme_juridique: "Société civile"
+nature_interet: inconnu
 localisation: null
 annee: 1985
 url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
@@ -80,6 +81,9 @@ grille:
   - critere: loyer_soutenable
     valeur: oui
     note: "La SCTL attribue l'usage par baux ruraux, dont le fermage est plafonné par barème préfectoral ; office foncier local, elle ne recherche pas un revenu locatif de marché."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "La SCTL est un office foncier local organisant l'installation paysanne ; la place faite au vivant non-humain dans les baux attribués ou les pratiques agricoles n'est pas documentée par les sources."
 analyse:
   forces:
     - "Structure d'usage dont les associés sont les utilisateurs eux-mêmes."
@@ -105,6 +109,28 @@ fiabilite: >
   l'usage aux paysan·nes par des baux de long terme, associés étant les utilisateurs
   des terres, hausse du nombre de paysan·nes d'environ 20 %. Non confirmé : clauses
   environnementales des baux, modalités de vote et de transparence interne.
+dossier:
+  identite:
+    siren: "331605527"
+    adresse: "Montredon, 12100 La Roque-Sainte-Marguerite"
+  echelle:
+    surface: "6 300 hectares de terres du Larzac"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de la société civile non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans conclu avec l'État (échéance 2083), non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique avec l'État en amont ; baux ruraux attribués aux paysan·nes, non publiés."
 sources:
   - titre: "SCTL — Larzac.org"
     url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"

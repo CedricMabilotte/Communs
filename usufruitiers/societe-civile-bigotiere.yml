@@ -4,6 +4,7 @@ nom: "Société civile de la Bigotière"
 sous_titre: "Société civile d'habitant·es propriétaire et usagère de l'écohameau de la Bigotière"
 statut_fiche: publie
 forme_juridique: "Société civile (d'attribution)"
+nature_interet: inconnu
 localisation:
   commune: "Épiniac"
   departement: "Ille-et-Vilaine (35)"
@@ -90,6 +91,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Les modalités financières entre la société civile et ses associé·es habitant·es — redevance, charges — ne sont pas documentées par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La société civile porte l'habitat participatif de l'écohameau, pensé pour ses associé·es habitant·es ; la préservation de la biodiversité non-humaine n'est pas affichée parmi les finalités de ce maillon."
 analyse:
   forces:
     - "Foncier porté collectivement par les habitant·es eux-mêmes, en société civile."
@@ -122,6 +126,30 @@ fiabilite: >
   ou société civile immobilière), mode de décision, modalités de cession des
   parts, clause de dévolution, transparence comptable.
 voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "821271442"
+    adresse: "1 La Bigotière, 35120 Épiniac"
+  echelle:
+    personnes: "Environ 22 résident·es ; 9 logements"
+    lieux: "1 écohameau"
+    surface: "4,3 hectares, dont 1,5 ha de terres agricoles et 0,5 ha de bois"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Forme exacte et statuts de la société civile non documentés (société civile d'attribution ou immobilière selon les sources)."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Chaîne intégrée : la société civile est propriétaire et entité d'usage ; acte d'acquisition de 2016 non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Pas de bail vis-à-vis d'un tiers : les habitant·es détiennent leur jouissance via leur qualité d'associé·es."
 sources:
   - titre: "La Bigotière — L'Habitat Participatif"
     url: "https://www.bigotiere.fr/habitat-participatif/"

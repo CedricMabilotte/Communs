@@ -4,6 +4,7 @@ nom: "Groupements fonciers agricoles mutuels et solidaires"
 sous_titre: "Sociétés civiles agricoles de propriété foncière collective"
 statut_fiche: publie
 forme_juridique: "Société civile (groupement foncier agricole)"
+nature_interet: inconnu
 localisation: null
 annee: null
 url: "https://ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyens"
@@ -77,6 +78,9 @@ grille:
   - critere: loyer_soutenable
     valeur: oui
     note: "Le GFA bailleur loue par bail rural : le fermage est plafonné par barème préfectoral et non calé sur un loyer de marché libre ; le GFA mutuel ou solidaire se distingue du GFA d'épargnants en ne recherchant pas le rendement."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Le GFA mutuel ou solidaire est une forme générique d'outil foncier ; la place faite au vivant non-humain dépend des clauses statutaires et de l'activité menée, non documentées par les sources."
 analyse:
   forces:
     - "Société civile agricole permettant une propriété foncière collective."
@@ -101,6 +105,22 @@ fiabilite: >
   Terre de Liens, distinction d'avec le GFA d'épargnants. Non confirmé : modalités
   de vote, clauses environnementales, transparence interne.
 voir_aussi: [fondation-terre-de-liens, fonciere-terre-de-liens]
+dossier:
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Fiche générique sur une forme juridique : les statuts varient d'un GFA à l'autre."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Le GFA bailleur loue par bail rural ; les baux ne sont pas publiés."
 sources:
   - titre: "Terre de Liens — Découvrir les GFA/SCI citoyen·nes"
     url: "https://ressources.terredeliens.org/les-ressources/decouvrir-les-gfa-sci-citoyens"

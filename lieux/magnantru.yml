@@ -8,6 +8,7 @@ localisation:
   commune: "Périgné"
   departement: "Deux-Sèvres (79)"
   region: "Nouvelle-Aquitaine"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-0.2542,46.1872&z=16"
 annee: 2021
 url: "https://www.feve.co/les-feves-financees/magnantru"
 resume: >
@@ -22,9 +23,16 @@ resume: >
   la vente à la ferme, l'accueil en chambres d'hôtes, et a introduit un élevage
   d'oies.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière de FEVE — Fermes en Vie (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "EARL La Ferme de Magnantru (société civile agricole)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: earl-ferme-de-magnantru
+      titre: bail_rural
+      note: "Bail rural environnemental, assorti d'une option d'achat ouverte aux exploitant·es au bout de sept ans."
+  liants:
+    - intitule: "Clauses environnementales du bail rural"
+      niveau: usufruitier
+      portee: contraignante
+      description: "Le bail rural environnemental comporte des clauses en faveur de la biodiversité et du maintien de l'agriculture biologique sur le lieu."
   description: >
     La foncière solidaire de FEVE a acquis la pleine propriété de la ferme —
     terres, bâtiments, partie du matériel — grâce à l'épargne citoyenne. Elle en
@@ -87,6 +95,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'EARL dispose d'une jouissance durable, avec en outre une option d'achat à sept ans."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Le bail rural environnemental comporte des clauses contraignantes en faveur de la biodiversité et du maintien de l'agriculture biologique : dispositif opposable inscrit au bail."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Les clauses de biodiversité du bail attestent une attention au vivant non-humain ; il n'apparaît cependant pas comme finalité affirmée du projet, centré sur la transmission agricole."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "La ferme est en agriculture biologique depuis 2010, maintien garanti par les clauses du bail rural environnemental : pratiques de maintien de la capacité régénérative du sol attestées."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Les clauses de biodiversité du bail engagent en faveur du vivant ; l'existence d'éléments concrets effectivement aménagés (haies, mares, friches) n'est pas détaillée par les sources."
 analyse:
   forces:
     - "Foncier acquis hors marché spéculatif par l'épargne citoyenne en 2021."

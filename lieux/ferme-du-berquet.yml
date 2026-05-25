@@ -8,6 +8,7 @@ localisation:
   commune: "Monoblet"
   departement: "Gard (30)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=3.8527,44.0090&z=16"
 annee: 2024
 url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
 resume: >
@@ -24,9 +25,12 @@ resume: >
   lieu a été acquise par le fonds de dotation Antidote, qui en confie l'usage à
   l'association La Faille par un bail emphytéotique.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Antidote (fonds de dotation)"
-  usufruitier: "La Faille (association loi 1901)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: association-la-faille
+      titre: bail_emphyteotique
+      duree: "longue durée"
+      note: "Clauses et durée précise du bail non documentées par les sources."
   description: >
     La propriété de la ferme du Berquet a été transmise au fonds de dotation
     Antidote — la donation à La Faille a été annoncée comme signée le 19 mars,
@@ -87,6 +91,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail emphytéotique de longue durée, qui sécurise la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements civils."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucune obligation réelle environnementale ni clause environnementale du bail emphytéotique n'est documentée ; les clauses du bail ne sont pas connues des sources."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Les sources décrivent les vocations agricole et culturelle du lieu, mais ne mentionnent pas le vivant non-humain comme cohabitant parmi ses finalités."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le maraîchage est conduit en traction animale et la châtaigne valorise un patrimoine arboré existant, pratiques de faible prélèvement préservant le sol."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "La culture de la châtaigne suppose un couvert arboré, mais les sources ne documentent pas d'aménagements (haies, mares, friches) spécifiquement dédiés au vivant non-humain."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."

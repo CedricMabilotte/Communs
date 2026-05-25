@@ -4,6 +4,7 @@ nom: "Association du Domaine du Rayol"
 sous_titre: "Association loi 1901 gestionnaire du Domaine du Rayol pour le Conservatoire du littoral"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Le Rayol-Canadel-sur-Mer"
   departement: "Var (83)"
@@ -90,6 +91,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "L'existence et le montant d'une redevance versée par l'association au Conservatoire du littoral ne sont pas documentés par les sources."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La sauvegarde de l'espace côtier et le respect de l'équilibre écologique sont au cœur de l'objet de l'association, agis par la gestion du site naturel et du Jardin des Méditerranées."
 analyse:
   forces:
     - "Personne morale de droit civil non lucrative, déclarée d'intérêt général."
@@ -121,6 +125,29 @@ fiabilite: >
   montant d'une redevance, durée exacte et clauses de la convention, clause de
   dévolution, modalités d'adhésion.
 voir_aussi: [conservatoire-littoral]
+dossier:
+  identite:
+    siren: "352262653"
+    adresse: "Domaine du Rayol, avenue du Commandant Rigaud, 83820 Le Rayol-Canadel-sur-Mer"
+  echelle:
+    personnes: "environ 95 000 visiteur·ses par an"
+    lieux: "le Domaine du Rayol, domaine côtier"
+    surface: "environ 20 hectares"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Convention pluriannuelle d'objectifs avec le Conservatoire du littoral ; non publiée."
+    - type: rapport_financier
+      statut: inconnu
+      note: "L'association tient une assemblée générale annuelle ; ses comptes ne sont pas publiés en ligne."
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Présentation de l'Association — Domaine du Rayol"
     url: "https://www.domainedurayol.org/un-siecle-dhistoire/lassociation-du-domaine-du-rayol/presentation-de-l-association/"

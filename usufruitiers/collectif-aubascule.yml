@@ -4,6 +4,7 @@ nom: "Collectif de l'Aubascule"
 sous_titre: "Collectif d'habitant·es animant l'écolieu de l'Aube, dans la Drôme"
 statut_fiche: publie
 forme_juridique: "Collectif d'habitant·es (forme juridique non documentée)"
+nature_interet: inconnu
 localisation:
   commune: null
   departement: "Drôme (26)"
@@ -22,7 +23,7 @@ resume: >
   pôle permacole. Le lieu est engagé dans une démarche Oasis de Biodiversité
   via une Obligation Réelle Environnementale.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Fonds de dotation Fraternité pour Demain"
   usufruitier: "Collectif de l'Aubascule (collectif d'habitant·es)"
   description: >
@@ -88,6 +89,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "L'existence et le montant d'une redevance versée au fonds de dotation ou à la Coopérative Oasis ne sont pas documentés par les sources."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le lieu est engagé dans une démarche Oasis de Biodiversité via une Obligation Réelle Environnementale : la préservation du vivant est affirmée et inscrite dans le droit du lieu."
 analyse:
   forces:
     - "Pôle d'accueil solidaire ouvrant le lieu à des personnes en situation de vulnérabilité."
@@ -118,6 +122,28 @@ fiabilite: >
   forme juridique du collectif, nature et durée du titre d'usage, montant
   d'une éventuelle redevance, transparence comptable.
 voir_aussi: [fonds-fraternite-pour-demain]
+dossier:
+  identite:
+    siren: "938330586"
+    adresse: "26400 Piégros-la-Clastre"
+  echelle:
+    personnes: "une quinzaine d'habitant·es"
+    lieux: "l'écolieu de l'Aube, dans la Drôme"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Lieu légué par donation au fonds de dotation Fraternité pour Demain en 2022 ; gestion confiée à la Coopérative Oasis. Actes non publiés."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Nature et durée du titre d'usage liant le collectif au foncier non documentées."
 sources:
   - titre: "Coopérative Oasis — L'Aube"
     url: "https://cooperative-oasis.org/oasis/aube/"

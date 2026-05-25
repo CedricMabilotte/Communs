@@ -8,6 +8,7 @@ localisation:
   commune: "Gaillac"
   departement: "Tarn (81)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=1.8960,43.9009&z=16"
 annee: 2024
 url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
 resume: >
@@ -23,9 +24,11 @@ resume: >
   d'habitant·es du Gaillacois — qui y héberge et accompagne les jeunes :
   recours juridique, accès aux soins, à la scolarité, au sport et aux loisirs.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Antidote (fonds de dotation)"
-  usufruitier: "L'Antre Toit (association loi 1901, usager·es du lieu)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: association-antre-toit
+      titre: bail_emphyteotique
+      note: "Durée précise du bail non documentée par les sources."
   description: >
     La Maison Blanche, mise à disposition par des bénévoles puis rachetée grâce
     à une levée de fonds, voit sa propriété acquise par le fonds de dotation
@@ -87,6 +90,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail emphytéotique de longue durée, qui sécurise la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements civils."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucun dispositif de protection durable et opposable du milieu (clause environnementale au bail, ORE, statut protégé) n'est documenté pour cette maison urbaine de Gaillac."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La vocation du lieu est l'accueil et l'accompagnement de jeunes exilé·es ; le vivant non-humain n'apparaît pas parmi les finalités déclarées."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Le lieu est une maison d'habitation d'environ 100 m² en ville ; les pratiques d'entretien et leur effet sur le fonds ne sont pas documentés."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "À l'échelle d'un lieu d'habitat urbain, l'existence d'une cour, d'un pied d'immeuble végétalisé ou de tout espace laissé au vivant n'est pas documentée par les sources."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."

@@ -4,6 +4,7 @@ nom: "SCI de l'Archipel de la vallée"
 sous_titre: "Société civile immobilière de trois associations, propriétaire et usagère du tiers-lieu inclusif de Chevreuse"
 statut_fiche: publie
 forme_juridique: "Société civile immobilière (SCI)"
+nature_interet: commerciale_desactivee
 localisation:
   commune: "Chevreuse"
   departement: "Yvelines (78)"
@@ -88,6 +89,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Les modalités financières entre la SCI et les associations usagères ne sont pas documentées par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Le tiers-lieu inclusif est dédié à l'adaptation aux handicaps mentaux, cognitifs et sensoriels ; sa finalité affichée est sociale, sans dimension de préservation de la biodiversité non-humaine documentée."
 analyse:
   forces:
     - "Foncier porté par une SCI dont les seul·es associé·es sont trois associations non lucratives."
@@ -118,6 +122,27 @@ fiabilite: >
   sein de la SCI, statuts et verrous anti-spéculatifs, clause de dévolution,
   régime d'accès au tiers-lieu, transparence comptable.
 voir_aussi: [cooperative-oasis]
+dossier:
+  echelle:
+    personnes: "Trois associations associées de la SCI (Handi deuxmains, ALC, Quintette)"
+    lieux: "1 tiers-lieu (une maison)"
+    surface: "Environ 4 hectares de prairies"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de la SCI non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Chaîne intégrée : la SCI est propriétaire et configuration d'usage ; acte d'acquisition de juillet 2025 non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Modalités financières entre la SCI et les associations usagères non documentées."
 sources:
   - titre: "Archipel de la Vallée — ALC de Chevreuse"
     url: "https://asso-alc.com/archipel-de-la-vallee"

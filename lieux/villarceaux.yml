@@ -8,6 +8,7 @@ localisation:
   commune: "Chaussy"
   departement: "Val-d'Oise (95)"
   region: "Île-de-France"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=1.7138,49.1175&z=16"
 annee: 2005
 url: "https://www.bergerie-villarceaux.org/"
 resume: >
@@ -19,9 +20,11 @@ resume: >
   juridiques distinctes cohabitent sur le site, dont l'exploitation agricole,
   l'association Écosite et la coopérative Saveurs du Vexin.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fondation Charles Léopold Mayer pour le Progrès de l'Homme (FPH)"
-  usufruitier: "EARL du Chemin Neuf (exploitation, exploitant Olivier Ranke) et association Écosite (animation)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: ecosite-villarceaux
+      titre: convention
+      note: "Titre précis non documenté par les sources : les actes liant la fondation aux structures d'usage ne sont pas publiquement détaillés ; le montage n'est pas un démembrement strict."
   description: >
     La fondation conserve la pleine propriété du domaine et en confie l'usage à
     des structures tierces. L'exploitation agricole a pris en 2005 la forme d'une
@@ -80,6 +83,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "Le montage d'usage n'est pas un démembrement strict et reste partiellement opaque : la nature et la durée des titres d'usage ne sont pas documentées."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Le domaine est inclus dans le Parc naturel régional du Vexin français, cadre de protection sans portée directement contraignante sur le foncier ; aucun dispositif opposable spécifique (ORE, classement, clause au bail) n'est documenté."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La replantation des haies pour abriter oiseaux, faune auxiliaire et pollinisateurs, et le rôle de centre technique de l'agriculture biologique, traduisent une finalité de préservation du vivant affirmée et agie."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Ferme de polyculture-élevage conduite en agroécologie depuis le milieu des années 1990, avec agroforesterie : des pratiques de maintien et de régénération attestées."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Le domaine compte environ 5 km de haies héritées et 8 km de haies plantées, des alignements intra-parcellaires et plus de 650 arbres champêtres, aménagés pour rétablir l'équilibre écologique : une place concrète et substantielle faite au vivant."
 analyse:
   forces:
     - "Foncier de grande ampleur durablement détenu par une fondation non lucrative."

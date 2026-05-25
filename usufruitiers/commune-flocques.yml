@@ -4,6 +4,7 @@ nom: "Commune de Flocques"
 sous_titre: "Collectivité bailleresse du foncier et garante locative des 12 logements Chênelet"
 statut_fiche: publie
 forme_juridique: "Collectivité territoriale (commune)"
+nature_interet: non_lucrative
 localisation:
   commune: "Flocques"
   departement: "Seine-Maritime (76)"
@@ -22,7 +23,7 @@ resume: >
   à maintenir les personnes âgées au village et à densifier l'habitat en cœur de
   bourg.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Foncière Chênelet (SAS, foncière solidaire agréée maîtrise d'ouvrage d'insertion / bailleur social)"
   usufruitier: "Commune de Flocques (collectivité publique)"
   description: >
@@ -89,6 +90,9 @@ grille:
   - critere: loyer_soutenable
     valeur: oui
     note: "La commune verse les loyers au bailleur puis les recouvre auprès des locataires, garantissant des prix très modérés ; la Foncière Chênelet vise des loyers et charges très faibles, hors logique de rendement."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'opération vise le logement très social et la revitalisation rurale ; son caractère écologique porte sur le bâti et l'énergie, sans dimension biodiversité affichée."
 analyse:
   forces:
     - "Collectivité publique non lucrative, pérenne, soumise à publicité de ses comptes."
@@ -121,6 +125,26 @@ fiabilite: >
   confirmé : montant des loyers, durée et renouvellement des baux d'habitation,
   modalités d'attribution des logements, clauses du bail emphytéotique.
 voir_aussi: [fonciere-chenelet]
+dossier:
+  echelle:
+    lieux: "une opération de douze logements très sociaux en cœur de bourg"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "La commune est une collectivité territoriale : pas de statuts au sens d'une personne morale de droit privé."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans entre la commune et la Foncière Chênelet ; non publié."
+    - type: rapport_financier
+      statut: inconnu
+      note: "Une commune est soumise à des obligations légales de publicité de ses délibérations et de ses comptes ; les détails propres à l'opération ne sont pas publiés."
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans confiant le terrain à la Foncière Chênelet ; baux d'habitation des locataires non documentés."
 sources:
   - titre: "12 logements à Flocques (76) — Foncière Chênelet"
     url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"

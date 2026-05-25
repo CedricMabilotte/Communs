@@ -8,6 +8,7 @@ localisation:
   commune: "Chevreuse"
   departement: "Yvelines (78)"
   region: "Île-de-France"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=2.0374,48.7071&z=16"
 annee: 2025
 url: "https://asso-alc.com/archipel-de-la-vallee"
 resume: >
@@ -24,8 +25,10 @@ resume: >
   subventions et prêts bancaires.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SCI de l'Archipel de la vallée (société civile immobilière des trois associations)"
-  usufruitier: "SCI de l'Archipel de la vallée — chaîne intégrée : associations associées et usagères"
+  articulations:
+    - usufruitier: sci-archipel-vallee
+      titre: integre
+      note: "Chaîne intégrée : la SCI propriétaire et l'usagère sont la même entité, dont les associé·es — trois associations — exploitent elles-mêmes le tiers-lieu."
   description: >
     Le foncier — maison et quatre hectares — est détenu par une société civile
     immobilière dont les associé·es sont les trois associations Handi
@@ -86,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "Les associations exploitent le lieu en leur qualité d'associé·es de la SCI propriétaire : l'usage n'est ni précaire ni plafonné dans le temps."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Le lieu est au cœur du parc naturel régional de la haute vallée de Chevreuse, qui encadre l'usage des sols ; aucun dispositif opposable propre au lieu (ORE, clause environnementale au bail) n'est documenté."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La vocation affichée — tiers-lieu inclusif adapté aux handicaps, rencontre avec le territoire — est pensée pour ses usager·es humain·es ; le vivant non-humain ne figure pas parmi les finalités."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Les quatre hectares sont décrits comme prairies ; les sources ne documentent ni usage agricole ni mode d'entretien du milieu permettant d'apprécier leur caractère dégradant ou non."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Le lieu comprend quatre hectares de prairies en milieu rural ; aucun aménagement délibéré pour le vivant (haies, mares, continuités) n'est documenté par les sources."
 analyse:
   forces:
     - "Foncier porté par une SCI dont les seul·es associé·es sont trois associations non lucratives."

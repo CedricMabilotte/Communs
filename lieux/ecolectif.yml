@@ -8,6 +8,7 @@ localisation:
   commune: "Gensac-de-Boulogne"
   departement: "Haute-Garonne (31)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.588,43.252&z=16"
 annee: 2009
 url: "https://ecolectif.jimdofree.com/"
 resume: >
@@ -25,8 +26,10 @@ resume: >
   mouvement Colibris.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SCI Terres d'Ecolectif (parts détenues par l'association et par la société MV Finance)"
-  usufruitier: "Association Chemins d'Ecolectif (association loi 1901 à statut collégial)"
+  articulations:
+    - usufruitier: chemins-ecolectif
+      titre: convention
+      note: "L'association est associée gérante de la SCI ; les résident·es occupent logements et terres par des baux d'occupation à loyers modiques dont la durée n'est pas documentée."
   description: >
     Le foncier et le bâti de l'écohameau sont détenus par la SCI Terres
     d'Ecolectif, créée en 2012, dont le capital est partagé entre l'association
@@ -89,6 +92,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Les résident·es disposent d'un bail d'occupation de leur espace de vie ; la durée et les conditions de renouvellement de ces baux ne sont pas documentées."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale aux baux) n'est documenté par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le collectif cultive une « écologie relationnelle » incluant le soin de la terre ; le vivant non-humain comme cohabitant à part entière n'est pas explicitement affiché parmi les finalités."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "L'habitat est autoconstruit en matériaux locaux et de réemploi, dans une logique de faible empreinte ; le mode de culture du domaine agricole de 46 hectares n'est pas documenté."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "L'écohameau s'inscrit sur un domaine agricole d'environ 46 hectares en milieu rural ; aucun aménagement délibéré pour le vivant (haies, mares, friches) n'est documenté par les sources."
 analyse:
   forces:
     - "Gouvernance collégiale horizontale, décidant au consentement."

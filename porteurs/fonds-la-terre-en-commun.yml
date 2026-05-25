@@ -4,6 +4,7 @@ nom: "Fonds de dotation « La Terre en commun »"
 sous_titre: "Fonds de dotation acquéreur des terres de Notre-Dame-des-Landes"
 statut_fiche: publie
 forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
+nature_interet: non_lucrative
 localisation: null
 annee: 2018
 url: "https://encommun.eco/"
@@ -15,7 +16,7 @@ resume: >
   donnent pas de parts de capital. Environ 700 000 euros avaient été collectés en
   moins d'un an.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     Le fonds de dotation capitalise des dons irrévocables et acquiert
     progressivement le foncier pour le soustraire à l'appropriation privée et à
@@ -79,6 +80,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "Le fonds communique sur sa collecte, mais la publication régulière de comptes et de rapports d'activité n'est pas confirmée."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'objet central est d'acquérir les terres de la ZAD pour les soustraire à l'appropriation privée ; la volonté affichée de les soustraire aussi à l'agriculture intensive porte une dimension favorable au vivant non-humain, sans en faire une finalité centrale."
 analyse:
   forces:
     - "Statut de fonds de dotation, simple à créer et non lucratif."
@@ -104,6 +108,23 @@ fiabilite: >
   700 000 euros collectés en moins d'un an. Non confirmé : caractère non
   consomptible de la dotation, composition du conseil d'administration,
   publication des comptes.
+dossier:
+  identite:
+    siren: "843912700"
+    adresse: "Lieu-dit Les Fosses Noires, 44130 Notre-Dame-des-Landes"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "La Terre en commun — encommun.eco"
     url: "https://encommun.eco/"

@@ -1,0 +1,28 @@
+uid: federation-cen
+categorie: reseau
+nom: "Réseau des Conservatoires d'espaces naturels"
+sous_titre: "Réseau national des Conservatoires d'espaces naturels, fédéré par la FCEN"
+statut_fiche: publie
+forme_juridique: "Réseau associatif — Fédération des Conservatoires d'espaces naturels (FCEN) et conservatoires régionaux et départementaux (associations loi 1901 agréées)"
+localisation: null
+annee: 1988
+url: "https://reseau-cen.org/"
+resume: >
+  Le réseau des Conservatoires d'espaces naturels rassemble les conservatoires
+  régionaux et départementaux — associations loi 1901 d'intérêt général agréées
+  conjointement par l'État et la Région au titre de l'article L. 414-11 du Code
+  de l'environnement —, fédérés par la Fédération des Conservatoires d'espaces
+  naturels (FCEN). Le réseau compte une vingtaine de conservatoires couvrant
+  l'ensemble du territoire ; chaque conservatoire acquiert et protège du foncier
+  naturel par une combinaison de propriété, de baux emphytéotiques, de baux
+  ruraux environnementaux, d'obligations réelles environnementales et de
+  conventions de gestion. La Fédération assure la représentation nationale du
+  réseau, l'animation entre conservatoires et le portage de programmes communs ;
+  elle n'est pas elle-même détentrice du foncier — ce sont les conservatoires
+  membres qui portent les sites.
+membres: [cen-occitanie]
+sources:
+  - titre: "Accueil — Fédération des conservatoires d'espaces naturels"
+    url: "https://reseau-cen.org/"
+  - titre: "Foncier — Fédération des conservatoires d'espaces naturels"
+    url: "https://reseau-cen.org/aires-espaces-proteges/foncier/"

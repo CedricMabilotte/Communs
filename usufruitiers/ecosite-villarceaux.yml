@@ -4,6 +4,7 @@ nom: "Association Écosite de Villarceaux"
 sous_titre: "Structure d'animation et d'usage du domaine de Villarceaux"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation: null
 annee: null
 url: "https://www.bergerie-villarceaux.org/"
@@ -15,7 +16,7 @@ resume: >
   Saveurs du Vexin, créée en 2001. L'association porte des activités d'animation et de formation liées à la
   transition agroécologique du domaine.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Fondation Charles Léopold Mayer pour le Progrès de l'Homme (FPH)"
   usufruitier: "Titulaire de l'usage : association Écosite (animation, formation) et EARL du Chemin Neuf (exploitation agricole, exploitant Olivier Ranke) ; nature exacte des titres d'usage non documentée"
   description: >
@@ -77,6 +78,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Les actes liant l'association à la Fondation Charles Léopold Mayer n'étant pas documentés, l'existence et le niveau d'un loyer ou d'une redevance ne le sont pas non plus."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'association porte l'animation et la formation autour de la transition agroécologique du domaine ; la biodiversité n'est pas affichée comme finalité centrale et agie de la structure."
 analyse:
   forces:
     - "Association loi 1901 non lucrative portant l'animation et la formation."
@@ -101,6 +105,28 @@ fiabilite: >
   Vexin créée en 2001. Non confirmé : nature exacte des actes
   d'usage, durée de l'usage, gouvernance et transparence interne.
 voir_aussi: [fondation-fph]
+dossier:
+  identite:
+    siren: "493202667"
+    rna: "W953003452"
+    adresse: "Bergerie de Villarceaux, 95710 Chaussy"
+  echelle:
+    lieux: "le domaine de la Bergerie de Villarceaux"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Nature exacte des actes liant l'association à la Fondation Charles Léopold Mayer non documentée."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Durée et nature du titre d'usage de l'association sur le domaine non documentées."
 sources:
   - titre: "Bergerie de Villarceaux — site officiel"
     url: "https://www.bergerie-villarceaux.org/"

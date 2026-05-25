@@ -4,6 +4,7 @@ nom: "GAEC de la ferme de la Durette"
 sous_titre: "Groupement agricole exploitant la ferme pilote de la Durette à Avignon"
 statut_fiche: publie
 forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+nature_interet: commerciale
 localisation:
   commune: "Avignon"
   departement: "Vaucluse (84)"
@@ -22,7 +23,7 @@ resume: >
   ses recherches en agroforesterie. Les sources publiques ne détaillent ni
   l'année de constitution du GAEC, ni sa composition nominative complète.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
   usufruitier: "GAEC de la ferme de la Durette (groupement agricole d'exploitation en commun)"
   description: >
@@ -86,6 +87,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "L'existence et le montant du fermage versé par le GAEC à la Foncière ne sont pas documentés par les sources consultées."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La ferme pilote conduit un verger-maraîcher agroforestier en agriculture biologique, suivi par le GRAB en recherche, pratiques écologiques revendiquées sans que la biodiversité non-humaine soit affichée comme une finalité du GAEC."
 analyse:
   forces:
     - "Exploitation collective égalitaire : une voix par associé·e."
@@ -114,6 +118,28 @@ fiabilite: >
   composition nominative complète, capital et clauses de cession, fermage,
   clause de dévolution, transparence comptable.
 voir_aussi: [fonciere-terre-de-liens]
+dossier:
+  identite:
+    siren: "885277020"
+    adresse: "556 chemin des Semailles, Montfavet, 84140 Avignon"
+  echelle:
+    personnes: "Jeunes agriculteur·rices associé·es issu·es de la couveuse CREA ; composition nominative non documentée"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts du GAEC non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail rural liant le GAEC à la Foncière Terre de Liens, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail rural ; clauses et montant du fermage non documentés."
 sources:
   - titre: "La Durette — Fermes Terre de Liens"
     url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"

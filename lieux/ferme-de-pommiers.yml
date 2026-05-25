@@ -8,6 +8,7 @@ localisation:
   commune: "La Sure en Chartreuse"
   departement: "Isère (38)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.6557,45.3175&z=16"
 annee: 2018
 url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
 resume: >
@@ -24,9 +25,10 @@ resume: >
   élèvent une centaine de brebis et transforment leur lait en yaourts et
   fromages.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Fondation Terre de Liens (fondation reconnue d'utilité publique)"
-  usufruitier: "GAEC des Bergers de la Sure (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-bergers-de-la-sure
+      titre: bail_rural
   description: >
     Le foncier de la Ferme de Pommiers est destiné à être porté durablement par
     la Fondation Terre de Liens, fondation reconnue d'utilité publique habilitée
@@ -87,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Le foncier est porté par la Fondation Terre de Liens, dont la mission statutaire préserve durablement la vocation agricole, mais aucune obligation réelle environnementale ni clause environnementale du bail rural n'est documentée par les sources."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Les sources documentent l'élevage ovin laitier et la vocation d'accueil paysan, mais ne mentionnent pas le vivant non-humain comme cohabitant parmi les finalités du lieu."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "L'élevage ovin laitier de moyenne montagne et la transformation fromagère sont conduits en agriculture biologique, pratique de maintien des prairies et des sols."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "Le foncier comprend des prairies de moyenne montagne, mais les sources ne documentent pas d'espaces (haies, mares, friches) effectivement laissés ou aménagés pour le vivant non-humain."
 analyse:
   forces:
     - "Foncier sanctuarisé par une fondation reconnue d'utilité publique, sans capital appropriable."

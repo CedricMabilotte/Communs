@@ -4,6 +4,7 @@ nom: "Fondation Charles Léopold Mayer pour le Progrès de l'Homme"
 sous_titre: "Fondation propriétaire du domaine de Villarceaux"
 statut_fiche: publie
 forme_juridique: "Fondation (de droit suisse selon les sources ; forme exacte au regard du droit français non confirmée)"
+nature_interet: non_lucrative
 localisation: null
 annee: 1982
 url: "https://www.fph.ch/article16_fr.html"
@@ -16,7 +17,7 @@ resume: >
   tierces. La forme exacte de la fondation au regard du droit français n'est pas
   confirmée par les sources, qui mentionnent un cadre de droit suisse.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     La Fondation détient en pleine propriété le domaine de Villarceaux et confie
     l'usage agricole à des structures d'exploitation tierces. Il s'agit d'une
@@ -79,6 +80,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "La FPH présente son action sur son site, mais la reddition de comptes régulière et détaillée n'est pas confirmée."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La FPH met le domaine de Villarceaux à disposition d'une transition agroécologique, dimension favorable au vivant présente dans le discours et l'activité, mais la finalité de la fondation est la recherche d'intérêt général et non la préservation de la biodiversité comme objet propre."
 analyse:
   forces:
     - "Fondation non lucrative, propriétaire stable d'un domaine de grande ampleur."
@@ -104,6 +108,24 @@ fiabilite: >
   exacte au regard du droit français, objet statutaire foncier, gouvernance,
   clause de dévolution.
 voir_aussi: [ecosite-villarceaux]
+dossier:
+  identite:
+    adresse: "Siège à Lausanne (Suisse)."
+  echelle:
+    surface: "Environ 600 hectares (domaine de la Bergerie de Villarceaux)."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "FPH — La Bergerie de Villarceaux"
     url: "https://www.fph.ch/article16_fr.html"

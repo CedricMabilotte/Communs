@@ -4,6 +4,7 @@ nom: "Association des habitant·es du Hameau des Buis"
 sous_titre: "Association d'usage des habitant·es de l'écovillage intergénérationnel"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Lablachère"
   departement: "Ardèche (07)"
@@ -93,6 +94,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le contrat de résident est calé sur le marché locatif local, sans logique de rendement affichée puisque les habitant·es ont préalablement prêté sans intérêt à la structure ; le caractère soutenable du montant n'est pas documenté."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'écovillage revendique un mode de vie plus harmonieux sur le plan environnemental et associe une ferme-école ; le vivant non-humain n'est toutefois pas affiché comme finalité centrale de protection de la nature."
 analyse:
   forces:
     - "Association loi 1901 sans capital appropriable, regroupant les habitant·es du lieu."
@@ -132,6 +136,25 @@ fiabilite: >
   traité ici sans prise de parti : seuls les faits relatifs au montage et à la
   gouvernance de l'usage sont retenus.
 voir_aussi: [hameau-des-buis, sc-hameau-des-buis]
+dossier:
+  echelle:
+    lieux: "l'écovillage intergénérationnel du Hameau des Buis, en sud Ardèche"
+    surface: "environ 6 hectares (écovillage)"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Foncier porté par une société civile puis par la SAS coopérative Hameau des Buis depuis le 28 janvier 2023 ; actes non publiés."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Les habitant·es occupent leur logement par un contrat de résident ; durée et clauses non documentées."
 sources:
   - titre: "Le Hameau des Buis — site officiel"
     url: "https://hameaudesbuis.org/"

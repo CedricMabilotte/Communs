@@ -4,6 +4,7 @@ nom: "La Talvère"
 sous_titre: "Association d'usager·es autogérant le lieu de La Talvère dans le Lot"
 statut_fiche: publie
 forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Bio"
   departement: "Lot (46)"
@@ -95,6 +96,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le modèle Antidote prévoit un loyer symbolique versé au fonds, écartant toute logique de rendement ; son montant pour ce lieu n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Le lieu est voué à l'éducation populaire — stages, rencontres, cercles, hébergements — au bénéfice de ses usager·es humain·es, sans dimension biodiversité affichée."
 analyse:
   forces:
     - "Gouvernance citoyenne autogérée : les usager·es décident ensemble des usages du lieu."

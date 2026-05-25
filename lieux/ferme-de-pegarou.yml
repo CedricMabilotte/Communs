@@ -8,6 +8,7 @@ localisation:
   commune: "La Bastide-de-Besplas"
   departement: "Ariège (09)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=1.2747,43.1667&z=16"
 annee: 2022
 url: "https://fermedescroquants.fr/"
 resume: >
@@ -21,9 +22,10 @@ resume: >
   irrigation — et y cultive blé, orge, sarrasin et une quarantaine de variétés
   de légumes, transformés en pain au levain, bière artisanale et paniers.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "GAEC Les Croquants (collectif paysan de six associé·es)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-les-croquants
+      titre: bail_rural
   description: >
     Le foncier de la ferme de Pégarou — environ 32 hectares — a été acquis en
     2022 par la Foncière Terre de Liens, structure non spéculative qui le porte
@@ -84,6 +86,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Le foncier porté par la Foncière Terre de Liens est conduit en agriculture biologique et sa vocation agricole est préservée, mais aucune obligation réelle environnementale ni clause environnementale du bail rural n'est documentée par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La fiche mentionne une restauration de la biodiversité du foncier de 32 hectares, mais le vivant non-humain comme cohabitant n'est pas affirmé comme finalité explicite du projet."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "La ferme est conduite en agriculture biologique depuis 2022, pratique de maintien de la capacité du sol à se régénérer."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Le foncier de 32 hectares comprend terres, prairies et bois, et la fiche fait état d'une restauration de sa biodiversité."
 analyse:
   forces:
     - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2022."

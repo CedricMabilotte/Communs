@@ -4,6 +4,7 @@ nom: "Fonds de dotation Fraternité pour Demain"
 sous_titre: "Fonds de dotation qui sanctuarise le foncier des oasis hors marché"
 statut_fiche: publie
 forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
+nature_interet: non_lucrative
 localisation:
   commune: null
   departement: null
@@ -22,7 +23,7 @@ resume: >
   le foncier du Château de la Mhotte (Allier) et de l'Aube (Drôme), deux
   écolieux du réseau de la Coopérative Oasis.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     Le fonds de dotation acquiert la pleine propriété de biens fonciers par
     dons et collectes solidaires, et la conserve durablement hors marché. Il
@@ -90,6 +91,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: oui
     note: "Le fonds accorde des titres d'usage longs — bail emphytéotique de 99 ans au Château de la Mhotte — assurant aux collectifs une jouissance sécurisée de très long terme."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'objet du fonds est de sanctuariser le foncier des écolieux et d'en confier l'usage aux collectifs humains qui en prennent soin ; aucune finalité de préservation de la biodiversité n'est affichée."
 analyse:
   forces:
     - "Objet statutaire explicite de sanctuarisation foncière hors marché et hors succession."
@@ -119,6 +123,26 @@ fiabilite: >
   confirmé : composition du conseil d'administration, clause de dévolution,
   caractère consomptible de la dotation, montant des redevances, statut
   d'agrément.
+dossier:
+  identite:
+    siren: "911307734"
+    adresse: "21 rue Albert 1er, 91600 Savigny-sur-Orge"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: public
+      lien: "https://fraternitepourdemain.org/reglement-interieur/"
+      note: "Le règlement intérieur du fonds est publié sur son site officiel."
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Usage confié par bail emphytéotique de 99 ans ou convention de gestion ; acte type non publié."
 sources:
   - titre: "Fraternité pour Demain — site officiel"
     url: "https://fraternitepourdemain.org/"

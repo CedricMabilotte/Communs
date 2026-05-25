@@ -8,6 +8,7 @@ localisation:
   commune: "Lablachère"
   departement: "Ardèche (07)"
   region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.2221,44.4079&z=16"
 annee: 2003
 url: "https://hameaudesbuis.org/"
 resume: >
@@ -21,8 +22,10 @@ resume: >
   en 2021 à l'issue d'un conflit ; une école demeure néanmoins sur place.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SAS coopérative Hameau des Buis (créée le 28 janvier 2023, en succession de la société civile de 2003)"
-  usufruitier: "Membres de la SAS coopérative Hameau des Buis, habitant·es du lieu en gouvernance partagée"
+  articulations:
+    - usufruitier: association-hameau-des-buis
+      titre: convention
+      note: "Titre précis non documenté par les sources : nature exacte des titres d'occupation des logements non détaillée."
   description: >
     Le foncier a d'abord été porté par une société civile constituée en 2003.
     À la suite d'un conflit ayant conduit au départ de l'association
@@ -84,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "La nature exacte des titres d'occupation des logements et leur durée ne sont pas détaillées par les sources."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable — obligation réelle environnementale, classement, clause environnementale statutaire — n'est documenté pour le foncier porté par la SAS coopérative."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le lieu affiche une vocation de transition écologique et conduit un maraîchage en agroforesterie, mais le vivant non-humain comme cohabitant n'est pas posé explicitement parmi ses finalités."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le maraîchage est conduit en agriculture biologique et transforme une ancienne vigne en parcelle d'agroforesterie productive, pratique de régénération du sol ; les logements sont en matériaux biosourcés."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Le domaine comporte des arbres fruitiers, des fleurs semées pour attirer les insectes auxiliaires, des plantes vivaces, et les bâtiments présentent des toitures et façades végétalisées."
 analyse:
   forces:
     - "Gouvernance partagée organisée par une SAS coopérative depuis 2023."

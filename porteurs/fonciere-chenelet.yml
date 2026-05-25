@@ -4,6 +4,7 @@ nom: "Foncière Chênelet"
 sous_titre: "Foncière solidaire de logement social écologique"
 statut_fiche: publie
 forme_juridique: "Foncière solidaire (entreprise solidaire d'utilité sociale, ESUS)"
+nature_interet: commerciale_encadree
 localisation: null
 annee: 2009
 url: "https://fonciere-chenelet.org/"
@@ -16,7 +17,7 @@ resume: >
   régions, elle construit en matériaux sains et basse consommation, avec des
   clauses d'insertion obligatoires dans ses marchés de construction.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     La Foncière Chênelet acquiert ou fait construire des logements sociaux
     écologiques, en conserve la propriété et les loue durablement à des ménages
@@ -81,6 +82,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "L'agrément ESUS et la maîtrise d'ouvrage d'insertion soumettent la foncière à un cadre de contrôle, mais le détail de la reddition de comptes au public n'est pas documenté."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La finalité est le logement social écologique pour des ménages humains à très faibles revenus ; l'écologie porte sur les matériaux et la performance du bâti, sans finalité de préservation de la biodiversité."
 analyse:
   forces:
     - "Logement social écologique porté durablement par une foncière solidaire."
@@ -108,6 +112,23 @@ fiabilite: >
   fortement réduites, clauses d'insertion obligatoires dans les marchés de
   construction. Non confirmé : clause de dévolution, inaliénabilité statutaire,
   composition de la gouvernance, détail des comptes.
+dossier:
+  identite:
+    siren: "515161248"
+    adresse: "34 rue de Moyecques, 62250 Landrethun-le-Nord"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Foncière Chênelet — site officiel"
     url: "https://fonciere-chenelet.org/"

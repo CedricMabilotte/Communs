@@ -8,6 +8,7 @@ localisation:
   commune: "Sanilhac-Sagriès"
   departement: "Gard (30)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.41213,43.94087&z=16"
 annee: 2007
 url: "https://www.cen-occitanie.org/gorges-du-gardon/"
 resume: >
@@ -23,9 +24,7 @@ resume: >
   par la Région. La réserve est cogérée par le Conservatoire d'espaces naturels
   Occitanie et la commune de Sanilhac-Sagriès.
 montage:
-  type: propriete_publique
-  nu_proprietaire: "Foncier communal et privé classé en réserve naturelle régionale par la Région Occitanie"
-  usufruitier: "Conservatoire d'espaces naturels Occitanie et commune de Sanilhac-Sagriès (cogestionnaires)"
+  type: propriete_protegee
   description: >
     La protection du site ne repose pas sur un démembrement de propriété mais sur
     un classement réglementaire : la Région a classé en 2007, en réserve naturelle
@@ -89,6 +88,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le classement en réserve naturelle régionale et le plan de gestion confèrent aux gestionnaires un cadre d'intervention durable, mais les sources ne documentent pas de titre d'usage de longue durée sur le foncier."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Le site est classé réserve naturelle régionale depuis 2007 : statut d'espace protégé durable et opposable, soumettant les 491 hectares à une réglementation protectrice du milieu."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La préservation de la biodiversité est la raison d'être même de la réserve, qui protège plus de 1 200 espèces dont l'aigle de Bonelli, le vautour percnoptère et le castor d'Europe."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le site fait l'objet d'une gestion conservatoire par un Conservatoire d'espaces naturels, conduite selon un plan de gestion pluriannuel visant le maintien des milieux."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Les 491 hectares de garrigues, falaises calcaires et milieux rivulaires constituent un espace entièrement dédié au vivant non-humain."
 analyse:
   forces:
     - "Réserve naturelle régionale de 491 hectares à la biodiversité exceptionnelle, protégée par classement réglementaire."
@@ -120,7 +131,7 @@ fiabilite: >
   ou de conventions foncières, régime financier, durée des conventions de
   cogestion.
 chaine:
-  porteurs: [federation-cen]
+  porteurs: [cen-occitanie]
   usufruitiers: [cen-occitanie]
 sources:
   - titre: "Réserve Naturelle Régionale des Gorges du Gardon — Conservatoire d'espaces naturels Occitanie"

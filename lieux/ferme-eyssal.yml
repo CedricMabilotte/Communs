@@ -8,6 +8,7 @@ localisation:
   commune: "Bergerac (Périgord pourpre)"
   departement: "Dordogne (24)"
   region: "Nouvelle-Aquitaine"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.595,44.895&z=16"
 annee: 2010
 url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
 resume: >
@@ -23,9 +24,11 @@ resume: >
   écoule sa production laitière et fromagère en circuit court (paniers,
   marchés, magasins bio, artisans).
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "GAEC d'Eyssal (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-eyssal
+      titre: bail_rural
+      note: "Le bail rural ne porte que sur les 18 hectares acquis par la Foncière ; le reste du foncier appartient aux éleveur·ses."
   description: >
     En 2010, la Foncière Terre de Liens, mobilisée par un groupe local de
     citoyen·nes, a acquis 18 hectares de terres cultivées menacées de vente,
@@ -88,6 +91,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage des 18 hectares est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Les 18 hectares portés par la Foncière Terre de Liens préservent durablement leur vocation agricole en biodynamie ; aucune obligation réelle environnementale ni clause environnementale opposable du bail n'est documentée par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La fiche indique que la ferme préserve un environnement à forte biodiversité, mais le vivant non-humain comme cohabitant n'est pas affirmé explicitement parmi les finalités statutaires du lieu."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "L'élevage laitier et la transformation fromagère sont conduits depuis une dizaine d'années en agriculture biodynamique, pratique de maintien et de régénération du sol."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "La fiche évoque un environnement à forte biodiversité, mais les sources ne documentent pas d'espaces (haies, mares, friches) spécifiquement laissés ou aménagés pour le vivant non-humain."
 analyse:
   forces:
     - "Foncier menacé sauvegardé hors marché par l'épargne citoyenne dès 2010."

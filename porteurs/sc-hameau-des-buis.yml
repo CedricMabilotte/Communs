@@ -4,6 +4,7 @@ nom: "Société Civile le Hameau des Buis"
 sous_titre: "Société civile propriétaire du foncier de l'écovillage, aux parts détenues par une association"
 statut_fiche: publie
 forme_juridique: "Société civile"
+nature_interet: inconnu
 localisation:
   commune: "Lablachère"
   departement: "Ardèche (07)"
@@ -95,6 +96,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: partiel
     note: "Les habitant·es disposaient d'un contrat de résident leur garantissant l'usage de leur logement ; la durée et les conditions de renouvellement de ce titre ne sont pas détaillées, et le conflit a montré la fragilité de la sécurité d'usage offerte."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Le montage portait le foncier d'un écovillage intergénérationnel pensé pour ses habitant·es humain·es ; aucune finalité de préservation de la biodiversité n'est documentée par les sources."
 analyse:
   forces:
     - "Parts de la société civile détenues à 519 sur 520 par une association loi 1901 sans but lucratif."
@@ -133,6 +137,22 @@ fiabilite: >
   documenté publiquement par les deux parties, est traité ici sans prise de
   parti : seuls les faits relatifs au montage juridique sont retenus.
 voir_aussi: [hameau-des-buis]
+dossier:
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Société civile constituée le 12 février 2004, transformée en SAS coopérative le 28 janvier 2023 ; actes non accessibles en ligne."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Habitant·es titulaires d'un contrat de résident ; document type non publié."
 sources:
   - titre: "Le Hameau des Buis — L'histoire"
     url: "https://hameaudesbuis.org/lhistoire/"

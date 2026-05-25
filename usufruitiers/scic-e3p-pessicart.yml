@@ -4,6 +4,7 @@ nom: "SCIC E3P — École de Permaculture du Petit Pessicart"
 sous_titre: "Coopérative d'intérêt collectif propriétaire et usagère du Jardin du Petit Pessicart"
 statut_fiche: publie
 forme_juridique: "Société coopérative d'intérêt collectif (SCIC) sous forme de SAS à capital variable"
+nature_interet: commerciale_encadree
 localisation:
   commune: "Nice"
   departement: "Alpes-Maritimes (06)"
@@ -90,6 +91,9 @@ grille:
   - critere: loyer_soutenable
     valeur: oui
     note: "Chaîne intégrée : la SCIC étant propriétaire du foncier, aucun loyer n'est versé à un tiers et le lieu a été acquis sans emprunt bancaire."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "L'objet même de la SCIC est la régénération des écosystèmes naturels et humains : la préservation du vivant non-humain est une finalité centrale, affirmée et agie par la permaculture et l'école de la forêt."
 analyse:
   forces:
     - "Foncier acquis comptant en 2021, sans emprunt bancaire, par une collecte de fonds."
@@ -119,6 +123,31 @@ fiabilite: >
   Non confirmé : clause de dévolution statutaire, transparence comptable,
   clauses d'usage environnementales attachées au foncier.
 voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "900960964"
+    adresse: "23 Chemin du Petit Pessicart, 06100 Nice"
+  echelle:
+    personnes: "Une vingtaine de coopérateur·rices"
+    lieux: "1 tiers-lieu (le Jardin du Petit Pessicart)"
+    surface: "Environ 1 hectare"
+  pieces:
+    - type: statuts
+      statut: public
+      lien: "https://www.pappers.fr/entreprise/e3p-ecole-de-permaculture-du-petit-pessicart-900960964/documents/E3P%20ECOLE%20DE%20PERMACULTURE%20DU%20PETIT%20PESSICART%20-%20Statuts%20mis%20%C3%A0%20jour%2019-07-2022.pdf"
+      note: "Statuts mis à jour le 19 juillet 2022, accessibles via le registre national des entreprises (Pappers)."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Chaîne intégrée : la SCIC a acquis la pleine propriété du Jardin en septembre 2021 ; acte d'acquisition non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Pas de bail vis-à-vis d'un tiers : la SCIC est propriétaire du foncier."
 sources:
   - titre: "Coopérative Oasis — Jardin du Petit Pessicart"
     url: "https://cooperative-oasis.org/oasis/jardin-du-petit-pessicart/"

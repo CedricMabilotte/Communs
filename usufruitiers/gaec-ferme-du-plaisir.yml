@@ -4,6 +4,7 @@ nom: "GAEC Ferme du Plaisir"
 sous_titre: "Groupement agricole exploitant la Ferme du Plaisir, sur foncier Terre de Liens en Indre-et-Loire"
 statut_fiche: publie
 forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
+nature_interet: commerciale
 localisation:
   commune: "Sazilly"
   departement: "Indre-et-Loire (37)"
@@ -20,7 +21,7 @@ resume: >
   d'un petit élevage et, depuis 2022, d'une démarche d'agroforesterie sur
   13 hectares.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
   usufruitier: "GAEC Ferme du Plaisir (groupement agricole d'exploitation en commun)"
   description: >
@@ -84,6 +85,9 @@ grille:
   - critere: loyer_soutenable
     valeur: partiel
     note: "Le recours à Terre de Liens visait à limiter l'endettement à l'installation, ce qui suppose un fermage modéré ; son montant n'est pas documenté par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La ferme conduit une polyculture paysanne et une démarche d'agroforesterie de restauration des sols, pratiques écologiques revendiquées, sans que la biodiversité non-humaine soit affichée comme une finalité centrale du GAEC."
 analyse:
   forces:
     - "Société civile agricole de droit civil, sans logique de rendement du capital."
@@ -113,6 +117,29 @@ fiabilite: >
   fermage, clauses du bail rural, transparence comptable, clause de dévolution,
   modalités d'accueil de nouveaux associés.
 voir_aussi: [fonciere-terre-de-liens]
+dossier:
+  identite:
+    siren: "983504531"
+    adresse: "14 Rue du Plaisir, 37220 Sazilly"
+  echelle:
+    personnes: "2 associé·es exploitant·es (François et Sophie de la Monneraye)"
+    surface: "Environ 23 hectares, dont 13 hectares en agroforesterie"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts du GAEC non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail rural conclu fin 2018 avec la Foncière Terre de Liens, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail rural ; clauses et montant du fermage non documentés."
 sources:
   - titre: "Le Plaisir — Fermes Terre de Liens"
     url: "https://fermes.terredeliens.org/centre/fermes-de-la-r%C3%A9gion-centre/le-plaisir/"

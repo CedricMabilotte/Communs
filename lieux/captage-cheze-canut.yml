@@ -8,6 +8,7 @@ localisation:
   commune: "Maxent"
   departement: "Ille-et-Vilaine (35)"
   region: "Bretagne"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-2.032,47.984&z=16"
 annee: null
 url: "https://www.eaudubassinrennais-collectivite.fr/notre-reseau/ressources-eau/ressource-cheze-canut/"
 resume: >
@@ -27,8 +28,10 @@ resume: >
   aires de captage pour préserver la qualité de l'eau.
 montage:
   type: propriete_publique
-  nu_proprietaire: "Eau du Bassin Rennais (collectivité publique — syndicat mixte de production d'eau potable)"
-  usufruitier: "Exploitant·es agricoles preneur·ses de bail rural à clauses environnementales sur le captage de la Chèze-Canut"
+  articulations:
+    - usufruitier: exploitants-brce-cheze-canut
+      titre: bail_rural
+      note: "Bail rural à clauses environnementales ; durée non précisée par les sources. Une partie des parcelles est aménagée directement par la collectivité, hors articulation agricole."
   description: >
     Le foncier de protection du captage est acquis et détenu par Eau du Bassin
     Rennais, collectivité publique gestionnaire de l'eau du bassin rennais. Les
@@ -93,6 +96,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitant·e dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Les parcelles agricoles sont remises par bail rural à clauses environnementales (BRCE), qui inscrit dans le contrat des engagements opposables de pratiques favorables à la qualité de l'eau ; la finalité même du foncier est la protection de la ressource."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La protection de la ressource en eau et l'aménagement écologique de parcelles (boisements, haies bocagères, mares) inscrivent la préservation du milieu vivant parmi les finalités assumées et agies du site."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "L'usage agricole est encadré par des clauses environnementales destinées à réduire les pollutions diffuses ; une partie des parcelles est gérée en boisements et haies, dans une logique de maintien du milieu."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Une partie des parcelles est aménagée et gérée écologiquement en boisements, haies bocagères et mares : des espaces sont effectivement laissés au vivant non-humain."
 analyse:
   forces:
     - "Foncier de protection détenu durablement par une collectivité publique, hors marché."

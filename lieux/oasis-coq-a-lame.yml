@@ -8,6 +8,7 @@ localisation:
   commune: "Cellettes"
   departement: "Charente (16)"
   region: "Nouvelle-Aquitaine"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.1334,45.8798&z=16"
 annee: 2021
 url: "https://oasis-ducoqalame.fr/"
 resume: >
@@ -25,8 +26,18 @@ resume: >
   Coopérative Oasis, une Obligation Réelle Environnementale.
 montage:
   type: propriete_collective
-  nu_proprietaire: "SCIC de l'Oasis du Coq à l'Âme"
-  usufruitier: "Association des habitants du domaine d'Echoisy (association loi 1901)"
+  articulations:
+    - usufruitier: habitants-echoisy
+      titre: bail_emphyteotique
+      note: "Clauses et redevance du bail emphytéotique non documentées par les sources."
+  liants:
+    - intitule: "Obligation Réelle Environnementale"
+      niveau: lieu
+      portee: contraignante
+      description: >
+        ORE signée le 28 août 2025 avec l'accompagnement de la Coopérative Oasis,
+        attachant durablement au foncier des engagements de préservation de la
+        biodiversité.
   description: >
     Le domaine d'Echoisy — bâtiments et 26 hectares — est la propriété de la
     SCIC de l'Oasis du Coq à l'Âme, financée par les apports des membres en
@@ -89,6 +100,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'association des habitant·es dispose d'un bail emphytéotique, titre d'usage long pouvant courir jusqu'à 99 ans : jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: oui
+    note: "Une Obligation Réelle Environnementale a été signée le 28 août 2025 : un dispositif opposable et durable attachant au foncier des engagements de préservation de la biodiversité."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La signature d'une ORE et l'inscription de l'écolieu parmi les ÉcoQuartiers citoyens traduisent une finalité de préservation de la biodiversité affirmée et agie, au-delà du seul usage humain."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Autonomie alimentaire en agroécologie, écoconstruction et expérimentation agroécologique : des pratiques de maintien attestées, confortées par les engagements de l'ORE."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Sur 26 hectares, l'ORE attache durablement des engagements de préservation de la biodiversité ; le domaine accueille déjà ferme pédagogique et activités tournées vers le vivant."
 analyse:
   forces:
     - "Domaine acquis par la mise en commun de l'épargne des membres, hors spéculation."

@@ -4,6 +4,7 @@ nom: "Conservatoire du littoral"
 sous_titre: "Établissement public détenant un domaine foncier inaliénable"
 statut_fiche: publie
 forme_juridique: "Établissement public (Conservatoire de l'espace littoral et des rivages lacustres)"
+nature_interet: non_lucrative
 localisation: null
 annee: 1975
 url: "https://www.conservatoire-du-littoral.fr/"
@@ -79,6 +80,9 @@ grille:
   - critere: securite_usage_offerte
     valeur: partiel
     note: "La gestion est confiée par conventions à des tiers ; la domanialité inaliénable sécurise le foncier, mais la durée et le mode de renouvellement de ces conventions ne sont pas documentés."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "L'objet même de l'établissement est de protéger durablement les espaces naturels du littoral : la préservation du vivant non-humain est une finalité affirmée et agie."
 analyse:
   forces:
     - "Domaine propre inaliénable : protection foncière parmi les plus fortes."
@@ -104,7 +108,29 @@ fiabilite: >
   cinquantenaire de l'établissement en 2025, environ 13 % des sites gérés par
   des associations en 2015. Non confirmé : place détaillée des citoyen·nes dans
   la gouvernance, part actuelle des sites gérés par des associations.
-voir_aussi: [federation-cen]
+voir_aussi: [cen-occitanie]
+dossier:
+  identite:
+    siren: "180005019"
+    adresse: "Corderie Royale, rue Jean-Baptiste Audebert, BP 10137, 17306 Rochefort"
+  echelle:
+    lieux: "Plus de 840 sites."
+    surface: "De l'ordre de 220 000 hectares, soit environ 18 % du littoral français."
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Établissement public régi par la loi du 10 juillet 1975 et le Code de l'environnement."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+      note: "Établissement public soumis au contrôle de l'État ; l'accès en ligne d'états financiers détaillés n'est pas confirmé."
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Conservatoire du littoral — site officiel"
     url: "https://www.conservatoire-du-littoral.fr/"

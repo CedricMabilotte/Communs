@@ -4,6 +4,7 @@ nom: "Foncière Terre de Liens"
 sous_titre: "Société d'actionnariat solidaire portant les terres agricoles"
 statut_fiche: publie
 forme_juridique: "Société en commandite par actions (SCA) à capital variable"
+nature_interet: commerciale_encadree
 localisation: null
 annee: 2006
 url: "https://terredeliens.org/la-fonciere"
@@ -15,7 +16,7 @@ resume: >
   environnemental. Les actionnaires ne perçoivent pas de dividende ; un principe
   de revalorisation des parts limite l'effet de l'inflation.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   description: >
     La Foncière collecte l'épargne solidaire de citoyen·nes-actionnaires, dont la
     responsabilité est limitée à leur apport, et achète le foncier qu'elle
@@ -79,6 +80,9 @@ grille:
   - critere: redevabilite_publique
     valeur: partiel
     note: "La Foncière communique dans le cadre du mouvement Terre de Liens et de la finance solidaire, mais ne relève pas d'un contrôle public comparable à celui d'une FRUP."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "La finalité centrale est le portage de terres agricoles, mais la Foncière recourt fréquemment au bail rural environnemental, inscrivant des pratiques favorables au vivant non-humain dans le droit du lieu, sans en faire une finalité centrale."
 analyse:
   forces:
     - "Mobilisation large de capital citoyen sans rémunération spéculative."
@@ -103,6 +107,24 @@ fiabilite: >
   Non confirmé : clause de dévolution, inaliénabilité statutaire, composition des
   instances de gouvernance.
 voir_aussi: [fondation-terre-de-liens, gfa-mutuels]
+dossier:
+  identite:
+    siren: "493396816"
+    adresse: "25 quai André Reynier, 26400 Crest"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+      note: "Le mouvement Terre de Liens publie des rapports annuels ; l'accès en ligne d'états financiers détaillés de la SCA n'est pas confirmé."
+    - type: bail
+      statut: inconnu
 sources:
   - titre: "Terre de Liens — La Foncière"
     url: "https://terredeliens.org/la-fonciere"

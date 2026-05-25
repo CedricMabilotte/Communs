@@ -8,6 +8,7 @@ localisation:
   commune: "La Cavalerie / Millau"
   departement: "Aveyron (12)"
   region: "Occitanie"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=3.159,44.009&z=16"
 annee: 1985
 url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
 resume: >
@@ -20,8 +21,11 @@ resume: >
   nombre de paysan·nes.
 montage:
   type: propriete_publique
-  nu_proprietaire: "État (propriété publique issue du rachat foncier)"
-  usufruitier: "Titulaire de l'usage : Société Civile des Terres du Larzac (SCTL), preneuse d'un bail emphytéotique de 99 ans consenti par l'État"
+  articulations:
+    - usufruitier: sctl
+      titre: bail_emphyteotique
+      duree: "99 ans, signé en 1985 puis porté à 99 ans en 2013, échéance 2083"
+      note: "La SCTL, preneuse à bail, attribue ensuite l'usage aux paysan·nes par des baux de long terme."
   description: >
     L'État demeure propriétaire de l'ensemble du foncier. La SCTL, société civile
     de droit privé, en détient l'usage par un bail emphytéotique conclu avec
@@ -83,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "La SCTL attribue l'usage aux paysan·nes par des baux de long terme, assurant au collectif usager une jouissance durable du plateau."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Les baux de long terme attribués par la SCTL aux paysan·nes ne sont pas documentés quant à d'éventuelles clauses environnementales ; aucun dispositif opposable de protection du milieu n'est établi par les sources."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "La vocation documentée du dispositif est l'installation paysanne et la revitalisation agricole du plateau ; l'accueil de la biodiversité non-humaine comme finalité n'est pas explicité par les sources."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Le plateau est voué à l'agriculture, notamment l'élevage ovin, mais le mode de conduite des exploitations (extensif, bio, conservatoire) n'est pas documenté par les sources."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "Le plateau du Larzac, vaste espace agropastoral, n'est pas documenté par les sources quant à des espaces effectivement laissés ou aménagés pour le vivant non-humain."
 analyse:
   forces:
     - "Propriété publique de l'État adossée à un bail emphytéotique de 99 ans : irréversibilité parmi les plus fortes."

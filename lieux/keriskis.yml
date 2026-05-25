@@ -24,9 +24,12 @@ resume: >
   fruits) ; il se réunit à chaque saison en assemblée générale, avec des
   commissions thématiques (accessibilité, travaux, juridique).
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Antidote (fonds de dotation)"
-  usufruitier: "Association d'usager·es de Keriskis (association loi 1901)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: association-keriskis
+      titre: bail_emphyteotique
+      duree: "longue durée"
+      note: "Durée exacte et clauses du bail non confirmées par les sources ; structure gestionnaire non documentée publiquement."
   description: >
     La ferme de Keriskis, acquise en propriété privée en 2017, a été transmise
     par donation au fonds de dotation Antidote en novembre 2024, ce qui la
@@ -86,6 +89,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Comme les autres lieux Antidote, l'usage relève d'un bail emphytéotique de longue durée ; la durée exacte et le renouvellement ne sont pas confirmés pour Keriskis."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Les clauses du bail emphytéotique ne sont pas documentées : l'existence d'une clause environnementale ou d'un autre dispositif opposable de protection du milieu n'est pas établie."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "La vocation documentée du lieu est sociale (entraide, lien social, rencontres politiques) ; l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités par les sources."
+  - critere: usage_non_degradant
+    valeur: partiel
+    note: "Le lieu mène un verger, un potager, de la vannerie et du bûcheronnage en activités décrites comme non marchandes ; le mode de conduite (bio, conservatoire) n'est pas précisé par les sources."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Ancienne ferme à la campagne avec verger, potager et bois suggérant des espaces non bâtis favorables au vivant ; aucun aménagement écologique délibéré (haies, mares) n'est documenté."
 analyse:
   forces:
     - "Foncier sorti du marché par transmission à un fonds de dotation non lucratif."

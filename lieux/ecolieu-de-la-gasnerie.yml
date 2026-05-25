@@ -8,6 +8,7 @@ localisation:
   commune: "Morannes-sur-Sarthe-Daumeray"
   departement: "Maine-et-Loire (49)"
   region: "Pays de la Loire"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-0.416,47.744&z=16"
 annee: null
 url: "https://www.ecolieudelagasnerie.fr/"
 resume: >
@@ -23,6 +24,10 @@ resume: >
   documenté publiquement : cette fiche est lacunaire et signalée comme telle.
 montage:
   type: propriete_collective
+  articulations:
+    - usufruitier: collectif-gasnerie
+      titre: integre
+      note: "Chaîne provisoirement renseignée comme intégrée sur le collectif faute de structure foncière distincte documentée."
   description: >
     L'Écolieu de la Gasnerie est habité et rénové par son collectif. Les sources
     publiques ne documentent pas la structure juridique détenant le foncier, ni
@@ -82,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: inconnu
     note: "Le titre par lequel le collectif a l'usage du lieu et sa durée ne sont pas documentés par les sources."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable — obligation réelle environnementale, classement, clause inscrite à un bail — n'est documenté ; le foncier n'est protégé que par l'intention écologique du collectif."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le projet se réclame d'un mode de vie écologique et le lieu accueille une biodiversité affirmée (oiseaux, grenouilles, deux mares), mais le vivant non-humain n'est pas posé comme finalité dans des statuts ou une charte."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Les sources décrivent un jardin arboré et fleuri et une rénovation éco-responsable, mais les pratiques d'entretien du lieu ne sont pas documentées avec assez de précision pour conclure."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Le domaine d'un hectare comprend un jardin très arboré et fleuri, deux mares et de petits ruisseaux, espaces effectivement laissés au vivant non-humain."
 analyse:
   forces:
     - "Lieu porté et habité par son collectif, qui en décide les usages."

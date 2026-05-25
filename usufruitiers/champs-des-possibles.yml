@@ -4,6 +4,7 @@ nom: "Les Champs des Possibles"
 sous_titre: "Couveuse et coopérative d'activités agricoles en Île-de-France"
 statut_fiche: publie
 forme_juridique: "Société anonyme coopérative (depuis juin 2024 ; SCIC depuis 2016, association depuis 2009)"
+nature_interet: commerciale_encadree
 localisation: null
 annee: 2009
 url: "https://www.leschampsdespossibles.fr/"
@@ -82,6 +83,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Les sources ne documentent ni le loyer versé au porteur du foncier mobilisé, ni la redevance demandée aux porteur·ses de projet en test."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le test d'activité accompagne des installations en agriculture respectueuse de l'environnement, mais la finalité de la coopérative est l'installation paysanne, sans biodiversité affichée comme objet."
 analyse:
   forces:
     - "Espace-test concret comblant l'amont de l'installation agricole en périurbain francilien."
@@ -109,6 +113,28 @@ fiabilite: >
   d'activité « immersion » d'un à trois ans avec mise à disposition de foncier,
   de matériel et d'un cadre juridique. Non confirmé : place décisionnelle des
   porteur·ses de projet, clause de dévolution, détail des comptes.
+dossier:
+  identite:
+    siren: "514027945"
+    adresse: "Hameau de Toussacq, 77480 Villenauxe-la-Petite"
+  echelle:
+    lieux: "trois fermes d'accueil en périurbain francilien"
+    surface: "fermes d'accueil de 2 à 5 hectares"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+      note: "Société coopérative immatriculée au registre des entreprises ; ses comptes ne sont pas publiés sur le site de la coopérative."
+    - type: bail
+      statut: inconnu
+      note: "Conventions de test d'activité avec les porteur·ses de projet ; non publiées."
 sources:
   - titre: "Les Champs des Possibles — La coopérative"
     url: "https://www.leschampsdespossibles.fr/la-cooperative/"

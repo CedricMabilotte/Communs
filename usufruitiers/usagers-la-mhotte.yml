@@ -4,6 +4,7 @@ nom: "École de la Mhotte et association Acoeur"
 sous_titre: "Collectif usager du domaine du Château de la Mhotte, dans l'Allier"
 statut_fiche: publie
 forme_juridique: "Associations loi 1901"
+nature_interet: non_lucrative
 localisation:
   commune: "Saint-Menoux"
   departement: "Allier (03)"
@@ -23,7 +24,7 @@ resume: >
   bail emphytéotique de 99 ans consenti par le fonds de dotation Fraternité
   pour Demain.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Fonds de dotation Fraternité pour Demain"
   usufruitier: "École de la Mhotte et association Acoeur (associations loi 1901)"
   description: >
@@ -88,6 +89,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "L'existence et le montant d'une redevance emphytéotique versée au fonds de dotation ne sont pas documentés par les sources."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Le domaine est engagé dans une démarche Oasis de Biodiversité formalisée par une Obligation Réelle Environnementale : la préservation du vivant non-humain est une finalité affichée et agie, levier pédagogique des deux associations."
 analyse:
   forces:
     - "Usage du domaine sécurisé pour 99 ans par bail emphytéotique."
@@ -118,6 +122,29 @@ fiabilite: >
   Non confirmé : montant de la redevance, transparence comptable, clause de
   dévolution, modalités d'accueil.
 voir_aussi: [fonds-fraternite-pour-demain]
+dossier:
+  identite:
+    adresse: "Château de la Mhotte, 03210 Saint-Menoux"
+  echelle:
+    personnes: "Environ 120 élèves (École de la Mhotte) et une douzaine de foyers en habitat participatif (Acoeur)"
+    lieux: "1 domaine"
+    surface: "Une quinzaine d'hectares"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts des deux associations (École de la Mhotte et Acoeur) non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans consenti en 2026 par le fonds de dotation Fraternité pour Demain, non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans ; redevance non documentée. Une Obligation Réelle Environnementale est mise en place sur le domaine."
 sources:
   - titre: "Coopérative Oasis — Château de la Mhotte"
     url: "https://cooperative-oasis.org/oasis/chateau-de-la-mhotte/"

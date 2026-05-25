@@ -8,6 +8,7 @@ localisation:
   commune: "Torpes"
   departement: "Saône-et-Loire (71)"
   region: "Bourgogne-Franche-Comté"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.33833,46.8417&z=16"
 annee: 2011
 url: "https://fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/le-jointout/"
 resume: >
@@ -21,9 +22,10 @@ resume: >
   porcs plein air, maraîchage et élevage-dressage de chevaux de trait. Le lieu
   voisine l'écolieu du Portail, site d'habitat groupé écologique.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Terre de Liens — Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire), porteur non confirmé"
-  usufruitier: "GAEC du Jointout (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-du-jointout
+      titre: bail_rural
   description: >
     Le foncier du Jointout — environ 50 hectares — a été racheté en 2011 par
     Terre de Liens pour soustraire la terre au marché et permettre
@@ -85,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le collectif dispose d'une jouissance durable et sécurisée depuis 2010-2011."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé n'est documenté pour le foncier du Jointout."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le lieu se conçoit comme un site de production agricole et d'échanges culturels ; le vivant non-humain n'est pas affiché comme finalité au-delà des pratiques agricoles biologiques."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Élevage et polyculture conduits en agriculture biologique, dont 41 hectares de prairies : des pratiques de maintien de la capacité régénérative du sol sont attestées."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "Le maintien de 41 hectares de prairies est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
 analyse:
   forces:
     - "Foncier sanctuarisé hors marché par Terre de Liens depuis 2011."

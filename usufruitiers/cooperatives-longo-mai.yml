@@ -4,6 +4,7 @@ nom: "Coopératives Longo Maï"
 sous_titre: "Collectifs autogérés utilisant les terres sanctuarisées"
 statut_fiche: publie
 forme_juridique: "Coopératives autogérées (statut juridique précis non confirmé par les sources)"
+nature_interet: non_lucrative
 localisation: null
 annee: 1973
 url: "https://www.prolongomaif.ch/"
@@ -16,7 +17,7 @@ resume: >
   autogestion et conduisent agriculture, élevage, vigne, forêt, artisanat et
   accueil.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
   usufruitier: "Titulaire de l'usage : coopératives Longo Maï (collectifs autogérés), usage reposant sur l'autogestion et la qualité de coopérant"
   description: >
@@ -78,6 +79,9 @@ grille:
   - critere: loyer_soutenable
     valeur: inconnu
     note: "L'articulation contractuelle entre les coopératives et le Fonds de Terre Européenne n'étant pas documentée, l'existence et le niveau d'un loyer ou d'une redevance ne le sont pas non plus."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le réseau conduit agriculture, élevage, vigne et forêt sur un mode coopératif ; la biodiversité n'est pas affichée comme finalité centrale dans les sources consultées."
 analyse:
   forces:
     - "Autogestion effective : les usager·es décident collectivement."
@@ -102,6 +106,24 @@ fiabilite: >
   précis des coopératives, actes formalisant l'usage, modalités d'accueil de
   nouveaux entrants, transparence interne.
 voir_aussi: [fonds-terre-europeenne]
+dossier:
+  echelle:
+    lieux: "cinq implantations en France (Limans, Chantemerle, Mas de Granier, Treynas, La Cabrery)"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statut juridique précis des coopératives non confirmé par les sources."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Formalisation contractuelle de l'usage entre la fondation et les coopératives non documentée."
 sources:
   - titre: "Pro Longo Maï"
     url: "https://www.prolongomaif.ch/"

@@ -8,6 +8,7 @@ localisation:
   commune: "Avignon"
   departement: "Vaucluse (84)"
   region: "Provence-Alpes-Côte d'Azur"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.81,43.946&z=16"
 annee: 2020
 url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"
 resume: >
@@ -23,9 +24,10 @@ resume: >
   arboriculteur·rices réuni·es en GAEC ; une collecte d'épargne citoyenne a été
   lancée en novembre 2020 pour finaliser l'acquisition.
 montage:
-  type: propriete_sanctuarisee
-  nu_proprietaire: "Foncière Terre de Liens (société en commandite par actions à actionnariat solidaire)"
-  usufruitier: "GAEC exploitant la ferme de la Durette (groupement agricole d'exploitation en commun)"
+  type: propriete_protegee
+  articulations:
+    - usufruitier: gaec-ferme-la-durette
+      titre: bail_rural
   description: >
     Le foncier de la Durette est porté durablement par la Foncière Terre de
     Liens, structure non spéculative qui l'a acquis grâce à l'épargne citoyenne
@@ -85,6 +87,18 @@ grille:
   - critere: securite_jouissance
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "L'usage est confié par bail rural sans que les sources précisent s'il s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable de protection du milieu n'est documenté."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Ferme pilote en verger-maraîcher agroforestier conçue pour étudier l'agroforesterie : la place du vivant non-humain (arbres, auxiliaires) est constitutive de la conception même du lieu."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Conduite en agriculture biologique et en agroforesterie : pratiques de maintien et de régénération du sol, attestées et étudiées par le GRAB."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Bandes de maraîchage alternant avec des lignes de fruitiers et volailles intégrées : un système agroforestier qui ménage structurellement une place au vivant non-humain."
 analyse:
   forces:
     - "Foncier périurbain sauvé du marché par l'épargne citoyenne après une vente menaçante en 2018."

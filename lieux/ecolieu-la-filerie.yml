@@ -8,6 +8,7 @@ localisation:
   commune: "Controis-en-Sologne"
   departement: "Loir-et-Cher (41)"
   region: "Centre-Val de Loire"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=1.413,47.435&z=16"
 annee: 2019
 url: "https://www.lafilerie.org/"
 resume: >
@@ -24,9 +25,11 @@ resume: >
   150 000 euros au taux de 1,5 % sur huit ans pour rénover des granges, et
   l'accompagne une journée par an.
 montage:
-  type: propriete_collective
-  nu_proprietaire: "Famille Bargue (propriétaire privée)"
-  usufruitier: "SCIC Les Semeurs de Graines"
+  type: propriete_privee_individuelle
+  articulations:
+    - usufruitier: scic-semeurs-de-graines
+      titre: bail_a_construction
+      duree: "dix-huit ans"
   description: >
     La propriété de l'Écolieu la Filerie appartient à la famille Bargue, qui
     habite sur place : le foncier n'est pas porté par une structure non
@@ -88,6 +91,18 @@ grille:
   - critere: securite_jouissance
     valeur: partiel
     note: "Le bail à construction sécurise la jouissance pour dix-huit ans : durée significative mais bornée, et le renouvellement au-delà n'est pas garanti par les sources."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucune obligation réelle environnementale ni clause environnementale inscrite au bail à construction n'est documentée ; l'existence d'un dispositif opposable n'est pas établie par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le lieu affiche une vocation de transition écologique et de formation à ses métiers, mais le vivant non-humain comme cohabitant n'est pas posé explicitement parmi les finalités statutaires."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Le site cultive des jardins en permaculture, pratique de maintien et de régénération du sol."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Le terrain d'un hectare s'inscrit au milieu de cent hectares de forêt et comporte des jardins en permaculture ; des aménagements dédiés au vivant non-humain ne sont pas davantage documentés."
 analyse:
   forces:
     - "Occupant coopératif ancré localement, vingt-huit sociétaires du territoire."

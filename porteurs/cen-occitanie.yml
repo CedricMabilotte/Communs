@@ -1,0 +1,161 @@
+uid: cen-occitanie
+categorie: porteur
+nom: "Conservatoire d'espaces naturels Occitanie"
+sous_titre: "Association régionale agréée portant et protégeant 36 000 hectares d'espaces naturels"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 d'intérêt général, agréée"
+nature_interet: non_lucrative
+localisation:
+  commune: null
+  departement: null
+  region: "Occitanie"
+annee: 2020
+url: "https://www.cen-occitanie.org/qui-sommes-nous/"
+resume: >
+  Association loi 1901 de protection de la nature, née en 2020 de la fusion des
+  anciens Conservatoires d'espaces naturels de Midi-Pyrénées, du Languedoc-
+  Roussillon et de Lozère. Le Conservatoire d'espaces naturels Occitanie est
+  agréé par l'État et la Région au titre de l'article L. 414-11 du Code de
+  l'environnement. Il intervient sur environ 370 sites couvrant quelque 36 000
+  hectares d'espaces naturels, dont près de 1 600 hectares en pleine propriété,
+  par une combinaison d'acquisitions, de conventions, de baux emphytéotiques, de
+  baux ruraux environnementaux et d'obligations réelles environnementales. Il est
+  notamment cogestionnaire, avec la commune de Sanilhac-Sagriès, de la réserve
+  naturelle régionale des gorges du Gardon. Membre du réseau national des
+  Conservatoires d'espaces naturels.
+montage:
+  type: propriete_protegee
+  description: >
+    Le Conservatoire d'espaces naturels Occitanie sécurise la protection des
+    espaces naturels par la maîtrise foncière ou la maîtrise d'usage : il acquiert
+    une partie des sites en pleine propriété, signe sur d'autres des conventions de
+    gestion, des baux emphytéotiques, des baux ruraux environnementaux ou des
+    obligations réelles environnementales. Association d'intérêt général agréée par
+    l'État et la Région, il relève du droit civil privé non lucratif. Sur la
+    réserve naturelle régionale des gorges du Gardon, il porte une partie du
+    foncier — en propriété et par bail emphytéotique — et en assure la gestion en
+    cogestion avec la commune, sur un périmètre par ailleurs protégé par classement
+    réglementaire de la Région.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 d'intérêt général agréée par l'État et la Région :
+    montage entièrement de droit civil non lucratif, à gouvernance associative
+    inscrite dans un cadre public.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le Conservatoire combine pleine propriété, bail emphytéotique et conventions ; aucune inaliénabilité statutaire systématique du foncier acquis n'est documentée."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Association loi 1901 agréée : forme protectrice de droit civil, mais en deçà de la fondation reconnue d'utilité publique et de la personne publique sur l'échelle de protection."
+  - critere: clause_devolution
+    valeur: partiel
+    note: "Une association ne peut dévoluer son actif à ses membres ; la clause de dévolution précise du Conservatoire n'est pas documentée par les sources."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Association loi 1901, forme structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif et sans capital : les ressources servent l'objet de protection des espaces naturels, sans partage de bénéfices."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "Le statut d'association loi 1901 d'intérêt général, agréée État-Région, suppose une gestion désintéressée."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Le Conservatoire ne dépend d'aucun investisseur attendant une plus-value ou un dividende sur le foncier."
+  - critere: ca_collegial
+    valeur: oui
+    note: "Association loi 1901 dotée d'une vie associative et d'un conseil d'administration ; née de la fusion de trois conservatoires régionaux."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "L'agrément conjoint de l'État et de la Région associe la puissance publique au cadre d'action du Conservatoire."
+  - critere: transparence
+    valeur: partiel
+    note: "Le Conservatoire publie un rapport d'activité annuel ; le détail de la transparence comptable n'est pas documenté par les sources."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet — connaître, protéger, gérer et valoriser les espaces naturels — est explicitement une mission de protection foncière, reconnue par l'agrément L. 414-11 du Code de l'environnement."
+  - critere: agrement_ig
+    valeur: oui
+    note: "Agréé par l'État et la Région au titre de l'article L. 414-11 du Code de l'environnement."
+  - critere: risque_requalification
+    valeur: oui
+    note: "L'agrément conjoint préfet de région / conseil régional, fondé sur le Code de l'environnement, ancre durablement la mission d'intérêt général : risque de requalification fiscale faible."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "L'agrément public soumet le Conservatoire à un cadre de contrôle et il publie un rapport d'activité ; le détail de la reddition de comptes au public n'est pas documenté."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La préservation de la biodiversité et des espaces naturels est l'objet même du Conservatoire : le vivant non-humain est la finalité affirmée et agie, non un décor ni une ressource."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le Conservatoire protège les espaces par propriété, bail emphytéotique et conventions de gestion ; les sources n'indiquent aucune recherche de revenu locatif de marché, mais les conditions financières des conventions ne sont pas détaillées."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le Conservatoire mobilise le bail emphytéotique de longue durée, titre d'usage long, mais aussi des conventions de gestion dont la durée et le renouvellement ne sont pas documentés."
+analyse:
+  forces:
+    - "Association loi 1901 d'intérêt général agréée par l'État et la Région : intégrité du montage élevée."
+    - "Maîtrise foncière étendue — environ 36 000 hectares sur 370 sites, dont 1 600 en pleine propriété."
+    - "Outils variés et protecteurs : acquisition, bail emphytéotique, bail rural environnemental, obligation réelle environnementale."
+    - "La préservation du vivant non-humain est la finalité même de la structure."
+  fragilites:
+    - "Pas d'inaliénabilité statutaire systématique du foncier acquis."
+    - "Forme associative moins protectrice qu'une fondation reconnue d'utilité publique."
+    - "Clause de dévolution et transparence comptable non documentées."
+  leviers:
+    - "Privilégier la pleine propriété assortie de clauses d'inaliénabilité."
+    - "Documenter publiquement la clause de dévolution et les comptes de l'association."
+    - "Sécuriser durablement chaque site géré par bail emphytéotique ou obligation réelle environnementale."
+  synthese: >
+    Le Conservatoire d'espaces naturels Occitanie est un porteur foncier robuste :
+    association d'intérêt général agréée par l'État et la Région, il porte et
+    protège un vaste réseau de sites naturels par une palette d'outils fonciers
+    solides, avec la préservation du vivant pour finalité explicite. Sa logique
+    est celle de l'intérêt général institué — gestion experte et descendante —
+    plutôt que de l'autogestion citoyenne ; sa marge de progression tient à
+    l'inaliénabilité statutaire et à la transparence de son fonctionnement.
+fiabilite: >
+  Faits vérifiés (sources Conservatoire d'espaces naturels Occitanie et Fédération
+  des conservatoires d'espaces naturels, consultées en mai 2026) : association loi
+  1901 née en 2020 de la fusion des CEN de Midi-Pyrénées, du Languedoc-Roussillon
+  et de Lozère, agréée par l'État et la Région au titre de l'article L. 414-11 du
+  Code de l'environnement, intervention sur environ 370 sites couvrant quelque
+  36 000 hectares dont près de 1 600 en pleine propriété, recours à l'acquisition,
+  aux conventions, aux baux emphytéotiques, aux baux ruraux environnementaux et
+  aux obligations réelles environnementales, cogestion de la réserve naturelle
+  régionale des gorges du Gardon avec la commune de Sanilhac-Sagriès. Non
+  confirmé : clause de dévolution, inaliénabilité statutaire, détail de la
+  transparence comptable, conditions financières et durée des conventions.
+dossier:
+  identite:
+    siren: "384643938"
+    rna: "W343007458"
+    adresse: "26 allée de Mycènes, 34000 Montpellier"
+  echelle:
+    personnes: "Environ 120 salarié·es (écologues, ingénieur·es, technicien·nes, gestionnaires) et de nombreux bénévoles."
+    lieux: "Environ 370 sites."
+    surface: "Environ 36 000 hectares, dont près de 1 600 hectares en pleine propriété."
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+      note: "Le Conservatoire publie un rapport d'activité annuel ; l'accès en ligne d'états financiers détaillés n'est pas confirmé."
+    - type: bail
+      statut: inconnu
+sources:
+  - titre: "Qui sommes-nous ? — Conservatoire d'espaces naturels Occitanie"
+    url: "https://www.cen-occitanie.org/qui-sommes-nous/"
+  - titre: "Réserve Naturelle Régionale des Gorges du Gardon — Conservatoire d'espaces naturels Occitanie"
+    url: "https://www.cen-occitanie.org/gorges-du-gardon/"

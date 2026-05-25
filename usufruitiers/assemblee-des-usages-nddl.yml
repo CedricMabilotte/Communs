@@ -4,6 +4,7 @@ nom: "Assemblée des usages de la ZAD de Notre-Dame-des-Landes"
 sous_titre: "Collectif de gestion de l'usage des terres de l'ancienne ZAD"
 statut_fiche: publie
 forme_juridique: "Collectif sans personnalité juridique propre"
+nature_interet: non_lucrative
 localisation:
   commune: "Notre-Dame-des-Landes"
   departement: "Loire-Atlantique (44)"
@@ -22,7 +23,7 @@ resume: >
   assemblée. C'est elle aussi qui mandate les administrateur·rices du fonds de
   dotation « La Terre en commun », qui acquiert le foncier.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Fonds de dotation « La Terre en commun » (acquisitions progressives) ; État et collectivités pour la part non rachetée"
   usufruitier: "Assemblée des usages de la ZAD, et titulaires des baux ruraux de l'ancienne ZAD"
   description: >
@@ -91,6 +92,9 @@ grille:
   - critere: loyer_soutenable
     valeur: oui
     note: "Les baux ruraux prévoient des loyers dégressifs selon l'engagement environnemental des exploitant·es, écartant toute logique de rendement et restant soutenables pour les collectifs."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "La préservation environnementale figure parmi les finalités de la gestion du bocage, agie par des baux assortis de clauses environnementales et des loyers dégressifs selon les pratiques."
 analyse:
   forces:
     - "Gouvernance citoyenne horizontale, ouverte à tout·e usager·e régulier du territoire."
@@ -127,6 +131,27 @@ fiabilite: >
   baux les plus récents, répartition exacte entre foncier racheté par le fonds
   et foncier resté public.
 voir_aussi: [nddl, fonds-la-terre-en-commun]
+dossier:
+  echelle:
+    lieux: "ancienne ZAD de Notre-Dame-des-Landes"
+    surface: "environ 350 hectares dont l'usage est porté par des baux ruraux"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Collectif sans personnalité juridique propre : pas de statuts au sens d'une personne morale."
+    - type: reglement_interieur
+      statut: inconnu
+      note: "L'assemblée se réfère aux « six points » arrêtés par le mouvement en 2017, sans règlement intérieur formalisé documenté."
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Les baux ruraux signés à partir de 2019 sur l'ancienne ZAD ne sont pas publiés."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Vingt-quatre baux ruraux de neuf ans, dont un seul sans clause environnementale ; non publiés."
 sources:
   - titre: "Assemblée des Usages — Zone A Défendre"
     url: "https://zad.nadir.org/spip.php?article5076="
