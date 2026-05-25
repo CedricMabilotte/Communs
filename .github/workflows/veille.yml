@@ -57,7 +57,10 @@ jobs:
             echo "Aucun changement à committer."
           else
             git commit -m "Veille automatisée : candidats + site régénéré ($(date -u +%Y-%m-%d))"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "push ($i) rejeté — rebase et nouvelle tentative"; sleep 5
+            done
           fi
 
       - name: Préparer l'artefact Pages
