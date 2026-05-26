@@ -92,7 +92,7 @@ grille:
     valeur: partiel
     note: "L'agriculture paysanne et la culture de céréales anciennes traduisent un soin du vivant cultivé, mais l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités du lieu."
   - critere: usage_non_degradant
-    valeur: partiel
+    valeur: inconnu
     note: "Le lieu pratique une agriculture paysanne de céréales anciennes et d'oléagineux, peu intensive ; le mode de conduite précis (bio, agroécologie) n'est pas attesté par les sources."
   - critere: place_au_vivant
     valeur: partiel

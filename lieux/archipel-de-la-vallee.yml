@@ -90,7 +90,7 @@ grille:
     valeur: oui
     note: "Les associations exploitent le lieu en leur qualité d'associé·es de la SCI propriétaire : l'usage n'est ni précaire ni plafonné dans le temps."
   - critere: milieu_protege
-    valeur: partiel
+    valeur: non
     note: "Le lieu est au cœur du parc naturel régional de la haute vallée de Chevreuse, qui encadre l'usage des sols ; aucun dispositif opposable propre au lieu (ORE, clause environnementale au bail) n'est documenté."
   - critere: vivant_finalite
     valeur: non
@@ -99,7 +99,7 @@ grille:
     valeur: inconnu
     note: "Les quatre hectares sont décrits comme prairies ; les sources ne documentent ni usage agricole ni mode d'entretien du milieu permettant d'apprécier leur caractère dégradant ou non."
   - critere: place_au_vivant
-    valeur: partiel
+    valeur: non
     note: "Le lieu comprend quatre hectares de prairies en milieu rural ; aucun aménagement délibéré pour le vivant (haies, mares, continuités) n'est documenté par les sources."
 analyse:
   forces:

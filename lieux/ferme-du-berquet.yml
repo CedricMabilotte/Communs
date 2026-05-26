@@ -92,10 +92,10 @@ grille:
     valeur: oui
     note: "L'usage est confié par bail emphytéotique de longue durée, qui sécurise la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements civils."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucune obligation réelle environnementale ni clause environnementale du bail emphytéotique n'est documentée ; les clauses du bail ne sont pas connues des sources."
   - critere: vivant_finalite
-    valeur: inconnu
+    valeur: non
     note: "Les sources décrivent les vocations agricole et culturelle du lieu, mais ne mentionnent pas le vivant non-humain comme cohabitant parmi ses finalités."
   - critere: usage_non_degradant
     valeur: oui

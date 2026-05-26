@@ -89,7 +89,7 @@ grille:
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1990, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "La ferme conduit ses prairies et cultures en bio, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale au bail) n'est documenté pour le foncier du Mas de Granier."
   - critere: vivant_finalite
     valeur: partiel

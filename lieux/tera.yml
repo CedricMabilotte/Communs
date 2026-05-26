@@ -94,7 +94,7 @@ grille:
     valeur: inconnu
     note: "La nature et la durée des titres d'usage liant la SCI Le Tilleul aux structures d'usage de TERA ne sont pas documentées par les sources."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Le foncier productif est conduit en agroécologie, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté pour les terres de TERA."
   - critere: vivant_finalite
     valeur: partiel

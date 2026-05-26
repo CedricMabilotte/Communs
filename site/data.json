@@ -36,28 +36,28 @@
     "nom": "L'Archipel de la vallée",
     "categorie": "lieu",
     "sous_titre": "Tiers-lieu inclusif de trois associations à Chevreuse, financé par la Coopérative Oasis",
-    "idl": 65,
-    "idl_brut": 73,
-    "idl_intrinseque": 65,
+    "idl": 59,
+    "idl_brut": 66,
+    "idl_intrinseque": 59,
     "score_type": "calcule",
     "completude": 0.789,
     "axes": {
-      "1": 63,
+      "1": 57,
       "2": 75,
       "3": 80,
       "4": 71,
-      "5": 75
+      "5": 50
     },
     "axes_intrinseques": {
-      "1": 63,
+      "1": 57,
       "2": 75,
       "3": 80,
       "4": 71,
-      "5": 75
+      "5": 50
     },
-    "palier": "solide",
-    "palier_label": "Montage solide",
-    "palier_couleur": "#4a7a3a",
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
     "forme_juridique": "",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
@@ -325,19 +325,19 @@
     "categorie": "lieu",
     "sous_titre": "Écolieu solognot financé par la Coopérative Oasis, sur un foncier privé en bail à construction",
     "idl": 55,
-    "idl_brut": 58,
+    "idl_brut": 56,
     "idl_intrinseque": 55,
     "score_type": "calcule",
-    "completude": 0.895,
+    "completude": 0.947,
     "axes": {
-      "1": 35,
+      "1": 30,
       "2": 50,
       "3": 71,
       "4": 86,
       "5": 62
     },
     "axes_intrinseques": {
-      "1": 35,
+      "1": 30,
       "2": 50,
       "3": 71,
       "4": 86,
@@ -420,23 +420,23 @@
     "nom": "La Ferme du Berquet — La Faille",
     "categorie": "lieu",
     "sous_titre": "Lieu collectif agricole et culturel autogéré en Sud-Cévennes, porté par le fonds de dotation Antidote",
-    "idl": 79,
-    "idl_brut": 88,
-    "idl_intrinseque": 79,
+    "idl": 76,
+    "idl_brut": 80,
+    "idl_intrinseque": 76,
     "score_type": "calcule",
-    "completude": 0.789,
+    "completude": 0.895,
     "axes": {
-      "1": 88,
+      "1": 77,
       "2": 100,
       "3": 80,
-      "4": 100,
+      "4": 71,
       "5": 75
     },
     "axes_intrinseques": {
-      "1": 88,
+      "1": 77,
       "2": 100,
       "3": 80,
-      "4": 100,
+      "4": 71,
       "5": 75
     },
     "palier": "solide",
@@ -612,24 +612,24 @@
     "nom": "Keriskis",
     "categorie": "lieu",
     "sous_titre": "Ancienne ferme autogérée en Centre-Bretagne, transmise au fonds de dotation Antidote",
-    "idl": 72,
-    "idl_brut": 80,
-    "idl_intrinseque": 72,
+    "idl": 68,
+    "idl_brut": 76,
+    "idl_intrinseque": 68,
     "score_type": "calcule",
     "completude": 0.789,
     "axes": {
       "1": 81,
       "2": 100,
       "3": 80,
-      "4": 80,
-      "5": 62
+      "4": 57,
+      "5": 67
     },
     "axes_intrinseques": {
       "1": 81,
       "2": 100,
       "3": 80,
-      "4": 80,
-      "5": 62
+      "4": 57,
+      "5": 67
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -836,24 +836,24 @@
     "nom": "La Marinie",
     "categorie": "lieu",
     "sous_titre": "Ferme collective sortie du marché par le fonds de dotation Antidote",
-    "idl": 78,
-    "idl_brut": 82,
-    "idl_intrinseque": 78,
+    "idl": 76,
+    "idl_brut": 83,
+    "idl_intrinseque": 76,
     "score_type": "calcule",
-    "completude": 0.895,
+    "completude": 0.842,
     "axes": {
       "1": 88,
       "2": 100,
       "3": 80,
       "4": 86,
-      "5": 61
+      "5": 64
     },
     "axes_intrinseques": {
       "1": 88,
       "2": 100,
       "3": 80,
       "4": 86,
-      "5": 61
+      "5": 64
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -868,24 +868,24 @@
     "nom": "La Talvère",
     "categorie": "lieu",
     "sous_titre": "Maison et grange des causses du Quercy, sorties du marché par le fonds de dotation Antidote",
-    "idl": 70,
-    "idl_brut": 78,
-    "idl_intrinseque": 70,
+    "idl": 64,
+    "idl_brut": 66,
+    "idl_intrinseque": 64,
     "score_type": "calcule",
-    "completude": 0.789,
+    "completude": 0.947,
     "axes": {
-      "1": 81,
+      "1": 70,
       "2": 100,
       "3": 71,
-      "4": 100,
-      "5": 50
+      "4": 71,
+      "5": 36
     },
     "axes_intrinseques": {
-      "1": 81,
+      "1": 70,
       "2": 100,
       "3": 71,
-      "4": 100,
-      "5": 50
+      "4": 71,
+      "5": 36
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -901,19 +901,19 @@
     "categorie": "lieu",
     "sous_titre": "Plateau agricole géré par une société civile de droit privé",
     "idl": 84,
-    "idl_brut": 97,
+    "idl_brut": 94,
     "idl_intrinseque": 84,
     "score_type": "calcule",
-    "completude": 0.737,
+    "completude": 0.789,
     "axes": {
-      "1": 100,
+      "1": 87,
       "2": 100,
       "3": 86,
       "4": 100,
       "5": 100
     },
     "axes_intrinseques": {
-      "1": 100,
+      "1": 87,
       "2": 100,
       "3": 86,
       "4": 100,
@@ -996,24 +996,24 @@
     "nom": "Longo Maï — Limans",
     "categorie": "lieu",
     "sous_titre": "Coopérative fondatrice de Longo Maï, sur 270 hectares sanctuarisés",
-    "idl": 58,
-    "idl_brut": 67,
-    "idl_intrinseque": 58,
+    "idl": 53,
+    "idl_brut": 56,
+    "idl_intrinseque": 53,
     "score_type": "calcule",
-    "completude": 0.737,
+    "completude": 0.895,
     "axes": {
-      "1": 92,
+      "1": 80,
       "2": 100,
       "3": 57,
-      "4": 50,
-      "5": 50
+      "4": 36,
+      "5": 33
     },
     "axes_intrinseques": {
-      "1": 92,
+      "1": 80,
       "2": 100,
       "3": 57,
-      "4": 50,
-      "5": 50
+      "4": 36,
+      "5": 33
     },
     "palier": "engage",
     "palier_label": "Engagement réel",
@@ -1028,20 +1028,20 @@
     "nom": "12 logements écologiques de Flocques",
     "categorie": "lieu",
     "sous_titre": "Opération de logement très social de la Foncière Chênelet en cœur de village normand",
-    "idl": 56,
-    "idl_brut": 58,
-    "idl_intrinseque": 56,
+    "idl": 57,
+    "idl_brut": 57,
+    "idl_intrinseque": 57,
     "score_type": "calcule",
-    "completude": 0.947,
+    "completude": 1.0,
     "axes": {
-      "1": 77,
+      "1": 67,
       "2": 50,
       "3": 43,
       "4": 71,
       "5": 57
     },
     "axes_intrinseques": {
-      "1": 77,
+      "1": 67,
       "2": 50,
       "3": 43,
       "4": 71,
@@ -1124,24 +1124,24 @@
     "nom": "La Maison Blanche — L'Antre Toit",
     "categorie": "lieu",
     "sous_titre": "Maison d'accueil autogérée pour jeunes exilé·es à Gaillac, portée par le fonds de dotation Antidote",
-    "idl": 76,
-    "idl_brut": 85,
-    "idl_intrinseque": 76,
+    "idl": 72,
+    "idl_brut": 76,
+    "idl_intrinseque": 72,
     "score_type": "calcule",
-    "completude": 0.789,
+    "completude": 0.895,
     "axes": {
-      "1": 88,
+      "1": 77,
       "2": 100,
       "3": 71,
       "4": 71,
-      "5": 100
+      "5": 67
     },
     "axes_intrinseques": {
-      "1": 88,
+      "1": 77,
       "2": 100,
       "3": 71,
       "4": 71,
-      "5": 100
+      "5": 67
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -1156,20 +1156,20 @@
     "nom": "Longo Maï — Mas de Granier",
     "categorie": "lieu",
     "sous_titre": "Ferme collective du réseau Longo Maï dans la plaine de la Crau",
-    "idl": 74,
-    "idl_brut": 78,
-    "idl_intrinseque": 74,
+    "idl": 73,
+    "idl_brut": 75,
+    "idl_intrinseque": 73,
     "score_type": "calcule",
-    "completude": 0.895,
+    "completude": 0.947,
     "axes": {
-      "1": 92,
+      "1": 80,
       "2": 100,
       "3": 57,
       "4": 86,
       "5": 62
     },
     "axes_intrinseques": {
-      "1": 92,
+      "1": 80,
       "2": 100,
       "3": 57,
       "4": 86,
@@ -1285,19 +1285,19 @@
     "categorie": "lieu",
     "sous_titre": "Écosystème coopératif rural en Lot-et-Garonne, financé par la Coopérative Oasis",
     "idl": 64,
-    "idl_brut": 69,
+    "idl_brut": 68,
     "idl_intrinseque": 64,
     "score_type": "calcule",
-    "completude": 0.842,
+    "completude": 0.895,
     "axes": {
-      "1": 65,
+      "1": 57,
       "2": 50,
       "3": 86,
       "4": 86,
       "5": 67
     },
     "axes_intrinseques": {
-      "1": 65,
+      "1": 57,
       "2": 50,
       "3": 86,
       "4": 86,
@@ -1316,24 +1316,24 @@
     "nom": "Domaine de Toussacq",
     "categorie": "lieu",
     "sous_titre": "Ferme collective et couveuse agricole sur foncier sanctuarisé en Seine-et-Marne",
-    "idl": 72,
-    "idl_brut": 76,
-    "idl_intrinseque": 78,
+    "idl": 70,
+    "idl_brut": 72,
+    "idl_intrinseque": 76,
     "score_type": "calcule",
-    "completude": 0.895,
+    "completude": 0.947,
     "axes": {
       "1": 88,
       "2": 50,
       "3": 86,
       "4": 86,
-      "5": 77
+      "5": 61
     },
     "axes_intrinseques": {
       "1": 88,
       "2": 75,
       "3": 86,
       "4": 86,
-      "5": 77
+      "5": 61
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -1349,19 +1349,19 @@
     "categorie": "lieu",
     "sous_titre": "Communauté de paysan·nes-forestier·es du réseau Longo Maï en Ardèche",
     "idl": 63,
-    "idl_brut": 67,
+    "idl_brut": 65,
     "idl_intrinseque": 63,
     "score_type": "calcule",
-    "completude": 0.895,
+    "completude": 0.947,
     "axes": {
-      "1": 92,
+      "1": 80,
       "2": 100,
       "3": 57,
       "4": 50,
       "5": 50
     },
     "axes_intrinseques": {
-      "1": 92,
+      "1": 80,
       "2": 100,
       "3": 57,
       "4": 50,
@@ -1380,24 +1380,24 @@
     "nom": "Le Village Vertical",
     "categorie": "lieu",
     "sous_titre": "Première coopérative d'habitants de France au XXIe siècle",
-    "idl": 70,
-    "idl_brut": 74,
-    "idl_intrinseque": 76,
+    "idl": 68,
+    "idl_brut": 68,
+    "idl_intrinseque": 74,
     "score_type": "calcule",
-    "completude": 0.895,
+    "completude": 1.0,
     "axes": {
-      "1": 100,
+      "1": 87,
       "2": 50,
       "3": 71,
       "4": 71,
-      "5": 86
+      "5": 68
     },
     "axes_intrinseques": {
-      "1": 100,
+      "1": 87,
       "2": 75,
       "3": 71,
       "4": 71,
-      "5": 86
+      "5": 68
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -1572,8 +1572,8 @@
     "nom": "Antidote",
     "categorie": "porteur",
     "sous_titre": "Fonds de dotation cédant l'usage de lieux par bail emphytéotique de 99 ans",
-    "idl": 69,
-    "idl_brut": 71,
+    "idl": 70,
+    "idl_brut": 72,
     "idl_intrinseque": 71,
     "score_type": "calcule",
     "completude": 0.947,
@@ -1582,7 +1582,7 @@
       "2": 100,
       "3": 78,
       "4": 56,
-      "5": 62
+      "5": 66
     },
     "axes_intrinseques": {
       "1": 65,
@@ -2148,8 +2148,8 @@
     "nom": "L'Antre Toit",
     "categorie": "usufruitier",
     "sous_titre": "Association d'usager·es gérant la Maison Blanche de Gaillac",
-    "idl": 80,
-    "idl_brut": 91,
+    "idl": 74,
+    "idl_brut": 84,
     "idl_intrinseque": 81,
     "score_type": "calcule",
     "completude": 0.765,
@@ -2158,7 +2158,7 @@
       "2": 100,
       "3": 86,
       "4": 71,
-      "5": 100
+      "5": 67
     },
     "axes_intrinseques": {
       "1": 100,
@@ -2244,8 +2244,8 @@
     "nom": "Association d'usager·es de Keriskis",
     "categorie": "usufruitier",
     "sous_titre": "Collectif autogérant le lieu de Keriskis en Centre-Bretagne",
-    "idl": 68,
-    "idl_brut": 77,
+    "idl": 67,
+    "idl_brut": 76,
     "idl_intrinseque": 72,
     "score_type": "calcule",
     "completude": 0.765,
@@ -2253,8 +2253,8 @@
       "1": 100,
       "2": 75,
       "3": 86,
-      "4": 69,
-      "5": 62
+      "4": 57,
+      "5": 67
     },
     "axes_intrinseques": {
       "1": 100,
@@ -2276,8 +2276,8 @@
     "nom": "La Faille",
     "categorie": "usufruitier",
     "sous_titre": "Association d'usager·es autogérant la ferme du Berquet en Sud-Cévennes",
-    "idl": 79,
-    "idl_brut": 89,
+    "idl": 76,
+    "idl_brut": 86,
     "idl_intrinseque": 80,
     "score_type": "calcule",
     "completude": 0.765,
@@ -2285,7 +2285,7 @@
       "1": 100,
       "2": 100,
       "3": 86,
-      "4": 88,
+      "4": 71,
       "5": 75
     },
     "axes_intrinseques": {
@@ -2308,8 +2308,8 @@
     "nom": "La Talvère",
     "categorie": "usufruitier",
     "sous_titre": "Association d'usager·es autogérant le lieu de La Talvère dans le Lot",
-    "idl": 71,
-    "idl_brut": 78,
+    "idl": 67,
+    "idl_brut": 73,
     "idl_intrinseque": 73,
     "score_type": "calcule",
     "completude": 0.824,
@@ -2318,7 +2318,7 @@
       "2": 100,
       "3": 100,
       "4": 56,
-      "5": 50
+      "5": 36
     },
     "axes_intrinseques": {
       "1": 100,
@@ -2500,8 +2500,8 @@
     "nom": "Les Communs de la Marinie",
     "categorie": "usufruitier",
     "sous_titre": "Association d'usager·es autogérant la ferme de la Marinie en Aveyron",
-    "idl": 71,
-    "idl_brut": 78,
+    "idl": 72,
+    "idl_brut": 79,
     "idl_intrinseque": 74,
     "score_type": "calcule",
     "completude": 0.824,
@@ -2510,7 +2510,7 @@
       "2": 100,
       "3": 86,
       "4": 56,
-      "5": 61
+      "5": 64
     },
     "axes_intrinseques": {
       "1": 100,
@@ -3140,8 +3140,8 @@
     "nom": "Coopérative Le Village Vertical",
     "categorie": "usufruitier",
     "sous_titre": "Coopérative d'habitants propriétaire et usagère de son immeuble à Villeurbanne",
-    "idl": 76,
-    "idl_brut": 76,
+    "idl": 75,
+    "idl_brut": 75,
     "idl_intrinseque": 76,
     "score_type": "calcule",
     "completude": 1.0,
@@ -3150,7 +3150,7 @@
       "2": 75,
       "3": 81,
       "4": 56,
-      "5": 73
+      "5": 68
     },
     "axes_intrinseques": {
       "1": 100,
@@ -3204,8 +3204,8 @@
     "nom": "SCI de l'Archipel de la vallée",
     "categorie": "usufruitier",
     "sous_titre": "Société civile immobilière de trois associations, propriétaire et usagère du tiers-lieu inclusif de Chevreuse",
-    "idl": 57,
-    "idl_brut": 72,
+    "idl": 53,
+    "idl_brut": 67,
     "idl_intrinseque": 62,
     "score_type": "calcule",
     "completude": 0.588,
@@ -3214,7 +3214,7 @@
       "2": 75,
       "3": 100,
       "4": 71,
-      "5": 75
+      "5": 50
     },
     "axes_intrinseques": {
       "1": 50,

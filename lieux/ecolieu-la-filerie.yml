@@ -92,7 +92,7 @@ grille:
     valeur: partiel
     note: "Le bail à construction sécurise la jouissance pour dix-huit ans : durée significative mais bornée, et le renouvellement au-delà n'est pas garanti par les sources."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucune obligation réelle environnementale ni clause environnementale inscrite au bail à construction n'est documentée ; l'existence d'un dispositif opposable n'est pas établie par les sources."
   - critere: vivant_finalite
     valeur: partiel

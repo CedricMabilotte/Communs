@@ -88,7 +88,7 @@ grille:
     valeur: oui
     note: "La SCTL attribue l'usage aux paysan·nes par des baux de long terme, assurant au collectif usager une jouissance durable du plateau."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Les baux de long terme attribués par la SCTL aux paysan·nes ne sont pas documentés quant à d'éventuelles clauses environnementales ; aucun dispositif opposable de protection du milieu n'est établi par les sources."
   - critere: vivant_finalite
     valeur: inconnu

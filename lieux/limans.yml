@@ -86,16 +86,16 @@ grille:
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1973, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "La détention inaliénable par la fondation sanctuarise la propriété mais n'est pas un dispositif de protection du milieu ; aucune ORE, clause environnementale ou statut d'espace protégé n'est documenté."
   - critere: vivant_finalite
-    valeur: inconnu
+    valeur: non
     note: "Les sources décrivent une coopérative d'autosubsistance — élevage, agriculture, transformation, artisanat — sans mention du vivant non-humain parmi les finalités déclarées."
   - critere: usage_non_degradant
     valeur: inconnu
     note: "Le site pratique élevage ovin, céréales et vigne dans une logique d'autosubsistance, mais les sources ne précisent ni label bio ni mode de conduite : l'effet des pratiques sur le fonds n'est pas attesté."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "Le domaine de 270 hectares comporte des terres labourables et de la forêt, mais aucun espace effectivement dédié au vivant non-humain (haies, mares, friches) n'est documenté."
 analyse:
   forces:

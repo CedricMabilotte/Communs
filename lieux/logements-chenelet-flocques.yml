@@ -90,7 +90,7 @@ grille:
     valeur: partiel
     note: "Les locataires bénéficient d'un bail d'habitation de logement social adossé à une foncière pérenne et au bail emphytéotique de 99 ans ; la durée et les modalités de renouvellement des baux d'habitation ne sont pas documentées."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucune clause environnementale opposable, ORE ou statut protégé n'est documenté pour le terrain de l'opération de logements."
   - critere: vivant_finalite
     valeur: non

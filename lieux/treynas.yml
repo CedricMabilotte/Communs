@@ -88,7 +88,7 @@ grille:
     valeur: partiel
     note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis la fin des années 1980, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Le site mêle forêt et terres agricoles, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté pour le foncier de Treynas."
   - critere: vivant_finalite
     valeur: partiel

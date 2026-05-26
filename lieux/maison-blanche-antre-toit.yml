@@ -91,7 +91,7 @@ grille:
     valeur: oui
     note: "L'usage est confié par bail emphytéotique de longue durée, qui sécurise la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements civils."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucun dispositif de protection durable et opposable du milieu (clause environnementale au bail, ORE, statut protégé) n'est documenté pour cette maison urbaine de Gaillac."
   - critere: vivant_finalite
     valeur: non
@@ -100,7 +100,7 @@ grille:
     valeur: inconnu
     note: "Le lieu est une maison d'habitation d'environ 100 m² en ville ; les pratiques d'entretien et leur effet sur le fonds ne sont pas documentés."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "À l'échelle d'un lieu d'habitat urbain, l'existence d'une cour, d'un pied d'immeuble végétalisé ou de tout espace laissé au vivant n'est pas documentée par les sources."
 analyse:
   forces:

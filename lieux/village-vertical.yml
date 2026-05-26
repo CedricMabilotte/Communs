@@ -86,7 +86,7 @@ grille:
     valeur: oui
     note: "Chaque ménage signe un contrat coopératif lui conférant un droit de jouissance durable sur son logement, sans précarité locative de marché."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Le lieu est un immeuble d'habitat coopératif urbain ; aucun dispositif opposable de protection d'un milieu (ORE, clause environnementale) n'est documenté ni n'a d'objet évident à cette échelle."
   - critere: vivant_finalite
     valeur: non
@@ -95,7 +95,7 @@ grille:
     valeur: oui
     note: "Immeuble BBC en ossature bois-béton, sobre par conception : l'usage d'habitation ne dégrade pas le fonds."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "À l'échelle d'un immeuble urbain, le critère s'évalue par les espaces de pleine terre, cour ou toiture ; les sources ne documentent aucun aménagement de ce type pour le vivant non-humain."
 analyse:
   forces:

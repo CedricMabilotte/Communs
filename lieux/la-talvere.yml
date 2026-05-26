@@ -94,16 +94,16 @@ grille:
     valeur: partiel
     note: "Le modèle confie l'usage par bail emphytéotique de longue durée ; la signature effective du bail sur ce lieu et sa durée précise ne sont pas confirmées par les sources."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucun dispositif de protection durable et opposable du milieu (ORE, statut d'espace protégé, clause environnementale au bail) n'est documenté pour ce lieu de bâti sur les causses du Quercy."
   - critere: vivant_finalite
-    valeur: inconnu
+    valeur: non
     note: "Les sources décrivent un lieu d'accueil — stages, rencontres, hébergements, télétravail — sans mention du vivant non-humain parmi les finalités déclarées."
   - critere: usage_non_degradant
     valeur: inconnu
     note: "Le lieu porte sur du bâti et des dépendances ; les pratiques d'entretien des abords et leur effet sur le milieu ne sont pas documentés."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "Les sources ne documentent ni haies, mares, friches ni aucun espace effectivement aménagé ou laissé pour le vivant non-humain sur le coteau du lieu."
 analyse:
   forces:

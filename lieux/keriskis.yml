@@ -93,10 +93,10 @@ grille:
     valeur: inconnu
     note: "Les clauses du bail emphytéotique ne sont pas documentées : l'existence d'une clause environnementale ou d'un autre dispositif opposable de protection du milieu n'est pas établie."
   - critere: vivant_finalite
-    valeur: inconnu
+    valeur: non
     note: "La vocation documentée du lieu est sociale (entraide, lien social, rencontres politiques) ; l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités par les sources."
   - critere: usage_non_degradant
-    valeur: partiel
+    valeur: inconnu
     note: "Le lieu mène un verger, un potager, de la vannerie et du bûcheronnage en activités décrites comme non marchandes ; le mode de conduite (bio, conservatoire) n'est pas précisé par les sources."
   - critere: place_au_vivant
     valeur: partiel

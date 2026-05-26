@@ -95,7 +95,7 @@ grille:
     valeur: oui
     note: "Ferme de polyculture-élevage et couveuse agricole conduites selon des pratiques accompagnées d'installation agroécologique : des pratiques de maintien attestées, sans logique extractive."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "La ferme est un site de polyculture-élevage de 74 hectares, mais aucun aménagement explicite en faveur du vivant (haies, mares, continuités écologiques) n'est documenté par les sources."
 analyse:
   forces:
