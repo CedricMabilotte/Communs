@@ -67,6 +67,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "L'actionnariat citoyen est large, mais la place décisionnelle des agriculteur·rices preneur·euses n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Société en commandite par actions à actionnariat citoyen large, mais sans dispositif statutaire documenté associant les agriculteur·rices preneur·euses à la décision sur les baux, le fermage ou la transmission des terres : la gouvernance relève de la gérance de la SCA."
   - critere: transparence
     valeur: partiel
     note: "Lurzaindia communique sur sa collecte et son patrimoine, mais le détail de sa transparence comptable n'est pas documenté."

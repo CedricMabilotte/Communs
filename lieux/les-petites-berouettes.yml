@@ -98,7 +98,7 @@ grille:
     valeur: oui
     note: "La ferme est conduite en agriculture biologique : les pratiques culturales attestées entretiennent la capacité régénérative du sol sans recours aux intrants de synthèse."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "L'existence de haies, mares, friches ou continuités écologiques sur les 7 hectares de la ferme n'est pas documentée par les sources."
 analyse:
   forces:

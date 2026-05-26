@@ -126,8 +126,10 @@ def axes_ids(ranking):
 # entièrement échouée) doit faire chuter l'Indice très bas — c'est le principe
 # non compensatoire — mais sans l'annuler purement : un montage fort sur quatre
 # axes et nul sur un cinquième vaut « éloigné », pas « rien ». On plancher donc
-# chaque axe à 1 dans le PRODUIT seulement ; le profil affiché garde le 0 réel.
-AXE_PLANCHER_GEO = 1
+# chaque axe à 0,5 dans le PRODUIT seulement ; le profil affiché garde le 0
+# réel. Session #5 : passage de 1 à 0,5 pour redonner du tranchant à
+# l'agrégation non compensatoire — un axe écrasé pèse désormais plus.
+AXE_PLANCHER_GEO = 0.5
 
 
 def geometric_idl(axes_scores):
@@ -177,8 +179,19 @@ def score_fiche(fiche, gidx, ranking):
                         v = ax.get(old)
                         break
             axes[aid] = round(float(v)) if v is not None else None
-        idl = geometric_idl(axes)
-        return {"axes": axes, "idl": idl, "idl_brut": idl,
+        idl_brut = geometric_idl(axes)
+        # Session #5 — pénalité d'estimation. Les modèles voisins, notés par
+        # `axes_estimes` plutôt que par grille sur sources, recevaient
+        # jusque-là un IdL sans pénalité, ce qui les hissait au-dessus des
+        # lieux peuplés (CLT Bruxelles à 87, devant le Domaine du Rayol —
+        # seul sanctuaire — à 77). Une fiche estimée est par construction
+        # moins fiable qu'une fiche sourcée : on lui applique la même formule
+        # de pénalité de complétude qu'à une fiche moyennement renseignée
+        # (complétude forfaitaire 0,7), pour qu'un modèle voisin atteigne au
+        # mieux le bas du palier « montage solide ».
+        PENALITE_MODELE = 0.5 + 0.5 * 0.7  # = 0,85
+        idl = round(idl_brut * PENALITE_MODELE) if idl_brut is not None else None
+        return {"axes": axes, "idl": idl, "idl_brut": idl_brut,
                 "palier": palier_for(idl, ranking),
                 "completude": None, "estime": True,
                 "score_type": "estime", "criteres_evalues": {}}
@@ -309,13 +322,127 @@ def apply_chaine(all_sc, by_uid, ranking):
         sc["palier"] = palier_for(sc["idl"], ranking)
 
 
-def palier_for(idl, ranking):
+def palier_for(idl, ranking, verdict=None):
+    """Palier (tier) correspondant à l'IdL. Session #5 : un palier portant
+    `requiert_verdict` n'est accessible qu'aux lieux dont le verdict est
+    exactement celui demandé. Sinon, le palier est dégradé d'un cran (le
+    suivant dans la liste). Le verdict est ignoré pour les fiches non-lieu
+    (porteur, usufruitier, modele) — leur palier ne dépend que de l'IdL."""
     if idl is None:
         return None
-    for p in ranking["paliers"]:  # ordonnés du plus haut au plus bas
+    paliers = ranking["paliers"]
+    for i, p in enumerate(paliers):  # ordonnés du plus haut au plus bas
         if idl >= p["min"]:
+            req = p.get("requiert_verdict")
+            if req and verdict != req:
+                # Verdict ne satisfait pas l'exigence : on dégrade au palier suivant.
+                # Si le palier suivant a lui-même une exigence, on continue.
+                for j in range(i + 1, len(paliers)):
+                    q = paliers[j]
+                    if q.get("requiert_verdict") and verdict != q.get("requiert_verdict"):
+                        continue
+                    return q
+                return paliers[-1]
             return p
-    return ranking["paliers"][-1]
+    return paliers[-1]
+
+
+# ── Plafond de chaîne sur l'axe 2 des LIEUX (session #5) ─────────────────────
+# Le score d'axe 2 d'un lieu est plafonné selon le pire `nature_interet` de sa
+# chaîne (porteurs + usufruitiers). Cf. ranking.yml § plafonds_chaine. Le score
+# intrinsèque est conservé pour information ; l'écart est restitué sur la
+# fiche. Source unique de vérité : la chaîne — comme pour le verdict.
+
+# Ordre du « pire au mieux » des natures, du plus restrictif au moins.
+# Sert à choisir le maillon décisif quand la chaîne en mélange plusieurs.
+_NATURE_ORDRE_PIRE_AU_MIEUX = [
+    "privee_individuelle", "commerciale", "commerciale_encadree",
+    "commerciale_desactivee", "non_lucrative", "inconnu",
+]
+
+
+def _pire_nature_chaine(fiche, by_uid):
+    """Renvoie le `nature_interet` du maillon le plus restrictif de la chaîne
+    d'un lieu (porteurs + usufruitiers). Renvoie None si chaîne vide."""
+    ch = fiche.get("chaine", {}) or {}
+    maillons = list(ch.get("porteurs") or []) + list(ch.get("usufruitiers") or [])
+    if not maillons:
+        return None
+    natures = []
+    for u in maillons:
+        ent = by_uid.get(u) or {}
+        natures.append(ent.get("nature_interet") or "inconnu")
+    for n in _NATURE_ORDRE_PIRE_AU_MIEUX:
+        if n in natures:
+            return n
+    return None
+
+
+def apply_lieu_plafond_chaine(all_sc, by_uid, ranking):
+    """Pour chaque lieu, plafonne le score d'axe 2 (la structure) selon le pire
+    maillon de sa chaîne. Le mécanisme parallèle au verdict — calculé sur la
+    même donnée — garantit que la grille saisie ne peut pas afficher un axe 2
+    plus haut que la chaîne ne le permet (session #5, faille structurelle :
+    grille saisie et nature_interet pouvaient se contredire, ex. GAEC coté
+    'non commercial').
+
+    Conserve `sc['axes_intr']` (axes pré-plafond) et ajoute `sc['ax2_plafond']`
+    (la valeur du plafond appliqué, ou None si non appliqué). Recalcule IdL,
+    palier et axes effectifs. À appeler APRÈS apply_chaine (mais celle-ci ne
+    touche pas les lieux ; donc l'ordre n'a pas d'importance sur les lieux)."""
+    plafonds = ((ranking.get("plafonds_chaine") or {})
+                .get("ax2_par_nature") or {})
+    if not plafonds:
+        return
+    for fiche, sc in all_sc:
+        if fiche.get("categorie") != "lieu":
+            continue
+        # axes_intr est posé par apply_chaine pour porteur/usufruitier ; pour
+        # un lieu, apply_chaine ne fait rien — on l'initialise ici pour cohérence.
+        sc.setdefault("axes_intr", dict(sc["axes"]))
+        sc["ax2_plafond"] = None
+        ax2 = sc["axes"].get(2)
+        if ax2 is None:
+            continue
+        pire = _pire_nature_chaine(fiche, by_uid)
+        if not pire:
+            continue
+        plafond = plafonds.get(pire)
+        if plafond is None:
+            continue  # inconnu : pas de plafond (par défaut prudent)
+        if ax2 > plafond:
+            sc["ax2_plafond"] = plafond
+            sc["ax2_intrinseque"] = ax2  # conservé pour l'affichage
+            sc["ax2_nature_pire"] = pire
+            new_axes = dict(sc["axes"])
+            new_axes[2] = plafond
+            sc["axes"] = new_axes
+            idl_brut = geometric_idl(new_axes)
+            sc["idl_brut"] = idl_brut
+            comp = sc.get("completude")
+            if idl_brut is not None and comp is not None:
+                sc["idl"] = round(idl_brut * (0.5 + 0.5 * comp))
+            elif idl_brut is not None:
+                sc["idl"] = idl_brut
+
+
+def apply_palier_verdict_constraint(all_sc, by_uid, ranking):
+    """Recalcule les paliers en tenant compte du verdict du lieu. Les paliers
+    portant `requiert_verdict: sanctuaire` ne sont accessibles qu'aux lieux
+    verdict==sanctuaire. À appeler APRÈS apply_lieu_plafond_chaine (qui peut
+    avoir modifié l'IdL). Les fiches non-lieu ne sont pas re-paliérées (mais
+    leurs paliers déjà calculés sont relus via palier_for — si la définition
+    d'un palier exige un verdict, une porteur/usufruitier ne peut pas y entrer
+    parce qu'ils n'ont pas de verdict)."""
+    for fiche, sc in all_sc:
+        if sc.get("idl") is None:
+            continue
+        if fiche.get("categorie") == "lieu":
+            v = compute_verdict(fiche, by_uid)
+        else:
+            v = None
+        sc["palier"] = palier_for(sc["idl"], ranking, verdict=v)
+        sc["verdict"] = v  # mémorise pour l'affichage
 
 
 def fiabilite_label(completude, ranking):
@@ -1365,6 +1492,23 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                            f'{idl_intr}, ramené à <strong>{sc["idl"]}</strong> '
                            f'(indice effectif) : par les {_lien_pluriel(n_chaine)}, '
                            f'{axes_phrase}.{comp_phrase}{renvoi}</p>')
+
+    # plafond de chaîne sur l'axe 2 d'un lieu (session #5) — annotation visible
+    # pour rendre lisible la sanction du verdict marchand ou hybride sur l'axe
+    # 2 du lieu (L11 : un calcul n'est utile que si son écart à la saisie est
+    # affiché et expliqué).
+    if cat == "lieu" and sc.get("ax2_plafond") is not None:
+        nat = sc.get("ax2_nature_pire") or "inconnu"
+        nat_lbl = nature_label(nat, cfg["concepts"]).lower()
+        intr_ax2 = sc.get("ax2_intrinseque")
+        chaine_html += (
+            f'<p class="chaine-note">Axe 2 (la structure) plafonné à '
+            f'<strong>{sc["ax2_plafond"]}</strong> par la chaîne — un maillon '
+            f'de nature « {e(nat_lbl)} » empêche un axe 2 élevé, '
+            f'quoi que cochent les critères saisis '
+            f'(score intrinsèque : {intr_ax2}). '
+            f'<a class="chaine-renvoi" href="../methode.html#chaine">'
+            f'Le plafond de chaîne →</a></p>')
 
     # nombre d'axes effectivement renseignés : l'Indice est leur moyenne
     # géométrique. En deçà de 5, on le signale — information distincte de la
@@ -4034,6 +4178,14 @@ def main():
     # travers leurs lieux reliés (indice intrinsèque → indice effectif).
     # À faire après le scoring de TOUTES les fiches (besoin des axes des lieux).
     apply_chaine(all_sc, by_uid, ranking)
+
+    # session #5 — plafond ax2 sur les LIEUX selon le pire nature_interet de la
+    # chaîne. Doit précéder apply_palier_verdict_constraint (qui relit l'IdL).
+    apply_lieu_plafond_chaine(all_sc, by_uid, ranking)
+
+    # session #5 — paliers contraints par verdict (« libération aboutie »
+    # réservée aux lieux verdict==sanctuaire).
+    apply_palier_verdict_constraint(all_sc, by_uid, ranking)
 
     # contrôle de cohérence des chaînes (chantier A) — avertit, ne bloque pas.
     verifier_chaines(fiches)

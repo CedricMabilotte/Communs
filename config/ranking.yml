@@ -15,6 +15,17 @@
 # « soustraction à l'exploitation abusive » (abusus, deux faces) ; les axes 4 et
 # 5 accueillent l'habitat du vivant. Référence : conception-refonte-3.md.
 #
+# Session #5 (mai 2026, refonte de la grille) : (a) l'axe 2 d'un LIEU est
+# plafonné selon le pire `nature_interet` de sa chaîne — un montage marchand
+# ne peut plus afficher un axe 2 élevé quoi que cochent les critères saisis ;
+# (b) le palier « libération aboutie » est RÉSERVÉ aux lieux verdict
+# `sanctuaire` — un hybride ou un marchand plafonne au palier « solide » ;
+# (c) le plancher d'axe dans l'agrégation géométrique passe de 1 à 0,5 pour
+# redonner du tranchant à la non-compensation ; (d) la grille porteur reçoit
+# un critère neuf `autogestion_usagers` (axe 3) qui distingue gouvernance
+# descendante et gouvernance citoyenne autogérée. Référence :
+# audit/session5-refonte-grille.md.
+#
 # Chaque critère des grilles (grilles.yml) est rattaché à un axe et pondéré.
 # Pour une fiche : score_axe = Σ(poids × facteur) / Σ(poids) × 100, où le
 # facteur dépend de la valeur cochée (voir `valeurs`). Les critères « inconnu »
@@ -24,9 +35,9 @@
 # (moyenne géométrique) : l'axe le plus faible commande le résultat, de sorte
 # qu'une force ne puisse jamais racheter une faiblesse. Voir `indice`.
 # ─────────────────────────────────────────────────────────────────────────────
-version: 2
-date: 2026-05-23
-remplace: "modèle v1 à 3 axes (A/B/C) — voir recherche/04-methodologie-cadre-conceptuel.pdf"
+version: 3
+date: 2026-05-26
+remplace: "modèle v2 à 5 axes — refondu en session #5 (plafond ax2 chaîne, palier abouti réservé sanctuaire, plancher d'axe 0,5)"
 
 # ── Mapping des valeurs cochées dans les fiches → facteur de score ───────────
 valeurs:
@@ -164,10 +175,11 @@ indice:
   formule: >
     IdL_brut = (score_1 × score_2 × … × score_k) ^ (1 / k), où k est le nombre
     d'axes effectivement renseignés (axes entièrement « inconnu » exclus).
-    Chaque axe est planché à 1 dans le produit : un axe nul écrase l'Indice
-    très bas, sans l'annuler purement — un montage fort sur quatre axes et
-    effondré sur un cinquième vaut « éloigné », non « rien ». Le profil affiché
-    conserve le 0 réel de l'axe.
+    Chaque axe est planché à 0,5 dans le produit (session #5 — descendu de 1
+    à 0,5 pour redonner du tranchant à l'agrégation non compensatoire) : un
+    axe nul écrase l'Indice très bas, sans l'annuler purement — un montage
+    fort sur quatre axes et effondré sur un cinquième vaut « éloigné », non
+    « rien ». Le profil affiché conserve le 0 réel de l'axe.
   justification_agregation: >
     L'agrégation est NON COMPENSATOIRE. Une moyenne arithmétique laisserait un
     montage solide sur quatre axes mais commercial de nature (axe 2 effondré)
@@ -258,19 +270,23 @@ option_a:
     chaîne renseignée, l'indice effectif égale l'indice intrinsèque.
 
 # ── Paliers (tiers) de lecture de l'Indice ───────────────────────────────────
-# Seuils VALIDÉS (session #2, 24 mai 2026). La distribution réelle des 28
-# entrées notées a été mesurée : moyenne 63,9 — l'agrégation géométrique n'a
-# pas écrasé le corpus — et les seuils hauts coïncident avec les quintiles
-# observés. Conservés tels quels. Voir audit/B1-paliers-distribution.md.
+# Refondus en session #5 (26 mai 2026). Le palier « libération aboutie » est
+# désormais RÉSERVÉ aux lieux verdict `sanctuaire` — un hybride ou un marchand,
+# même à IdL élevé, plafonne au palier « solide ». Le seuil min de « abouti »
+# baisse de 78 à 70 : la promesse du palier vient désormais du verdict, pas
+# d'un seuil quantitatif arbitraire. Les autres seuils sont conservés (validés
+# session #2, audit/B1-paliers-distribution.md).
 paliers:
   - id: abouti
-    min: 78
+    min: 70
+    requiert_verdict: sanctuaire    # le palier n'est accessible qu'aux lieux verdict==sanctuaire (session #5)
     label: "Libération aboutie"
     couleur: "#356026"
     sens: >
-      Les cinq axes sont tenus : foncier verrouillé, montage civil non
-      lucratif, gouvernance citoyenne, finalité ouverte, usage non marchand et
-      sécurisé. Profil de référence.
+      Les cinq axes sont tenus, foncier irréversiblement hors-marché, chaîne
+      entièrement non lucrative ou désactivée, habitat du vivant établi. Palier
+      réservé aux lieux verdict `sanctuaire` — un hybride ou un marchand n'y
+      accède jamais, quel que soit son chiffre.
   - id: solide
     min: 64
     label: "Montage solide"
@@ -299,6 +315,23 @@ paliers:
     sens: >
       Plusieurs axes sont faibles ou effondrés ; la parenté avec la libération
       des terres est surtout revendiquée.
+
+# ── Plafond chaîne sur l'axe 2 d'un LIEU (session #5) ────────────────────────
+# Un lieu ne peut pas afficher un axe 2 (« la structure ») plus élevé que ce
+# que sa chaîne autorise, quoi que cochent les critères saisis. Pour chaque
+# lieu, on lit le `nature_interet` du pire maillon de sa chaîne (porteurs +
+# usufruitiers) et on plafonne le score d'axe 2 intrinsèque à la valeur
+# indiquée. Le score intrinsèque est conservé pour information ; l'écart est
+# annoté sur la fiche. Mécanisme parallèle au verdict (qui se calcule lui aussi
+# sur le pire maillon) — une seule source de vérité, la chaîne.
+plafonds_chaine:
+  ax2_par_nature:
+    non_lucrative:           100
+    commerciale_desactivee:   80
+    commerciale_encadree:     50
+    commerciale:              20
+    privee_individuelle:      10
+    inconnu:                null    # un maillon de nature inconnue ne sanctionne pas (par défaut prudent)
 
 # ── Indicateur complémentaire : intégrité du montage ─────────────────────────
 # N'entre PAS dans l'Indice. Situe le montage par rapport aux cinq pôles

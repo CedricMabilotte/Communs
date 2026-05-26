@@ -65,6 +65,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "La gestion est confiée à des collectivités et associations, mais la place des citoyen·nes dans la gouvernance n'est pas détaillée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Le Conservatoire est un établissement public d'État dont les décisions structurantes (acquisitions, classement domanial, conventions de gestion, rares aliénations) relèvent de son CA à majorité publique ; aucun dispositif statutaire n'accorde aux usager·es ou gestionnaires des sites une voix délibérative. Gouvernance administrative descendante, par défaut « non » pour une personne publique."
   - critere: transparence
     valeur: oui
     note: "Le Conservatoire publie des informations sur son patrimoine foncier et son activité."

@@ -70,6 +70,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "La SCIC associe par nature plusieurs collèges de sociétaires ; le détail de ses collèges et leur ouverture ne sont pas documentés par les sources."
+  - critere: autogestion_usagers
+    valeur: inconnu
+    note: "La SCIC associe par construction plusieurs collèges de sociétaires, mais la composition exacte des collèges, le poids respectif des habitant·es-usager·es et leur capacité à trancher les décisions structurantes (loyer du bail emphytéotique, affectation, transmission) ne sont pas documentés par les sources consultées."
   - critere: transparence
     valeur: partiel
     note: "Le projet publie son modèle juridique et son règlement intérieur en ligne ; la publication régulière des comptes de la SCIC n'est pas confirmée."

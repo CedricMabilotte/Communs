@@ -71,6 +71,9 @@ grille:
   - critere: parties_prenantes
     valeur: oui
     note: "Les résident·es de l'écohameau sont associé·es à la gouvernance : ils sont tout à la fois prêteur·ses, locataires et co-gérant·es du lieu."
+  - critere: autogestion_usagers
+    valeur: oui
+    note: "Les résident·es sont à la fois prêteur·ses, locataires et co-gérant·es de la SCI, via l'association collégiale Chemins d'Ecolectif (associée gérante) qui décide au consentement : les usager·es du foncier tranchent eux-mêmes les décisions structurantes sur leurs conditions d'usage."
   - critere: transparence
     valeur: partiel
     note: "Le projet publie en ligne son cadre légal et ses statuts ; la publication régulière des comptes de la SCI n'est pas confirmée par les sources."

@@ -88,16 +88,16 @@ grille:
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le collectif dispose d'une jouissance durable et sécurisée depuis 2010-2011."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé n'est documenté pour le foncier du Jointout."
   - critere: vivant_finalite
-    valeur: partiel
+    valeur: non
     note: "Le lieu se conçoit comme un site de production agricole et d'échanges culturels ; le vivant non-humain n'est pas affiché comme finalité au-delà des pratiques agricoles biologiques."
   - critere: usage_non_degradant
     valeur: oui
     note: "Élevage et polyculture conduits en agriculture biologique, dont 41 hectares de prairies : des pratiques de maintien de la capacité régénérative du sol sont attestées."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "Le maintien de 41 hectares de prairies est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
 analyse:
   forces:

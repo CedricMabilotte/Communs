@@ -65,6 +65,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "Le fonds s'appuie sur les collectifs de la ZAD, mais l'articulation formelle avec la gouvernance n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Fonds de dotation gouverné par son conseil d'administration ; aucun dispositif statutaire conférant aux collectifs usager·es de la ZAD une voix délibérative sur les loyers, baux ou transmission du foncier n'est documenté par les sources."
   - critere: transparence
     valeur: partiel
     note: "Le fonds communique sur sa collecte, mais la publication régulière de comptes détaillés n'est pas confirmée."

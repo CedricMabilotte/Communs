@@ -64,6 +64,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "Le mouvement associe donateur·rices et bénévoles ; la fondation ouverte aux collectivités élargit les parties prenantes, mais le détail n'est pas documenté."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "La Fondation est gouvernée par son conseil d'administration sous contrôle de l'État (statut FRUP) ; la fiche relève elle-même que la « place décisionnelle des paysan·nes preneur·euses » est peu documentée. Les paysan·nes installé·es sur le foncier porté sont parties prenantes du mouvement, mais aucun dispositif statutaire ne leur donne voix délibérative sur les décisions structurantes du porteur (acquisitions, baux, redevances, transmission)."
   - critere: transparence
     valeur: oui
     note: "La Fondation publie un rapport annuel détaillant son activité et ses acquisitions."

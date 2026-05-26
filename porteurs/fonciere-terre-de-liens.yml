@@ -65,6 +65,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "L'actionnariat citoyen est large, mais la place décisionnelle des paysan·nes preneur·euses n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Les paysan·nes preneur·euses ne disposent pas d'une voix délibérative documentée sur la fixation du fermage, le choix des baux ou la transmission du foncier : ces décisions relèvent de la gérance de la SCA et de l'orientation du mouvement, non d'un dispositif statutaire associant les usager·es à la décision."
   - critere: transparence
     valeur: oui
     note: "La Foncière s'inscrit dans un mouvement publiant des rapports annuels et des informations sur l'épargne solidaire."

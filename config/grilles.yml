@@ -16,8 +16,8 @@
 #   4 — La finalité    finalité ouverte — intérêt général et habitat du vivant
 #   5 — L'usage        usage non marchand, non abusif et hospitalier
 # ─────────────────────────────────────────────────────────────────────────────
-version: 2
-date: 2026-05-23
+version: 3
+date: 2026-05-26
 
 grilles:
 
@@ -119,10 +119,32 @@ grilles:
           - id: parties_prenantes
             label: "Parties prenantes associées à la gouvernance"
             axe: 3
-            poids: 3
+            poids: 2
             definition: >
               Usager·es, citoyen·nes, collectivités ou donateur·rices sont
               représenté·es dans les instances ou réellement consulté·es.
+          - id: autogestion_usagers
+            label: "Voix délibérative des usager·es"
+            axe: 3
+            poids: 3
+            definition: >
+              Les usager·es du foncier porté ont voix DÉLIBÉRATIVE — non
+              simplement consultative — dans les décisions du porteur sur leurs
+              conditions d'usage : choix des baux, fixation des loyers et
+              redevances, affectation et transmission du foncier. C'est le
+              critère qui distingue le pôle « commun libre et vivant »
+              (autogestion citoyenne) du pôle « intérêt général institué »
+              (administration descendante par conseil, tutelle ou donateur·rices).
+              « oui » : les usager·es élisent ou siègent au CA et tranchent
+              les décisions structurantes ; « partiel » : consultation
+              organisée et régulière mais sans pouvoir contraignant, ou
+              participation à certaines décisions seulement ; « non » :
+              décision purement descendante — administration publique, conseil
+              de fondation, donateur·rices, tutelle —, les usager·es sont
+              informé·es. Un porteur de droit public (commune, établissement
+              public, conservatoire d'État) coche par défaut « non », sauf
+              dispositif statutaire explicite d'association délibérative des
+              usager·es à la décision.
           - id: transparence
             label: "Transparence des comptes et de l'activité"
             axe: 3
@@ -486,10 +508,19 @@ grilles:
             axe: 2
             poids: 3
             definition: >
-              Ni le porteur ni l'usufruitier ne sont des sociétés commerciales
-              à lucrativité ouverte. « partiel » si un maillon est une société
-              commerciale à lucrativité encadrée (SCIC, SCA solidaire) ;
-              « non » si un maillon poursuit une logique de rendement.
+              Critère ALIGNÉ sur l'axe `nature_interet` (chantier 1bis, session
+              #4) : se lit sur le pire maillon de la chaîne lieu/porteur/
+              usufruitier. « oui » : tous les maillons sont `non_lucrative`
+              ou `commerciale_desactivee` (forme commerciale dont 100 % du
+              capital est aux mains d'organismes d'intérêt général) ;
+              « partiel » : au moins un maillon est `commerciale_encadree`
+              (SCIC, foncière solidaire agréée ESUS) ; « non » : un maillon
+              est `commerciale` à lucrativité ouverte (société commerciale
+              ordinaire, GAEC, EARL, société civile agricole) ou
+              `privee_individuelle` (personne physique). Quel que soit le
+              critère saisi, le score d'axe 2 du lieu est ensuite plafonné
+              par la chaîne (session #5, `plafonds_chaine.ax2_par_nature`
+              dans ranking.yml) — la chaîne reste la source unique de vérité.
       - id: pouvoir
         label: "Le pouvoir — gouvernance citoyenne"
         axe: 3

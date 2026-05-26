@@ -67,6 +67,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "La foncière s'inscrit dans le groupe d'insertion Chênelet et travaille avec des collectivités, mais l'association des locataires à sa gouvernance n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Bailleur social pérenne : la foncière fixe loyers et baux dans le cadre du logement social agréé ; l'association des locataires à voix délibérative sur ces décisions n'est ni documentée ni inscrite dans le modèle ESUS."
   - critere: transparence
     valeur: partiel
     note: "La foncière communique sur son modèle et ses réalisations, mais le détail de la publication de ses comptes n'est pas confirmé."

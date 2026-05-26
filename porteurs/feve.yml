@@ -73,6 +73,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "L'actionnariat citoyen est large, mais la place décisionnelle des paysan·nes accompagné·es n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Foncière de forme sociétaire à actionnariat citoyen ; les paysan·nes accompagné·es sont preneur·ses d'un bail rural, mais aucun dispositif statutaire ne leur confère de voix délibérative sur la fixation des loyers, le choix des baux ou la transmission du foncier au sein des instances de FEVE — l'option d'achat individuelle remplace la délibération collective des usager·es."
   - critere: transparence
     valeur: partiel
     note: "FEVE communique sur sa collecte et le nombre de fermes financées, mais le détail de sa transparence comptable n'est pas documenté."

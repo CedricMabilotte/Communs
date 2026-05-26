@@ -92,7 +92,7 @@ grille:
     valeur: oui
     note: "L'usage des 18 hectares est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
   - critere: milieu_protege
-    valeur: partiel
+    valeur: non
     note: "Les 18 hectares portés par la Foncière Terre de Liens préservent durablement leur vocation agricole en biodynamie ; aucune obligation réelle environnementale ni clause environnementale opposable du bail n'est documentée par les sources."
   - critere: vivant_finalite
     valeur: partiel

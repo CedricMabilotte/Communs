@@ -69,6 +69,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "La Coopérative Oasis figure parmi les actionnaires de la SAS ; la représentation d'autres parties prenantes — habitant·es, usager·es — dans la gouvernance n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Le foncier est porté par une SAS, dont la décision appartient aux actionnaires au prorata de leur capital ; aucun dispositif statutaire associant la SCIC exploitante ou les habitant·es à voix délibérative sur les baux, loyers ou transmission n'est documenté."
   - critere: transparence
     valeur: inconnu
     note: "La publication des comptes et des statuts de la SAS n'est pas documentée par les sources consultées."

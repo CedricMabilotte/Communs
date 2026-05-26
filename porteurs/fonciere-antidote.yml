@@ -71,6 +71,9 @@ grille:
   - critere: parties_prenantes
     valeur: oui
     note: "Chaque lieu rejoignant le projet intègre l'association « Les Passagères de l'usage » et participe ainsi à l'orientation du fonds."
+  - critere: autogestion_usagers
+    valeur: oui
+    note: "L'association « Les Passagères de l'usage », qui regroupe les collectifs occupants, nomme les administrateur·rices du fonds et définit ses orientations : les usager·es ont voix délibérative sur le porteur via cette association de pilotage."
   - critere: transparence
     valeur: partiel
     note: "Le fonctionnement du fonds est documenté publiquement, notamment par une monographie ; le détail de la publication des comptes n'est pas confirmé."

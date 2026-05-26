@@ -70,6 +70,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "Le fonds confie l'usage à des collectifs usagers et travaille en lien avec la Coopérative Oasis ; la représentation formelle des parties prenantes dans ses instances n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Fonds de dotation gouverné par un conseil d'administration créé par une famille de professionnel·les de l'immobilier ; aucun dispositif statutaire associant les collectifs usagers (Mhotte, Aube) à la décision sur les loyers, baux ou transmission du foncier n'est documenté."
   - critere: transparence
     valeur: partiel
     note: "Le fonds publie ses projets de sanctuarisation et ses collectes ; la publication régulière de ses comptes n'est pas documentée par les sources."

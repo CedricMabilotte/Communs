@@ -63,6 +63,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "La fondation porte le foncier de coopératives autogérées, mais l'articulation formelle avec leur gouvernance n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Fondation de droit suisse dont les instances décident du sort du foncier ; même si les coopératives Longo Maï sont autogérées dans leur usage, aucun dispositif statutaire ne leur confère de voix délibérative au sein de la fondation sur les conditions d'usage, loyers ou transmission du foncier porté."
   - critere: transparence
     valeur: partiel
     note: "L'existence et la mission de la fondation sont publiques, mais la publication régulière de comptes n'est pas confirmée."

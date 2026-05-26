@@ -73,6 +73,9 @@ grille:
   - critere: parties_prenantes
     valeur: oui
     note: "L'agrément conjoint de l'État et de la Région associe la puissance publique au cadre d'action du Conservatoire."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Le Conservatoire est gouverné par son CA associatif et son agrément public ; aucun dispositif statutaire n'associe les usager·es du foncier conservé (occupants, exploitant·es preneur·euses de baux, riverain·es) à la décision sur les baux, redevances, affectation ou transmission. Logique d'intérêt général institué, gestion experte descendante."
   - critere: transparence
     valeur: partiel
     note: "Le Conservatoire publie un rapport d'activité annuel ; le détail de la transparence comptable n'est pas documenté par les sources."

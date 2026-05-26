@@ -65,6 +65,9 @@ grille:
   - critere: parties_prenantes
     valeur: inconnu
     note: "L'association des usager·es, citoyen·nes ou collectivités à la gouvernance n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Fondation classique gouvernée par son conseil de fondation : les décisions structurantes sur le domaine de Villarceaux (mise à disposition, conditions, transmission) relèvent de la fondation, non des structures d'exploitation tierces qui en sont usufruitières ou conventionnées. Aucun dispositif statutaire d'association délibérative des usager·es n'est documenté."
   - critere: transparence
     valeur: partiel
     note: "La FPH dispose d'un site présentant son action, mais la publication régulière de comptes détaillés n'est pas confirmée."

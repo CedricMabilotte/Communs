@@ -88,7 +88,7 @@ grille:
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "L'usage est confié par bail rural sans que les sources précisent s'il s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable de protection du milieu n'est documenté."
   - critere: vivant_finalite
     valeur: oui

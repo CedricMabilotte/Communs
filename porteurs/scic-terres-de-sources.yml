@@ -69,6 +69,9 @@ grille:
   - critere: parties_prenantes
     valeur: oui
     note: "Les six collèges de la SCIC associent producteurs, collectivités, citoyen·nes et autres parties prenantes à la gouvernance."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Le foncier est acquis et porté par la collectivité publique Eau du Bassin Rennais : les décisions structurantes (acquisition, mise à disposition, clauses d'usage) relèvent d'une politique publique descendante, et la SCIC organise les débouchés sans gouverner le foncier. Les exploitant·es-usager·es constituent l'un des six collèges de la SCIC mais ne tranchent pas les décisions structurantes sur la terre qu'ils cultivent."
   - critere: transparence
     valeur: partiel
     note: "Le projet est largement documenté publiquement, mais le détail de la publication des comptes de la SCIC n'est pas confirmé."

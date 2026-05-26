@@ -66,6 +66,9 @@ grille:
   - critere: parties_prenantes
     valeur: oui
     note: "Par le bail emphytéotique, l'État a confié la gestion du foncier aux usager·es eux-mêmes, réuni·es dans la SCTL."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "L'autogestion documentée du Larzac s'exerce au niveau de l'usufruitier (SCTL), pas du porteur : l'État reste propriétaire et toute décision structurante sur le domaine — reconduction du bail emphytéotique en 2083, affectation, transmission — relève d'un choix politique étatique, sans dispositif statutaire associant les usager·es à la décision de l'État propriétaire."
   - critere: transparence
     valeur: partiel
     note: "Le montage — bail emphytéotique État-SCTL, échéance 2083 — est public et documenté ; le détail de la gestion patrimoniale par l'État ne l'est pas."

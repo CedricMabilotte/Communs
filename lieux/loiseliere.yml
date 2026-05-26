@@ -90,7 +90,7 @@ grille:
     valeur: oui
     note: "L'usage des terres de la Foncière est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitation dispose d'une jouissance durable et sécurisée."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé n'est documenté pour le foncier de la ferme."
   - critere: vivant_finalite
     valeur: partiel
@@ -99,7 +99,7 @@ grille:
     valeur: oui
     note: "Élevage en plein air et céréales conduits en agriculture biologique sur l'ensemble du foncier : des pratiques de maintien de la capacité régénérative du sol sont attestées."
   - critere: place_au_vivant
-    valeur: inconnu
+    valeur: non
     note: "L'élevage en plein air sur dix hectares est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
 analyse:
   forces:

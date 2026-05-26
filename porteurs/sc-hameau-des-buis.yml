@@ -75,6 +75,9 @@ grille:
   - critere: parties_prenantes
     valeur: partiel
     note: "Le pouvoir de décision était placé dans l'association La Ferme des Enfants ; l'association des habitant·es, créée en 2009, représentait les résident·es, mais son rôle dans la gouvernance de la société civile n'est pas documenté."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Le pouvoir de décision sur la société civile était concentré dans l'association La Ferme des Enfants (519 parts sur 520) ; les habitant·es-résident·es étaient locataires sous contrat de résident, sans voix délibérative documentée sur les décisions structurantes du porteur — le conflit de 2021 ayant précisément révélé cette absence de pouvoir des résident·es sur le foncier qu'ils habitaient."
   - critere: transparence
     valeur: partiel
     note: "Le principe du montage — parts détenues par une association, prêts sans intérêt — est public et documenté par le lieu ; les comptes et la liste des biens portés ne le sont pas."

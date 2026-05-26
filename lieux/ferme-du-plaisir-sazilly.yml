@@ -88,7 +88,7 @@ grille:
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : le GAEC dispose d'une jouissance durable et sécurisée."
   - critere: milieu_protege
-    valeur: partiel
+    valeur: non
     note: "Le foncier porté par la Foncière Terre de Liens préserve la vocation agricole et la ferme a engagé l'agroforesterie contre l'érosion des sols ; aucune obligation réelle environnementale ni clause environnementale opposable du bail n'est toutefois documentée."
   - critere: vivant_finalite
     valeur: partiel

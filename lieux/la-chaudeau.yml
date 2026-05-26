@@ -88,16 +88,16 @@ grille:
     valeur: oui
     note: "L'usage est confié par bail rural, dont le renouvellement est d'ordre public : l'exploitant dispose d'une jouissance durable et sécurisée."
   - critere: milieu_protege
-    valeur: inconnu
+    valeur: non
     note: "L'usage est confié par bail rural sans que les sources précisent s'il s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable de protection du milieu n'est documenté."
   - critere: vivant_finalite
-    valeur: partiel
+    valeur: non
     note: "La conduite en agriculture biologique limite les atteintes au milieu, mais la vocation documentée est nourricière ; l'accueil de la biodiversité non-humaine n'est pas affiché parmi les finalités."
   - critere: usage_non_degradant
     valeur: oui
     note: "La ferme est exploitée en maraîchage biologique : pratiques de prélèvement sans recours aux intrants de synthèse, entretenant la capacité du sol à se régénérer."
   - critere: place_au_vivant
-    valeur: partiel
+    valeur: non
     note: "Ancien site de cresson et de pisciculture remis en culture sur 3,66 hectares ; aucune trace d'aménagement délibéré (haies, mares, friches) pour le vivant non-humain dans les sources."
 analyse:
   forces:

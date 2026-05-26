@@ -102,7 +102,7 @@ grille:
     valeur: partiel
     note: "L'habitat est autoconstruit en matériaux locaux et de réemploi, dans une logique de faible empreinte ; le mode de culture du domaine agricole de 46 hectares n'est pas documenté."
   - critere: place_au_vivant
-    valeur: partiel
+    valeur: non
     note: "L'écohameau s'inscrit sur un domaine agricole d'environ 46 hectares en milieu rural ; aucun aménagement délibéré pour le vivant (haies, mares, friches) n'est documenté par les sources."
 analyse:
   forces:

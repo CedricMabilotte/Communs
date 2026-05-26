@@ -71,6 +71,9 @@ grille:
   - critere: parties_prenantes
     valeur: inconnu
     note: "L'association des usager·es de TERA à la gouvernance du fonds de dotation n'est pas documentée par les sources."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Fonds de dotation propriétaire majoritaire de la SCI Le Tilleul ; la gouvernance est portée par les instances du fonds et non directement par les usager·es du lieu (cf. integrite_montage), aucun dispositif statutaire associant les structures d'usage de TERA aux décisions sur les loyers ou les baux n'est documenté."
   - critere: transparence
     valeur: partiel
     note: "Le fonds dispose d'un site public et le montage est documenté ; la publication régulière de ses comptes n'est pas confirmée par les sources."

@@ -67,6 +67,9 @@ grille:
   - critere: parties_prenantes
     valeur: oui
     note: "Le statut SCIC associe par construction plusieurs catégories de parties prenantes, dont des collectivités, au capital et à la gouvernance."
+  - critere: autogestion_usagers
+    valeur: partiel
+    note: "Les habitant·es figurent au sociétariat aux côtés des salarié·es, collectivités et investisseur·ses solidaires : ils ont voix au chapitre dans la gouvernance coopérative pluraliste, mais le poids respectif des collèges et la primauté éventuelle des usager·es sur les décisions structurantes du foncier (loyer, transmission) ne sont pas documentés par les sources."
   - critere: transparence
     valeur: partiel
     note: "Le projet et son montage sont publiquement présentés ; la publication régulière des comptes de la SCIC n'est pas documentée par les sources."

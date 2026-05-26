@@ -96,7 +96,7 @@ grille:
     valeur: oui
     note: "Polyculture-élevage, maraîchage et céréales conduits en agriculture biologique : pratiques de prélèvement sans intrants de synthèse, entretenant la capacité du sol à se régénérer."
   - critere: place_au_vivant
-    valeur: partiel
+    valeur: non
     note: "Ferme de quelque 50 hectares de polyculture-élevage près des gorges de la Sioule, milieu diversifié ; aucun aménagement écologique délibéré (haies, mares) n'est documenté par les sources."
 analyse:
   forces:
