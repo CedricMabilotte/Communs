@@ -1,8 +1,8 @@
 # Veille — candidats du 2026-05-26
 
-32 candidat·s repéré·s sur 15 sources (30 hors fiches existantes, 15 sur un angle mort ; 0 écarté·s via discovery/ignore.txt). Score pondéré ; à examiner et promouvoir manuellement.
+26 candidat·s repéré·s sur 15 sources (25 hors fiches existantes, 15 sur un angle mort ; 0 écarté·s via discovery/ignore.txt). Score pondéré ; à examiner et promouvoir manuellement.
 
-## Nouveautés possibles (30)
+## Nouveautés possibles (25)
 
 - **[22 · ANGLE MORT]** [La Fondation Terre de Liens — Terre de Liens](https://terredeliens.org/national/la-fondation-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, bail, donation, ferme, foncière, fondation, fonds de dotation, société civile
 - **[14 · ANGLE MORT]** [Ferme de la Coccinelle — Terre de Liens](https://fermes.terredeliens.org/alsace/fermes-de-la-r%C3%A9gion-alsace/ferme-de-la-coccinelle/) — source : terre-de-liens — statut : revu — mots-clés : acquisition, association, ferme, foncière, fondation, société civile
@@ -22,20 +22,14 @@
 - **[11]** [Gestion foncière – Larzac.org](https://larzac.org/accueil/un-territoire-organise/la-gestion-fonciere/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
 - **[11]** [What are Foncier Solidaire France and the concept of OFS/BRS ? – Foncier Solidaire France](https://www.foncier-solidaire.fr/principles-of-solidarity-land/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
 - **[11]** [Société Civile Gestion Foncière Agricole du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
-- **[11]** [Les avantages du BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/les-avantages-du-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[11]** [Les conditions d’accès à un logement BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[11]** [Revendre son logement en BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/revendre-son-logement-en-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
 - **[10]** [la terre en commun enfin propriétaire des Q de plomb! | la terre en commun](https://encommun.eco/actualites/terre-en-commun-enfin-proprietaire-q-de-plomb) — source : encommun — statut : revu — mots-clés : commun, fonds de dotation, terres
-- **[9]** [Les OFS agréés – Foncier Solidaire France](https://www.foncier-solidaire.fr/le-reseau/les-ofs-agrees/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire, foncière, fondation
-- **[7]** [Vivre dans un logement BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/vivre-dans-un-logement-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire, foncière
+- **[9]** [Foncière Oasis - Coopérative Oasis](https://cooperative-oasis.org/nos-offres/fonciere-oasis/) — source : cooperative-oasis — statut : revu — mots-clés : foncière, fonds de dotation, oasis, écolieu
 - **[6]** [La SCIC Terres de Sources - Terres de SourcesComments Box SVG icons](https://terresdesources.fr/la-scic-terres-de-sources/) — source : terres-de-sources — statut : revu — mots-clés : SCIC, association, eau, scic
 - **[5]** [Événements | Le Labo de l'économie sociale et solidaire](https://www.lelabo-ess.org/petit-dejeuner-debat-l-entreprise-de-demain-existe-depuis-hier-histoire-des-scop-et-des-scic) — source : labo-ess — statut : revu — mots-clés : ESS, association, scic
-- **[5]** [A l’origine des OFS – Foncier Solidaire France](https://www.foncier-solidaire.fr/le-reseau/a-lorigine-des-ofs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire
-- **[5]** [Plafonds d’éligibilité au BRS pour 2026 – Foncier Solidaire France](https://www.foncier-solidaire.fr/plafonds-deligibilite-au-brs-pour-2026/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire
 - **[4]** [Le portage foncier agricole - Rapport #3 - Centre de Ressources - Terre de liens](https://ressources.terredeliens.org/les-ressources/le-portage-foncier-agricole-rapport-3) — source : terre-de-liens — statut : revu — mots-clés : foncier, foncière
+- **[4]** [Protéger la biodiversité avec les ORE - Coopérative Oasis](https://cooperative-oasis.org/nos-offres/proteger-la-biodiversite-ore/) — source : cooperative-oasis — statut : revu — mots-clés : association, foncier, foncière, oasis
 - **[3]** [ESS, travail et emploi | Le Labo de l'économie sociale et solidaire](https://www.lelabo-ess.org/ess-travail-et-emploi) — source : labo-ess — statut : revu — mots-clés : ESS, fondation
 
-## Déjà référencés (2)
+## Déjà référencés (1)
 
 - [14] [Société Civile des Terres du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/) — larzac
-- [11] [Les principes du foncier solidaire – Foncier Solidaire France](https://www.foncier-solidaire.fr/le-reseau/les-principes-du-foncier-solidaire/) — foncier-solidaire
