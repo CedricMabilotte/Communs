@@ -2474,14 +2474,10 @@ def render_methode(cfg, n_by_cat, all_sc):
 détail, avec les pôles et la typologie de montage, sur la page
 <a href="regimes.html#triptyque">Régimes et pôles du sol</a>.</p>
 </section>"""
-    ecriture_html = f"""<section id="ecriture"><h2 class="sec">Les deux voix</h2>
-<p class="prose">{e(clean(ed.get('chapeau','')))}</p>
-<ul class="prose">
-<li><strong>La voix exacte.</strong> {e(clean(ed.get('voix_exacte','')))}</li>
-<li><strong>La voix incarnée.</strong> {e(clean(ed.get('voix_incarnee','')))}</li>
-</ul>
-<p class="prose"><strong>Règle d'or.</strong> {e(clean(ed.get('regle_d_or','')))}</p>
-</section>"""
+    # Section « Les deux voix » retirée (session #5, 27 mai 2026) : le double
+    # registre voix exacte / voix incarnée est implicite à la lecture, pas
+    # besoin que le lecteur en prenne conscience pour bénéficier du site.
+    ecriture_html = ""
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
 libération des terres.</p>
@@ -2491,7 +2487,6 @@ libération des terres.</p>
   <a href="#indice">L'Indice de libération</a>
   <a href="#chaine">La chaîne et le domiciliage des axes</a>
   <a href="#integrite">L'intégrité du montage</a>
-  <a href="#ecriture">Les deux voix</a>
   <a href="#limites">Limites</a>
   <a href="#etat">État du corpus</a>
 </nav>
@@ -3486,13 +3481,17 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
  background:var(--card);border:1px solid var(--line);
  border-left:3px solid var(--pal,var(--green));border-radius:var(--radius);
  padding:1.6rem 1.8rem;margin:1.4rem 0;box-shadow:0 3px 14px rgba(33,29,24,.06);}
-.score-main{text-align:center;}
+.score-main{text-align:center;flex:0 0 12rem;max-width:12rem;}
+.score-main .axes-calc{font-size:.78rem;color:var(--muted);margin:.3rem 0 0;
+ line-height:1.35;overflow-wrap:break-word;word-break:normal;hyphens:auto;}
 .score-cap{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
  color:var(--muted);margin:0 0 .35rem;}
 /* un seul séparateur : le gap suffit, le filet gauche est retiré (design B, M5) */
-.score-axes{flex:1;min-width:240px;}
+/* session #5 — un peu moins de largeur au centre (axes), un peu plus à Repères :
+   évite que Repères saute à la ligne quand axes-calc a un texte long. */
+.score-axes{flex:1;min-width:200px;}
 /* 3e colonne du panneau de score — repères compacts (chantier 7) */
-.score-bref{flex:0 0 12rem;font-size:.8rem;}
+.score-bref{flex:0 0 14rem;font-size:.8rem;}
 .score-bref dl{margin:.1rem 0 0;}
 .sb-item{display:flex;justify-content:space-between;gap:.7rem;
  padding:.26rem 0;border-bottom:1px solid var(--line);}

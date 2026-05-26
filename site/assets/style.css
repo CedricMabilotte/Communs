@@ -309,13 +309,17 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
  background:var(--card);border:1px solid var(--line);
  border-left:3px solid var(--pal,var(--green));border-radius:var(--radius);
  padding:1.6rem 1.8rem;margin:1.4rem 0;box-shadow:0 3px 14px rgba(33,29,24,.06);}
-.score-main{text-align:center;}
+.score-main{text-align:center;flex:0 0 12rem;max-width:12rem;}
+.score-main .axes-calc{font-size:.78rem;color:var(--muted);margin:.3rem 0 0;
+ line-height:1.35;overflow-wrap:break-word;word-break:normal;hyphens:auto;}
 .score-cap{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
  color:var(--muted);margin:0 0 .35rem;}
 /* un seul séparateur : le gap suffit, le filet gauche est retiré (design B, M5) */
-.score-axes{flex:1;min-width:240px;}
+/* session #5 — un peu moins de largeur au centre (axes), un peu plus à Repères :
+   évite que Repères saute à la ligne quand axes-calc a un texte long. */
+.score-axes{flex:1;min-width:200px;}
 /* 3e colonne du panneau de score — repères compacts (chantier 7) */
-.score-bref{flex:0 0 12rem;font-size:.8rem;}
+.score-bref{flex:0 0 14rem;font-size:.8rem;}
 .score-bref dl{margin:.1rem 0 0;}
 .sb-item{display:flex;justify-content:space-between;gap:.7rem;
  padding:.26rem 0;border-bottom:1px solid var(--line);}
