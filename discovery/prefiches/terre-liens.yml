@@ -1,0 +1,40 @@
+categorie: lieu
+slug: terre-liens
+nom: Terre Liens
+statut_fiche: prefiche
+_source_lead: discovery/leads/terre-liens.md
+_genere_le: '2026-05-27'
+_score_cumule: 26
+_indices_structurels:
+  nom_propre: true
+  localisation: false
+  entite_juridique: true
+  montage_explicite: false
+  siren: false
+  geoportail_localisable: false
+localisation:
+  commune: null
+  departement: null
+  region: null
+  code_postal: null
+montage:
+  type: null
+  articulations: []
+chaine:
+  porteurs:
+  - _a_qualifier_fonciere
+  - _a_qualifier_fondation
+  usufruitiers:
+  - _a_qualifier_association
+  - _a_qualifier_societe_civile
+sources_veille:
+- source: terre-de-liens
+  url: https://terredeliens.org/national/hub-ferme/
+  date: '2026-05-27'
+  score: 13
+- source: terre-de-liens
+  url: https://fermes.terredeliens.org/national/hub-ferme/
+  date: '2026-05-27'
+  score: 13
+note_genese: 'Premier signal détecté par la veille via la source `terre-de-liens`.
+  URL pivot : https://terredeliens.org/national/hub-ferme/.'

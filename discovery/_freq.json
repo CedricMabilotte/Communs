@@ -1,0 +1,62 @@
+{
+  "cooperative-oasis": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "encommun": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "foncier-solidaire": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "fonciere-chenelet": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "habicoop": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "habitat-participatif": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "labo-ess": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "larzac": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "lurzaindia": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "reseau-cen": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "reseau-ecolieux": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "rtes": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "terre-de-liens": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "terre-de-liens-ressources": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "terres-de-sources": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  }
+}

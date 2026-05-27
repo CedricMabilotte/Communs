@@ -1,7 +1,10 @@
 # Veille — index
 
-Derniere passe : 2026-05-26
+Derniere passe : 2026-05-27
 
-- [Candidats du 2026-05-26](candidats-2026-05-26.md)
+- [Candidats du 2026-05-27](candidats-2026-05-27.md)
 - [Angles morts du corpus](angles-morts.md)
 - [Santé des sources](sources-sante.md)
+- [Pipeline — spec et conventions](PIPELINE.md)
+
+Pipeline en cours : 27 leads actifs ; 1 pré-fiches générées aujourd'hui.
