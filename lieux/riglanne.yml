@@ -1,7 +1,7 @@
 uid: riglanne
 categorie: lieu
 nom: "Ferme de Riglanne"
-sous_titre: "Ferme fromagère bio en transmission sur foncier partiellement sanctuarisé en Loire-Atlantique"
+sous_titre: "Ferme fromagère bio en transmission sur foncier partiellement protégé en Loire-Atlantique"
 statut_fiche: publie
 forme_juridique: null
 localisation:
@@ -40,7 +40,7 @@ montage:
 integrite_montage:
   niveau: mutualisme
   commentaire: >
-    Une partie du foncier est sanctuarisée par la Foncière Terre de Liens,
+    Une partie du foncier est protégée par la Foncière Terre de Liens,
     société en commandite par actions à actionnariat solidaire ; l'usufruitier
     est un GAEC, société civile d'exploitation dont le bénéfice est partagé
     entre les paysan·nes associé·es.
@@ -105,7 +105,7 @@ grille:
 analyse:
   forces:
     - "Transmission de ferme réussie : reprise collective par trois paysannes en 2025."
-    - "Foncier partiellement sanctuarisé hors marché par l'épargne citoyenne depuis 2013."
+    - "Foncier partiellement protégé hors marché par l'épargne citoyenne depuis 2013."
     - "Ferme diversifiée et ouverte à de nouvelles activités (paysans boulangers, atelier mutualisé)."
   fragilites:
     - "Seule la moitié des terres exploitées est portée par la Foncière Terre de Liens."
@@ -117,9 +117,9 @@ analyse:
     - "Publier les statuts du collectif repreneur et formaliser l'accueil des nouvelles activités."
   synthese: >
     Riglanne illustre le modèle Terre de Liens au service de la transmission :
-    un foncier partiellement sanctuarisé dès 2013, qui permet, plus de dix ans
+    un foncier partiellement protégé dès 2013, qui permet, plus de dix ans
     plus tard, la reprise collective d'une ferme fromagère par trois nouvelles
-    paysannes. La sanctuarisation partielle du foncier et la nature de
+    paysannes. La protection foncière partielle et la nature de
     groupement d'exploitation de l'usufruitier situent la ferme du côté du
     mutualisme.
 fiabilite: >

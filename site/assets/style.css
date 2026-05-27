@@ -484,8 +484,8 @@ th.sortable[aria-sort=descending]::after{content:" \25BC";opacity:1;}
  background:var(--card);padding:.25rem .6rem;border-radius:var(--radius-sm);}
 .pal-chip em{color:var(--faint);font-style:normal;}
 
-/* axe cards (methode) */
-.axe-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+/* axe cards (methode) — élargis d'un tiers (session #7 post-clôture) */
+.axe-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(307px,1fr));
  margin:1.1rem 0;}
 .axe-card{border:1px solid var(--line);border-top:3px solid var(--c,#999);
  border-radius:var(--radius);padding:.4rem 1.1rem 1rem;background:var(--card);}

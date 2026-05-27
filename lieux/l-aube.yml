@@ -33,7 +33,7 @@ montage:
   description: >
     En 2022, l'écolieu de l'Aube a fait l'objet d'une donation au fonds de
     dotation Fraternité pour Demain, structure non lucrative qui en conserve la
-    propriété sanctuarisée hors marché. Le fonds en a confié la gestion à la
+    propriété protégée hors marché. Le fonds en a confié la gestion à la
     Coopérative Oasis, laquelle — n'ayant pas vocation à gérer directement un
     écolieu — y a installé le collectif de l'Aubascule, qui en assure l'usage
     et l'animation en autogestion. La nature et la durée exactes du titre
@@ -48,13 +48,13 @@ integrite_montage:
 grille:
   - critere: foncier_hors_marche
     valeur: oui
-    note: "Le lieu a fait l'objet en 2022 d'une donation au fonds de dotation Fraternité pour Demain, structure non lucrative qui le sanctuarise hors marché."
+    note: "Le lieu a fait l'objet en 2022 d'une donation au fonds de dotation Fraternité pour Demain, structure non lucrative qui le protège hors marché."
   - critere: montage_documente
     valeur: partiel
     note: "La donation au fonds de dotation et la gestion confiée à la Coopérative Oasis sont publiques ; la nature du titre d'usage liant le collectif au foncier n'est pas documentée."
   - critere: irreversibilite
     valeur: partiel
-    note: "La propriété par un fonds de dotation à objet de sanctuarisation soustrait durablement le lieu ; le caractère consomptible ou non de la dotation du fonds n'est pas confirmé."
+    note: "La propriété par un fonds de dotation à objet de protection foncière soustrait durablement le lieu ; le caractère consomptible ou non de la dotation du fonds n'est pas confirmé."
   - critere: origine_non_speculative
     valeur: oui
     note: "Le foncier est entré dans le fonds de dotation par donation, hors tout endettement ou logique de plus-value."
@@ -96,16 +96,16 @@ grille:
     note: "Une Obligation Réelle Environnementale a été signée fin 2024 pour 99 ans : dispositif opposable et durable interdisant les intrants chimiques, encadrant fauche et coupes, avec contrôle périodique."
   - critere: vivant_finalite
     valeur: oui
-    note: "Le lieu est engagé dans une démarche Oasis de Biodiversité, dispose d'un pôle permacole et a sanctuarisé par ORE la nature des lieux : le vivant non-humain est une finalité affirmée et agie."
+    note: "Le lieu est engagé dans une démarche Oasis de Biodiversité, dispose d'un pôle permacole et a inscrit par ORE la protection du milieu : le vivant non-humain est une finalité affirmée et agie."
   - critere: usage_non_degradant
     valeur: oui
     note: "L'ORE proscrit les intrants chimiques et prévoit une fauche raisonnée et saisonnière pour préserver les orchidées ; le pôle permacole atteste de pratiques de maintien du sol."
   - critere: place_au_vivant
     valeur: oui
-    note: "L'écolieu, niché en combe, laisse une place effective au vivant — orchidées en nombre, arbres feuillus, espaces sanctuarisés par l'ORE pour 99 ans."
+    note: "L'écolieu, niché en combe, laisse une place effective au vivant — orchidées en nombre, arbres feuillus, espaces préservés par l'ORE pour 99 ans."
 analyse:
   forces:
-    - "Foncier sanctuarisé par donation à un fonds de dotation non lucratif."
+    - "Foncier protégé par donation à un fonds de dotation non lucratif."
     - "Pôle d'accueil solidaire ouvrant le lieu à des personnes en situation de vulnérabilité."
     - "Obligation Réelle Environnementale inscrivant l'écologie dans le droit du lieu."
   fragilites:
@@ -117,7 +117,7 @@ analyse:
     - "Formaliser une articulation directe entre le collectif et le fonds de dotation."
     - "Confirmer le caractère non consomptible de la dotation du fonds."
   synthese: >
-    L'Aube est un écolieu d'accueil dont le foncier a été sanctuarisé par
+    L'Aube est un écolieu d'accueil dont le foncier a été protégé par
     donation à un fonds de dotation : un montage solide côté propriété et
     ouvert par son pôle solidaire. Sa principale zone d'ombre est la
     formalisation du maillon usager — forme du collectif et titre d'usage —

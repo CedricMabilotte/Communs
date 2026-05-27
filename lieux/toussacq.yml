@@ -1,7 +1,7 @@
 uid: toussacq
 categorie: lieu
 nom: "Domaine de Toussacq"
-sous_titre: "Ferme collective et couveuse agricole sur foncier sanctuarisé en Seine-et-Marne"
+sous_titre: "Ferme collective et couveuse agricole sur foncier protégé en Seine-et-Marne"
 statut_fiche: publie
 forme_juridique: null
 localisation:
@@ -36,7 +36,7 @@ montage:
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncier protégé par une structure non spéculative ; le porteur, la
     Foncière Terre de Liens, est toutefois une société en commandite par
     actions à actionnariat solidaire et lucrativité encadrée.
 grille:
@@ -99,7 +99,7 @@ grille:
     note: "La ferme est un site de polyculture-élevage de 74 hectares, mais aucun aménagement explicite en faveur du vivant (haies, mares, continuités écologiques) n'est documenté par les sources."
 analyse:
   forces:
-    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2011."
+    - "Foncier protégé hors marché par l'épargne citoyenne depuis 2011."
     - "Couveuse agricole : le renouvellement des paysan·nes est organisé par construction."
     - "Tiers-lieu nourricier ancré dans son territoire, ouvert au public."
   fragilites:
@@ -112,7 +112,7 @@ analyse:
     - "Privilégier, pour les parcelles les plus exposées, un portage par la Fondation."
   synthese: >
     Toussacq illustre le modèle Terre de Liens à l'échelle d'une ferme : un
-    foncier sanctuarisé par l'épargne citoyenne, confié à une coopérative qui en
+    foncier protégé par l'épargne citoyenne, confié à une coopérative qui en
     fait une couveuse agricole et un tiers-lieu nourricier. Sa principale réserve
     tient à la nature sociétaire du porteur, la Foncière.
 fiabilite: >

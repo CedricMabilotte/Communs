@@ -32,12 +32,12 @@ montage:
     durablement. Les bâtiments ont, eux, été acquis par le collectif. L'usage
     des terres est confié par bail rural au GAEC Les Croquants ; le collectif
     avait d'abord signé un bail rural dans l'attente de l'acquisition par la
-    Foncière. Le montage est une propriété sanctuarisée assortie d'un bail
+    Foncière. Le montage est une propriété protégée assortie d'un bail
     rural.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncier protégé par une structure non spéculative ; le porteur, la
     Foncière Terre de Liens, est toutefois une société en commandite par
     actions à actionnariat solidaire et lucrativité encadrée.
 grille:
@@ -100,7 +100,7 @@ grille:
     note: "Le foncier de 32 hectares comprend terres, prairies et bois, et la fiche fait état d'une restauration de sa biodiversité."
 analyse:
   forces:
-    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis 2022."
+    - "Foncier protégé hors marché par l'épargne citoyenne depuis 2022."
     - "Ferme réellement collective : GAEC de six paysan·nes décidant ensemble."
     - "Production diversifiée et circuits courts ancrés dans le territoire."
   fragilites:
@@ -113,7 +113,7 @@ analyse:
     - "Privilégier, pour les parcelles les plus exposées, un portage par la Fondation."
   synthese: >
     La ferme de Pégarou illustre une chaîne Terre de Liens portée par un
-    véritable collectif : un foncier sanctuarisé par l'épargne citoyenne,
+    véritable collectif : un foncier protégé par l'épargne citoyenne,
     confié par bail rural à un GAEC de six paysan·nes qui en gouvernent l'usage
     ensemble. Sa principale réserve tient à la nature sociétaire du porteur, la
     Foncière.

@@ -616,6 +616,7 @@ NAV = [
     ("porteurs.html", "Porteurs"),
     ("usufruitiers.html", "Usufruitiers"),
     ("reseaux.html", "Réseaux"),
+    ("revues/index.html", "Revues"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
 ]
@@ -633,7 +634,7 @@ def canonical_url(path):
 
 def page(title, body, active, depth=0, project=None, description="",
          path="", jsonld=None, og_type="website", robots=None,
-         link_gloss=True):
+         link_gloss=True, extra_css=None):
     up = "../" * depth
     # liage du glossaire : première occurrence par page des termes pivots
     # (audit pédagogie C, C1). Désactivé sur le glossaire lui-même.
@@ -686,7 +687,7 @@ def page(title, body, active, depth=0, project=None, description="",
 <meta name="twitter:title" content="{e(full_title)}">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{e(og_img)}">
-<link rel="stylesheet" href="{up}assets/style.css">{ld}
+<link rel="stylesheet" href="{up}assets/style.css">{("".join(chr(10) + '<link rel="stylesheet" href="' + up + 'assets/' + c + '">' for c in (extra_css or [])))}{ld}
 </head>
 <body>
 <a class="skiplink" href="#contenu">Aller au contenu</a>
@@ -2596,9 +2597,9 @@ pas un label ni un jugement de valeur.</li>
 complétude est toujours affichée.</li>
 <li>Le « montage de référence » (nue-propriété d'intérêt général + usufruit
 associatif) est un idéal-type ; peu de lieux réels le réalisent à la lettre.</li>
-<li>Le corpus est construit et non exhaustif ; sa composition — forte présence
-de la mouvance Terre de Liens, sous-représentation de l'habitat et de
-l'Outre-mer — est détaillée dans l'<a href="#etat">État du corpus</a>.</li>
+<li>Le corpus est construit et non exhaustif ; sa composition — sous-représentation
+de l'habitat et de l'Outre-mer notamment — est détaillée dans l'<a href="#etat">État
+du corpus</a>.</li>
 </ul>
 <p class="prose"><strong>Ce que le modèle ne mesure pas.</strong> L'exploitation
 par le travail n'est lue que dans le cas des usufruitiers commerciaux — la
@@ -2620,17 +2621,25 @@ renseignent en moyenne {pct_complet} % des critères de leur grille ;
 {pct_inconnu} % restent « inconnu », faute de source publique. La complétude de
 chaque fiche est affichée sur la fiche elle-même ; quelques fiches restent
 nettement plus lacunaires et leur Indice est à lire avec prudence.</p>
+<p class="prose"><strong>Posture du recensement.</strong> Le projet regarde le
+sujet depuis la tradition de l'<strong>éducation populaire</strong> et des
+<strong>mouvements citoyens non-commerciaux</strong>. Il cherche les formes les
+plus pleinement non-marchandes : foncier irréversiblement soustrait au marché,
+chaîne entièrement non lucrative, habitat partagé pour le vivant humain et
+non-humain, usage autogéré par celles et ceux qui habitent le lieu. Les lieux
+qui s'écartent de cette ligne — par la nature commerciale d'un maillon de la
+chaîne, par une logique locative rentière, par une gouvernance descendante —
+sont décrits avec la même grille que les autres ; leur palier et leur verdict en
+rendent compte.</p>
 <p class="prose"><strong>Ce que le corpus ne couvre pas encore.</strong> Le
-recensement est partiel et assume ses angles morts. Il regarde le sujet en
-grande partie depuis la mouvance Terre de Liens, acteur structurant du foncier
-agricole non spéculatif en France. Il est très majoritairement rural et
-agricole : l'habitat coopératif n'y figure que par quelques entrées récentes,
-le foncier solidaire de logement urbain et le périurbain structuré restent peu
-représentés. Géographiquement, les lieux se concentrent sur la moitié sud et
-est de la métropole — six régions environ — ; plusieurs régions et l'ensemble
-de l'Outre-mer ne sont pas couverts. Ces manques sont documentés dans les notes
-d'audit du projet et signalent des pistes d'enrichissement, non des choix
-d'exclusion.</p>
+recensement est partiel et assume ses angles morts. Il est très majoritairement
+rural et agricole : l'habitat coopératif n'y figure que par quelques entrées
+récentes, le foncier solidaire de logement urbain et le périurbain structuré
+restent peu représentés. Géographiquement, les lieux se concentrent sur la
+moitié sud et est de la métropole — six régions environ — ; plusieurs régions
+et l'ensemble de l'Outre-mer ne sont pas couverts. Ces manques sont documentés
+dans les notes d'audit du projet et signalent des pistes d'enrichissement, non
+des choix d'exclusion.</p>
 </section>
 
 <section><h2 class="sec">Aller plus loin</h2>
@@ -3167,6 +3176,640 @@ existé.</p>
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Revues — pensée publique éditoriale (session #7)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Chaque revue vit dans `revues/[slug]/` avec un `index.md` (manifeste) et
+# un dossier `articles/` contenant des fichiers `YYYY-MM-DD_slug.md`. Le
+# générateur en tire :
+#   /revues/                        page d'accueil (liste des revues)
+#   /revues/[slug]/                 index d'une revue (manifeste + articles)
+#   /revues/[slug]/[article-slug]/  un article
+#   /revues/[slug]/[slug]-edition-YYYYMMDD.pdf
+#
+# Markdown supporté : titres `#`/`##`/`###`, paragraphes, gras `**`,
+# italique `*`, listes `-`, liens `[txt](url)`, code inline `` ` ``,
+# citations `>` — via la bibliothèque `markdown` (extensions: extra,
+# sane_lists, smarty).
+
+REVUES_DIR = ROOT / "revues"
+PDF_MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+               "août", "septembre", "octobre", "novembre", "décembre")
+
+
+def _parse_md_frontmatter(text):
+    """Lecture d'un fichier Markdown au format :
+       ---
+       <YAML>
+       ---
+       <corps Markdown>
+    Renvoie (meta_dict, body_str). Si pas de frontmatter, meta={}."""
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        if end != -1:
+            head = text[3:end].lstrip("\n")
+            meta = yaml.safe_load(head) or {}
+            body = text[end + 4:].lstrip("\n")
+            return meta, body
+    return {}, text
+
+
+def _md_to_html(md_text):
+    """Convertit un corps Markdown en HTML via la bibliothèque markdown.
+    Extensions : extra (tables, footnotes), sane_lists, smarty (typographie)."""
+    try:
+        import markdown as _md
+    except ImportError:
+        # repli minimal — paragraphes seulement.
+        return "".join(f"<p>{e(p.strip())}</p>"
+                       for p in md_text.split("\n\n") if p.strip())
+    return _md.markdown(md_text or "",
+                        extensions=["extra", "sane_lists", "smarty"],
+                        output_format="html5")
+
+
+def _date_fr(iso_str):
+    """« 2026-05-27 » → « 27 mai 2026 ». Accepte aussi un objet date."""
+    if not iso_str:
+        return ""
+    try:
+        if isinstance(iso_str, datetime.date):
+            d = iso_str
+        else:
+            d = datetime.date.fromisoformat(str(iso_str))
+        return f"{d.day} {PDF_MOIS_FR[d.month - 1]} {d.year}"
+    except (ValueError, TypeError):
+        return str(iso_str)
+
+
+def _statut_chip(statut):
+    """Badge HTML pour un statut (vivant, stabilisé/stabilisée, archivé)."""
+    statut = (statut or "").strip().lower()
+    label_map = {"vivant": "Vivant", "vivante": "Vivant",
+                 "stabilise": "Stabilisé", "stabilisé": "Stabilisé",
+                 "stabilisee": "Stabilisée", "stabilisée": "Stabilisée",
+                 "archive": "Archivé", "archivé": "Archivé",
+                 "archivee": "Archivée", "archivée": "Archivée"}
+    label = label_map.get(statut, statut.capitalize() or "—")
+    cls_norm = {"vivante": "vivant", "stabilisé": "stabilise",
+                "stabilisée": "stabilisee", "archivé": "archive",
+                "archivée": "archivee"}.get(statut, statut)
+    return (f'<span class="statut-chip statut-{e(cls_norm or "inconnu")}">'
+            f'{e(label)}</span>')
+
+
+def load_revues():
+    """Charge depuis `revues/` toutes les revues et leurs articles.
+    Renvoie une liste de dicts {meta, body_md, articles:[{meta,body_md}]}.
+    Trie les articles par date `created` décroissante (plus récent d'abord).
+    """
+    if not REVUES_DIR.exists():
+        return []
+    out = []
+    for revue_dir in sorted(REVUES_DIR.iterdir()):
+        if not revue_dir.is_dir():
+            continue
+        if revue_dir.name.startswith("."):
+            continue
+        index_md = revue_dir / "index.md"
+        if not index_md.exists():
+            continue
+        meta, body = _parse_md_frontmatter(
+            index_md.read_text(encoding="utf-8"))
+        meta.setdefault("slug", revue_dir.name)
+        articles = []
+        articles_dir = revue_dir / "articles"
+        if articles_dir.exists():
+            for art_path in sorted(articles_dir.glob("*.md")):
+                ameta, abody = _parse_md_frontmatter(
+                    art_path.read_text(encoding="utf-8"))
+                # slug par défaut : nom de fichier sans la date et l'extension
+                nm = art_path.stem
+                m = re.match(r"^(\d{4}-\d{2}-\d{2})_(.+)$", nm)
+                default_slug = m.group(2) if m else nm
+                default_date = m.group(1) if m else None
+                ameta.setdefault("slug", default_slug)
+                if default_date and not ameta.get("created"):
+                    ameta["created"] = default_date
+                articles.append({"meta": ameta, "body_md": abody,
+                                  "_file": art_path.name})
+        # tri : created décroissant, puis slug
+        def _key(a):
+            c = a["meta"].get("created") or ""
+            return (str(c), a["meta"].get("slug", ""))
+        articles.sort(key=_key, reverse=True)
+        out.append({"meta": meta, "body_md": body, "articles": articles,
+                    "_dir": revue_dir.name})
+    return out
+
+
+def _article_url_part(article):
+    """Slug court d'un article (pour la route /revues/[slug]/[article-slug]/)."""
+    return article["meta"].get("slug") or article["_file"].replace(".md", "")
+
+
+def _archetype_label(slug, cfg):
+    """Libellé lisible d'un slug d'archétype. Cherche dans
+    `cfg["concepts"]["archetypes"]` si existant, sinon repli sur le slug."""
+    if not slug:
+        return ""
+    archs = (cfg.get("concepts", {}) or {}).get("archetypes", []) or []
+    for a in archs:
+        if a.get("id") == slug or a.get("slug") == slug:
+            return a.get("label") or a.get("nom") or slug
+    return slug.replace("-", " ")
+
+
+def render_revue(revue, articles, cfg):
+    """Page d'index d'une revue : manifeste, archétypes-pivot, liste des
+    articles, lien PDF si ≥ 2 articles."""
+    project = cfg["concepts"]["project"]
+    meta = revue["meta"]
+    slug = meta.get("slug", revue["_dir"])
+    titre = clean(meta.get("titre", "") or slug)
+    sous_titre = clean(meta.get("sous_titre", ""))
+    voix = clean(meta.get("voix", "Eozen"))
+    co_eds = meta.get("co_editeurs") or []
+    perim = clean(meta.get("perimetre", ""))
+    posture = clean(meta.get("posture", ""))
+    archs = meta.get("archetypes_pivot") or []
+    statut = meta.get("statut", "vivant")
+    created = _date_fr(meta.get("created"))
+    updated = _date_fr(meta.get("updated"))
+    version = meta.get("version", 1)
+
+    archs_html = ""
+    if archs:
+        archs_html = ("<p class=\"revue-meta\"><strong>Archétypes pivots :</strong> "
+                      + ", ".join(e(_archetype_label(a, cfg)) for a in archs)
+                      + "</p>")
+    co_html = ""
+    if co_eds:
+        co_html = ("<p class=\"revue-meta\"><strong>Co-éditeur·rice·s :</strong> "
+                   + ", ".join(e(clean(str(c))) for c in co_eds) + "</p>")
+
+    # bouton PDF — uniquement si ≥ 2 articles publiés
+    pdf_html = ""
+    if len(articles) >= 2:
+        today_compact = datetime.date.today().strftime("%Y%m%d")
+        pdf_name = f"{slug}-edition-{today_compact}.pdf"
+        pdf_html = f"""<aside class="revue-pdf">
+  <h4>Édition cumulative</h4>
+  <p>Une édition PDF reprend l'ensemble des articles de cette revue, mis en
+  pages comme un livre de lecture (couverture, table des matières, articles à
+  la suite, demi-format A5).</p>
+  <p><a class="cta-pdf" href="{e(pdf_name)}" download>Télécharger l'édition du
+  {e(_date_fr(datetime.date.today().isoformat()))} (PDF)</a></p>
+</aside>"""
+
+    # liste des articles
+    if articles:
+        items = []
+        for a in articles:
+            am = a["meta"]
+            art_slug = _article_url_part(a)
+            art_titre = clean(am.get("titre", "") or art_slug)
+            art_sous = clean(am.get("sous_titre", ""))
+            art_resume = clean(am.get("resume", ""))
+            art_statut = am.get("statut", "vivant")
+            art_date = _date_fr(am.get("created"))
+            art_updated = am.get("updated")
+            art_version = am.get("version", 1)
+            auteur = clean(am.get("auteur", voix))
+            meta_parts = []
+            if art_date:
+                meta_parts.append(f'<time datetime="{e(am.get("created",""))}">'
+                                  f'{e(art_date)}</time>')
+            if auteur:
+                meta_parts.append(f"par {e(auteur)}")
+            meta_parts.append(_statut_chip(art_statut))
+            if art_version and int(art_version) > 1:
+                meta_parts.append(f"version {e(art_version)}")
+            if art_updated and str(art_updated) != str(am.get("created", "")):
+                meta_parts.append(f"mis à jour le {e(_date_fr(art_updated))}")
+            meta_line = '<span class="sep">·</span>'.join(meta_parts)
+            sous_html = (f'<p class="article-resume"><em>{e(art_sous)}</em></p>'
+                         if art_sous else "")
+            resume_html = (f'<p class="article-resume">{e(art_resume)}</p>'
+                           if art_resume else "")
+            items.append(f"""<li class="article-item">
+  <h3><a href="{e(art_slug)}/">{e(art_titre)}</a></h3>
+  <p class="article-meta">{meta_line}</p>
+  {sous_html}{resume_html}
+</li>""")
+        articles_html = (f'<ol class="articles-liste">{"".join(items)}</ol>')
+    else:
+        articles_html = ('<p class="prose"><em>Aucun article publié pour '
+                         "l'instant. La revue est ouverte ; les premiers "
+                         "articles paraîtront prochainement.</em></p>")
+
+    # manifeste — corps Markdown de l'index.md
+    manifeste_html = _md_to_html(revue.get("body_md", ""))
+
+    body = f"""<section class="revue-hero">
+  <p class="hero-kicker"><a href="../index.html">Revues</a></p>
+  <h1>{e(titre)}</h1>
+  {f'<p class="revue-soustitre">{e(sous_titre)}</p>' if sous_titre else ""}
+  <p class="revue-meta">{_statut_chip(statut)}
+  <span class="sep">·</span> Voix : <strong>{e(voix)}</strong>
+  {f'<span class="sep">·</span> Créée le {e(created)}' if created else ""}
+  {f'<span class="sep">·</span> Mise à jour le {e(updated)}' if updated and updated != created else ""}
+  </p>
+  {co_html}
+  {f'<p class="revue-meta"><strong>Périmètre :</strong> {e(perim)}</p>' if perim else ""}
+  {f'<p class="revue-meta"><strong>Posture :</strong> {e(posture)}</p>' if posture else ""}
+  {archs_html}
+</section>
+
+<section class="revue-prose">
+  <h2>Manifeste</h2>
+  {manifeste_html}
+</section>
+
+{pdf_html}
+
+<section>
+  <h2 class="sec">Articles</h2>
+  {articles_html}
+</section>"""
+
+    desc = meta_desc(sous_titre or perim or titre)
+    return page(titre, body, "revues/index.html", depth=2, project=project,
+                description=desc,
+                path=f"revues/{slug}/index.html",
+                extra_css=["style-revue.css"])
+
+
+def render_article(revue, article, cfg):
+    """Page d'un article : titre, sous-titre, auteur·s, dates, version,
+    statut, archétypes traversés, cas illustratifs (liens vers les fiches),
+    corps Markdown converti, changelog en pied."""
+    project = cfg["concepts"]["project"]
+    rmeta = revue["meta"]
+    rslug = rmeta.get("slug", revue["_dir"])
+    rtitre = clean(rmeta.get("titre", "") or rslug)
+    am = article["meta"]
+    art_slug = _article_url_part(article)
+    titre = clean(am.get("titre", "") or art_slug)
+    sous_titre = clean(am.get("sous_titre", ""))
+    auteur = clean(am.get("auteur", rmeta.get("voix", "Eozen")))
+    co_auteurs = am.get("co_auteurs") or []
+    created = _date_fr(am.get("created"))
+    updated = _date_fr(am.get("updated"))
+    version = am.get("version", 1)
+    statut = am.get("statut", "vivant")
+    changelog = am.get("changelog") or []
+    archs = am.get("archetypes") or []
+    cas = am.get("cas_illustratifs") or []
+
+    # archétypes traversés — lien retour vers la revue (manifeste les liste)
+    archs_html = ""
+    if archs:
+        items = ", ".join(e(_archetype_label(a, cfg)) for a in archs)
+        archs_html = f"""<div class="article-relations">
+  <h4>Archétypes traversés</h4>
+  <p>{items} <span class="sep">·</span>
+  <a href="../index.html#archetypes">voir le manifeste</a></p>
+</div>"""
+
+    # cas illustratifs — uid de fiches Communs, liens absolus vers /l/<uid>.html etc.
+    cas_html = ""
+    if cas:
+        # on essaie le préfixe CAT_SLUG ; on tente l→p→u→m→r pour résoudre
+        liens = []
+        for uid in cas:
+            uid = str(uid).strip()
+            if not uid:
+                continue
+            # cherche le fichier qui existe
+            href = None
+            for slugd in ("l", "p", "u", "m", "r"):
+                cible = SITE / slugd / f"{uid}.html"
+                if cible.exists():
+                    href = f"../../{slugd}/{uid}.html"
+                    break
+            if href is None:
+                # fallback raisonnable : lieux
+                href = f"../../l/{uid}.html"
+            liens.append(f'<li><a href="{e(href)}">{e(uid)}</a></li>')
+        if liens:
+            cas_html = f"""<div class="article-relations">
+  <h4>Cas illustratifs</h4>
+  <ul>{"".join(liens)}</ul>
+</div>"""
+
+    # changelog
+    cl_html = ""
+    if changelog:
+        items = []
+        for entry in changelog:
+            if not isinstance(entry, dict):
+                continue
+            d = _date_fr(entry.get("date"))
+            v = entry.get("version")
+            note = clean(entry.get("note", ""))
+            items.append(
+                f'<li><span class="ch-date">{e(d)}</span>'
+                f'{f"<span class=\"ch-version\">v{e(v)}</span>" if v else ""}'
+                f'<span>{e(note)}</span></li>')
+        if items:
+            cl_html = f"""<section class="article-changelog">
+  <h2>Journal des modifications</h2>
+  <ol>{"".join(items)}</ol>
+</section>"""
+
+    # corps Markdown
+    body_html = _md_to_html(article.get("body_md", ""))
+
+    # méta-ligne d'en-tête
+    meta_parts = []
+    if created:
+        meta_parts.append(f'Écrit le <strong>{e(created)}</strong>')
+    auteurs_full = auteur
+    if co_auteurs:
+        auteurs_full = auteur + ", " + ", ".join(
+            e(clean(str(c))) for c in co_auteurs)
+    meta_parts.append(f'par <strong>{auteurs_full}</strong>')
+    meta_parts.append(_statut_chip(statut))
+    if version and int(version) > 1:
+        meta_parts.append(f'version <strong>{e(version)}</strong>')
+    if updated and str(am.get("updated")) != str(am.get("created", "")):
+        meta_parts.append(f'mis à jour le <strong>{e(updated)}</strong>')
+    meta_line = '<span class="sep">·</span>'.join(meta_parts)
+
+    body = f"""<header class="article-head">
+  <p class="article-kicker"><a href="../index.html">{e(rtitre)}</a></p>
+  <h1>{e(titre)}</h1>
+  {f'<p class="article-soustitre">{e(sous_titre)}</p>' if sous_titre else ""}
+  <p class="article-meta">{meta_line}</p>
+</header>
+
+<article class="article-prose">
+  {body_html}
+</article>
+
+{archs_html}
+{cas_html}
+{cl_html}"""
+
+    desc = meta_desc(sous_titre or clean(am.get("resume", "")) or titre)
+    return page(titre, body, "revues/index.html", depth=3, project=project,
+                description=desc,
+                path=f"revues/{rslug}/{art_slug}/index.html",
+                extra_css=["style-revue.css"],
+                og_type="article")
+
+
+def render_revues_index(revues, cfg):
+    """Page principale `/revues/` — présente l'ensemble des revues."""
+    project = cfg["concepts"]["project"]
+    cards = []
+    for r in revues:
+        m = r["meta"]
+        slug = m.get("slug", r["_dir"])
+        titre = clean(m.get("titre", "") or slug)
+        sous = clean(m.get("sous_titre", ""))
+        voix = clean(m.get("voix", "Eozen"))
+        statut = m.get("statut", "vivant")
+        n_art = len(r["articles"])
+        n_label = (f"{n_art} article" + ("s" if n_art > 1 else "")) if n_art \
+            else "aucun article publié"
+        cards.append(f"""<a class="revue-card" href="{e(slug)}/">
+  <h3>{e(titre)}</h3>
+  {f'<p class="revue-card-sous">{e(sous)}</p>' if sous else ""}
+  <p class="revue-card-meta">{_statut_chip(statut)}
+    <span class="sep">·</span> Voix : <strong>{e(voix)}</strong>
+    <span class="sep">·</span> {e(n_label)}</p>
+</a>""")
+    grid = ('<div class="revues-grid">' + "".join(cards) + "</div>"
+            if cards else
+            '<p class="prose"><em>Aucune revue publiée pour l\'instant.</em></p>')
+    body = f"""<section class="revue-hero">
+  <p class="hero-kicker">Pensée publique éditoriale</p>
+  <h1>Revues</h1>
+  <p class="revue-soustitre">Quatre revues vivantes, éditées en continu, qui
+  prolongent l'annuaire en écriture. Chaque revue tient un fil — un mécanisme,
+  une posture, un type de cas — et l'instruit article par article. Les textes
+  sont versionnés : l'écrit n'est jamais figé, il s'épaissit.</p>
+  <p class="revue-meta">Direction éditoriale : <strong>Eozen</strong>.</p>
+</section>
+
+{grid}
+
+<p class="prose">Les revues sont éditoriales, l'annuaire est documentaire :
+ce qui se discute dans les revues s'appuie sur ce que recense l'annuaire,
+et inversement. <a href="../methode.html">Lire la méthode →</a></p>"""
+    return page("Revues", body, "revues/index.html", depth=1, project=project,
+                description="Les quatre revues vivantes de Terres Libérées — "
+                            "pensée publique sur la libération des terres.",
+                path="revues/index.html",
+                extra_css=["style-revue.css"])
+
+
+def build_revue_pdf(revue, articles, cfg):
+    """Génère un PDF format livre (demi-A5) via WeasyPrint.
+
+    Mise en page : couverture pleine page (titre, sous-titre, voix, date
+    d'édition, nombre d'articles), table des matières, articles à la suite
+    avec saut de page entre chacun. Style sobre, typographie de lecture.
+    """
+    try:
+        from weasyprint import HTML, CSS as _WCSS
+    except ImportError:
+        print(f"  PDF non généré pour {revue['_dir']} : weasyprint absent.")
+        return None
+    meta = revue["meta"]
+    slug = meta.get("slug", revue["_dir"])
+    titre = clean(meta.get("titre", "") or slug)
+    sous_titre = clean(meta.get("sous_titre", ""))
+    voix = clean(meta.get("voix", "Eozen"))
+    today = datetime.date.today()
+    today_compact = today.strftime("%Y%m%d")
+    today_fr = _date_fr(today.isoformat())
+    n_art = len(articles)
+    n_label = f"{n_art} article" + ("s" if n_art > 1 else "")
+    manifeste_html = _md_to_html(revue.get("body_md", ""))
+
+    # table des matières + articles
+    toc_items, art_blocks = [], []
+    for i, a in enumerate(articles, 1):
+        am = a["meta"]
+        atitre = clean(am.get("titre", "") or _article_url_part(a))
+        asous = clean(am.get("sous_titre", ""))
+        adate = _date_fr(am.get("created"))
+        auteur = clean(am.get("auteur", voix))
+        anchor = f"art-{i}"
+        toc_items.append(
+            f'<li><a href="#{anchor}"><span class="toc-num">{i}.</span> '
+            f'<span class="toc-title">{e(atitre)}</span>'
+            f'<span class="toc-date">{e(adate)}</span></a></li>')
+        body_html = _md_to_html(a.get("body_md", ""))
+        sous_html = (f'<p class="pdf-soustitre">{e(asous)}</p>' if asous else "")
+        meta_html = (f'<p class="pdf-meta">{e(adate)}'
+                     f'{f" · par {e(auteur)}" if auteur else ""}</p>')
+        art_blocks.append(f"""<section class="pdf-article" id="{anchor}">
+  <h1 class="pdf-art-titre">{e(atitre)}</h1>
+  {sous_html}{meta_html}
+  <div class="pdf-art-corps">{body_html}</div>
+</section>""")
+
+    pdf_html_doc = f"""<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>{e(titre)}</title></head>
+<body>
+<section class="pdf-cover">
+  <p class="pdf-cover-kicker">Revue · Terres Libérées</p>
+  <h1 class="pdf-cover-titre">{e(titre)}</h1>
+  {f'<p class="pdf-cover-sous">{e(sous_titre)}</p>' if sous_titre else ""}
+  <p class="pdf-cover-voix">par {e(voix)}</p>
+  <p class="pdf-cover-date">édition du {e(today_fr)}</p>
+  <p class="pdf-cover-n">{e(n_label)}</p>
+</section>
+<section class="pdf-toc">
+  <h2>Table des matières</h2>
+  <ol>{"".join(toc_items)}</ol>
+</section>
+<section class="pdf-manifeste">
+  <h2>Manifeste</h2>
+  {manifeste_html}
+</section>
+{"".join(art_blocks)}
+</body></html>"""
+
+    pdf_css = """
+    @page {
+      size: 148mm 210mm; /* demi-A5 / A5 portrait */
+      margin: 18mm 16mm 18mm 16mm;
+      @bottom-center {
+        content: counter(page);
+        font-family: Georgia, serif; font-size: 9pt; color: #666;
+      }
+      @top-center {
+        content: string(art-title);
+        font-family: Georgia, serif; font-size: 8.5pt; color: #888;
+        font-style: italic;
+      }
+    }
+    @page :first { @top-center { content: none; } @bottom-center { content: none; } }
+    @page cover { margin: 0; @top-center { content: none; } @bottom-center { content: none; } }
+    html, body {
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      color: #221f1a; font-size: 10.5pt; line-height: 1.55;
+    }
+    .pdf-cover {
+      page: cover; height: 210mm; width: 148mm;
+      padding: 28mm 18mm; box-sizing: border-box;
+      display: flex; flex-direction: column; justify-content: center;
+      background: #f5f2e9; page-break-after: always;
+    }
+    .pdf-cover-kicker {
+      font-size: 9pt; text-transform: uppercase; letter-spacing: .15em;
+      color: #8f3f25; font-family: "Helvetica Neue", Helvetica, sans-serif;
+      margin: 0 0 16mm 0;
+    }
+    .pdf-cover-titre {
+      font-size: 26pt; line-height: 1.18; margin: 0 0 6mm 0;
+      font-weight: 700; max-width: 100mm; color: #221f1a;
+    }
+    .pdf-cover-sous {
+      font-size: 13pt; font-style: italic; color: #5f5849;
+      margin: 0 0 14mm 0; max-width: 100mm;
+    }
+    .pdf-cover-voix { font-size: 11pt; margin: 8mm 0 1mm 0; color: #221f1a; }
+    .pdf-cover-date { font-size: 10pt; color: #5f5849; margin: 0 0 3mm 0; }
+    .pdf-cover-n {
+      font-size: 9pt; color: #888; margin: 0;
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+    .pdf-toc { page-break-after: always; }
+    .pdf-toc h2, .pdf-manifeste h2 {
+      font-size: 16pt; margin: 0 0 6mm 0; font-weight: 600;
+      border-bottom: 1px solid #ddd4bf; padding-bottom: 2mm;
+    }
+    .pdf-toc ol { list-style: none; padding: 0; margin: 0; }
+    .pdf-toc li { margin: 1.4mm 0; }
+    .pdf-toc a {
+      color: #221f1a; text-decoration: none; display: flex; gap: 3mm;
+    }
+    .pdf-toc .toc-num { color: #8f3f25; font-weight: 600; min-width: 6mm; }
+    .pdf-toc .toc-title { flex: 1; }
+    .pdf-toc .toc-date {
+      color: #888; font-size: 9pt; font-style: italic;
+    }
+    .pdf-manifeste { page-break-after: always; }
+    .pdf-article { page-break-before: always; string-set: art-title content(); }
+    .pdf-art-titre {
+      font-size: 18pt; line-height: 1.22; margin: 0 0 3mm 0; font-weight: 700;
+      string-set: art-title content();
+    }
+    .pdf-soustitre {
+      font-size: 12pt; font-style: italic; color: #5f5849; margin: 0 0 4mm 0;
+    }
+    .pdf-meta {
+      font-size: 9pt; color: #888; margin: 0 0 8mm 0;
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+    .pdf-art-corps p { margin: 2mm 0; text-align: justify; hyphens: auto; }
+    .pdf-art-corps h2 {
+      font-size: 13pt; font-weight: 600; margin: 6mm 0 2mm 0;
+    }
+    .pdf-art-corps h3 {
+      font-size: 11.5pt; font-weight: 600; margin: 5mm 0 1.5mm 0;
+    }
+    .pdf-art-corps blockquote {
+      border-left: 2px solid #bc5d3a; padding-left: 4mm; margin: 3mm 0;
+      color: #5f5849; font-style: italic;
+    }
+    .pdf-art-corps ul, .pdf-art-corps ol {
+      margin: 2mm 0 2mm 5mm; padding-left: 4mm;
+    }
+    .pdf-art-corps code {
+      font-family: "Menlo", "Consolas", monospace; font-size: 9.5pt;
+      background: #efe9d8; padding: 0 1mm; border-radius: 1mm;
+    }
+    """
+    out_dir = SITE / "revues" / slug
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{slug}-edition-{today_compact}.pdf"
+    try:
+        HTML(string=pdf_html_doc).write_pdf(
+            target=str(out_path), stylesheets=[_WCSS(string=pdf_css)])
+        return out_path
+    except Exception as exc:  # pragma: no cover — diagnostic
+        print(f"  PDF non généré pour {slug} : {exc}")
+        return None
+
+
+def verifier_revues(revues):
+    """Garde-fou des revues : cohérence des dates, archétypes, cas illustratifs.
+
+    Avertit sans bloquer (les revues vivantes peuvent avoir des cas en
+    cours de documentation). Sort la liste des messages."""
+    avert = []
+    for r in revues:
+        m = r["meta"]
+        slug = m.get("slug", r["_dir"])
+        # date created ≤ updated si les deux sont fournies
+        c, u = m.get("created"), m.get("updated")
+        if c and u and str(c) > str(u):
+            avert.append(f"  revue {slug} — updated < created "
+                         f"({u} < {c})")
+        for a in r["articles"]:
+            am = a["meta"]
+            aslug = am.get("slug") or a["_file"]
+            ac, au = am.get("created"), am.get("updated")
+            if ac and au and str(ac) > str(au):
+                avert.append(f"  revue {slug}/{aslug} — updated < created "
+                             f"({au} < {ac})")
+    if avert:
+        print(f"Contrôle des revues : {len(avert)} signalement·s —")
+        for a in avert:
+            print(a)
+    else:
+        print("Contrôle des revues : cohérence des dates OK.")
+    return avert
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CSS
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -3656,8 +4299,8 @@ th.sortable[aria-sort=descending]::after{content:" \\25BC";opacity:1;}
  background:var(--card);padding:.25rem .6rem;border-radius:var(--radius-sm);}
 .pal-chip em{color:var(--faint);font-style:normal;}
 
-/* axe cards (methode) */
-.axe-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+/* axe cards (methode) — élargis d'un tiers (session #7 post-clôture) */
+.axe-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(307px,1fr));
  margin:1.1rem 0;}
 .axe-card{border:1px solid var(--line);border-top:3px solid var(--c,#999);
  border-radius:var(--radius);padding:.4rem 1.1rem 1rem;background:var(--card);}
@@ -4055,6 +4698,138 @@ OG_SVG = """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
 """
 
 
+# CSS additionnel pour les pages /revues/* — typographie de lecture longue,
+# colonne étroite, interlignage généreux. Inclus en plus de style.css par
+# `extra_css=["style-revue.css"]` dans page() pour les routes revue/article.
+CSS_REVUE = """
+/* style-revue.css — typographie de lecture longue pour les revues.
+   Colonne unique, largeur de lecture confortable, interlignage généreux.
+   Inclus en plus de style.css sur les pages /revues/* uniquement. */
+
+main.wrap{max-width:1080px;}
+.revue-wrap,main:has(.revue-hero),main:has(.article-head){max-width:42rem;}
+
+.revue-hero{padding:2.6rem 0 1.6rem;border-bottom:1px solid var(--line);
+ margin-bottom:1.6rem;}
+.revue-hero .hero-kicker{font-size:.78rem;text-transform:uppercase;
+ letter-spacing:.14em;color:var(--terra-dk);font-weight:700;margin:0 0 .5rem;
+ font-family:-apple-system,system-ui,"Segoe UI",sans-serif;}
+.revue-hero h1{font-size:2.4rem;line-height:1.18;max-width:22ch;
+ margin:.2rem 0 .5rem;}
+.revue-hero .revue-soustitre{font-size:1.18rem;color:var(--muted);
+ max-width:46ch;margin:.2rem 0 .8rem;line-height:1.5;font-style:italic;}
+.revue-hero .revue-meta{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;
+ font-size:.88rem;color:var(--faint);margin:.2rem 0;}
+.revue-hero .revue-meta strong{color:var(--ink);font-weight:600;}
+
+.statut-chip{display:inline-block;padding:.12rem .55rem;border-radius:var(--radius-pill);
+ font-family:-apple-system,system-ui,"Segoe UI",sans-serif;font-size:.74rem;
+ font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+ background:var(--beige);color:var(--muted);border:1px solid var(--line);}
+.statut-chip.statut-vivant{background:#e7f0dc;color:var(--green-dk);
+ border-color:#bcd29c;}
+.statut-chip.statut-stabilise,.statut-chip.statut-stabilisee{background:#dfe9ee;
+ color:var(--blue-dk);border-color:#a8c4cf;}
+.statut-chip.statut-archive,.statut-chip.statut-archivee{background:var(--beige-dk);
+ color:var(--faint);}
+
+.revue-prose,.article-prose{font-size:1.08rem;line-height:1.72;color:var(--ink);}
+.revue-prose p,.article-prose p{margin:.95rem 0;max-width:42rem;}
+.revue-prose h2,.article-prose h2{font-size:1.5rem;font-family:inherit;
+ font-weight:600;letter-spacing:-.005em;margin:2.2rem 0 .6rem;
+ border-bottom:none;padding-bottom:0;color:var(--ink);}
+.revue-prose h2::before,.article-prose h2::before{content:none;}
+.revue-prose h3,.article-prose h3{font-size:1.18rem;font-weight:600;
+ margin:1.6rem 0 .3rem;color:var(--ink);}
+.revue-prose blockquote,.article-prose blockquote{border-left:3px solid var(--terra);
+ padding:.3rem 0 .3rem 1rem;margin:1.1rem 0;color:var(--muted);font-style:italic;}
+.revue-prose ul,.article-prose ul,.revue-prose ol,.article-prose ol{margin:.8rem 0;
+ padding-left:1.5rem;}
+.revue-prose li,.article-prose li{margin:.3rem 0;line-height:1.65;}
+.revue-prose code,.article-prose code{font-family:"SFMono-Regular",Menlo,Consolas,
+ monospace;font-size:.94em;background:var(--beige);padding:.05rem .3rem;
+ border-radius:var(--radius-sm);}
+
+.articles-liste{list-style:none;padding:0;margin:1.8rem 0;display:grid;gap:1.4rem;}
+.articles-liste .article-item{border-top:1px solid var(--line);padding-top:1.2rem;}
+.articles-liste .article-item:first-child{border-top:none;padding-top:0;}
+.articles-liste h3{font-size:1.32rem;margin:0 0 .25rem;}
+.articles-liste h3 a{color:var(--ink);text-decoration:none;}
+.articles-liste h3 a:hover{color:var(--green-dk);text-decoration:underline;}
+.articles-liste .article-meta{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;
+ font-size:.84rem;color:var(--faint);margin:.1rem 0 .4rem;}
+.articles-liste .article-meta .sep{margin:0 .4rem;color:var(--line);}
+.articles-liste .article-resume{margin:.3rem 0 0;color:var(--muted);
+ line-height:1.55;}
+
+.article-head{padding:1.6rem 0 1rem;border-bottom:1px solid var(--line);
+ margin-bottom:1.4rem;}
+.article-head .article-kicker{font-size:.78rem;text-transform:uppercase;
+ letter-spacing:.12em;color:var(--terra-dk);font-weight:700;
+ font-family:-apple-system,system-ui,"Segoe UI",sans-serif;margin:0 0 .4rem;}
+.article-head .article-kicker a{color:var(--terra-dk);text-decoration:none;}
+.article-head .article-kicker a:hover{text-decoration:underline;}
+.article-head h1{font-size:2.2rem;line-height:1.18;max-width:24ch;
+ margin:.2rem 0 .4rem;}
+.article-head .article-soustitre{font-size:1.14rem;color:var(--muted);
+ font-style:italic;line-height:1.5;margin:.2rem 0 .8rem;max-width:46ch;}
+.article-head .article-meta{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;
+ font-size:.86rem;color:var(--faint);margin:.4rem 0;}
+.article-head .article-meta .sep{margin:0 .4rem;color:var(--line);}
+.article-head .article-meta strong{color:var(--ink);font-weight:600;}
+
+.article-relations{margin:1.6rem 0;padding:.9rem 1rem;background:var(--card);
+ border-left:3px solid var(--blue);border-radius:0 var(--radius) var(--radius) 0;}
+.article-relations h4{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;
+ font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;
+ color:var(--blue-dk);margin:0 0 .3rem;font-weight:700;}
+.article-relations ul{list-style:none;padding:0;margin:0;display:flex;
+ flex-wrap:wrap;gap:.3rem .7rem;font-family:-apple-system,system-ui,sans-serif;
+ font-size:.9rem;}
+.article-relations li{margin:0;}
+
+.article-changelog{margin:2.4rem 0 1rem;border-top:1px solid var(--line);
+ padding-top:1.2rem;}
+.article-changelog h2{font-family:-apple-system,system-ui,"Segoe UI",sans-serif!important;
+ font-size:.9rem!important;text-transform:uppercase;letter-spacing:.1em;
+ color:var(--faint);font-weight:600;margin:0 0 .6rem!important;}
+.article-changelog ol{list-style:none;padding:0;margin:0;
+ font-family:-apple-system,system-ui,"Segoe UI",sans-serif;font-size:.88rem;
+ color:var(--muted);}
+.article-changelog li{margin:.35rem 0;line-height:1.55;}
+.article-changelog .ch-date{color:var(--ink);font-weight:600;margin-right:.5rem;}
+.article-changelog .ch-version{color:var(--terra-dk);font-weight:600;
+ margin-right:.5rem;}
+
+.revue-pdf{margin:2rem 0;padding:1.1rem 1.2rem;background:var(--card);
+ border:1px solid var(--line);border-radius:var(--radius);}
+.revue-pdf h4{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;
+ font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;
+ color:var(--terra-dk);margin:0 0 .5rem;font-weight:700;}
+.revue-pdf p{margin:.2rem 0;font-size:.95rem;color:var(--muted);}
+.revue-pdf .cta-pdf{display:inline-block;margin-top:.6rem;
+ background:var(--ink);color:var(--paper)!important;text-decoration:none;
+ padding:.5rem 1rem;border-radius:var(--radius);font-weight:600;
+ font-family:-apple-system,system-ui,"Segoe UI",sans-serif;font-size:.88rem;}
+.revue-pdf .cta-pdf:hover{background:var(--green-dk);}
+
+.revues-grid{display:grid;gap:1.6rem;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:1.6rem 0;}
+.revue-card{background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius);padding:1.4rem 1.5rem;text-decoration:none;
+ color:var(--ink);display:flex;flex-direction:column;gap:.4rem;
+ transition:border-color .15s,box-shadow .15s;}
+.revue-card:hover{border-color:var(--green);
+ box-shadow:0 2px 8px rgba(0,0,0,.06);color:var(--ink);}
+.revue-card h3{margin:0;font-size:1.32rem;line-height:1.22;color:var(--ink);}
+.revue-card .revue-card-sous{color:var(--muted);font-style:italic;
+ font-size:1rem;line-height:1.5;margin:.1rem 0 .4rem;}
+.revue-card .revue-card-meta{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;
+ font-size:.82rem;color:var(--faint);margin-top:auto;}
+.revue-card .revue-card-meta .sep{margin:0 .4rem;color:var(--line);}
+"""
+
+
 def build_robots():
     return (f"User-agent: *\nAllow: /\n\n"
             f"Sitemap: {BASE_URL}/sitemap.xml\n")
@@ -4211,6 +4986,8 @@ def main():
     write(ASSETS / "favicon.svg", FAVICON_SVG)
     write(ASSETS / "og-default.svg", OG_SVG)
     write(SITE / "favicon.svg", FAVICON_SVG)
+    # CSS additionnel — pages /revues/* (typographie de lecture longue).
+    write(ASSETS / "style-revue.css", CSS_REVUE)
 
     n_by_cat = {c: sum(1 for f in fiches if f["categorie"] == c)
                 for c in ("lieu", "porteur", "usufruitier", "modele", "reseau")}
@@ -4243,6 +5020,26 @@ def main():
     write(SITE / "suggerer.html", render_suggerer(cfg))
     write(SITE / "404.html", render_404(cfg))
 
+    # Revues — pensée publique éditoriale (session #7)
+    revues = load_revues()
+    verifier_revues(revues)
+    if revues:
+        write(SITE / "revues" / "index.html",
+              render_revues_index(revues, cfg))
+        for r in revues:
+            rslug = r["meta"].get("slug", r["_dir"])
+            write(SITE / "revues" / rslug / "index.html",
+                  render_revue(r, r["articles"], cfg))
+            for art in r["articles"]:
+                art_slug = _article_url_part(art)
+                write(SITE / "revues" / rslug / art_slug / "index.html",
+                      render_article(r, art, cfg))
+            # PDF — seulement si ≥ 2 articles publiés
+            if len(r["articles"]) >= 2:
+                build_revue_pdf(r, r["articles"], cfg)
+        print(f"Revues : {len(revues)} revue(s) générée(s), "
+              f"{sum(len(r['articles']) for r in revues)} article(s).")
+
     # CNAME — domaine personnalisé GitHub Pages
     write(SITE / "CNAME", BASE_URL.split("//")[-1] + "\n")
 
@@ -4256,6 +5053,16 @@ def main():
         sitemap_paths.append((p, "0.6"))
     for f, sc in all_sc:
         sitemap_paths.append((f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html', "0.7"))
+    # revues — index + manifestes + articles (PDF non listés dans le sitemap)
+    if revues:
+        sitemap_paths.append(("revues/index.html", "0.7"))
+        for r in revues:
+            rslug = r["meta"].get("slug", r["_dir"])
+            sitemap_paths.append((f"revues/{rslug}/index.html", "0.6"))
+            for art in r["articles"]:
+                art_slug = _article_url_part(art)
+                sitemap_paths.append(
+                    (f"revues/{rslug}/{art_slug}/index.html", "0.5"))
     write(SITE / "robots.txt", build_robots())
     write(SITE / "sitemap.xml", build_sitemap(sitemap_paths))
 

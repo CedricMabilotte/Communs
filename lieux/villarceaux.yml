@@ -35,7 +35,7 @@ montage:
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé chez une fondation non lucrative, mais le montage d'usage
+    Foncier protégé chez une fondation non lucrative, mais le montage d'usage
     n'est pas un démembrement strict et reste partiellement documenté.
 grille:
   - critere: foncier_hors_marche
@@ -109,7 +109,7 @@ analyse:
     - "Formaliser l'usage par un bail rural environnemental ou un usufruit explicite."
     - "Ouvrir la gouvernance du lieu au voisinage et au territoire du Vexin."
   synthese: >
-    Villarceaux illustre un foncier solidement sanctuarisé chez une fondation,
+    Villarceaux illustre un foncier solidement protégé chez une fondation,
     mais dont le montage d'usage reste partiellement opaque. La consolidation
     passerait par une contractualisation explicite de l'usage et une plus grande
     transparence sur la gouvernance.

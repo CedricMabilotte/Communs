@@ -1,7 +1,7 @@
 uid: loiseliere
 categorie: lieu
 nom: "L'Oiselière"
-sous_titre: "Ferme d'élevage de porc de Bayeux sur foncier sanctuarisé en Normandie"
+sous_titre: "Ferme d'élevage de porc de Bayeux sur foncier protégé en Normandie"
 statut_fiche: publie
 forme_juridique: null
 localisation:
@@ -35,12 +35,12 @@ montage:
     par l'épargne citoyenne et les a retirés du marché spéculatif ; leur usage
     est confié par bail rural à l'exploitation de Côme Pascal. L'éleveur a par
     ailleurs acquis en propre la maison, les bâtiments agricoles et deux
-    hectares de terres. Le montage combine donc une part de foncier sanctuarisé
+    hectares de terres. Le montage combine donc une part de foncier protégé
     et une part de propriété privée du bâti et d'une parcelle.
 integrite_montage:
   niveau: mutualisme
   commentaire: >
-    L'essentiel du foncier est sanctuarisé par la Foncière Terre de Liens, mais
+    L'essentiel du foncier est protégé par la Foncière Terre de Liens, mais
     le bâti et deux hectares restent en propriété privée de l'exploitant ; le
     porteur est une société en commandite par actions à actionnariat solidaire.
 grille:
@@ -103,11 +103,11 @@ grille:
     note: "L'élevage en plein air sur dix hectares est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
 analyse:
   forces:
-    - "Quarante hectares sanctuarisés hors marché par l'épargne citoyenne depuis 2020."
+    - "Quarante hectares protégés hors marché par l'épargne citoyenne depuis 2020."
     - "Élevage en agriculture biologique préservant une race locale menacée, le porc de Bayeux."
     - "Ferme ancrée dans son territoire, ouverte au public (porte ouverte, repas à la ferme)."
   fragilites:
-    - "Le bâti et deux hectares restent en propriété privée de l'exploitant, hors sanctuarisation."
+    - "Le bâti et deux hectares restent en propriété privée de l'exploitant, hors protection foncière."
     - "Exploitation a priori individuelle, sans gouvernance collective documentée."
     - "Forme juridique de l'exploitation et montant du fermage non documentés."
   leviers:
@@ -116,9 +116,9 @@ analyse:
     - "Envisager une structuration collective ouvrant la gouvernance de la ferme."
   synthese: >
     L'Oiselière illustre le modèle Terre de Liens appliqué à une ferme
-    d'élevage : quarante hectares sanctuarisés par l'épargne citoyenne, confiés
+    d'élevage : quarante hectares protégés par l'épargne citoyenne, confiés
     par bail rural à un éleveur qui y préserve une race locale menacée. La
-    sanctuarisation partielle — le bâti reste privé — et l'absence de structure
+    protection foncière partielle — le bâti reste privé — et l'absence de structure
     collective documentée situent la ferme du côté du mutualisme.
 fiabilite: >
   Faits vérifiés (sources Terre de Liens et presse spécialisée, consultées en

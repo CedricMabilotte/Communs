@@ -19,7 +19,7 @@ resume: >
   spéculation. Les coopératives autogérées en assurent l'usage : agriculture,
   élevage, vigne, forêt, artisanat et accueil.
 montage:
-  type: propriete_sanctuarisee
+  type: propriete_protegee
   nu_proprietaire: "Fonds de Terre Européenne (fondation de droit suisse)"
   usufruitier: "Coopératives Longo Maï (collectifs autogérés)"
   description: >

@@ -36,12 +36,12 @@ montage:
     au GAEC d'Eyssal, qui exploite l'ensemble. Les éleveur·ses possèdent par
     ailleurs leurs bâtiments et une partie des terres : le foncier Terre de
     Liens consolide une exploitation préexistante plutôt qu'il n'en porte la
-    totalité. Le montage est une propriété sanctuarisée par la Foncière
+    totalité. Le montage est une propriété protégée par la Foncière
     assortie d'un bail rural.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncier protégé par une structure non spéculative ; le porteur, la
     Foncière Terre de Liens, est toutefois une société en commandite par
     actions à actionnariat solidaire et lucrativité encadrée. Seule une partie
     du foncier de la ferme est portée par la Foncière.
@@ -114,7 +114,7 @@ analyse:
     - "Exploitation portée par un GAEC de couple : gouvernance peu collective."
   leviers:
     - "Documenter le niveau du fermage et son caractère non rentier."
-    - "Étendre la sanctuarisation au reste du foncier de la ferme."
+    - "Étendre la protection foncière au reste du foncier de la ferme."
     - "Préciser les dispositifs de transmission de l'exploitation."
   synthese: >
     La ferme d'Eyssal illustre un usage défensif du modèle Terre de Liens :

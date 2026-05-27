@@ -1,7 +1,7 @@
 uid: limans
 categorie: lieu
 nom: "Longo Maï — Limans"
-sous_titre: "Coopérative fondatrice de Longo Maï, sur 270 hectares sanctuarisés"
+sous_titre: "Coopérative fondatrice de Longo Maï, sur 270 hectares protégés"
 statut_fiche: publie
 forme_juridique: null
 localisation:
@@ -28,15 +28,15 @@ montage:
       note: "Titre précis non documenté par les sources : les actes formalisant l'usage collectif liant la coopérative au foncier de la fondation ne sont pas détaillés."
   description: >
     Le foncier de Limans est détenu de façon inaliénable par le Fonds de Terre
-    Européenne, fondation de droit suisse qui sanctuarise la propriété des
+    Européenne, fondation de droit suisse qui protège la propriété des
     terres de Longo Maï. La coopérative autogérée, de statut associatif, en
     assure l'usage et la gouverne collectivement. Le démembrement
     nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
-    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+    s'agit d'une propriété protégée en fondation et d'un usage collectif.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    Foncier protégé de manière inaliénable dans une fondation de droit
     suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
     pas documentée.
 grille:
@@ -84,10 +84,10 @@ grille:
     note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
   - critere: securite_jouissance
     valeur: partiel
-    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1973, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+    note: "Le foncier est protégé de façon inaliénable et le site fonctionne depuis 1973, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
     valeur: non
-    note: "La détention inaliénable par la fondation sanctuarise la propriété mais n'est pas un dispositif de protection du milieu ; aucune ORE, clause environnementale ou statut d'espace protégé n'est documenté."
+    note: "La détention inaliénable par la fondation protège la propriété mais n'est pas un dispositif de protection du milieu ; aucune ORE, clause environnementale ou statut d'espace protégé n'est documenté."
   - critere: vivant_finalite
     valeur: non
     note: "Les sources décrivent une coopérative d'autosubsistance — élevage, agriculture, transformation, artisanat — sans mention du vivant non-humain parmi les finalités déclarées."
@@ -99,7 +99,7 @@ grille:
     note: "Le domaine de 270 hectares comporte des terres labourables et de la forêt, mais aucun espace effectivement dédié au vivant non-humain (haies, mares, friches) n'est documenté."
 analyse:
   forces:
-    - "Foncier sanctuarisé de façon inaliénable depuis 1973."
+    - "Foncier protégé de façon inaliénable depuis 1973."
     - "Autogestion effective et continue depuis un demi-siècle."
     - "Activités diversifiées assurant une réelle autonomie au collectif."
   fragilites:
@@ -111,7 +111,7 @@ analyse:
     - "Organiser explicitement l'accueil de nouveaux·elles entrant·es."
     - "Articuler la gouvernance avec le territoire et les collectivités."
   synthese: >
-    Limans est le berceau de Longo Maï : un foncier sanctuarisé en fondation et
+    Limans est le berceau de Longo Maï : un foncier protégé en fondation et
     une autogestion libertaire qui dure depuis 1973. Sa singularité — recours au
     droit suisse, gouvernance centrée sur les coopérant·es — gagnerait en
     ancrage à s'ouvrir davantage au territoire.

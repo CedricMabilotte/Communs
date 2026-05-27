@@ -36,17 +36,17 @@ montage:
     et la Fondation a acquis par collecte de dons 6 hectares de prairie
     complémentaires. L'usage est confié par bail rural au GAEC des Bergers de la
     Sure, qui exploite la ferme. Le montage repose sur une propriété
-    sanctuarisée — par donation et acquisition — et un bail rural.
+    portée hors marché — par donation et acquisition — et un bail rural.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par une fondation reconnue d'utilité publique, structure
+    Foncier porté hors marché par une fondation reconnue d'utilité publique, structure
     de droit civil non lucrative ; sa gouvernance est descendante, exercée par
     un conseil et alimentée par les donateur·rices.
 grille:
   - critere: foncier_hors_marche
     valeur: oui
-    note: "Le foncier est sanctuarisé par la Fondation Terre de Liens, fondation reconnue d'utilité publique non spéculative, par donation et acquisition complémentaire."
+    note: "Le foncier est porté hors marché par la Fondation Terre de Liens, fondation reconnue d'utilité publique non spéculative, par donation et acquisition complémentaire."
   - critere: montage_documente
     valeur: oui
     note: "Le montage — projet de donation par la famille Genève, acquisition de 6 hectares par la Fondation, usage confié à un GAEC — est public et documenté par Terre de Liens."
@@ -103,7 +103,7 @@ grille:
     note: "Le foncier comprend des prairies de moyenne montagne, mais les sources ne documentent pas d'espaces (haies, mares, friches) effectivement laissés ou aménagés pour le vivant non-humain."
 analyse:
   forces:
-    - "Foncier sanctuarisé par une fondation reconnue d'utilité publique, sans capital appropriable."
+    - "Foncier porté hors marché par une fondation reconnue d'utilité publique, sans capital appropriable."
     - "Donation et collecte de dons : origine pleinement non spéculative."
     - "Le montage a permis la transmission effective de la ferme à de nouveaux·elles éleveur·ses."
   fragilites:
@@ -116,8 +116,8 @@ analyse:
     - "Confirmer publiquement la finalisation de la donation et son périmètre."
   synthese: >
     La Ferme de Pommiers illustre le rôle de la Fondation Terre de Liens :
-    recueillir dons et donations pour sanctuariser un foncier agricole et en
-    assurer la transmission. Donation et collecte de dons en font un montage
+    recueillir dons et donations pour soustraire un foncier agricole au marché
+    et en assurer la transmission. Donation et collecte de dons en font un montage
     pleinement non lucratif ; sa réserve tient à la gouvernance descendante du
     porteur et au manque de documentation sur le régime du loyer.
 fiabilite: >
