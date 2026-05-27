@@ -1,0 +1,172 @@
+uid: terre-de-liens-pays-de-la-loire
+categorie: porteur
+nom: "Terre de Liens Pays de la Loire"
+sous_titre: "Antenne régionale du mouvement Terre de Liens"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  region: "Pays de la Loire"
+  departement: "Maine-et-Loire"
+  commune: "Mûrs-Erigné"
+annee: 2010
+url: "https://terredeliens-paysdelaloire.org/"
+resume: >
+  Association loi 1901 créée en mars 2010 par des paysan·nes militant·es des
+  réseaux d'agriculture paysanne et biologique et des citoyen·nes de la région,
+  notamment autour de projets d'achat de fermes en Mayenne. Antenne régionale
+  du mouvement Terre de Liens pour les cinq départements des Pays de la Loire
+  (Loire-Atlantique, Maine-et-Loire, Mayenne, Sarthe, Vendée). Elle relie
+  citoyen·nes, paysan·nes, bénévoles et collectivités autour de la préservation
+  du foncier agricole : accompagnement à l'installation, animation locale,
+  mobilisation d'épargne solidaire et de dons. Le portage foncier lui-même
+  est assuré par la Foncière (SCA) ou la Fondation (FRUP) nationales — l'antenne
+  régionale n'est pas propriétaire. Depuis 2010, plus de 1 000 hectares
+  préservés et plus de 51 projets accompagnés selon les chiffres de
+  l'association ; en 2018, co-fondation de la coopérative foncière régionale
+  Passeurs de terres.
+montage:
+  type: propriete_protegee
+  description: >
+    L'association régionale ne détient pas elle-même le foncier : son rôle est
+    l'animation, l'accompagnement des porteur·euses de projet, la mobilisation
+    de l'épargne et des dons orientés vers la Foncière ou la Fondation
+    nationales, ainsi que la veille foncière sur son territoire. Le portage
+    juridique du foncier relève des structures nationales du mouvement
+    (Foncière Terre de Liens — SCA, ou Fondation Terre de Liens — FRUP), qui
+    confient ensuite l'usage aux paysan·nes par bail rural, fréquemment
+    environnemental.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association régionale d'animation et d'accompagnement, sans portage
+    foncier propre, intégrée à un dispositif national protégé (Foncière SCA à
+    actionnariat solidaire et Fondation reconnue d'utilité publique). La
+    solidité juridique du montage repose sur les structures nationales ; le
+    rôle de l'antenne est l'inscription territoriale et la mobilisation
+    citoyenne.
+grille:
+  - critere: inalienabilite
+    valeur: inconnu
+    note: "L'association ne porte pas elle-même le foncier ; l'inaliénabilité, le cas échéant, dépend des structures nationales (Foncière SCA, Fondation FRUP) qui en détiennent la propriété."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital social ni parts appropriables."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Une association loi 1901 offre une protection moyenne ; le foncier n'est pas porté par l'antenne elle-même, mais par les structures nationales du mouvement (Foncière, Fondation) qui se situent plus haut sur l'échelle de protection."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "La clause de dévolution de l'association n'est pas documentée par les sources consultées ; les statuts n'ont pas été examinés verbatim."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Association loi 1901, forme structurellement non lucrative, reconnue d'intérêt général."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Aucun capital appropriable ni rémunération du capital ; les ressources (cotisations, dons, subventions) sont affectées à l'objet associatif."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "Co-présidence bénévole (Laure Beauffigeau, Elisabeth Guist'hau, Christian Bastard) ; l'association est reconnue d'intérêt général, ce qui suppose une gestion désintéressée."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Aucun investisseur en rendement ; les ressources mobilisées vers la Foncière nationale ne versent pas de dividende."
+  - critere: ca_collegial
+    valeur: partiel
+    note: "Trois co-président·es identifié·es ; la composition et le fonctionnement détaillés du conseil d'administration ne sont pas documentés par les sources consultées."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "L'association réunit citoyen·nes, bénévoles, paysan·nes et collectivités ; bénévoles organisé·es en groupes départementaux contribuant à l'accompagnement de projets et à la communication."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "L'antenne régionale n'est pas le propriétaire du foncier : les décisions structurantes sur les baux, fermages et transmission relèvent de la Foncière ou de la Fondation nationales. Les paysan·nes preneur·euses n'ont pas de voix délibérative documentée sur ces décisions au niveau régional non plus."
+  - critere: transparence
+    valeur: partiel
+    note: "L'association publie des rapports d'activité annuels (cf. rapport 2021 hébergé sur le cloud du mouvement) ; l'accessibilité durable des comptes détaillés n'est pas confirmée."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet associatif mentionne explicitement l'accompagnement et la préservation du foncier agricole : relier, soutenir et accompagner les initiatives collectives d'acquisition et de gestion du foncier et du bâti, particulièrement en milieu rural."
+  - critere: agrement_ig
+    valeur: oui
+    note: "Association reconnue d'intérêt général, permettant de recevoir des dons ouvrant droit à réduction fiscale."
+  - critere: risque_requalification
+    valeur: oui
+    note: "Association loi 1901 d'animation territoriale, sans activité commerciale concurrentielle dominante ; le risque de requalification fiscale est faible."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "Rapports d'activité publiés ; redevabilité auprès des donateur·rices et adhérent·es, mais sans contrôle public au sens d'une FRUP."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'association soutient prioritairement l'installation de paysan·nes en agriculture biologique ; le vivant non-humain est présent dans l'horizon (baux ruraux environnementaux du dispositif national), sans en faire une finalité statutaire centrale au niveau de l'antenne."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "L'antenne ne confère pas elle-même l'usage du foncier : ce sont la Foncière ou la Fondation nationales qui contractualisent avec les paysan·nes par bail rural (fermage encadré réglementairement)."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "Idem : la durée et la sécurité du titre d'usage relèvent du bail rural conclu par les porteurs nationaux (Foncière ou Fondation), non par l'antenne régionale."
+analyse:
+  forces:
+    - "Inscription territoriale d'un dispositif national protégé (Foncière SCA + Fondation FRUP)."
+    - "Mobilisation citoyenne effective : bénévoles organisé·es en groupes départementaux sur les cinq départements."
+    - "Co-fondation en 2018 de la coopérative foncière régionale Passeurs de terres, complément local au dispositif national."
+  fragilites:
+    - "Pas de portage foncier propre : la solidité juridique repose entièrement sur les structures nationales."
+    - "Place décisionnelle des paysan·nes preneur·euses peu documentée à l'échelle régionale comme nationale."
+    - "Clause de dévolution et composition détaillée des instances non documentées par les sources consultées."
+  leviers:
+    - "Documenter publiquement les statuts et la clause de dévolution de l'association."
+    - "Articuler explicitement la coopérative Passeurs de terres au dispositif national pour clarifier la cartographie régionale."
+    - "Renforcer la voix des paysan·nes preneur·euses dans la gouvernance régionale."
+  synthese: >
+    Antenne régionale solide d'un dispositif national protégé, l'association
+    joue un rôle d'animation, d'accompagnement et de mobilisation citoyenne
+    plutôt que de portage foncier. Sa valeur tient à son ancrage territorial,
+    sa reconnaissance d'intérêt général et sa capacité à relier des
+    paysan·nes, des citoyen·nes et des collectivités autour d'un même
+    objectif. La solidité juridique du foncier qu'elle accompagne dépend des
+    structures nationales (Foncière, Fondation).
+fiabilite: >
+  Faits vérifiés : forme associative loi 1901, date de création (déclaration
+  24 avril 2010, fondation en mars 2010), SIREN 522606946, siège à
+  Mûrs-Erigné (Maine-et-Loire), reconnaissance d'intérêt général, périmètre
+  régional sur les cinq départements des Pays de la Loire, co-présidence par
+  Laure Beauffigeau, Elisabeth Guist'hau et Christian Bastard, co-fondation
+  en 2018 de la coopérative Passeurs de terres, ordres de grandeur (51
+  projets accompagnés, plus de 1 000 hectares préservés depuis 2010 selon
+  les sources de l'association). Non confirmé : composition détaillée du CA,
+  clause de dévolution statutaire, données financières précises, surface
+  foncière exacte rattachée au seul portage Foncière/Fondation pour la
+  région.
+voir_aussi: [reseau-terre-de-liens, fonciere-terre-de-liens, fondation-terre-de-liens]
+dossier:
+  identite:
+    siren: "522606946"
+    adresse: "70 route de Nantes, 49610 Mûrs-Erigné"
+  echelle:
+    personnes: null
+    lieux: 51
+    surface_ha: 1000
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: public
+      note: "Rapport d'activité 2021 accessible en ligne via le cloud du mouvement Terre de Liens ; rapports plus récents non confirmés."
+    - type: bail
+      statut: inconnu
+sources:
+  - titre: "Terre de Liens Pays de la Loire — site officiel"
+    url: "https://terredeliens-paysdelaloire.org/"
+  - titre: "Terre de Liens — page régionale Pays de la Loire"
+    url: "https://terredeliens.org/pays-de-la-loire/"
+  - titre: "Pappers — TDL PDL Terre de Liens Pays de la Loire (SIREN 522606946)"
+    url: "https://www.pappers.fr/entreprise/tdl-pdl-terre-de-liens-pays-de-la-loire-522606946"
+  - titre: "Annuaire des associations nantaises — Terre de Liens Pays de la Loire"
+    url: "https://metropole.nantes.fr/infonantes/association/19848-terre-de-liens-pays-de-la-loire"
+  - titre: "Terre de Liens Pays de la Loire — Rapport d'activité 2021"
+    url: "https://cellar-c2.services.clever-cloud.com/terredeliens.org/documents/RA2021_compresse2.pdf"

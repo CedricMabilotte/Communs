@@ -159,10 +159,10 @@ Sébastien Faure.
 
 Un mode manque : la **captation**. Aucun de ces trois lieux n'a vu un
 acteur prendre la main sur la gouvernance pour détourner le foncier de
-sa finalité. C'est cohérent avec le critère : un cas capté n'est plus
-puriste, il est devenu autre chose en route. Et c'est l'enseignement
-discret de cet article — tenir la formule **protège** contre la
-captation jusqu'à la fin. Pour observer la captation tenue sur un
+sa finalité. C'est cohérent avec le critère retenu : un lieu capté
+n'a plus tenu sa formule jusqu'au bout, il est devenu autre chose en
+route. Et c'est l'enseignement discret de cet article — tenir la
+formule **protège** contre la captation jusqu'à la fin. Pour observer la captation tenue sur un
 patrimoine collectif, il faudra aller chercher du côté des fondations
 qui ont muté sans le dire, ou des coopératives où un dirigeant a fini
 par convertir le commun en actif personnel. Ce sera matière à d'autres

@@ -367,6 +367,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/p/eau-bassin-rennais.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/p/etat-larzac.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -470,6 +476,18 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/p/scic-terres-de-sources.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/p/terre-de-liens-auvergne.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/p/terre-de-liens-pays-de-la-loire.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -757,6 +775,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/r/accueil-paysan.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/r/cooperative-oasis.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -788,6 +812,12 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/r/reseau-terre-de-liens.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/r/revue-silence.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -829,7 +859,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://communs.actitude.org/revues/memoire/01-cas-puristes-disparus/index.html</loc>
+    <loc>https://communs.actitude.org/revues/memoire/01-trois-lieux-qui-ont-tenu-la-formule/index.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

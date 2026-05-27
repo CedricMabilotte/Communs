@@ -1,0 +1,122 @@
+uid: revue-silence
+categorie: reseau
+nom: "Silence"
+sous_titre: "Mensuel indépendant écologie, alternatives, non-violence"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 (\"Silence — Écologie, Alternatives, Non-violence\")"
+localisation:
+  region: "Auvergne-Rhône-Alpes"
+  departement: "Rhône"
+  commune: "Lyon"
+annee: 1982
+url: "https://www.revuesilence.net/"
+resume: >
+  Mensuel indépendant fondé en 1982 à Lyon par des participant·es à la marche
+  contre la centrale nucléaire de Superphénix de Creys-Malville. La revue est
+  éditée par une association loi 1901 du même nom (Silence — Écologie,
+  Alternatives, Non-violence), autogérée, sans publicité, financée par les
+  abonnements et les dons. L'équipe combine une petite équipe salariée à
+  temps partiel et un large réseau de bénévoles ; les décisions y sont
+  collectives et les salaires égaux. Silence n'est pas un porteur foncier :
+  la revue figure dans le corpus Communs comme média-pivot — source citée
+  par plusieurs fiches du milieu de l'écologie sociale, du retrait et de
+  l'autonomie (Cabrery, Mas de Granier, Hameau des Buis).
+montage:
+  type: null
+  description: >
+    Aucun portage foncier. Silence est une revue : une association loi 1901
+    qui édite un mensuel autogéré, sans publicité, financé par les
+    abonnements et les dons. Le modèle économique repose sur l'abonnement
+    citoyen, des appels à soutien périodiques et une équipe à dominante
+    bénévole épaulée par quelques salarié·es à temps partiel.
+integrite_montage:
+  niveau: null
+  commentaire: >
+    Non applicable. L'échelle d'intégrité du montage Communs évalue la
+    protection d'un foncier porté hors marché ; Silence n'a pas de foncier
+    propre. Le statut d'association loi 1901 sans capital appropriable, le
+    refus de la publicité et la gouvernance collective signalent une
+    intégrité éditoriale et économique du média — distincte de la grille
+    foncière du corpus.
+grille:
+  - critere: foncier_hors_marche
+    valeur: non_applicable
+    note: "Silence n'est pas porteuse de foncier — l'évaluation foncière ne s'applique pas à un média."
+  - critere: montage_documente
+    valeur: non_applicable
+    note: "Aucun montage foncier à documenter. Statuts de l'association publics sur revuesilence.net."
+  - critere: irreversibilite
+    valeur: non_applicable
+    note: "Critère foncier — sans objet pour une revue."
+  - critere: origine_non_speculative
+    valeur: non_applicable
+    note: "Pas de foncier acquis ; financement par abonnements et dons."
+  - critere: parts_non_cessibles
+    valeur: non_applicable
+    note: "Association loi 1901 sans capital social ; aucune part appropriable, mais critère pensé pour le foncier."
+  - critere: usage_interet_general
+    valeur: non_applicable
+    note: "Critère foncier — sans objet. L'objet de la revue est éditorial (écologie, alternatives, non-violence)."
+  - critere: non_lucratif_global
+    valeur: non_applicable
+    note: "Association loi 1901, gestion désintéressée, mais critère ici pensé pour la chaîne de portage foncier."
+  - critere: ancrage_territorial
+    valeur: non_applicable
+    note: "Critère foncier. Silence a une diffusion nationale et un siège lyonnais."
+  - critere: gouvernance_collective
+    valeur: non_applicable
+    note: "Critère foncier. Sur le plan éditorial, la revue se présente comme autogérée à décisions collectives et salaires égaux."
+  - critere: tripartisme
+    valeur: non_applicable
+    note: "Critère foncier — sans objet."
+  - critere: perennite_gouvernance
+    valeur: non_applicable
+    note: "Critère foncier — sans objet. La revue paraît sans interruption depuis 1982."
+  - critere: montage_non_commercial
+    valeur: non_applicable
+    note: "Critère foncier — sans objet. Pas de publicité."
+  - critere: usage_non_marchand
+    valeur: non_applicable
+    note: "Critère foncier — sans objet."
+  - critere: loyer_non_rentier
+    valeur: non_applicable
+    note: "Critère foncier — sans objet."
+  - critere: securite_jouissance
+    valeur: non_applicable
+    note: "Critère foncier — sans objet."
+analyse:
+  forces:
+    - "Mensuel indépendant ininterrompu depuis 1982, sans publicité ni subvention structurelle."
+    - "Source citée par plusieurs fiches du corpus — utilité documentaire transverse."
+    - "Forme associative sans capital appropriable, gouvernance collective interne à la rédaction."
+  fragilites:
+    - "N'est pas une entité porteuse de foncier : la grille Communs ne lui est pas adaptée."
+    - "Modèle économique exposé aux variations d'abonnement (appels à soutien réguliers)."
+    - "Statut de média-pivot rendu visible par cette fiche, mais pas formellement reconnu dans le corpus."
+  leviers:
+    - "Documenter explicitement le rôle de média-pivot dans la cartographie des sources du projet."
+    - "Lier les fiches qui citent Silence à cette fiche réseau pour rendre les rebonds traçables."
+    - "Préciser, si une cartographie des sources est conduite, la place de Silence vis-à-vis des autres médias-pivots (Reporterre, Terrestres, etc.)."
+  synthese: >
+    Silence est un média-pivot du milieu écologie sociale, autonomie et
+    non-violence — pas un porteur foncier. La fiche existe pour rendre
+    explicite ce statut transverse et tracer les rebonds documentaires du
+    corpus. La grille de portage foncier de Communs ne s'applique pas à
+    cette entité.
+fiabilite: >
+  Faits vérifiés (sources publiques consultées en mai 2026) : revue fondée
+  en 1982 à Lyon par des participant·es à la marche contre Superphénix
+  (Creys-Malville) ; éditée par l'association loi 1901 « Silence —
+  Écologie, Alternatives, Non-violence » immatriculée sous le SIREN
+  344 400 106 ; siège au 9 rue Dumenge, 69004 Lyon ; mensuel sans
+  publicité ; structure autogérée à salaires égaux. Non confirmé : nombre
+  exact d'abonné·es à jour, composition précise de l'équipe salariée et du
+  conseil d'administration de l'association.
+membres: []
+sources:
+  - titre: "Silence — site officiel"
+    url: "https://www.revuesilence.net/"
+  - titre: "Silence — Statuts de l'association"
+    url: "https://www.revuesilence.net/statuts"
+  - titre: "Société.com — Silence Écologi Alternativ Non Violence (SIREN 344400106)"
+    url: "https://www.societe.com/societe/silence-ecologi-alternativ-non-violence-344400106.html"

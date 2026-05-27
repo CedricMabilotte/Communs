@@ -1504,6 +1504,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "eau-bassin-rennais",
+    "nom": "Collectivité Eau du Bassin Rennais",
+    "categorie": "porteur",
+    "sous_titre": "Syndicat mixte d'agglomération acquéreur du foncier des aires de captage",
+    "idl": 76,
+    "idl_brut": 76,
+    "idl_intrinseque": 76,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 85,
+      "2": 100,
+      "3": 56,
+      "4": 72,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 85,
+      "2": 100,
+      "3": 56,
+      "4": 72,
+      "5": 75
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Syndicat mixte fermé (collectivité publique)",
+    "montage_type": "propriete_publique",
+    "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "etat-larzac",
     "nom": "État — domaine du Larzac",
     "categorie": "porteur",
@@ -2077,6 +2109,70 @@
     "forme_juridique": "Société coopérative d'intérêt collectif (SCIC) multi-acteurs",
     "montage_type": "propriete_publique",
     "montage_label": "Propriété publique inaliénable",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "terre-de-liens-auvergne",
+    "nom": "Terre de Liens Auvergne",
+    "categorie": "porteur",
+    "sous_titre": "Association régionale du mouvement Terre de Liens en Auvergne",
+    "idl": 68,
+    "idl_brut": 72,
+    "idl_intrinseque": 68,
+    "score_type": "calcule",
+    "completude": 0.895,
+    "axes": {
+      "1": 80,
+      "2": 100,
+      "3": 44,
+      "4": 72,
+      "5": 75
+    },
+    "axes_intrinseques": {
+      "1": 80,
+      "2": 100,
+      "3": 44,
+      "4": 72,
+      "5": 75
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_protegee",
+    "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "terre-de-liens-pays-de-la-loire",
+    "nom": "Terre de Liens Pays de la Loire",
+    "categorie": "porteur",
+    "sous_titre": "Antenne régionale du mouvement Terre de Liens",
+    "idl": 64,
+    "idl_brut": 72,
+    "idl_intrinseque": 64,
+    "score_type": "calcule",
+    "completude": 0.789,
+    "axes": {
+      "1": 80,
+      "2": 100,
+      "3": 44,
+      "4": 78,
+      "5": null
+    },
+    "axes_intrinseques": {
+      "1": 80,
+      "2": 100,
+      "3": 44,
+      "4": 78,
+      "5": null
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_protegee",
+    "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Intérêt général institué"
   },
   {

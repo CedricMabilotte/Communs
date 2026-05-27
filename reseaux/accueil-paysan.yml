@@ -1,0 +1,113 @@
+uid: accueil-paysan
+categorie: reseau
+nom: "Accueil Paysan"
+sous_titre: "Fédération nationale d'agriculteur·rices et d'acteur·rices ruraux structurant un modèle d'accueil paysan"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 (Fédération nationale)"
+localisation: null
+annee: 1987
+url: "https://www.accueil-paysan.com/"
+resume: >
+  Association née en 1987 d'une réflexion de paysan·nes de la région Rhône-Alpes
+  sur la spécificité d'un accueil intégré à une production agricole, dans le
+  respect de l'être humain et de son environnement. Le réseau s'est structuré
+  autour d'une charte fondatrice — réactualisée pour les 20 ans du réseau — qui
+  précise en neuf points le projet de société défendu par les adhérent·es :
+  accueil partie intégrante de l'activité agricole, pensé et géré par celles et
+  ceux qui en vivent, ouvert à toutes et tous, ancré dans le développement local.
+  Le réseau revendique environ 1 200 adhérent·es en France et 350 dans une
+  trentaine de pays, regroupés en associations départementales et régionales,
+  fédérées au niveau national. La Fédération Nationale Accueil Paysan, association
+  loi 1901 immatriculée en 1992 et basée à Grenoble, anime ce réseau et délivre
+  le label « Accueil Paysan », marque déposée gérée par les adhérent·es eux-mêmes
+  dans une démarche de labellisation collective.
+montage:
+  type: null
+  description: >
+    La Fédération Nationale Accueil Paysan ne porte pas de foncier : elle anime
+    un réseau d'agriculteur·rices et d'acteur·rices ruraux qui pratiquent
+    l'accueil — chambres d'hôtes, gîtes, camping à la ferme, accueil d'enfants,
+    accueil social, vente de produits de la ferme — sur leur propre exploitation.
+    Le foncier reste celui des adhérent·es ; le réseau structure une éthique et
+    un cahier des charges communs (la charte en neuf points), une marque déposée
+    et une démarche de labellisation par les pair·es. Le tiers structurant est
+    pédagogique et politique, pas foncier.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Le réseau n'est pas propriétaire foncier : il anime un modèle d'accueil
+    paysan et délivre un label par démarche collective de labellisation. Sa
+    qualité tient à la charte fondatrice et à la gouvernance par les pair·es,
+    non à un dispositif d'irréversibilité foncière.
+analyse:
+  forces:
+    - "Charte fondatrice claire et publique, projet de société assumé."
+    - "Gouvernance par les pair·es : labellisation conduite par les adhérent·es eux-mêmes."
+    - "Maillage territorial dense (associations départementales et régionales)."
+    - "Présent dans plusieurs montages du corpus comme tiers structurant pédagogique et politique."
+  fragilites:
+    - "Pas de portage foncier : le réseau ne protège pas la terre, il anime un usage."
+    - "Marque déposée et label : la qualité dépend de la rigueur du contrôle interne, peu documenté publiquement."
+    - "Statut de fédération RUP non documenté par les sources consultées."
+  leviers:
+    - "Articuler plus systématiquement avec des porteurs fonciers non spéculatifs (Terre de Liens, fondations) pour sécuriser la transmission des lieux."
+    - "Publier les cahiers des charges et les modalités de labellisation pour rendre lisible la garantie portée par la marque."
+  synthese: >
+    Accueil Paysan est un tiers structurant transversal du corpus : présent dans
+    plusieurs montages (Ferme de Pommiers, GAEC des Bergers de la Sure) comme
+    référence éthique et professionnelle, il anime un modèle d'accueil paysan
+    plus qu'il ne protège un foncier. Sa contribution à la libération des terres
+    est indirecte : la charte en neuf points porte un projet de société qui
+    soutient l'installation paysanne et l'accueil hors logique strictement
+    marchande, sans que le réseau lui-même soit propriétaire ni garant
+    juridique du foncier.
+fiabilite: >
+  Faits vérifiés (sources : site officiel accueil-paysan.com, Pappers, Avise,
+  Wikipédia, consultées en mai 2026) : création de l'association en 1987 par
+  des paysan·nes de la région Rhône-Alpes (initialement de l'Isère),
+  immatriculation de la Fédération Nationale Accueil Paysan au 1er octobre 1992
+  (SIREN 390693638), siège à Grenoble (9 avenue Paul Verlaine), forme juridique
+  association loi 1901, charte fondatrice en neuf points réactualisée pour les
+  20 ans du réseau, marque déposée gérée par les adhérent·es. Chiffres revendiqués
+  par le réseau : environ 1 200 lieux d'accueil en France, 350 à l'étranger dans
+  une trentaine de pays, 14 associations régionales, 36 associations
+  départementales. Non confirmé : statut de fédération reconnue d'utilité
+  publique (non documenté), date exacte de finalisation du label en 1987 versus
+  formalisation ultérieure, chiffres à jour des adhérent·es, articulation
+  juridique précise entre la Fédération nationale et les associations
+  territoriales.
+dossier:
+  identite:
+    siren: "390693638"
+    rna: null
+    adresse: "9 avenue Paul Verlaine, 38000 Grenoble"
+  echelle:
+    personnes: null
+    lieux: "Environ 1 200 lieux d'accueil en France et 350 à l'étranger (chiffres revendiqués par le réseau)"
+    surface_ha: null
+  pieces:
+    - type: charte
+      statut: public
+      url: "https://www.accueil-paysan.com/fr/notre-reseau/notre-ethique/"
+      note: "Charte Accueil Paysan en neuf points, élément fondateur du réseau, publique sur le site officiel."
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de la Fédération Nationale Accueil Paysan non publiés en ligne par les sources consultées."
+    - type: rapport_financier
+      statut: inconnu
+liens:
+  voir_aussi:
+    - ferme-de-pommiers
+    - gaec-bergers-de-la-sure
+  membres: []
+sources:
+  - titre: "Accueil Paysan — site officiel"
+    url: "https://www.accueil-paysan.com/"
+  - titre: "L'éthique du réseau — Accueil Paysan (charte en neuf points)"
+    url: "https://www.accueil-paysan.com/fr/notre-reseau/notre-ethique/"
+  - titre: "A propos d'Accueil Paysan — site officiel"
+    url: "https://www.accueil-paysan.com/fr/notre-reseau/tout-savoir-sur-accueil-paysan/"
+  - titre: "Fédération Nationale Accueil Paysan — fiche entreprise Pappers (SIREN 390693638)"
+    url: "https://www.pappers.fr/entreprise/federation-nationale-accueil-paysan-390693638"
+  - titre: "Accueil Paysan — Portrait Avise"
+    url: "https://www.avise.org/portraits/accueil-paysan"

@@ -1,0 +1,168 @@
+uid: terre-de-liens-auvergne
+categorie: porteur
+nom: "Terre de Liens Auvergne"
+sous_titre: "Association régionale du mouvement Terre de Liens en Auvergne"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  region: "Auvergne-Rhône-Alpes"
+  departement: "Puy-de-Dôme (63)"
+  commune: "Clermont-Ferrand"
+annee: 2011
+url: "https://terredeliens.org/auvergne/"
+resume: >
+  Association loi 1901 du mouvement Terre de Liens, créée en février 2011 à
+  Clermont-Ferrand, présente dans les quatre départements de l'ancienne
+  région Auvergne — Allier, Puy-de-Dôme, Cantal et Haute-Loire. Elle n'est
+  pas elle-même propriétaire du foncier des fermes du réseau : celui-ci
+  est porté nationalement par la Foncière Terre de Liens (société en
+  commandite par actions à actionnariat solidaire) ou par la Fondation
+  Terre de Liens (fondation reconnue d'utilité publique). L'antenne
+  régionale assure le repérage des projets paysans, l'instruction des
+  acquisitions, l'accompagnement des paysan·nes installé·es, le suivi des
+  fermes et l'animation territoriale par un réseau de groupes locaux
+  bénévoles. Elle accompagne 18 fermes (la Licorne, à Chouvigny dans
+  l'Allier, étant la dernière acquise fin 2024), s'appuie sur plus de
+  480 adhérent·es, une cinquantaine de bénévoles répartis en cinq
+  groupes locaux et une équipe de quatre salarié·es.
+montage:
+  type: propriete_protegee
+  description: >
+    L'association régionale n'est pas porteuse de nue-propriété : le foncier
+    des fermes accompagnées appartient à la Foncière Terre de Liens ou à la
+    Fondation Terre de Liens, structures nationales. Terre de Liens
+    Auvergne anime le maillage territorial du dispositif national :
+    instruction des dossiers d'acquisition en lien avec la Foncière et la
+    Fondation, accompagnement des collectifs candidats à l'installation,
+    suivi des paysan·nes preneur·euses de bail, animation des groupes
+    locaux bénévoles, mobilisation citoyenne. C'est l'antenne qui fait
+    vivre le dispositif au plus près des fermes, sans porter elle-même la
+    propriété.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 non lucrative, sans capital appropriable et à
+    gestion désintéressée par construction. Elle agit comme animatrice
+    régionale d'un dispositif national protégé (Foncière + Fondation), sans
+    porter le foncier — son rôle est celui d'un opérateur de cohérence
+    territoriale dans une chaîne d'intérêt général institué.
+grille:
+  - critere: inalienabilite
+    valeur: inconnu
+    note: "L'antenne régionale ne porte pas le foncier ; l'inaliénabilité éventuelle relève de la Foncière ou de la Fondation nationale."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Une association loi 1901 n'a pas de capital social ni de parts appropriables."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Association loi 1901 — protection juridique correcte mais inférieure à la fondation reconnue d'utilité publique ; à lire en lien avec le portage national de la Foncière ou de la Fondation."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "Le sort de l'actif en cas de dissolution n'est pas documenté par les sources consultées ; les statuts d'une association loi 1901 prévoient en général une dévolution désintéressée."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Association loi 1901, forme structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association loi 1901 ne distribue pas de bénéfices ; les ressources sont affectées à l'objet."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "Gestion désintéressée par construction — conseil d'administration bénévole d'une quinzaine de membres (paysan·nes, chercheur·euses, consommateur·rices, formateur·rices) issus des quatre départements ; bureau mensuel ; quatre salarié·es."
+  - critere: independance_rendement
+    valeur: oui
+    note: "L'association ne porte pas de capital appropriable ; aucune logique de rendement ne pèse sur son activité."
+  - critere: ca_collegial
+    valeur: oui
+    note: "Conseil d'administration jusqu'à 15 membres issus des quatre départements de l'ancienne région Auvergne, élu·es parmi les adhérent·es ; bureau et commissions thématiques (suivi des projets, suivi des fermes, finances, mobilisation citoyenne, communication)."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Plus de 480 adhérent·es et une cinquantaine de bénévoles structurés en cinq groupes locaux ; la participation des paysan·nes preneur·euses à la décision n'est pas documentée comme statutairement organisée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Les paysan·nes preneur·euses de bail sur les fermes accompagnées par l'antenne ne disposent pas d'une voix délibérative documentée sur les décisions du porteur de leurs fermes (Foncière ou Fondation) — choix des baux, fixation du fermage, transmission du foncier relèvent du portage national, l'antenne assurant l'accompagnement et le suivi sans décider à leur place."
+  - critere: transparence
+    valeur: partiel
+    note: "Le mouvement Terre de Liens publie un rapport annuel national ; la publication détaillée des comptes et de l'activité régionale auvergnate n'est pas documentée par les sources consultées."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet associatif inclut explicitement le soutien aux initiatives collectives et solidaires d'acquisition et de gestion de terres et de bâtiments agricoles, conformément à la charte Terre de Liens."
+  - critere: agrement_ig
+    valeur: partiel
+    note: "L'association régionale s'inscrit dans le mouvement Terre de Liens, dont la Fondation nationale est reconnue d'utilité publique ; l'antenne elle-même ne dispose pas d'une reconnaissance d'utilité publique propre."
+  - critere: risque_requalification
+    valeur: oui
+    note: "Association loi 1901 à activité d'intérêt général agricole et environnemental, sans activité commerciale concurrentielle : risque de requalification fiscale faible."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "L'antenne rend compte par le canal du mouvement Terre de Liens et de ses adhérent·es ; pas de contrôle public comparable à celui d'une FRUP."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'antenne accompagne l'installation paysanne en agriculture biologique et paysanne, et favorise le recours au bail rural environnemental ; le vivant non-humain n'apparaît pas comme finalité centrale."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "L'antenne n'attribue pas elle-même les titres d'usage : c'est la Foncière ou la Fondation qui contractualise par bail rural avec les paysan·nes. L'antenne accompagne le processus côté région."
+  - critere: securite_usage_offerte
+    valeur: oui
+    note: "Le bail rural utilisé par le dispositif national assure une jouissance d'au moins neuf ans avec un droit au renouvellement d'ordre public ; il est souvent environnemental."
+analyse:
+  forces:
+    - "Association loi 1901 non lucrative, sans capital appropriable, à gestion désintéressée par construction."
+    - "Maillage territorial dense — quatre départements, cinq groupes locaux bénévoles, conseil d'administration pluraliste."
+    - "Adossement à un dispositif national protégé (Foncière SCA solidaire + Fondation RUP) qui sécurise le portage foncier en aval."
+  fragilites:
+    - "L'antenne ne porte pas le foncier elle-même : la solidité du montage tient au portage national, dont l'intégrité varie selon le porteur (Foncière SCA ou Fondation RUP)."
+    - "Place décisionnelle des paysan·nes preneur·euses non documentée comme statutairement organisée."
+    - "Publication détaillée des comptes et de l'activité régionale auvergnate non documentée."
+  leviers:
+    - "Documenter et publier les comptes et le rapport d'activité régionaux."
+    - "Inscrire statutairement la place des paysan·nes preneur·euses dans les instances ou commissions de suivi."
+    - "Renforcer le tripartisme local — collectivités, voisinage — autour de chaque ferme accompagnée."
+  synthese: >
+    Terre de Liens Auvergne illustre le rôle d'animation territoriale d'une
+    antenne régionale du mouvement : association loi 1901 non lucrative qui
+    fait vivre le dispositif national au plus près des fermes auvergnates,
+    sans porter elle-même la propriété. Sa solidité tient à la nature de
+    l'association et au portage national auquel elle est adossée ; sa
+    marge de progression, à l'explicitation de la place des paysan·nes
+    accompagné·es dans la gouvernance.
+fiabilite: >
+  Faits vérifiés (sources Terre de Liens, annuaire-entreprises.data.gouv.fr,
+  consultés en mai 2026) : association loi 1901, SIREN 534043351, siège
+  9 rue Sous les Augustins, 63000 Clermont-Ferrand, création en février
+  2011, présence dans les quatre départements de l'ancienne région
+  Auvergne (Allier, Puy-de-Dôme, Cantal, Haute-Loire), 18 fermes
+  accompagnées, plus de 480 adhérent·es, une cinquantaine de bénévoles
+  organisé·es en cinq groupes locaux, équipe de quatre salarié·es,
+  conseil d'administration jusqu'à quinze membres, code NAF 9499Z. Non
+  confirmé : surface foncière totale agrégée du réseau régional, statuts
+  publiés, clause de dévolution détaillée, comptes annuels régionaux.
+voir_aussi: [reseau-terre-de-liens, fonciere-terre-de-liens, fondation-terre-de-liens, la-licorne]
+dossier:
+  identite:
+    siren: "534043351"
+    adresse: "9 rue Sous les Augustins, 63000 Clermont-Ferrand"
+  echelle:
+    personnes: 480
+    lieux: 18
+    surface_ha: null
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: public
+      note: "Charte Terre de Liens du mouvement national, à laquelle l'antenne régionale se réfère explicitement dans son objet."
+    - type: rapport_financier
+      statut: inconnu
+      note: "Le mouvement Terre de Liens publie un rapport annuel national ; rapport d'activité régional auvergnat non confirmé."
+sources:
+  - titre: "Terre de Liens — Auvergne"
+    url: "https://terredeliens.org/auvergne/"
+  - titre: "Fermes de la région Auvergne — Terre de Liens"
+    url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/"
+  - titre: "Annuaire des entreprises — Terre de Liens Auvergne (SIREN 534043351)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/terre-de-liens-auvergne-534043351"
+  - titre: "Pappers — Association Terre de Liens Auvergne"
+    url: "https://www.pappers.fr/entreprise/terre-de-liens-auvergne-534043351"
