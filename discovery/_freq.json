@@ -1,11 +1,39 @@
 {
+  "agrasc-biens-affectes": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "basta": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "bluebees": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "cff-annuaire": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "conservatoire-littoral": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
   "cooperative-oasis": {
     "dernier_scan": "2026-05-27",
     "dernier_statut": "échec"
   },
+  "data-gouv-fondations": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
   "encommun": {
     "dernier_scan": "2026-05-27",
     "dernier_statut": "échec"
+  },
+  "fnh-fondation": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
   },
   "foncier-solidaire": {
     "dernier_scan": "2026-05-27",
@@ -15,6 +43,14 @@
     "dernier_scan": "2026-05-27",
     "dernier_statut": "échec"
   },
+  "fondation-de-france-abritees": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "fondation-du-patrimoine": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
   "habicoop": {
     "dernier_scan": "2026-05-27",
     "dernier_statut": "ok"
@@ -23,7 +59,19 @@
     "dernier_scan": "2026-05-27",
     "dernier_statut": "ok"
   },
+  "kisskissbankbank": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "la-brique": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
   "labo-ess": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "lage-de-faire": {
     "dernier_scan": "2026-05-27",
     "dernier_statut": "ok"
   },
@@ -31,9 +79,49 @@
     "dernier_scan": "2026-05-27",
     "dernier_statut": "ok"
   },
+  "le-postillon": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "le-vent-se-leve": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "les-scic": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "lita-co": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "lundi-matin": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
   "lurzaindia": {
     "dernier_scan": "2026-05-27",
     "dernier_statut": "ok"
+  },
+  "lutopiks": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
+  },
+  "miimosa": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "mr-mondialisation": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "politis": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "reporterre": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "échec"
   },
   "reseau-cen": {
     "dernier_scan": "2026-05-27",
@@ -56,6 +144,14 @@
     "dernier_statut": "échec"
   },
   "terres-de-sources": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "terrestres": {
+    "dernier_scan": "2026-05-27",
+    "dernier_statut": "ok"
+  },
+  "tudigo": {
     "dernier_scan": "2026-05-27",
     "dernier_statut": "ok"
   }

@@ -1,4 +1,22 @@
 {
+  "basta.media/tribunal-association-defend-desobeissance-civile-face-prefecture-qui-refuse-subvention": {
+    "dernier_score": 5,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "centre-francais-fondations.org/annuaire-des-fonds-et-fondations": {
+    "dernier_score": 12,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "centre-francais-fondations.org/atelier-des-fondations": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
   "cooperative-oasis.org/nos-offres/fonciere-oasis": {
     "dernier_score": 9,
     "derniere_detection": "2026-05-26",
@@ -131,6 +149,48 @@
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
+  "fondation-patrimoine.org/c/reglement-mission-patrimoine/1882": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "fondation-patrimoine.org/c/s-engager/nous-donner/faire-un-legs-ou-une-donation/183": {
+    "dernier_score": 4,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "fondation-patrimoine.org/faire-un-don/fondation?selectedAmount=250": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "fondation-patrimoine.org/les-projets?macro=B%C3%A2ti&statuses=%5B%5D": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "fondation-patrimoine.org/les-projets?macro=Mobilier&statuses=%5B%5D": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "fondation-patrimoine.org/les-projets?macro=Naturel&statuses=%5B%5D": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "fondationdefrance.org/fr/actualites-de-fondations/la-fondation-riom-terre-dauvergne-fete-ses-10-ans": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa": {
     "dernier_score": 11,
     "derniere_detection": "2026-05-27",
@@ -161,6 +221,54 @@
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
+  "les-scic.coop/association": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "les-scic.coop/collectivite": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "les-scic.coop/createur": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "les-scic.coop/entreprise": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "les-scic.coop/l-agora-des-scic-rendez-vous-le-13-octobre": {
+    "dernier_score": 8,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "les-scic.coop/le-guide-juridique-des-scic": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "les-scic.coop/paroles-de-scic": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "missionbern.fr/": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
   "objectif-terres.org/annonces/9550": {
     "dernier_score": 3,
     "derniere_detection": "2026-05-27",
@@ -177,6 +285,30 @@
     "dernier_score": 3,
     "derniere_detection": "2026-05-24",
     "premiere_detection": "2026-05-23",
+    "statut": "nouveau"
+  },
+  "politis.fr/association-amis-politis": {
+    "dernier_score": 4,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "politis.fr/politis-fr-devenir-societaire": {
+    "dernier_score": 4,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "portailpatrimoine.fr/": {
+    "dernier_score": 5,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
+    "statut": "nouveau"
+  },
+  "portailpatrimoine.fr/resource/883/aides-fondation-du-patrimoine-aux-collectivites": {
+    "dernier_score": 5,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
   "ressources.terredeliens.org/les-ressources/le-portage-foncier-agricole-rapport-3": {
@@ -237,6 +369,12 @@
     "dernier_score": 3,
     "derniere_detection": "2026-05-27",
     "premiere_detection": "2026-05-23",
+    "statut": "nouveau"
+  },
+  "youtube.com/watch?v=kfX-92SKWwI": {
+    "dernier_score": 3,
+    "derniere_detection": "2026-05-27",
+    "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   }
 }

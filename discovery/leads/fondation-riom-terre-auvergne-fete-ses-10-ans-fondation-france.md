@@ -2,7 +2,7 @@
 slug: fondation-riom-terre-auvergne-fete-ses-10-ans-fondation-france
 nom: La Fondation Riom Terre d’Auvergne fête ses 10 ans - Fondation de France
 cree: '2026-05-28'
-dernier_repere: '2026-05-28'
+dernier_repere: '2026-05-27'
 score_cumule: 3
 sources_vues:
 - source: fondation-de-france-abritees

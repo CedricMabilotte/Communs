@@ -1,47 +1,49 @@
 # Veille — candidats du 2026-05-27
 
-32 candidat·s repéré·s sur 15 sources scannées (0 hors fenêtre de fréquence, 15 sources au total) — 30 hors fiches existantes, 15 sur un angle mort ; 0 écarté·s via discovery/ignore.txt. Score pondéré ; à examiner et promouvoir manuellement.
+23 candidat·s repéré·s sur 24 sources scannées (15 hors fenêtre de fréquence, 39 sources au total) — 23 hors fiches existantes, 8 sur un angle mort ; 0 écarté·s via discovery/ignore.txt. Score pondéré ; à examiner et promouvoir manuellement.
 
-**Pipeline** — 27 leads actifs ; 28 leads touchés cette passe ; 1 pré-fiches générées (Z2 → Z3, seuil 25, 2 indices min).
+**Pipeline** — 54 leads actifs ; 20 leads touchés cette passe ; 0 pré-fiches générées (Z2 → Z3, seuil 25, 2 indices min).
 
-### Pré-fiches générées dans cette passe — à arbitrer
+### Sources hors fenêtre (15)
 
-- `discovery/prefiches/terre-liens.yml`
+- terre-de-liens — fréquence hebdomadaire
+- terre-de-liens-ressources — fréquence hebdomadaire
+- encommun — fréquence hebdomadaire
+- cooperative-oasis — fréquence hebdomadaire
+- lurzaindia — fréquence hebdomadaire
+- larzac — fréquence hebdomadaire
+- reseau-cen — fréquence hebdomadaire
+- foncier-solidaire — fréquence hebdomadaire
+- rtes — fréquence hebdomadaire
+- habitat-participatif — fréquence hebdomadaire
+- habicoop — fréquence hebdomadaire
+- labo-ess — fréquence hebdomadaire
+- reseau-ecolieux — fréquence hebdomadaire
+- fonciere-chenelet — fréquence hebdomadaire
+- terres-de-sources — fréquence hebdomadaire
 
-## Nouveautés possibles (30)
+## Nouveautés possibles (23)
 
-- **[13 · ANGLE MORT]** [Terre de Liens - Don IFI - Agir pour la biodiversité, un geste terre à terre](https://terredeliens.org/national/actu/don-ifi-agirpourlabiodiv-13-04-2026/) — source : terre-de-liens — statut : nouveau — mots-clés : association, ferme, foncière, fondation, société civile
-- **[5]** [Plafonds de prix et de ressources en BRS pour 2026 – Foncier Solidaire France](https://www.foncier-solidaire.fr/plafonds-de-prix-et-de-ressources-en-brs-pour-2026/) — source : foncier-solidaire — statut : nouveau — mots-clés : BRS, OFS, association, foncier solidaire
-- **[5]** [Vie des OFS – Foncier Solidaire France](https://www.foncier-solidaire.fr/category/vie-des-ofs/) — source : foncier-solidaire — statut : nouveau — mots-clés : BRS, OFS, association, foncier solidaire
-- **[22 · ANGLE MORT]** [La Fondation Terre de Liens — Terre de Liens](https://terredeliens.org/national/la-fondation-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, bail, donation, ferme, foncière, fondation, fonds de dotation, société civile
-- **[14 · ANGLE MORT]** [Ferme de la Coccinelle — Terre de Liens](https://fermes.terredeliens.org/alsace/fermes-de-la-r%C3%A9gion-alsace/ferme-de-la-coccinelle/) — source : terre-de-liens — statut : revu — mots-clés : acquisition, association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [La Foncière Terre de Liens, première structure d'investissement solidaire agricole — Terre de Liens](https://terredeliens.org/national/fonciere-terre-de-liens/la-fonciere-terre-de-liens-premiere-structure-dinvestissement-solidaire-agricole/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les associations territoriales Terre de Liens — Terre de Liens](https://terredeliens.org/national/les-associations-territoriales-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Transmettre des terres — Terre de Liens](https://terredeliens.org/national/transmettre-des-terres/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les fermes Terre de Liens](https://terredeliens.org/national/hub-ferme/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [M'installer avec Terre de Liens — Terre de Liens](https://terredeliens.org/national/minstaller-avec-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les fermes Terre de Liens](https://fermes.terredeliens.org/national/hub-ferme/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [La Voulperie — Terre de Liens](https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/la-voulperie/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Sous le Bois — Terre de Liens](https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/sous-le-bois/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Domaine de Saint-Laurent — Terre de Liens](https://fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/domaine-de-saint-laurent/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les Prés de Trégrehen — Terre de Liens](https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-pr%C3%A9s-de-tr%C3%A9grehen/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Le Grand Bray — Terre de Liens](https://fermes.terredeliens.org/centre/fermes-de-la-r%C3%A9gion-centre/le-grand-bray/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[3 · ANGLE MORT]** [location Foncier communal cherche projets de maraîchage 1,3 Ha Fresnes-sur-Escaut (59970) • Hauts-de-France Voir l'annonce](https://www.objectif-terres.org/annonces/9550) — source : terre-de-liens — statut : revu — mots-clés : foncier
-- **[11]** [Gestion foncière – Larzac.org](https://larzac.org/accueil/un-territoire-organise/la-gestion-fonciere/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
-- **[11]** [What are Foncier Solidaire France and the concept of OFS/BRS ? – Foncier Solidaire France](https://www.foncier-solidaire.fr/principles-of-solidarity-land/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[11]** [Société Civile Gestion Foncière Agricole du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
-- **[11]** [Les avantages du BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/les-avantages-du-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[11]** [Les conditions d’accès à un logement BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[11]** [Revendre son logement en BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/revendre-son-logement-en-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[9]** [Les OFS agréés – Foncier Solidaire France](https://www.foncier-solidaire.fr/le-reseau/les-ofs-agrees/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire, foncière, fondation
-- **[7]** [Vivre dans un logement BRS – Foncier Solidaire France](https://www.foncier-solidaire.fr/les-conditions-dacces-a-un-logement-brs/vivre-dans-un-logement-brs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire, foncière
-- **[5]** [Événements | Le Labo de l'économie sociale et solidaire](https://www.lelabo-ess.org/petit-dejeuner-debat-l-entreprise-de-demain-existe-depuis-hier-histoire-des-scop-et-des-scic) — source : labo-ess — statut : revu — mots-clés : ESS, association, scic
-- **[5]** [A l’origine des OFS – Foncier Solidaire France](https://www.foncier-solidaire.fr/le-reseau/a-lorigine-des-ofs/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire
-- **[5]** [Plafonds d’éligibilité au BRS pour 2026 – Foncier Solidaire France](https://www.foncier-solidaire.fr/plafonds-deligibilite-au-brs-pour-2026/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, foncier solidaire
-- **[3]** [ESS, travail et emploi | Le Labo de l'économie sociale et solidaire](https://www.lelabo-ess.org/ess-travail-et-emploi) — source : labo-ess — statut : revu — mots-clés : ESS, fondation
-- **[3]** [La SCIC Terres de Sources](https://terresdesources.fr/la-scic-terres-de-sources/) — source : terres-de-sources — statut : revu — mots-clés : SCIC, scic
-
-## Déjà référencés (2)
-
-- [14] [Société Civile des Terres du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/) — larzac
-- [11] [Les principes du foncier solidaire – Foncier Solidaire France](https://www.foncier-solidaire.fr/le-reseau/les-principes-du-foncier-solidaire/) — foncier-solidaire
+- **[8 · ANGLE MORT]** [L'agora des Scic, rendez-vous le 13 octobre | Les Scic](https://www.les-scic.coop/l-agora-des-scic-rendez-vous-le-13-octobre) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, multisociétariat, scic
+- **[7 · ANGLE MORT]** [Association | Les Scic](https://www.les-scic.coop/association) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, scic
+- **[7 · ANGLE MORT]** [Créateur | Les Scic](https://www.les-scic.coop/createur) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, scic
+- **[7 · ANGLE MORT]** [Collectivité | Les Scic](https://www.les-scic.coop/collectivite) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, scic
+- **[7 · ANGLE MORT]** [Entreprise | Les Scic](https://www.les-scic.coop/entreprise) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, scic
+- **[7 · ANGLE MORT]** [Paroles de Scic | Les Scic](https://www.les-scic.coop/paroles-de-scic) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, scic
+- **[7 · ANGLE MORT]** [Le Guide juridique des Scic | Les Scic](https://www.les-scic.coop/le-guide-juridique-des-scic) — source : les-scic — statut : nouveau — mots-clés : SCIC, association, scic
+- **[3 · ANGLE MORT]** [Bienvenue sur le site de la Mission Patrimoine | Mission Bern](https://www.missionbern.fr/) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : fondation, patrimoine
+- **[12]** [Annuaire des Fonds et Fondations – CFF](https://www.centre-francais-fondations.org/annuaire-des-fonds-et-fondations/) — source : cff-annuaire — statut : nouveau — mots-clés : association, fondation, fonds de dotation
+- **[5]** [Les aides de la Fondation du patrimoine pour les collectivités](https://www.portailpatrimoine.fr/resource/883/aides-fondation-du-patrimoine-aux-collectivites) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : association, fondation, patrimoine
+- **[5]** [Au tribunal, une association défend la désobéissance civile face à la préfecture qui lui refuse des subventions - Basta! MenuGoRechercheGoMe connecterPartager l'articleSepaCBApple PayGoogle PayPayPal](https://basta.media/tribunal-association-defend-desobeissance-civile-face-prefecture-qui-refuse-subvention) — source : basta — statut : nouveau — mots-clés : association, fondation
+- **[5]** [Bienvenue | Portail du patrimoine](https://www.portailpatrimoine.fr/) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : association, fondation, patrimoine
+- **[4]** [Rejoindre l'association Les Ami·es de Politis](https://www.politis.fr/politis-fr-devenir-societaire/) — source : politis — statut : nouveau — mots-clés : association, scic
+- **[4]** [Rejoindre l'association Les Ami·es de Politis](https://www.politis.fr/association-amis-politis/) — source : politis — statut : nouveau — mots-clés : association, scic
+- **[4]** [Legs, donation et assurance-vie | Fondation du patrimoine](https://www.fondation-patrimoine.org/c/s-engager/nous-donner/faire-un-legs-ou-une-donation/183) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : donation, fondation, legs, patrimoine, transmission
+- **[3]** [La Fondation Riom Terre d’Auvergne fête ses 10 ans - Fondation de France](https://www.fondationdefrance.org/fr/actualites-de-fondations/la-fondation-riom-terre-dauvergne-fete-ses-10-ans) — source : fondation-de-france-abritees — statut : nouveau — mots-clés : association, fondation, terre
+- **[3]** [- YouTube](https://www.youtube.com/watch?v=kfX-92SKWwI) — source : les-scic — statut : nouveau — mots-clés : SCIC, scic
+- **[3]** [Atelier des fondations – CFF](https://www.centre-francais-fondations.org/atelier-des-fondations/) — source : cff-annuaire — statut : nouveau — mots-clés : fondation, intérêt général
+- **[3]** [Faire un don à la Fondation du patrimoine | Fondation du patrimoine](https://www.fondation-patrimoine.org/faire-un-don/fondation?selectedAmount=250) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : donation, fondation, legs, patrimoine
+- **[3]** [Rechercher un projet | Fondation du patrimoine](https://www.fondation-patrimoine.org/les-projets?statuses=%5B%5D&macro=B%C3%A2ti) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : donation, fondation, legs, patrimoine
+- **[3]** [Rechercher un projet | Fondation du patrimoine](https://www.fondation-patrimoine.org/les-projets?statuses=%5B%5D&macro=Mobilier) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : donation, fondation, legs, patrimoine
+- **[3]** [Rechercher un projet | Fondation du patrimoine](https://www.fondation-patrimoine.org/les-projets?statuses=%5B%5D&macro=Naturel) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : donation, fondation, legs, patrimoine
+- **[3]** [Règlement de la Mission Patrimoine | Fondation du patrimoine](https://www.fondation-patrimoine.org/c/reglement-mission-patrimoine/1882) — source : fondation-du-patrimoine — statut : nouveau — mots-clés : donation, fondation, legs, patrimoine

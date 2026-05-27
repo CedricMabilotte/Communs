@@ -4,7 +4,7 @@ nom: Au tribunal, une association défend la désobéissance civile face à la p
   qui lui refuse des subventions - Basta! MenuGoRechercheGoMe connecterPartager l'articleSepaCBApple
   PayGoogle PayPayPal
 cree: '2026-05-28'
-dernier_repere: '2026-05-28'
+dernier_repere: '2026-05-27'
 score_cumule: 5
 sources_vues:
 - source: basta

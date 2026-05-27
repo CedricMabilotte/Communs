@@ -2,7 +2,7 @@
 slug: legs-fondation
 nom: Legs Fondation
 cree: '2026-05-28'
-dernier_repere: '2026-05-28'
+dernier_repere: '2026-05-27'
 score_cumule: 4
 sources_vues:
 - source: fondation-du-patrimoine

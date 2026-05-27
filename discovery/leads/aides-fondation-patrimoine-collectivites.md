@@ -2,7 +2,7 @@
 slug: aides-fondation-patrimoine-collectivites
 nom: Les aides de la Fondation du patrimoine pour les collectivités
 cree: '2026-05-28'
-dernier_repere: '2026-05-28'
+dernier_repere: '2026-05-27'
 score_cumule: 5
 sources_vues:
 - source: fondation-du-patrimoine

@@ -2,7 +2,7 @@
 slug: atelier-cff
 nom: Atelier CFF
 cree: '2026-05-28'
-dernier_repere: '2026-05-28'
+dernier_repere: '2026-05-27'
 score_cumule: 3
 sources_vues:
 - source: cff-annuaire

@@ -2,7 +2,7 @@
 slug: guide-scic-scic
 nom: Guide Scic Scic
 cree: '2026-05-28'
-dernier_repere: '2026-05-28'
+dernier_repere: '2026-05-27'
 score_cumule: 7
 sources_vues:
 - source: les-scic
