@@ -138,6 +138,280 @@ sources:
     categorie_probable: [porteur, lieu]
     mots_cles: [SCIC, captage, foncier, eau, périurbain]
 
+  # ── voie A — militant alternatif et anti-fédérateur (session #8) ─────────
+  # Médias militants indépendants, presse politique de gauche, journaux
+  # locaux de luttes, pure-players engagés. Objectif : capter les lieux
+  # libérés peu visibles qui n'apparaissent pas dans les annuaires
+  # fédérateurs (Terre de Liens, Oasis, RTES, etc.) — occupations
+  # paysannes, ZAD, sanctuaires d'initiative, fermes en résistance,
+  # montages juridiques racontés depuis l'intérieur des luttes.
+  - id: reporterre
+    nom: "Reporterre — quotidien indépendant de l'écologie"
+    url: "https://reporterre.net/"
+    parser: deep_html
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [foncier, terres, ZAD, occupation, ferme, bail, fondation, commun, propriété collective]
+    frequence: hebdomadaire
+
+  - id: terrestres
+    nom: "Terrestres — revue d'écologie politique"
+    url: "https://www.terrestres.org/"
+    parser: html_static
+    type: conceptuel
+    categorie_probable: [lieu, porteur]
+    mots_cles: [terres, communs, foncier, propriété, démembrement, libération des terres, usufruit]
+    frequence: mensuelle
+
+  - id: lundi-matin
+    nom: "Lundi Matin — hebdo militant et théorique"
+    url: "https://lundi.am/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [ZAD, occupation, terres, ferme, lutte, foncier, commun, sanctuaire]
+    frequence: hebdomadaire
+
+  - id: basta
+    nom: "Basta! — pure-player social et écologique"
+    url: "https://basta.media/"
+    parser: deep_html
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [foncier, terres, paysan, ferme, bail, fondation, fonds de dotation, OFS, GFA, commun]
+    frequence: hebdomadaire
+
+  - id: politis
+    nom: "Politis — hebdo politique de gauche"
+    url: "https://www.politis.fr/"
+    parser: deep_html
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [foncier, terres, paysan, ZAD, occupation, ferme, propriété collective, communs]
+    frequence: hebdomadaire
+
+  - id: le-postillon
+    nom: "Le Postillon — journal grenoblois indépendant"
+    url: "https://www.lepostillon.org/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [terres, foncier, ferme, occupation, lutte, propriété collective, sanctuaire]
+    frequence: hebdomadaire
+
+  - id: la-brique
+    nom: "La Brique — journal lillois et nord critique"
+    url: "https://labrique.net/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [terres, foncier, ferme, occupation, lutte, ZAD, commun]
+    frequence: hebdomadaire
+
+  - id: lutopiks
+    nom: "Lutopiks — pure-player luttes et alternatives"
+    url: "https://lutopiks.fr/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [ZAD, occupation, terres, ferme, foncier, commun, propriété collective, fonds de dotation]
+    frequence: hebdomadaire
+
+  - id: mr-mondialisation
+    nom: "Mr Mondialisation — pure-player écologie et alternatives"
+    url: "https://mrmondialisation.org/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [terres, foncier, écolieu, ferme, propriété collective, commun, démembrement, sanctuaire]
+    frequence: hebdomadaire
+
+  - id: le-vent-se-leve
+    nom: "Le Vent Se Lève — magazine politique et écologie"
+    url: "https://lvsl.fr/"
+    parser: html_static
+    type: conceptuel
+    categorie_probable: [lieu, porteur]
+    mots_cles: [foncier, terres, communs, propriété collective, paysan, ZAD]
+    frequence: hebdomadaire
+
+  - id: lage-de-faire
+    nom: "L'âge de faire — bimestriel alternatives concrètes"
+    url: "https://lagedefaire-lejournal.fr/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [terres, ferme, foncier, écolieu, propriété collective, commun, fondation, fonds de dotation]
+    frequence: mensuelle
+
+  # ── voie C — registres juridiques rares (session #8) ─────────
+  # Registres publics et annuaires institutionnels qui listent par
+  # construction toutes les structures ayant adopté une forme juridique
+  # rare de portage foncier non lucratif : fondations reconnues
+  # d'utilité publique (FRUP), fonds de dotation, fondations sous égide
+  # (abritées), SCIC, conservatoires. Ces registres ne militent pas —
+  # ils énumèrent. À l'inverse des sources fédératrices militantes
+  # déjà couvertes (Terre de Liens, RTES, Foncier Solidaire France),
+  # ils peuvent révéler des acteurs invisibles au radar des réseaux,
+  # mais ayant adopté une signature juridique compatible avec la
+  # libération des terres. Fréquence trimestrielle : ces registres
+  # bougent peu, et un scan plus fréquent serait du bruit.
+  - id: cff-annuaire
+    nom: "Centre Français des Fonds et Fondations — annuaire"
+    url: "https://www.centre-francais-fondations.org/"
+    parser: html_static
+    type: annuaire
+    categorie_probable: [porteur]
+    mots_cles: [fondation reconnue d'utilité publique, fonds de dotation, fondation actionnaire, fondation foncière, dotation initiale, intérêt général, mission statutaire, foncier]
+    frequence: trimestrielle
+
+  - id: data-gouv-fondations
+    nom: "data.gouv.fr — jeux de données fondations RUP & fonds de dotation"
+    # url-racine — la page-mère précise (recherche tag « fondation » ou « fonds de dotation ») à confirmer lors du premier scan
+    url: "https://www.data.gouv.fr/fr/datasets/?q=fondation"
+    parser: html_static
+    type: annuaire
+    categorie_probable: [porteur]
+    mots_cles: [fondation reconnue d'utilité publique, fonds de dotation, FRUP, dotation initiale, intérêt général, irrévocabilité, mission statutaire]
+    frequence: trimestrielle
+
+  - id: fondation-de-france-abritees
+    nom: "Fondation de France — fondations sous égide"
+    # url-racine — l'annuaire interne des fondations abritées peut migrer ; page-mère exacte à confirmer
+    url: "https://www.fondationdefrance.org/fr/"
+    parser: deep_html
+    type: annuaire
+    categorie_probable: [porteur]
+    mots_cles: [fondation sous égide, fondation abritée, fonds de dotation, mécénat, dotation initiale, transmission, legs, intérêt général, foncier, terre]
+    frequence: trimestrielle
+
+  - id: fondation-du-patrimoine
+    nom: "Fondation du Patrimoine — fondations abritées et projets fonciers"
+    url: "https://www.fondation-patrimoine.org/"
+    parser: deep_html
+    type: annuaire
+    categorie_probable: [porteur, lieu]
+    mots_cles: [fondation abritée, fonds de dotation, transmission, donation, legs, patrimoine, foncier, terre, bail emphytéotique]
+    frequence: trimestrielle
+
+  - id: fnh-fondation
+    nom: "Fondation pour la Nature et l'Homme — programmes fonciers"
+    url: "https://www.fnh.org/"
+    parser: html_static
+    type: annuaire
+    categorie_probable: [porteur]
+    mots_cles: [fondation reconnue d'utilité publique, fondation à finalité écologique, mécénat foncier, terre, foncier, intérêt général, mission statutaire]
+    frequence: trimestrielle
+
+  - id: les-scic
+    nom: "Les Scic — annuaire national des SCIC"
+    # url-racine — la page-mère de l'annuaire SCIC peut être profonde ; page exacte à confirmer
+    url: "https://www.les-scic.coop/"
+    parser: html_static
+    type: annuaire
+    categorie_probable: [porteur, lieu]
+    mots_cles: [SCIC, coopérative foncière, coopérative d'intérêt collectif, foncier, terre, multisociétariat, intérêt général]
+    frequence: trimestrielle
+
+  - id: conservatoire-littoral
+    nom: "Conservatoire du littoral — propriétés acquises"
+    url: "https://www.conservatoire-du-littoral.fr/"
+    parser: deep_html
+    type: annuaire
+    categorie_probable: [porteur, lieu]
+    mots_cles: [conservatoire, foncier, terre, propriété protégée, bail emphytéotique, intérêt général, irrévocabilité]
+    frequence: trimestrielle
+
+  - id: agrasc-biens-affectes
+    nom: "AGRASC — biens confisqués affectés à fins d'intérêt général"
+    # url-racine — signal faible, la liste publique des biens affectés est dispersée ; page-mère exacte à confirmer
+    url: "https://www.agrasc.gouv.fr/"
+    parser: html_static
+    type: annuaire
+    categorie_probable: [lieu]
+    mots_cles: [biens confisqués, affectation, intérêt général, terre, foncier, association à patrimoine]
+    frequence: trimestrielle
+
+  # ── voie F — crowdfunding aboutis ≥ 18 mois (session #8) ─────────
+  # Les plateformes de crowdfunding hébergent des campagnes foncières et
+  # agricoles abouties : achats de terres, installations en SCIC/GFA/foncière
+  # collective, fonds de dotation amorcés par appel populaire. Une fois la
+  # collecte close avec succès et le projet effectivement réalisé, le lieu
+  # existe — et un délai ≥ 18 mois depuis la fin de campagne est essentiel
+  # pour qu'il soit documentable (montage juridique passé, foncier acquis).
+  # Parser dédié : scripts/parsers/crowdfunding.py — dispatch par plateforme.
+  - id: miimosa
+    nom: "Miimosa — crowdfunding agricole et alimentaire"
+    url: "https://www.miimosa.com/fr"
+    parser: crowdfunding
+    type: annuaire
+    categorie_probable: [lieu, porteur]
+    mots_cles: [installation, ferme, paysan, paysanne, acquisition foncière, achat de terres, SCIC, GFA, foncière, coopérative, installation agricole, transmission, foncier]
+    frequence: mensuelle
+    options:
+      plateforme: miimosa
+      delai_minimum_mois: 18
+
+  - id: bluebees
+    nom: "Blue Bees — crowdfunding agroécologique (en cours d'archivage)"
+    url: "https://bluebees.fr/fr/"
+    parser: crowdfunding
+    type: annuaire
+    categorie_probable: [lieu, porteur]
+    mots_cles: [installation, ferme, paysan, paysanne, acquisition foncière, foncière, SCIC, GFA, bail, agroécologie, reprise, foncier]
+    # Plateforme en sommeil depuis 2024 — la racine répond encore en lecture
+    # seule à l'heure de la rédaction (28/05/2026). Si elle disparaît, le
+    # parser bascule sur le snapshot Wayback Machine (web.archive.org).
+    # Fréquence basse : la matière est stable, pas la peine de scruter.
+    frequence: trimestrielle
+    options:
+      plateforme: bluebees
+      delai_minimum_mois: 18
+
+  - id: lita-co
+    nom: "Lita.co — investissement à impact (filtre foncier-agricole strict)"
+    url: "https://fr.lita.co/"
+    parser: crowdfunding
+    type: annuaire
+    categorie_probable: [porteur, lieu]
+    mots_cles: [installation agricole, ferme, paysan, paysanne, acquisition foncière, achat de terres, SCIC, GFA, foncière, coopérative, transmission, foncier, bail rural]
+    # Plateforme généraliste — le parser durcit le filtre thématique pour
+    # éliminer énergie / santé / mobilité (mode filtre_strict côté code).
+    frequence: mensuelle
+    options:
+      plateforme: lita
+      delai_minimum_mois: 18
+
+  - id: kisskissbankbank
+    nom: "KissKissBankBank — campagnes engagées foncier-agricole"
+    url: "https://www.kisskissbankbank.com/fr"
+    parser: crowdfunding
+    type: annuaire
+    categorie_probable: [lieu, porteur]
+    mots_cles: [installation, ferme, paysan, paysanne, acquisition foncière, achat de terres, foncière, SCIC, GFA, coopérative, transmission, foncier]
+    # Plateforme massivement généraliste — filtre thématique strict côté code,
+    # URL d'index restreintes aux catégories Écologie / Artisanat / succès.
+    # Fréquence mensuelle : volume élevé, matière hors-thématique dominante.
+    frequence: mensuelle
+    options:
+      plateforme: kisskissbankbank
+      delai_minimum_mois: 18
+
+  - id: tudigo
+    nom: "Tudigo — investissement participatif PME locales (agri-environnement)"
+    url: "https://www.tudigo.co/"
+    parser: crowdfunding
+    type: annuaire
+    categorie_probable: [porteur, lieu]
+    mots_cles: [installation agricole, ferme, paysan, paysanne, SCIC, GFA, foncière, coopérative, acquisition foncière, transmission, foncier]
+    # Plateforme généraliste (cafés, commerces, PME locales) — filtre
+    # thématique strict. Optionnelle dans la voie F : on y trouve des
+    # foncières citoyennes et des fermes en SCIC, mais le volume est faible.
+    frequence: trimestrielle
+    options:
+      plateforme: tudigo
+      delai_minimum_mois: 18
+
 # Mots-clés transverses utilisés au scoring de découverte (pondérés ×2)
 mots_cles_transverses:
   - "libération des terres"

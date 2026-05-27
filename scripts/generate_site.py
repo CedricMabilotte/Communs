@@ -3348,17 +3348,27 @@ def render_revue(revue, articles, cfg):
         co_html = ("<p class=\"revue-meta\"><strong>Co-éditeur·rice·s :</strong> "
                    + ", ".join(e(clean(str(c))) for c in co_eds) + "</p>")
 
-    # bouton PDF — uniquement si ≥ 2 articles publiés
+    # bouton PDF — dès le premier article publié (session #8)
     pdf_html = ""
-    if len(articles) >= 2:
+    if len(articles) >= 1:
         today_compact = datetime.date.today().strftime("%Y%m%d")
         pdf_name = f"{slug}-edition-{today_compact}.pdf"
+        if len(articles) >= 2:
+            pdf_desc = (
+                "Une édition PDF reprend l'ensemble des articles de cette "
+                "revue, mis en pages comme un livre de lecture (couverture, "
+                "table des matières, articles à la suite, demi-format A5).")
+            pdf_label = "Télécharger l'édition"
+        else:
+            pdf_desc = (
+                "Le premier article de cette revue est disponible en PDF, "
+                "mis en pages comme un livre de lecture (couverture, "
+                "demi-format A5).")
+            pdf_label = "Télécharger le PDF"
         pdf_html = f"""<aside class="revue-pdf">
-  <h4>Édition cumulative</h4>
-  <p>Une édition PDF reprend l'ensemble des articles de cette revue, mis en
-  pages comme un livre de lecture (couverture, table des matières, articles à
-  la suite, demi-format A5).</p>
-  <p><a class="cta-pdf" href="{e(pdf_name)}" download>Télécharger l'édition du
+  <h4>Édition imprimable</h4>
+  <p>{pdf_desc}</p>
+  <p><a class="cta-pdf" href="{e(pdf_name)}" download>{pdf_label} du
   {e(_date_fr(datetime.date.today().isoformat()))} (PDF)</a></p>
 </aside>"""
 
@@ -5034,8 +5044,8 @@ def main():
                 art_slug = _article_url_part(art)
                 write(SITE / "revues" / rslug / art_slug / "index.html",
                       render_article(r, art, cfg))
-            # PDF — seulement si ≥ 2 articles publiés
-            if len(r["articles"]) >= 2:
+            # PDF — dès le premier article publié (session #8)
+            if len(r["articles"]) >= 1:
                 build_revue_pdf(r, r["articles"], cfg)
         print(f"Revues : {len(revues)} revue(s) générée(s), "
               f"{sum(len(r['articles']) for r in revues)} article(s).")
