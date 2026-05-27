@@ -519,10 +519,51 @@ def main():
     sources_sante = []
     raw_buffer: dict[str, list[dict]] = {}  # Z0 — par source
     for src in sources_eligibles:
+        sid = src.get("id", "?")
         url = src.get("url")
         if not url:
             continue
-        print(f"· {src.get('id','?')} — {url}  [{src.get('_frequence_resolue')}]")
+        parser_type = src.get("parser", "html_static")
+
+        # Parser dédié — voie F crowdfunding (session #8). Le dispatcher
+        # produit directement des items au format Z0 ; on saute la moisson
+        # HTML classique pour cette source.
+        if parser_type == "crowdfunding":
+            print(f"· {sid} — {url}  [{src.get('_frequence_resolue')}] (parser: crowdfunding)")
+            try:
+                from parsers.crowdfunding import fetch_crowdfunding_source
+                items = fetch_crowdfunding_source(src, src.get("options", {}))
+            except Exception as exc:
+                print(f"  ! parser crowdfunding {sid} : {exc}",
+                      file=sys.stderr)
+                sources_sante.append((sid, f"parser KO", 0))
+                marquer_scan(sid, freq_log, today_d, status="parser KO")
+                continue
+            n_src = 0
+            src_raw: list[dict] = []
+            for item in items:
+                nu = item.get("url_norm") or norm_url(item.get("url", ""))
+                if nu in seen_links:
+                    continue
+                seen_links.add(nu)
+                src_raw.append(item)
+                anchor = item.get("anchor", "")
+                anchor_score, _ = score_candidate(
+                    anchor, src.get("mots_cles", []), transverse, strong_kw)
+                if anchor_score >= 1:
+                    prelim.append({
+                        "link": item.get("url"), "norm": nu,
+                        "anchor": anchor[:200],
+                        "anchor_score": anchor_score, "src": src,
+                    })
+                    n_src += 1
+            if src_raw:
+                raw_buffer[sid] = src_raw
+            sources_sante.append((sid, "ok", n_src))
+            marquer_scan(sid, freq_log, today_d, status="ok")
+            continue
+
+        print(f"· {sid} — {url}  [{src.get('_frequence_resolue')}]")
         html_doc = fetch(url)
         time.sleep(POLITE_DELAY)
         n_src = 0

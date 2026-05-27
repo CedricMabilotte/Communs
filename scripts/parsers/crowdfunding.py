@@ -59,7 +59,7 @@ from urllib.parse import parse_qsl, urlencode, urljoin, urlparse
 # ─────────────────────────────────────────────────────────────────────────────
 
 UA = ("CommunsVeilleBot/1.0 (+https://communs.actitude.org ; "
-      "veille documentaire ; voie F — crowdfunding aboutis)")
+      "veille documentaire ; voie F crowdfunding aboutis)")
 TIMEOUT = 20
 HTML_MAX_BYTES = 2_500_000
 
