@@ -48,7 +48,7 @@ concept_central:
     collectivement, d'intérêt général, partagé avec le vivant non-humain. Le
     terme n'est pas un concept juridique codifié : il appartient au vocabulaire
     des mouvements de l'agriculture paysanne, des communs et de l'éducation
-    populaire. La refonte #3 en élargit le sens — « libérer » ne se borne plus
+    populaire. Le cadre en élargit le sens — « libérer » ne se borne plus
     à « soustraire au marché », qui n'est qu'une forme d'exploitation abusive
     parmi d'autres ; un collectif hors-marché peut, lui aussi, épuiser son sol.
   en_clair: >
@@ -99,7 +99,7 @@ triptyque:
       definition: >
         Le droit de se servir de la chose : l'habiter, la cultiver, s'y réunir,
         y travailler. Le commun le confie à un collectif d'usager·es qui le
-        gouverne ; et — c'est un apport de la refonte #3 — il cesse d'en faire
+        gouverne ; et il cesse d'en faire
         un monopole humain : le vivant non-humain est reconnu cohabitant du
         lieu, dont l'usage est pris en compte.
       en_clair: >
@@ -128,7 +128,7 @@ triptyque:
         consumer, la détruire. C'est le droit le plus lourd de conséquences. Il
         a deux faces. Une face juridique — aliéner, spéculer — que le projet
         neutralise déjà par l'inaliénabilité. Une face matérielle — épuiser,
-        dégrader le fonds — que la refonte #3 neutralise à son tour.
+        dégrader le fonds — que le cadre neutralise à son tour.
         « Soustraire à l'exploitation abusive », c'est désarmer l'abusus dans
         ses deux faces.
       en_clair: >
@@ -710,6 +710,6 @@ editorial:
   principes:
     - "Distinguer toujours les faits vérifiés des points non confirmés."
     - "Ne jamais inventer un montage, un chiffre ou un article de loi."
-    - "Le ranking est une grille d'analyse explicite, pas un jugement de valeur."
+    - "Le classement est une évaluation au regard d'un cadre explicite et contestable, non un label."
     - "Citer les sources ; respecter le droit d'auteur (reformuler)."
     - "Écrire à deux voix : tout concept porte sa définition exacte et son `en_clair:`."

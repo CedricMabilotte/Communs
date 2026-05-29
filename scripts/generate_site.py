@@ -31,6 +31,12 @@ _MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet",
 _today = datetime.date.today()
 BUILD_DATE_FR = f"{_today.day} {_MOIS_FR[_today.month - 1]} {_today.year}"
 
+# Version publique du site — affichée discrètement en pied de page et reprise
+# dans le journal des versions (changelog.html). Version majeure 2.0 = modèle
+# d'évaluation renforcé.
+SITE_VERSION = "2.0"
+SITE_VERSION_DATE = "mai 2026"
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config"
 SITE = ROOT / "site"
@@ -707,8 +713,8 @@ def page(title, body, active, depth=0, project=None, description="",
 <footer class="footer">
   <div class="wrap">
     <p>{e(pname)} — annuaire critique des montages de libération des terres en
-    France. Les données sont sourcées ; l'Indice de libération est une grille
-    d'analyse explicite, non un jugement de valeur.</p>
+    France. Les données sont sourcées ; l'Indice de libération est une évaluation
+    au regard d'un cadre explicite et contestable, non un label.</p>
     <p class="foot-links"><a href="{up}methode.html">Méthode</a> ·
     <a href="{up}themes.html">Thèmes</a> ·
     <a href="{up}comparer.html">Comparer</a> ·
@@ -717,7 +723,9 @@ def page(title, body, active, depth=0, project=None, description="",
     <a href="{up}modeles.html">Modèles voisins</a> ·
     <a href="{up}glossaire.html">Glossaire</a> ·
     <a href="{up}suggerer.html">Proposer un lieu</a> ·
+    <a href="{up}changelog.html">Journal des versions</a> ·
     <a href="{up}data.json">Données ouvertes (JSON)</a></p>
+    <p>Terres Libérées · v{SITE_VERSION} · {SITE_VERSION_DATE}</p>
     <p>Site statique, généré automatiquement le {e(BUILD_DATE_FR)}.</p>
   </div>
 </footer>
@@ -2705,8 +2713,8 @@ page <a href="regimes.html#poles">Régimes et pôles du sol</a>.</p>
 <li>Les fiches reposent sur des sources publiques ; les montages réels peuvent
 être plus précis ou avoir évolué. Chaque fiche distingue les faits vérifiés des
 points non confirmés.</li>
-<li>L'Indice est une grille d'analyse explicite, reproductible et discutable —
-pas un label ni un jugement de valeur.</li>
+<li>L'Indice est une évaluation au regard d'un cadre explicite, reproductible et
+contestable — non un label.</li>
 <li>Une part élevée de critères « inconnu » rend une note peu fiable : la
 complétude est toujours affichée.</li>
 <li>Le « montage de référence » (nue-propriété d'intérêt général + usufruit
@@ -3267,6 +3275,38 @@ portant sur ces angles morts sont particulièrement bienvenus.</p></section>
                 description="Comment signaler un lieu ou un montage réel de "
                             "libération des terres à référencer dans l'annuaire.",
                 path="suggerer.html")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Page — Journal des versions (changelog)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def render_changelog(cfg):
+    """Journal public des versions : les évolutions majeures de l'annuaire et de
+    sa méthode, en langage public, sans détail interne de fabrication."""
+    project = cfg["concepts"]["project"]
+    body = f"""<h1>Journal des versions</h1>
+<p class="lead">Les évolutions majeures de l'annuaire et de sa méthode. Le site
+est révisé en continu ; seules les étapes structurantes sont consignées ici.</p>
+
+<section><h2 class="sec">v{SITE_VERSION} — {SITE_VERSION_DATE}</h2>
+<p class="prose">Modèle d'évaluation renforcé. Chaque lieu reçoit désormais un
+<strong>verdict</strong> en trois niveaux — marchand, hybride, sanctuaire — à
+côté de l'Indice chiffré. La chaîne lieu / porteur / usufruitier est lue de
+façon relationnelle : la nature d'un maillon se juge à sa place dans la chaîne,
+pas en soi. Le statut épistémique de chaque fiche — ce qui est vérifié, ce qui
+reste à confirmer — est affiché explicitement.</p></section>
+
+<section><h2 class="sec">v1.x — {SITE_VERSION_DATE}</h2>
+<p class="prose">Première publication de l'annuaire et de la méthode : recensement
+des montages réels de libération des terres en France, Indice de libération à
+cinq axes, grilles d'analyse et glossaire.</p></section>
+
+<p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
+    return page("Journal des versions", body, "", project=project,
+                description="Les évolutions majeures de l'annuaire « Terres "
+                            "Libérées » et de sa méthode d'évaluation.",
+                path="changelog.html")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -4086,7 +4126,7 @@ main.wrap{padding-bottom:4rem;}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
 .tag-reseau{background:var(--ink);}
-/* verdict calculé du lieu — chantier 1bis */
+/* verdict calculé du lieu */
 .verdict{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
  font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-pill);
  white-space:nowrap;border:1.5px solid currentColor;}
@@ -4094,7 +4134,7 @@ main.wrap{padding-bottom:4rem;}
 .verdict-hybride{color:var(--gold-dk);background:rgba(138,100,32,.10);}
 .verdict-marchand{color:var(--terra-dk);background:rgba(143,63,37,.10);}
 .verdict-na{color:var(--faint);background:transparent;font-weight:600;}
-/* étiquettes de contexte de chaîne — porteur / réseau (session #4) */
+/* étiquettes de contexte de chaîne — porteur / réseau */
 .ctx-labs{display:inline;}
 .ctx-lab{display:inline-block;vertical-align:middle;white-space:nowrap;
  margin:.1rem 0 .1rem .4rem;font-size:.68rem;font-weight:400;
@@ -4258,10 +4298,10 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .score-cap{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
  color:var(--muted);margin:0 0 .35rem;}
 /* un seul séparateur : le gap suffit, le filet gauche est retiré (design B, M5) */
-/* session #5 — un peu moins de largeur au centre (axes), un peu plus à Repères :
+/* un peu moins de largeur au centre (axes), un peu plus à Repères :
    évite que Repères saute à la ligne quand axes-calc a un texte long. */
 .score-axes{flex:1;min-width:200px;}
-/* 3e colonne du panneau de score — repères compacts (chantier 7) */
+/* 3e colonne du panneau de score — repères compacts */
 .score-bref{flex:0 0 14rem;font-size:.8rem;}
 .score-bref dl{margin:.1rem 0 0;}
 .sb-item{display:flex;justify-content:space-between;gap:.7rem;
@@ -4427,7 +4467,7 @@ th.sortable[aria-sort=descending]::after{content:" \\25BC";opacity:1;}
  background:var(--card);padding:.25rem .6rem;border-radius:var(--radius-sm);}
 .pal-chip em{color:var(--faint);font-style:normal;}
 
-/* axe cards (methode) — élargis d'un tiers (session #7 post-clôture) */
+/* axe cards (methode) — élargis d'un tiers */
 .axe-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(307px,1fr));
  margin:1.1rem 0;}
 .axe-card{border:1px solid var(--line);border-top:3px solid var(--c,#999);
@@ -5146,6 +5186,7 @@ def main():
     write(SITE / "themes.html", render_themes(all_sc, cfg))
     write(SITE / "comparer.html", render_comparer(all_sc, cfg))
     write(SITE / "suggerer.html", render_suggerer(cfg))
+    write(SITE / "changelog.html", render_changelog(cfg))
     write(SITE / "404.html", render_404(cfg))
 
     # Revues — pensée publique éditoriale (session #7)

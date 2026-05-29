@@ -508,8 +508,8 @@ grilles:
             axe: 2
             poids: 3
             definition: >
-              Critère ALIGNÉ sur l'axe `nature_interet` (chantier 1bis, session
-              #4) : se lit sur le pire maillon de la chaîne lieu/porteur/
+              Critère ALIGNÉ sur l'axe `nature_interet` : se lit sur le pire
+              maillon de la chaîne lieu/porteur/
               usufruitier. « oui » : tous les maillons sont `non_lucrative`
               ou `commerciale_desactivee` (forme commerciale dont 100 % du
               capital est aux mains d'organismes d'intérêt général) ;
@@ -519,7 +519,7 @@ grilles:
               ordinaire, GAEC, EARL, société civile agricole) ou
               `privee_individuelle` (personne physique). Quel que soit le
               critère saisi, le score d'axe 2 du lieu est ensuite plafonné
-              par la chaîne (session #5, `plafonds_chaine.ax2_par_nature`
+              par la chaîne (plafond de chaîne, voir `plafonds_chaine.ax2_par_nature`
               dans ranking.yml) — la chaîne reste la source unique de vérité.
       - id: pouvoir
         label: "Le pouvoir — gouvernance citoyenne"

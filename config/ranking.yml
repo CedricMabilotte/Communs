@@ -63,7 +63,7 @@ axes:
       Mesure la neutralisation de l'abusus dans ses deux faces. Face juridique :
       la soustraction au marché — inaliénabilité, parts ou titres non cessibles,
       nature protectrice du porteur, clause de dévolution désintéressée, origine
-      non spéculative de l'acquisition. Face matérielle (refonte #3) : la
+      non spéculative de l'acquisition. Face matérielle : la
       non-dégradation du fonds — le sol et le milieu ne sont ni épuisés ni
       consumés. Les critères de la face juridique se lisent chez le porteur ;
       ceux de la face matérielle, sur le lieu lui-même.
@@ -71,7 +71,7 @@ axes:
       Une terre libérée est une terre qu'on ne peut plus ni vendre, ni abîmer.
       Cet axe regarde les deux verrous : celui qui empêche de la remettre sur
       le marché, et celui qui empêche d'en épuiser le sol. Le second est
-      l'apport de la refonte — un sol qu'on cultive doit pouvoir se transmettre
+      l'apport du cadre élargi — un sol qu'on cultive doit pouvoir se transmettre
       aussi vivant qu'on l'a reçu.
   - id: 2
     label: "La structure"
@@ -87,8 +87,8 @@ axes:
       effective (capital non rémunéré), indépendance vis-à-vis d'une logique de
       rendement, gestion désintéressée. C'est l'axe qui démasque les « faux
       amis ». La nature commerciale s'y lit aussi, concrètement, comme la
-      subordination d'un travail salarié à une autorité de marché (refonte #3 —
-      une lecture, sans critère neuf). Lu sur toute la chaîne : le maillon le
+      subordination d'un travail salarié à une autorité de marché
+      (une lecture, sans critère neuf). Lu sur toute la chaîne : le maillon le
       plus faible commande.
     en_clair: >
       Cet axe vérifie que le montage est vraiment de nature non lucrative, et
@@ -126,13 +126,13 @@ axes:
       Mesure la vocation d'intérêt général d'initiative citoyenne : objet
       d'intérêt général, public non restreint, ancrage territorial et
       ouverture, redevabilité publique. La reconnaissance d'État est un simple
-      tag informatif, jamais un bonus. La refonte #3 élargit le cercle des
+      tag informatif, jamais un bonus. Le cadre élargit le cercle des
       bénéficiaires : faire du lieu un habitat pour le vivant non-humain —
       cohabitant, et non décor — est une finalité à part entière. Lu sur toute
       la chaîne.
     en_clair: >
       Cet axe demande pour qui le lieu existe : pour ses seuls membres, ou
-      au-delà — un voisinage, un territoire ? Et, depuis la refonte, pas
+      au-delà — un voisinage, un territoire ? Et pas
       seulement pour les humains : un lieu qui fait place aux vivants qui
       l'habitent porte, lui aussi, une finalité ouverte.
   - id: 5
@@ -147,9 +147,9 @@ axes:
       Et le collectif usager peut-il maîtriser le lieu durablement ?
     description: >
       Mesure le régime d'usage et sa sécurité dans le temps. Non marchand :
-      gratuité, don, troc, ou loyer soutenable et réinvesti. Non abusif
-      (refonte #3) : l'usage ne dégrade pas le lieu — il prélève sans épuiser.
-      Hospitalier (refonte #3) : le lieu fait une place au vivant non-humain à
+      gratuité, don, troc, ou loyer soutenable et réinvesti. Non abusif :
+      l'usage ne dégrade pas le lieu — il prélève sans épuiser.
+      Hospitalier : le lieu fait une place au vivant non-humain à
       son échelle, qu'il soit rural ou urbain — une haie, une mare, une cour
       comptent. Et sûr : durée et renouvellement de l'usage, sécurité de
       jouissance, articulation loyale avec le porteur. C'est l'axe relationnel,
@@ -204,7 +204,7 @@ chaine:
     - axe: 1
       regle: "Face juridique (soustraction au marché) lue chez le PORTEUR —
               seul détenteur de la nue-propriété. Face matérielle
-              (non-dégradation du fonds, refonte #3) lue sur le LIEU —
+              (non-dégradation du fonds) lue sur le LIEU —
               réalisée par le critère `milieu_protege` logé dans la grille du
               lieu."
     - axe: 2
@@ -217,7 +217,7 @@ chaine:
     - axe: 5
       regle: "Régime marchand et sécurité lus dans la CONVENTION porteur/
               usufruitier — bail, loyer, sécurité de jouissance. Le caractère
-              non abusif et hospitalier de l'usage (refonte #3) se lit sur le
+              non abusif et hospitalier de l'usage se lit sur le
               LIEU — critères `usage_non_degradant` et `place_au_vivant` logés
               dans la grille du lieu."
   coherence: >
