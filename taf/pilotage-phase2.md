@@ -161,9 +161,13 @@ des résidus « pas un jugement de valeur » (A4).
 - **Vague 3 — carte B1 faite** (`939c083`) : carte Leaflet, 44 lieux, couleur par verdict.
 - **Vague 4 — accueil B4 fait** (`bab7ebd`) : manifeste assumé, chiffres-clés (0 sommet),
   entrées par intention, retrait des cards en-tête.
-- **Reste** : vague 5 (magazine B2, 5 récits dont NDDL — parallélisable) ; puis
-  **refonte nav par intentions** (désormais possible : Dossiers existeront) ; puis
-  push groupé. Nav refonte volontairement repoussée jusqu'à l'existence des Dossiers.
+- **Vague 5 — magazine B2 fait** (`e62c443`) : section Dossiers + 5 récits (Pommiers,
+  Rayol, Larzac, EBR, NDDL), voix Eozen, lien bidirectionnel fiche↔dossier.
+- **Vague 6 — nav par intentions faite** (`2989065`) : nav à 5 entrées (Accueil ·
+  Annuaire · Carte · Dossiers · Méthode), hub annuaire.html, footer en 2 groupes.
+- **PHASE B COMPLÈTE.** Checker de clôture : freshness 0 sur 156 pages, garde-fous
+  verts. 14 commits locaux prêts. **Reste : le push groupé** (acte volontaire de
+  l'opérateur — déploie communs.actitude.org via GitHub Actions).
 
 ### Clôture
 
