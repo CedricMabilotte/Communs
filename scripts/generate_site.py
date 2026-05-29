@@ -1358,7 +1358,11 @@ def compute_verdict(fiche, by_uid):
     regeneration = g.get("milieu_protege") == "oui"          # face opposable (option a)
     finalite = (g.get("usage_non_marchand") in ("oui", "partiel")
                 and g.get("usage_interet_general") == "oui")
-    non_subord = g.get("non_subordination") == "oui"         # proxy unidirectionnel
+    # proxy UNIDIRECTIONNEL (mini-strat #10) : seul un salariat/une hiérarchie
+    # CONSTATÉ (`non`) ferme le sommet ; `oui`/`partiel`/`inconnu`/absent sont
+    # neutres — on ne bloque jamais le sommet par le seul silence d'un critère
+    # peu peuplé (sinon vide par artefact de peuplement, non par exigence).
+    non_subord = g.get("non_subordination") != "non"
     sommet = foncier and vivant and regeneration and finalite and non_subord
     return "sanctuaire" if sommet else "hybride"
 

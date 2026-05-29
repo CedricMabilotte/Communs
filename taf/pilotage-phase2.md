@@ -87,9 +87,25 @@ documenter ; la *strictness des co-gates* (faut-il que `usage_non_marchand` et
 `non_subordination` soient des gates durs ou des gloses — discipline à 3 statuts
 L-meta-8) est **renvoyée à la mini-strat Phase B**. Checker MARS-prod : effet
 mineur documenté (le critère neuf `non_subordination` ajoute un angle mort →
-−1,64 IdL moyen sur 44 lieux, max −2 ; à résorber par peuplement). **Commit fait ;
-push tenu** jusqu'à ce que la couche d'explication publique (méthode + A3) reflète
-le nouveau modèle — éviter d'exposer des verdicts changés sans leur cadre.
+−1,64 IdL moyen sur 44 lieux, max −2 ; à résorber par peuplement).
+
+**Phase A bouclée (session #10).** Préconditions du brief refonte-totale §6 :
+1. **A1 codé et stable** — fait (commit `aabd433`).
+2. **Cadre canonique** — `brief-cadre-conceptuel-communs.md` réécrit en énoncé #9+A1
+   (ancrage polanyien, verdict, co-gates, observable-gaté/posture-glose, statut
+   épistémique), pointant vers `04-cadre-theorique-complet.md` exhaustif.
+3. **Cible** — utilité publique, acquise #9.
+4. **Fraîcheur** — actée comme règle (D1).
+Plus l'**alignement public** (commit `1189966`) : page méthode dotée d'une section
+« verdict » + statut épistémique conventionnel ; encart fiche A3 (verdict×palier×
+Indice). **Reste avant un site pleinement frais** : l'hygiène D1 des cicatrices
+(« refonte #3 » ×10 en méthode, « session #N » en grilles) — **chantier Phase B**,
+non introduit par #10.
+
+**Push** : désormais défendable (modèle corrigé + expliqué). Seul manque la
+fraîcheur D1 (Phase B). À l'arbitrage opérateur : pousser maintenant (fix Pommiers
++ explication en ligne, cicatrices pré-existantes inchangées) ou grouper avec
+Phase B.
 
 ### Phase A — le moteur (en cours, session #10+)
 
