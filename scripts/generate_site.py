@@ -622,6 +622,7 @@ NAV = [
     ("porteurs.html", "Porteurs"),
     ("usufruitiers.html", "Usufruitiers"),
     ("reseaux.html", "Réseaux"),
+    ("carte.html", "Carte"),
     ("revues/index.html", "Revues"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
@@ -2141,9 +2142,11 @@ def render_catalogue(cat, fiches_sc, cfg):
                 f'<button class="fbtn active" data-fk="region" data-fv="all" '
                 f'aria-pressed="true">Toutes</button>{reg_btns}</div>')
 
+    carte_lien = ('\n<a href="carte.html">Voir les lieux sur la carte →</a>'
+                  if cat == "lieu" else "")
     body = f"""{tri_defs(axes_cfg)}<h1>{e(title)}</h1>
 <p class="lead">{e(intro)}
-<a href="methode.html">Comprendre l'Indice et les axes →</a></p>
+<a href="methode.html">Comprendre l'Indice et les axes →</a>{carte_lien}</p>
 {modeles_note}
 <div class="toolbar">
   <input type="search" id="q" placeholder="Rechercher un nom…" aria-label="Rechercher par nom" aria-controls="resultats">
@@ -2278,6 +2281,155 @@ chiffrée.</p>
     return page("Classement", body, "classement.html", project=project,
                 description="Classement des montages de libération des terres par l'Indice de libération.",
                 path="classement.html", jsonld=[itemlist])
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Pages — carte
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Couleurs des marqueurs par verdict — alignées sur les badges verdict du CSS
+# (.verdict-sanctuaire / -hybride / -marchand) et la charte (variables --green-dk,
+# --gold-dk, --terra-dk). `None` (verdict à établir) → gris (--faint).
+CARTE_VERDICT_COULEURS = {
+    "marchand": "#8f3f25",    # --terra-dk
+    "hybride": "#8a6420",     # --gold-dk
+    "sanctuaire": "#356026",  # --green-dk
+    None: "#6e6655",          # --faint
+}
+CARTE_VERDICT_LABELS = {
+    "marchand": "Montage marchand",
+    "hybride": "Montage hybride",
+    "sanctuaire": "Sanctuaire",
+    None: "Verdict à établir",
+}
+
+# Extraction lon,lat depuis l'URL geoportail (paramètre c=LON,LAT).
+_GEOPORTAIL_C = re.compile(r"[?&]c=(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)")
+
+
+def _coords_from_geoportail(url):
+    """Renvoie (lon, lat) extraits d'une URL geoportail, ou None si absente
+    ou non conforme. Ne fabrique jamais de coordonnées."""
+    if not url:
+        return None
+    m = _GEOPORTAIL_C.search(str(url))
+    if not m:
+        return None
+    return float(m.group(1)), float(m.group(2))
+
+
+def carte_markers(all_sc, by_uid):
+    """Construit (markers, omis) pour la carte des lieux.
+
+    Un marqueur par lieu géolocalisé : {lat, lon, nom, uid, verdict,
+    verdict_label, idl, palier, commune}. Les lieux sans coordonnées valides
+    sont renvoyés à part (liste de (uid, nom)) pour le compte-rendu."""
+    markers, omis = [], []
+    for f, sc in all_sc:
+        if f.get("categorie") != "lieu":
+            continue
+        loc = f.get("localisation", {}) or {}
+        coords = _coords_from_geoportail(loc.get("geoportail"))
+        if coords is None:
+            omis.append((f["uid"], f.get("nom", f["uid"])))
+            continue
+        lon, lat = coords
+        verdict = compute_verdict(f, by_uid)
+        palier = sc.get("palier")
+        commune = clean(loc.get("commune") or "")
+        dept = clean(loc.get("departement") or "")
+        commune_dept = " — ".join(x for x in (commune, dept) if x)
+        markers.append({
+            "lat": lat, "lon": lon,
+            "nom": f.get("nom", f["uid"]), "uid": f["uid"],
+            "verdict": verdict or "",
+            "verdict_label": CARTE_VERDICT_LABELS.get(verdict, ""),
+            "idl": sc.get("idl"),
+            "palier": palier["label"] if palier else "",
+            "commune": commune_dept,
+        })
+    return markers, omis
+
+
+def render_carte(all_sc, cfg, by_uid):
+    project = cfg["concepts"]["project"]
+    markers, omis = carte_markers(all_sc, by_uid)
+    n = len(markers)
+
+    # données des marqueurs en JSON inline — pas de dépendance externe hors
+    # Leaflet + tuiles OSM. json.dumps n'émet pas de balise </script> littérale.
+    data_js = json.dumps(markers, ensure_ascii=False)
+    couleurs_js = json.dumps(
+        {k or "": v for k, v in CARTE_VERDICT_COULEURS.items()},
+        ensure_ascii=False)
+
+    # légende des couleurs de verdict (ordre : sanctuaire → hybride → marchand →
+    # à établir). Symétrique : une pastille de même taille par verdict.
+    leg_order = ["sanctuaire", "hybride", "marchand", None]
+    legende = "".join(
+        f'<span class="carte-leg-item">'
+        f'<span class="carte-leg-dot" style="background:{CARTE_VERDICT_COULEURS[v]}"></span>'
+        f'{e(CARTE_VERDICT_LABELS[v])}</span>'
+        for v in leg_order)
+
+    body = f"""<h1>Carte des lieux</h1>
+<p class="lead">Un marqueur par lieu de l'annuaire, géolocalisé et coloré selon
+son verdict. Cliquez un marqueur pour ouvrir sa fiche.
+<a href="lieux.html">Voir le catalogue des lieux →</a></p>
+<div class="carte-legende" role="group" aria-label="Légende des verdicts">{legende}</div>
+<div id="carte" class="carte-map" role="application"
+  aria-label="Carte interactive des lieux de l'annuaire"></div>
+<p class="note">{n} lieu{'x' if n > 1 else ''} géolocalisé{'s' if n > 1 else ''}.
+Fond de carte&nbsp;: OpenStreetMap. Les couleurs reprennent le verdict calculé de
+chaque lieu — le catalogue ne hiérarchise pas&nbsp;: tous les marqueurs sont de
+même taille.</p>
+<noscript><p class="callout callout-warn">La carte interactive nécessite
+JavaScript. <a href="lieux.html">Consultez le catalogue des lieux →</a></p></noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(function () {{
+  var LIEUX = {data_js};
+  var COULEURS = {couleurs_js};
+  function colorFor(v) {{ return COULEURS[v || ""] || COULEURS[""]; }}
+  function esc(s) {{
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {{
+      return {{"&":"&amp;","<":"&lt;",">":"&gt;","\\"":"&quot;","'":"&#39;"}}[c];
+    }});
+  }}
+  var map = L.map("carte", {{ scrollWheelZoom: false }}).setView([46.6, 2.5], 6);
+  map.on("focus", function () {{ map.scrollWheelZoom.enable(); }});
+  map.on("blur", function () {{ map.scrollWheelZoom.disable(); }});
+  L.tileLayer("https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }}).addTo(map);
+  LIEUX.forEach(function (d) {{
+    var marker = L.circleMarker([d.lat, d.lon], {{
+      radius: 8, weight: 2, color: "#fffdf6",
+      fillColor: colorFor(d.verdict), fillOpacity: 0.95
+    }}).addTo(map);
+    var url = "l/" + encodeURIComponent(d.uid) + ".html";
+    var lines = [];
+    lines.push('<a class="carte-pop-nom" href="' + url + '">' + esc(d.nom) + '</a>');
+    if (d.verdict_label) {{
+      lines.push('<span class="carte-pop-verdict" style="color:' +
+        colorFor(d.verdict) + '">' + esc(d.verdict_label) + '</span>');
+    }}
+    var meta = [];
+    if (d.idl != null) meta.push("Indice " + esc(d.idl));
+    if (d.palier) meta.push(esc(d.palier));
+    if (meta.length) lines.push('<span class="carte-pop-meta">' + meta.join(" · ") + '</span>');
+    if (d.commune) lines.push('<span class="carte-pop-lieu">' + esc(d.commune) + '</span>');
+    lines.push('<a class="carte-pop-link" href="' + url + '">Voir la fiche →</a>');
+    marker.bindPopup('<div class="carte-pop">' + lines.join("") + '</div>');
+    marker.bindTooltip(esc(d.nom));
+  }});
+}})();
+</script>"""
+    return page("Carte", body, "carte.html", project=project,
+                description="Carte interactive des lieux de l'annuaire des montages de libération des terres en France.",
+                path="carte.html", link_gloss=False)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -4160,6 +4312,21 @@ main.wrap{padding-bottom:4rem;}
 .verdict-hybride{color:var(--gold-dk);background:rgba(138,100,32,.10);}
 .verdict-marchand{color:var(--terra-dk);background:rgba(143,63,37,.10);}
 .verdict-na{color:var(--faint);background:transparent;font-weight:600;}
+/* carte des lieux (Leaflet) */
+.carte-map{height:70vh;min-height:400px;width:100%;border-radius:var(--radius);
+ border:1px solid var(--line);margin:.5rem 0 1rem;z-index:0;}
+.carte-legende{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:.6rem 0;}
+.carte-leg-item{display:inline-flex;align-items:center;gap:.4rem;
+ font-size:.82rem;color:var(--muted);}
+.carte-leg-dot{display:inline-block;width:.85rem;height:.85rem;border-radius:50%;
+ border:1.5px solid var(--paper);box-shadow:0 0 0 1px var(--line);}
+.carte-pop{display:flex;flex-direction:column;gap:.3rem;min-width:9rem;}
+.carte-pop-nom{font-weight:700;font-size:.98rem;color:var(--green-dk);}
+.carte-pop-verdict{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;
+ font-weight:700;}
+.carte-pop-meta{font-size:.82rem;color:var(--muted);}
+.carte-pop-lieu{font-size:.8rem;color:var(--faint);}
+.carte-pop-link{font-size:.85rem;font-weight:600;}
 /* étiquettes de contexte de chaîne — porteur / réseau */
 .ctx-labs{display:inline;}
 .ctx-lab{display:inline-block;vertical-align:middle;white-space:nowrap;
@@ -5227,6 +5394,7 @@ def main():
     # pages transverses
     write(SITE / "index.html", render_index(all_sc, cfg, n_by_cat))
     write(SITE / "classement.html", render_classement(all_sc, cfg))
+    write(SITE / "carte.html", render_carte(all_sc, cfg, by_uid))
     write(SITE / "regimes.html", render_regimes(cfg))
     write(SITE / "grilles.html", render_grilles(cfg))
     write(SITE / "glossaire.html", render_glossaire(cfg))
@@ -5264,7 +5432,7 @@ def main():
     sitemap_paths = [("index.html", "1.0")]
     for cat in ("lieu", "porteur", "usufruitier", "modele", "reseau"):
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
-    for p in ("classement.html", "regimes.html", "grilles.html",
+    for p in ("classement.html", "carte.html", "regimes.html", "grilles.html",
               "methode.html", "themes.html", "comparer.html", "glossaire.html",
               "suggerer.html"):
         sitemap_paths.append((p, "0.6"))

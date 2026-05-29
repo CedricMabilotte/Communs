@@ -151,6 +151,21 @@ main.wrap{padding-bottom:4rem;}
 .verdict-hybride{color:var(--gold-dk);background:rgba(138,100,32,.10);}
 .verdict-marchand{color:var(--terra-dk);background:rgba(143,63,37,.10);}
 .verdict-na{color:var(--faint);background:transparent;font-weight:600;}
+/* carte des lieux (Leaflet) */
+.carte-map{height:70vh;min-height:400px;width:100%;border-radius:var(--radius);
+ border:1px solid var(--line);margin:.5rem 0 1rem;z-index:0;}
+.carte-legende{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:.6rem 0;}
+.carte-leg-item{display:inline-flex;align-items:center;gap:.4rem;
+ font-size:.82rem;color:var(--muted);}
+.carte-leg-dot{display:inline-block;width:.85rem;height:.85rem;border-radius:50%;
+ border:1.5px solid var(--paper);box-shadow:0 0 0 1px var(--line);}
+.carte-pop{display:flex;flex-direction:column;gap:.3rem;min-width:9rem;}
+.carte-pop-nom{font-weight:700;font-size:.98rem;color:var(--green-dk);}
+.carte-pop-verdict{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;
+ font-weight:700;}
+.carte-pop-meta{font-size:.82rem;color:var(--muted);}
+.carte-pop-lieu{font-size:.8rem;color:var(--faint);}
+.carte-pop-link{font-size:.85rem;font-weight:600;}
 /* étiquettes de contexte de chaîne — porteur / réseau */
 .ctx-labs{display:inline;}
 .ctx-lab{display:inline-block;vertical-align:middle;white-space:nowrap;
