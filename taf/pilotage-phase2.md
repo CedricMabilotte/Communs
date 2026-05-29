@@ -134,9 +134,19 @@ vues de l'Annuaire) · fiche à deux profondeurs (bandeau A3 déplié + synthès
 au-dessus, audit en-dessous) · magazine en **surcouche de chemins** (ne touche ni
 Indice ni symétrie) · carte B1 (manque n°1) · hygiène D1 · contrat de lecture
 affiché. **Co-gates tranchés** : foncier/vivant/régénération = gate dur ; finalité
-(usage_non_marchand + intérêt général) = gate doux ; `non_subordination` = gate dur
-à **proxy unidirectionnel** (correction moteur appliquée — seul un salariat constaté
-ferme ; le silence ne bloque plus). Sommet toujours vide, mais *vide-atteignable*.
+(usage_non_marchand + intérêt général) = gate doux ; co-gate du travail = gate dur
+à **proxy unidirectionnel** (seul un `non` constaté ferme ; le silence ne bloque pas).
+Sommet toujours vide, mais *vide-atteignable*.
+
+**Mini-strat salariat (2ᵉ passe #10)** — trace `audit/mini-strat-salariat-10/`. Le
+co-gate du travail est **refondé** : `non_subordination` → `travail_non_marchandise`.
+Il teste la **forme salariale** (décommodification du travail, Polanyi), non la
+subordination ni la propriété du capital. Clivage = « y a-t-il un rapport salarial ? » :
+SCOP/coopérative qui salarie = `non` (pas d'exception ESS) ; don/troc/entraide,
+bénévolat, associé·es sans contrat (GAEC) = `oui` ; cœur/support = `non`/`partiel`.
+Autogestion créditée à l'axe 3 (Indice), pas au sommet. Option B (pas de 2ᵉ face
+« sortie » ; domination sans salaire = limite assumée en prose). Intégré (grille,
+moteur, doctrine, méthode) ; distribution inchangée.
 
 **À arbitrer avant exécution** (synthèse §3) : 5ᵉ cas-pivot magazine (NDDL chargé vs
 Mhotte/Berquet) · réversibilité du verdict (droit de réponse du porteur) · retrait
