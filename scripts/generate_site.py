@@ -616,18 +616,20 @@ def _link_text_chunk(text, up, done):
 # référence documentaire (Trois régimes, Grilles, Modèles voisins, Glossaire)
 # restent en accès secondaire : footer + renvois depuis Méthode et les pages
 # concernées (cf. cycle B — audit UX, I1/I2).
+# Navigation par intentions (5 entrées) : les catalogues d'acteurs (porteurs,
+# usufruitiers, réseaux, modèles), le classement et les revues sont accessibles
+# via le hub « Annuaire » et le pied de page — ils ne saturent plus l'en-tête.
 NAV = [
     ("index.html", "Accueil"),
-    ("lieux.html", "Lieux"),
-    ("porteurs.html", "Porteurs"),
-    ("usufruitiers.html", "Usufruitiers"),
-    ("reseaux.html", "Réseaux"),
+    ("annuaire.html", "Annuaire"),
     ("carte.html", "Carte"),
     ("dossiers/index.html", "Dossiers"),
-    ("revues/index.html", "Revues"),
-    ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
 ]
+# Pages dont l'onglet actif est « Annuaire » (vues et catalogues du hub).
+ANNUAIRE_PAGES = {"lieux.html", "porteurs.html", "usufruitiers.html",
+                  "modeles.html", "reseaux.html", "classement.html",
+                  "annuaire.html"}
 
 # URL canonique de base (sans barre oblique finale). Lue depuis concepts.yml.
 BASE_URL = "https://communs.actitude.org"
@@ -648,9 +650,11 @@ def page(title, body, active, depth=0, project=None, description="",
     # (audit pédagogie C, C1). Désactivé sur le glossaire lui-même.
     if link_gloss:
         body = link_glossary(body, up)
+    # une page-catalogue (lieux, porteurs…) allume l'onglet « Annuaire »
+    active_nav = "annuaire.html" if active in ANNUAIRE_PAGES else active
     nav_items = []
     for href, label in NAV:
-        if href == active:
+        if href == active_nav:
             cls = ' class="active" aria-current="page"'
         else:
             cls = ''
@@ -717,13 +721,24 @@ def page(title, body, active, depth=0, project=None, description="",
     <p>{e(pname)} — annuaire critique des montages de libération des terres en
     France. Les données sont sourcées ; l'Indice de libération est une évaluation
     au regard d'un cadre explicite et contestable, non un label.</p>
-    <p class="foot-links"><a href="{up}methode.html">Méthode</a> ·
-    <a href="{up}themes.html">Thèmes</a> ·
-    <a href="{up}comparer.html">Comparer</a> ·
+    <p class="foot-links"><strong>Annuaire</strong> ·
+    <a href="{up}annuaire.html">Vue d'ensemble</a> ·
+    <a href="{up}lieux.html">Lieux</a> ·
+    <a href="{up}porteurs.html">Porteurs</a> ·
+    <a href="{up}usufruitiers.html">Usufruitiers</a> ·
+    <a href="{up}reseaux.html">Réseaux</a> ·
+    <a href="{up}modeles.html">Modèles voisins</a> ·
+    <a href="{up}carte.html">Carte</a> ·
+    <a href="{up}classement.html">Classement</a></p>
+    <p class="foot-links"><strong>Lire &amp; comprendre</strong> ·
+    <a href="{up}dossiers/index.html">Dossiers</a> ·
+    <a href="{up}revues/index.html">Revues</a> ·
+    <a href="{up}methode.html">Méthode</a> ·
     <a href="{up}regimes.html">Régimes et pôles</a> ·
     <a href="{up}grilles.html">Grilles d'analyse</a> ·
-    <a href="{up}modeles.html">Modèles voisins</a> ·
     <a href="{up}glossaire.html">Glossaire</a> ·
+    <a href="{up}themes.html">Thèmes</a> ·
+    <a href="{up}comparer.html">Comparer</a> ·
     <a href="{up}suggerer.html">Proposer un lieu</a> ·
     <a href="{up}changelog.html">Journal des versions</a> ·
     <a href="{up}data.json">Données ouvertes (JSON)</a></p>
@@ -3416,6 +3431,65 @@ def render_index(all_sc, cfg, n_by_cat):
                 description=site_desc, path="index.html", jsonld=[website])
 
 
+def render_annuaire(cfg, n_by_cat):
+    """Hub de l'annuaire documentaire — réunit les vues (liste, carte, classement)
+    et les catalogues d'acteurs (porteurs, usufruitiers, réseaux, modèles)."""
+    project = cfg["concepts"]["project"]
+
+    def card(href, titre, n_label, texte):
+        return (f'<a class="cat-card" href="{href}"><h3>{e(titre)}</h3>'
+                f'<p>{e(texte)}</p><span class="cat-n">{e(n_label)} →</span></a>')
+
+    vues = "".join([
+        card("lieux.html", "Tous les lieux",
+             f"{n_by_cat['lieu']} lieux",
+             "Le catalogue des terres recensées, filtrable et trié par Indice."),
+        card("carte.html", "Sur la carte", "vue cartographique",
+             "Les lieux géolocalisés, colorés par verdict, à parcourir d'un coup d'œil."),
+        card("classement.html", "Le classement", "tous les montages",
+             "Le rangement complet par Indice de libération, lieux et acteurs confondus."),
+    ])
+    acteurs = "".join([
+        card("porteurs.html", "Porteurs de nue-propriété",
+             f"{n_by_cat['porteur']} porteurs",
+             "Les organismes qui détiennent le foncier et le tiennent hors-marché."),
+        card("usufruitiers.html", "Organismes usufruitiers",
+             f"{n_by_cat['usufruitier']} usufruitiers",
+             "Les collectifs qui reçoivent l'usage et font vivre les lieux."),
+        card("reseaux.html", "Réseaux",
+             f"{n_by_cat['reseau']} réseaux",
+             "Les fédérations et faîtières qui relient porteurs et lieux."),
+        card("modeles.html", "Modèles voisins",
+             f"{n_by_cat['modele']} modèles",
+             "Des dispositifs proches, français et étrangers, pris comme repères."),
+    ])
+    body = f"""<section class="hero hero-compact">
+  <p class="hero-kicker">L'annuaire documentaire</p>
+  <h1>Annuaire</h1>
+  <p class="hero-lead">Tout ce que recense le projet, à barème égal : les lieux,
+  leurs porteurs et leurs usufruitiers, les réseaux qui les relient. Plusieurs
+  manières d'entrer — la liste, la carte, le classement — pour une même matière.</p>
+</section>
+
+<section>
+  <h2 class="sec">Parcourir les lieux</h2>
+  <div class="cat-cards">{vues}</div>
+</section>
+
+<section>
+  <h2 class="sec">Les acteurs et les repères</h2>
+  <div class="cat-cards">{acteurs}</div>
+</section>
+
+<p class="prose">Le récit de certains lieux est développé dans les
+<a href="dossiers/index.html">Dossiers</a> ; la lecture qui sous-tend les notes
+est exposée dans la <a href="methode.html">Méthode</a>.</p>"""
+    return page("Annuaire", body, "annuaire.html", project=project,
+                description="L'annuaire documentaire de Terres Libérées — lieux, "
+                            "porteurs, usufruitiers, réseaux et modèles voisins.",
+                path="annuaire.html")
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Page — proposer un lieu
 # ─────────────────────────────────────────────────────────────────────────────
@@ -5556,6 +5630,7 @@ def main():
 
     # pages transverses
     write(SITE / "index.html", render_index(all_sc, cfg, n_by_cat))
+    write(SITE / "annuaire.html", render_annuaire(cfg, n_by_cat))
     write(SITE / "classement.html", render_classement(all_sc, cfg))
     write(SITE / "carte.html", render_carte(all_sc, cfg, by_uid))
     write(SITE / "regimes.html", render_regimes(cfg))
@@ -5604,9 +5679,9 @@ def main():
     sitemap_paths = [("index.html", "1.0")]
     for cat in ("lieu", "porteur", "usufruitier", "modele", "reseau"):
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
-    for p in ("classement.html", "carte.html", "regimes.html", "grilles.html",
-              "methode.html", "themes.html", "comparer.html", "glossaire.html",
-              "suggerer.html"):
+    for p in ("annuaire.html", "classement.html", "carte.html", "regimes.html",
+              "grilles.html", "methode.html", "themes.html", "comparer.html",
+              "glossaire.html", "suggerer.html"):
         sitemap_paths.append((p, "0.6"))
     for f, sc in all_sc:
         sitemap_paths.append((f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html', "0.7"))
