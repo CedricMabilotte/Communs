@@ -1358,12 +1358,14 @@ def compute_verdict(fiche, by_uid):
     regeneration = g.get("milieu_protege") == "oui"          # face opposable (option a)
     finalite = (g.get("usage_non_marchand") in ("oui", "partiel")
                 and g.get("usage_interet_general") == "oui")
-    # proxy UNIDIRECTIONNEL (mini-strat #10) : seul un salariat/une hiérarchie
-    # CONSTATÉ (`non`) ferme le sommet ; `oui`/`partiel`/`inconnu`/absent sont
-    # neutres — on ne bloque jamais le sommet par le seul silence d'un critère
-    # peu peuplé (sinon vide par artefact de peuplement, non par exigence).
-    non_subord = g.get("non_subordination") != "non"
-    sommet = foncier and vivant and regeneration and finalite and non_subord
+    # travail décommodifié — proxy UNIDIRECTIONNEL (mini-strats #10) : seul un
+    # salariat de marché CONSTATÉ sur le travail-cœur (`non`) ferme le sommet ;
+    # `oui`/`partiel`/`inconnu`/absent sont neutres — on ne bloque jamais le
+    # sommet par le seul silence d'un critère peu peuplé. Teste la FORME salariale
+    # (marchandise-travail, Polanyi), pas la subordination ni la propriété du
+    # capital : une SCOP qui salarie reste « non » ; le don/troc/GAEC reste « oui ».
+    travail_non_march = g.get("travail_non_marchandise") != "non"
+    sommet = foncier and vivant and regeneration and finalite and travail_non_march
     return "sanctuaire" if sommet else "hybride"
 
 
@@ -2572,10 +2574,11 @@ deux, sur la chaîne déclarée par le lieu — seule source de vérité.</p>
 ne s'atteint qu'avec une chaîne entièrement non lucrative <em>et</em> des
 conditions observables toutes réunies : foncier irréversiblement hors-marché,
 habitat du vivant, protection durable et opposable du milieu, usage non marchand
-au service de l'intérêt général, et travail non subordonné (ni salariat, ni
-hiérarchie). Chacune se lit sur du vérifiable ; ce qui ne l'est pas — l'idéal
-d'une économie pleinement décommodifiée — éclaire le sommet sans en commander
-l'accès. Tant qu'une de ces conditions n'est pas établie, le lieu reste hybride.
+au service de l'intérêt général, et travail non marchandisé (le travail qui fait
+vivre le lieu n'est pas tarifé en argent par un contrat de travail — don, troc,
+entraide, ou associé·es vivant du produit partagé, plutôt que salariat). Chacune
+se lit sur du vérifiable ; ce qui ne l'est pas — l'idéal d'une économie pleinement
+décommodifiée — éclaire le sommet sans en commander l'accès. Tant qu'une de ces conditions n'est pas établie, le lieu reste hybride.
 Le sommet est donc <strong>rare — un horizon plus qu'une case à remplir</strong> ;
 il peut rester momentanément vide à mesure que le corpus se documente, et c'est
 honnête.</p>
@@ -2713,13 +2716,15 @@ de l'habitat et de l'Outre-mer notamment — est détaillée dans l'<a href="#et
 du corpus</a>.</li>
 </ul>
 <p class="prose"><strong>Ce que le modèle ne mesure pas.</strong> Le travail non
-subordonné — ni salariat, ni hiérarchie de commandement — est lu
+marchandisé — non tarifé en argent par un contrat de travail — est lu
 <em>positivement</em> comme l'une des conditions d'accès au sommet, sur ce qui en
-est documenté ; mais cette lecture est partielle, car la subordination réelle est
-rarement publique. L'auto-exploitation d'un collectif non lucratif —
-l'épuisement militant — reste hors champ : un groupe qui s'autodétermine ainsi
-porte sa responsabilité et ses raisons ; c'est une anomalie d'ordre sociologique,
-à une autre échelle que la qualification d'un montage, qui ne se laisse pas
+est documenté ; mais cette lecture est partielle. Le critère teste la forme
+salariale, non l'autonomie : une domination sans salaire (autorité qu'on ne peut
+quitter) échappe au verdict et n'est portée qu'ici, comme limite assumée.
+L'auto-exploitation d'un collectif non lucratif — l'épuisement militant — reste
+hors champ de même : un groupe qui s'autodétermine ainsi porte sa responsabilité
+et ses raisons ; c'est une anomalie d'ordre sociologique, à une autre échelle que
+la qualification d'un montage, qui ne se laisse pas
 normaliser.</p>
 </section>
 

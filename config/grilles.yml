@@ -545,22 +545,29 @@ grilles:
             definition: >
               Des dispositifs assurent la transmission du lieu et le
               renouvellement des personnes qui le gouvernent.
-          - id: non_subordination
-            label: "Travail non subordonné (non-salariat, sans hiérarchie)"
+          - id: travail_non_marchandise
+            label: "Travail non marchandisé (hors salariat de marché)"
             axe: 3
             poids: 3
             definition: >
-              Le travail qui fait vivre le lieu n'est pas subordonné : ni
-              salariat sous une autorité d'employeur, ni hiérarchie de
-              commandement entre les personnes qui l'animent. C'est un co-gate du
-              sommet (A1, session #10) : l'idéal décommodifié du travail, lu par
-              un proxy UNIDIRECTIONNEL — seuls « oui » documenté (associé·es
-              non-salarié·es, gouvernance horizontale attestée) et « non »
-              constaté (salariat ou hiérarchie établis) sont fiables ; l'absence
-              vaut « inconnu » et ne se déduit jamais de la forme juridique.
-              « oui » : travail non subordonné documenté ; « non » : salariat ou
-              hiérarchie constatés ; « inconnu » : non établi (empêche le sommet,
-              jamais le verdict marchand).
+              Le travail qui fait vivre le lieu n'est pas vendu comme une
+              marchandise — il n'est pas tarifé en argent par un contrat de
+              travail (salariat). Co-gate du sommet : il teste la décommodification
+              du travail (3ᵉ marchandise fictive de Polanyi), c'est-à-dire la FORME
+              salariale, indépendamment de qui détient le capital — une coopérative
+              ou une SCOP qui salarie reste dans la forme marchande, l'économie
+              libre entre humains (don, troc, entraide) en sort. Lecture par proxy
+              UNIDIRECTIONNEL, jamais déduite de la forme juridique : « non » =
+              salariat de marché constaté sur le travail PRODUCTIF (cœur) qui fait
+              vivre le lieu ; « partiel » = salariat de support marginal seulement
+              (un appui administratif), le travail vivant restant non salarié ;
+              « oui » = travail non salarié documenté (don/troc/entraide,
+              bénévolat, ou associé·es vivant du produit partagé sans contrat de
+              travail — GAEC, EARL) ; « inconnu » = non établi. Seul « non » ferme
+              le sommet ; l'absence n'empêche jamais le verdict, et jamais marchand.
+              Note : l'autogestion et l'horizontalité de la gouvernance se notent
+              ailleurs (critères de l'axe 3), non ici — ce critère ne juge que la
+              forme marchande ou non du travail.
       - id: finalite
         label: "La finalité — intérêt général et du vivant"
         axe: 4
