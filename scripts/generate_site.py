@@ -1658,12 +1658,26 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                    "critère est évalué oui · partiel · non ; le score en "
                    "découle.") if (cat != "modele" and sc["criteres_evalues"]) else ""
     axes_enum = ", ".join(f"{a['id']} {a['label']}" for a in axes_cfg)
+    # encart A3 — verdict × palier × Indice (lieux seulement) : lève l'apparente
+    # contradiction entre un Indice élevé et un palier qui n'est pas « abouti ».
+    verdict_line = ("""  <li><strong>Verdict, palier et Indice — trois lectures
+  distinctes.</strong> Le <strong>verdict</strong> (marchand · hybride ·
+  sanctuaire) dit où se tient la chaîne entre marché et commun ; il se calcule
+  sur la nature des maillons, pas sur le chiffre. L'<strong>Indice</strong>
+  (0-100) mesure la qualité du montage sur cinq axes. Le <strong>palier</strong>
+  est la tranche de l'Indice — mais le palier le plus haut, « Libération
+  aboutie », est <em>réservé au verdict sanctuaire</em> : un lieu peut donc avoir
+  un Indice élevé et un palier « solide » sans être « abouti », parce que sa
+  chaîne n'atteint pas le sommet. Les trois ne disent pas la même chose, et c'est
+  voulu.</li>
+""" if cat == "lieu" else "")
     lecture = f"""<details class="fiche-key">
   <summary>Comment lire cette fiche</summary>
   <ul>
   <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
   indique le palier. L'Indice est la moyenne géométrique (non compensatoire)
   des axes renseignés : l'axe le plus faible commande le résultat.</li>
+{verdict_line}
   <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
   l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
   est noté sur cet axe.</li>
@@ -2528,6 +2542,47 @@ détail, avec les pôles et la typologie de montage, sur la page
     # registre voix exacte / voix incarnée est implicite à la lecture, pas
     # besoin que le lecteur en prenne conscience pour bénéficier du site.
     ecriture_html = ""
+    # Section « Le verdict du lieu » — construite depuis concepts.yml (verdict).
+    verdict_cfg = cfg["concepts"].get("verdict", {}) or {}
+    degres_li = "".join(
+        f'<li><span class="verdict verdict-{e(d["id"])}">{e(d["label"])}</span> — '
+        f'{e(clean(d.get("definition","")))}</li>'
+        for d in verdict_cfg.get("degres", []) or [])
+    verdict_html = f"""<section id="verdict"><h2 class="sec">Le verdict du lieu</h2>
+<p class="prose">À côté de l'Indice chiffré, chaque lieu reçoit un
+<strong>verdict</strong> — une qualification en trois niveaux qui dit où se tient
+la chaîne entre marché et commun. Le verdict ne se saisit jamais : il se
+<strong>calcule</strong> à partir de la nature de chaque maillon, lue dans sa
+relation à la chaîne, puis des conditions d'accès au sommet.</p>
+<ul class="prose verdict-degres">{degres_li}</ul>
+<p class="prose"><strong>Une nature lue dans la chaîne, pas en soi.</strong> Ce
+qui fait basculer un lieu, ce n'est pas la forme juridique d'un maillon isolé mais
+sa <em>place</em> dans la chaîne. Une société civile d'exploitation agricole —
+GAEC, EARL — qui <em>prend à bail</em> sa terre sous un porteur qui la tient
+hors-marché ne capte pas le fonds : le lieu reste hybride, jamais marchand. La
+même exploitation, <em>propriétaire</em> de sa terre, la capte : le lieu devient
+marchand. Le titre de l'articulation (bail rural, emphytéotique) départage les
+deux, sur la chaîne déclarée par le lieu — seule source de vérité.</p>
+<p class="prose"><strong>Le sommet est co-gaté.</strong> Le niveau
+« {e(next((d['label'] for d in verdict_cfg.get('degres',[]) if d['id']=='sanctuaire'), 'sanctuaire'))} »
+ne s'atteint qu'avec une chaîne entièrement non lucrative <em>et</em> des
+conditions observables toutes réunies : foncier irréversiblement hors-marché,
+habitat du vivant, protection durable et opposable du milieu, usage non marchand
+au service de l'intérêt général, et travail non subordonné (ni salariat, ni
+hiérarchie). Chacune se lit sur du vérifiable ; ce qui ne l'est pas — l'idéal
+d'une économie pleinement décommodifiée — éclaire le sommet sans en commander
+l'accès. Tant qu'une de ces conditions n'est pas établie, le lieu reste hybride.
+Le sommet est donc <strong>rare — un horizon plus qu'une case à remplir</strong> ;
+il peut rester momentanément vide à mesure que le corpus se documente, et c'est
+honnête.</p>
+<p class="prose"><strong>Statut de l'évaluation.</strong> Le verdict comme
+l'Indice sont un <strong>indicateur composite conventionnel</strong> — à la
+manière de l'Indice de développement humain : une convention argumentée qui agrège
+des critères pondérés selon un cadre explicite, non une mesure objective de la
+valeur d'un lieu. Le cadre est défendable, contestable, perfectible ; il assume
+une perspective — celle d'une économie citoyenne, non lucrative et d'intérêt
+général — plutôt qu'une neutralité de surface.</p>
+</section>"""
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
 libération des terres.</p>
@@ -2536,6 +2591,7 @@ libération des terres.</p>
   <a href="#triptyque">Le triptyque usus / fructus / abusus</a>
   <a href="#indice">L'Indice de libération</a>
   <a href="#chaine">La chaîne et le domiciliage des axes</a>
+  <a href="#verdict">Le verdict du lieu</a>
   <a href="#integrite">L'intégrité du montage</a>
   <a href="#limites">Limites</a>
   <a href="#etat">État du corpus</a>
@@ -2598,7 +2654,7 @@ isolée mais une <strong>chaîne</strong> : un lieu, son porteur de
 nue-propriété, son organisme usufruitier. Chaque axe a un <strong>domicile</strong>
 — le maillon où il se joue réellement. {e(clean(ranking['chaine']['coherence']))}</p>
 <ul class="prose">{domiciliage_html}</ul>
-<p class="prose"><strong>Indice intrinsèque et indice effectif.</strong> Un
+<p class="prose" id="chaine-effectif"><strong>Indice intrinsèque et indice effectif.</strong> Un
 porteur ou un usufruitier est d'abord noté sur ses propres critères : c'est son
 indice <em>intrinsèque</em>. Mais une entité n'existe, comme actrice de la
 libération des terres, qu'à travers les chaînes qu'elle noue. L'indice
@@ -2622,6 +2678,8 @@ transition — compte comme l'entité faisant son travail, non comme un échec.
 Sans cela, le modèle créerait une incitation perverse : refuser les cas
 difficiles pour protéger son score.</p>
 </section>
+
+{verdict_html}
 
 <section id="integrite"><h2 class="sec">L'intégrité du montage</h2>
 <p class="prose">{e(clean(ranking['integrite_montage']['question']))}</p>
@@ -2650,13 +2708,15 @@ associatif) est un idéal-type ; peu de lieux réels le réalisent à la lettre.
 de l'habitat et de l'Outre-mer notamment — est détaillée dans l'<a href="#etat">État
 du corpus</a>.</li>
 </ul>
-<p class="prose"><strong>Ce que le modèle ne mesure pas.</strong> L'exploitation
-par le travail n'est lue que dans le cas des usufruitiers commerciaux — la
-subordination d'un travail salarié à une autorité de marché. L'auto-exploitation
-d'un collectif non lucratif — l'épuisement militant — reste hors champ : un
-groupe qui s'autodétermine ainsi porte sa responsabilité et ses raisons ; c'est
-une anomalie d'ordre sociologique, à une autre échelle que la qualification d'un
-montage, qui ne se laisse pas normaliser.</p>
+<p class="prose"><strong>Ce que le modèle ne mesure pas.</strong> Le travail non
+subordonné — ni salariat, ni hiérarchie de commandement — est lu
+<em>positivement</em> comme l'une des conditions d'accès au sommet, sur ce qui en
+est documenté ; mais cette lecture est partielle, car la subordination réelle est
+rarement publique. L'auto-exploitation d'un collectif non lucratif —
+l'épuisement militant — reste hors champ : un groupe qui s'autodétermine ainsi
+porte sa responsabilité et ses raisons ; c'est une anomalie d'ordre sociologique,
+à une autre échelle que la qualification d'un montage, qui ne se laisse pas
+normaliser.</p>
 </section>
 
 <section id="etat"><h2 class="sec">État du corpus</h2>
