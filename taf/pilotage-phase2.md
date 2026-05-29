@@ -152,9 +152,14 @@ moteur, doctrine, méthode) ; distribution inchangée.
 Mhotte/Berquet) · réversibilité du verdict (droit de réponse du porteur) · retrait
 des résidus « pas un jugement de valeur » (A4).
 
-**Exécution** (à venir) : big-bang en lots MARS-prod parallèles (L7/L12), aperçu L9
-systématique, Checker centralisé. Chantiers A3, A4, B1-B4, C, D1 sous une seule
-direction, contenu frais. Déploiement (push des commits en attente) groupé ici.
+**Exécution** (en cours) : big-bang en lots, aperçu L9 systématique, Checker centralisé.
+- **Vague 1 — D1 fait** (`4ac3920`) : site frais (cicatrices retirées, freshness 0),
+  versionnage v2.0 + `changelog.html`, résidus A4 reformulés.
+- **Vague 2 — gabarit fiche fait** (`079a28b`) : bandeau de lecture A3 déplié au-dessus
+  de la ligne de flottaison, grille repliable, droit de réponse du porteur
+  (`reponse_porteur` rendu) + mention méthode. Radar gardé haut.
+- **Reste** : vague 3 (nav par intentions + carte B1), vague 4 (accueil B4), vague 5
+  (magazine B2, 5 récits dont NDDL). Puis push groupé.
 
 ### Clôture
 
