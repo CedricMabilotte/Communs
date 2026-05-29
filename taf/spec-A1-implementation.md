@@ -240,19 +240,36 @@ celles où l'agricole détient → restent `marchand`.
 
 ---
 
-## 7. Calibrages et décisions ouverts (à trancher au codage)
+## 7. Calibrages et décisions — TRANCHÉS en session #10
 
-1. **Plafond `exploitation_agricole`** : 40 (35-45) — confirmer à la régénération.
-2. **Régénération** : réutiliser `milieu_protege` (a) ou nouveau critère
-   `regeneration` (b, recommandé agroécologue).
-3. **Défaut de la dérivation** quand `articulations`/`titre` absent : prudent
-   (`commerciale`) ou généreux (`exploitation_agricole`) ? (Recommandation :
-   prudent — ne pas créditer le non-documenté.)
-4. **`convention`/`commodat`** comptent-ils comme titre sécurisé (comme un bail)
-   ou comme usage précaire (non) ?
-5. **Poids** de `non_subordination` et `benefice_non_approprie` dans l'Indice.
-6. **Renommage public éventuel** du verdict `sanctuaire` (le terme est discuté ;
-   décision d'affichage, hors mécanique).
+Principe directeur (validé #10) : **A1 ne tranche que le mécanique strictement
+nécessaire, avec des choix réversibles s'appuyant sur de l'observable déjà peuplé.
+Tout ce qui opérationnalise finement un concept, peuple le corpus ou engage la voix
+éditoriale est renvoyé à la Phase B** (carrosserie + mini-strat différée). Cf.
+`taf/pilotage-phase2.md`.
+
+**À coder dans A1 (moteur) :**
+
+1. **Plafond `exploitation_agricole` = 40**, marqué **provisoire** (molette de
+   calibrage, pas position doctrinale ; re-réglable en voyant la distribution).
+2. **Régénération → option (a)** : réutiliser `milieu_protege` comme face opposable
+   du gate du sommet. Pas de critère gradué neuf, pas de passe de peuplement.
+3. **Défaut de dérivation absent → prudent** (`commerciale`). Ne pas créditer le
+   non-documenté ; une fiche prudente se promeut plus tard quand le bail est sourcé.
+4. **`convention`/`commodat` → non** (usage précaire). Seuls les 4 baux de
+   `BAIL_TITRES` sécurisent la dérivation. Desserrer plus tard reste trivial.
+5. **`non_subordination`** : seul critère-gate neuf du moteur (poids provisoire 3).
+
+**Renvoyé à la Phase B (cadres profonds / éditorial — NE PAS coder en A1) :**
+
+- **Option (b)** : critère gradué `regeneration` (maintien/régénère/retrait articulé
+  à la triade écologique du cadre #9). À poser avec la mini-strat Phase B.
+- **`benefice_non_approprie`** : glose comptable, ne gate pas, rarement public —
+  aucune urgence moteur.
+- **Glose positive d'affichage** (§4.4) : voix éditoriale = carrosserie. A1 change le
+  badge (Pommiers `marchand`→`hybride`, automatique) ; la ligne de glose vient avec
+  le gabarit de fiche refondu.
+- **Renommage public de `sanctuaire`** : décision d'affichage différée.
 
 ---
 

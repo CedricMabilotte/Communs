@@ -4,7 +4,7 @@ nom: "GAEC Ferme du Plaisir"
 sous_titre: "Groupement agricole exploitant la Ferme du Plaisir, sur foncier Terre de Liens en Indre-et-Loire"
 statut_fiche: publie
 forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
-nature_interet: commerciale
+nature_interet: exploitation_agricole
 localisation:
   commune: "Sazilly"
   departement: "Indre-et-Loire (37)"

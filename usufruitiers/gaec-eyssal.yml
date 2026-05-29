@@ -4,7 +4,7 @@ nom: "GAEC d'Eyssal"
 sous_titre: "Groupement agricole exploitant la ferme laitière d'Eyssal, en biodynamie, en Dordogne"
 statut_fiche: publie
 forme_juridique: "Groupement agricole d'exploitation en commun (GAEC)"
-nature_interet: commerciale
+nature_interet: exploitation_agricole
 localisation:
   commune: "Bergerac (Périgord pourpre)"
   departement: "Dordogne (24)"

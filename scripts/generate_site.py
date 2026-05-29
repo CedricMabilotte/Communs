@@ -356,8 +356,8 @@ def palier_for(idl, ranking, verdict=None):
 # Ordre du « pire au mieux » des natures, du plus restrictif au moins.
 # Sert à choisir le maillon décisif quand la chaîne en mélange plusieurs.
 _NATURE_ORDRE_PIRE_AU_MIEUX = [
-    "privee_individuelle", "commerciale", "commerciale_encadree",
-    "commerciale_desactivee", "non_lucrative", "inconnu",
+    "privee_individuelle", "commerciale", "exploitation_agricole",
+    "commerciale_encadree", "commerciale_desactivee", "non_lucrative", "inconnu",
 ]
 
 
@@ -1287,31 +1287,80 @@ def nature_label(nid, concepts):
     return nid
 
 
+# ── Dérivation relationnelle de la nature agricole (A1, session #10) ─────────
+# Un maillon `exploitation_agricole` (GAEC/EARL/SCEA exploitante) ne capte pas
+# le fonds — donc plafonne à `hybride` — UNIQUEMENT s'il est PRENEUR d'un bail
+# sécurisé SOUS un (ou des) porteur(s) hors-marché et n'est pas intégré à la
+# propriété. Sinon (détient, intègre, sans bail, ou porteur non hors-marché), il
+# capte le fonds et se lit `commerciale` → `marchand`. Cf. taf/spec-A1-implementation.md §3.
+_BAIL_TITRES_SECURISES = {
+    "bail_rural", "bail_emphyteotique", "bail_reel_solidaire", "bail_a_construction",
+}
+# `convention`/`commodat` = usage précaire, non créditants (décision #10).
+_PORTEUR_HORS_MARCHE = {
+    "non_lucrative", "commerciale_desactivee", "commerciale_encadree",
+}
+
+
 def compute_verdict(fiche, by_uid):
     """Verdict calculé d'un lieu — `marchand` / `hybride` / `sanctuaire`, ou None
-    si la chaîne comporte un maillon de nature non établie. Jamais saisi : il se
-    déduit de la nature_interet de chaque maillon de la chaîne, de
-    l'irréversibilité du foncier et des critères d'habitat du vivant (D-B).
-    Cf. conception-refonte-3.md §13."""
+    si la chaîne comporte un maillon de nature non établie. Jamais saisi (L11) : il
+    se déduit de la nature_interet de chaque maillon (dérivée relationnellement pour
+    l'exploitation agricole), de l'irréversibilité du foncier et des co-gates du
+    sommet. Cf. conception-refonte-3.md §13 et taf/spec-A1-implementation.md."""
     if fiche.get("categorie") != "lieu":
         return None
     ch = fiche.get("chaine", {}) or {}
-    maillons = list(ch.get("porteurs") or []) + list(ch.get("usufruitiers") or [])
+    porteurs = list(ch.get("porteurs") or [])
+    usufs = list(ch.get("usufruitiers") or [])
+    maillons = porteurs + usufs
     if not maillons:
         return None
-    natures = [((by_uid.get(u) or {}).get("nature_interet") or "inconnu")
-               for u in maillons]
-    if any(n in ("commerciale", "privee_individuelle") for n in natures):
+    # titre d'articulation par usufruitier (seconde couche du montage)
+    titre_par_usuf = {}
+    for a in (fiche.get("montage", {}) or {}).get("articulations") or []:
+        u = a.get("usufruitier")
+        if u:
+            titre_par_usuf[u] = a.get("titre")
+    integ = set(porteurs) & set(usufs)
+    porteurs_natures = [((by_uid.get(p) or {}).get("nature_interet") or "inconnu")
+                        for p in porteurs]
+    porteurs_hors_marche = bool(porteurs) and all(
+        n in _PORTEUR_HORS_MARCHE for n in porteurs_natures)
+    # nature EFFECTIVE de chaque maillon (dérivation relationnelle de l'agricole)
+    effectives = []
+    for u in maillons:
+        nat = (by_uid.get(u) or {}).get("nature_interet") or "inconnu"
+        if nat == "exploitation_agricole":
+            titre = titre_par_usuf.get(u)
+            preneur_securise = (u not in integ
+                                and titre in _BAIL_TITRES_SECURISES
+                                and porteurs_hors_marche)
+            # défaut prudent : sans bail sécurisé sous porteur hors-marché, le
+            # maillon capte le fonds → commerciale (décision #10).
+            nat = "exploitation_agricole" if preneur_securise else "commerciale"
+        effectives.append(nat)
+    if any(n in ("commerciale", "privee_individuelle") for n in effectives):
         return "marchand"
-    if any(n == "commerciale_encadree" for n in natures):
+    # exploitation_agricole et commerciale_encadree plafonnent à hybride : jamais
+    # le sommet (appropriation du bénéfice / intérêt privé encadré — décision #9).
+    if any(n in ("commerciale_encadree", "exploitation_agricole") for n in effectives):
         return "hybride"
-    if any(n == "inconnu" for n in natures):
+    if any(n == "inconnu" for n in effectives):
         return None  # chaîne non entièrement établie — verdict à établir
-    # chaîne entièrement non_lucrative / commerciale_desactivee
+    # chaîne entièrement non_lucrative / commerciale_desactivee → candidate au
+    # sommet : les co-gates observables doivent TOUS être au vert (sinon hybride).
     g = {c.get("critere"): c.get("valeur") for c in (fiche.get("grille") or [])}
-    irrev = g.get("foncier_hors_marche") == "oui" and g.get("irreversibilite") == "oui"
-    db_vert = g.get("vivant_finalite") == "oui" and g.get("place_au_vivant") == "oui"
-    return "sanctuaire" if (irrev and db_vert) else "hybride"
+    foncier = (g.get("foncier_hors_marche") == "oui"
+               and g.get("irreversibilite") == "oui")
+    vivant = (g.get("vivant_finalite") == "oui"
+              and g.get("place_au_vivant") == "oui")
+    regeneration = g.get("milieu_protege") == "oui"          # face opposable (option a)
+    finalite = (g.get("usage_non_marchand") in ("oui", "partiel")
+                and g.get("usage_interet_general") == "oui")
+    non_subord = g.get("non_subordination") == "oui"         # proxy unidirectionnel
+    sommet = foncier and vivant and regeneration and finalite and non_subord
+    return "sanctuaire" if sommet else "hybride"
 
 
 def verdict_badge(vid, concepts):

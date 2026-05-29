@@ -329,6 +329,7 @@ plafonds_chaine:
     non_lucrative:           100
     commerciale_desactivee:   80
     commerciale_encadree:     50
+    exploitation_agricole:    40    # société civile d'exploitation agricole preneuse de bail (A1, #10) — PROVISOIRE (fourchette 35-45), à confirmer empiriquement
     commerciale:              20
     privee_individuelle:      10
     inconnu:                null    # un maillon de nature inconnue ne sanctionne pas (par défaut prudent)

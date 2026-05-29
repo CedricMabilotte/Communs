@@ -398,17 +398,38 @@ nature_interet:
     en_clair: >
       Une société qui s'impose des règles : pas de gros gains, un cadre
       solidaire. L'intérêt privé n'a pas disparu — il est tenu en bride.
+  - id: exploitation_agricole
+    label: "Société civile d'exploitation agricole"
+    definition: >
+      Société civile de travail agricole — GAEC, EARL pluripersonnelle, SCEA
+      exploitante — dont les associé·es vivent du produit de leur travail sur la
+      terre, sans détenir le fonds (preneur·euses d'un bail sous un porteur
+      hors-marché) ou en le détenant sous verrou anti-spéculatif vérifié.
+      Lucrative pour ses associé·es (appropriation du bénéfice d'exploitation),
+      mais non spéculative sur le foncier et non commerciale au sens du marché
+      ouvert. Sa lecture est RELATIONNELLE : preneuse d'un bail sécurisé sous un
+      porteur hors-marché, elle plafonne le lieu à `hybride` ; détentrice ou
+      intégrée à la propriété, elle se lit `commerciale`. Un lieu dont c'est le
+      maillon le plus restrictif n'atteint jamais le sommet : l'appropriation du
+      bénéfice d'exploitation l'en écarte.
+    en_clair: >
+      Des paysan·nes qui vivent de leur ferme sans pouvoir revendre la terre :
+      une économie de travail, pas une société de marché — mais le revenu reste
+      individuel. Tant qu'ils sont locataires d'un porteur qui tient le sol hors
+      du marché, le lieu n'est pas marchand ; mais ce n'est pas non plus le
+      sommet du commun.
   - id: commerciale
     label: "Commerciale à lucrativité ouverte"
     definition: >
       Société à but lucratif non bornée par les statuts : société commerciale
-      ordinaire à parts cessibles ; mais aussi société civile d'exploitation
-      agricole — GAEC, EARL, SC agricole — qui valorise un intérêt collectif
-      lucratif, propriété de ses associé·es exploitant·es, et non un intérêt
-      général désintéressé.
+      ordinaire à parts cessibles, ou société (civile ou commerciale) qui détient
+      un foncier valorisable à titre privé. La société civile d'exploitation
+      agricole qui DÉTIENT le fonds, ou l'exploite sans bail sécurisé sous un
+      porteur hors-marché, relève de cette nature par dérivation (voir
+      `exploitation_agricole`).
     en_clair: >
       Une structure faite pour rapporter à ses membres : une société de marché,
-      ou une exploitation agricole dont les associé·es vivent du produit. Rien
+      ou une exploitation qui détient sa terre et pourrait la valoriser. Rien
       d'illégitime — mais ce n'est pas un commun désintéressé.
   - id: privee_individuelle
     label: "Privée individuelle"
@@ -439,16 +460,22 @@ nature_interet:
 # n'est pas une forme : c'est ce verdict, à son sommet.
 verdict:
   regle: >
-    `marchand` si la chaîne compte un maillon `commerciale` ou
-    `privee_individuelle`. Sinon `hybride` si elle compte un maillon
-    `commerciale_encadree`. Sinon — chaîne entièrement `non_lucrative` ou
-    `commerciale_desactivee` — `sanctuaire` lorsque, de plus, le foncier est
-    irréversiblement hors-marché ET les critères d'habitat du vivant (D-B) sont
-    au vert ; à défaut de cette dernière condition, le lieu reste `hybride`
-    (commun juridiquement abouti, mais habitat du vivant non établi). Le verdict
-    `sanctuaire` ne s'allume jamais tant qu'un maillon de la chaîne est de
-    nature `inconnu`, ni tant que les critères D-B sont `inconnu` : il émerge
-    au fil du peuplement du corpus, jamais par défaut.
+    La nature de chaque maillon est lue EFFECTIVEMENT : un maillon
+    `exploitation_agricole` preneur d'un bail sécurisé sous un porteur
+    hors-marché garde cette nature ; détenteur ou intégré à la propriété, il se
+    lit `commerciale`. Puis : `marchand` si la chaîne compte un maillon effectif
+    `commerciale` ou `privee_individuelle`. Sinon `hybride` si elle compte un
+    maillon `commerciale_encadree` ou `exploitation_agricole` (intérêt privé
+    encadré ou bénéfice d'exploitation approprié : plafond du sommet). Sinon —
+    chaîne entièrement `non_lucrative` ou `commerciale_desactivee` —
+    `sanctuaire` lorsque, de plus, TOUS les co-gates observables sont au vert :
+    foncier irréversiblement hors-marché, habitat du vivant (vivant_finalite +
+    place_au_vivant), régénération opposable (milieu_protege), finalité d'usage
+    (usage non marchand + intérêt général) et non-subordination (non-salariat +
+    absence de hiérarchie, proxy unidirectionnel). À défaut de l'un de ces
+    co-gates, le lieu reste `hybride`. Le verdict `sanctuaire` ne s'allume jamais
+    tant qu'un maillon est de nature `inconnu`, ni tant qu'un co-gate est
+    `inconnu` : il émerge au fil du peuplement, jamais par défaut.
   degres:
     - id: marchand
       label: "Montage marchand"
@@ -462,13 +489,17 @@ verdict:
       label: "Montage hybride"
       definition: >
         La chaîne ne comporte aucun maillon marchand, mais au moins un maillon
-        à lucrativité encadrée : intérêt privé discipliné, non désactivé. Y
-        figure aussi le commun juridiquement abouti dont l'habitat du vivant
-        n'est pas encore établi.
+        à lucrativité encadrée (intérêt privé discipliné, non désactivé) ou une
+        société civile d'exploitation agricole preneuse de bail sous un porteur
+        hors-marché (le bénéfice d'exploitation reste approprié par les
+        associé·es). Y figure aussi le commun juridiquement abouti dont l'un des
+        co-gates du sommet (habitat du vivant, régénération opposable, finalité
+        d'usage non marchande, non-subordination) n'est pas encore établi.
       en_clair: >
-        Un montage solide et de bonne foi, mais pas tout à fait pur : un maillon
-        garde une part d'intérêt privé, ou la place faite au vivant reste à
-        confirmer.
+        Un montage solide et de bonne foi, mais pas tout à fait le sommet : un
+        maillon garde une part d'intérêt privé, des paysan·nes vivent du produit
+        de leur travail, ou l'une des conditions du commun pleinement libre
+        reste à confirmer.
     - id: sanctuaire
       label: "Sanctuaire"
       definition: >

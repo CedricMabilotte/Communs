@@ -545,6 +545,22 @@ grilles:
             definition: >
               Des dispositifs assurent la transmission du lieu et le
               renouvellement des personnes qui le gouvernent.
+          - id: non_subordination
+            label: "Travail non subordonné (non-salariat, sans hiérarchie)"
+            axe: 3
+            poids: 3
+            definition: >
+              Le travail qui fait vivre le lieu n'est pas subordonné : ni
+              salariat sous une autorité d'employeur, ni hiérarchie de
+              commandement entre les personnes qui l'animent. C'est un co-gate du
+              sommet (A1, session #10) : l'idéal décommodifié du travail, lu par
+              un proxy UNIDIRECTIONNEL — seuls « oui » documenté (associé·es
+              non-salarié·es, gouvernance horizontale attestée) et « non »
+              constaté (salariat ou hiérarchie établis) sont fiables ; l'absence
+              vaut « inconnu » et ne se déduit jamais de la forme juridique.
+              « oui » : travail non subordonné documenté ; « non » : salariat ou
+              hiérarchie constatés ; « inconnu » : non établi (empêche le sommet,
+              jamais le verdict marchand).
       - id: finalite
         label: "La finalité — intérêt général et du vivant"
         axe: 4
