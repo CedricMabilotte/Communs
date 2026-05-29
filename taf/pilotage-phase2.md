@@ -125,14 +125,26 @@ Phase B.
 Fin de Phase A = les 4 préconditions du brief refonte-totale §6 réunies (A1 stable,
 cadre validé, cible confirmée, principe de fraîcheur acté).
 
-### Phase B — la carrosserie (après préconditions)
+### Phase B — la carrosserie (mini-strat FAITE, exécution à venir)
 
-Ouverture par la **mini-strat différée** (architecture trois niveaux + gabarit
-fiche), puis big-bang : refonte cohérente et simultanée du rendu public en lots
-parallèles partitionnés (L7/L12/L24/L26), aperçu L9 systématique, Checker MARS-prod
-centralisé en intégration. Chantiers : A3, A4, A5(publication), B1-B4, C1-C4, D1-D2,
-revues, surfaces Plan B — sous une seule direction théorique, contenu frais (§2 du
-brief refonte-totale).
+**Mini-strat ouverte et close (session #10)** — trace `audit/mini-strat-phaseB-10/`
+(5 voix cycle 1, réactions croisées cycle 2, synthèse, leçons-méta). Cadre
+d'architecture validé : navigation par intentions (4-5 entrées ; Carte/Classement =
+vues de l'Annuaire) · fiche à deux profondeurs (bandeau A3 déplié + synthèse citable
+au-dessus, audit en-dessous) · magazine en **surcouche de chemins** (ne touche ni
+Indice ni symétrie) · carte B1 (manque n°1) · hygiène D1 · contrat de lecture
+affiché. **Co-gates tranchés** : foncier/vivant/régénération = gate dur ; finalité
+(usage_non_marchand + intérêt général) = gate doux ; `non_subordination` = gate dur
+à **proxy unidirectionnel** (correction moteur appliquée — seul un salariat constaté
+ferme ; le silence ne bloque plus). Sommet toujours vide, mais *vide-atteignable*.
+
+**À arbitrer avant exécution** (synthèse §3) : 5ᵉ cas-pivot magazine (NDDL chargé vs
+Mhotte/Berquet) · réversibilité du verdict (droit de réponse du porteur) · retrait
+des résidus « pas un jugement de valeur » (A4).
+
+**Exécution** (à venir) : big-bang en lots MARS-prod parallèles (L7/L12), aperçu L9
+systématique, Checker centralisé. Chantiers A3, A4, B1-B4, C, D1 sous une seule
+direction, contenu frais. Déploiement (push des commits en attente) groupé ici.
 
 ### Clôture
 
