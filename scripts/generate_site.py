@@ -623,6 +623,7 @@ NAV = [
     ("usufruitiers.html", "Usufruitiers"),
     ("reseaux.html", "Réseaux"),
     ("carte.html", "Carte"),
+    ("dossiers/index.html", "Dossiers"),
     ("revues/index.html", "Revues"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
@@ -1866,7 +1867,12 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     # ordre de lecture (session #3) : le récit avant la preuve — les « Repères »
     # sont intégrés au panneau de score (chantier 7) ; puis présentation,
     # montage, analyse, chaîne, dossier, et la grille reléguée en fin.
-    body = (defs + head + verdict_cle + score_block + lecture + resume
+    # lien vers le dossier (magazine) qui raconte ce lieu, s'il existe
+    dossier_slug = (cfg.get("_dossier_for") or {}).get(fiche["uid"])
+    dossier_lien = (f'<p class="fiche-dossier-lien"><a href="../dossiers/'
+                    f'{e(dossier_slug)}.html">Lire le dossier — le récit de ce '
+                    f'lieu →</a></p>' if dossier_slug else "")
+    body = (defs + head + verdict_cle + dossier_lien + score_block + lecture + resume
             + montage_html + analyse_html + reponse_html + liens_html + grille_html
             + dossier_html + fiab + sources_html + backlink)
 
@@ -3531,6 +3537,7 @@ existé.</p>
 # sane_lists, smarty).
 
 REVUES_DIR = ROOT / "revues"
+DOSSIERS_DIR = ROOT / "dossiers"
 PDF_MOIS_FR = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet",
                "août", "septembre", "octobre", "novembre", "décembre")
 
@@ -3952,6 +3959,119 @@ et inversement. <a href="../methode.html">Lire la méthode →</a></p>"""
                             "pensée publique sur la libération des terres.",
                 path="revues/index.html",
                 extra_css=["style-revue.css"])
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Dossiers — le magazine : fiches-récit longues sur des cas-pivot du corpus.
+# Chaque dossier porte un lieu (`lieu:` uid) qu'il raconte ; lien bidirectionnel
+# avec la fiche-catalogue. Voix incarnée dominante. Format Markdown + frontmatter.
+# ─────────────────────────────────────────────────────────────────────────────
+def load_dossiers():
+    """Charge `dossiers/*.md` → liste de {meta, body_md, _file}, triés par date
+    décroissante puis titre."""
+    if not DOSSIERS_DIR.exists():
+        return []
+    out = []
+    for p in sorted(DOSSIERS_DIR.glob("*.md")):
+        if p.name.startswith("."):
+            continue
+        meta, body = _parse_md_frontmatter(p.read_text(encoding="utf-8"))
+        meta.setdefault("slug", p.stem)
+        out.append({"meta": meta, "body_md": body, "_file": p.name})
+    out.sort(key=lambda d: (str(d["meta"].get("date") or ""),
+                            d["meta"].get("titre", "")), reverse=True)
+    return out
+
+
+def dossier_map(dossiers):
+    """uid de lieu → slug de dossier (pour le lien retour depuis la fiche)."""
+    m = {}
+    for d in dossiers:
+        lu = d["meta"].get("lieu")
+        if lu:
+            m[lu] = d["meta"].get("slug", d["_file"].replace(".md", ""))
+    return m
+
+
+def render_dossiers_index(dossiers, cfg, sc_by_uid, by_uid):
+    project = cfg["concepts"]["project"]
+    cards = []
+    for d in dossiers:
+        m = d["meta"]
+        slug = m.get("slug")
+        titre = clean(m.get("titre", "") or slug)
+        sous = clean(m.get("sous_titre", ""))
+        lu = m.get("lieu")
+        vbadge = ""
+        if lu and by_uid.get(lu):
+            vbadge = verdict_badge(compute_verdict(by_uid[lu], by_uid), cfg["concepts"])
+        cards.append(f"""<a class="revue-card" href="{e(slug)}.html">
+  <h3>{e(titre)}</h3>
+  {f'<p class="revue-card-sous">{e(sous)}</p>' if sous else ""}
+  <p class="revue-card-meta">{vbadge}</p>
+</a>""")
+    grid = ('<div class="revues-grid">' + "".join(cards) + "</div>" if cards else
+            '<p class="prose"><em>Aucun dossier publié pour l\'instant.</em></p>')
+    body = f"""<section class="revue-hero">
+  <p class="hero-kicker">Le magazine · récits de cas</p>
+  <h1>Dossiers</h1>
+  <p class="revue-soustitre">Certains lieux portent un enseignement que la
+  fiche-tableau ne transmet pas. Les dossiers les racontent — en récit, au plus
+  près de ce qui s'y vit — sans rien retrancher à l'analyse du catalogue, qu'ils
+  prolongent et vers lequel ils renvoient.</p>
+  <p class="revue-meta">Direction éditoriale : <strong>Eozen</strong>.</p>
+</section>
+
+{grid}
+
+<p class="prose">Les dossiers sont éditoriaux, l'annuaire est documentaire : le
+récit éclaire un cas, la fiche le situe à barème égal avec tous les autres.
+<a href="../lieux.html">Le catalogue des lieux →</a></p>"""
+    return page("Dossiers", body, "dossiers/index.html", depth=1, project=project,
+                description="Le magazine de Terres Libérées — récits de cas-pivot "
+                            "de la libération des terres.",
+                path="dossiers/index.html", extra_css=["style-revue.css"])
+
+
+def render_dossier(dossier, cfg, by_uid, sc_by_uid):
+    project = cfg["concepts"]["project"]
+    m = dossier["meta"]
+    titre = clean(m.get("titre", "") or m.get("slug", ""))
+    sous = clean(m.get("sous_titre", ""))
+    chapeau = clean(m.get("chapeau", ""))
+    date_fr = _date_fr(m.get("date"))
+    lu = m.get("lieu")
+    # lien vers la fiche-catalogue + badge verdict
+    fiche_lien = ""
+    if lu and by_uid.get(lu):
+        v = verdict_badge(compute_verdict(by_uid[lu], by_uid), cfg["concepts"])
+        sc = sc_by_uid.get(lu)
+        idl = f" · Indice {sc['idl']}" if sc and sc.get("idl") is not None else ""
+        fiche_lien = (f'<aside class="dossier-fiche">{v}'
+                      f'<span class="df-txt">Ce lieu est aussi analysé, à barème '
+                      f'égal avec les autres, dans le catalogue{idl}. '
+                      f'<a href="../l/{e(lu)}.html">Voir la fiche → </a></span></aside>')
+    corps = _md_to_html(dossier["body_md"])
+    meta_line = " · ".join(x for x in [date_fr, "Voix : Eozen"] if x)
+    body = f"""<article class="dossier">
+<p class="crumb"><a href="index.html">← Tous les dossiers</a></p>
+<header class="dossier-head">
+  <h1>{e(titre)}</h1>
+  {f'<p class="dossier-sous">{e(sous)}</p>' if sous else ""}
+  <p class="dossier-meta">{e(meta_line)}</p>
+</header>
+{f'<p class="dossier-chapeau">{e(chapeau)}</p>' if chapeau else ""}
+{fiche_lien}
+<div class="dossier-corps prose-long">
+{corps}
+</div>
+{fiche_lien}
+<p class="backlink"><a href="index.html">← Tous les dossiers</a>
+ · <a href="../lieux.html">Le catalogue des lieux</a></p>
+</article>"""
+    return page(titre, body, "dossiers/index.html", depth=1, project=project,
+                description=meta_desc(sous or chapeau or titre, 250),
+                path=f"dossiers/{m.get('slug')}.html", extra_css=["style-revue.css"])
 
 
 def build_revue_pdf(revue, articles, cfg):
@@ -4541,6 +4661,8 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .verdict-cle .vc-intro{margin:.1rem 0 .4rem;font-size:.9rem;}
 .verdict-cle ul{margin:0;padding-left:1.1rem;}
 .verdict-cle li{font-size:.86rem;color:var(--ink);margin:.28rem 0;max-width:74ch;line-height:1.45;}
+.fiche-dossier-lien{margin:.2rem 0 1rem;font-family:-apple-system,system-ui,sans-serif;
+ font-size:.92rem;font-weight:600;}
 
 /* grille repliable */
 .grille-fold>summary.sec{cursor:pointer;width:fit-content;}
@@ -5108,7 +5230,26 @@ CSS_REVUE = """
    Inclus en plus de style.css sur les pages /revues/* uniquement. */
 
 main.wrap{max-width:1080px;}
-.revue-wrap,main:has(.revue-hero),main:has(.article-head){max-width:42rem;}
+.revue-wrap,main:has(.revue-hero),main:has(.article-head),main:has(.dossier){max-width:42rem;}
+
+/* dossiers — récits de cas (magazine) */
+.dossier .crumb{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;margin:.2rem 0 1rem;}
+.dossier-head{margin:.4rem 0 1.2rem;}
+.dossier-head h1{font-size:2.3rem;line-height:1.18;margin:.1rem 0 .4rem;}
+.dossier-sous{font-size:1.2rem;color:var(--muted);font-style:italic;line-height:1.5;margin:.2rem 0;}
+.dossier-meta{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;color:var(--faint);margin:.3rem 0;}
+.dossier-chapeau{font-size:1.25rem;line-height:1.55;color:var(--ink);
+ border-left:3px solid var(--terra-dk);padding-left:1rem;margin:1.2rem 0;font-weight:500;}
+.dossier-fiche{background:var(--beige);border-radius:var(--radius);padding:.7rem 1rem;
+ margin:1.2rem 0;display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.9rem;}
+.dossier-fiche .df-txt{color:var(--muted);}
+.dossier-corps.prose-long{font-size:1.08rem;line-height:1.72;}
+.dossier-corps.prose-long p{margin:1rem 0;}
+.dossier-corps.prose-long h2{font-size:1.5rem;margin:2rem 0 .6rem;}
+.dossier-corps.prose-long h3{font-size:1.2rem;margin:1.5rem 0 .4rem;}
+.dossier-corps.prose-long blockquote{border-left:3px solid var(--muted);
+ padding-left:1rem;font-style:italic;color:var(--muted);margin:1.2rem 0;}
 
 .revue-hero{padding:2.6rem 0 1.6rem;border-bottom:1px solid var(--line);
  margin-bottom:1.6rem;}
@@ -5393,6 +5534,10 @@ def main():
     n_by_cat = {c: sum(1 for f in fiches if f["categorie"] == c)
                 for c in ("lieu", "porteur", "usufruitier", "modele", "reseau")}
 
+    # Dossiers (magazine) — chargés avant les fiches pour le lien retour fiche↔dossier
+    dossiers = load_dossiers()
+    cfg["_dossier_for"] = dossier_map(dossiers)
+
     # fiches individuelles
     for f, sc in all_sc:
         cat = f["categorie"]
@@ -5443,6 +5588,15 @@ def main():
         print(f"Revues : {len(revues)} revue(s) générée(s), "
               f"{sum(len(r['articles']) for r in revues)} article(s).")
 
+    # Dossiers — le magazine (récits de cas-pivot)
+    if dossiers:
+        write(SITE / "dossiers" / "index.html",
+              render_dossiers_index(dossiers, cfg, sc_by_uid, by_uid))
+        for d in dossiers:
+            write(SITE / "dossiers" / f'{d["meta"].get("slug")}.html',
+                  render_dossier(d, cfg, by_uid, sc_by_uid))
+        print(f"Dossiers : {len(dossiers)} dossier(s) généré(s).")
+
     # CNAME — domaine personnalisé GitHub Pages
     write(SITE / "CNAME", BASE_URL.split("//")[-1] + "\n")
 
@@ -5456,6 +5610,11 @@ def main():
         sitemap_paths.append((p, "0.6"))
     for f, sc in all_sc:
         sitemap_paths.append((f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html', "0.7"))
+    # dossiers — index + récits
+    if dossiers:
+        sitemap_paths.append(("dossiers/index.html", "0.7"))
+        for d in dossiers:
+            sitemap_paths.append((f'dossiers/{d["meta"].get("slug")}.html', "0.6"))
     # revues — index + manifestes + articles (PDF non listés dans le sitemap)
     if revues:
         sitemap_paths.append(("revues/index.html", "0.7"))

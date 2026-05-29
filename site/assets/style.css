@@ -378,6 +378,8 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .verdict-cle .vc-intro{margin:.1rem 0 .4rem;font-size:.9rem;}
 .verdict-cle ul{margin:0;padding-left:1.1rem;}
 .verdict-cle li{font-size:.86rem;color:var(--ink);margin:.28rem 0;max-width:74ch;line-height:1.45;}
+.fiche-dossier-lien{margin:.2rem 0 1rem;font-family:-apple-system,system-ui,sans-serif;
+ font-size:.92rem;font-weight:600;}
 
 /* grille repliable */
 .grille-fold>summary.sec{cursor:pointer;width:fit-content;}

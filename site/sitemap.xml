@@ -829,6 +829,42 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/dossiers/index.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/dossiers/ferme-de-pommiers.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/dossiers/larzac.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/dossiers/domaine-du-rayol.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/dossiers/notre-dame-des-landes.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/dossiers/eau-du-bassin-rennais.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/revues/index.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
