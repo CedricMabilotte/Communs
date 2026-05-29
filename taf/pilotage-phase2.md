@@ -158,8 +158,12 @@ des résidus « pas un jugement de valeur » (A4).
 - **Vague 2 — gabarit fiche fait** (`079a28b`) : bandeau de lecture A3 déplié au-dessus
   de la ligne de flottaison, grille repliable, droit de réponse du porteur
   (`reponse_porteur` rendu) + mention méthode. Radar gardé haut.
-- **Reste** : vague 3 (nav par intentions + carte B1), vague 4 (accueil B4), vague 5
-  (magazine B2, 5 récits dont NDDL). Puis push groupé.
+- **Vague 3 — carte B1 faite** (`939c083`) : carte Leaflet, 44 lieux, couleur par verdict.
+- **Vague 4 — accueil B4 fait** (`bab7ebd`) : manifeste assumé, chiffres-clés (0 sommet),
+  entrées par intention, retrait des cards en-tête.
+- **Reste** : vague 5 (magazine B2, 5 récits dont NDDL — parallélisable) ; puis
+  **refonte nav par intentions** (désormais possible : Dossiers existeront) ; puis
+  push groupé. Nav refonte volontairement repoussée jusqu'à l'existence des Dossiers.
 
 ### Clôture
 
