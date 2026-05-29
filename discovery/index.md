@@ -1,8 +1,8 @@
 # Veille — index
 
-Derniere passe : 2026-05-27
+Derniere passe : 2026-05-29
 
-- [Candidats du 2026-05-27](candidats-2026-05-27.md)
+- [Candidats du 2026-05-29](candidats-2026-05-29.md)
 - [Angles morts du corpus](angles-morts.md)
 - [Santé des sources](sources-sante.md)
 - [Pipeline — spec et conventions](PIPELINE.md)
