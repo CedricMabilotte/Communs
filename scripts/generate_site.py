@@ -1674,24 +1674,28 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     axes_enum = ", ".join(f"{a['id']} {a['label']}" for a in axes_cfg)
     # encart A3 — verdict × palier × Indice (lieux seulement) : lève l'apparente
     # contradiction entre un Indice élevé et un palier qui n'est pas « abouti ».
-    verdict_line = ("""  <li><strong>Verdict, palier et Indice — trois lectures
-  distinctes.</strong> Le <strong>verdict</strong> (marchand · hybride ·
-  sanctuaire) dit où se tient la chaîne entre marché et commun ; il se calcule
-  sur la nature des maillons, pas sur le chiffre. L'<strong>Indice</strong>
-  (0-100) mesure la qualité du montage sur cinq axes. Le <strong>palier</strong>
-  est la tranche de l'Indice — mais le palier le plus haut, « Libération
-  aboutie », est <em>réservé au verdict sanctuaire</em> : un lieu peut donc avoir
-  un Indice élevé et un palier « solide » sans être « abouti », parce que sa
-  chaîne n'atteint pas le sommet. Les trois ne disent pas la même chose, et c'est
-  voulu.</li>
-""" if cat == "lieu" else "")
+    # Bandeau de lecture A3 — TOUJOURS visible (déplié), au-dessus de la ligne de
+    # flottaison : un·e lecteur·rice doit pouvoir citer le sens des trois chiffres
+    # sans rien dérouler. Lieux seulement (eux seuls portent un verdict).
+    verdict_cle = ("""<aside class="verdict-cle" aria-label="Lire le verdict, le palier et l'Indice">
+  <p class="vc-intro"><strong>Trois lectures, distinctes à dessein.</strong></p>
+  <ul>
+    <li><strong>Le verdict</strong> — <em>marchand · hybride · sanctuaire</em> — dit
+    où se tient la chaîne entre marché et commun ; il se calcule sur la nature des
+    maillons, pas sur le chiffre.</li>
+    <li><strong>L'Indice</strong> (0-100) mesure la qualité du montage sur cinq axes
+    (moyenne non compensatoire : l'axe le plus faible commande).</li>
+    <li><strong>Le palier</strong> est la tranche de l'Indice — mais « Libération
+    aboutie » est <em>réservé au verdict sanctuaire</em> : un Indice élevé peut donc
+    rester « solide » sans être « abouti ». Les trois ne disent pas la même chose.</li>
+  </ul>
+</aside>""" if cat == "lieu" else "")
     lecture = f"""<details class="fiche-key">
-  <summary>Comment lire cette fiche</summary>
+  <summary>Comment lire les visuels de cette fiche</summary>
   <ul>
   <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
   indique le palier. L'Indice est la moyenne géométrique (non compensatoire)
   des axes renseignés : l'axe le plus faible commande le résultat.</li>
-{verdict_line}
   <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
   l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
   est noté sur cet axe.</li>
@@ -1739,7 +1743,8 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
             fam_rows.append(f'<tr class="fam-row"><th colspan="4" scope="colgroup">{e(fam["label"])}</th></tr>'
                             + "".join(trs))
         recap = grille_recap(sc["criteres_evalues"], gril, axes_cfg)
-        grille_html = f"""<section><h2 class="sec">Grille de lecture</h2>
+        grille_html = f"""<section class="grille-section"><details class="grille-fold" open>
+<summary class="sec">Grille de lecture <span class="fold-hint">— déplier / replier</span></summary>
 <p class="grille-intro">{e(clean(gril.get('objet','')))}
 <a href="../grilles.html#grille-{cat}">Comprendre la grille →</a></p>
 {recap}
@@ -1748,7 +1753,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
 <thead><tr><th scope="col">Critère</th><th scope="col" class="num">Poids</th><th scope="col">Évaluation</th><th scope="col">Lecture</th></tr></thead>
 <tbody>{''.join(fam_rows)}</tbody></table></div>
 <p class="axe-legend">{axe_legend(axes_cfg)}</p>
-</section>"""
+</details></section>"""
 
     # analyse stratégique
     an = fiche.get("analyse", {}) or {}
@@ -1765,6 +1770,24 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
   <div class="an-col an-frag"><h3>Fragilités</h3><ul>{lst(an.get('fragilites'))}</ul></div>
   <div class="an-col an-lev"><h3>Leviers</h3><ul>{lst(an.get('leviers'))}</ul></div>
 </div></section>"""
+
+    # Droit de réponse du porteur (réversibilité du verdict) — rendu si la fiche
+    # porte un bloc `reponse_porteur: {texte, date, auteur}`. Voix distincte de
+    # celle de l'annuaire, clairement attribuée : l'évaluation est contestable et
+    # le porteur peut faire valoir sa lecture.
+    reponse_html = ""
+    rp = fiche.get("reponse_porteur") or {}
+    if rp.get("texte"):
+        meta_rp = " · ".join(x for x in [clean(rp.get("auteur") or ""),
+                                         clean(rp.get("date") or "")] if x)
+        reponse_html = (
+            '<section class="reponse-porteur"><h2 class="sec">Droit de réponse</h2>'
+            '<p class="rp-chapeau">L\'évaluation ci-dessus est une lecture au regard '
+            'd\'un cadre explicite et contestable. Le porteur ou l\'usufruitier peut '
+            'y répondre ; sa réponse est reproduite ici sans retouche.</p>'
+            f'<blockquote class="rp-texte">{e(clean(rp["texte"]))}</blockquote>'
+            + (f'<p class="rp-meta">— {e(meta_rp)}</p>' if meta_rp else "")
+            + '</section>')
 
     # reliés — la chaîne (déclarée par le lieu) et les liens voir_aussi, dans
     # les deux sens (liens déclarés + rétro-liens des fiches qui citent celle-ci).
@@ -1842,8 +1865,8 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     # ordre de lecture (session #3) : le récit avant la preuve — les « Repères »
     # sont intégrés au panneau de score (chantier 7) ; puis présentation,
     # montage, analyse, chaîne, dossier, et la grille reléguée en fin.
-    body = (defs + head + score_block + lecture + resume
-            + montage_html + analyse_html + liens_html + grille_html
+    body = (defs + head + verdict_cle + score_block + lecture + resume
+            + montage_html + analyse_html + reponse_html + liens_html + grille_html
             + dossier_html + fiab + sources_html + backlink)
 
     # données structurées : fil d'Ariane + entité principale
@@ -2596,7 +2619,10 @@ manière de l'Indice de développement humain : une convention argumentée qui a
 des critères pondérés selon un cadre explicite, non une mesure objective de la
 valeur d'un lieu. Le cadre est défendable, contestable, perfectible ; il assume
 une perspective — celle d'une économie citoyenne, non lucrative et d'intérêt
-général — plutôt qu'une neutralité de surface.</p>
+général — plutôt qu'une neutralité de surface. Parce que le verdict est une
+lecture et non un arrêt, tout porteur ou usufruitier peut exercer un
+<strong>droit de réponse</strong> : sa réponse est reproduite sur la fiche
+concernée, sans retouche.</p>
 </section>"""
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
@@ -4322,6 +4348,28 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .fiche-key summary:hover{color:var(--green-dk);}
 .fiche-key ul{margin:.4rem 0 .2rem;padding-left:1.1rem;}
 .fiche-key li{font-size:.88rem;color:var(--muted);margin:.3rem 0;max-width:68ch;}
+
+/* bandeau de lecture A3 — toujours visible, au-dessus de la ligne de flottaison */
+.verdict-cle{background:var(--beige);border-radius:var(--radius);
+ border-left:3px solid var(--green);padding:.7rem 1rem;margin:.2rem 0 1.1rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.verdict-cle .vc-intro{margin:.1rem 0 .4rem;font-size:.9rem;}
+.verdict-cle ul{margin:0;padding-left:1.1rem;}
+.verdict-cle li{font-size:.86rem;color:var(--ink);margin:.28rem 0;max-width:74ch;line-height:1.45;}
+
+/* grille repliable */
+.grille-fold>summary.sec{cursor:pointer;width:fit-content;}
+.grille-fold>summary.sec .fold-hint{font-weight:400;font-size:.8rem;color:var(--muted);
+ text-transform:none;letter-spacing:0;}
+
+/* droit de réponse du porteur (réversibilité) */
+.reponse-porteur{background:var(--paper,#fff);border:1px solid var(--line,#e0d9cc);
+ border-radius:var(--radius);padding:.8rem 1.1rem;margin:1.2rem 0;}
+.reponse-porteur .rp-chapeau{font-size:.85rem;color:var(--muted);
+ font-family:-apple-system,system-ui,sans-serif;margin:.2rem 0 .6rem;}
+.reponse-porteur .rp-texte{margin:.4rem 0;padding-left:.9rem;
+ border-left:3px solid var(--muted);font-style:italic;color:var(--ink);}
+.reponse-porteur .rp-meta{font-size:.82rem;color:var(--muted);text-align:right;margin:.3rem 0 0;}
 
 /* en bref — composant tertiaire (info) */
 .enbref{background:var(--beige);border-radius:var(--radius);

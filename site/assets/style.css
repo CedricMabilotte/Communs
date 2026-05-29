@@ -340,6 +340,28 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .fiche-key ul{margin:.4rem 0 .2rem;padding-left:1.1rem;}
 .fiche-key li{font-size:.88rem;color:var(--muted);margin:.3rem 0;max-width:68ch;}
 
+/* bandeau de lecture A3 — toujours visible, au-dessus de la ligne de flottaison */
+.verdict-cle{background:var(--beige);border-radius:var(--radius);
+ border-left:3px solid var(--green);padding:.7rem 1rem;margin:.2rem 0 1.1rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.verdict-cle .vc-intro{margin:.1rem 0 .4rem;font-size:.9rem;}
+.verdict-cle ul{margin:0;padding-left:1.1rem;}
+.verdict-cle li{font-size:.86rem;color:var(--ink);margin:.28rem 0;max-width:74ch;line-height:1.45;}
+
+/* grille repliable */
+.grille-fold>summary.sec{cursor:pointer;width:fit-content;}
+.grille-fold>summary.sec .fold-hint{font-weight:400;font-size:.8rem;color:var(--muted);
+ text-transform:none;letter-spacing:0;}
+
+/* droit de réponse du porteur (réversibilité) */
+.reponse-porteur{background:var(--paper,#fff);border:1px solid var(--line,#e0d9cc);
+ border-radius:var(--radius);padding:.8rem 1.1rem;margin:1.2rem 0;}
+.reponse-porteur .rp-chapeau{font-size:.85rem;color:var(--muted);
+ font-family:-apple-system,system-ui,sans-serif;margin:.2rem 0 .6rem;}
+.reponse-porteur .rp-texte{margin:.4rem 0;padding-left:.9rem;
+ border-left:3px solid var(--muted);font-style:italic;color:var(--ink);}
+.reponse-porteur .rp-meta{font-size:.82rem;color:var(--muted);text-align:right;margin:.3rem 0 0;}
+
 /* en bref — composant tertiaire (info) */
 .enbref{background:var(--beige);border-radius:var(--radius);
  padding:1rem 1.3rem;margin:1.2rem 0;font-size:.92rem;}
