@@ -3310,88 +3310,90 @@ def render_index(all_sc, cfg, n_by_cat):
     modeles = sorted([(f, s) for f, s in all_sc if f["categorie"] == "modele"],
                      key=lambda x: x[1]["idl"] or 0, reverse=True)
 
-    cat_cards = "".join(
-        f"""<a class="cat-card" href="{CAT_PAGE[c['id']]}">
-  <h3>{e(c['label_pluriel'])}</h3>
-  <p>{e(clean(c['definition']))}</p>
-  <span class="cat-n">{n_by_cat[c['id']]} entrées →</span>
-</a>""" for c in concepts["categories"])
+    # chiffres-clés — verdicts déjà calculés sur les scores des lieux
+    from collections import Counter as _Counter
+    _verd = _Counter((s.get("verdict") or "a_etablir")
+                     for f, s in all_sc if f["categorie"] == "lieu")
+    n_lieux = n_by_cat["lieu"]
+    n_marchand = _verd.get("marchand", 0)
+    n_hybride = _verd.get("hybride", 0)
+    n_sanctuaire = _verd.get("sanctuaire", 0)
+
+    def _intention(titre, texte, liens):
+        ls = " · ".join(f'<a href="{h}">{e(t)}</a>' for t, h in liens)
+        return (f'<div class="intent-card"><h3>{e(titre)}</h3>'
+                f'<p>{e(texte)}</p><p class="intent-links">{ls}</p></div>')
+    intentions = "".join([
+        _intention("Je découvre",
+                   "Ce que « libérer une terre » veut dire, et le cadre qui le mesure.",
+                   [("Le concept", "glossaire.html"), ("Régimes du sol", "regimes.html"),
+                    ("La méthode", "methode.html")]),
+        _intention("Je cherche un lieu",
+                   "Parcourir les lieux recensés, sur la carte ou dans le catalogue.",
+                   [("La carte", "carte.html"), ("Les lieux", "lieux.html"),
+                    ("Le classement", "classement.html")]),
+        _intention("Je veux la méthode",
+                   "Comment chaque montage est lu, noté et qualifié — grille et verdict.",
+                   [("La méthode", "methode.html"), ("Les grilles", "grilles.html")]),
+        _intention("Je suis chercheur·euse ou journaliste",
+                   "Un référentiel citable : cadre explicite, statut du chiffre, versions datées.",
+                   [("Statut de l'évaluation", "methode.html#verdict"),
+                    ("Journal des versions", "changelog.html")]),
+    ])
 
     hist = corpus_histogram(all_sc, ranking)
 
     body = f"""{tri_defs(axes_cfg)}<section class="hero">
   <p class="hero-kicker">Annuaire critique · libération des terres</p>
-  <h1>La terre, soustraite au marché.</h1>
-  <p class="hero-lead">Partout en France, des terres sont sorties du marché
-  spéculatif — par le réemploi d'outils de droit civil non lucratif. Cet
-  annuaire les recense, explique leurs montages juridiques et les note selon
-  une grille d'analyse explicite.</p>
+  <h1>La terre n'est pas une marchandise.</h1>
+  <p class="hero-lead">Pourtant elle se vend, se loue, s'épuise. Partout en
+  France, des collectifs l'en soustraient — et la rendent à un usage commun,
+  vivant et durable. Cet annuaire les recense sans complaisance : il distingue
+  les libérations réelles des montages qui en empruntent le vocabulaire, au
+  regard d'un cadre explicite et assumé — celui d'une économie citoyenne, non
+  lucrative et décommodifiée. C'est une prise de position, défendable et
+  contestable, non une mesure neutre.</p>
   <p class="hero-cta">
-    <a class="cta" href="classement.html">Voir le classement</a>
+    <a class="cta" href="carte.html">Voir la carte</a>
     <a class="cta cta-ghost" href="methode.html">Comprendre la méthode</a>
   </p>
 </section>
 
-<section class="howto">
-  <h2 class="sec">Comment lire cet annuaire</h2>
-  <ol class="steps">
-    <li class="step">
-      <span class="step-n">1</span>
-      <h3>Comprendre le concept</h3>
-      <p>« Libérer la terre », c'est dissocier la propriété — confiée à un
-      organisme d'intérêt général — de l'usage, confié à un collectif non
-      lucratif. <a href="glossaire.html">Glossaire des termes →</a></p>
-    </li>
-    <li class="step">
-      <span class="step-n">2</span>
-      <h3>Explorer une catégorie</h3>
-      <p>Chaque montage réunit trois acteurs : le lieu, son porteur de
-      nue-propriété et son usufruitier. Chacun a son catalogue filtrable.</p>
-    </li>
-    <li class="step">
-      <span class="step-n">3</span>
-      <h3>Lire une note</h3>
-      <p>Chaque entrée est notée de 0 à 100 sur cinq axes — le sol, la
-      structure, le pouvoir, la finalité, l'usage — résumés par un Indice de
-      libération et un palier. L'agrégation est non compensatoire : l'axe le
-      plus faible commande l'Indice — un montage ne rachète pas une faiblesse
-      par ses forces. <a href="methode.html">La méthode →</a></p>
-    </li>
-  </ol>
-  <p class="linkrow"><a href="themes.html">Explorer par thème →</a> ·
-  <a href="comparer.html">Comparer deux montages →</a> ·
-  <a href="regimes.html">Régimes et pôles du sol →</a> ·
-  <a href="grilles.html">Grilles d'analyse →</a> ·
-  <a href="glossaire.html">Glossaire des termes →</a></p>
+<section class="chiffres">
+  <h2 class="visually-hidden">Chiffres-clés</h2>
+  <div class="stat-grid">
+    <div class="stat"><span class="stat-n">{n_lieux}</span>
+      <span class="stat-l">lieux recensés</span></div>
+    <div class="stat"><span class="stat-n">{n_marchand}</span>
+      <span class="stat-l">fausses libérations démasquées (montages marchands)</span></div>
+    <div class="stat"><span class="stat-n">{n_sanctuaire}</span>
+      <span class="stat-l">au sommet décommodifié — le sanctuaire reste un horizon</span></div>
+  </div>
+  <p class="lead">La plupart des lieux sont des montages <strong>hybrides</strong>
+  ({n_hybride}) : des communs juridiquement solides, mais qu'un maillon, un usage
+  rémunéré ou une condition encore non établie tient à distance du sommet. Le
+  sommet n'est pas une case à remplir — c'est une étoile polaire.</p>
 </section>
 
 <section>
-  <h2 class="sec">Explorer par catégorie</h2>
-  <div class="cat-cards">{cat_cards}</div>
+  <h2 class="sec">Par où entrer</h2>
+  <div class="intent-cards">{intentions}</div>
 </section>
 
 <section class="corpus">
   <h2 class="sec">État du corpus</h2>
-  <p class="lead">L'annuaire compte {n_by_cat['lieu']} lieux,
+  <p class="lead">L'annuaire compte {n_lieux} lieux,
   {n_by_cat['porteur']} porteurs et {n_by_cat['usufruitier']} usufruitiers
-  notés — hors modèles voisins, présentés plus bas. Leur répartition par palier
+  notés — hors modèles voisins de référence. Leur répartition par palier
   d'Indice :</p>
   {hist}
 </section>
 
 <section>
-  <h2 class="sec">En tête du classement</h2>
-  <p class="lead">Les montages dont l'Indice de libération est le plus élevé.
-  <a href="classement.html">Classement complet →</a></p>
-  <p class="axe-legend cat-legend">{axe_legend(axes_cfg, "Profil à cinq axes : ")}</p>
-  {cards_grid(top, axes_cfg, concepts=concepts)}
-</section>
-
-<section>
   <h2 class="sec">Modèles voisins de référence</h2>
-  <p class="lead">Des modèles « puristes » proches — français et étrangers —
-  recensés à titre de comparaison. Hors classement principal, leur indice est
-  <em>estimé</em>. <a href="modeles.html">Voir les modèles voisins →</a></p>
+  <p class="lead">Des modèles proches — français et étrangers — recensés à titre
+  de comparaison. Hors classement principal, leur indice est <em>estimé</em>.
+  <a href="modeles.html">Voir les modèles voisins →</a></p>
   {cards_grid(modeles, axes_cfg, concepts=concepts)}
 </section>"""
     site_desc = meta_desc(concepts["project"]["description"])
@@ -4260,6 +4262,22 @@ main.wrap{padding-bottom:4rem;}
 .step p{font-size:.95rem;color:var(--muted);}
 
 /* explain */
+/* chiffres-clés (accueil) */
+.chiffres{margin:1.4rem 0;}
+.stat-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:.6rem 0 1rem;}
+.stat{background:var(--beige);border-radius:var(--radius);padding:1rem 1.1rem;text-align:center;}
+.stat-n{display:block;font-size:2.4rem;line-height:1;font-weight:700;color:var(--green-dk);}
+.stat-l{display:block;margin-top:.4rem;font-size:.86rem;color:var(--muted);
+ font-family:-apple-system,system-ui,sans-serif;}
+/* entrées par intention (accueil) */
+.intent-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
+.intent-card{background:var(--card);border:1px solid transparent;border-radius:var(--radius);
+ padding:1.1rem 1.2rem;transition:border-color .15s,box-shadow .15s;}
+.intent-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(33,29,24,.08);}
+.intent-card h3{margin-top:0;}
+.intent-card p{font-size:.92rem;color:var(--muted);}
+.intent-links{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;}
+
 .explain-grid,.cat-cards{display:grid;gap:1rem;}
 .explain-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
 .explain-grid h3{margin-top:0;}

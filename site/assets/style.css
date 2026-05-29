@@ -99,6 +99,22 @@ main.wrap{padding-bottom:4rem;}
 .step p{font-size:.95rem;color:var(--muted);}
 
 /* explain */
+/* chiffres-clés (accueil) */
+.chiffres{margin:1.4rem 0;}
+.stat-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:.6rem 0 1rem;}
+.stat{background:var(--beige);border-radius:var(--radius);padding:1rem 1.1rem;text-align:center;}
+.stat-n{display:block;font-size:2.4rem;line-height:1;font-weight:700;color:var(--green-dk);}
+.stat-l{display:block;margin-top:.4rem;font-size:.86rem;color:var(--muted);
+ font-family:-apple-system,system-ui,sans-serif;}
+/* entrées par intention (accueil) */
+.intent-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
+.intent-card{background:var(--card);border:1px solid transparent;border-radius:var(--radius);
+ padding:1.1rem 1.2rem;transition:border-color .15s,box-shadow .15s;}
+.intent-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(33,29,24,.08);}
+.intent-card h3{margin-top:0;}
+.intent-card p{font-size:.92rem;color:var(--muted);}
+.intent-links{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;}
+
 .explain-grid,.cat-cards{display:grid;gap:1rem;}
 .explain-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
 .explain-grid h3{margin-top:0;}
