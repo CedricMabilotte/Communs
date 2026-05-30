@@ -49,12 +49,27 @@ p{font-size:1.05rem;}
  padding:.32rem .5rem;border-radius:var(--radius);line-height:1;}
 .brand-name{font-size:1.4rem;font-weight:700;letter-spacing:-.01em;display:block;}
 .baseline{font-size:.76rem;color:var(--muted);font-family:-apple-system,system-ui,sans-serif;}
+@media (max-width:480px){.baseline{display:none;}}
 .topnav{display:flex;gap:1.05rem;flex-wrap:wrap;font-size:.88rem;}
 .topnav a{text-decoration:none;color:var(--muted);padding:.45rem .2rem;
  display:inline-block;min-height:24px;
  border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
 .topnav a:hover{color:var(--green-dk);border-bottom-color:var(--line);}
 .topnav a.active{color:var(--ink);font-weight:600;border-bottom-color:var(--terra);}
+/* la Méthode est la référence : un peu détachée des destinations */
+.topnav a.nav-ref{margin-left:auto;color:var(--faint);}
+@media (max-width:640px){.topnav a.nav-ref{margin-left:0;}}
+
+/* hub Annuaire — bloc « Commencer ici » (entrées dominantes) */
+.start-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:.6rem 0 .4rem;}
+.start-card{display:block;background:var(--beige);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.3rem 1.4rem;text-decoration:none;color:var(--ink);
+ transition:border-color .15s,box-shadow .15s;}
+.start-card:hover{border-color:var(--green);box-shadow:0 6px 20px rgba(33,29,24,.10);}
+.start-card h3{margin:0 0 .35rem;font-size:1.25rem;}
+.start-card p{font-size:.92rem;color:var(--muted);margin:.2rem 0 .6rem;}
+.acteurs-fold>summary.sec{cursor:pointer;width:fit-content;}
+.acteurs-fold>summary.sec .fold-hint{font-weight:400;font-size:.8rem;color:var(--muted);text-transform:none;letter-spacing:0;}
 
 main.wrap{padding-bottom:4rem;}
 

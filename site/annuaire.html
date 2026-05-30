@@ -32,26 +32,30 @@
       <span class="brand-txt"><span class="brand-name">Terres Libérées</span>
       <span class="baseline">Annuaire critique des montages de libération des terres en France.</span></span>
     </a>
-    <nav class="topnav"><a href="index.html">Accueil</a><a href="annuaire.html" class="active" aria-current="page">Annuaire</a><a href="carte.html">Carte</a><a href="dossiers/index.html">Dossiers</a><a href="methode.html">Méthode</a></nav>
+    <nav class="topnav"><a href="index.html">Accueil</a><a href="carte.html">Carte</a><a href="dossiers/index.html">Dossiers</a><a href="annuaire.html" class="active" aria-current="page">Annuaire</a><a href="methode.html" class="nav-ref">Méthode</a></nav>
   </div>
 </header>
 <main class="wrap" id="contenu">
 <section class="hero hero-compact">
   <p class="hero-kicker">L'annuaire documentaire</p>
   <h1>Annuaire</h1>
-  <p class="hero-lead">Tout ce que recense le projet, à barème égal : les lieux,
-  leurs porteurs et leurs usufruitiers, les réseaux qui les relient. Plusieurs
-  manières d'entrer — la liste, la carte, le classement — pour une même matière.</p>
+  <p class="hero-lead">Tout ce que recense le projet : les lieux, leurs porteurs et
+  usufruitiers, les réseaux qui les relient. Plusieurs manières d'entrer dans une
+  même matière.</p>
+</section>
+
+<section class="commencer">
+  <h2 class="sec">Commencer ici</h2>
+  <div class="start-grid"><a class="start-card" href="carte.html"><h3>Sur la carte</h3><p>Les lieux géolocalisés, colorés par verdict, à parcourir d&#x27;un coup d&#x27;œil.</p><span class="cat-n">vue cartographique →</span></a><a class="start-card" href="lieux.html"><h3>La liste des lieux</h3><p>Le catalogue complet, filtrable et trié.</p><span class="cat-n">45 lieux →</span></a><a class="start-card" href="classement.html"><h3>Le classement</h3><p>Le rangement par Indice de libération, du plus abouti au plus éloigné.</p><span class="cat-n">par Indice →</span></a></div>
 </section>
 
 <section>
-  <h2 class="sec">Parcourir les lieux</h2>
-  <div class="cat-cards"><a class="cat-card" href="lieux.html"><h3>Tous les lieux</h3><p>Le catalogue des terres recensées, filtrable et trié par Indice.</p><span class="cat-n">45 lieux →</span></a><a class="cat-card" href="carte.html"><h3>Sur la carte</h3><p>Les lieux géolocalisés, colorés par verdict, à parcourir d&#x27;un coup d&#x27;œil.</p><span class="cat-n">vue cartographique →</span></a><a class="cat-card" href="classement.html"><h3>Le classement</h3><p>Le rangement complet par Indice de libération, lieux et acteurs confondus.</p><span class="cat-n">tous les montages →</span></a></div>
-</section>
-
-<section>
-  <h2 class="sec">Les acteurs et les repères</h2>
-  <div class="cat-cards"><a class="cat-card" href="porteurs.html"><h3>Porteurs de nue-propriété</h3><p>Les organismes qui détiennent le foncier et le tiennent hors-marché.</p><span class="cat-n">23 porteurs →</span></a><a class="cat-card" href="usufruitiers.html"><h3>Organismes usufruitiers</h3><p>Les collectifs qui reçoivent l&#x27;usage et font vivre les lieux.</p><span class="cat-n">42 usufruitiers →</span></a><a class="cat-card" href="reseaux.html"><h3>Réseaux</h3><p>Les fédérations et faîtières qui relient porteurs et lieux.</p><span class="cat-n">8 réseaux →</span></a><a class="cat-card" href="modeles.html"><h3>Modèles voisins</h3><p>Des dispositifs proches, français et étrangers, pris comme repères.</p><span class="cat-n">5 modèles →</span></a></div>
+  <details class="acteurs-fold">
+    <summary class="sec">Explorer par acteur <span class="fold-hint">— porteurs, usufruitiers, réseaux, modèles</span></summary>
+    <p class="lead">Les lieux sont tenus par des acteurs aux rôles distincts ; on
+    peut aussi entrer par eux. Tous traités à barème égal avec les lieux.</p>
+    <div class="cat-cards"><a class="cat-card" href="porteurs.html"><h3>Porteurs de nue-propriété</h3><p>Les organismes qui détiennent le foncier et le tiennent hors-marché.</p><span class="cat-n">23 porteurs →</span></a><a class="cat-card" href="usufruitiers.html"><h3>Organismes usufruitiers</h3><p>Les collectifs qui reçoivent l&#x27;usage et font vivre les lieux.</p><span class="cat-n">42 usufruitiers →</span></a><a class="cat-card" href="reseaux.html"><h3>Réseaux</h3><p>Les fédérations et faîtières qui relient porteurs et lieux.</p><span class="cat-n">8 réseaux →</span></a><a class="cat-card" href="modeles.html"><h3>Modèles voisins</h3><p>Des dispositifs proches, français et étrangers, pris comme repères.</p><span class="cat-n">5 modèles →</span></a></div>
+  </details>
 </section>
 
 <p class="prose">Le récit de certains lieux est développé dans les
@@ -63,27 +67,28 @@ est exposée dans la <a href="methode.html">Méthode</a>.</p>
     <p>Terres Libérées — annuaire critique des montages de libération des terres en
     France. Les données sont sourcées ; l'Indice de libération est une évaluation
     au regard d'un cadre explicite et contestable, non un label.</p>
-    <p class="foot-links"><strong>Annuaire</strong> ·
-    <a href="annuaire.html">Vue d'ensemble</a> ·
+    <p class="foot-links"><strong>Découvrir</strong> ·
+    <a href="dossiers/index.html">Dossiers</a> ·
+    <a href="revues/index.html">Revues</a> ·
+    <a href="regimes.html">Régimes et pôles</a> ·
+    <a href="glossaire.html">Glossaire</a> ·
+    <a href="themes.html">Thèmes</a></p>
+    <p class="foot-links"><strong>Explorer</strong> ·
+    <a href="annuaire.html">Annuaire</a> ·
+    <a href="carte.html">Carte</a> ·
     <a href="lieux.html">Lieux</a> ·
     <a href="porteurs.html">Porteurs</a> ·
     <a href="usufruitiers.html">Usufruitiers</a> ·
     <a href="reseaux.html">Réseaux</a> ·
     <a href="modeles.html">Modèles voisins</a> ·
-    <a href="carte.html">Carte</a> ·
-    <a href="classement.html">Classement</a></p>
-    <p class="foot-links"><strong>Lire &amp; comprendre</strong> ·
-    <a href="dossiers/index.html">Dossiers</a> ·
-    <a href="revues/index.html">Revues</a> ·
+    <a href="classement.html">Classement</a> ·
+    <a href="comparer.html">Comparer</a></p>
+    <p class="foot-links"><strong>Citer &amp; contribuer</strong> ·
     <a href="methode.html">Méthode</a> ·
-    <a href="regimes.html">Régimes et pôles</a> ·
     <a href="grilles.html">Grilles d'analyse</a> ·
-    <a href="glossaire.html">Glossaire</a> ·
-    <a href="themes.html">Thèmes</a> ·
-    <a href="comparer.html">Comparer</a> ·
-    <a href="suggerer.html">Proposer un lieu</a> ·
+    <a href="data.json">Données ouvertes (JSON)</a> ·
     <a href="changelog.html">Journal des versions</a> ·
-    <a href="data.json">Données ouvertes (JSON)</a></p>
+    <a href="suggerer.html">Proposer un lieu</a></p>
     <p>Terres Libérées · v2.0 · mai 2026</p>
     <p>Site statique, généré automatiquement le 30 mai 2026.</p>
   </div>

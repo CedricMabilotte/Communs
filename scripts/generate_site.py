@@ -621,9 +621,9 @@ def _link_text_chunk(text, up, done):
 # via le hub « Annuaire » et le pied de page — ils ne saturent plus l'en-tête.
 NAV = [
     ("index.html", "Accueil"),
-    ("annuaire.html", "Annuaire"),
     ("carte.html", "Carte"),
     ("dossiers/index.html", "Dossiers"),
+    ("annuaire.html", "Annuaire"),
     ("methode.html", "Méthode"),
 ]
 # Pages dont l'onglet actif est « Annuaire » (vues et catalogues du hub).
@@ -654,11 +654,14 @@ def page(title, body, active, depth=0, project=None, description="",
     active_nav = "annuaire.html" if active in ANNUAIRE_PAGES else active
     nav_items = []
     for href, label in NAV:
+        classes = []
         if href == active_nav:
-            cls = ' class="active" aria-current="page"'
-        else:
-            cls = ''
-        nav_items.append(f'<a href="{up}{href}"{cls}>{e(label)}</a>')
+            classes.append("active")
+        if href == "methode.html":      # la référence, mise un peu à part
+            classes.append("nav-ref")
+        cls = f' class="{" ".join(classes)}"' if classes else ""
+        aria = ' aria-current="page"' if href == active_nav else ""
+        nav_items.append(f'<a href="{up}{href}"{cls}{aria}>{e(label)}</a>')
     nav = "".join(nav_items)
     pname = project["display_name"] if project else "Terres Libérées"
     mark = project["logo_mark"] if project else "TL"
@@ -721,27 +724,28 @@ def page(title, body, active, depth=0, project=None, description="",
     <p>{e(pname)} — annuaire critique des montages de libération des terres en
     France. Les données sont sourcées ; l'Indice de libération est une évaluation
     au regard d'un cadre explicite et contestable, non un label.</p>
-    <p class="foot-links"><strong>Annuaire</strong> ·
-    <a href="{up}annuaire.html">Vue d'ensemble</a> ·
+    <p class="foot-links"><strong>Découvrir</strong> ·
+    <a href="{up}dossiers/index.html">Dossiers</a> ·
+    <a href="{up}revues/index.html">Revues</a> ·
+    <a href="{up}regimes.html">Régimes et pôles</a> ·
+    <a href="{up}glossaire.html">Glossaire</a> ·
+    <a href="{up}themes.html">Thèmes</a></p>
+    <p class="foot-links"><strong>Explorer</strong> ·
+    <a href="{up}annuaire.html">Annuaire</a> ·
+    <a href="{up}carte.html">Carte</a> ·
     <a href="{up}lieux.html">Lieux</a> ·
     <a href="{up}porteurs.html">Porteurs</a> ·
     <a href="{up}usufruitiers.html">Usufruitiers</a> ·
     <a href="{up}reseaux.html">Réseaux</a> ·
     <a href="{up}modeles.html">Modèles voisins</a> ·
-    <a href="{up}carte.html">Carte</a> ·
-    <a href="{up}classement.html">Classement</a></p>
-    <p class="foot-links"><strong>Lire &amp; comprendre</strong> ·
-    <a href="{up}dossiers/index.html">Dossiers</a> ·
-    <a href="{up}revues/index.html">Revues</a> ·
+    <a href="{up}classement.html">Classement</a> ·
+    <a href="{up}comparer.html">Comparer</a></p>
+    <p class="foot-links"><strong>Citer &amp; contribuer</strong> ·
     <a href="{up}methode.html">Méthode</a> ·
-    <a href="{up}regimes.html">Régimes et pôles</a> ·
     <a href="{up}grilles.html">Grilles d'analyse</a> ·
-    <a href="{up}glossaire.html">Glossaire</a> ·
-    <a href="{up}themes.html">Thèmes</a> ·
-    <a href="{up}comparer.html">Comparer</a> ·
-    <a href="{up}suggerer.html">Proposer un lieu</a> ·
+    <a href="{up}data.json">Données ouvertes (JSON)</a> ·
     <a href="{up}changelog.html">Journal des versions</a> ·
-    <a href="{up}data.json">Données ouvertes (JSON)</a></p>
+    <a href="{up}suggerer.html">Proposer un lieu</a></p>
     <p>Terres Libérées · v{SITE_VERSION} · {SITE_VERSION_DATE}</p>
     <p>Site statique, généré automatiquement le {e(BUILD_DATE_FR)}.</p>
   </div>
@@ -3059,6 +3063,20 @@ GLOSSAIRE = [
      "chaîne : un lieu, son porteur de nue-propriété, son organisme "
      "usufruitier. La qualité d'un porteur ou d'un usufruitier se lit à travers "
      "les montages qu'il noue effectivement."),
+    ("Verdict",
+     "La qualification d'un lieu en trois niveaux — marchand, hybride, "
+     "sanctuaire — qui dit où se tient sa chaîne entre le marché et le commun. "
+     "Il ne se saisit pas : il découle de la nature de chaque maillon, puis des "
+     "conditions d'accès au sommet. Marchand : la valeur du foncier reste "
+     "captable. Hybride : foncier libéré, mais un maillon garde une part "
+     "d'intérêt privé légitime. Sanctuaire : la formule entière est tenue — "
+     "rare, un horizon plus qu'une case à remplir."),
+    ("Condition du sommet",
+     "Le niveau le plus haut — le sanctuaire — n'est atteint que si plusieurs "
+     "conditions observables sont réunies à la fois : foncier irréversiblement "
+     "hors-marché, habitat du vivant, milieu durablement protégé, usage non "
+     "marchand d'intérêt général, travail non marchandisé. Chacune se lit sur du "
+     "vérifiable ; il suffit qu'une manque pour que le lieu reste hybride."),
     ("Domiciliage des axes",
      "Règle attribuant chaque axe d'évaluation au maillon de la chaîne où il se "
      "joue réellement : l'axe 1 au porteur, l'axe 3 à l'usufruitier, l'axe 5 à "
@@ -3470,49 +3488,57 @@ def render_annuaire(cfg, n_by_cat):
     et les catalogues d'acteurs (porteurs, usufruitiers, réseaux, modèles)."""
     project = cfg["concepts"]["project"]
 
-    def card(href, titre, n_label, texte):
+    def start(href, titre, n_label, texte):
+        return (f'<a class="start-card" href="{href}"><h3>{e(titre)}</h3>'
+                f'<p>{e(texte)}</p><span class="cat-n">{e(n_label)} →</span></a>')
+
+    def acteur(href, titre, n_label, texte):
         return (f'<a class="cat-card" href="{href}"><h3>{e(titre)}</h3>'
                 f'<p>{e(texte)}</p><span class="cat-n">{e(n_label)} →</span></a>')
 
-    vues = "".join([
-        card("lieux.html", "Tous les lieux",
-             f"{n_by_cat['lieu']} lieux",
-             "Le catalogue des terres recensées, filtrable et trié par Indice."),
-        card("carte.html", "Sur la carte", "vue cartographique",
-             "Les lieux géolocalisés, colorés par verdict, à parcourir d'un coup d'œil."),
-        card("classement.html", "Le classement", "tous les montages",
-             "Le rangement complet par Indice de libération, lieux et acteurs confondus."),
+    commencer = "".join([
+        start("carte.html", "Sur la carte", "vue cartographique",
+              "Les lieux géolocalisés, colorés par verdict, à parcourir d'un coup d'œil."),
+        start("lieux.html", "La liste des lieux",
+              f"{n_by_cat['lieu']} lieux",
+              "Le catalogue complet, filtrable et trié."),
+        start("classement.html", "Le classement", "par Indice",
+              "Le rangement par Indice de libération, du plus abouti au plus éloigné."),
     ])
     acteurs = "".join([
-        card("porteurs.html", "Porteurs de nue-propriété",
-             f"{n_by_cat['porteur']} porteurs",
-             "Les organismes qui détiennent le foncier et le tiennent hors-marché."),
-        card("usufruitiers.html", "Organismes usufruitiers",
-             f"{n_by_cat['usufruitier']} usufruitiers",
-             "Les collectifs qui reçoivent l'usage et font vivre les lieux."),
-        card("reseaux.html", "Réseaux",
-             f"{n_by_cat['reseau']} réseaux",
-             "Les fédérations et faîtières qui relient porteurs et lieux."),
-        card("modeles.html", "Modèles voisins",
-             f"{n_by_cat['modele']} modèles",
-             "Des dispositifs proches, français et étrangers, pris comme repères."),
+        acteur("porteurs.html", "Porteurs de nue-propriété",
+               f"{n_by_cat['porteur']} porteurs",
+               "Les organismes qui détiennent le foncier et le tiennent hors-marché."),
+        acteur("usufruitiers.html", "Organismes usufruitiers",
+               f"{n_by_cat['usufruitier']} usufruitiers",
+               "Les collectifs qui reçoivent l'usage et font vivre les lieux."),
+        acteur("reseaux.html", "Réseaux",
+               f"{n_by_cat['reseau']} réseaux",
+               "Les fédérations et faîtières qui relient porteurs et lieux."),
+        acteur("modeles.html", "Modèles voisins",
+               f"{n_by_cat['modele']} modèles",
+               "Des dispositifs proches, français et étrangers, pris comme repères."),
     ])
     body = f"""<section class="hero hero-compact">
   <p class="hero-kicker">L'annuaire documentaire</p>
   <h1>Annuaire</h1>
-  <p class="hero-lead">Tout ce que recense le projet, à barème égal : les lieux,
-  leurs porteurs et leurs usufruitiers, les réseaux qui les relient. Plusieurs
-  manières d'entrer — la liste, la carte, le classement — pour une même matière.</p>
+  <p class="hero-lead">Tout ce que recense le projet : les lieux, leurs porteurs et
+  usufruitiers, les réseaux qui les relient. Plusieurs manières d'entrer dans une
+  même matière.</p>
+</section>
+
+<section class="commencer">
+  <h2 class="sec">Commencer ici</h2>
+  <div class="start-grid">{commencer}</div>
 </section>
 
 <section>
-  <h2 class="sec">Parcourir les lieux</h2>
-  <div class="cat-cards">{vues}</div>
-</section>
-
-<section>
-  <h2 class="sec">Les acteurs et les repères</h2>
-  <div class="cat-cards">{acteurs}</div>
+  <details class="acteurs-fold">
+    <summary class="sec">Explorer par acteur <span class="fold-hint">— porteurs, usufruitiers, réseaux, modèles</span></summary>
+    <p class="lead">Les lieux sont tenus par des acteurs aux rôles distincts ; on
+    peut aussi entrer par eux. Tous traités à barème égal avec les lieux.</p>
+    <div class="cat-cards">{acteurs}</div>
+  </details>
 </section>
 
 <p class="prose">Le récit de certains lieux est développé dans les
@@ -4440,12 +4466,27 @@ p{font-size:1.05rem;}
  padding:.32rem .5rem;border-radius:var(--radius);line-height:1;}
 .brand-name{font-size:1.4rem;font-weight:700;letter-spacing:-.01em;display:block;}
 .baseline{font-size:.76rem;color:var(--muted);font-family:-apple-system,system-ui,sans-serif;}
+@media (max-width:480px){.baseline{display:none;}}
 .topnav{display:flex;gap:1.05rem;flex-wrap:wrap;font-size:.88rem;}
 .topnav a{text-decoration:none;color:var(--muted);padding:.45rem .2rem;
  display:inline-block;min-height:24px;
  border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
 .topnav a:hover{color:var(--green-dk);border-bottom-color:var(--line);}
 .topnav a.active{color:var(--ink);font-weight:600;border-bottom-color:var(--terra);}
+/* la Méthode est la référence : un peu détachée des destinations */
+.topnav a.nav-ref{margin-left:auto;color:var(--faint);}
+@media (max-width:640px){.topnav a.nav-ref{margin-left:0;}}
+
+/* hub Annuaire — bloc « Commencer ici » (entrées dominantes) */
+.start-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:.6rem 0 .4rem;}
+.start-card{display:block;background:var(--beige);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.3rem 1.4rem;text-decoration:none;color:var(--ink);
+ transition:border-color .15s,box-shadow .15s;}
+.start-card:hover{border-color:var(--green);box-shadow:0 6px 20px rgba(33,29,24,.10);}
+.start-card h3{margin:0 0 .35rem;font-size:1.25rem;}
+.start-card p{font-size:.92rem;color:var(--muted);margin:.2rem 0 .6rem;}
+.acteurs-fold>summary.sec{cursor:pointer;width:fit-content;}
+.acteurs-fold>summary.sec .fold-hint{font-weight:400;font-size:.8rem;color:var(--muted);text-transform:none;letter-spacing:0;}
 
 main.wrap{padding-bottom:4rem;}
 
