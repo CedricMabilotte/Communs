@@ -145,8 +145,9 @@ fiabilite: >
   du fermage, contenu précis des clauses environnementales, date de mise en
   place du dispositif.
 chaine:
-  porteurs: [scic-terres-de-sources]
+  porteurs: [eau-bassin-rennais]
   usufruitiers: [exploitants-brce-cheze-canut]
+voir_aussi: [scic-terres-de-sources]
 sources:
   - titre: "Eau du Bassin Rennais — Le Bassin versant de Chèze-Canut"
     url: "https://www.eaudubassinrennais-collectivite.fr/notre-reseau/ressources-eau/ressource-cheze-canut/"

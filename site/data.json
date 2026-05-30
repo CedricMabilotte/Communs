@@ -1508,8 +1508,8 @@
     "nom": "Collectivité Eau du Bassin Rennais",
     "categorie": "porteur",
     "sous_titre": "Syndicat mixte d'agglomération acquéreur du foncier des aires de captage",
-    "idl": 76,
-    "idl_brut": 76,
+    "idl": 75,
+    "idl_brut": 75,
     "idl_intrinseque": 76,
     "score_type": "calcule",
     "completude": 1.0,
@@ -1518,7 +1518,7 @@
       "2": 100,
       "3": 56,
       "4": 72,
-      "5": 75
+      "5": 71
     },
     "axes_intrinseques": {
       "1": 85,
