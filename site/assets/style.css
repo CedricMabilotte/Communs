@@ -140,11 +140,19 @@ main.wrap{padding-bottom:4rem;}
 .dossier-vignette p{font-size:.9rem;color:var(--muted);margin:.2rem 0 .6rem;}
 .dossier-vignette .dv-meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
  font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;font-weight:600;color:var(--terra-dk);}
-/* bandeau d'accès carte sur l'accueil */
-.carte-teaser{margin:1.6rem 0;background:var(--beige);border-radius:var(--radius);
- padding:1.3rem 1.4rem;}
+/* aperçu de carte vivant sur l'accueil */
+.carte-teaser{margin:1.6rem 0;}
 .carte-teaser .sec{margin-top:0;}
-.carte-teaser .lead{max-width:52ch;}
+.carte-teaser .lead{max-width:60ch;}
+.carte-home-link{display:block;position:relative;border-radius:var(--radius);
+ overflow:hidden;text-decoration:none;border:1px solid var(--line);}
+.carte-home-map{height:340px;width:100%;pointer-events:none;background:#e8efe6;}
+.carte-home-cta{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
+ z-index:1001;background:var(--ink);color:#fff;padding:.6rem 1.3rem;border-radius:999px;
+ font-weight:600;font-size:.95rem;box-shadow:0 4px 18px rgba(0,0,0,.3);
+ font-family:-apple-system,system-ui,sans-serif;}
+.carte-home-link:hover .carte-home-cta{background:var(--green-dk);}
+@media (max-width:480px){.carte-home-map{height:260px;}}
 
 .explain-grid,.cat-cards{display:grid;gap:1rem;}
 .explain-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}

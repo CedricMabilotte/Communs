@@ -3403,14 +3403,49 @@ def render_index(all_sc, cfg, n_by_cat):
         '<div class="dossier-vignettes">' + "".join(_dcards) + '</div>'
         '<p class="linkrow"><a href="dossiers/index.html">Tous les dossiers →</a></p>'
         '</section>') if _dcards else ""
-    # accès carte mis en avant (la carte est le réflexe n°1 d'un annuaire géographique)
-    carte_teaser = (
-        '<section class="carte-teaser">'
-        '<div class="ct-body"><h2 class="sec">Voir la France des terres libérées</h2>'
-        f'<p class="lead">{n_lieux} lieux géolocalisés, colorés selon leur verdict — '
-        'le marché en rouge, le commun en vert. À parcourir d\'un coup d\'œil.</p>'
-        '<p class="hero-cta"><a class="cta" href="carte.html">Explorer la carte →</a></p>'
-        '</div></section>')
+    # aperçu de carte vivant — la carte est le réflexe n°1 d'un annuaire
+    # géographique : on la MONTRE (points réels colorés par verdict) plutôt que de
+    # la promettre. Carte non interactive (pointer-events désactivés en CSS) : un
+    # clic n'importe où ouvre la carte complète.
+    _cm, _ = carte_markers(all_sc, _by_uid)
+    _cm_js = json.dumps(_cm, ensure_ascii=False)
+    _cc_js = json.dumps({k or "": v for k, v in CARTE_VERDICT_COULEURS.items()},
+                        ensure_ascii=False)
+    carte_teaser = f"""<section class="carte-teaser">
+  <h2 class="sec">La France des terres libérées</h2>
+  <p class="lead">{n_lieux} lieux géolocalisés, colorés selon leur verdict — du
+  rouge marchand au vert du commun. Un aperçu : cliquez pour plonger dans la carte.</p>
+  <a class="carte-home-link" href="carte.html" aria-label="Explorer la carte des {n_lieux} lieux">
+    <div id="carte-home" class="carte-home-map" aria-hidden="true"></div>
+    <span class="carte-home-cta">Explorer la carte →</span>
+  </a>
+</section>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(function () {{
+  var el = document.getElementById("carte-home");
+  if (!el || typeof L === "undefined") return;
+  var LIEUX = {_cm_js};
+  var COULEURS = {_cc_js};
+  function colorFor(v) {{ return COULEURS[v || ""] || COULEURS[""]; }}
+  var map = L.map("carte-home", {{
+    zoomControl: false, dragging: false, scrollWheelZoom: false,
+    doubleClickZoom: false, touchZoom: false, keyboard: false, boxZoom: false,
+    tap: false
+  }}).setView([46.7, 2.4], 5);
+  L.tileLayer("https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }}).addTo(map);
+  LIEUX.forEach(function (d) {{
+    L.circleMarker([d.lat, d.lon], {{
+      radius: 6, weight: 1.5, color: "#fffdf6",
+      fillColor: colorFor(d.verdict), fillOpacity: 0.95, interactive: false
+    }}).addTo(map);
+  }});
+}})();
+</script>"""
 
     body = f"""{tri_defs(axes_cfg)}<section class="hero">
   <p class="hero-kicker">Annuaire critique · libération des terres</p>
@@ -4557,11 +4592,19 @@ main.wrap{padding-bottom:4rem;}
 .dossier-vignette p{font-size:.9rem;color:var(--muted);margin:.2rem 0 .6rem;}
 .dossier-vignette .dv-meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
  font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;font-weight:600;color:var(--terra-dk);}
-/* bandeau d'accès carte sur l'accueil */
-.carte-teaser{margin:1.6rem 0;background:var(--beige);border-radius:var(--radius);
- padding:1.3rem 1.4rem;}
+/* aperçu de carte vivant sur l'accueil */
+.carte-teaser{margin:1.6rem 0;}
 .carte-teaser .sec{margin-top:0;}
-.carte-teaser .lead{max-width:52ch;}
+.carte-teaser .lead{max-width:60ch;}
+.carte-home-link{display:block;position:relative;border-radius:var(--radius);
+ overflow:hidden;text-decoration:none;border:1px solid var(--line);}
+.carte-home-map{height:340px;width:100%;pointer-events:none;background:#e8efe6;}
+.carte-home-cta{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
+ z-index:1001;background:var(--ink);color:#fff;padding:.6rem 1.3rem;border-radius:999px;
+ font-weight:600;font-size:.95rem;box-shadow:0 4px 18px rgba(0,0,0,.3);
+ font-family:-apple-system,system-ui,sans-serif;}
+.carte-home-link:hover .carte-home-cta{background:var(--green-dk);}
+@media (max-width:480px){.carte-home-map{height:260px;}}
 
 .explain-grid,.cat-cards{display:grid;gap:1rem;}
 .explain-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
