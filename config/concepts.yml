@@ -468,14 +468,13 @@ verdict:
     maillon `commerciale_encadree` ou `exploitation_agricole` (intérêt privé
     encadré ou bénéfice d'exploitation approprié : plafond du sommet). Sinon —
     chaîne entièrement `non_lucrative` ou `commerciale_desactivee` —
-    `sanctuaire` lorsque, de plus, TOUS les co-gates observables sont au vert :
-    foncier irréversiblement hors-marché, habitat du vivant (vivant_finalite +
-    place_au_vivant), régénération opposable (milieu_protege), finalité d'usage
-    (usage non marchand + intérêt général) et travail non marchandisé (hors
-    salariat de marché, proxy unidirectionnel). À défaut de l'un de ces
-    co-gates, le lieu reste `hybride`. Le verdict `sanctuaire` ne s'allume jamais
-    tant qu'un maillon est de nature `inconnu`, ni tant qu'un co-gate est
-    `inconnu` : il émerge au fil du peuplement, jamais par défaut.
+    `sanctuaire` lorsque, de plus, toutes les conditions observables sont
+    réunies : foncier irréversiblement hors-marché, habitat du vivant, milieu
+    durablement protégé, finalité d'usage (non marchand + intérêt général) et
+    travail non marchandisé (hors salariat). À défaut de l'une de ces conditions,
+    le lieu reste `hybride`. Le verdict `sanctuaire` ne s'allume jamais tant qu'un
+    maillon est de nature inconnue, ni tant qu'une condition est inconnue : il
+    émerge au fil du peuplement, jamais par défaut.
   degres:
     - id: marchand
       label: "Montage marchand"
@@ -493,8 +492,8 @@ verdict:
         société civile d'exploitation agricole preneuse de bail sous un porteur
         hors-marché (le bénéfice d'exploitation reste approprié par les
         associé·es). Y figure aussi le commun juridiquement abouti dont l'un des
-        co-gates du sommet (habitat du vivant, régénération opposable, finalité
-        d'usage non marchande, travail non marchandisé) n'est pas encore établi.
+        conditions du sommet (habitat du vivant, milieu durablement protégé,
+        usage non marchand, travail non marchandisé) n'est pas encore réunie.
       en_clair: >
         Un montage solide et de bonne foi, mais pas tout à fait le sommet : un
         maillon garde une part d'intérêt privé, des paysan·nes vivent du produit
@@ -504,8 +503,8 @@ verdict:
       label: "Sanctuaire"
       definition: >
         La formule fondatrice est entièrement tenue : chaîne entièrement non
-        lucrative ou à intérêt privé désactivé, ET tous les co-gates observables
-        au vert — foncier irréversiblement hors-marché, habitat du vivant,
+        lucrative ou à intérêt privé désactivé, ET toutes les conditions observables
+        réunies — foncier irréversiblement hors-marché, habitat du vivant,
         protection durable et opposable du milieu, usage non marchand d'intérêt
         général, et travail non marchandisé (hors salariat). Incarnation visible du pôle « Le
         commun libre et vivant ». Son extrême le plus pur inclut la terre rendue

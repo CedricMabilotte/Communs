@@ -204,9 +204,8 @@ chaine:
     - axe: 1
       regle: "Face juridique (soustraction au marché) lue chez le PORTEUR —
               seul détenteur de la nue-propriété. Face matérielle
-              (non-dégradation du fonds) lue sur le LIEU —
-              réalisée par le critère `milieu_protege` logé dans la grille du
-              lieu."
+              (non-dégradation du fonds) lue sur le LIEU — jugée sur la
+              protection effective du milieu."
     - axe: 2
       regle: "Lu sur TOUTE la chaîne — maillon le plus faible : un seul lien
               commercial contamine l'axe."
@@ -218,8 +217,8 @@ chaine:
       regle: "Régime marchand et sécurité lus dans la CONVENTION porteur/
               usufruitier — bail, loyer, sécurité de jouissance. Le caractère
               non abusif et hospitalier de l'usage se lit sur le
-              LIEU — critères `usage_non_degradant` et `place_au_vivant` logés
-              dans la grille du lieu."
+              LIEU — un usage qui ne dégrade pas le fonds et fait sa place au
+              vivant."
   coherence: >
     Une chaîne est saine tant qu'aucun maillon ne bascule dans le régime
     commercial, idéalement avec une entité du pôle « commun citoyen » à

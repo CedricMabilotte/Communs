@@ -1397,9 +1397,9 @@ def compute_verdict(fiche, by_uid):
 def verdict_badge(vid, concepts):
     """Badge du verdict d'un lieu. vid None → verdict non encore établi."""
     if not vid:
-        return ('<span class="verdict verdict-na" title="Verdict non encore '
-                'établi : la nature d\'au moins un maillon de la chaîne n\'est '
-                'pas documentée.">Verdict à établir</span>')
+        return ('<span class="verdict verdict-na" title="Verdict suspendu : il '
+                'manque une pièce — la nature d\'au moins un maillon de la chaîne '
+                'n\'est pas encore documentée.">Verdict suspendu</span>')
     for d in (concepts.get("verdict", {}) or {}).get("degres", []) or []:
         if d["id"] == vid:
             return (f'<span class="verdict verdict-{e(vid)}" '
@@ -1541,15 +1541,15 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     if cat in ("porteur", "usufruitier") and idl_intr is not None \
             and sc["idl"] is not None:
         renvoi = (' <a class="chaine-renvoi" href="../methode.html#chaine">'
-                  'La chaîne et le domiciliage des axes →</a>')
+                  'Comment la chaîne entre dans la note →</a>')
         if n_chaine == 0:
             chaine_html = ('<p class="chaine-note">Aucun lieu relié dans '
-                           'l\'annuaire : l\'indice effectif égale l\'indice '
-                           'intrinsèque.' + renvoi + '</p>')
+                           'l\'annuaire : la note replacée dans les chaînes égale '
+                           'la note propre.' + renvoi + '</p>')
         elif not contamine:
-            chaine_html = (f'<p class="chaine-note">Indice intrinsèque et '
-                           f'effectif identiques ({sc["idl"]}) : les '
-                           f'{_lien_pluriel(n_chaine)} ne contaminent aucun '
+            chaine_html = (f'<p class="chaine-note">Note propre et note replacée '
+                           f'dans les chaînes identiques ({sc["idl"]}) : les '
+                           f'{_lien_pluriel(n_chaine)} n\'abaissent aucun '
                            f'axe.{renvoi}</p>')
         else:
             # axes réellement abaissés : comparaison intrinsèque / effectif
@@ -1567,11 +1567,12 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                 axes_phrase = (", ".join(baisses[:-1]) + " et " + baisses[-1])
             comp_phrase = ""
             if sc.get("idl_brut") is not None and sc["idl_brut"] != sc["idl"]:
-                comp_phrase = (" L'indice effectif intègre aussi la pénalité de "
+                comp_phrase = (" La note replacée intègre aussi la pénalité de "
                                "complétude.")
-            chaine_html = (f'<p class="chaine-note">Indice intrinsèque '
-                           f'{idl_intr}, ramené à <strong>{sc["idl"]}</strong> '
-                           f'(indice effectif) : par les {_lien_pluriel(n_chaine)}, '
+            chaine_html = (f'<p class="chaine-note">Note propre '
+                           f'{idl_intr}, ramenée à <strong>{sc["idl"]}</strong> '
+                           f'une fois replacée dans ses chaînes : par les '
+                           f'{_lien_pluriel(n_chaine)}, '
                            f'{axes_phrase}.{comp_phrase}{renvoi}</p>')
 
     # plafond de chaîne sur l'axe 2 d'un lieu (session #5) — annotation visible
@@ -1583,13 +1584,12 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         nat_lbl = nature_label(nat, cfg["concepts"]).lower()
         intr_ax2 = sc.get("ax2_intrinseque")
         chaine_html += (
-            f'<p class="chaine-note">Axe 2 (la structure) plafonné à '
-            f'<strong>{sc["ax2_plafond"]}</strong> par la chaîne — un maillon '
-            f'de nature « {e(nat_lbl)} » empêche un axe 2 élevé, '
-            f'quoi que cochent les critères saisis '
-            f'(score intrinsèque : {intr_ax2}). '
+            f'<p class="chaine-note">La structure ne peut être notée plus haut '
+            f'que <strong>{sc["ax2_plafond"]}</strong> : un maillon de la chaîne '
+            f'— « {e(nat_lbl)} » — l\'en empêche, quels que soient les critères '
+            f'cochés. '
             f'<a class="chaine-renvoi" href="../methode.html#chaine">'
-            f'Le plafond de chaîne →</a></p>')
+            f'Comment la chaîne entre dans la note →</a></p>')
 
     # nombre d'axes effectivement renseignés : l'Indice est leur moyenne
     # géométrique. En deçà de 5, on le signale — information distincte de la
@@ -1698,10 +1698,10 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
   <p class="vc-intro"><strong>Trois lectures, distinctes à dessein.</strong></p>
   <ul>
     <li><strong>Le verdict</strong> — <em>marchand · hybride · sanctuaire</em> — dit
-    où se tient la chaîne entre marché et commun ; il se calcule sur la nature des
-    maillons, pas sur le chiffre.</li>
-    <li><strong>L'Indice</strong> (0-100) mesure la qualité du montage sur cinq axes
-    (moyenne non compensatoire : l'axe le plus faible commande).</li>
+    où se tient la chaîne entre marché et commun ; il découle de la nature des
+    maillons, pas du chiffre.</li>
+    <li><strong>L'Indice</strong> (0-100) mesure la qualité du montage sur cinq axes,
+    en retenant le plus faible : une force ne rachète pas une faiblesse.</li>
     <li><strong>Le palier</strong> est la tranche de l'Indice — mais « Libération
     aboutie » est <em>réservé au verdict sanctuaire</em> : un Indice élevé peut donc
     rester « solide » sans être « abouti ». Les trois ne disent pas la même chose.</li>
@@ -1711,8 +1711,8 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
   <summary>Comment lire les visuels de cette fiche</summary>
   <ul>
   <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
-  indique le palier. L'Indice est la moyenne géométrique (non compensatoire)
-  des axes renseignés : l'axe le plus faible commande le résultat.</li>
+  indique le palier. L'Indice retient l'axe le plus faible des cinq : une force
+  ne rachète pas une faiblesse.</li>
   <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
   l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
   est noté sur cet axe.</li>
@@ -1962,8 +1962,8 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
              'unique et ne porte donc pas d\'Indice de libération. Sa fiche est '
              'un hub — elle présente l\'entité, relie ses membres documentés et '
              'donnera la distribution de ses lieux concrets à mesure qu\'ils '
-             'sont détaillés. <a href="../methode.html#chaine">La chaîne et le '
-             'domiciliage des axes →</a></p></section>')
+             'sont détaillés. <a href="../methode.html#chaine">La chaîne, et où '
+             'se lit chaque axe →</a></p></section>')
 
     resume = ""
     if fiche.get("resume"):
@@ -2321,7 +2321,7 @@ CARTE_VERDICT_LABELS = {
     "marchand": "Montage marchand",
     "hybride": "Montage hybride",
     "sanctuaire": "Sanctuaire",
-    None: "Verdict à établir",
+    None: "Verdict suspendu",
 }
 
 # Extraction lon,lat depuis l'URL geoportail (paramètre c=LON,LAT).
@@ -2761,8 +2761,8 @@ détail, avec les pôles et la typologie de montage, sur la page
     verdict_html = f"""<section id="verdict"><h2 class="sec">Le verdict du lieu</h2>
 <p class="prose">À côté de l'Indice chiffré, chaque lieu reçoit un
 <strong>verdict</strong> — une qualification en trois niveaux qui dit où se tient
-la chaîne entre marché et commun. Le verdict ne se saisit jamais : il se
-<strong>calcule</strong> à partir de la nature de chaque maillon, lue dans sa
+la chaîne entre marché et commun. Le verdict ne se saisit jamais : il
+<strong>découle</strong> de la nature de chaque maillon, lue dans sa
 relation à la chaîne, puis des conditions d'accès au sommet.</p>
 <ul class="prose verdict-degres">{degres_li}</ul>
 <p class="prose"><strong>Une nature lue dans la chaîne, pas en soi.</strong> Ce
@@ -2773,7 +2773,7 @@ hors-marché ne capte pas le fonds : le lieu reste hybride, jamais marchand. La
 même exploitation, <em>propriétaire</em> de sa terre, la capte : le lieu devient
 marchand. Le titre de l'articulation (bail rural, emphytéotique) départage les
 deux, sur la chaîne déclarée par le lieu — seule source de vérité.</p>
-<p class="prose"><strong>Le sommet est co-gaté.</strong> Le niveau
+<p class="prose"><strong>Le sommet tient à plusieurs conditions à la fois.</strong> Le niveau
 « {e(next((d['label'] for d in verdict_cfg.get('degres',[]) if d['id']=='sanctuaire'), 'sanctuaire'))} »
 ne s'atteint qu'avec une chaîne entièrement non lucrative <em>et</em> des
 conditions observables toutes réunies : foncier irréversiblement hors-marché,
@@ -2787,12 +2787,11 @@ Le sommet est donc <strong>rare — un horizon plus qu'une case à remplir</stro
 il peut rester momentanément vide à mesure que le corpus se documente, et c'est
 honnête.</p>
 <p class="prose"><strong>Statut de l'évaluation.</strong> Le verdict comme
-l'Indice sont un <strong>indicateur composite conventionnel</strong> — à la
-manière de l'Indice de développement humain : une convention argumentée qui agrège
-des critères pondérés selon un cadre explicite, non une mesure objective de la
-valeur d'un lieu. Le cadre est défendable, contestable, perfectible ; il assume
-une perspective — celle d'une économie citoyenne, non lucrative et d'intérêt
-général — plutôt qu'une neutralité de surface. Parce que le verdict est une
+l'Indice sont une <strong>lecture argumentée</strong>, pas une mesure objective de
+la valeur d'un lieu. Comme tout indice — celui du développement humain, par
+exemple — ils agrègent des critères choisis et pondérés selon un cadre assumé. Ce
+cadre est perfectible et se discute ; il prend le parti d'une économie citoyenne,
+non lucrative et d'intérêt général, plutôt qu'une neutralité de surface. Parce que le verdict est une
 lecture et non un arrêt, tout porteur ou usufruitier peut exercer un
 <strong>droit de réponse</strong> : sa réponse est reproduite sur la fiche
 concernée, sans retouche.</p>
@@ -2804,7 +2803,7 @@ libération des terres.</p>
   <a href="#corpus">Ce que recense l'annuaire</a>
   <a href="#triptyque">Le triptyque usus / fructus / abusus</a>
   <a href="#indice">L'Indice de libération</a>
-  <a href="#chaine">La chaîne et le domiciliage des axes</a>
+  <a href="#chaine">La chaîne, et où se lit chaque axe</a>
   <a href="#verdict">Le verdict du lieu</a>
   <a href="#integrite">L'intégrité du montage</a>
   <a href="#limites">Limites</a>
@@ -2831,7 +2830,7 @@ vaut 1 pour « oui », 0,5 pour « partiel », 0 pour « non ». Les critères
 « inconnu » sont <strong>exclus du calcul</strong> — ils ne pénalisent pas la
 note mais abaissent la complétude affichée de la fiche.</p>
 <div class="axe-cards">{axes_html}</div>
-<p class="prose"><strong>Cinq axes orthogonaux.</strong> Les cinq axes sont
+<p class="prose"><strong>Cinq axes indépendants.</strong> Les cinq axes sont
 indépendants les uns des autres : un montage peut être haut sur l'un et bas sur
 un autre — propriété solidement verrouillée mais gouvernance fermée, ou
 l'inverse. Aucun axe ne se déduit d'un autre. C'est cette indépendance qui rend
@@ -2862,7 +2861,7 @@ comme tel ; ils restent hors du classement principal.</p>
 <tbody>{paliers_html}</tbody></table>
 </section>
 
-<section id="chaine"><h2 class="sec">La chaîne et le domiciliage des axes</h2>
+<section id="chaine"><h2 class="sec">La chaîne, et où se lit chaque axe</h2>
 <p class="prose">Un montage de libération des terres n'est pas une entité
 isolée mais une <strong>chaîne</strong> : un lieu, son porteur de
 nue-propriété, son organisme usufruitier. Chaque axe a un <strong>domicile</strong>
@@ -3386,9 +3385,9 @@ def render_index(all_sc, cfg, n_by_cat):
     <div class="stat"><span class="stat-n">{n_lieux}</span>
       <span class="stat-l">lieux recensés</span></div>
     <div class="stat"><span class="stat-n">{n_marchand}</span>
-      <span class="stat-l">fausses libérations démasquées (montages marchands)</span></div>
+      <span class="stat-l">fausses libérations démasquées (la terre y reste captable par le marché)</span></div>
     <div class="stat"><span class="stat-n">{n_sanctuaire}</span>
-      <span class="stat-l">au sommet décommodifié — le sanctuaire reste un horizon</span></div>
+      <span class="stat-l">aucune libération pleinement aboutie : le sommet reste un horizon</span></div>
   </div>
   <p class="lead">La plupart des lieux sont des montages <strong>hybrides</strong>
   ({n_hybride}) : des communs juridiquement solides, mais qu'un maillon, un usage
