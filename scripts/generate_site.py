@@ -3363,6 +3363,37 @@ def render_index(all_sc, cfg, n_by_cat):
 
     hist = corpus_histogram(all_sc, ranking)
 
+    # bandeau « À lire » — 3 récits du magazine, donnés à voir dès l'accueil
+    _doss = load_dossiers()
+    _by_uid = {f["uid"]: f for f, _ in all_sc}
+    _dcards = []
+    for d in _doss[:3]:
+        m = d["meta"]
+        slug = m.get("slug", "")
+        lu = m.get("lieu")
+        vb = (verdict_badge(compute_verdict(_by_uid[lu], _by_uid), concepts)
+              if lu and _by_uid.get(lu) else "")
+        _dcards.append(
+            f'<a class="dossier-vignette" href="dossiers/{e(slug)}.html">'
+            f'<h3>{e(clean(m.get("titre","")))}</h3>'
+            f'<p>{e(clean(m.get("sous_titre","")))}</p>'
+            f'<span class="dv-meta">{vb}Lire le récit →</span></a>')
+    doss_section = (
+        '<section class="accueil-dossiers"><h2 class="sec">À lire — les récits</h2>'
+        '<p class="lead">Certains lieux portent un enseignement que la fiche-tableau '
+        'ne transmet pas. On les raconte.</p>'
+        '<div class="dossier-vignettes">' + "".join(_dcards) + '</div>'
+        '<p class="linkrow"><a href="dossiers/index.html">Tous les dossiers →</a></p>'
+        '</section>') if _dcards else ""
+    # accès carte mis en avant (la carte est le réflexe n°1 d'un annuaire géographique)
+    carte_teaser = (
+        '<section class="carte-teaser">'
+        '<div class="ct-body"><h2 class="sec">Voir la France des terres libérées</h2>'
+        f'<p class="lead">{n_lieux} lieux géolocalisés, colorés selon leur verdict — '
+        'le marché en rouge, le commun en vert. À parcourir d\'un coup d\'œil.</p>'
+        '<p class="hero-cta"><a class="cta" href="carte.html">Explorer la carte →</a></p>'
+        '</div></section>')
+
     body = f"""{tri_defs(axes_cfg)}<section class="hero">
   <p class="hero-kicker">Annuaire critique · libération des terres</p>
   <h1>La terre n'est pas une marchandise.</h1>
@@ -3394,6 +3425,10 @@ def render_index(all_sc, cfg, n_by_cat):
   rémunéré ou une condition encore non établie tient à distance du sommet. Le
   sommet n'est pas une case à remplir — c'est une étoile polaire.</p>
 </section>
+
+{carte_teaser}
+
+{doss_section}
 
 <section>
   <h2 class="sec">Par où entrer</h2>
@@ -4470,6 +4505,22 @@ main.wrap{padding-bottom:4rem;}
 .intent-card h3{margin-top:0;}
 .intent-card p{font-size:.92rem;color:var(--muted);}
 .intent-links{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;}
+/* bandeau « À lire » — vignettes de récits sur l'accueil */
+.accueil-dossiers{margin:1.6rem 0;}
+.dossier-vignettes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
+.dossier-vignette{display:block;background:var(--card);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.1rem 1.2rem;text-decoration:none;color:var(--ink);
+ transition:border-color .15s,box-shadow .15s;}
+.dossier-vignette:hover{border-color:var(--terra-dk);box-shadow:0 4px 16px rgba(33,29,24,.08);}
+.dossier-vignette h3{margin:0 0 .35rem;font-size:1.12rem;line-height:1.3;}
+.dossier-vignette p{font-size:.9rem;color:var(--muted);margin:.2rem 0 .6rem;}
+.dossier-vignette .dv-meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;font-weight:600;color:var(--terra-dk);}
+/* bandeau d'accès carte sur l'accueil */
+.carte-teaser{margin:1.6rem 0;background:var(--beige);border-radius:var(--radius);
+ padding:1.3rem 1.4rem;}
+.carte-teaser .sec{margin-top:0;}
+.carte-teaser .lead{max-width:52ch;}
 
 .explain-grid,.cat-cards{display:grid;gap:1rem;}
 .explain-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
