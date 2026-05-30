@@ -81,6 +81,9 @@ grille:
   - critere: perennite_gouvernance
     valeur: partiel
     note: "La permanence d'une personne morale publique assure la continuité du portage ; les dispositifs de transmission de l'usage agricole et de renouvellement des preneur·ses ne sont pas documentés."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Le travail-cœur est porté par des exploitant·es agricoles preneur·ses de bail rural, vivant du produit de leur ferme sans rapport salarial de marché."
   - critere: usage_interet_general
     valeur: oui
     note: "Le lieu sert un intérêt général majeur — la protection d'une ressource d'eau potable alimentant l'agglomération rennaise — combiné à un usage agricole nourricier."

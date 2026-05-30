@@ -31,15 +31,15 @@ montage:
       note: "Titre précis non documenté par les sources : les actes formalisant l'usage collectif liant la coopérative au foncier de la fondation ne sont pas détaillés."
   description: >
     Le foncier du Mas de Granier est détenu de façon inaliénable par le Fonds
-    de Terre Européenne, fondation de droit suisse qui sanctuarise la propriété
-    des terres de Longo Maï. La coopérative autogérée, de statut associatif, en
-    assure l'usage et la gouverne collectivement. Le démembrement
+    de Terre Européenne, fondation de droit suisse qui protège durablement la
+    propriété des terres de Longo Maï. La coopérative autogérée, de statut
+    associatif, en assure l'usage et la gouverne collectivement. Le démembrement
     nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
-    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+    s'agit d'une propriété inaliénable en fondation et d'un usage collectif.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    Foncier porté de manière inaliénable dans une fondation de droit
     suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
     pas documentée.
 grille:
@@ -87,7 +87,7 @@ grille:
     note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
   - critere: securite_jouissance
     valeur: partiel
-    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1990, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+    note: "Le foncier est inaliénable et le site fonctionne depuis 1990, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
     valeur: non
     note: "La ferme conduit ses prairies et cultures en bio, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale au bail) n'est documenté pour le foncier du Mas de Granier."
@@ -100,9 +100,12 @@ grille:
   - critere: place_au_vivant
     valeur: partiel
     note: "Les prairies naturelles de la plaine de la Crau accueillent une faune et une flore propres, mais aucun aménagement explicite en faveur du vivant (haies, mares, friches gérées) n'est documenté."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Ferme collective autogérée du réseau Longo Maï : la quinzaine de coopérant·es travaille en autogestion, hors rapport salarial."
 analyse:
   forces:
-    - "Foncier sanctuarisé de façon inaliénable depuis 1990."
+    - "Foncier inaliénable, soustrait au marché depuis 1990."
     - "Conserverie ouverte aux paysan·nes voisin·es : un outil mutualisé de territoire."
     - "Ferme engagée dans des solidarités sociales dépassant largement ses occupant·es."
   fragilites:
@@ -115,7 +118,7 @@ analyse:
     - "Associer formellement le voisinage à la gouvernance du lieu."
   synthese: >
     Le Mas de Granier est une ferme collective de Longo Maï tournée vers le
-    territoire : un foncier sanctuarisé en fondation, une conserverie partagée
+    territoire : un foncier inaliénable en fondation, une conserverie partagée
     et un fort engagement social. Sa marge de progression tient à la
     documentation du montage et à l'ouverture de sa gouvernance.
 fiabilite: >

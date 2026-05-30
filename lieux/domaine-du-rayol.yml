@@ -103,9 +103,12 @@ grille:
   - critere: place_au_vivant
     valeur: oui
     note: "Espace naturel côtier d'environ 20 hectares géré en jardin botanique sous statut de protection : le lieu fait pleinement place au vivant non-humain."
+  - critere: travail_non_marchandise
+    valeur: non
+    note: "Jardin botanique géré par une équipe salariée de l'association gestionnaire ; accès payant."
 analyse:
   forces:
-    - "Foncier sanctuarisé dans le domaine inaliénable d'un établissement public depuis 1989."
+    - "Foncier inaliénable, intégré au domaine propre d'un établissement public depuis 1989."
     - "Acquisition publique non spéculative ayant écarté un projet immobilier."
     - "Site largement ouvert au public, à forte vocation pédagogique et écologique."
   fragilites:

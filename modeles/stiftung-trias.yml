@@ -1,7 +1,7 @@
 uid: stiftung-trias
 categorie: modele
 nom: "Stiftung trias"
-sous_titre: "Fondation allemande sanctuarisant le foncier par droit de superficie"
+sous_titre: "Fondation allemande soustrayant le foncier au marché par droit de superficie"
 statut_fiche: publie
 forme_juridique: "Fondation à but non lucratif (Stiftung)"
 pays: "Allemagne"
@@ -20,7 +20,7 @@ montage:
     La fondation acquiert le sol et le conserve durablement, accordant aux projets
     un droit de superficie héréditaire de longue durée portant sur le bâti. La
     séparation sol/bâti par une fondation non lucrative et un droit réel long
-    sanctuarise le foncier.
+    soustrait le foncier au marché.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
@@ -34,7 +34,7 @@ axes_estimes:
   5: 80
 analyse:
   forces:
-    - "Fondation non lucrative sanctuarisant durablement le sol."
+    - "Fondation non lucrative soustrayant durablement le sol au marché."
     - "Droit de superficie héréditaire dissociant sol et bâti."
     - "Environ un million de mètres carrés soustraits au marché spéculatif."
   fragilites:

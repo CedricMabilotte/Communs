@@ -101,6 +101,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "Le foncier comprend des prairies de moyenne montagne, mais les sources ne documentent pas d'espaces (haies, mares, friches) effectivement laissés ou aménagés pour le vivant non-humain."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "GAEC des Bergers de la Sure : associé·es exploitant·es vivant du produit, non salarié·es."
 analyse:
   forces:
     - "Foncier porté hors marché par une fondation reconnue d'utilité publique, sans capital appropriable."

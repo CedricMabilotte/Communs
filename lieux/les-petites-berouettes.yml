@@ -100,6 +100,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "L'existence de haies, mares, friches ou continuités écologiques sur les 7 hectares de la ferme n'est pas documentée par les sources."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "GAEC Les P'tites Berouettes : société civile d'exploitation dont les associé·es paysan·nes exploitent eux-mêmes la ferme, non salarié·es."
 analyse:
   forces:
     - "Foncier protégé hors marché par l'épargne citoyenne depuis 2022."

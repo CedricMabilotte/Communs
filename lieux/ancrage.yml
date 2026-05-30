@@ -105,6 +105,9 @@ grille:
   - critere: place_au_vivant
     valeur: partiel
     note: "Le bâtiment dispose d'un jardin à l'arrière ; aucun aménagement délibéré pour le vivant (végétalisation, mare) n'est documenté au-delà de cet espace."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Lieu autogéré par une association d'habitant·es ; travail-cœur fondé sur le bénévolat et l'entraide, sans équipe salariée documentée."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."

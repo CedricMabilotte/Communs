@@ -66,6 +66,9 @@ grille:
   - critere: gouvernance_collective
     valeur: oui
     note: "La ferme est exploitée par un GAEC, groupement agricole où les associé·es décident collectivement, sur le principe d'une voix par associé·e."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Le travail-cœur est porté par le GAEC de la Durette — société civile agricole dont les associé·es exploitant·es ne sont pas salarié·es."
   - critere: tripartisme
     valeur: partiel
     note: "Ferme pilote suivie par le GRAB et soutenue par une large mobilisation citoyenne lors de la collecte ; l'association du voisinage à la gouvernance courante n'est pas documentée."

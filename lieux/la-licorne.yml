@@ -65,6 +65,9 @@ grille:
   - critere: gouvernance_collective
     valeur: oui
     note: "La ferme est exploitée collectivement par cinq associé·es réuni·es en GAEC, qui décident ensemble de la conduite du lieu."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Le travail-cœur est porté par le GAEC de la Licorne — société civile agricole dont les cinq associé·es exploitant·es ne sont pas salarié·es."
   - critere: tripartisme
     valeur: inconnu
     note: "L'association du voisinage, des citoyen·nes ou des collectivités à la gouvernance du lieu n'est pas documentée par les sources consultées."

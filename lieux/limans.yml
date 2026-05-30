@@ -97,6 +97,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "Le domaine de 270 hectares comporte des terres labourables et de la forêt, mais aucun espace effectivement dédié au vivant non-humain (haies, mares, friches) n'est documenté."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Coopérative autogérée d'inspiration libertaire depuis 1973 : les coopérant·es travaillent en autogestion, hors rapport salarial."
 analyse:
   forces:
     - "Foncier protégé de façon inaliénable depuis 1973."

@@ -5,7 +5,7 @@ sous_titre: "Ferme d'élevage laitier en biodynamie consolidée par un foncier T
 statut_fiche: publie
 forme_juridique: null
 localisation:
-  commune: "Bergerac (Périgord pourpre)"
+  commune: "Lamonzie-Montastruc (Bergeracois, Périgord pourpre)"
   departement: "Dordogne (24)"
   region: "Nouvelle-Aquitaine"
   geoportail: "https://www.geoportail.gouv.fr/carte?c=0.595,44.895&z=16"
@@ -70,6 +70,9 @@ grille:
   - critere: gouvernance_collective
     valeur: partiel
     note: "La ferme est exploitée par le GAEC d'Eyssal, animé par Hugues Doche et sa compagne Fanny ; la gouvernance dépasse peu le couple exploitant."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Le travail-cœur est porté par le GAEC d'Eyssal — société civile agricole dont les associé·es exploitant·es ne sont pas salarié·es."
   - critere: tripartisme
     valeur: partiel
     note: "L'acquisition a été portée par un groupe local de citoyen·nes mobilisés par Terre de Liens ; leur association continue à la gouvernance du lieu n'est pas documentée."
@@ -129,8 +132,11 @@ fiabilite: >
   Foncière Terre de Liens en 2010 de 18 hectares menacés de vente, mobilisation
   d'un groupe local de citoyen·nes, exploitation au sein du GAEC d'Eyssal animé
   par Hugues Doche et Fanny, transformation fromagère et vente en circuit
-  court. Non confirmé : commune précise de la ferme, surface totale exploitée,
-  niveau du fermage, clauses du bail rural, dispositifs de transmission.
+  court, siège de l'exploitation au lieu-dit Domaine d'Eyssal, 24520
+  Lamonzie-Montastruc (commune confirmée par l'adresse du GAEC d'Eyssal, et non
+  Bergerac comme indiqué initialement). Non confirmé : surface totale exploitée,
+  niveau du fermage, clauses du bail rural, dispositifs de transmission, exactitude
+  des coordonnées Geoportail (laissées en l'état, à recaler sur Lamonzie-Montastruc).
 chaine:
   porteurs: [fonciere-terre-de-liens]
   usufruitiers: [gaec-eyssal]

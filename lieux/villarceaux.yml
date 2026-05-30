@@ -95,6 +95,9 @@ grille:
   - critere: place_au_vivant
     valeur: oui
     note: "Le domaine compte environ 5 km de haies héritées et 8 km de haies plantées, des alignements intra-parcellaires et plus de 650 arbres champêtres, aménagés pour rétablir l'équilibre écologique : une place concrète et substantielle faite au vivant."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Travail-cœur agricole porté par l'EARL du Chemin Neuf, société civile d'exploitation dont l'exploitant travaille la ferme, hors rapport salarial."
 analyse:
   forces:
     - "Foncier de grande ampleur durablement détenu par une fondation non lucrative."

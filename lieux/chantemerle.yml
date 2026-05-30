@@ -30,21 +30,21 @@ montage:
   description: >
     Le foncier et les bâtiments de la filature de Chantemerle sont détenus de
     façon inaliénable par le Fonds de Terre Européenne, fondation de droit
-    suisse qui sanctuarise la propriété des terres et des sites de Longo Maï.
+    suisse qui rend inaliénable la propriété des terres et des sites de Longo Maï.
     La coopérative autogérée, de statut associatif, en assure l'usage et la
     gouverne collectivement. Le démembrement nue-propriété/usufruit au sens du
-    droit français n'est pas formalisé : il s'agit d'une propriété sanctuarisée
-    en fondation et d'un usage collectif.
+    droit français n'est pas formalisé : il s'agit d'une propriété rendue
+    inaliénable en fondation et d'un usage collectif.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    Foncier rendu inaliénable dans une fondation de droit
     suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
     pas documentée.
 grille:
   - critere: foncier_hors_marche
     valeur: oui
-    note: "Le site est détenu de façon inaliénable par le Fonds de Terre Européenne, fondation qui sanctuarise les terres de Longo Maï à l'abri du marché."
+    note: "Le site est détenu de façon inaliénable par le Fonds de Terre Européenne, fondation qui porte les terres de Longo Maï à l'abri du marché."
   - critere: montage_documente
     valeur: partiel
     note: "Le principe — propriété en fondation, usage par la coopérative — est public, mais les actes formalisant l'usage de la filature ne sont pas détaillés."
@@ -86,7 +86,7 @@ grille:
     note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
   - critere: securite_jouissance
     valeur: partiel
-    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1976, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+    note: "Le foncier est rendu inaliénable et le site fonctionne depuis 1976, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
     valeur: non
     note: "Site industriel d'une ancienne filature ; aucun dispositif opposable et durable de protection d'un milieu (ORE, espace protégé, clause environnementale) n'est documenté."
@@ -99,9 +99,12 @@ grille:
   - critere: place_au_vivant
     valeur: inconnu
     note: "Le site est un atelier industriel ; les sources ne documentent ni surface du lieu ni espace laissé ou aménagé pour le vivant non-humain."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Coopérative autogérée de statut associatif : coopérant·es non salarié·es décidant collectivement."
 analyse:
   forces:
-    - "Foncier et bâtiments sanctuarisés de façon inaliénable depuis 1976."
+    - "Foncier et bâtiments rendus inaliénables depuis 1976."
     - "Filière laine intégrée et autogérée, de la tonte à la confection."
     - "Réemploi d'un site industriel abandonné et d'un savoir-faire textile menacé."
   fragilites:
@@ -114,7 +117,7 @@ analyse:
     - "Articuler la gouvernance avec le territoire et les collectivités."
   synthese: >
     Chantemerle est un maillon industriel de Longo Maï : une ancienne filature
-    rendue à l'usage collectif, sanctuarisée en fondation et autogérée depuis
+    rendue à l'usage collectif, rendue inaliénable en fondation et autogérée depuis
     1976. Sa singularité — recours au droit suisse, gouvernance centrée sur les
     coopérant·es — gagnerait en ancrage à s'ouvrir davantage au territoire.
 fiabilite: >

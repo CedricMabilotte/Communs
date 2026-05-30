@@ -107,6 +107,9 @@ grille:
   - critere: place_au_vivant
     valeur: partiel
     note: "Les clauses de biodiversité du bail engagent en faveur du vivant ; l'existence d'éléments concrets effectivement aménagés (haies, mares, friches) n'est pas détaillée par les sources."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "EARL La Ferme de Magnantru : société civile d'exploitation dont les deux paysan·nes co-gérant·es exploitent eux-mêmes la ferme, non salarié·es."
 analyse:
   forces:
     - "Foncier acquis hors marché spéculatif par l'épargne citoyenne en 2021."

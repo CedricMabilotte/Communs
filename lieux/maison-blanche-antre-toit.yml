@@ -102,6 +102,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "À l'échelle d'un lieu d'habitat urbain, l'existence d'une cour, d'un pied d'immeuble végétalisé ou de tout espace laissé au vivant n'est pas documentée par les sources."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Maison collective autogérée : accueil et accompagnement assurés bénévolement, projet autofinancé par des événements de soutien, hors rapport salarial pour le travail-cœur."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."
@@ -117,7 +120,7 @@ analyse:
     - "Confirmer et publier le caractère non consomptible de la dotation d'Antidote."
   synthese: >
     La Maison Blanche illustre le modèle Antidote appliqué à un lieu d'accueil
-    social urbain : un bâtiment sanctuarisé par un fonds de dotation, confié
+    social urbain : un bâtiment soustrait au marché par un fonds de dotation, confié
     par bail long à une association d'usager·es, au service de l'hébergement de
     jeunes exilé·es. Sa marge de progression tient à l'explicitation du bail et
     de l'articulation entre les deux associations.

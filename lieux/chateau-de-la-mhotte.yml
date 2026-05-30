@@ -1,7 +1,7 @@
 uid: chateau-de-la-mhotte
 categorie: lieu
 nom: "Château de la Mhotte"
-sous_titre: "Domaine éducatif et habitat partagé sanctuarisé par un fonds de dotation"
+sous_titre: "Domaine éducatif et habitat partagé porté hors-marché par un fonds de dotation"
 statut_fiche: publie
 forme_juridique: null
 localisation:
@@ -40,7 +40,7 @@ montage:
     confié aux deux associations usagères — École de la Mhotte et Acoeur — par
     un bail emphytéotique de 99 ans, qui leur ouvre un droit réel long sur le
     lieu sans leur en transférer la propriété. Le montage dissocie la propriété
-    sanctuarisée, portée par le fonds, et l'usage collégial des associations.
+    protégée durablement, portée par le fonds, et l'usage collégial des associations.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
@@ -50,13 +50,13 @@ integrite_montage:
 grille:
   - critere: foncier_hors_marche
     valeur: oui
-    note: "Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour Demain, structure non lucrative qui le sanctuarise hors marché."
+    note: "Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour Demain, structure non lucrative qui le porte hors marché."
   - critere: montage_documente
     valeur: oui
     note: "Le montage — propriété du fonds de dotation, bail emphytéotique de 99 ans aux deux associations — est public et documenté par la Coopérative Oasis."
   - critere: irreversibilite
     valeur: partiel
-    note: "La propriété par un fonds de dotation à objet de sanctuarisation et le bail de 99 ans soustraient durablement le lieu ; le caractère consomptible ou non de la dotation du fonds n'est pas confirmé."
+    note: "La propriété par un fonds de dotation à objet de protection durable et le bail de 99 ans soustraient durablement le lieu ; le caractère consomptible ou non de la dotation du fonds n'est pas confirmé."
   - critere: origine_non_speculative
     valeur: oui
     note: "Le domaine a été acquis au terme d'une campagne internationale de collecte de dons, hors tout endettement attendant une plus-value."
@@ -105,9 +105,12 @@ grille:
   - critere: place_au_vivant
     valeur: oui
     note: "Le domaine d'une quinzaine d'hectares comprend bois, parc, prairies et mare ; engagé dans une démarche Oasis de Biodiversité, il laisse effectivement des espaces au vivant non-humain."
+  - critere: travail_non_marchandise
+    valeur: non
+    note: "École Steiner-Waldorf indépendante : le travail-cœur éducatif repose sur une équipe enseignante salariée."
 analyse:
   forces:
-    - "Foncier sanctuarisé en 2026 par un fonds de dotation non lucratif."
+    - "Foncier porté hors-marché en 2026 par un fonds de dotation non lucratif."
     - "Usage confié pour 99 ans : sécurité de jouissance de très long terme."
     - "Obligation Réelle Environnementale inscrivant l'écologie dans le droit du lieu."
   fragilites:
@@ -120,7 +123,7 @@ analyse:
     - "Formaliser l'accueil de nouveaux·elles habitant·es et la transmission du lieu."
   synthese: >
     Le Château de la Mhotte est un montage de propriété d'usage abouti : un
-    domaine éducatif et d'habitat sanctuarisé en 2026 par un fonds de dotation,
+    domaine éducatif et d'habitat porté hors-marché en 2026 par un fonds de dotation,
     confié pour un siècle à deux associations citoyennes. Sa marge de
     progression tient à la publication du régime de la redevance et des verrous
     internes au fonds Fraternité pour Demain.

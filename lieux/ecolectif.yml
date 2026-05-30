@@ -104,6 +104,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "L'écohameau s'inscrit sur un domaine agricole d'environ 46 hectares en milieu rural ; aucun aménagement délibéré pour le vivant (haies, mares, friches) n'est documenté par les sources."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Écohameau autogéré par ses résident·es (autoconstruction, chantiers participatifs) ; collectif d'habitant·es non salarié·es."
 analyse:
   forces:
     - "Gouvernance collégiale horizontale, décidant au consentement."

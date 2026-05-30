@@ -68,6 +68,9 @@ grille:
   - critere: gouvernance_collective
     valeur: oui
     note: "Le lieu est autogéré : le collectif se réunit à chaque saison en assemblée générale, avec des commissions thématiques restituant leur travail."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Les activités agricoles du lieu sont explicitement décrites comme non marchandes et le collectif autogéré repose sur l'entraide et le partage, hors salariat."
   - critere: tripartisme
     valeur: inconnu
     note: "L'association du voisinage ou des collectivités à la gouvernance du lieu n'est pas documentée par les sources."

@@ -38,7 +38,7 @@ montage:
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par une structure non spéculative du réseau Terre de
+    Foncier soustrait au marché par une structure non spéculative du réseau Terre de
     Liens ; le véhicule porteur exact (Foncière ou Fondation) n'est pas
     confirmé, et l'usage est exploité par un GAEC, société civile agricole.
 grille:
@@ -66,6 +66,9 @@ grille:
   - critere: gouvernance_collective
     valeur: oui
     note: "La ferme est exploitée collectivement depuis 2010 par six associé·es réuni·es en GAEC, qui décident ensemble de la conduite du lieu."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Le travail-cœur est porté par le GAEC du Jointout — société civile agricole dont les six associé·es exploitant·es ne sont pas salarié·es."
   - critere: tripartisme
     valeur: partiel
     note: "Le Jointout se définit comme un site d'échanges culturels et voisine l'écolieu du Portail ; l'association formelle du voisinage à la gouvernance n'est pas documentée."
@@ -101,7 +104,7 @@ grille:
     note: "Le maintien de 41 hectares de prairies est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
 analyse:
   forces:
-    - "Foncier sanctuarisé hors marché par Terre de Liens depuis 2011."
+    - "Foncier porté hors-marché par Terre de Liens depuis 2011."
     - "Ferme collective réunissant six associé·es en GAEC, avec renouvellement effectif."
     - "Exploitation diversifiée — élevage laitier, fromage, boulangerie, maraîchage, chevaux de trait."
   fragilites:
@@ -114,7 +117,7 @@ analyse:
     - "Formaliser l'association du voisinage et de l'écolieu du Portail à la gouvernance."
   synthese: >
     Le Jointout illustre le modèle Terre de Liens à l'échelle d'une ferme
-    collective : un foncier sanctuarisé en 2011 et exploité depuis 2010 par un
+    collective : un foncier soustrait au marché en 2011 et exploité depuis 2010 par un
     GAEC de six associé·es aux ateliers diversifiés, avec un renouvellement
     effectif du collectif. Sa principale réserve documentaire tient à
     l'imprécision des sources sur le véhicule porteur exact.

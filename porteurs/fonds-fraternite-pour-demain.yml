@@ -1,7 +1,7 @@
 uid: fonds-fraternite-pour-demain
 categorie: porteur
 nom: "Fonds de dotation Fraternité pour Demain"
-sous_titre: "Fonds de dotation qui sanctuarise le foncier des oasis hors marché"
+sous_titre: "Fonds de dotation qui soustrait au marché le foncier des oasis"
 statut_fiche: publie
 forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
 nature_interet: non_lucrative
@@ -15,10 +15,10 @@ resume: >
   Fonds de dotation créé en 2021 par une famille de professionnel·les de
   l'immobilier, avec pour objet de faciliter l'accès au foncier des
   porteur·ses de projets d'écolieux — les « oasis ». Son action centrale est
-  la sanctuarisation : il acquiert, par dons et collectes, des biens fonciers
+  la mise hors-marché : il acquiert, par dons et collectes, des biens fonciers
   partagés pour en garantir durablement l'usage, en dissociant la propriété de
   l'usage et en soustrayant ces biens à la logique marchande et successorale.
-  La propriété ainsi sanctuarisée est conservée par le fonds ; l'usage est
+  La propriété ainsi soustraite au marché est conservée par le fonds ; l'usage est
   confié à des collectifs chargés d'en prendre soin. Le fonds porte notamment
   le foncier du Château de la Mhotte (Allier) et de l'Aube (Drôme), deux
   écolieux du réseau de la Coopérative Oasis.
@@ -29,20 +29,20 @@ montage:
     dons et collectes solidaires, et la conserve durablement hors marché. Il
     en confie l'usage à des collectifs usagers par des baux de long terme
     (bail emphytéotique de 99 ans) ou des conventions de gestion. Le montage
-    dissocie la propriété sanctuarisée, portée par le fonds, et l'usage
+    dissocie la propriété portée hors-marché par le fonds, et l'usage
     autogéré confié aux collectifs ; ce n'est pas un démembrement civil mais
-    une propriété sanctuarisée doublée d'un titre d'usage long.
+    une propriété soustraite au marché doublée d'un titre d'usage long.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
     Fonds de dotation de droit privé non lucratif, à objet explicite de
-    sanctuarisation foncière ; gouvernance portée par un conseil
+    mise hors-marché foncière ; gouvernance portée par un conseil
     d'administration, dont la composition n'est pas documentée par les
     sources publiques.
 grille:
   - critere: inalienabilite
     valeur: partiel
-    note: "Le fonds a pour objet de sanctuariser durablement le foncier qu'il porte ; le caractère consomptible ou non de sa dotation n'est pas confirmé par les sources publiques."
+    note: "Le fonds a pour objet de soustraire durablement au marché le foncier qu'il porte ; le caractère consomptible ou non de sa dotation n'est pas confirmé par les sources publiques."
   - critere: parts_non_cessibles
     valeur: oui
     note: "Un fonds de dotation n'a ni capital ni parts sociales appropriables : aucun titre ne porte la valeur du foncier."
@@ -75,10 +75,10 @@ grille:
     note: "Fonds de dotation gouverné par un conseil d'administration créé par une famille de professionnel·les de l'immobilier ; aucun dispositif statutaire associant les collectifs usagers (Mhotte, Aube) à la décision sur les loyers, baux ou transmission du foncier n'est documenté."
   - critere: transparence
     valeur: partiel
-    note: "Le fonds publie ses projets de sanctuarisation et ses collectes ; la publication régulière de ses comptes n'est pas documentée par les sources."
+    note: "Le fonds publie ses projets de mise hors-marché et ses collectes ; la publication régulière de ses comptes n'est pas documentée par les sources."
   - critere: objet_foncier_protecteur
     valeur: oui
-    note: "L'objet du fonds est explicitement de sanctuariser le foncier partagé et de le soustraire à la logique marchande et successorale."
+    note: "L'objet du fonds est explicitement de soustraire le foncier partagé au marché et de l'extraire de la logique marchande et successorale."
   - critere: agrement_ig
     valeur: oui
     note: "Le fonds de dotation relève par sa forme du régime fiscal de l'intérêt général ; tag informatif, non un gage de libération."
@@ -87,7 +87,7 @@ grille:
     note: "L'exposition du fonds à un risque de requalification fiscale n'est pas documentée par les sources."
   - critere: redevabilite_publique
     valeur: partiel
-    note: "Le fonds rend compte publiquement de ses projets de sanctuarisation ; une reddition de comptes complète au-delà de ses donateur·rices n'est pas documentée."
+    note: "Le fonds rend compte publiquement de ses projets de mise hors-marché ; une reddition de comptes complète au-delà de ses donateur·rices n'est pas documentée."
   - critere: regime_usage_offert
     valeur: partiel
     note: "Le fonds confie l'usage de ses fonciers à des collectifs par bail emphytéotique ou convention ; le caractère non rentier de la redevance demandée n'est pas documenté par les sources."
@@ -96,10 +96,10 @@ grille:
     note: "Le fonds accorde des titres d'usage longs — bail emphytéotique de 99 ans au Château de la Mhotte — assurant aux collectifs une jouissance sécurisée de très long terme."
   - critere: vivant_finalite
     valeur: non
-    note: "L'objet du fonds est de sanctuariser le foncier des écolieux et d'en confier l'usage aux collectifs humains qui en prennent soin ; aucune finalité de préservation de la biodiversité n'est affichée."
+    note: "L'objet du fonds est de soustraire au marché le foncier des écolieux et d'en confier l'usage aux collectifs humains qui en prennent soin ; aucune finalité de préservation de la biodiversité n'est affichée."
 analyse:
   forces:
-    - "Objet statutaire explicite de sanctuarisation foncière hors marché et hors succession."
+    - "Objet statutaire explicite de mise hors-marché foncière et hors succession."
     - "Forme non lucrative sans capital appropriable : aucune valeur foncière captable."
     - "Titres d'usage longs accordés aux collectifs (bail emphytéotique de 99 ans)."
   fragilites:
@@ -113,7 +113,7 @@ analyse:
 synthese: >
   Fraternité pour Demain illustre le maillon porteur du modèle de la
   Coopérative Oasis : un fonds de dotation dont l'objet déclaré est de
-  sanctuariser le foncier des écolieux et d'en confier l'usage par baux longs.
+  soustraire au marché le foncier des écolieux et d'en confier l'usage par baux longs.
   Sa solidité de principe — forme non lucrative, objet foncier explicite —
   reste à confirmer par la publication de ses statuts, de sa gouvernance et de
   sa clause de dévolution.
@@ -121,7 +121,7 @@ fiabilite: >
   Faits vérifiés (sources Fraternité pour Demain et Coopérative Oasis,
   consultées en mai 2026) : fonds de dotation créé en 2021 par une famille de
   professionnel·les de l'immobilier, objet de facilitation de l'accès au
-  foncier des oasis, action de sanctuarisation par dissociation propriété /
+  foncier des oasis, action de mise hors-marché par dissociation propriété /
   usage, portage du foncier du Château de la Mhotte et de l'Aube. Non
   confirmé : composition du conseil d'administration, clause de dévolution,
   caractère consomptible de la dotation, montant des redevances, statut

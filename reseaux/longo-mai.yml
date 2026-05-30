@@ -1,7 +1,7 @@
 uid: longo-mai
 categorie: reseau
 nom: "Longo Maï"
-sous_titre: "Réseau de coopératives autogérées sur foncier sanctuarisé"
+sous_titre: "Réseau de coopératives autogérées sur foncier porté hors-marché"
 statut_fiche: publie
 forme_juridique: null
 localisation:
@@ -27,12 +27,12 @@ montage:
     Fonds de Terre Européenne, qui en assure la propriété inaliénable. Les
     coopératives autogérées, de statut associatif, utilisent les terres. Le
     démembrement nue-propriété/usufruit au sens du droit français n'est pas
-    confirmé : il s'agit d'une propriété sanctuarisée par une fondation et d'un
+    confirmé : il s'agit d'une propriété conservée hors-marché par une fondation et d'un
     usage collectif.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé de manière inaliénable dans une fondation, mais relevant
+    Foncier rendu inaliénable dans une fondation, mais relevant
     du droit suisse, et usage collectif dont la formalisation contractuelle
     n'est pas documentée.
 grille:
@@ -80,10 +80,10 @@ grille:
     note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et les coopératives ne sont pas documentées ; la formalisation contractuelle de l'usage n'est pas connue."
   - critere: securite_jouissance
     valeur: partiel
-    note: "Le foncier est sanctuarisé de façon inaliénable et le réseau fonctionne depuis 1973, mais les actes formalisant l'usage et sa durée ne sont pas documentés."
+    note: "Le foncier est rendu inaliénable et le réseau fonctionne depuis 1973, mais les actes formalisant l'usage et sa durée ne sont pas documentés."
 analyse:
   forces:
-    - "Foncier sanctuarisé de façon inaliénable depuis des décennies."
+    - "Foncier rendu inaliénable depuis des décennies."
     - "Autogestion effective : les usager·es décident collectivement."
     - "Réseau ancien et stable, réparti sur plusieurs implantations."
   fragilites:
@@ -95,7 +95,7 @@ analyse:
     - "Organiser explicitement l'accueil de nouveaux entrants et la transmission."
     - "Articuler la gouvernance avec le territoire et les collectivités."
   synthese: >
-    Longo Maï démontre la solidité d'un foncier sanctuarisé en fondation couplé à
+    Longo Maï démontre la solidité d'un foncier porté hors-marché en fondation couplé à
     une autogestion réelle. Sa singularité tient au recours au droit suisse et à
     une gouvernance centrée sur les coopérants, qui gagnerait en ancrage à
     s'ouvrir davantage au territoire.

@@ -30,15 +30,15 @@ montage:
       note: "Titre précis non documenté par les sources : les actes formalisant l'usage de Treynas ne sont pas détaillés."
   description: >
     Le foncier de Treynas est détenu de façon inaliénable par le Fonds de Terre
-    Européenne, fondation de droit suisse qui sanctuarise la propriété des
-    terres de Longo Maï. La coopérative autogérée, de statut associatif, en
+    Européenne, fondation de droit suisse qui protège durablement la propriété
+    des terres de Longo Maï. La coopérative autogérée, de statut associatif, en
     assure l'usage et la gouverne collectivement. Le démembrement
     nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
-    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+    s'agit d'une propriété inaliénable en fondation et d'un usage collectif.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    Foncier porté de manière inaliénable dans une fondation de droit
     suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
     pas documentée.
 grille:
@@ -86,7 +86,7 @@ grille:
     note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
   - critere: securite_jouissance
     valeur: partiel
-    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis la fin des années 1980, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+    note: "Le foncier est inaliénable et le site fonctionne depuis la fin des années 1980, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
     valeur: non
     note: "Le site mêle forêt et terres agricoles, mais aucun dispositif opposable et durable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté pour le foncier de Treynas."
@@ -99,9 +99,12 @@ grille:
   - critere: place_au_vivant
     valeur: partiel
     note: "Le site comporte une forêt et un milieu de montagne au bout d'une vallée enclavée, mais aucun aménagement explicite en faveur du vivant ni gestion conservatoire de la forêt n'est documenté."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Communauté autogérée du réseau Longo Maï fonctionnant sans hiérarchie ni salariat : la trentaine de personnes travaille en autogestion, hors rapport salarial."
 analyse:
   forces:
-    - "Foncier de 200 hectares sanctuarisé de façon inaliénable."
+    - "Foncier de 200 hectares inaliénable, soustrait au marché."
     - "Sylviculture intégrée et autogérée, de la forêt à la scierie."
     - "Autogestion sans hiérarchie ni salariat, avec passage de génération réussi."
   fragilites:
@@ -114,7 +117,7 @@ analyse:
     - "Articuler la gouvernance avec le territoire et les collectivités."
   synthese: >
     Treynas est un site forestier de Longo Maï : 200 hectares de montagne
-    sanctuarisés en fondation, une douglasaie et une scierie autogérées. Sa
+    inaliénables en fondation, une douglasaie et une scierie autogérées. Sa
     singularité — droit suisse, autogestion sans hiérarchie — gagnerait en
     lisibilité à voir son montage et son histoire mieux documentés.
 fiabilite: >

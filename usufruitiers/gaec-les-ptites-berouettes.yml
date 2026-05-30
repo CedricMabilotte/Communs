@@ -39,7 +39,7 @@ integrite_montage:
   commentaire: >
     Le GAEC est une société civile agricole à objet d'exploitation : ses parts
     sont détenues par les paysan·nes associé·es, qui exploitent la ferme en
-    commun ; l'usage du foncier sanctuarisé par la Foncière reste octroyé par
+    commun ; l'usage du foncier porté hors-marché par la Foncière reste octroyé par
     bail.
 grille:
   - critere: non_appropriation
@@ -95,7 +95,7 @@ grille:
     note: "Le maraîchage diversifié est conduit en agriculture biologique, pratique écologique revendiquée, sans que la préservation de la biodiversité non-humaine figure parmi les finalités affichées du GAEC."
 analyse:
   forces:
-    - "Foncier sanctuarisé hors marché par la Foncière Terre de Liens depuis 2022."
+    - "Foncier soustrait au marché par la Foncière Terre de Liens depuis 2022."
     - "Exploitation conduite directement par ses associé·es, en agriculture biologique."
     - "Usage sécurisé par bail rural, au renouvellement d'ordre public."
   fragilites:
@@ -109,7 +109,7 @@ analyse:
   synthese: >
     Le GAEC Les P'tites Berouettes est le maillon usufruitier classique d'une
     ferme Terre de Liens : une société civile d'exploitation dont les associé·es
-    paysan·nes cultivent eux-mêmes une terre sanctuarisée hors marché. Sa nature
+    paysan·nes cultivent eux-mêmes une terre soustraite au marché. Sa nature
     de groupement d'exploitation — bénéfice partagé entre associé·es — le situe
     du côté du mutualisme plutôt que du commun citoyen.
 fiabilite: >

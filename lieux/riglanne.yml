@@ -102,6 +102,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "La ferme est majoritairement en prairies, mais aucun aménagement explicite en faveur du vivant (haies, mares, continuités écologiques) n'est documenté par les sources."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "GAEC de Riglanne : société civile d'exploitation dont les trois paysannes repreneuses exploitent elles-mêmes la ferme, non salariées."
 analyse:
   forces:
     - "Transmission de ferme réussie : reprise collective par trois paysannes en 2025."

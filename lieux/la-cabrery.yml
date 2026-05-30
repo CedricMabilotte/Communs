@@ -26,18 +26,18 @@ montage:
   articulations:
     - usufruitier: cooperatives-longo-mai
       titre: convention
-      note: "Titre précis non documenté par les sources ; le démembrement civil n'est pas formalisé, il s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif."
+      note: "Titre précis non documenté par les sources ; le démembrement civil n'est pas formalisé, il s'agit d'une propriété protégée durablement en fondation et d'un usage collectif."
   description: >
     Le foncier de La Cabrery est détenu de façon inaliénable par le Fonds de
-    Terre Européenne, fondation de droit suisse qui sanctuarise la propriété
+    Terre Européenne, fondation de droit suisse qui rend inaliénable la propriété
     des terres de Longo Maï. La coopérative autogérée, de statut associatif, en
     assure l'usage et la gouverne collectivement. Le démembrement
     nue-propriété/usufruit au sens du droit français n'est pas formalisé : il
-    s'agit d'une propriété sanctuarisée en fondation et d'un usage collectif.
+    s'agit d'une propriété protégée durablement en fondation et d'un usage collectif.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé de manière inaliénable dans une fondation de droit
+    Foncier rendu inaliénable dans une fondation de droit
     suisse ; usage collectif autogéré dont la formalisation contractuelle n'est
     pas documentée.
 grille:
@@ -65,6 +65,9 @@ grille:
   - critere: gouvernance_collective
     valeur: oui
     note: "La dizaine d'habitant·es décide collectivement de la ferme en autogestion, dans une perspective libertaire et féministe revendiquée."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Coopérative autogérée non lucrative : les habitant·es sont entièrement pris en charge par la communauté via une caisse commune, sans salariat — le travail-cœur ne passe pas par le marché du travail."
   - critere: tripartisme
     valeur: non
     note: "La gouvernance repose sur les coopérant·es ; l'association du voisinage ou des pouvoirs publics n'est pas documentée."
@@ -85,7 +88,7 @@ grille:
     note: "L'existence et la nature d'un loyer ou d'une redevance entre la fondation et la coopérative ne sont pas documentées."
   - critere: securite_jouissance
     valeur: partiel
-    note: "Le foncier est sanctuarisé de façon inaliénable et le site fonctionne depuis 1993, mais les actes formalisant la durée de l'usage ne sont pas documentés."
+    note: "Le foncier est inaliénable et le site fonctionne depuis 1993, mais les actes formalisant la durée de l'usage ne sont pas documentés."
   - critere: milieu_protege
     valeur: inconnu
     note: "L'usage n'est pas formalisé par un acte documenté ; l'existence d'une clause environnementale ou d'un autre dispositif opposable de protection du milieu n'est pas établie par les sources."
@@ -100,7 +103,7 @@ grille:
     note: "Ferme de 23 hectares mêlant vigne, maraîchage, céréales, bois et élevage : la diversité des milieux ménage de fait des espaces au vivant, sans aménagement écologique délibéré documenté."
 analyse:
   forces:
-    - "Foncier sanctuarisé de façon inaliénable depuis 1993."
+    - "Foncier rendu inaliénable depuis 1993."
     - "Ferme viticole intégrée et autogérée, prise en charge complète des habitant·es par la communauté."
     - "Démarche revendiquée de vins nature, anticapitaliste et féministe."
   fragilites:
@@ -112,7 +115,7 @@ analyse:
     - "Organiser explicitement l'accueil de nouveaux·elles entrant·es."
     - "Articuler la gouvernance avec le territoire et les collectivités."
   synthese: >
-    La Cabrery est une ferme viticole de Longo Maï : un foncier sanctuarisé en
+    La Cabrery est une ferme viticole de Longo Maï : un foncier soustrait au marché en
     fondation, des vins nature et une vie collective intégrale. Sa marge de
     progression tient à la documentation de son montage et à l'ouverture de sa
     gouvernance au territoire.

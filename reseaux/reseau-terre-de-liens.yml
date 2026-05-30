@@ -1,7 +1,7 @@
 uid: reseau-terre-de-liens
 categorie: reseau
 nom: "Fermes Terre de Liens"
-sous_titre: "Réseau national de fermes sur foncier sanctuarisé"
+sous_titre: "Réseau national de fermes sur foncier porté hors-marché"
 statut_fiche: publie
 forme_juridique: null
 localisation: null
@@ -29,7 +29,7 @@ montage:
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par des structures non spéculatives (FRUP et société en
+    Foncier porté hors-marché par des structures non spéculatives (FRUP et société en
     commandite par actions à actionnariat solidaire) ; pureté variable selon le
     porteur, la fondation étant la plus protectrice.
 grille:

@@ -33,12 +33,12 @@ montage:
     2018 par la Foncière Terre de Liens, structure non spéculative qui le porte
     durablement et l'a retiré du marché. Son usage est confié par bail rural au
     GAEC Ferme du Plaisir, animé par François et Sophie de la Monneraye. Le
-    montage est une propriété sanctuarisée par la Foncière assortie d'un bail
-    rural, et non un démembrement au sens strict du Code civil.
+    montage est une propriété portée hors marché par la Foncière assortie d'un
+    bail rural, et non un démembrement au sens strict du Code civil.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Foncier sanctuarisé par une structure non spéculative ; le porteur, la
+    Foncier soustrait au marché par une structure non spéculative ; le porteur, la
     Foncière Terre de Liens, est toutefois une société en commandite par
     actions à actionnariat solidaire et lucrativité encadrée.
 grille:
@@ -99,9 +99,12 @@ grille:
   - critere: place_au_vivant
     valeur: oui
     note: "Plus d'un millier d'arbres ont été plantés sur 13 hectares de terres céréalières, créant des continuités arborées qui font place au vivant non-humain."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "GAEC Ferme du Plaisir : associé·es exploitant·es vivant du produit, non salarié·es."
 analyse:
   forces:
-    - "Foncier sanctuarisé hors marché par l'épargne citoyenne depuis fin 2018."
+    - "Foncier porté hors marché par l'épargne citoyenne depuis fin 2018."
     - "Relance d'une ferme à l'abandon depuis vingt ans, avec endettement limité."
     - "Démarche d'agroforesterie de restauration des sols, ouverte aux bénévoles."
   fragilites:
@@ -114,7 +117,7 @@ analyse:
     - "Privilégier, pour les parcelles les plus exposées, un portage par la Fondation."
   synthese: >
     La Ferme du Plaisir illustre le modèle Terre de Liens à l'échelle d'une
-    ferme familiale : un foncier sanctuarisé par l'épargne citoyenne, confié
+    ferme familiale : un foncier soustrait au marché par l'épargne citoyenne, confié
     par bail rural à un GAEC qui relance un site agricole abandonné et y engage
     l'agroforesterie. Ses réserves tiennent à la nature sociétaire du porteur
     et au caractère familial, peu collectif, de l'exploitation.

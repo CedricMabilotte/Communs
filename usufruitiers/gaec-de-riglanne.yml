@@ -42,7 +42,7 @@ integrite_montage:
   commentaire: >
     Le GAEC est une société civile agricole d'exploitation : ses parts sont
     détenues par les paysan·nes associé·es qui exploitent la ferme en commun ;
-    l'usage du foncier sanctuarisé par la Foncière reste octroyé par bail.
+    l'usage du foncier porté hors-marché par la Foncière reste octroyé par bail.
 grille:
   - critere: non_appropriation
     valeur: oui
@@ -98,7 +98,7 @@ grille:
 analyse:
   forces:
     - "Reprise collective d'une ferme par trois nouvelles paysannes en 2025."
-    - "Foncier partiellement sanctuarisé hors marché par la Foncière Terre de Liens depuis 2013."
+    - "Foncier partiellement soustrait au marché par la Foncière Terre de Liens depuis 2013."
     - "Ouverture organisée : accueil prévu de paysans boulangers et d'autres activités."
   fragilites:
     - "GAEC : société civile d'exploitation dont le revenu agricole est partagé entre associé·es."

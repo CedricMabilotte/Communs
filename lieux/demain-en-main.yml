@@ -101,6 +101,9 @@ grille:
   - critere: place_au_vivant
     valeur: partiel
     note: "Le foncier d'une vingtaine d'hectares comprend une dizaine d'hectares de forêt aux côtés des terres agricoles ; aucun aménagement délibéré pour le vivant n'est documenté."
+  - critere: travail_non_marchandise
+    valeur: non
+    note: "Le travail-cœur agricole (maraîchage, ferme-auberge) est encadré par une SCOP, coopérative qui salarie."
 analyse:
   forces:
     - "Chaîne entièrement coopérative, sans maillon marchand à lucrativité ouverte."

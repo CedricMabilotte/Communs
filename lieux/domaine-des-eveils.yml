@@ -103,6 +103,9 @@ grille:
   - critere: place_au_vivant
     valeur: oui
     note: "Sur ses 16 hectares de prairies, forêts et jardins, le domaine maintient une mare et préserve des espaces sauvages laissés à toutes les espèces : des espaces sont effectivement laissés au vivant."
+  - critere: travail_non_marchandise
+    valeur: non
+    note: "Le gîte de 100 places est exploité par une SCIC réunissant habitant·es et salarié·es : équipe salariée pour le travail-cœur d'accueil."
 analyse:
   forces:
     - "Gouvernance coopérative réunissant habitant·es et salarié·es du domaine."

@@ -5,8 +5,8 @@ sous_titre: "Ferme d'élevage de porc de Bayeux sur foncier protégé en Normand
 statut_fiche: publie
 forme_juridique: null
 localisation:
-  commune: "Normandie (commune non documentée)"
-  departement: "Calvados (14) — à confirmer"
+  commune: "Ver"
+  departement: "Manche (50)"
   region: "Normandie"
   geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.3920,48.8950&z=16"
 annee: 2020
@@ -101,6 +101,9 @@ grille:
   - critere: place_au_vivant
     valeur: non
     note: "L'élevage en plein air sur dix hectares est favorable au vivant, mais l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée par les sources."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Ferme exploitée en propre par l'éleveur paysan Côme Pascal, installé et vivant du produit de son travail, hors rapport salarial."
 analyse:
   forces:
     - "Quarante hectares protégés hors marché par l'épargne citoyenne depuis 2020."
@@ -127,9 +130,9 @@ fiabilite: >
   en plein air (un verrat, douze truies, environ quatre-vingts cochons sur dix
   hectares), céréales bio sur trente hectares, élevage ovin complémentaire,
   vente directe, quarante hectares acquis par la Foncière Terre de Liens, bâti
-  et deux hectares achetés par l'éleveur, porte ouverte annuelle. Non confirmé :
-  commune et département exacts, forme juridique de l'exploitation, montant du
-  fermage.
+  et deux hectares achetés par l'éleveur, porte ouverte annuelle, localisation à
+  Ver (Manche) cohérente avec le point geoportail de la fiche. Non confirmé :
+  forme juridique de l'exploitation, montant du fermage.
 chaine:
   porteurs: [fonciere-terre-de-liens]
   usufruitiers: [exploitation-loiseliere]

@@ -103,6 +103,9 @@ grille:
   - critere: place_au_vivant
     valeur: partiel
     note: "La culture de la châtaigne suppose un couvert arboré, mais les sources ne documentent pas d'aménagements (haies, mares, friches) spécifiquement dédiés au vivant non-humain."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Lieu collectif autogéré par l'association La Faille (entraide, accueil) ; collectif d'usager·es non salarié·es."
 analyse:
   forces:
     - "Foncier sorti du marché par un fonds de dotation non lucratif."
