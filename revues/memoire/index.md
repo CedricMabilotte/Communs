@@ -78,14 +78,5 @@ Cette typologie est l'un des intérêts principaux de la revue : elle nourrit,
 en miroir, les **garde-fous** des montages contemporains. Elle alimentera,
 le moment venu, le travail commun avec le site frère Plan B.
 
-## Forme
-
-Édition vivante, au fil de l'eau. Articles longs, sourcés, dotés
-d'iconographie quand elle est disponible. Pas de nominalisation gratuite —
-on nomme les lieux quand on les raconte (un récit anonyme n'aurait pas de
-sens), mais on parle d'archétypes quand on cherche les régularités.
-
----
-
-*Ligne éditoriale temporaire, à réviser. Cette page sera reprise en session
-ultérieure pour fixer une ligne plus durable.*
+*Libérer une terre, c'est la soustraire à l'exploitation abusive et la préserver
+comme habitat pour le vivant ([la méthode](../../methode.html)).*

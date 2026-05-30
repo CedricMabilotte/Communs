@@ -66,15 +66,5 @@ vocabulaire le font pour beaucoup de bonnes raisons — communication,
 financement, alliance avec un public sensible — et la critique ne juge pas
 les intentions : elle compare les mécanismes à la formule.
 
-## Forme
-
-La revue s'écrit au fil de l'eau. Édition vivante : un article peut être
-révisé, complété, restructuré. Chaque article porte sa date de mise à jour.
-Le lien avec l'annuaire des fiches est étroit dans un sens, et libre dans
-l'autre : la revue peut renvoyer à des fiches Communs pour illustrer un
-archétype, mais les fiches ne sont pas obligées de renvoyer à la revue.
-
----
-
-*Ligne éditoriale temporaire, à réviser. Cette page sera reprise en session
-ultérieure pour fixer une ligne plus durable.*
+*Libérer une terre, c'est la soustraire à l'exploitation abusive et la préserver
+comme habitat pour le vivant ([la méthode](../../methode.html)).*

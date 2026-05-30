@@ -1628,7 +1628,7 @@
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "Fonds de dotation (loi du 4 août 2008)",
     "montage_type": "demembrement",
-    "montage_label": "Démembrement nue-propriété / usufruit",
+    "montage_label": "Dissociation propriété / usage (démembrement)",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -1756,7 +1756,7 @@
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "Fondation reconnue d'utilité publique (FRUP)",
     "montage_type": "demembrement",
-    "montage_label": "Démembrement nue-propriété / usufruit",
+    "montage_label": "Dissociation propriété / usage (démembrement)",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -2236,7 +2236,7 @@
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "Association loi 1901",
     "montage_type": "demembrement",
-    "montage_label": "Démembrement nue-propriété / usufruit",
+    "montage_label": "Dissociation propriété / usage (démembrement)",
     "nature_juridique": "Commun libre et vivant"
   },
   {
@@ -2428,7 +2428,7 @@
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "Association loi 1901",
     "montage_type": "demembrement",
-    "montage_label": "Démembrement nue-propriété / usufruit",
+    "montage_label": "Dissociation propriété / usage (démembrement)",
     "nature_juridique": "Commun libre et vivant"
   },
   {
@@ -2620,7 +2620,7 @@
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "Association loi 1901",
     "montage_type": "demembrement",
-    "montage_label": "Démembrement nue-propriété / usufruit",
+    "montage_label": "Dissociation propriété / usage (démembrement)",
     "nature_juridique": "Commun libre et vivant"
   },
   {

@@ -72,17 +72,12 @@ humaine quand on choisit le retrait ? Veiller sans habiter, garantir
 l'absence, prévenir l'intrusion — c'est encore une présence, une autre forme
 de soin. La revue regarde aussi cette présence-là.
 
-## Forme
+## Un périmètre propre
 
-Édition vivante, au fil de l'eau. Articles descriptifs et réflexifs, avec
-des éléments de comparaison avec la libération-habitat — pour les lecteurs
-qui circulent entre les deux. Le périmètre est clair : ces lieux **sortent
-du corpus principal** Communs (qui est désormais l'annuaire des terres
-libérées *habitées*) ; cette revue est leur lieu propre. Le renvoi se fait
-dans les deux sens : l'annuaire principal, quand il croise un lieu à
-vocation de retrait, oriente vers cette revue.
+Le périmètre est clair : ces lieux **sortent du corpus principal** Communs (qui
+est désormais l'annuaire des terres libérées *habitées*) ; cette revue est leur
+lieu propre. Le renvoi se fait dans les deux sens : l'annuaire principal, quand
+il croise un lieu à vocation de retrait, oriente vers cette revue.
 
----
-
-*Ligne éditoriale temporaire, à réviser. Cette page sera reprise en session
-ultérieure pour fixer une ligne plus durable.*
+*Libérer une terre, c'est la soustraire à l'exploitation abusive et la préserver
+comme habitat pour le vivant ([la méthode](../../methode.html)).*

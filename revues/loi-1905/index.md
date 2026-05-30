@@ -76,14 +76,5 @@ Archétypes à instruire :
   surprenante, entre une vocation contemplative et une vocation d'habitat
   du vivant.
 
-## Forme
-
-Édition vivante, au fil de l'eau. Articles longs, narratifs, dotés des
-références juridiques qui permettent au lecteur de creuser. Pas de
-nominalisation systématique des structures évoquées — la revue parle
-d'archétypes, et ne nomme un cas que quand le cas éclaire l'archétype.
-
----
-
-*Ligne éditoriale temporaire, à réviser. Cette page sera reprise en session
-ultérieure pour fixer une ligne plus durable.*
+*Libérer une terre, c'est la soustraire à l'exploitation abusive et la préserver
+comme habitat pour le vivant ([la méthode](../../methode.html)).*

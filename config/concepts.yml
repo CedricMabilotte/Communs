@@ -215,7 +215,7 @@ categories:
 # et le bloc `montage:` des fiches de lieu).
 montages:
   - id: "demembrement"
-    label: "Démembrement nue-propriété / usufruit"
+    label: "Dissociation propriété / usage (démembrement)"
     definition: >
       Séparation au sens strict du Code civil : un organisme reçoit la
       nue-propriété, un autre l'usufruit (articles 578 et suivants). Le porteur

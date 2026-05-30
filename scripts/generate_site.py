@@ -722,8 +722,8 @@ def page(title, body, active, depth=0, project=None, description="",
 <footer class="footer">
   <div class="wrap">
     <p>{e(pname)} — annuaire critique des montages de libération des terres en
-    France. Les données sont sourcées ; l'Indice de libération est une évaluation
-    au regard d'un cadre explicite et contestable, non un label.</p>
+    France. Une évaluation selon un cadre assumé, <a href="{up}methode.html">non un
+    label</a>.</p>
     <p class="foot-links"><strong>Découvrir</strong> ·
     <a href="{up}dossiers/index.html">Dossiers</a> ·
     <a href="{up}revues/index.html">Revues</a> ·
@@ -1406,8 +1406,11 @@ def verdict_badge(vid, concepts):
                 'n\'est pas encore documentée.">Verdict suspendu</span>')
     for d in (concepts.get("verdict", {}) or {}).get("degres", []) or []:
         if d["id"] == vid:
+            # infobulle : version « en clair » (claire et préserve les cas) ;
+            # `definition` reste le texte canonique long affiché sur Méthode/Glossaire.
+            tip = d.get("en_clair") or d.get("definition", "")
             return (f'<span class="verdict verdict-{e(vid)}" '
-                    f'title="{e(clean(d.get("definition", "")))}">'
+                    f'title="{e(clean(tip))}">'
                     f'{e(d["label"])}</span>')
     return ""
 
@@ -1526,35 +1529,38 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     def _lien_pluriel(n):
         return f"{n} lieu relié" if n == 1 else f"{n} lieux reliés"
 
-    # complétude — la mention de pénalité n'est portée ici que SANS contamination,
-    # pour ne pas la dupliquer avec la chaîne consolidée plus bas.
+    # 1.4 — les annotations de plafond (note de chaîne, indice brut « ghost »,
+    # pénalité de complétude) sont collectées ici puis regroupées sous une seule
+    # ligne repliable « Plafonds appliqués » (voir plus bas). Le contenu et les
+    # valeurs sont inchangés : on ne fusionne que la zone d'affichage.
+    # `comp` reste la ligne de complétude factuelle, toujours visible.
+    plafonds = []  # phrases de plafonnement collectées
     comp = ""
     if sc["completude"] is not None:
         comp = (f'<p class="completude">Grille renseignée à '
-                f'{round(sc["completude"] * 100)} %.')
+                f'{round(sc["completude"] * 100)} %.</p>')
         if not contamine and sc.get("idl_brut") is not None \
                 and sc["idl_brut"] != sc["idl"]:
-            comp += (f' Indice brut {sc["idl_brut"]}, ramené à {sc["idl"]} '
-                     f'après pénalité de complétude.')
-        comp += "</p>"
+            plafonds.append(
+                f'<strong>Complétude.</strong> Indice brut {sc["idl_brut"]}, '
+                f'ramené à {sc["idl"]} après pénalité de complétude.')
 
     # note de chaîne — une seule chaîne causale : intrinsèque → axes contaminés
     # par les lieux reliés → effectif (la pénalité de complétude mentionnée une
     # fois ici en cas de contamination).
-    chaine_html = ""
     if cat in ("porteur", "usufruitier") and idl_intr is not None \
             and sc["idl"] is not None:
         renvoi = (' <a class="chaine-renvoi" href="../methode.html#chaine">'
                   'Comment la chaîne entre dans la note →</a>')
         if n_chaine == 0:
-            chaine_html = ('<p class="chaine-note">Aucun lieu relié dans '
-                           'l\'annuaire : la note replacée dans les chaînes égale '
-                           'la note propre.' + renvoi + '</p>')
+            plafonds.append('<strong>Chaîne.</strong> Aucun lieu relié dans '
+                            'l\'annuaire : la note replacée dans les chaînes égale '
+                            'la note propre.' + renvoi)
         elif not contamine:
-            chaine_html = (f'<p class="chaine-note">Note propre et note replacée '
-                           f'dans les chaînes identiques ({sc["idl"]}) : les '
-                           f'{_lien_pluriel(n_chaine)} n\'abaissent aucun '
-                           f'axe.{renvoi}</p>')
+            plafonds.append(f'<strong>Chaîne.</strong> Note propre et note '
+                            f'replacée dans les chaînes identiques ({sc["idl"]}) : '
+                            f'les {_lien_pluriel(n_chaine)} n\'abaissent aucun '
+                            f'axe.{renvoi}')
         else:
             # axes réellement abaissés : comparaison intrinsèque / effectif
             axes_intr = sc.get("axes_intr", {}) or {}
@@ -1573,11 +1579,11 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
             if sc.get("idl_brut") is not None and sc["idl_brut"] != sc["idl"]:
                 comp_phrase = (" La note replacée intègre aussi la pénalité de "
                                "complétude.")
-            chaine_html = (f'<p class="chaine-note">Note propre '
-                           f'{idl_intr}, ramenée à <strong>{sc["idl"]}</strong> '
-                           f'une fois replacée dans ses chaînes : par les '
-                           f'{_lien_pluriel(n_chaine)}, '
-                           f'{axes_phrase}.{comp_phrase}{renvoi}</p>')
+            plafonds.append(f'<strong>Chaîne.</strong> Note propre '
+                            f'{idl_intr}, ramenée à <strong>{sc["idl"]}</strong> '
+                            f'une fois replacée dans ses chaînes : par les '
+                            f'{_lien_pluriel(n_chaine)}, '
+                            f'{axes_phrase}.{comp_phrase}{renvoi}')
 
     # plafond de chaîne sur l'axe 2 d'un lieu (session #5) — annotation visible
     # pour rendre lisible la sanction du verdict marchand ou hybride sur l'axe
@@ -1586,14 +1592,23 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     if cat == "lieu" and sc.get("ax2_plafond") is not None:
         nat = sc.get("ax2_nature_pire") or "inconnu"
         nat_lbl = nature_label(nat, cfg["concepts"]).lower()
-        intr_ax2 = sc.get("ax2_intrinseque")
-        chaine_html += (
-            f'<p class="chaine-note">La structure ne peut être notée plus haut '
-            f'que <strong>{sc["ax2_plafond"]}</strong> : un maillon de la chaîne '
-            f'— « {e(nat_lbl)} » — l\'en empêche, quels que soient les critères '
-            f'cochés. '
+        plafonds.append(
+            f'<strong>Maillon limitant.</strong> La structure ne peut être notée '
+            f'plus haut que <strong>{sc["ax2_plafond"]}</strong> : un maillon de '
+            f'la chaîne — « {e(nat_lbl)} » — l\'en empêche, quels que soient les '
+            f'critères cochés. '
             f'<a class="chaine-renvoi" href="../methode.html#chaine">'
-            f'Comment la chaîne entre dans la note →</a></p>')
+            f'Comment la chaîne entre dans la note →</a>')
+
+    # pour un lieu sans contamination de chaîne mais avec pénalité de complétude :
+    # la phrase de complétude est déjà dans `plafonds` (cas `not contamine` ci-dessus).
+    plafonds_html = ""
+    if plafonds:
+        items = "".join(f"<li>{p}</li>" for p in plafonds)
+        plafonds_html = (
+            '<details class="plafonds-fold"><summary>Plafonds appliqués '
+            f'({len(plafonds)})</summary><ul class="plafonds-list">{items}</ul>'
+            '</details>')
 
     # nombre d'axes effectivement renseignés : l'Indice est leur moyenne
     # géométrique. En deçà de 5, on le signale — information distincte de la
@@ -1670,7 +1685,30 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                 f'<dl>{bref_compact}</dl></div>') if rows else ""
 
     pal_col = sc["palier"]["couleur"] if sc["palier"] else "var(--green)"
+
+    # 1.5 — objet-verdict composite : verdict · Indice · palier rapprochés sur une
+    # ligne en tête de panneau, trois libellés typographiquement distincts (badge
+    # coloré · nombre /100 · étiquette de palier) + un renvoi unique. On rapproche
+    # la zone d'affichage, jamais les concepts ni les valeurs. Lieux seulement
+    # (eux seuls portent un verdict).
+    composite_html = ""
+    if cat == "lieu" and sc.get("idl") is not None and sc.get("palier"):
+        vid = compute_verdict(fiche, by_uid)
+        composite_html = (
+            '<div class="verdict-composite">'
+            '<span class="vco-line">'
+            f'{verdict_badge(vid, cfg["concepts"])}'
+            f'<span class="vco-sep">·</span>'
+            f'<span class="vco-idl"><b>{sc["idl"]}</b><span class="vco-unit">/100</span></span>'
+            f'<span class="vco-sep">·</span>'
+            f'<span class="vco-pal" style="--pal:{pal_col}">{e(sc["palier"]["label"])}</span>'
+            '</span>'
+            '<a class="vco-renvoi" href="../methode.html#verdict">'
+            'Pourquoi ces trois ? → Méthode</a>'
+            '</div>')
+
     score_block = f"""<section class="score-panel" style="--pal:{pal_col}">
+  {composite_html}
   <div class="score-main">
     <p class="score-cap"><a href="../methode.html#indice">Indice de libération</a></p>
     {idl_badge(sc, big=True)}
@@ -1682,7 +1720,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     {idl_scale(sc, ranking)}
     <p class="fiab fiab-{fcls}">{e(flabel)}</p>
     {comp}
-    {chaine_html}
+    {plafonds_html}
   </div>
   {bref_col}
 </section>"""
@@ -1698,30 +1736,27 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     # Bandeau de lecture A3 — TOUJOURS visible (déplié), au-dessus de la ligne de
     # flottaison : un·e lecteur·rice doit pouvoir citer le sens des trois chiffres
     # sans rien dérouler. Lieux seulement (eux seuls portent un verdict).
-    verdict_cle = ("""<aside class="verdict-cle" aria-label="Lire le verdict, le palier et l'Indice">
-  <p class="vc-intro"><strong>Trois lectures, distinctes à dessein.</strong></p>
-  <ul>
-    <li><strong>Le verdict</strong> — <em>marchand · hybride · sanctuaire</em> — dit
-    où se tient la chaîne entre marché et commun ; il découle de la nature des
-    maillons, pas du chiffre.</li>
-    <li><strong>L'Indice</strong> (0-100) mesure la qualité du montage sur cinq axes,
-    en retenant le plus faible : une force ne rachète pas une faiblesse.</li>
-    <li><strong>Le palier</strong> est la tranche de l'Indice — mais « Libération
-    aboutie » est <em>réservé au verdict sanctuaire</em> : un Indice élevé peut donc
-    rester « solide » sans être « abouti ». Les trois ne disent pas la même chose.</li>
-  </ul>
-</aside>""" if cat == "lieu" else "")
+    # 1.1 — une seule phrase + lien Méthode, placée SOUS le panneau de score
+    # (l'encart à puces « Trois lectures » est supprimé ; la distinction est
+    # désormais portée par l'objet-verdict composite en tête de panneau).
+    verdict_cle = ("""<p class="verdict-cle">Verdict, Indice et palier ne disent pas
+la même chose : un Indice élevé peut rester « solide » sans être « abouti ».
+<a href="../methode.html#verdict">Comment les lire → Méthode</a></p>""" if cat == "lieu" else "")
+    # 1.2 — version courte et accessible : on décrit ce que MONTRENT les visuels
+    # (pentagone, barres, badge), sans ré-expliquer la règle d'agrégation (qui vit
+    # sur la Méthode, vers laquelle on renvoie).
     lecture = f"""<details class="fiche-key">
   <summary>Comment lire les visuels de cette fiche</summary>
   <ul>
   <li><strong>Badge Indice</strong> — note de synthèse de 0 à 100 ; sa couleur
-  indique le palier. L'Indice retient l'axe le plus faible des cinq : une force
-  ne rachète pas une faiblesse.</li>
+  indique le palier.</li>
   <li><strong>Pentagone à cinq axes</strong> — un sommet par axe ({axes_enum}),
   l'axe 1 en haut. Plus la zone colorée s'étend vers un sommet, plus le montage
   est noté sur cet axe.</li>
   <li><strong>Barres d'axe</strong> — le détail chiffré des cinq axes.{grille_line}</li>
   </ul>
+  <p class="fiche-key-more"><a href="../methode.html#indice">Comment l'Indice est
+  calculé → Méthode</a></p>
 </details>"""
 
     # (les « Repères » sont désormais construits plus haut et intégrés au
@@ -1764,7 +1799,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
             fam_rows.append(f'<tr class="fam-row"><th colspan="4" scope="colgroup">{e(fam["label"])}</th></tr>'
                             + "".join(trs))
         recap = grille_recap(sc["criteres_evalues"], gril, axes_cfg)
-        grille_html = f"""<section class="grille-section"><details class="grille-fold" open>
+        grille_html = f"""<section class="grille-section"><details class="grille-fold">
 <summary class="sec">Grille de lecture <span class="fold-hint">— déplier / replier</span></summary>
 <p class="grille-intro">{e(clean(gril.get('objet','')))}
 <a href="../grilles.html#grille-{cat}">Comprendre la grille →</a></p>
@@ -1891,7 +1926,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     dossier_lien = (f'<p class="fiche-dossier-lien"><a href="../dossiers/'
                     f'{e(dossier_slug)}.html">Lire le dossier — le récit de ce '
                     f'lieu →</a></p>' if dossier_slug else "")
-    body = (defs + head + verdict_cle + dossier_lien + score_block + lecture + resume
+    body = (defs + head + dossier_lien + score_block + verdict_cle + lecture + resume
             + montage_html + analyse_html + reponse_html + liens_html + grille_html
             + dossier_html + fiab + sources_html + backlink)
 
@@ -2251,8 +2286,8 @@ def render_classement(all_sc, cfg):
     axes_enum = ", ".join(f"{a['id']} {a['court'].lower()}" for a in axes_cfg)
     body = f"""<h1>Classement par l'Indice de libération</h1>
 <p class="lead">L'Indice de libération (IdL) note chaque montage de 0 à 100 sur
-cinq axes — {axes_enum}. L'Indice est leur moyenne géométrique non
-compensatoire. <a href="methode.html">Méthode détaillée →</a> ·
+<a href="methode.html">cinq axes</a>, agrégés de sorte que l'axe le plus faible
+commande. <a href="methode.html">Méthode détaillée →</a> ·
 <a href="comparer.html">Comparer deux entrées en vis-à-vis →</a></p>
 <div class="callout callout-warn">
   <p><strong>Un classement croisé, indicatif.</strong> Lieux, porteurs de
@@ -2617,7 +2652,7 @@ sept critères.</caption>
         if tri.get("verification"):
             verif = (f'<p class="prose"><strong>Vérifier la posture par la '
                      f'nature.</strong> {e(clean(tri["verification"]))}</p>')
-        triptyque_html = f"""<section><h2 class="sec" id="triptyque">Le triptyque : usus, fructus, abusus</h2>
+        triptyque_html = f"""<section><h2 class="sec" id="triptyque">Les trois pouvoirs du propriétaire : usus, fructus, abusus</h2>
 <p class="lead">{e(clean(tri.get('en_clair','')))}</p>
 <p class="prose">{e(clean(tri.get('chapeau','')))}</p>
 <div class="regime-grid">{droit_cards}</div>
@@ -2739,18 +2774,14 @@ def render_methode(cfg, n_by_cat, all_sc):
     tri = cfg["concepts"].get("triptyque", {}) or {}
     ed = ((cfg["concepts"].get("editorial", {}) or {})
           .get("registres_d_ecriture", {}) or {})
-    droits_li = "".join(
-        f'<li><strong>{e(clean(d.get("label","")))}</strong> — '
-        f'{e(clean(d.get("definition","")))}</li>'
-        for d in tri.get("droits", []) or [])
-    triptyque_html = f"""<section id="triptyque"><h2 class="sec">Le triptyque : usus, fructus, abusus</h2>
+    # 1.7 — foyer unique de la version longue = Régimes. Ici, deux lignes + ancre.
+    triptyque_html = f"""<section id="triptyque"><h2 class="sec">Les trois pouvoirs du propriétaire : usus, fructus, abusus</h2>
 <p class="enclair">{e(clean(tri.get('en_clair','')))}</p>
 <p class="prose"><strong>La formule.</strong> {e(clean(cc.get('formule','')))}</p>
-<p class="prose">{e(clean(tri.get('chapeau','')))}</p>
-<ul class="prose">{droits_li}</ul>
-<p class="prose">Les cinq pôles se profilent sur ce triptyque ; il est exposé en
-détail, avec les pôles et la typologie de montage, sur la page
-<a href="regimes.html#triptyque">Régimes et pôles du sol</a>.</p>
+<p class="prose">Usus (utiliser), fructus (en tirer un revenu), abusus (en disposer
+jusqu'à détruire) : libérer une terre, c'est ré-agencer collectivement ces trois
+pouvoirs. Le détail des trois droits, avec les pôles et la typologie de montage,
+est exposé sur la page <a href="regimes.html#triptyque">Régimes et pôles du sol</a>.</p>
 </section>"""
     # Section « Les deux voix » retirée (session #5, 27 mai 2026) : le double
     # registre voix exacte / voix incarnée est implicite à la lecture, pas
@@ -2767,7 +2798,8 @@ détail, avec les pôles et la typologie de montage, sur la page
 <strong>verdict</strong> — une qualification en trois niveaux qui dit où se tient
 la chaîne entre marché et commun. Le verdict ne se saisit jamais : il
 <strong>découle</strong> de la nature de chaque maillon, lue dans sa
-relation à la chaîne, puis des conditions d'accès au sommet.</p>
+relation à la chaîne, puis des conditions d'accès au niveau le plus haut, que
+nous appelons <em>sanctuaire</em> (le « sommet » du commun).</p>
 <ul class="prose verdict-degres">{degres_li}</ul>
 <p class="prose"><strong>Une nature lue dans la chaîne, pas en soi.</strong> Ce
 qui fait basculer un lieu, ce n'est pas la forme juridique d'un maillon isolé mais
@@ -2781,12 +2813,13 @@ deux, sur la chaîne déclarée par le lieu — seule source de vérité.</p>
 « {e(next((d['label'] for d in verdict_cfg.get('degres',[]) if d['id']=='sanctuaire'), 'sanctuaire'))} »
 ne s'atteint qu'avec une chaîne entièrement non lucrative <em>et</em> des
 conditions observables toutes réunies : foncier irréversiblement hors-marché,
-habitat du vivant, protection durable et opposable du milieu, usage non marchand
+habitat du vivant, protection durable et <em>opposable</em> du milieu (qu'on peut
+faire respecter en justice), usage non marchand
 au service de l'intérêt général, et travail non marchandisé (le travail qui fait
 vivre le lieu n'est pas tarifé en argent par un contrat de travail — don, troc,
 entraide, ou associé·es vivant du produit partagé, plutôt que salariat). Chacune
 se lit sur du vérifiable ; ce qui ne l'est pas — l'idéal d'une économie pleinement
-décommodifiée — éclaire le sommet sans en commander l'accès. Tant qu'une de ces conditions n'est pas établie, le lieu reste hybride.
+<em>décommodifiée</em> (entièrement retirée du marché) — éclaire le sommet sans en commander l'accès. Tant qu'une de ces conditions n'est pas établie, le lieu reste hybride.
 Le sommet est donc <strong>rare — un horizon plus qu'une case à remplir</strong> ;
 il peut rester momentanément vide à mesure que le corpus se documente, et c'est
 honnête.</p>
@@ -2805,7 +2838,7 @@ concernée, sans retouche.</p>
 libération des terres.</p>
 <nav class="page-toc" aria-label="Sommaire de la page">
   <a href="#corpus">Ce que recense l'annuaire</a>
-  <a href="#triptyque">Le triptyque usus / fructus / abusus</a>
+  <a href="#triptyque">Les trois pouvoirs du propriétaire</a>
   <a href="#indice">L'Indice de libération</a>
   <a href="#chaine">La chaîne, et où se lit chaque axe</a>
   <a href="#verdict">Le verdict du lieu</a>
@@ -2818,7 +2851,9 @@ libération des terres.</p>
 <p class="enclair">{e(clean(cc.get('en_clair','')))}</p>
 <p class="prose">« Terres Libérées » recense des lieux français où le foncier a
 été soustrait au marché spéculatif par dissociation de la propriété et de
-l'usage. {e(clean(cc['definition']))}</p>
+l'usage : <strong>l'un possède la terre sans s'en servir</strong> (le porteur de
+nue-propriété), <strong>l'autre s'en sert sans la posséder</strong> (l'organisme
+usufruitier). {e(clean(cc['definition']))}</p>
 <p class="prose"><strong>Ressort juridique.</strong> {e(clean(cc['ressort_juridique']))}</p>
 <p class="prose"><strong>Verrou central.</strong> {e(clean(cc['verrou_cle']))}</p>
 </section>
@@ -2840,9 +2875,10 @@ un autre — propriété solidement verrouillée mais gouvernance fermée, ou
 l'inverse. Aucun axe ne se déduit d'un autre. C'est cette indépendance qui rend
 le profil à cinq axes informatif : il décompose la qualité du montage au lieu
 de la résumer d'un seul chiffre.</p>
-<p class="prose"><strong>Une agrégation non compensatoire.</strong> L'Indice
-global n'est pas la moyenne arithmétique des axes : c'est leur
-<strong>moyenne géométrique</strong> —
+<p class="prose"><strong>L'axe le plus faible commande — une force ne rachète pas
+une faiblesse.</strong> L'Indice global n'est pas la moyenne arithmétique des
+axes : c'est leur <strong>moyenne géométrique</strong> (on parle d'<em>agrégation
+non compensatoire</em>) —
 <code>IdL brut = (score₁ × score₂ × … × score_k) ^ (1 / k)</code>, où
 <em>k</em> est le nombre d'axes renseignés. La moyenne géométrique fait peser
 l'axe le plus faible : un montage solide sur quatre axes mais commercial de
@@ -2868,27 +2904,25 @@ comme tel ; ils restent hors du classement principal.</p>
 <section id="chaine"><h2 class="sec">La chaîne, et où se lit chaque axe</h2>
 <p class="prose">Un montage de libération des terres n'est pas une entité
 isolée mais une <strong>chaîne</strong> : un lieu, son porteur de
-nue-propriété, son organisme usufruitier. Chaque axe a un <strong>domicile</strong>
-— le maillon où il se joue réellement. {e(clean(ranking['chaine']['coherence']))}</p>
+nue-propriété, son organisme usufruitier. Chaque axe se lit sur le maillon où il
+se joue réellement. {e(clean(ranking['chaine']['coherence']))}</p>
 <ul class="prose">{domiciliage_html}</ul>
-<p class="prose" id="chaine-effectif"><strong>Indice intrinsèque et indice effectif.</strong> Un
-porteur ou un usufruitier est d'abord noté sur ses propres critères : c'est son
-indice <em>intrinsèque</em>. Mais une entité n'existe, comme actrice de la
-libération des terres, qu'à travers les chaînes qu'elle noue. L'indice
-<em>effectif</em> relit l'indice intrinsèque à travers les lieux reliés : pour
-les axes contaminables — la structure (2), la finalité (4) et l'usage (5) —
-l'axe effectif retient le <strong>minimum</strong> entre le score intrinsèque
-et la médiane de cet axe sur les lieux reliés. L'axe 1 (le sol) et l'axe 3 (le
-pouvoir) restent intrinsèques. Une mauvaise chaîne plafonne un axe ; une bonne
-chaîne ne le rehausse jamais au-delà du plafond intrinsèque. C'est l'indice
-effectif qui sert au badge et au classement ; l'écart avec l'intrinsèque est
-toujours affiché et annoté sur la fiche. Faute de lieu relié, l'indice effectif
-égale l'indice intrinsèque.</p>
+<p class="prose" id="chaine-effectif"><strong>Une structure vaut par les lieux
+qu'elle fait vivre.</strong> Un porteur ou un usufruitier est d'abord noté sur
+ses propres statuts ; mais il n'existe, comme acteur de la libération des terres,
+qu'à travers les chaînes qu'il noue. Aussi sa note de principe est-elle relue à
+travers les lieux qu'il fait vivre : si ces lieux valent moins que cette note,
+c'est leur niveau qui compte. Une mauvaise chaîne fait baisser une note ; une
+bonne chaîne ne la rehausse jamais au-delà de la note de principe. Le détail de
+ce calcul (« indice intrinsèque / effectif », « axes contaminables ») est au
+<a href="glossaire.html#g-indice-intrinseque-indice-effectif">glossaire</a> ;
+faute de lieu relié, la note relue égale la note de principe.</p>
 <p class="prose"><strong>Lire le motif, pas l'instance.</strong> La
 contamination lit une <em>distribution</em> de chaînes, non un cas isolé : une
 mauvaise chaîne sur dix n'équivaut pas à huit sur dix. Un bon porteur affecté
 d'un locataire problématique unique n'est pas plombé comme un porteur
-systématiquement rentier.</p>
+systématiquement <em>rentier</em> (dont l'usage sert surtout à encaisser un
+loyer).</p>
 <p class="prose"><strong>Lire la trajectoire, pas l'instantané.</strong> Une
 chaîne en cours de dé-précarisation active — bail renégocié, usufruitier en
 transition — compte comme l'entité faisant son travail, non comme un échec.
@@ -2903,8 +2937,7 @@ difficiles pour protéger son score.</p>
 <p class="prose">{e(clean(ranking['integrite_montage']['note_lecture']))}
 Cet indicateur complémentaire n'entre pas dans l'Indice : il
 <strong>situe</strong> le montage parmi les cinq pôles sans les hiérarchiser.
-La protection effective du foncier est mesurée par l'axe 1, la nature du
-montage par l'axe 2. Le cadre des régimes et des cinq pôles est exposé sur la
+Le cadre des régimes et des cinq pôles est exposé sur la
 page <a href="regimes.html#poles">Régimes et pôles du sol</a>.</p>
 </section>
 
@@ -2995,6 +3028,11 @@ GLOSSAIRE = [
      "logique spéculative et marchande, pour le placer au service d'un usage "
      "défini collectivement et d'intérêt général. Le terme n'est pas un "
      "concept juridique codifié."),
+    ("Décommodifié / décommodification",
+     "Retirer un bien du commerce : il ne peut plus être acheté, vendu ni loué "
+     "pour le profit. Une terre décommodifiée est sortie du marché — elle cesse "
+     "d'être une marchandise. Terme savant pour ce que l'annuaire appelle, en "
+     "clair, « retirer la terre du marché »."),
     ("Démembrement",
      "Division du droit de propriété (article 544 du Code civil) en deux "
      "droits distincts confiés à des titulaires différents : la nue-propriété "
@@ -3054,10 +3092,12 @@ GLOSSAIRE = [
      "gouvernance collective des usagers, finalité ouverte. Troisième pôle, "
      "distinct de l'intérêt général institué comme de la propriété privée."),
     ("Agrégation non compensatoire",
-     "Mode de calcul de l'indice de synthèse où l'axe le plus faible pèse "
-     "lourd — moyenne géométrique ou équivalent — interdisant qu'une force "
-     "rachète une faiblesse. Un montage solide sur quatre axes mais effondré "
-     "sur le cinquième ne peut afficher un indice élevé."),
+     "En clair : l'axe le plus faible commande — une force ne rachète pas une "
+     "faiblesse. C'est le mode de calcul de l'Indice : un montage solide sur "
+     "quatre axes mais effondré sur le cinquième ne peut afficher un indice "
+     "élevé. Techniquement, l'agrégation se fait par moyenne géométrique, qui "
+     "pénalise lourdement l'axe le plus bas. « Agrégation non compensatoire » "
+     "est l'étiquette technique de cette règle."),
     ("Chaîne",
      "Un montage de libération des terres n'est pas une entité isolée mais une "
      "chaîne : un lieu, son porteur de nue-propriété, son organisme "
@@ -3092,7 +3132,7 @@ GLOSSAIRE = [
      "en étant structurellement commerciale et lucrative au profit d'un cercle "
      "fermé. On parle aussi de « communs-washing ». Cas-type : la société "
      "coopérative dont le bénéficiaire réel est le seul sociétariat."),
-    ("Triptyque usus / fructus / abusus",
+    ("Les trois pouvoirs du propriétaire (triptyque usus / fructus / abusus)",
      "Les trois droits que le droit civil reconnaît sur une chose : l'usus — "
      "s'en servir —, le fructus — en percevoir les revenus —, l'abusus — en "
      "disposer, jusqu'à vendre, transformer ou épuiser. Le commun n'invente pas "
@@ -3145,10 +3185,9 @@ GLOSSAIRE = [
      "des parts qui en portent la valeur."),
     ("Indice de libération",
      "Note de synthèse de 0 à 100 attribuée à chaque entrée de l'annuaire. "
-     "Elle est la moyenne géométrique de cinq axes — le sol, la structure, le "
-     "pouvoir, la finalité, l'usage — et résume la solidité du montage. "
-     "L'agrégation géométrique est non compensatoire : l'axe le plus faible "
-     "commande le résultat. Voir la page Méthode."),
+     "Elle agrège cinq axes — le sol, la structure, le pouvoir, la finalité, "
+     "l'usage — et résume la solidité du montage. L'axe le plus faible commande "
+     "le résultat (voir « Agrégation non compensatoire »). Voir la page Méthode."),
     ("Intégrité du montage",
      "Indicateur complémentaire, non noté et non hiérarchique : il situe la "
      "chaîne du montage parmi cinq pôles, du commun libre et vivant à la "
@@ -3311,10 +3350,9 @@ def render_comparer(all_sc, cfg):
 <p class="lead">Choisissez deux entrées de l'annuaire pour voir leurs indices,
 profils à cinq axes et caractéristiques en vis-à-vis.
 <a href="methode.html">Comprendre l'Indice →</a></p>
-<div class="callout callout-warn"><p><strong>Comparer ce qui est
-comparable.</strong> Lieux, porteurs et usufruitiers sont notés par trois
-grilles distinctes : la comparaison critère à critère n'a de sens qu'entre
-entrées de même catégorie.</p></div>
+<p class="note">Comparer ce qui est comparable : la comparaison critère à
+critère n'a de sens qu'entre entrées de même catégorie.
+<a href="classement.html">Pourquoi ? →</a></p>
 <div class="cmp-pickers">
   <label>Montage A <select id="cmp-a">{selects}</select></label>
   <label>Montage B <select id="cmp-b">{selects}</select></label>
@@ -3344,9 +3382,15 @@ def render_index(all_sc, cfg, n_by_cat):
     core = sorted([(f, s) for f, s in all_sc
                    if f["categorie"] not in ("modele", "reseau")],
                   key=lambda x: x[1]["idl"] or 0, reverse=True)
-    top = core[:6]
-    modeles = sorted([(f, s) for f, s in all_sc if f["categorie"] == "modele"],
-                     key=lambda x: x[1]["idl"] or 0, reverse=True)
+
+    # 1.10 — meilleures entrées par catégorie (réutilise le tri de `core`, même
+    # logique que render_classement) : 2 lieux, 2 porteurs, 2 usufruitiers.
+    def _best(cat, n=2):
+        return [(f, s) for f, s in core
+                if f["categorie"] == cat and s.get("idl") is not None][:n]
+    best_groups = [("lieu", "Lieux", _best("lieu")),
+                   ("porteur", "Porteurs de nue-propriété", _best("porteur")),
+                   ("usufruitier", "Organismes usufruitiers", _best("usufruitier"))]
 
     # chiffres-clés — verdicts déjà calculés sur les scores des lieux
     from collections import Counter as _Counter
@@ -3447,6 +3491,23 @@ def render_index(all_sc, cfg, n_by_cat):
 }})();
 </script>"""
 
+    # 1.10 — section « En vue » : les meilleures entrées par catégorie, en cartes,
+    # avec lien direct vers le classement complet.
+    best_blocks = []
+    for cat, glabel, lot in best_groups:
+        if not lot:
+            continue
+        best_blocks.append(
+            f'<h3 class="best-grp">{e(glabel)}</h3>'
+            + cards_grid(lot, axes_cfg, concepts=concepts))
+    best_section = (
+        '<section class="accueil-best"><h2 class="sec">En vue — les montages '
+        'les mieux notés</h2>'
+        '<p class="lead">Par catégorie, les entrées dont l\'Indice de libération '
+        'est le plus élevé. <a href="classement.html">Voir le classement complet '
+        '→</a></p>'
+        + "".join(best_blocks) + '</section>') if best_blocks else ""
+
     body = f"""{tri_defs(axes_cfg)}<section class="hero">
   <p class="hero-kicker">Annuaire critique · libération des terres</p>
   <h1>La terre n'est pas une marchandise.</h1>
@@ -3455,7 +3516,7 @@ def render_index(all_sc, cfg, n_by_cat):
   vivant et durable. Cet annuaire les recense sans complaisance : il distingue
   les libérations réelles des montages qui en empruntent le vocabulaire, au
   regard d'un cadre explicite et assumé — celui d'une économie citoyenne, non
-  lucrative et décommodifiée. C'est une prise de position, défendable et
+  lucrative, qui retire la terre du marché. C'est une prise de position, défendable et
   contestable, non une mesure neutre.</p>
   <p class="hero-cta">
     <a class="cta" href="carte.html">Voir la carte</a>
@@ -3463,8 +3524,8 @@ def render_index(all_sc, cfg, n_by_cat):
   </p>
 </section>
 
-<section class="chiffres">
-  <h2 class="visually-hidden">Chiffres-clés</h2>
+<section class="chiffres corpus">
+  <h2 class="sec">État du corpus</h2>
   <div class="stat-grid">
     <div class="stat"><span class="stat-n">{n_lieux}</span>
       <span class="stat-l">lieux recensés</span></div>
@@ -3476,25 +3537,22 @@ def render_index(all_sc, cfg, n_by_cat):
   <p class="lead">La plupart des lieux sont des montages <strong>hybrides</strong>
   ({n_hybride}) : des communs juridiquement solides, mais qu'un maillon, un usage
   rémunéré ou une condition encore non établie tient à distance du sommet. Le
-  sommet n'est pas une case à remplir — c'est une étoile polaire.</p>
+  sommet n'est pas une case à remplir — c'est un horizon.</p>
+  <p class="lead">L'annuaire compte aussi {n_by_cat['porteur']} porteurs et
+  {n_by_cat['usufruitier']} usufruitiers notés — hors modèles voisins de
+  référence. Répartition de toutes les entrées notées par palier d'Indice :</p>
+  {hist}
 </section>
 
 {carte_teaser}
 
 {doss_section}
 
+{best_section}
+
 <section>
   <h2 class="sec">Par où entrer</h2>
   <div class="intent-cards">{intentions}</div>
-</section>
-
-<section class="corpus">
-  <h2 class="sec">État du corpus</h2>
-  <p class="lead">L'annuaire compte {n_lieux} lieux,
-  {n_by_cat['porteur']} porteurs et {n_by_cat['usufruitier']} usufruitiers
-  notés — hors modèles voisins de référence. Leur répartition par palier
-  d'Indice :</p>
-  {hist}
 </section>
 
 <section>
@@ -3502,7 +3560,6 @@ def render_index(all_sc, cfg, n_by_cat):
   <p class="lead">Des modèles proches — français et étrangers — recensés à titre
   de comparaison. Hors classement principal, leur indice est <em>estimé</em>.
   <a href="modeles.html">Voir les modèles voisins →</a></p>
-  {cards_grid(modeles, axes_cfg, concepts=concepts)}
 </section>"""
     site_desc = meta_desc(concepts["project"]["description"])
     website = {
@@ -4120,6 +4177,18 @@ def render_revues_index(revues, cfg):
 
 {grid}
 
+<section class="revue-meta-regles">
+  <h2 class="sec">Comment ces revues s'écrivent</h2>
+  <p class="prose"><strong>Édition vivante.</strong> Les revues s'écrivent au fil
+  de l'eau : un article peut être révisé, complété, restructuré, et porte sa date
+  de mise à jour. L'écrit n'est jamais figé, il s'épaissit.</p>
+  <p class="prose"><strong>Des archétypes, pas des noms.</strong> Les revues
+  parlent de mécanismes et d'archétypes plutôt que de cibles nommées : un mécanisme
+  nommé se reconnaît partout, une cible nommée enferme le débat dans un cas
+  particulier. Un cas concret n'est nommé que lorsqu'il éclaire l'archétype — ou,
+  pour les récits, lorsque raconter un lieu exige de le nommer.</p>
+</section>
+
 <p class="prose">Les revues sont éditoriales, l'annuaire est documentaire :
 ce qui se discute dans les revues s'appuie sur ce que recense l'annuaire,
 et inversement. <a href="../methode.html">Lire la méthode →</a></p>"""
@@ -4583,6 +4652,10 @@ main.wrap{padding-bottom:4rem;}
 .intent-links{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;}
 /* bandeau « À lire » — vignettes de récits sur l'accueil */
 .accueil-dossiers{margin:1.6rem 0;}
+/* 1.10 — section « En vue » : meilleures entrées par catégorie */
+.accueil-best{margin:1.6rem 0;}
+.accueil-best .best-grp{font-size:.92rem;text-transform:uppercase;
+ letter-spacing:.06em;color:var(--muted);margin:1.2rem 0 .2rem;}
 .dossier-vignettes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
 .dossier-vignette{display:block;background:var(--card);border:1px solid transparent;
  border-radius:var(--radius);padding:1.1rem 1.2rem;text-decoration:none;color:var(--ink);
@@ -4854,6 +4927,34 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .fiab-faint{color:var(--faint);}
 .completude{font-size:.8rem;color:var(--faint);margin:.2rem 0 0;}
 
+/* 1.5 — objet-verdict composite : ligne en tête du panneau de score, pleine
+   largeur (force un retour avant les colonnes flex). Trois libellés distincts :
+   badge verdict coloré · nombre /100 · étiquette de palier. */
+.verdict-composite{flex:0 0 100%;display:flex;flex-wrap:wrap;align-items:center;
+ gap:.6rem 1rem;padding-bottom:1rem;margin-bottom:.3rem;
+ border-bottom:1px solid var(--line);}
+.vco-line{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
+ font-size:1.05rem;}
+.vco-sep{color:var(--faint);font-weight:400;}
+.vco-idl b{font-size:1.25rem;font-variant-numeric:tabular-nums;}
+.vco-idl .vco-unit{font-size:.78rem;color:var(--faint);margin-left:.1rem;}
+.vco-pal{font-size:.82rem;font-weight:600;color:var(--pal,var(--green-dk));
+ background:color-mix(in srgb,var(--pal,var(--green)) 14%,transparent);
+ border-radius:999px;padding:.12rem .6rem;}
+.vco-renvoi{font-size:.8rem;color:var(--muted);margin-left:auto;white-space:nowrap;}
+.vco-renvoi:hover{color:var(--green-dk);}
+
+/* 1.4 — « Plafonds appliqués » : une seule ligne repliable regroupant les
+   annotations de plafonnement (chaîne, maillon limitant, complétude). */
+.plafonds-fold{margin:.6rem 0 0;font-family:-apple-system,system-ui,sans-serif;}
+.plafonds-fold>summary{font-size:.82rem;color:var(--muted);cursor:pointer;
+ width:fit-content;}
+.plafonds-fold>summary:hover{color:var(--green-dk);}
+.plafonds-list{margin:.4rem 0 .2rem;padding-left:1.05rem;}
+.plafonds-list li{font-size:.82rem;color:var(--faint);margin:.35rem 0;
+ max-width:70ch;line-height:1.45;}
+.plafonds-list .chaine-renvoi{color:var(--muted);}
+
 /* clé de lecture de la fiche — repliée, sobre (audit pédagogie C, I1/I3) */
 .fiche-key{margin:-.4rem 0 1.2rem;font-family:-apple-system,system-ui,sans-serif;}
 .fiche-key summary{font-size:.84rem;color:var(--muted);cursor:pointer;
@@ -4862,13 +4963,11 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
 .fiche-key ul{margin:.4rem 0 .2rem;padding-left:1.1rem;}
 .fiche-key li{font-size:.88rem;color:var(--muted);margin:.3rem 0;max-width:68ch;}
 
-/* bandeau de lecture A3 — toujours visible, au-dessus de la ligne de flottaison */
-.verdict-cle{background:var(--beige);border-radius:var(--radius);
- border-left:3px solid var(--green);padding:.7rem 1rem;margin:.2rem 0 1.1rem;
+/* 1.1 — rappel court sous le panneau de score (une phrase + lien Méthode) */
+.verdict-cle{font-size:.84rem;color:var(--muted);margin:-.6rem 0 1.2rem;
+ max-width:74ch;line-height:1.5;
  font-family:-apple-system,system-ui,sans-serif;}
-.verdict-cle .vc-intro{margin:.1rem 0 .4rem;font-size:.9rem;}
-.verdict-cle ul{margin:0;padding-left:1.1rem;}
-.verdict-cle li{font-size:.86rem;color:var(--ink);margin:.28rem 0;max-width:74ch;line-height:1.45;}
+.verdict-cle a{font-weight:600;}
 .fiche-dossier-lien{margin:.2rem 0 1rem;font-family:-apple-system,system-ui,sans-serif;
  font-size:.92rem;font-weight:600;}
 
