@@ -1,4 +1,4 @@
-# Santé des sources — 2026-05-29
+# Santé des sources — 2026-05-30
 
 Par source : état du dernier scan et nombre de liens retenus pour approfondissement.
 
