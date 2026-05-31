@@ -3525,14 +3525,14 @@ def render_index(all_sc, cfg, n_by_cat):
 <section class="chiffres corpus">
   <h2 class="sec">État du corpus</h2>
   <div class="stat-grid">
-    <div class="stat"><span class="stat-n">{n_by_cat['lieu']}</span>
-      <span class="stat-l">lieux recensés</span></div>
-    <div class="stat"><span class="stat-n">{n_by_cat['usufruitier']}</span>
-      <span class="stat-l">organismes usufruitiers</span></div>
-    <div class="stat"><span class="stat-n">{n_by_cat['porteur']}</span>
-      <span class="stat-l">porteurs de nue-propriété</span></div>
-    <div class="stat"><span class="stat-n">{n_by_cat['reseau']}</span>
-      <span class="stat-l">réseaux</span></div>
+    <a class="stat" href="lieux.html"><span class="stat-n">{n_by_cat['lieu']}</span>
+      <span class="stat-l">lieux recensés</span></a>
+    <a class="stat" href="usufruitiers.html"><span class="stat-n">{n_by_cat['usufruitier']}</span>
+      <span class="stat-l">organismes usufruitiers</span></a>
+    <a class="stat" href="porteurs.html"><span class="stat-n">{n_by_cat['porteur']}</span>
+      <span class="stat-l">porteurs de nue-propriété</span></a>
+    <a class="stat" href="reseaux.html"><span class="stat-n">{n_by_cat['reseau']}</span>
+      <span class="stat-l">réseaux</span></a>
   </div>
   <p class="lead">La plupart des lieux sont des montages <strong>hybrides</strong>
   ({n_hybride}) : des communs juridiquement solides, mais qu'un maillon, un usage
@@ -4569,6 +4569,8 @@ main.wrap{padding-bottom:4rem;}
 .stat-n{display:block;font-size:2.4rem;line-height:1;font-weight:700;color:var(--green-dk);}
 .stat-l{display:block;margin-top:.4rem;font-size:.86rem;color:var(--muted);
  font-family:-apple-system,system-ui,sans-serif;}
+a.stat{color:inherit;text-decoration:none;transition:box-shadow .15s,transform .15s;}
+a.stat:hover,a.stat:focus-visible{box-shadow:0 2px 10px rgba(0,0,0,.10);transform:translateY(-1px);}
 /* entrées par intention (accueil) */
 .intent-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
 .intent-card{background:var(--card);border:1px solid transparent;border-radius:var(--radius);
