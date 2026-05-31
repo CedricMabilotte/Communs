@@ -4,13 +4,16 @@ sous_titre: "Une forêt qu'on n'entre pas, un engagement écrit, une veille disc
 resume: "Au bord d'une parcelle, un panneau, une clôture basse, un sentier qui s'interrompt. Personne n'y habite — c'est l'engagement. Cet article ouvre la revue : il décrit le geste, ses outils juridiques, et ce qui le distingue, sans le hiérarchiser, de la libération-habitat recensée par l'annuaire principal."
 auteur: Eozen
 created: 2026-05-28
-updated: 2026-05-28
-version: 2
+updated: 2026-05-31
+version: 3
 statut: vivant
 archetypes:
   - reserve-fondatrice
   - foret-en-libre-evolution-contractuelle
 changelog:
+  - date: 2026-05-31
+    version: 3
+    note: "Dégraissage léger : suppression du double renvoi à la vigilance (la revue regardera les veilleurs), détail des protocoles d'exception fondu dans la question de clôture."
   - date: 2026-05-28
     version: 2
     note: "Réécriture en voix incarnée — version courte et concrète."
@@ -100,10 +103,8 @@ sénescence, un signalement d'intrusion qu'on instruit, un panneau qu'on
 remet d'aplomb. Rien d'héroïque. Une présence discrète, statutaire, parfois
 fiduciaire, qui garantit que l'absence promise reste l'absence effective.
 
-La revue regardera aussi cette présence-là — ses budgets, ses protocoles
-d'exception (que fait-on en cas d'incendie, d'espèce invasive, d'urgence
-sanitaire ?), ses limites. Le retrait n'est pas un abandon. C'est une autre
-forme de soin, qui demande qu'on veille sans habiter.
+Le retrait n'est pas un abandon : c'est une autre forme de soin, qui demande
+qu'on veille sans habiter.
 
 ## L'autre voie — habiter
 
@@ -155,7 +156,8 @@ nommés dans le manifeste : la *réserve fondatrice*, la *forêt en libre
 
 Une question circulera à travers tous ces cas, qu'il vaut mieux nommer
 maintenant : que reste-t-il de responsabilité humaine au temps du retrait ?
-Veiller, garantir, prévenir l'intrusion, financer la vigilance — ce sont
+Veiller, garantir, prévenir l'intrusion, financer la vigilance, décider quoi
+faire en cas d'incendie, d'espèce invasive ou d'urgence sanitaire — ce sont
 encore des gestes humains, et la revue les regardera autant que les forêts
 elles-mêmes.
 
