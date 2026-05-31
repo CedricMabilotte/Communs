@@ -3397,9 +3397,7 @@ def render_index(all_sc, cfg, n_by_cat):
     _verd = _Counter((s.get("verdict") or "a_etablir")
                      for f, s in all_sc if f["categorie"] == "lieu")
     n_lieux = n_by_cat["lieu"]
-    n_marchand = _verd.get("marchand", 0)
     n_hybride = _verd.get("hybride", 0)
-    n_sanctuaire = _verd.get("sanctuaire", 0)
 
     def _intention(titre, texte, liens):
         ls = " · ".join(f'<a href="{h}">{e(t)}</a>' for t, h in liens)
@@ -3527,20 +3525,20 @@ def render_index(all_sc, cfg, n_by_cat):
 <section class="chiffres corpus">
   <h2 class="sec">État du corpus</h2>
   <div class="stat-grid">
-    <div class="stat"><span class="stat-n">{n_lieux}</span>
+    <div class="stat"><span class="stat-n">{n_by_cat['lieu']}</span>
       <span class="stat-l">lieux recensés</span></div>
-    <div class="stat"><span class="stat-n">{n_marchand}</span>
-      <span class="stat-l">fausses libérations démasquées (la terre y reste captable par le marché)</span></div>
-    <div class="stat"><span class="stat-n">{n_sanctuaire}</span>
-      <span class="stat-l">aucune libération pleinement aboutie : le sommet reste un horizon</span></div>
+    <div class="stat"><span class="stat-n">{n_by_cat['usufruitier']}</span>
+      <span class="stat-l">organismes usufruitiers</span></div>
+    <div class="stat"><span class="stat-n">{n_by_cat['porteur']}</span>
+      <span class="stat-l">porteurs de nue-propriété</span></div>
+    <div class="stat"><span class="stat-n">{n_by_cat['reseau']}</span>
+      <span class="stat-l">réseaux</span></div>
   </div>
   <p class="lead">La plupart des lieux sont des montages <strong>hybrides</strong>
   ({n_hybride}) : des communs juridiquement solides, mais qu'un maillon, un usage
-  rémunéré ou une condition encore non établie tient à distance du sommet. Le
-  sommet n'est pas une case à remplir — c'est un horizon.</p>
-  <p class="lead">L'annuaire compte aussi {n_by_cat['porteur']} porteurs et
-  {n_by_cat['usufruitier']} usufruitiers notés — hors modèles voisins de
-  référence. Répartition de toutes les entrées notées par palier d'Indice :</p>
+  rémunéré ou une condition encore non établie tient à distance du sommet — un
+  horizon, non une case à remplir. Répartition de toutes les entrées notées par
+  palier d'Indice :</p>
   {hist}
 </section>
 
