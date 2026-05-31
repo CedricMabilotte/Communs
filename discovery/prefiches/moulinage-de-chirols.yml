@@ -1,0 +1,58 @@
+categorie: lieu
+slug: moulinage-de-chirols
+nom: "Le Moulinage de Chirols"
+statut_fiche: prefiche
+_source_lead: discovery/leads/moulinage-de-chirols.md
+_genere_le: '2026-05-31'
+_score_cumule: 0
+_promotion: "manuelle (opérateur) — passe de qualification lot Bascule, 2026-05-31"
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: true
+  siren: true
+  geoportail_localisable: true
+localisation:
+  commune: "Chirols"
+  departement: "Ardèche (07)"
+  region: "Auvergne-Rhône-Alpes"
+  code_postal: "07380"
+entites_pressenties:
+  - nom: "SCIC du Moulinage de Chirols"
+    forme: scic_sas_capital_variable
+    siren: "845026277"
+    role: porteur_et_usage
+  - nom: "Association (vie culturelle du lieu)"
+    forme: association_loi_1901
+    siren: null
+    role: animation
+montage:
+  type: propriete_collective   # SCIC propriétaire, propriété d'usage non spéculative
+  articulations:
+    - usufruitier: _a_qualifier_scic-moulinage-de-chirols
+      titre: propriete_usage_parts
+  description: >
+    Ancien moulinage de soie (~4 500 m²) racheté en mai 2019 par une SCIC SAS à
+    capital variable. Accès à l'habitat par souscription de parts sociales + droit
+    d'usage (parts non spéculatives, pas de lots privatifs aliénables) : propriété
+    d'usage coopérative, foncier soustrait au marché par la forme SCIC.
+chaine:
+  porteurs:
+    - _a_qualifier_scic-moulinage-de-chirols
+  usufruitiers:
+    - _a_qualifier_scic-moulinage-de-chirols
+sources_veille:
+  - source: qualification-bascule-2026-05-31
+    url: https://annuaire-entreprises.data.gouv.fr/entreprise/845026277
+    date: '2026-05-31'
+    score: 0
+note_genese: >
+  Promu en pré-fiche par l'opérateur (passe de qualification lot Bascule,
+  31 mai 2026). Verdict de lead : DANS LE PÉRIMÈTRE — mécanisme foncier formalisé
+  (SCIC en propriété d'usage). Deux réserves à trancher avant fiche : (1) le bien
+  est un BÂTI INDUSTRIEL (moulinage), non une terre agricole/naturelle — relève-
+  t-il de « terres libérées » ou d'une catégorie « tiers-lieux bâtis » à part ?
+  (2) place du vivant non-humain non documentée. Habitat humain permanent ≈30
+  résidents (en cours). Seul lien attesté : accompagnement par la Coopérative
+  Oasis ; aucun lien formel avec la Bascule Argoat.

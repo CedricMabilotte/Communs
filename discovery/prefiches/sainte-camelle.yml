@@ -1,0 +1,64 @@
+categorie: lieu
+slug: sainte-camelle
+nom: "Écovillage de Sainte Camelle"
+statut_fiche: prefiche
+_source_lead: discovery/leads/sainte-camelle.md
+_genere_le: '2026-05-31'
+_score_cumule: 0
+_promotion: "manuelle (opérateur) — passe de qualification lot Bascule, 2026-05-31"
+_reserve_eligibilite: >
+  Verdict de lead : HORS PÉRIMÈTRE en l'état — foncier porté par une SCI
+  classique (parts cessibles), aucun mécanisme d'inaliénabilité documenté.
+  Pré-fiche créée sur décision de l'opérateur ; statuts de la SCI à consulter
+  pour trancher (clause anti-spéculative éventuelle ?).
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: false
+  siren: true
+  geoportail_localisable: true
+localisation:
+  commune: "Saint-Victor-Rouzaud"
+  lieu_dit: "Sainte Camelle"
+  departement: "Ariège (09)"
+  region: "Occitanie"
+  code_postal: "09100"
+  note: "La piste « Aude » de la graine était erronée — le lieu est en Ariège."
+entites_pressenties:
+  - nom: "SCI (portage du foncier)"
+    forme: societe_civile_immobiliere
+    siren: null
+    role: porteur_foncier
+  - nom: "Association (vie collective)"
+    forme: association_loi_1901
+    siren: "827466954"
+    rna: "W092001660"
+    role: animation_usage
+echelle:
+  surface: "~18 ha"
+  habitants: "~15-20"
+montage:
+  type: null   # SCI classique — à arbitrer ; pas d'inaliénabilité documentée
+  articulations: []
+  description: >
+    Hameau ariégeois reconverti en écovillage depuis 2011 (~18 ha, ~15-20
+    habitant·es). Foncier porté par une SCI classique (parts cessibles) doublée
+    d'une association pour la vie collective. Aucun mécanisme d'inaliénabilité ni
+    clause anti-spéculative documenté publiquement ; statuts non consultables.
+chaine:
+  porteurs:
+    - _a_qualifier_sci-sainte-camelle
+  usufruitiers:
+    - _a_qualifier_association_sainte-camelle
+sources_veille:
+  - source: qualification-bascule-2026-05-31
+    url: https://annuaire-entreprises.data.gouv.fr/entreprise/827466954
+    date: '2026-05-31'
+    score: 0
+note_genese: >
+  Promu en pré-fiche par l'opérateur malgré un verdict de lead HORS PÉRIMÈTRE
+  (passe de qualification lot Bascule, 31 mai 2026). À lever en second tour : les
+  statuts de la SCI portent-ils une clause d'inaliénabilité / anti-spéculative
+  qui sortirait le foncier du marché ? Sans cela, montage de propriété civile
+  classique, hors corpus. Aucun lien formel documenté avec la Bascule.

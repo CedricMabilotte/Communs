@@ -1,0 +1,57 @@
+categorie: lieu
+slug: viel-audon
+nom: "Le Viel Audon"
+statut_fiche: prefiche
+_source_lead: discovery/leads/viel-audon.md
+_genere_le: '2026-05-31'
+_score_cumule: 0
+_promotion: "manuelle (opérateur) — passe de qualification lot Bascule, 2026-05-31"
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: true
+  siren: true
+  geoportail_localisable: true
+localisation:
+  commune: "Balazuc"
+  departement: "Ardèche (07)"
+  region: "Auvergne-Rhône-Alpes"
+  code_postal: "07120"
+entites_pressenties:
+  - nom: "Le Mat Ardèche"
+    forme: association_loi_1901
+    siren: "329142152"
+    role: usufruitier_pressenti
+  - nom: "SCEA Le Vieil Audon"
+    forme: societe_civile_exploitation_agricole
+    siren: "382332161"
+    role: exploitation_terres
+montage:
+  type: propriete_protegee   # bail emphytéotique 99 ans — à confirmer
+  articulations:
+    - usufruitier: _a_qualifier_le-mat-ardeche
+      titre: bail_emphyteotique
+      duree: "99 ans"
+  description: >
+    Ruines acquises par les fondateurs dans les années 1970, puis site confié à
+    l'association Le Mat par un bail emphytéotique de 99 ans (recoupé par trois
+    sources). Les terres agricoles sont portées par la SCEA Le Vieil Audon.
+chaine:
+  porteurs:
+    - _a_qualifier_proprietaire_tréfonds
+  usufruitiers:
+    - _a_qualifier_le-mat-ardeche
+sources_veille:
+  - source: qualification-bascule-2026-05-31
+    url: https://www.levielaudon.org/
+    date: '2026-05-31'
+    score: 0
+note_genese: >
+  Promu en pré-fiche par l'opérateur après la passe de qualification du lot
+  « Bascule Argoat et projets amis » (31 mai 2026). Verdict de lead : DANS LE
+  PÉRIMÈTRE (hybride pressenti) — le seul du lot, avec Chirols, doté d'un
+  mécanisme foncier formalisé. Points à lever avant promotion en fiche :
+  (1) identité du propriétaire/bailleur du tréfonds (qui consent le bail
+  emphytéotique ?) ; (2) degré de sanctuarisation du vivant non-humain.
+  Aucun lien partenarial formel documenté avec la Bascule Argoat.

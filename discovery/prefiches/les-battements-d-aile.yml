@@ -1,0 +1,58 @@
+categorie: lieu
+slug: les-battements-d-aile
+nom: "Le Battement d'Ailes"
+statut_fiche: prefiche
+_source_lead: discovery/leads/les-battements-d-aile.md
+_genere_le: '2026-05-31'
+_score_cumule: 0
+_promotion: "manuelle (opérateur) — passe de qualification lot Bascule, 2026-05-31"
+_reserve_eligibilite: >
+  Verdict de lead : HORS PÉRIMÈTRE en l'état — aucun mécanisme foncier
+  d'inaliénabilité documenté. Pré-fiche créée sur décision de l'opérateur ;
+  l'éligibilité reste à établir (cf. montage à qualifier).
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: false
+  siren: true
+  geoportail_localisable: true
+localisation:
+  commune: "Cornil"
+  lieu_dit: "Lauconie"
+  departement: "Corrèze (19)"
+  region: "Nouvelle-Aquitaine"
+  code_postal: "19150"
+entites_pressenties:
+  - nom: "Le Battement d'Ailes"
+    forme: association_loi_1901
+    siren: "483689253"
+    annee_creation: 2005
+    role: porteur_usage_pressenti
+echelle:
+  surface: "~5 ha"
+montage:
+  type: null   # à arbitrer — propriété/portage du foncier non documenté
+  articulations: []
+  description: >
+    Centre d'agroécologie et de culture autogéré (~5 ha) porté par une association
+    loi 1901 (2005). Aucun mécanisme formalisé d'inaliénabilité documenté
+    (ni démembrement, ni bail emphytéotique, ni foncière solidaire/Terre de Liens
+    comme portage). Propriétaire exact des terres et du bâti : à confirmer.
+chaine:
+  porteurs:
+    - _a_qualifier_proprietaire_foncier
+  usufruitiers:
+    - _a_qualifier_association_battement-d-ailes
+sources_veille:
+  - source: qualification-bascule-2026-05-31
+    url: https://annuaire-entreprises.data.gouv.fr/entreprise/483689253
+    date: '2026-05-31'
+    score: 0
+note_genese: >
+  Promu en pré-fiche par l'opérateur malgré un verdict de lead HORS PÉRIMÈTRE
+  (passe de qualification lot Bascule, 31 mai 2026). À instruire en second tour :
+  qui possède les 5 ha + le bâti, par quel acte, avec ou sans verrou
+  d'inaliénabilité ? L'habitat permanent du vivant n'est pas établi (accueil
+  temporaire dominant). La réorganisation « & Co » (2020-2024) pourrait déboucher
+  sur un acte foncier — à vérifier. Aucun lien formel documenté avec la Bascule.
