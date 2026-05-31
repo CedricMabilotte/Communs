@@ -623,13 +623,14 @@ NAV = [
     ("index.html", "Accueil"),
     ("carte.html", "Carte"),
     ("dossiers/index.html", "Dossiers"),
-    ("annuaire.html", "Annuaire"),
+    ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
 ]
-# Pages dont l'onglet actif est « Annuaire » (vues et catalogues du hub).
-ANNUAIRE_PAGES = {"lieux.html", "porteurs.html", "usufruitiers.html",
-                  "modeles.html", "reseaux.html", "classement.html",
-                  "annuaire.html"}
+# Pages-catalogues dont l'onglet actif est « Classement » (le classement réunit
+# toutes les entrées ; les catalogues par rôle restent accessibles via le pied
+# de page). L'ancien hub « Annuaire » a été retiré (#11).
+CATALOGUE_PAGES = {"lieux.html", "porteurs.html", "usufruitiers.html",
+                   "modeles.html", "reseaux.html", "classement.html"}
 
 # URL canonique de base (sans barre oblique finale). Lue depuis concepts.yml.
 BASE_URL = "https://communs.actitude.org"
@@ -650,8 +651,8 @@ def page(title, body, active, depth=0, project=None, description="",
     # (audit pédagogie C, C1). Désactivé sur le glossaire lui-même.
     if link_gloss:
         body = link_glossary(body, up)
-    # une page-catalogue (lieux, porteurs…) allume l'onglet « Annuaire »
-    active_nav = "annuaire.html" if active in ANNUAIRE_PAGES else active
+    # une page-catalogue (lieux, porteurs…) allume l'onglet « Classement »
+    active_nav = "classement.html" if active in CATALOGUE_PAGES else active
     nav_items = []
     for href, label in NAV:
         classes = []
@@ -731,7 +732,6 @@ def page(title, body, active, depth=0, project=None, description="",
     <a href="{up}glossaire.html">Glossaire</a> ·
     <a href="{up}themes.html">Thèmes</a></p>
     <p class="foot-links"><strong>Explorer</strong> ·
-    <a href="{up}annuaire.html">Annuaire</a> ·
     <a href="{up}carte.html">Carte</a> ·
     <a href="{up}lieux.html">Lieux</a> ·
     <a href="{up}porteurs.html">Porteurs</a> ·
@@ -3575,77 +3575,6 @@ def render_index(all_sc, cfg, n_by_cat):
                 description=site_desc, path="index.html", jsonld=[website])
 
 
-def render_annuaire(cfg, n_by_cat):
-    """Hub de l'annuaire documentaire — réunit les vues (liste, carte, classement)
-    et les catalogues d'acteurs (porteurs, usufruitiers, réseaux, modèles)."""
-    project = cfg["concepts"]["project"]
-
-    def start(href, titre, n_label, texte):
-        return (f'<a class="start-card" href="{href}"><h3>{e(titre)}</h3>'
-                f'<p>{e(texte)}</p><span class="cat-n">{e(n_label)} →</span></a>')
-
-    def acteur(href, titre, n_label, texte):
-        return (f'<a class="cat-card" href="{href}"><h3>{e(titre)}</h3>'
-                f'<p>{e(texte)}</p><span class="cat-n">{e(n_label)} →</span></a>')
-
-    commencer = "".join([
-        start("carte.html", "Sur la carte", "vue cartographique",
-              "Les lieux géolocalisés, colorés par verdict, à parcourir d'un coup d'œil."),
-        start("lieux.html", "La liste des lieux",
-              f"{n_by_cat['lieu']} lieux",
-              "Le catalogue complet, filtrable et trié."),
-        start("classement.html", "Le classement", "par Indice",
-              "Le rangement par Indice de libération, du plus abouti au plus éloigné."),
-    ])
-    acteurs = "".join([
-        acteur("porteurs.html", "Porteurs de nue-propriété",
-               f"{n_by_cat['porteur']} porteurs",
-               "Les organismes qui détiennent le foncier et le tiennent hors-marché."),
-        acteur("usufruitiers.html", "Organismes usufruitiers",
-               f"{n_by_cat['usufruitier']} usufruitiers",
-               "Les collectifs qui reçoivent l'usage et font vivre les lieux."),
-        acteur("reseaux.html", "Réseaux",
-               f"{n_by_cat['reseau']} réseaux",
-               "Les fédérations et faîtières qui relient porteurs et lieux."),
-        acteur("modeles.html", "Modèles voisins",
-               f"{n_by_cat['modele']} modèles",
-               "Des dispositifs proches, français et étrangers, pris comme repères."),
-    ])
-    body = f"""<section class="hero hero-compact">
-  <p class="hero-kicker">L'annuaire documentaire</p>
-  <h1>Annuaire</h1>
-  <p class="hero-lead">Tout ce que recense le projet : les lieux, leurs porteurs et
-  usufruitiers, les réseaux qui les relient. Plusieurs manières d'entrer dans une
-  même matière.</p>
-</section>
-
-<section class="commencer">
-  <h2 class="sec">Commencer ici</h2>
-  <div class="start-grid">{commencer}</div>
-</section>
-
-<section>
-  <details class="acteurs-fold">
-    <summary class="sec">Explorer par acteur <span class="fold-hint">— porteurs, usufruitiers, réseaux, modèles</span></summary>
-    <p class="lead">Les lieux sont tenus par des acteurs aux rôles distincts ; on
-    peut aussi entrer par eux. Tous traités à barème égal avec les lieux.</p>
-    <div class="cat-cards">{acteurs}</div>
-  </details>
-</section>
-
-<p class="prose">Le récit de certains lieux est développé dans les
-<a href="dossiers/index.html">Dossiers</a> ; la lecture qui sous-tend les notes
-est exposée dans la <a href="methode.html">Méthode</a>.</p>"""
-    return page("Annuaire", body, "annuaire.html", project=project,
-                description="L'annuaire documentaire de Terres Libérées — lieux, "
-                            "porteurs, usufruitiers, réseaux et modèles voisins.",
-                path="annuaire.html")
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Page — proposer un lieu
-# ─────────────────────────────────────────────────────────────────────────────
-
 def render_suggerer(cfg):
     project = cfg["concepts"]["project"]
     body = """<h1>Proposer un lieu</h1>
@@ -5863,7 +5792,6 @@ def main():
 
     # pages transverses
     write(SITE / "index.html", render_index(all_sc, cfg, n_by_cat))
-    write(SITE / "annuaire.html", render_annuaire(cfg, n_by_cat))
     write(SITE / "classement.html", render_classement(all_sc, cfg))
     write(SITE / "carte.html", render_carte(all_sc, cfg, by_uid))
     write(SITE / "regimes.html", render_regimes(cfg))
@@ -5912,7 +5840,7 @@ def main():
     sitemap_paths = [("index.html", "1.0")]
     for cat in ("lieu", "porteur", "usufruitier", "modele", "reseau"):
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
-    for p in ("annuaire.html", "classement.html", "carte.html", "regimes.html",
+    for p in ("classement.html", "carte.html", "regimes.html",
               "grilles.html", "methode.html", "themes.html", "comparer.html",
               "glossaire.html", "suggerer.html"):
         sitemap_paths.append((p, "0.6"))
