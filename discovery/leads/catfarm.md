@@ -261,3 +261,7 @@ habitants* plus que d'un partenariat institutionnel.
   Europe) — premières mentions repérées sur ecovillage.org et la
   base habitat participatif & oasis, mais sans contractualisation
   juridique documentée.
+
+
+## Re-pointage opérateur — 31 mai 2026
+Re-signalé par l'opérateur comme **tête du lot « Bascule Argoat et ses projets amis »** à (re)qualifier : Catfarm, Égrégore, Sainte-Camelle, Les Battements d'Aile, Clips, Le Moulinage de Chirols, Le Viel Audon. À reprendre ensemble lors d'une passe de qualification dédiée.

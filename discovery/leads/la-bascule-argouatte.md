@@ -287,3 +287,7 @@ mérite un signal séparé : elle place l'archipel La Bascule dans la
 sphère d'influence d'un acteur (Colibris) connu pour son rôle de
 fédération souple, plus que pour des montages fonciers libérés au sens
 strict.
+
+
+## Re-pointage opérateur — 31 mai 2026
+Re-signalé par l'opérateur comme **tête du lot « Bascule Argoat et ses projets amis »** à (re)qualifier : Catfarm, Égrégore, Sainte-Camelle, Les Battements d'Aile, Clips, Le Moulinage de Chirols, Le Viel Audon. À reprendre ensemble lors d'une passe de qualification dédiée.
