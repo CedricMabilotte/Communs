@@ -19,9 +19,14 @@ resume: >
   Mayer pour le Progrès de l'Homme (FPH) détient le foncier — en polyculture-élevage
   biologique : bovins, ovins, céréales, légumineuses, boulange. Olivier Ranke a
   repris la ferme en 1995 et conduit la transition agroécologique du domaine.
-  L'EARL est le maillon exploitant du site ; elle est lucrative pour ses
-  associé·es (appropriation du bénéfice d'exploitation), sans détenir le foncier,
-  porté par une fondation non lucrative.
+  Elle exploite le domaine via un commodat (prêt à usage gratuit, dit « bail à
+  commodat ») : mise à disposition gratuite des terres et des infrastructures
+  consentie en 2006 pour 25 ans, sous condition de respecter une charte
+  agroécologique stricte (agriculture biologique, certification Nature et
+  Progrès) ; depuis 2006, l'EARL est indépendante de la fondation sur les plans
+  décisionnel et économique. L'EARL est le maillon exploitant du site ; elle est
+  lucrative pour ses associé·es (appropriation du bénéfice d'exploitation), sans
+  détenir le foncier, porté par une fondation non lucrative.
 montage:
   type: propriete_protegee
   nu_proprietaire: "Fondation Charles Léopold Mayer pour le Progrès de l'Homme (FPH)"
@@ -29,18 +34,23 @@ montage:
   description: >
     La propriété du domaine est portée par la FPH, fondation non lucrative.
     L'usage agricole — environ 370 hectares — est confié à l'EARL du Chemin Neuf,
-    qui exploite la ferme en agroécologie. La nature exacte du titre liant l'EARL
-    à la fondation (bail rural, convention, autorisation d'exploiter) n'est pas
-    documentée publiquement : l'EARL est clairement exploitante tierce et non
-    détentrice du foncier, mais la sécurité juridique de sa jouissance n'est pas
-    établie par les sources.
+    qui exploite la ferme en agroécologie. Le titre liant l'EARL à la fondation
+    est établi : un commodat (prêt à usage gratuit) consenti en 2006 pour 25 ans,
+    mise à disposition gratuite des terres et des infrastructures sous charte
+    agroécologique stricte. L'EARL est preneuse, non détentrice, du foncier, sans
+    verser de loyer rentier ; sa jouissance est durable (horizon 25 ans) mais
+    juridiquement plus précaire qu'un bail rural — le commodat n'ouvre pas le
+    droit au renouvellement d'ordre public du statut du fermage.
 integrite_montage:
   niveau: mutualisme
   commentaire: >
     L'usufruitier est une société civile à capital — EARL — exploitant la ferme
     pour le compte de ses associé·es ; sa lucrativité n'est pas verrouillée par
     des statuts non lucratifs et le bénéfice de l'exploitation se concentre sur
-    ses associé·es. Le foncier reste hors de sa main, chez la fondation.
+    ses associé·es. Le foncier reste hors de sa main, chez la fondation, et lui
+    est confié par un commodat gratuit sous charte agroécologique : preneuse sous
+    porteur hors-marché, elle relève d'une société civile d'exploitation agricole
+    (nature_interet), non d'une logique commerciale de marché.
 grille:
   - critere: non_appropriation
     valeur: oui
@@ -76,20 +86,20 @@ grille:
     valeur: partiel
     note: "La ferme accueille du public (vente, visites, rôle de centre technique de l'agriculture biologique), mais l'exploitation profite d'abord à ses associé·es."
   - critere: duree_usage
-    valeur: inconnu
-    note: "La nature et la durée du titre d'usage de l'EARL sur le domaine (bail rural, convention) ne sont pas documentées par les sources."
-  - critere: clauses_usage
-    valeur: inconnu
-    note: "L'existence de clauses environnementales ou d'usage formalisées dans le titre liant l'EARL et la fondation n'est pas documentée."
-  - critere: articulation_porteur
     valeur: partiel
-    note: "L'EARL exploite un foncier détenu par la FPH, mais la nature exacte de l'acte qui les lie n'est pas documentée par les sources."
+    note: "Le titre est un commodat (prêt à usage gratuit) consenti en 2006 pour 25 ans. Horizon long, mais durée fixe sans droit au renouvellement d'ordre public (à la différence d'un bail rural) : reconduction au-delà de 2031 non documentée."
+  - critere: clauses_usage
+    valeur: oui
+    note: "Le commodat est assorti d'une charte agroécologique stricte : engagement en agriculture biologique, certification Nature et Progrès. Des clauses d'usage environnementales encadrent donc effectivement l'exploitation."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'EARL exploite un foncier détenu par la FPH via un commodat (prêt à usage gratuit, 25 ans) : l'acte qui les lie est établi par les sources, même si son texte intégral n'est pas publié."
   - critere: regime_usage_non_marchand
     valeur: non
     note: "L'usage que fait vivre l'EARL repose sur la production agricole vendue (viande, farines, pain, légumineuses) : il relève d'une logique marchande."
   - critere: loyer_soutenable
-    valeur: inconnu
-    note: "L'existence et le niveau d'un loyer ou d'une redevance versé à la fondation ne sont pas documentés par les sources."
+    valeur: oui
+    note: "Le commodat est par nature gratuit (art. 1875 C. civ.) : l'EARL ne verse pas de loyer à la fondation pour les terres et infrastructures. L'existence d'un éventuel forfait de charges n'est pas documentée."
   - critere: vivant_finalite
     valeur: partiel
     note: "L'EARL conduit une agroécologie de longue date (replantation de haies, agroforesterie) servant la biodiversité ; sa finalité reste néanmoins l'exploitation agricole, non la protection de la nature comme telle."
@@ -101,18 +111,22 @@ analyse:
   fragilites:
     - "EARL : société civile à capital lucratif, sans verrou de non-lucrativité ni clause de dévolution désintéressée."
     - "Parts sociales cessibles ; bénéfice de l'exploitation concentré sur les associé·es."
-    - "Nature et durée du titre d'usage liant l'EARL à la fondation non documentées : sécurité de jouissance non établie."
+    - "Titre d'usage par commodat : gratuit et long (25 ans), mais plus précaire qu'un bail rural — pas de renouvellement d'ordre public ; reconduction au-delà de 2031 non documentée."
   leviers:
-    - "Documenter et publier l'acte d'usage (bail rural environnemental ou convention) liant l'EARL à la fondation."
-    - "Formaliser une jouissance longue et des clauses environnementales opposables."
+    - "Publier l'acte de commodat (clauses, reconduction au-delà de 2031)."
+    - "Sécuriser davantage la jouissance par un bail rural environnemental ou un usufruit ouvrant un droit au renouvellement."
     - "Documenter le fonctionnement interne, les comptes et l'ouverture à de nouveaux·elles associé·es."
   synthese: >
     L'EARL du Chemin Neuf est le maillon exploitant de Villarceaux : une société
     civile agricole qui conduit, de longue date et en agroécologie, l'exploitation
-    d'un domaine dont la fondation porte le foncier. Solide sur la conduite
-    agroécologique et l'absence de détention du sol, elle reste, par sa nature de
-    société civile à capital lucratif et faute de titre d'usage documenté, un
-    maillon à intérêt privé qui plafonne le lieu sous le sommet du commun.
+    d'un domaine dont la fondation porte le foncier. Elle est preneuse d'un
+    commodat — prêt à usage gratuit consenti en 2006 pour 25 ans sous charte
+    agroécologique stricte —, sans détenir le sol ni verser de loyer rentier :
+    une société civile d'exploitation agricole sous porteur hors-marché, non
+    commerciale au sens du marché. Sa lucrativité pour ses associé·es
+    (appropriation du bénéfice d'exploitation) et la précarité relative du
+    commodat (face à un bail rural) la maintiennent comme maillon à intérêt privé
+    encadré, qui plafonne le lieu au degré hybride, sous le sommet du commun.
 fiabilite: >
   Faits vérifiés (sources : site de la Bergerie de Villarceaux, registre des
   entreprises, presse, consultés en juin 2026) : EARL du Chemin Neuf immatriculée
@@ -120,9 +134,16 @@ fiabilite: >
   par Olivier Ranke, exploitation d'environ 370 hectares en polyculture-élevage
   biologique (bovins, ovins, céréales, légumineuses, boulange), reprise de la
   ferme en 1995 et conduite de la transition agroécologique du domaine de
-  Villarceaux. Non confirmé : nature et durée exactes du titre d'usage liant
-  l'EARL à la Fondation Charles Léopold Mayer, montant d'un éventuel loyer,
-  comptes de la société, modalités internes de gouvernance.
+  Villarceaux. Titre d'usage établi par recoupement de sources concordantes (site
+  officiel de la Bergerie, FPH, Pollinis, ARC2020 / resilience.org, article INRA
+  2014) : commodat (prêt à usage gratuit, « bail à commodat »), mise à disposition
+  gratuite des terres et infrastructures consentie en 2006 pour 25 ans sous charte
+  agroécologique stricte (bio, Nature et Progrès) ; EARL indépendante de la
+  fondation sur les plans décisionnel et économique depuis 2006. Pièces lues :
+  extraits secondaires concordants — l'acte primaire de commodat n'a pas été lu
+  (non publié). Non confirmé : clauses exactes et reconduction du commodat au-delà
+  de 2031, existence d'un forfait de charges, comptes de la société, modalités
+  internes de gouvernance.
 voir_aussi: [fondation-fph, ecosite-villarceaux]
 dossier:
   identite:
@@ -141,15 +162,21 @@ dossier:
     - type: charte
       statut: inconnu
     - type: acte_montage
-      statut: inconnu
-      note: "Nature exacte de l'acte liant l'EARL à la Fondation Charles Léopold Mayer non documentée."
+      statut: partiel
+      note: "Acte établi par les sources : commodat (prêt à usage gratuit) consenti en 2006 pour 25 ans, sous charte agroécologique. Texte intégral non publié."
     - type: rapport_financier
       statut: inconnu
     - type: bail
-      statut: inconnu
-      note: "Nature et durée du titre d'usage de l'EARL sur le domaine non documentées."
+      statut: partiel
+      note: "Pas un bail au sens strict mais un commodat (prêt à usage gratuit), 25 ans depuis 2006, charte agroécologique ; reconduction au-delà de 2031 non documentée."
 sources:
   - titre: "La Bergerie de Villarceaux — Nous découvrir"
     url: "https://www.bergerie-villarceaux.org/nous-decouvrir/"
+  - titre: "Bergerie de Villarceaux — L'exploitation agricole (EARL du Chemin Neuf et maraîchage) : « bénéficie d'un bail à commodat »"
+    url: "http://www.bergerie-villarceaux.org/index.php?page=les-exploitations-agricoles-earl-du-chemin-neuf-et-maraichage"
+  - titre: "Pollinis — La bergerie de Villarceaux (commodat ; indépendance EARL/FPH depuis 2006)"
+    url: "https://www.pollinis.org/la-bergerie-de-villarceaux/"
+  - titre: "ARC2020 / Resilience.org — gérant nommé en 2006, accès gratuit aux terres et infrastructures pour 25 ans sous charte agroécologique"
+    url: "https://www.resilience.org/stories/2025-06-19/the-eu-has-the-funds-but-lacks-focus-this-farm-shows-whats-possible-with-both/"
   - titre: "Société EARL DU CHEMIN NEUF — registre des entreprises (Pappers)"
     url: "https://www.pappers.fr/entreprise/earl-du-chemin-neuf-488246521"

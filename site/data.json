@@ -1540,24 +1540,24 @@
     "nom": "Bergerie de Villarceaux",
     "categorie": "lieu",
     "sous_titre": "Domaine agroécologique du Vexin français",
-    "idl": 67,
-    "idl_brut": 79,
-    "idl_intrinseque": 71,
+    "idl": 70,
+    "idl_brut": 78,
+    "idl_intrinseque": 79,
     "score_type": "calcule",
-    "completude": 0.7,
+    "completude": 0.8,
     "axes": {
-      "1": 77,
+      "1": 83,
       "2": 40,
       "3": 100,
       "4": 100,
-      "5": 100
+      "5": 86
     },
     "axes_intrinseques": {
-      "1": 77,
-      "2": 50,
+      "1": 83,
+      "2": 75,
       "3": 100,
       "4": 100,
-      "5": 100
+      "5": 86
     },
     "palier": "solide",
     "palier_label": "Montage solide",
@@ -1828,14 +1828,14 @@
     "nom": "Fondation Charles Léopold Mayer pour le Progrès de l'Homme",
     "categorie": "porteur",
     "sous_titre": "Fondation propriétaire du domaine de Villarceaux",
-    "idl": 38,
-    "idl_brut": 45,
+    "idl": 42,
+    "idl_brut": 50,
     "idl_intrinseque": 45,
     "score_type": "calcule",
     "completude": 0.684,
     "axes": {
       "1": 81,
-      "2": 50,
+      "2": 75,
       "3": 20,
       "4": 50,
       "5": null
@@ -2948,24 +2948,24 @@
     "nom": "EARL du Chemin Neuf",
     "categorie": "usufruitier",
     "sous_titre": "Société agricole d'Olivier Ranke, exploitant la ferme de la Bergerie de Villarceaux",
-    "idl": 35,
-    "idl_brut": 40,
-    "idl_intrinseque": 35,
+    "idl": 49,
+    "idl_brut": 50,
+    "idl_intrinseque": 49,
     "score_type": "calcule",
-    "completude": 0.765,
+    "completude": 0.941,
     "axes": {
       "1": 38,
       "2": 25,
       "3": 75,
       "4": 69,
-      "5": 20
+      "5": 65
     },
     "axes_intrinseques": {
       "1": 38,
       "2": 25,
       "3": 75,
       "4": 69,
-      "5": 20
+      "5": 65
     },
     "palier": "partiel",
     "palier_label": "Libération partielle",
@@ -3012,14 +3012,14 @@
     "nom": "Association Écosite de Villarceaux",
     "categorie": "usufruitier",
     "sous_titre": "Structure d'animation et d'usage du domaine de Villarceaux",
-    "idl": 55,
-    "idl_brut": 69,
+    "idl": 60,
+    "idl_brut": 75,
     "idl_intrinseque": 63,
     "score_type": "calcule",
     "completude": 0.588,
     "axes": {
       "1": 100,
-      "2": 50,
+      "2": 75,
       "3": 70,
       "4": 88,
       "5": 50

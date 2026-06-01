@@ -72,12 +72,28 @@ fiabilite: >
   en fetch direct) : association loi 1901, SIREN 532346822, RNA W751205674,
   siège Paris 75018, création en 2006, inspiration du Mietshäuser Syndikat,
   montage à deux associations avec CLIP second membre et garant de la
-  non-revente, fonds de solidarité alimenté par les loyers. Non confirmé : date
-  exacte d'immatriculation SIRENE par rapport à 2006, nombre exact de lieux
-  (environ dix-sept revendiqués), liste exhaustive des lieux membres, statuts
-  types et clauses de dévolution. Lieux contextuels non confirmés comme membres :
-  La Générale (Paris, a accueilli une assemblée générale du réseau), Quartier
-  Libre des Lentillères (Dijon), Le Sabot — appartenance non établie.
+  non-revente, fonds de solidarité alimenté par les loyers.
+  Mise à jour du 1ᵉʳ juin 2026 : la page « Les lieux »
+  (clip.ouvaton.org/les-projets/) et le PV de l'AG du 29/01/2022
+  (clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf) ont
+  cette fois été LUS directement (curl). La page liste nommément 17 lieux
+  membres : La Porcheritz (28), Les Hautes Planches (61), La Déviation (13),
+  Manifesten (13), Collectif de Kerlano (29), Les Agités du local (24),
+  La Maison Mazette! (72), Le Plat de résistance (79), La Brèche (56),
+  La Dar (13), Kervern (29), L'École bouyssounière (24), Isba (09),
+  L'Atelier Fluo (38), La Chapelle (31), Les Oiseaux de la tempête (35),
+  Bazarrière (69). Le nombre « ~17 » est donc confirmé et la liste exhaustive
+  est désormais connue. Restent non confirmés lieu par lieu : le montage
+  d'achat / l'association propriétaire / les statuts (clause anti-revente et
+  dévolution), et la résidence permanente du vivant (plusieurs membres sont des
+  lieux d'activité urbains — Manifesten, La Dar, L'Atelier Fluo, La Chapelle,
+  Les Oiseaux de la tempête — sans habitat établi). Cas particulier : La Chapelle
+  (Toulouse) combine un bail emphytéotique communal et une inspiration
+  CLIP/Antidote — appartenance de plein droit à clarifier. Lieux mal identifiés
+  (nom + département seulement) : La Brèche (56), Kervern (29), L'École
+  bouyssounière (24), Isba (09). Lieux contextuels non membres : La Générale
+  (Paris, a accueilli une AG), Quartier Libre des Lentillères (Dijon), Le Sabot
+  — appartenance non établie.
 dossier:
   identite:
     siren: "532346822"
@@ -85,13 +101,21 @@ dossier:
     adresse: "Paris 75018"
   echelle:
     personnes: null
-    lieux: "Environ dix-sept lieux revendiqués (à confirmer) ; trois nommés et documentés publiquement"
+    lieux: "Dix-sept lieux membres listés nommément sur clip.ouvaton.org/les-projets/ (page lue directement le 1ᵉʳ juin 2026). Trois sont fichés en corpus (Hautes-Planches, La Porcheritz, La Déviation) ; les 14 autres font l'objet de leads dans discovery/leads/ (rebond CLIP 2026-06-01)."
     surface_ha: null
   pieces:
     - type: presentation
       statut: public
       url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
       note: "Présentation du réseau et du mécanisme de propriété d'usage sur le site officiel."
+    - type: liste_membres
+      statut: public
+      url: "https://clip.ouvaton.org/les-projets/"
+      note: "Page « Les lieux » — liste nommée des 17 lieux membres. Lue directement le 1ᵉʳ juin 2026."
+    - type: pv_ag
+      statut: public
+      url: "https://clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf"
+      note: "PV de l'AG du 29/01/2022 — météo des lieux (La Déviation, La Porcheritz, Manifesten, Kerlano), référents CLIP par lieu, présentation des nouveaux lieux. Lu directement le 1ᵉʳ juin 2026."
     - type: statuts
       statut: inconnu
       note: "Statuts types des associations habitante et propriétaire non tous publiés en ligne ; clauses anti-revente et de dévolution à recouper lieu par lieu."
