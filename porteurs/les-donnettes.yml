@@ -1,0 +1,182 @@
+uid: les-donnettes
+categorie: porteur
+nom: "Les Donnettes"
+sous_titre: "Association propriétaire du foncier des Hautes-Planches, co-membre du réseau CLIP"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Bretoncelles"
+  departement: "Orne (61)"
+  region: "Normandie"
+annee: 2017
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  Les Donnettes est l'association loi 1901 qui détient le foncier des
+  Hautes-Planches, ancien moulin à Bretoncelles dans le Perche ornais. Elle a
+  acheté le corps principal du moulin en octobre 2017 ; une parcelle complémentaire
+  (« du broc ») a ensuite été acquise par financement participatif et chantiers
+  collectifs. L'association ne compte que deux membres : l'association usagère Hautes
+  Planches, qui occupe et gère le lieu, et le réseau CLIP (Collectif pour
+  l'Institutionnalisation de la Propriété d'usage), qui a autorité pour garantir la
+  non-revente. Ce montage à deux associations, propre au réseau CLIP, soustrait le
+  foncier au marché : sur le modèle du Mietshäuser Syndikat allemand, tout lieu du
+  réseau dispose d'un droit de veto sur la mise en marché des autres.
+montage:
+  type: propriete_collective
+  description: >
+    Les Donnettes détient durablement le foncier des Hautes-Planches et le soustrait
+    au marché. L'association est volontairement réduite à deux membres : l'association
+    usagère Hautes Planches, qui occupe et gère le lieu, et le réseau CLIP, qui joue
+    le rôle de garant de la non-revente. Cette composition dédouble la protection :
+    l'association propriétaire est sans capital appropriable, et le réseau CLIP — sur
+    le modèle du Mietshäuser Syndikat — dispose d'un droit de veto sur toute mise en
+    marché du foncier, opposable même à l'association usagère. Le détail des statuts
+    (clause d'inaliénabilité, clause de dévolution) n'est pas documenté par les
+    sources publiques.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, dédiée à la détention du
+    foncier, dont la non-revente est garantie par la présence du réseau CLIP
+    comme second membre et par un droit de veto inter-lieux de type Mietshäuser
+    Syndikat. Inaliénabilité de fait par la nature associative et le mécanisme
+    réseau ; clauses statutaires précises non documentées.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "La non-revente est garantie par un mécanisme documenté : au sein de la personne morale propriétaire, CLIP (collectif de veille) intervient par un droit de veto sur toutes les décisions touchant la propriété — modification des statuts, vente, hypothèque ; tout retour d'un bien sur le marché par un collectif usager est en outre soumis à l'approbation de l'ensemble des collectifs CLIP, chacun disposant d'un veto (source : CLIP, « Qu'est-ce que le CLIP »). L'inscription d'une clause statutaire d'inaliénabilité dans les statuts propres de Les Donnettes n'est pas publiée."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "L'association loi 1901 n'a ni capital ni parts sociales appropriables : aucun titre cessible, donc aucune captation possible de la valeur foncière."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "L'association loi 1901 est une personne morale non lucrative, mais elle se situe en dessous de la fondation reconnue d'utilité publique et de la personne publique sur l'échelle de protection foncière ; la garantie réseau CLIP renforce toutefois la protection."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence et le contenu d'une clause de dévolution désintéressée dans les statuts de l'association ne sont pas documentés par les sources."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "L'association loi 1901 est une forme structurellement non lucrative, sans parts sociales ni capital rémunéré."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association sans capital appropriable ne distribue ni dividende, ni intérêt, ni plus-value : le foncier ne peut être capté à titre privé."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "Le caractère désintéressé de la gestion et l'éventuelle rémunération de dirigeant·es ne sont pas documentés par les sources ; la finalité de détention foncière hors marché le suggère sans le confirmer."
+  - critere: independance_rendement
+    valeur: oui
+    note: "L'association ne réunit pas d'investisseur·euses attendant une plus-value : le foncier a été acquis par achat puis financement participatif et chantiers collectifs, sans logique de rendement."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La composition et le fonctionnement de l'organe de direction de l'association — réduite à deux membres, Hautes Planches et CLIP — ne sont pas documentés par les sources."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "L'association propriétaire associe l'association usagère Hautes Planches et le réseau CLIP comme ses deux seuls membres : usager·es et garant réseau sont parties prenantes de la détention foncière."
+  - critere: autogestion_usagers
+    valeur: partiel
+    note: "L'association usagère Hautes Planches, qui regroupe les usager·es du lieu, est l'un des deux membres de l'association propriétaire ; la portée délibérative exacte de cette voix face au veto de CLIP n'est pas documentée."
+  - critere: transparence
+    valeur: inconnu
+    note: "La publication régulière des comptes et de l'activité de l'association n'est pas documentée par les sources consultées."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "Dans le montage CLIP, la structure « propriétaire » est créée par l'association habitante pour acheter et détenir le bien hors marché, avec CLIP pour unique autre membre (source : CLIP, « Qu'est-ce que le CLIP ») : la fonction protectrice de Les Donnettes est documentée par sa place dans ce schéma. L'objet inscrit dans ses statuts propres n'est pas publié."
+  - critere: agrement_ig
+    valeur: non
+    note: "Aucune reconnaissance d'utilité publique ni agrément d'intérêt général n'est documenté pour l'association."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de l'association à un risque de requalification fiscale n'est pas documentée par les sources."
+  - critere: redevabilite_publique
+    valeur: inconnu
+    note: "Une reddition de comptes de l'association au-delà de ses deux membres n'est pas documentée par les sources."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "L'objet de l'association et la place éventuelle d'une finalité de préservation du vivant non-humain ne sont pas documentés par les sources."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Dans le montage type CLIP, l'association propriétaire confie l'usage à l'association usagère par une relation de location : l'usagère verse des loyers qui remboursent l'emprunt d'achat et alimentent un fonds solidaire d'aide à d'autres projets CLIP (source : CLIP, « Qu'est-ce que le CLIP »). Le régime est donc un loyer non rentier ; le montant pratiqué pour les Hautes-Planches n'est pas documenté."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "L'association usagère est locataire de l'association propriétaire dont elle est elle-même membre fondatrice (source : CLIP, « Qu'est-ce que le CLIP ») : la sécurité d'usage tient à cette appartenance croisée et à l'impossibilité de revente garantie par le veto réseau. La durée et la forme précises du titre accordé pour les Hautes-Planches ne sont pas publiées."
+analyse:
+  forces:
+    - "Association loi 1901 sans capital appropriable : aucune valeur foncière captable à titre privé."
+    - "Composition à deux membres — l'association usagère et le réseau CLIP — qui dédouble la protection contre la revente."
+    - "Garantie réseau de type Mietshäuser Syndikat : droit de veto inter-lieux sur toute mise en marché du foncier."
+  fragilites:
+    - "Statuts non publiés : clause d'inaliénabilité et clause de dévolution non vérifiables."
+    - "Gouvernance interne (organe de direction, gestion désintéressée) non documentée."
+    - "Régime et titre d'usage confiés à l'association usagère non documentés."
+  leviers:
+    - "Publier les statuts de l'association : clause d'inaliénabilité et clause de dévolution désintéressée."
+    - "Documenter la gouvernance et le caractère désintéressé de la gestion."
+    - "Formaliser et publier le titre d'usage long liant l'association propriétaire à l'association usagère."
+  synthese: >
+    Les Donnettes est un porteur foncier sobre et solide dans sa logique : une
+    association sans capital appropriable, volontairement réduite à deux membres —
+    l'usagère et le garant réseau — dont la mission est de tenir le foncier des
+    Hautes-Planches hors marché. La garantie CLIP, de type Mietshäuser Syndikat,
+    en fait un verrou réel ; sa marge de progression tient à la publication de ses
+    statuts (inaliénabilité, dévolution) et de sa gouvernance.
+fiabilite: >
+  Faits vérifiés (sources HelloAsso, CLIP et recherche web, consultées en mai-juin
+  2026) : association Les Donnettes (RNA W613001811, catégorie « Logement », vérifié
+  au Répertoire national des associations via annuaire-mairie / monvillagenormand —
+  la mention antérieure W613001936 était erronée, ce RNA désignant une autre
+  association) propriétaire du foncier des Hautes-Planches à Bretoncelles, achat du
+  corps principal de l'ancien moulin en
+  octobre 2017, parcelle « du broc » acquise par financement participatif et
+  chantiers collectifs, association réduite à deux membres — l'association usagère
+  Hautes Planches et le réseau CLIP —, rôle garant de CLIP sur la non-revente avec
+  droit de veto inter-lieux de type Mietshäuser Syndikat. Mécanisme type CLIP
+  documenté (CLIP « Qu'est-ce que le CLIP », Revue Silence n°526 / Cairn) : la
+  structure propriétaire est fondée par l'association habitante pour acheter le bien,
+  CLIP en est l'unique autre membre, l'association emprunte pour financer l'achat, et
+  l'usagère lui verse des loyers (usage à titre gratuit ou loyer sous les prix du
+  marché) qui remboursent l'emprunt et alimentent un fonds solidaire ; au sein de la
+  propriétaire, CLIP a un droit de veto sur toute décision touchant la propriété —
+  modification des statuts, vente, hypothèque — et toute remise sur le marché est
+  soumise au veto de l'ensemble des collectifs CLIP. Non confirmé : statuts propres de
+  l'association (clause d'inaliénabilité, clause de dévolution), composition de
+  l'organe de direction, caractère désintéressé de la gestion, montant et durée du
+  titre d'usage confié à l'association usagère.
+voir_aussi: [hautes-planches, clip]
+dossier:
+  identite:
+    rna: "W613001811"
+    adresse: "3 lieu-dit Haute Planche, 61110 Bretoncelles"
+  echelle:
+    surface: "Ancien moulin (corps principal) + parcelle « du broc »."
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Achat du corps principal en octobre 2017 ; acte non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: partiel
+      note: "Selon le mécanisme type CLIP, l'usage est confié à l'association usagère par une relation de location avec versement de loyers (CLIP). Le titre signé et le montant pratiqués ne sont pas publiés."
+sources:
+  - titre: "CLIP — Les projets (Hautes-Planches, projet mixte artistique et habitat)"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "CLIP — Qu'est-ce que le CLIP ? (structure propriétaire fondée par l'habitante, emprunt remboursé par loyers + fonds solidaire, veto inter-lieux)"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
+  - titre: "Le Clip : un réseau de lieux hors de la propriété privée — Revue Silence n°526 (nov. 2023), via Cairn"
+    url: "https://shs.cairn.info/revue-silence-2023-11-page-34?lang=fr"
+  - titre: "HelloAsso — Les Donnettes (association propriétaire)"
+    url: "https://www.helloasso.com/associations/les-donnettes"
+  - titre: "HelloAsso — Les Donnettes, collecte « Achat de la parcelle du broc »"
+    url: "https://www.helloasso.com/associations/les-donnettes/collectes/achat-du-broc"
+  - titre: "Annuaire-mairie — associations de Bretoncelles (Les Donnettes RNA W613001811, catégorie Logement, 3 lieu-dit Haute Planche)"
+    url: "https://www.annuaire-mairie.fr/association-bretoncelles.html"
+  - titre: "Mon Village Normand — Bretoncelles (61061) : Les Donnettes, RNA W613001811, Logement"
+    url: "https://61.monvillagenormand.fr/Ville.php?INSEE=61061"

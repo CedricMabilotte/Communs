@@ -65,7 +65,7 @@ extracted:
   achat: "à confirmer (date et bien non documentés par les sources publiques vues)"
   habitat: "projet d'habitat collectif confirmé par le CLIP ; résidence permanente effective à confirmer"
 origine: "graine — étude réseau CLIP 2026-05-31"
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — La Porcheritz (Perche)

@@ -1,0 +1,177 @@
+uid: hautes-planches
+categorie: usufruitier
+nom: "Hautes Planches"
+sous_titre: "Association habitante et usagère gérant le lieu des Hautes-Planches, dans le Perche"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Bretoncelles"
+  departement: "Orne (61)"
+  region: "Normandie"
+annee: 2017
+url: "https://www.helloasso.com/associations/hautes-planches"
+resume: >
+  Hautes Planches est l'association loi 1901 (SIRET 83460748300015) qui occupe et gère
+  le lieu des Hautes-Planches, ancien moulin à Bretoncelles dans le Perche ornais.
+  Plusieurs résident·es y vivent en permanence ; un collectif d'environ quinze
+  personnes assure la gestion du lieu, qui abrite ateliers, imprimerie d'art, gymnase,
+  et accueille chorale, fanfare, cabaret, compagnies et collectifs en résidence. En
+  2024, environ 370 adhérent·es, surtout de Bretoncelles et des alentours, ont
+  participé aux activités. L'association est l'usagère du foncier détenu par
+  l'association propriétaire Les Donnettes, dont elle est l'un des deux membres avec
+  le réseau CLIP, dans un montage de propriété d'usage qui soustrait le lieu au marché.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Les Donnettes (association propriétaire)"
+  usufruitier: "Hautes Planches (association usagère)"
+  description: >
+    Le foncier des Hautes-Planches est détenu par l'association propriétaire Les
+    Donnettes ; son usage et sa gestion sont assurés par l'association Hautes Planches,
+    qui regroupe les habitant·es et usager·es du lieu. Les deux associations sont liées :
+    Hautes Planches est l'un des deux membres de l'association propriétaire, aux côtés
+    du réseau CLIP garant de la non-revente. La nature et la durée du titre d'usage
+    liant l'association usagère à l'association propriétaire ne sont pas documentées par
+    les sources publiques.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 d'habitant·es et d'usager·es, sans capital appropriable,
+    qui occupe et gère le lieu en autogestion citoyenne, membre de l'association
+    propriétaire au sein du montage CLIP. Non-lucrativité de fait par la nature
+    associative ; statuts précis non documentés.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Les usager·es de Hautes Planches ne peuvent ni revendre ni capter à titre privé la valeur du foncier : celui-ci est détenu par l'association propriétaire Les Donnettes, sans capital appropriable, et protégé par la garantie réseau CLIP."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "L'association loi 1901 n'a ni capital ni parts sociales appropriables : aucun titre cessible."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "L'existence et le contenu d'une clause de dévolution désintéressée dans les statuts de l'association ne sont pas documentés par les sources."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Hautes Planches est une association loi 1901, personne morale de droit civil non lucrative — et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association sans capital appropriable ne distribue pas de bénéfices : les éventuels excédents sont réinvestis dans l'objet du lieu."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Le mode de décision interne de l'association (assemblée « une personne, une voix », collégialité) n'est pas documenté par les sources, même si la forme associative le suggère."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Un collectif d'environ quinze personnes gère le lieu ; ce sont les habitant·es et usager·es eux-mêmes, réunis dans l'association, qui décident de son devenir."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu accueille largement (environ 370 adhérent·es en 2024) et héberge résident·es, artisan·es, artistes et collectifs en résidence ; les dispositifs formels d'arrivée de nouveaux·elles membres-gestionnaires ne sont pas documentés."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources consultées."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet du lieu porte un intérêt général identifié : habitat, accueil, activités culturelles et artistiques (ateliers, imprimerie d'art, gymnase, résidences) ouvertes au territoire."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le lieu ne profite pas qu'à ses seuls habitant·es : environ 370 adhérent·es, surtout de Bretoncelles et des alentours, participent aux activités ; chorale, fanfare, cabaret et résidences sont ouverts au-delà du collectif."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "La place faite au vivant non-humain dans la vocation de l'association n'est pas explicitée par les sources ; le contexte est rural mais non détaillé."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Le titre d'usage prend la forme, dans le montage type CLIP, d'une location de l'usagère auprès de la propriétaire dont elle est membre fondatrice (source : CLIP, « Qu'est-ce que le CLIP ») : la jouissance est durable de par cette appartenance croisée et l'impossibilité de revente. La durée précise et la forme du titre propre aux Hautes-Planches ne sont pas publiées."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant l'association usagère au foncier n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'articulation avec le porteur est claire et loyale : l'association usagère Hautes Planches est elle-même l'un des deux membres de l'association propriétaire Les Donnettes, aux côtés de CLIP."
+  - critere: regime_usage_non_marchand
+    valeur: oui
+    note: "L'association se donne pour but de « mettre à disposition à prix libre des espaces de travail et de création accessibles à tous » (objet et présentation, sources annuaire-entreprises et HelloAsso) ; ses chantiers fonctionnent en participation libre. Le régime d'accès est non marchand (prix libre revendiqué)."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Dans le montage type CLIP, l'usage des lieux se fait à titre gratuit ou moyennant un loyer sous les prix du marché ; les loyers sont calibrés pour rembourser l'emprunt d'achat et alimenter un fonds solidaire d'aide à d'autres projets CLIP, non pour dégager une rente (source : CLIP, « Qu'est-ce que le CLIP »). Le montant exact pratiqué aux Hautes-Planches n'est pas documenté."
+analyse:
+  forces:
+    - "Association d'habitant·es et d'usager·es sans capital appropriable : aucune captation privée de la valeur foncière."
+    - "Autogestion citoyenne par un collectif d'environ quinze personnes ; lieu largement ouvert (environ 370 adhérent·es en 2024)."
+    - "Articulation loyale avec le porteur : l'association usagère est elle-même membre de l'association propriétaire, aux côtés de CLIP."
+  fragilites:
+    - "Statuts non publiés : mode de décision interne et clause de dévolution non vérifiables."
+    - "Durée et forme précises du titre d'usage avec l'association propriétaire non publiées (mécanisme type CLIP documenté ; contrat propre au lieu non)."
+    - "Place du vivant non-humain non explicitée par les sources, le contexte rural mis à part."
+  leviers:
+    - "Publier les statuts et le mode de gouvernance interne de l'association."
+    - "Formaliser et documenter un titre d'usage long avec l'association propriétaire."
+    - "Expliciter le régime d'accès aux activités et la place faite au vivant non-humain."
+  synthese: >
+    Hautes Planches est le maillon vivant du montage : une association
+    d'habitant·es et d'usager·es qui fait exister le lieu, en gouverne l'usage
+    en autogestion et l'ouvre largement à son territoire. Son articulation avec le
+    porteur est exemplaire — elle en est co-membre. Les zones d'ombre tiennent à
+    la documentation publique : statuts, titre d'usage interne, régime d'accès.
+fiabilite: >
+  Faits vérifiés (sources HelloAsso, CLIP, Hoodspot et recherche web, consultées
+  en mai-juin 2026) : association Hautes Planches (RNA W613001799 vérifié au
+  Répertoire national des associations via assoce.fr / gralon ; SIRET 83460748300015,
+  SIREN 834607483) usagère et gestionnaire des Hautes-Planches à Bretoncelles,
+  déclarée le 18 mai 2017 et publiée au Journal officiel le 27 mai 2017, habitat
+  permanent
+  confirmé, collectif gestionnaire d'environ quinze personnes, environ 370
+  adhérent·es en 2024, activités (ateliers, imprimerie d'art, gymnase, chorale,
+  fanfare, cabaret, résidences), appartenance comme l'un des deux membres de
+  l'association propriétaire Les Donnettes aux côtés de CLIP. Confirmés par recherche
+  (mai-juin 2026) : association déclarée le 18 mai 2017, objet « créer un projet de
+  lieu collectif et solidaire » et mise à disposition d'espaces « à prix libre,
+  accessibles à tous » (annuaire-entreprises) ; chantiers participatifs autogérés à
+  prix libre avec transmission de gestes et savoirs ; titre d'usage de type location
+  avec loyers remboursant l'emprunt et alimentant un fonds solidaire (mécanisme type
+  CLIP — CLIP « Qu'est-ce que le CLIP », Revue Silence n°526 / Cairn). Non confirmé :
+  statuts propres de l'association, mode de décision interne, clause de dévolution,
+  durée précise du titre d'usage et montant du loyer, place explicite du vivant
+  non-humain.
+voir_aussi: [les-donnettes, clip]
+dossier:
+  identite:
+    rna: "W613001799"
+    siren: "834607483"
+    adresse: "3 lieu-dit Haute Planche, 61110 Bretoncelles"
+  echelle:
+    personnes: "Collectif gestionnaire d'environ 15 personnes ; résident·es permanent·es (nombre exact non documenté) ; environ 370 adhérent·es en 2024."
+    lieux: "1 lieu (ancien moulin des Hautes-Planches)"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Titre d'usage liant l'association usagère à l'association propriétaire Les Donnettes ; nature et durée non documentées."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: partiel
+      note: "Titre d'usage de type location avec versement de loyers selon le mécanisme type CLIP (CLIP) ; le titre signé et le montant pratiqués ne sont pas publiés."
+sources:
+  - titre: "HelloAsso — Hautes Planches (association usagère)"
+    url: "https://www.helloasso.com/associations/hautes-planches"
+  - titre: "Annuaire des Entreprises — HAUTES PLANCHES (SIREN 834607483) : déclarée le 18 mai 2017, objet « lieu collectif et solidaire », prix libre"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/hautes-planches-834607483"
+  - titre: "CLIP — Qu'est-ce que le CLIP ? (asso usagère locataire, loyers + fonds solidaire, veto inter-lieux)"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
+  - titre: "Le Clip : un réseau de lieux hors de la propriété privée — Revue Silence n°526 (nov. 2023), via Cairn"
+    url: "https://shs.cairn.info/revue-silence-2023-11-page-34?lang=fr"
+  - titre: "Chantiers et stages aux Hautes Planches (chantiers participatifs autogérés à prix libre, transmission de savoirs)"
+    url: "https://testaccio-bimo.over-blog.com/2019/06/chantiers-et-stages-aux-hautes-planches-bretoncelles.html"
+  - titre: "CLIP — Les projets (Hautes-Planches, projet mixte artistique et habitat)"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "Hoodspot — HAUTES PLANCHES (SIRET 83460748300015), Bretoncelles"
+    url: "https://hoodspot.fr/associations/hautes-planches-83460748300015/"
+  - titre: "Assoce.fr (WALDEC) — HAUTES PLANCHES (RNA W613001799), Bretoncelles"
+    url: "https://assoce.fr/waldec/W613001799/HAUTES-PLANCHES"
+  - titre: "Gralon — association HAUTES PLANCHES (W613001799), déclarée 18/05/2017, publiée au JO 27/05/2017"
+    url: "https://www.gralon.net/mairies-france/orne/association-hautes-planches-bretoncelles_W613001799.htm"

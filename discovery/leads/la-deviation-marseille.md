@@ -57,7 +57,7 @@ extracted:
   achat: "2019 — 410 000 € sans banque, prêts solidaires (collecte « Libérons les parpaings »)"
   habitat: "confirmé — une dizaine d'habitats légers individuels en carrière, occupés par les membres actifs (séjour ou rotation) ; on y vit, travaille et reçoit"
 origine: "graine — étude réseau CLIP 2026-05-31"
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — La Déviation (Marseille)

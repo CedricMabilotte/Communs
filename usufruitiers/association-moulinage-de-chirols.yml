@@ -1,0 +1,177 @@
+uid: association-moulinage-de-chirols
+categorie: usufruitier
+nom: "Association du Moulinage de Chirols"
+sous_titre: "Association loi 1901 qui a porté la rénovation et anime la vie culturelle du Moulinage de Chirols, en Ardèche"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Chirols"
+  departement: "Ardèche (07)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2016
+url: "https://lemoulinagedechirols.org/"
+resume: >
+  L'association du Moulinage de Chirols, association loi 1901 créée en 2016, a
+  porté la rénovation de l'ancien moulinage de soie de Chirols, en Ardèche, puis
+  s'est attachée à en animer la vie culturelle. Elle fait vivre les espaces
+  communs du lieu, dont elle dispose auprès de la SAS propriétaire : salle de
+  spectacle, résidences artistiques, ateliers ouverts au public à prix
+  accessibles (céramique, cyanotype, vannerie, gravure sur lino, danse, théâtre
+  enfants), cantine participative et accueil. Elle est ainsi le maillon
+  d'animation et d'usufruit des communs d'un montage dont le foncier est porté
+  par la SAS « Le Moulinage de Chirols ».
+montage:
+  type: propriete_collective
+  nu_proprietaire: "SAS Le Moulinage de Chirols (gérée selon des principes coopératifs)"
+  usufruitier: "Association du Moulinage de Chirols (association loi 1901)"
+  description: >
+    Le foncier — murs, rue et part des faysses — est porté par la SAS « Le
+    Moulinage de Chirols », propriétaire et gestionnaire. L'association loi 1901,
+    créée en 2016, a porté la rénovation du bâtiment puis anime la vie culturelle
+    du lieu et fait vivre les espaces communs, dont elle dispose auprès de la
+    SAS. Les deux structures sont distinctes : l'une détient le foncier et
+    organise l'usage par parts, l'autre porte l'animation et l'usufruit des
+    communs. La nature et la durée du titre liant l'association à la SAS ne sont
+    pas documentées par les sources publiques.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 : personne morale de droit civil structurellement non
+    lucrative, sans capital appropriable, gouvernée par ses membres « une
+    personne, une voix ». Elle ne détient pas le foncier mais en anime l'usage
+    culturel ouvert auprès de la SAS propriétaire.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "L'association loi 1901 n'a pas de capital appropriable et ne détient pas le foncier : ses membres ne peuvent ni revendre ni capter à titre privé la valeur du lieu, qui appartient à la SAS."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Une association loi 1901 n'émet aucune part ou titre appropriable : il n'y a rien à céder ni à valoriser."
+  - critere: devolution_usufruitier
+    valeur: partiel
+    note: "Le statut d'association loi 1901 conduit en principe, à la dissolution, à une dévolution de l'actif net à un organisme désintéressé ; la clause statutaire propre à l'association du Moulinage n'est pas documentée."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "L'association du Moulinage de Chirols est une association loi 1901 : personne morale de droit civil non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association loi 1901 ne partage pas de bénéfices entre ses membres ; les excédents sont réinvestis dans l'objet associatif (animation culturelle du lieu)."
+  - critere: une_voix
+    valeur: oui
+    note: "Une association loi 1901 fonctionne en assemblée générale sur le principe « une personne, une voix », indépendamment de tout apport en capital."
+  - critere: usagers_decident
+    valeur: partiel
+    note: "L'association anime la vie culturelle avec les usager·es et s'inscrit dans un lieu à gouvernance « une personne, une voix » (principes coopératifs de la SAS porteuse) ; le fonctionnement interne propre de l'association (instances, association des usager·es) n'est pas documenté en détail."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "L'association L'Œuvrière propose une adhésion ouverte au public (campagnes d'adhésion annuelles via HelloAsso), ce qui atteste un mécanisme d'entrée non restreint ; les modalités formelles de renouvellement des instances ne sont pas documentées. Source : pages d'adhésion HelloAsso de L'Œuvrière."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources consultées."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet de l'association L'Œuvrière, tel que formulé publiquement, vise le développement et le soutien de projets culturels (création artistique, artisanat), la diffusion des cultures, la préservation du patrimoine matériel et immatériel et le partage des savoir-faire, au service du lien social et du renouveau écologique en milieu rural — un intérêt général identifié (culture, éducation populaire, patrimoine, accès). Sources : net1901, mairie de Chirols (chirols.fr)."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Les ateliers ouverts à prix accessibles, la salle de spectacle et l'accueil bénéficient au public au-delà des seul·es membres et habitant·es du lieu."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'objet de L'Œuvrière mentionne le « renouveau écologique en milieu rural », ce qui inscrit une visée écologique dans son objet propre ; mais le portage opérationnel du volet vivant (faysses, ruches, poules) relève d'abord du collectif et de la SAS, et non d'une finalité directe de l'association culturelle, d'où « partiel ». Source : net1901, chirols.fr."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La nature et la durée du titre liant l'association à la SAS pour les espaces communs ne sont pas documentées par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant l'association aux communs n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "L'association et la SAS sont deux structures distinctes du même projet, l'association ayant porté la rénovation ; le contrat formel liant l'association à la SAS pour l'usage des communs n'est pas documenté."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'animation repose largement sur le bénévolat et le partage ; mais les ateliers, spectacles et hébergement comportent une part tarifée, fût-elle à prix accessibles."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'existence et le montant d'un loyer ou d'une redevance versés par l'association à la SAS pour les espaces communs ne sont pas documentés par les sources."
+analyse:
+  forces:
+    - "Association loi 1901 : personne morale de droit civil structurellement non lucrative, sans capital appropriable."
+    - "Objet d'intérêt général : animation culturelle, ateliers ouverts à prix accessibles, accueil."
+    - "Maillon historique du projet — l'association a porté la rénovation du moulinage."
+  fragilites:
+    - "Titre liant l'association à la SAS pour les communs non documenté : sécurité d'usage inconnue."
+    - "Fonctionnement interne (instances, comptes, adhésion) non documenté."
+    - "Part marchande des activités d'accueil coexistant avec la logique de partage."
+  leviers:
+    - "Formaliser et publier le titre liant l'association à la SAS pour l'usage des espaces communs."
+    - "Documenter les statuts, la clause de dévolution et les comptes de l'association."
+    - "Préciser les modalités d'adhésion et l'association des usager·es aux décisions."
+  synthese: >
+    L'association du Moulinage de Chirols est le maillon non lucratif et
+    animateur du montage : sans détenir le foncier, elle a porté la rénovation
+    et fait vivre les communs du lieu auprès de la SAS propriétaire. Sa nature
+    associative ancre l'intérêt général et l'absence d'appropriation ; ce qui lui
+    manque pour être pleinement lisible, c'est la publication du titre d'usage
+    qui la lie à la SAS et de son fonctionnement interne.
+fiabilite: >
+  Faits vérifiés (sources collectif, Coopérative Oasis, net1901, mairie de
+  Chirols et HelloAsso, consultées fin mai / début juin 2026) : association
+  loi 1901 créée en 2016, qui a porté la rénovation de l'ancien moulinage de
+  soie de Chirols puis anime la vie culturelle du lieu — salle de spectacle,
+  résidences, ateliers ouverts au public, cantine participative, accueil ;
+  espaces communs disposés auprès de la SAS propriétaire. Identité
+  précisée : l'association animatrice est « L'Œuvrière » (RNA W071002642),
+  anciennement « Le Moulinage de Chirols », renommée en 2020 pour se distinguer
+  de la SAS homonyme qui porte le foncier ; objet de développement culturel,
+  patrimoine, partage des savoir-faire, lien social et renouveau écologique en
+  milieu rural ; adhésion publique ouverte (HelloAsso). À noter sur la structure
+  porteuse : il s'agit d'une SAS constituée comme société commerciale (NAF
+  6820B) gérée selon des principes coopératifs, et non d'une SCIC/SCOP certifiée
+  (registre vérifié le 01/06/2026). À confirmer pour l'association elle-même :
+  numéro SIREN, statuts et clause de dévolution propres, instances et
+  fonctionnement interne, transparence comptable, nature et durée du titre liant
+  l'association à la SAS pour les communs, existence et montant d'un loyer ou
+  d'une
+  redevance, articulation précise avec les autres entités associatives gravitant
+  autour du projet (« Le Collectif du Moulinage de Chirols », « Collectifs des
+  futurs résidents » recensées sur net1901).
+voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: null
+    rna: "W071002642"
+    adresse: "Chirols (07380), Ardèche"
+    note: "Association animatrice identifiée : RNA W071002642, enregistrée sous le nom « Le Moulinage de Chirols » (adresse 19 rue Jean Mermoz, 07200 Aubenas ; objet : projets écologiques, culturels et ESS, valorisation du patrimoine et développement territorial en milieu rural — sources gralon / net1901), renommée « L'Œuvrière » en 2020 pour se distinguer de la coopérative homonyme. Numéro SIREN non relevé. À noter : d'autres entités associatives gravitent autour du projet (ex. « Le Collectif du Moulinage de Chirols » net1901 #1777017, « Collectifs des futurs résidents du Moulinage de Chirols » #1842953) — le rattachement précis de chacune au montage reste à confirmer."
+  echelle:
+    lieux: "Espaces communs du Moulinage de Chirols (salle de spectacle, ateliers, cantine, résidences)"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association non publiés en ligne par les sources consultées."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Titre liant l'association à la SAS propriétaire pour l'usage des communs ; nature et durée non documentées."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Existence et montant d'un loyer ou d'une redevance versés à la SAS non documentés."
+sources:
+  - titre: "Le Moulinage de Chirols — site du collectif"
+    url: "https://lemoulinagedechirols.org/"
+  - titre: "Coopérative Oasis — fiche Le Moulinage de Chirols"
+    url: "https://cooperative-oasis.org/oasis/le-moulinage-de-chirols/"
+  - titre: "Coopérative Oasis — De la révolution industrielle à la révolution écologique"
+    url: "https://cooperative-oasis.org/articles/de-la-revolution-industrielle-a-la-revolution-ecologique-le-moulinage-de-chirols/"
+  - titre: "Gralon — association Le Moulinage de Chirols (RNA W071002642, objet)"
+    url: "https://www.gralon.net/mairies-france/ardeche/association-le-moulinage-de-chirols-aubenas_W071002642.htm"
+  - titre: "net1901 — Le Collectif du Moulinage de Chirols"
+    url: "https://www.net1901.org/association/LE-COLLECTIF-DU-MOULINAGE-DE-CHIROLS,1777017.html"
+  - titre: "Mairie de Chirols — L'Œuvrière (objet de l'association)"
+    url: "https://chirols.fr/vivre-a-chirols-2/associations/loeuvriere/"
+  - titre: "HelloAsso — adhésion à L'Œuvrière (Moulinage de Chirols)"
+    url: "https://www.helloasso.com/associations/l-uvriere/adhesions/formulaire-adhesion-moulinage-chirols"

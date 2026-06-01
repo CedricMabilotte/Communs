@@ -56,7 +56,7 @@ extracted:
   achat: "octobre 2017 (Les Donnettes — corps principal du moulin) ; parcelle « du broc » par financement participatif"
   habitat: "confirmé — plusieurs résident·es permanent·es ; collectif d'env. 15 personnes gérant le lieu ; 370 adhérent·es en 2024"
 origine: "graine — étude réseau CLIP 2026-05-31"
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — Les Hautes-Planches (Bretoncelles)

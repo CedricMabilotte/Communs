@@ -1,0 +1,224 @@
+uid: scic-moulinage-de-chirols
+categorie: porteur
+nom: "SAS Le Moulinage de Chirols"
+sous_titre: "Société par actions simplifiée propriétaire et gestionnaire du Moulinage de Chirols, gérée selon des principes coopératifs, en Ardèche"
+statut_fiche: publie
+forme_juridique: "Société par actions simplifiée (SAS) à capital variable, constituée comme société commerciale (RCS Aubenas, NAF 6820B) ; gérée selon des principes coopératifs (capital variable, parts anti-spéculatives, 1 personne = 1 voix) — sans statut coopératif (SCIC/SCOP) certifié au registre"
+nature_interet: commerciale_encadree
+localisation:
+  commune: "Chirols"
+  departement: "Ardèche (07)"
+  region: "Auvergne-Rhône-Alpes"
+annee: 2019
+url: "https://lemoulinagedechirols.org/habitat-participatif/"
+resume: >
+  « Le Moulinage de Chirols » est une SAS (société par actions simplifiée) à
+  capital variable, constituée comme société commerciale (RCS Aubenas, NAF
+  6820B) et gérée selon des principes coopératifs, qui détient et gère l'ancien
+  moulinage de soie de Chirols, en Ardèche — environ 4 500 m² de bâti, la rue
+  attenante et une partie des faysses (terrasses), acquis au printemps 2019.
+  Elle est à la fois propriétaire du foncier et organisatrice de son usage :
+  habiter ou travailler sur le site passe par la souscription de parts sociales
+  et l'ouverture d'un droit d'usage, sans lot privatif aliénable. Un pacte
+  d'associés organise un double verrou anti-spéculatif — récupération de la mise
+  initiale sans plus-value, parts « V » de travail bénévole proportionnelles à la
+  surface réservée. L'acte d'achat a été signé par vingt-trois personnes ; la
+  société compte aujourd'hui environ soixante membres et fonctionne sur le
+  principe « une personne, une voix », habitant·es et porteur·ses d'activité à
+  poids égal. Elle n'a ni statut SCIC ni statut SCOP certifié au registre.
+montage:
+  type: propriete_collective
+  description: >
+    La SAS à capital variable « Le Moulinage de Chirols » détient le
+    foncier — murs, rue et part des faysses — depuis l'achat de mai 2019 et en
+    assure la gestion. Elle ne loge pas les habitant·es par propriété privative
+    mais par souscription de parts sociales ouvrant un droit d'usage ; le même
+    mécanisme abrite les porteur·ses d'activité. Le pacte d'associés
+    (équivalent du règlement intérieur) verrouille la dimension non spéculative :
+    au départ, l'associé·e récupère la somme initialement investie même si le
+    site a pris de la valeur, ce qui empêche la plus-value privée et la
+    gentrification ; des parts « V » formalisent un engagement de travail
+    bénévole proportionnel à la surface réservée. Les principes coopératifs
+    inscrits aux statuts encadrent la lucrativité (capital variable, « une
+    personne, une voix »), sans pour autant valoir statut coopératif certifié
+    (la société est immatriculée comme SAS commerciale, NAF 6820B) ; l'animation
+    des espaces communs est confiée à une association loi 1901.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    SAS à capital variable constituée comme société commerciale (NAF 6820B,
+    RCS Aubenas) et gérée selon des principes coopératifs (capital variable,
+    parts anti-spéculatives, « une personne, une voix ») — sans statut coopératif
+    certifié (ni SCIC ni SCOP). Lucrativité encadrée surtout par un pacte
+    d'associés anti-spéculatif. Maillon non lucratif de fait, sans être une
+    structure non lucrative au sens strict ni un dispositif d'inaliénabilité
+    statutaire avéré.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le pacte d'associés interdit la captation de plus-value et l'aliénation de lots privatifs, ce qui freine fortement la sortie du foncier ; mais la SAS peut en principe céder ses actifs et aucune clause statutaire d'inaliénabilité ni dotation non consomptible n'a pu être lue (statuts PDF non récupérables)."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Les parts de la SAS sont statutairement non spéculatives : le pacte d'associés prévoit la récupération de la mise initiale sans plus-value, sans lot privatif aliénable ; la cession ne capte aucune valeur foncière. Sources : Coopérative Oasis, base Habitat participatif & Oasis."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Une SAS gérée selon des principes coopératifs reste une société commerciale (constituée comme telle, NAF 6820B) : sur l'échelle de protection foncière, elle se situe en deçà d'une fondation ou d'un fonds de dotation, mais au-dessus d'une société commerciale ordinaire grâce au capital variable, aux parts non spéculatives et au pacte anti-spéculatif."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence et le contenu d'une clause de réserves impartageables ou de dévolution désintéressée du boni de liquidation dans les statuts de la SAS n'ont pas pu être établis : le statut SAS commerciale ne l'impose pas, et les statuts (PDF) n'ont pas été récupérables depuis l'environnement. À lire dans les statuts constitutifs."
+  - critere: forme_non_lucrative
+    valeur: non
+    note: "« Le Moulinage de Chirols » est immatriculée comme SAS — société par actions simplifiée, constituée comme société commerciale — et non comme une forme structurellement non lucrative (fondation, fonds de dotation, association) ni comme une société coopérative certifiée (SCIC/SCOP)."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "L'objet social anti-spéculatif et le pacte d'associés encadrent fortement la lucrativité — parts remboursées au nominal sans plus-value, capital variable — ce qui rend la non-lucrativité effective de fait ; mais une SAS commerciale autorise en principe la distribution et la rémunération du capital, et aucune clause statutaire de réserves impartageables n'a pu être lue : la non-lucrativité n'est pas garantie au sens strict."
+  - critere: gestion_desinteressee
+    valeur: partiel
+    note: "Le modèle repose sur l'engagement bénévole (parts « V »), la participation à l'intérêt général et une gouvernance « une personne, une voix », ce qui éloigne du profit d'un cercle restreint ; le détail de la rémunération de la présidente et des dirigeant·es n'est pas documenté."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Le capital est apporté par les associé·es dans une logique de souscription et d'usage, non par des investisseurs en rendement ; le pacte d'associés exclut la plus-value privée sur le foncier."
+  - critere: ca_collegial
+    valeur: partiel
+    note: "La société associe plusieurs catégories d'associé·es — habitant·es, porteur·ses d'activité, et « œuvrier·es » (sympathisant·es / ami·es), distinguées par le montant des parts — et est présidée par Juliette Zollkau Roussille (présidente depuis le 04/01/2019, registre) ; l'existence formelle de collèges de vote distincts et la composition pluraliste de l'organe de direction ne sont pas documentées. Sources : Coopérative Oasis (catégories), Pappers (présidente)."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "Habitant·es et porteur·ses d'activité sont associé·es à poids égal au sein de la SAS ; les usager·es du foncier sont donc directement parties prenantes de la structure qui le détient."
+  - critere: autogestion_usagers
+    valeur: oui
+    note: "Les usager·es du foncier (habitant·es, porteur·ses d'activité) sont associé·es de la SAS propriétaire et y disposent d'une voix délibérative « une personne, une voix » sur les décisions structurantes du lieu."
+  - critere: transparence
+    valeur: oui
+    note: "Les statuts de la SAS et un dossier de présentation du montage sont publiés en ligne par le collectif, et les comptes annuels sont déposés au greffe d'Aubenas chaque exercice de 2019 à 2024 (dépôts BODACC vérifiés via Pappers le 01/06/2026), donc publiquement consultables — sauf l'exercice 2022, déposé avec déclaration de confidentialité (art. L. 232-25)."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "L'objet social inscrit au registre vise à « gérer et animer des espaces en location pour des acteurs de l'ESS… dans un but écologique, non lucratif et anti-spéculatif » (BODACC, annonce de création 2019), et le pacte d'associés inscrit la soustraction du foncier à la spéculation ; une clause statutaire formelle d'inaliénabilité ou de protection foncière n'a pas pu être lue (statuts PDF non récupérables). Source de l'objet : BODACC / Pappers."
+  - critere: agrement_ig
+    valeur: inconnu
+    note: "Une éventuelle reconnaissance publique ou éligibilité au régime de l'intérêt général n'est pas documentée par les sources ; un soutien de la Fondation du patrimoine au projet de réhabilitation est en revanche attesté."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de la société à un risque de requalification fiscale n'est pas un enjeu documenté."
+  - critere: redevabilite_publique
+    valeur: oui
+    note: "Le collectif communique largement sur le montage et le projet (site, dossier, articles), et la société dépose ses comptes annuels au greffe chaque exercice de 2019 à 2024 (BODACC), assurant une reddition de comptes publique légale au-delà du cercle des associé·es (sous réserve de l'exercice 2022 confidentialisé). Source : Pappers/BODACC."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le régime auquel la SAS confie l'usage aux habitant·es et porteur·ses d'activité est documenté : souscription de parts sociales (3 000 € habitant·e, 1 000 € porteur·se, 500 € œuvrier·e), apport aux communs (~15 000 €/adulte), apport acquisitif au m² (2021 : ~615 €/m² appartements, ~260 €/m² ateliers), puis charges mensuelles partagées ; personne n'est propriétaire — la SAS l'est. C'est un régime de contribution acquisitive ouvrant un droit d'usage, non un loyer rentier ; mais le régime auquel l'usage est confié à l'association pour les communs reste non documenté, d'où « partiel ». Sources : Coopérative Oasis, base Habitat participatif & Oasis."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le droit d'usage est adossé à la qualité d'associé·e de la SAS propriétaire, ce qui offre une jouissance non précaire ; mais la nature et la durée formelles des titres d'usage accordés ne sont pas documentées."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "Le projet porté par la SAS affiche la préservation des écosystèmes comme principe directeur, agi par la reconquête des faysses en permaculture bio, les ruches, les poules et les fruitiers."
+analyse:
+  forces:
+    - "Parts statutairement non spéculatives : récupération de la mise sans plus-value, sans lot privatif aliénable."
+    - "Capital apporté par les usager·es associé·es, non par des investisseurs en rendement."
+    - "Gouvernance « une personne, une voix », habitant·es et porteur·ses d'activité à poids égal."
+    - "Pacte d'associés inscrivant un double verrou anti-spéculatif et le travail bénévole (parts « V »)."
+    - "Transparence légale : comptes annuels déposés au greffe chaque exercice de 2019 à 2024 (BODACC)."
+  fragilites:
+    - "Forme commerciale (SAS sans statut coopératif certifié), non structurellement non lucrative ni inaliénable."
+    - "Pas de clause d'inaliénabilité ni de dotation non consomptible documentée : la sortie du foncier reste juridiquement possible."
+    - "Clause de réserves impartageables / dévolution non établie (statuts non lus) : non garantie par la forme SAS."
+    - "Régime des contributions versées par les usager·es et durée des titres d'usage non documentés."
+  leviers:
+    - "Lire et publier les clauses d'inaliénabilité, de réserves impartageables et de dévolution des statuts."
+    - "Inscrire une clause d'inaliénabilité ou adosser le foncier à une structure non lucrative tierce."
+    - "Formaliser et publier les titres d'usage accordés aux habitant·es, porteur·ses d'activité et à l'association."
+  synthese: >
+    La SAS Le Moulinage de Chirols est le coffre-fort du montage : elle détient
+    le foncier et en organise l'usage par parts non spéculatives plutôt que par
+    propriété privative, sous un pacte d'associés qui interdit la plus-value
+    privée et exige le travail bénévole. C'est un maillon remarquablement
+    protecteur pour une société commerciale, gouverné par ses usager·es selon des
+    principes coopératifs et transparent sur ses comptes ; il lui manque, pour
+    rejoindre le pôle de la libération des terres, le statut coopératif certifié
+    qu'il revendique de fait sans le porter au registre, une structure non
+    lucrative ou une inaliénabilité statutaire au-delà du verrou contractuel.
+fiabilite: >
+  Faits vérifiés (registre officiel via Pappers/BODACC/RNE consulté le
+  01/06/2026 ; sources collectif, Coopérative Oasis) : SAS (société par actions
+  simplifiée) à capital variable « Le Moulinage de Chirols », constituée comme
+  société commerciale (« Constitution d'une société commerciale par création »,
+  BODACC), SIREN 845026277, RCS Aubenas, immatriculée au 04/01/2019, NAF 6820B
+  (location de terrains et autres biens immobiliers), capital variable 22 000 €
+  (minimum 5 500 €), présidente Juliette Zollkau Roussille (depuis le
+  04/01/2019) — propriétaire des murs, de la rue et d'une partie des faysses
+  (achat mai 2019), gestionnaire et loueuse des espaces ; ~60 membres ; 23
+  signataires de l'acte d'achat ; accès à l'usage par parts sociales non
+  spéculatives et droit d'usage ; pacte d'associés anti-spéculatif (mise
+  récupérée sans plus-value) et parts « V » de travail bénévole ; gouvernance
+  « une personne, une voix ». Régime d'accès documenté (Coopérative Oasis, base
+  Habitat participatif & Oasis) : parts 500 €/1 000 €/3 000 € selon la catégorie
+  (œuvrier·e / porteur·se d'activité / habitant·e), apport aux communs
+  (~15 000 €/adulte), apport acquisitif au m² (2021 : ~615 €/m² appartements,
+  ~260 €/m² ateliers), charges mensuelles partagées ; objet social inscrit au
+  registre « Gérer et animer des espaces en location pour des acteurs de
+  l'ESS… dans un but écologique, non lucratif et anti-spéculatif » (BODACC,
+  annonce de création 2019).
+  POINT DE FORME RÉSOLU : le registre officiel établit une SAS constituée comme
+  société commerciale (NAF 6820B), et NON une SCIC, une SCOP ou une société
+  coopérative régie par la loi de 1947. Les descriptions « société coopérative /
+  SCOP » des sources secondaires (Coopérative Oasis, Colibris, copindesbois)
+  renvoient aux principes coopératifs adoptés par les statuts (capital variable,
+  parts anti-spéculatives, « une personne, une voix »), non à un statut
+  coopératif certifié. La forme_juridique de la fiche est corrigée en
+  conséquence : SAS gérée selon des principes coopératifs, sans statut coopératif
+  certifié.
+  TRANSPARENCE CONFIRMÉE : comptes annuels déposés au greffe d'Aubenas chaque
+  exercice de 2019 à 2024 (dépôts BODACC vérifiés ; exercice 2022 confidentialisé
+  au titre de l'art. L. 232-25, les autres publiquement consultables) — d'où
+  transparence et redevabilité publique réévaluées à « oui ».
+  Restent inconnus (statuts PDF et pacte d'associés non récupérables depuis
+  l'environnement — provenance web_fetch refusée) : clauses statutaires exactes
+  d'inaliénabilité, de réserves impartageables et de dévolution (non garanties
+  par la forme SAS) ; composition et collèges éventuels de l'organe de
+  direction ; rémunération des dirigeant·es ; régime et durée des titres d'usage
+  accordés ; régime des contributions de l'association aux communs ; statut des
+  faysses non détenues par la SAS.
+voir_aussi: [cooperative-oasis]
+dossier:
+  identite:
+    siren: "845026277"
+    forme: "SAS à capital variable (société commerciale, NAF 6820B), gérée selon des principes coopératifs — sans statut SCIC/SCOP certifié"
+    capital: "variable, 22 000 € (minimum 5 500 €)"
+    president: "Juliette Zollkau Roussille (depuis le 04/01/2019)"
+    adresse: "Chirols (07380), Ardèche — RCS Aubenas (immatriculée le 04/01/2019)"
+  echelle:
+    personnes: "~60 membres ; 23 signataires de l'acte d'achat (2019)"
+    surface: "~4 500 m² de bâti et une partie des ~2 000 m² de faysses"
+  pieces:
+    - type: statuts
+      statut: public
+      note: "Statuts de la SAS (à principes coopératifs) publiés en ligne par le collectif (référence 2018) et déposés au registre (statuts constitutifs, 04/01/2019) ; clauses détaillées d'inaliénabilité, de réserves et de dévolution non lues (PDF non récupérable)."
+    - type: reglement_interieur
+      statut: public
+      note: "Pacte d'associés organisant le double verrou anti-spéculatif et les parts « V »."
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: public
+      note: "Achat du moulinage, de la rue et d'une partie des faysses en mai 2019."
+    - type: rapport_financier
+      statut: public
+      note: "Comptes annuels déposés au greffe d'Aubenas chaque exercice de 2019 à 2024 (dépôts BODACC vérifiés via Pappers le 01/06/2026) ; exercice 2022 accompagné d'une déclaration de confidentialité (art. L. 232-25), les autres publiquement consultables."
+    - type: bail
+      statut: inconnu
+      note: "Titres d'usage accordés aux habitant·es, porteur·ses d'activité et à l'association non documentés."
+sources:
+  - titre: "Le Moulinage de Chirols — Habitat participatif"
+    url: "https://lemoulinagedechirols.org/habitat-participatif/"
+  - titre: "Coopérative Oasis — De la révolution industrielle à la révolution écologique"
+    url: "https://cooperative-oasis.org/articles/de-la-revolution-industrielle-a-la-revolution-ecologique-le-moulinage-de-chirols/"
+  - titre: "Pappers — Le Moulinage de Chirols (SIREN 845026277 ; SAS, NAF 6820B, capital variable 22 000 €, comptes 2019-2024 déposés, BODACC)"
+    url: "https://www.pappers.fr/entreprise/le-moulinage-de-chirols-845026277"
+  - titre: "BODACC — Le Moulinage de Chirols, annonce de création 2019 (constitution d'une société commerciale ; objet écologique, non lucratif et anti-spéculatif)"
+    url: "https://www.bodacc.fr/annonce/detail-annonce/A/20190014/169"
+  - titre: "societe.com — Le Moulinage de Chirols (libellé « société coopérative par actions simplifiée » au registre, objet anti-spéculatif)"
+    url: "https://www.societe.com/societe/le-moulinage-de-chirols-845026277.html"
+  - titre: "Base de données Habitat participatif & Oasis — Le Moulinage de Chirols (parts, apports, €/m²)"
+    url: "https://www.basededonnees-habitatparticipatif-oasis.fr/?CreerUnLieuDeVieEcocitoyenRegroupantHab="
+  - titre: "Copains des bois — Le moulinage de Chirols (SCOP, refus de la spéculation)"
+    url: "https://copindesbois.fr/paysage/moulinage-de-chirols/"

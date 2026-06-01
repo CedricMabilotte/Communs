@@ -1,0 +1,178 @@
+uid: parpaing-libre
+categorie: porteur
+nom: "Parpaing Libre"
+sous_titre: "Association propriétaire du foncier de La Déviation, à L'Estaque, dédiée à la propriété d'usage"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Marseille (L'Estaque, 16e arr.)"
+  departement: "Bouches-du-Rhône (13)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 2019
+url: "http://www.ladeviation.org/parpaing-libre/"
+resume: >
+  Parpaing Libre est l'association loi 1901 qui détient le foncier de La
+  Déviation, ancienne cimenterie et carrière des hauteurs de L'Estaque, à
+  Marseille. Constituée pour l'achat du lieu en 2019 — 410 000 €, sans recours
+  bancaire, financés par de nombreux prêts solidaires réunis lors de la collecte
+  « Libérons les parpaings » —, elle a pour objet de devenir propriétaire de
+  bâtiments afin de les affecter à des lieux solidaires et autogérés, en habitat
+  ou en exercice d'une profession, sous un régime de propriété d'usage, et
+  d'empêcher la revente du bien. CLIP, le Collectif pour l'institutionnalisation
+  de la propriété d'usage, est le second membre de la structure et joue le rôle
+  de tiers garant de la non-revente. La propriété est ainsi légitimée par
+  l'usage qu'en fait le collectif, et non par l'argent.
+montage:
+  type: propriete_collective
+  description: >
+    Le foncier de La Déviation est détenu par l'association Parpaing Libre, dont
+    l'objet statutaire est d'acquérir des bâtiments pour les soustraire au marché
+    et les affecter durablement à des usages solidaires et autogérés en propriété
+    d'usage. L'usage du lieu est confié à l'association usagère La Déviation, qui
+    l'occupe et l'anime. Selon le mécanisme CLIP (calqué sur le Mietshäuser
+    Syndikat), Parpaing Libre n'a que deux membres — l'association usagère et CLIP
+    — et chacun détient un droit de veto sur la revente du bien, ce qui interdit
+    toute remise sur le marché unilatérale. Les statuts précis de l'association
+    (texte d'une clause d'inaliénabilité opposable, clause de dévolution) ne sont
+    pas publiés par les sources consultées.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, à l'objet explicitement
+    anti-revente, adossée à un tiers garant (CLIP) : structure non lucrative
+    portant le foncier hors marché par la propriété d'usage.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le mécanisme anti-revente est solidement sourcé : l'objet déclaré de Parpaing Libre est « d'empêcher la revente du bien immobilier et de garantir l'usage associatif et artistique du lieu ad vitam aeternam » (brochure « Libérons les parpaings »), et l'association n'a que deux membres — En Devenir (l'usagère) et le CLIP — dotés chacun d'un droit de veto sur toute revente (modèle CLIP / Mietshäuser Syndikat, Métropolitiques), ce qui interdit la sortie unilatérale du bien. Reste non publié le texte exact d'une clause statutaire d'inaliénabilité opposable, par-delà ce dispositif d'objet et de gouvernance."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable à titre privé."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "L'association est une personne morale non lucrative durable, plus protectrice qu'une société civile ; mais elle se situe en deçà d'une fondation reconnue d'utilité publique ou d'un fonds de dotation sur l'échelle de protection foncière."
+  - critere: clause_devolution
+    valeur: partiel
+    note: "Le texte d'une clause de dévolution désintéressée en cas de dissolution de Parpaing Libre n'est pas publié. Mais une dévolution de l'usage est sourcée : la brochure « Libérons les parpaings » et l'article Métropolitiques indiquent qu'en cas de défaillance de l'association usagère, Parpaing Libre et le CLIP s'engagent à confier le lieu à un autre collectif — l'actif foncier est destiné à rester dans la sphère du commun, non à être liquidé sur le marché."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Association loi 1901 : forme structurellement non lucrative, et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : les ressources servent l'acquisition et la conservation du bien, sans dividende, intérêt ni plus-value distribuée."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "Le caractère désintéressé de la gestion et l'éventuelle rémunération des dirigeant·es de l'association ne sont pas documentés par les sources."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Le bien a été acquis par prêts solidaires à rembourser, dans une logique de soutien et non de rendement : aucun investisseur n'attend de plus-value sur le foncier."
+  - critere: ca_collegial
+    valeur: partiel
+    note: "La structure n'a que deux membres — l'association usagère et CLIP — dotés chacun d'un droit de veto sur la revente (Métropolitiques, CLIP) ; la composition et le fonctionnement détaillés de l'organe de direction de l'association ne sont pas publiés."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "La structure propriétaire associe formellement deux membres : l'association usagère et le tiers garant CLIP, chacun avec droit de veto sur la revente. Une partie prenante externe au seul collectif usager est donc statutairement associée."
+  - critere: autogestion_usagers
+    valeur: oui
+    note: "Le mécanisme CLIP est sourcé : l'association usagère est l'un des deux seuls membres de Parpaing Libre et y détient un droit de veto sur la revente. La propriété est légitimée par l'usage du collectif, qui pèse statutairement sur les décisions de la structure propriétaire."
+  - critere: transparence
+    valeur: partiel
+    note: "La collecte « Libérons les parpaings » et le montage sont publiquement présentés ; la publication régulière des comptes et des statuts de l'association n'est pas documentée."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet déclaré de l'association — devenir propriétaire pour affecter le bâti à des usages solidaires et autogérés en propriété d'usage et empêcher la revente — est explicitement un objet de protection foncière."
+  - critere: agrement_ig
+    valeur: inconnu
+    note: "Une reconnaissance publique ou une éligibilité avérée au régime fiscal de l'intérêt général de l'association n'est pas documentée par les sources."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de l'association à un risque de requalification fiscale n'est pas un enjeu documenté par les sources."
+  - critere: redevabilite_publique
+    valeur: inconnu
+    note: "Une reddition de comptes de l'association au-delà de ses membres et prêteurs n'est pas documentée par les sources."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le montant précis n'est pas publié ; mais le modèle CLIP dont relève le montage est non rentier : un éventuel loyer ne sert qu'à rembourser les prêts d'acquisition et les charges, et à terme qu'à équilibrer les charges (Métropolitiques). Les recettes de l'activité du lieu alimentent ce remboursement."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "La nature juridique et la durée chiffrée du titre d'usage accordé par Parpaing Libre à l'association usagère ne sont pas publiées. Mais l'objet même de Parpaing Libre est de « garantir l'usage associatif et artistique du lieu ad vitam aeternam » (brochure) : la sécurité d'usage offerte est, dans l'intention statutaire, pérenne et non précaire."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'objet déclaré de l'association porte exclusivement sur la soustraction du bâti au marché, l'empêchement de la revente et l'affectation du lieu à un usage associatif et artistique. Aucune source ne place la protection du vivant non-humain parmi les fins de Parpaing Libre — alors qu'il s'agit d'une carrière et d'une falaise urbaines."
+analyse:
+  forces:
+    - "Association loi 1901 sans capital appropriable, à l'objet explicitement anti-revente."
+    - "Acquisition par prêts solidaires sans recours bancaire : origine non spéculative."
+    - "Tiers garant externe — CLIP — associé à la structure pour veiller à la non-revente."
+  fragilites:
+    - "Texte d'une clause statutaire d'inaliénabilité opposable et clause de dévolution non publiés (au-delà du double veto sur la revente, qui est sourcé)."
+    - "Statuts complets, gouvernance interne et comptes de l'association non publiés."
+    - "Nature et durée précises du titre d'usage confié à l'association usagère non documentées."
+  leviers:
+    - "Publier les statuts et y confirmer une clause d'inaliénabilité et une dévolution désintéressée opposables."
+    - "Formaliser et publier le titre d'usage liant Parpaing Libre à La Déviation."
+    - "Documenter publiquement les comptes et la gouvernance de l'association propriétaire."
+synthese: >
+  Parpaing Libre est le coffre-fort de La Déviation : une association loi 1901
+  sans capital, dont l'objet est de soustraire le bâti au marché et d'en empêcher
+  la revente, adossée au tiers garant CLIP. Sa solidité tient à cette nature non
+  lucrative et à l'origine non spéculative de l'achat ; sa marge de progression,
+  à la publication des statuts, de la clause d'inaliénabilité et du titre d'usage
+  confié au collectif.
+fiabilite: >
+  Faits vérifiés (sources ladeviation.org, brochure « Libérons les parpaings »,
+  collecte HelloAsso, Arteplan, Métropolitiques et CLIP, consultées en mai-juin
+  2026) : association propriétaire du foncier de La Déviation à L'Estaque, achat
+  en 2019 pour 410 000 € sans recours bancaire (100 000 € d'apports, ~80 prêts de
+  proches pour 200 000 €, 65 000 € de financement participatif HelloAsso + Zeste —
+  Métropolitiques). Objet : « empêcher la revente du bien immobilier et garantir
+  l'usage associatif et artistique du lieu ad vitam aeternam » (brochure). Deux
+  seuls membres — l'association usagère En Devenir et le CLIP —, chacun avec droit
+  de veto sur la revente ; en cas de défaillance de l'usagère, Parpaing Libre et le
+  CLIP s'engagent à confier l'usage à un autre collectif. SIREN 833981764,
+  association loi 1901 déclarée le 26 octobre 2017, siège 210 chemin de la Nerthe
+  (13016 Marseille). Non confirmé : statuts complets, texte d'une clause
+  d'inaliénabilité opposable et d'une clause de dévolution statutaire, gouvernance
+  interne détaillée, comptes, nature juridique et durée chiffrée du titre d'usage.
+voir_aussi: [clip]
+dossier:
+  identite:
+    siren: "833981764"
+    adresse: "210 chemin de la Nerthe, 13016 Marseille (L'Estaque)"
+    note: "SIREN 833981764 (association loi 1901 déclarée le 26 octobre 2017), confirmé par l'Annuaire des entreprises (data.gouv.fr) et Pappers."
+  echelle:
+    surface: "1 220 m² de bâti et 1 500 m² de terrain (ancienne cimenterie / carrière)."
+  pieces:
+    - type: statuts
+      statut: partiel
+      note: "Association déposée (RNA confirmé via SIREN 833981764). L'objet statutaire est sourcé par la brochure (« empêcher la revente [...] et garantir l'usage associatif et artistique ad vitam aeternam » ; deux membres : En Devenir et le CLIP). Le texte intégral des statuts — clause d'inaliénabilité opposable, clause de dévolution — n'est pas publié."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: partiel
+      note: "Financement de l'acquisition 2019 documenté (Métropolitiques) : 100 000 € d'apports personnels, ~80 prêts de proches pour 200 000 €, et deux campagnes (HelloAsso, Zeste) pour 65 000 €. Prix de vente 410 000 €. L'acte notarié lui-même et le titre d'usage liant Parpaing Libre à En Devenir ne sont pas publiés."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: partiel
+      note: "Nature juridique et durée chiffrée du titre d'usage non publiées ; usage garanti « ad vitam aeternam » (brochure), loyer non rentier (remboursement des prêts + charges, puis équilibre des charges — Métropolitiques)."
+sources:
+  - titre: "La Déviation — Parpaing Libre (présentation du montage)"
+    url: "http://www.ladeviation.org/parpaing-libre/"
+  - titre: "Parpaing Libre — collecte « Libérons les parpaings » (HelloAsso)"
+    url: "https://www.helloasso.com/associations/parpaing-libre/collectes/liberons-les-parpaings"
+  - titre: "Brochure « Libérons les parpaings » — Parpaing Libre (objet ad vitam aeternam, deux membres En Devenir + CLIP, dévolution d'usage)"
+    url: "http://www.ladeviation.org/wp-content/uploads/2018/05/ParpaingLibre_brochure_mai.compressed.pdf"
+  - titre: "La Déviation — Arteplan (équipe : « Parpaing Libre rassemble En Devenir et le CLIP »)"
+    url: "https://arteplan.org/initiative/la-deviation/"
+  - titre: "CLIP — Les projets"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "Qu'est-ce que le CLIP ? — Réseau de lieux en propriété d'usage (mécanisme double veto)"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
+  - titre: "Trois dispositifs de lutte contre la spéculation foncière — Métropolitiques (double veto, loyer non rentier)"
+    url: "https://metropolitiques.eu/Trois-dispositifs-de-lutte-contre-la-speculation-fonciere.html"
+  - titre: "Association Parpaing Libre (SIREN 833981764) — Annuaire des entreprises (data.gouv.fr)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/parpaing-libre-833981764"

@@ -40,7 +40,7 @@ extracted:
   activites: ateliers d'artisans (bois, métal, textile), résidences artistiques, salle de spectacle, coworking, cantine participative, ateliers ouverts (céramique, cyanotype, vannerie, gravure, danse, théâtre), hébergement temporaire
   vivant_non_humain: ~2 000 m² de faysses (terrasses) en maraîchage permaculture bio, arbres fruitiers, ~20 ruches, ~60 poules
 origine: graine-operateur-2026-05-31 (projets amis Bascule Argoat)
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — Le Moulinage de Chirols

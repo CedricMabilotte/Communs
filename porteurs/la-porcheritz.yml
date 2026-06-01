@@ -1,0 +1,183 @@
+uid: la-porcheritz
+categorie: porteur
+nom: "Association La Porcheritz"
+sous_titre: "Association propriétaire en propriété d'usage, second membre CLIP, à Paris"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Paris"
+  departement: "Paris (75)"
+  region: "Île-de-France"
+annee: 2014
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  L'association La Porcheritz est l'association « propriétaire » du montage de
+  propriété d'usage CLIP de La Porcheritz, lieu d'habitat collectif du Perche, à
+  Vichères (Eure-et-Loir). Déclarée le 12 juin 2014 à Paris (RNA W751224981,
+  SIREN 810886952, siège 15 rue Émile Pierre Casel, 75020 Paris),
+  elle a pour objet de devenir propriétaire de bâtiments pour les affecter à des
+  lieux solidaires et autogérés — habitat ou exercice d'une profession — en
+  propriété d'usage. Selon le schéma CLIP, elle est fondée par l'association
+  habitante Les Habitants de la Porcheritz, qui en est membre, et a pour second
+  et unique autre membre le réseau CLIP, garant de la non-revente. C'est elle
+  qui est appelée à détenir le foncier hors marché. Le compte rendu d'AG du CLIP
+  de janvier 2022 atteste que le lieu de Vichères est habité (collectif vivant
+  sur place) et que les associations propriétaires du réseau tiennent des AG
+  annuelles ; mais l'acte d'achat propre à La Porcheritz — sa date, sa
+  consistance, son prix — n'a pas été retrouvé dans les sources publiques
+  consultées : la détention foncière est documentée dans son principe statutaire
+  et adossée à un lieu réellement occupé, mais pas dans la preuve de son
+  acquisition.
+montage:
+  type: propriete_collective
+  description: >
+    La Porcheritz est l'association propriétaire du montage à deux associations
+    propre au réseau CLIP. L'association habitante Les Habitants de la Porcheritz
+    fonde cette association propriétaire dont elle est membre ; CLIP en est le
+    second et unique autre membre, ce qui lui donne un droit de veto sur toute
+    revente. C'est l'association propriétaire qui a vocation à acheter le bien et
+    à le porter en propriété d'usage : la propriété est légitimée par l'usage
+    reconnu du collectif, non par le titre ni par l'argent. Il s'agit de
+    propriété d'usage associative — non d'un démembrement notarié ni d'une
+    foncière classique. Le lieu de Vichères est attesté habité par le compte
+    rendu d'AG du CLIP de janvier 2022. À confirmer : l'acte d'achat (date,
+    consistance, prix) et les statuts de l'association (clause anti-revente,
+    clause de dévolution) ne sont pas publiquement documentés.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 : forme structurellement non lucrative. Inscrite dans
+    le schéma CLIP d'inaliénabilité associative — veto réseau exercé par CLIP
+    comme co-membre. Réserve : les statuts de l'association (clause anti-revente,
+    dévolution) ne sont pas publics et l'achat effectif du foncier n'est pas
+    documenté ; la solidité du verrou reste à recouper sur pièces.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le schéma CLIP vise l'inaliénabilité par veto réseau (CLIP co-membre de l'association propriétaire) ; mais les statuts de La Porcheritz ne sont pas publics et l'achat effectif du foncier n'est pas documenté : le verrou est posé dans son principe, non vérifié sur pièces."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une association loi 1901 n'a pas de capital appropriable ni de parts cessibles : aucune valeur foncière n'est captable par un membre."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "L'association loi 1901 est une personne morale de droit privé non lucrative ; sa capacité protectrice est réelle mais inférieure à celle d'une fondation RUP ou d'un fonds de dotation, et repose ici sur des statuts non publiés."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence d'une clause de dévolution désintéressée dans les statuts de l'association n'est pas documentée par les sources."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Une association loi 1901 est une forme structurellement non lucrative : objet déclaré de détention de bâtiments pour des lieux solidaires en propriété d'usage."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association loi 1901 ne distribue pas de bénéfices ni de plus-value à ses membres : la non-lucrativité est effective par la forme."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "Le caractère désintéressé concret de la gestion et l'absence de cercle restreint ne sont pas documentés par les sources."
+  - critere: independance_rendement
+    valeur: oui
+    note: "L'association ne repose pas sur des investisseurs en capital attendant un rendement : l'acquisition CLIP est financée par emprunt remboursé par les loyers, sans capital rémunéré."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La composition et le fonctionnement de l'organe de direction de l'association ne sont pas documentés par les sources."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "Le schéma CLIP associe deux membres à l'association propriétaire : l'association habitante usagère et le réseau CLIP, garant tiers — au-delà des seuls propriétaires."
+  - critere: autogestion_usagers
+    valeur: partiel
+    note: "L'association habitante usagère est membre de l'association propriétaire et participe donc à ses décisions ; mais le détail des pouvoirs délibératifs sur baux, loyers et transmission n'est pas documenté, et CLIP détient le veto sur la revente."
+  - critere: transparence
+    valeur: inconnu
+    note: "La publication des comptes, statuts et de l'activité de l'association n'est pas documentée par les sources consultées."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet déclaré de l'association est de devenir propriétaire de bâtiments pour les affecter à des lieux solidaires et autogérés en propriété d'usage : objet statutaire de protection foncière explicite."
+  - critere: agrement_ig
+    valeur: inconnu
+    note: "Une reconnaissance d'utilité publique ou une éligibilité avérée au régime de l'intérêt général ne sont pas documentées par les sources."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de l'association à un risque de requalification fiscale n'est pas documentée par les sources."
+  - critere: redevabilite_publique
+    valeur: inconnu
+    note: "Une reddition de comptes de l'association au-delà de ses membres n'est pas documentée par les sources."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "L'objet de l'association porte sur la détention foncière de lieux solidaires ; une finalité explicite de préservation du vivant non-humain n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le modèle CLIP, documenté par le réseau, fait de l'association habitante la locataire de l'association propriétaire, les loyers servant à rembourser l'emprunt d'acquisition (sans rendement d'investisseur) ; le principe d'un usage offert à prix coûtant est posé, mais le montant et les conditions exactes pour ce lieu ne sont pas publiés."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le modèle CLIP, documenté par le réseau, accorde à l'association habitante un statut de locataire stable de la structure propriétaire, et le lieu est attesté habité de longue date (compte rendu d'AG 2022) ; mais la nature et la durée exactes du titre liant les deux associations de La Porcheritz ne sont pas documentées."
+analyse:
+  forces:
+    - "Association loi 1901 : forme structurellement non lucrative, sans capital appropriable."
+    - "Objet statutaire explicite de propriété d'usage — détenir des bâtiments pour des lieux solidaires et autogérés."
+    - "Inscrite dans le schéma CLIP : CLIP second membre garant de la non-revente, droit de veto réseau."
+  fragilites:
+    - "Statuts non publics : clause anti-revente et clause de dévolution non vérifiées sur pièces."
+    - "Acte d'achat du foncier (date, consistance, prix) non retrouvé dans les sources publiques, même si le lieu détenu est attesté habité (compte rendu d'AG du CLIP 2022)."
+    - "Gouvernance, comptes et transparence non documentés."
+  leviers:
+    - "Publier les statuts de l'association propriétaire (clause anti-revente, dévolution)."
+    - "Documenter l'acte d'achat — date, consistance et prix du bien porté."
+    - "Préciser le titre et le régime d'usage liant l'association propriétaire à l'association habitante."
+synthese: >
+  L'association La Porcheritz est le maillon « propriétaire » d'un montage de
+  propriété d'usage CLIP : association loi 1901 non lucrative, à l'objet
+  foncier protecteur explicite, fondée par l'association habitante et ayant CLIP
+  pour second membre garant de la non-revente. Le mécanisme d'inaliénabilité est
+  posé dans son principe, et le lieu qu'elle a vocation à détenir est attesté
+  habité (compte rendu d'AG du CLIP de janvier 2022) ; sa solidité foncière reste
+  à confirmer sur pièces — statuts non publics, acte d'achat non documenté.
+fiabilite: >
+  Faits relevés (sources : Assoce.fr, Net1901, Gralon, Pappers, Annuaire des
+  entreprises data.gouv.fr, site CLIP et compte rendu d'AG du CLIP du 29 janvier
+  2022, consultés les 31 mai et 1er juin 2026) :
+  association loi 1901 La Porcheritz, RNA W751224981 — réconciliée avec le SIREN
+  810886952 (même date de création 12 juin 2014, même objet, siège 15 rue Émile
+  Pierre Casel, 75020 Paris, NAF 9499Z « autres organisations fonctionnant par
+  adhésion volontaire ») —, objet de devenir propriétaire de bâtiments pour les
+  affecter à des lieux solidaires et autogérés — habitat ou profession — en
+  propriété d'usage ; inscription dans le schéma CLIP (association propriétaire,
+  CLIP second membre garant de la non-revente). Le compte rendu d'AG du CLIP du
+  29 janvier 2022 atteste que le lieu de Vichères est habité (collectif vivant
+  sur place) et que les associations propriétaires du réseau tiennent des AG
+  annuelles ; le modèle CLIP fait des occupant·es des locataires de la structure
+  propriétaire, les loyers remboursant l'emprunt. À confirmer : l'acte d'achat
+  du foncier (date, consistance, prix) non retrouvé dans les sources publiques ;
+  les statuts de l'association (clause anti-revente, clause de dévolution), la
+  composition de la gouvernance, la transparence des comptes, et le montant du
+  loyer et la durée du titre d'usage liant l'association propriétaire à
+  l'association habitante.
+voir_aussi: [clip, les-habitants-de-la-porcheritz]
+dossier:
+  identite:
+    rna: "W751224981"
+    siren: "810886952"
+    adresse: "15 rue Émile Pierre Casel, 75020 Paris"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association propriétaire non publiés ; clauses anti-revente et de dévolution à recouper."
+    - type: acte_montage
+      statut: inconnu
+      note: "Acte d'achat du foncier — date, consistance et prix du bien — non retrouvé dans les sources publiques ; le lieu détenu est néanmoins attesté habité (compte rendu d'AG du CLIP de janvier 2022)."
+    - type: rapport_financier
+      statut: inconnu
+sources:
+  - titre: "LA PORCHERITZ (W751224981) — Assoce.fr"
+    url: "https://assoce.fr/waldec/W751224981/LA-PORCHERITZ"
+  - titre: "LA PORCHERITZ (Paris) — Net1901"
+    url: "https://www.net1901.org/association/LA-PORCHERITZ,1303618.html"
+  - titre: "Association LA PORCHERITZ (SIREN 810886952, 75020 Paris) — Annuaire des entreprises (data.gouv.fr)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/la-porcheritz-810886952"
+  - titre: "Association LA PORCHERITZ (SIREN 810886952) — Pappers"
+    url: "https://www.pappers.fr/entreprise/la-porcheritz-810886952"
+  - titre: "CLIP — Les lieux (La Porcheritz (28) listée parmi les 17 lieux du réseau)"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "CLIP — Compte rendu de l'Assemblée Générale du 29 janvier 2022 (lieu habité, AG annuelles des associations propriétaires)"
+    url: "https://clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf"
+  - titre: "Qu'est-ce que le Clip ? (modèle : structure propriétaire emprunte pour acheter, occupant·es locataires, loyers remboursant l'emprunt)"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"

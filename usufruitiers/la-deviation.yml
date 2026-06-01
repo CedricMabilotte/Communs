@@ -1,0 +1,184 @@
+uid: la-deviation
+categorie: usufruitier
+nom: "La Déviation"
+sous_titre: "Association usagère et habitante animant le lieu de création de L'Estaque, à Marseille"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Marseille (L'Estaque, 16e arr.)"
+  departement: "Bouches-du-Rhône (13)"
+  region: "Provence-Alpes-Côte d'Azur"
+annee: 2019
+url: "https://www.ladeviation.org/"
+resume: >
+  La Déviation est l'association qui occupe et anime le lieu du même nom, une
+  ancienne cimenterie et carrière des hauteurs de L'Estaque, à Marseille. Une
+  quinzaine de membres actifs y font vivre un site autogéré de création et de
+  recherche artistique pluridisciplinaire, qui a accueilli plus d'une centaine
+  d'artistes en résidence sur 1 220 m² de bâti et 1 500 m² de terrain. Le lieu
+  est aussi habité : une dizaine d'habitats légers individuels sont installés
+  dans la carrière, occupés par les membres actifs qui y vivent, travaillent et
+  reçoivent. Le foncier est détenu par l'association propriétaire Parpaing
+  Libre, dont l'objet est d'empêcher la revente et d'affecter le bâti à un usage
+  solidaire et autogéré en propriété d'usage ; CLIP est le tiers garant de la
+  non-revente.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Parpaing Libre (association loi 1901 propriétaire)"
+  usufruitier: "La Déviation (association loi 1901 usagère et habitante)"
+  description: >
+    Le foncier de La Déviation est porté par l'association propriétaire Parpaing
+    Libre ; son usage est assuré par l'association usagère La Déviation, qui
+    occupe, habite et anime le lieu. Les deux associations sont distinctes —
+    l'une détient le bien et le soustrait au marché, l'autre en fait vivre
+    l'usage —, sur un schéma de propriété d'usage : l'association usagère est l'un
+    des deux seuls membres de Parpaing Libre, l'autre étant CLIP, chacun doté d'un
+    droit de veto sur la revente. La nature et la durée précises du titre d'usage
+    liant les deux associations ne sont pas documentées par les sources publiques.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 sans capital appropriable, à gouvernance autogérée par
+    une quinzaine de membres actifs qui occupent et habitent le lieu.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Le foncier est porté par l'association propriétaire Parpaing Libre, à l'objet anti-revente : les membres de l'association usagère ne peuvent ni revendre ni capter à titre privé la valeur du bien."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+  - critere: devolution_usufruitier
+    valeur: partiel
+    note: "Le sort de l'actif de l'association usagère en cas de dissolution (clause de dévolution statutaire) n'est pas publié. Mais la dévolution de l'usage est sourcée : la brochure Parpaing Libre et l'article Métropolitiques indiquent qu'en cas de défaillance de l'association usagère, Parpaing Libre et le CLIP s'engagent à confier l'usage du lieu à un autre collectif — l'usage ne retombe pas dans le marché. La structure usagère est l'association En Devenir (SIREN 789457306, déclarée le 22 octobre 2012, « autre création artistique »), confirmée par Arteplan comme l'un des deux membres de Parpaing Libre ; le texte de ses statuts n'est pas publié."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil structurellement non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans but lucratif : les sources (Journal Zibeline, Makery, montage Parpaing Libre) indiquent des membres bénévoles qui autofinancent les charges par leurs cotisations, et des recettes du lieu (guinguette, événements) affectées au remboursement des prêts et à l'entretien — sans partage de bénéfices."
+  - critere: une_voix
+    valeur: oui
+    note: "L'association réunit les membres actifs sur un principe d'autogestion ; le pouvoir n'est pas indexé sur un apport en capital."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Le lieu est autogéré : une quinzaine de membres actifs, qui l'occupent et l'habitent, décident collectivement de son usage et de sa programmation."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu accueille de nombreux artistes en résidence et des membres actifs s'y succèdent ; les modalités formelles d'entrée de nouveaux membres dans l'association ne sont pas documentées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "La publication des comptes et des décisions de l'association n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — faire vivre un lieu autogéré de création et de recherche artistique ouvert, accueillant des artistes en résidence — porte un intérêt général culturel."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le lieu a accueilli plus d'une centaine d'artistes en résidence et ouvre sa programmation au-delà de ses seuls membres : il ne sert pas un cercle restreint."
+  - critere: duree_usage
+    valeur: partiel
+    note: "La nature juridique et la durée chiffrée du titre d'usage (bail, convention) ne sont pas publiées. Mais l'horizon est sourcé : la brochure Parpaing Libre énonce que l'achat « garantit l'usage collectif ad vitam aeternam du lieu », et le modèle CLIP (Métropolitiques) inscrit l'occupation dans une perspective de long terme. L'usage est donc voulu pérenne, à durée indéfinie, et non précaire."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant les deux associations n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'association usagère est l'un des deux seuls membres de l'association propriétaire Parpaing Libre (l'autre étant CLIP), et y détient un droit de veto sur la revente (modèle CLIP, Métropolitiques) : l'articulation entre propriété et usage est explicite, loyale et donne voix statutaire à l'usager, même si le titre d'usage précis n'est pas publié."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'autogestion, l'habitat et la vie collective relèvent du partage et du bénévolat ; la résidence est accueillie « sur le principe du libre don » (brochure) et la guinguette propose « des produits locaux et des repas à prix libre » (brochure). Le lieu comporte aussi une part marchande organisée (restauration, guinguette, activités culturelles) dont l'article Métropolitiques précise qu'elle sert au remboursement des prêts d'acquisition — non à un profit distribué. Régime mixte prix-libre / marchand non lucratif."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le montant précis n'est pas publié ; mais le modèle CLIP dont relève le montage est non rentier (un loyer ne couvre que le remboursement des prêts et les charges, et à terme équilibre les charges — Métropolitiques), et les recettes du lieu alimentent ce remboursement."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La finalité affichée de l'association est la création artistique, la recherche et l'habitat de ses membres. Le site abrite un potager, un poulailler, des jardins (173 m²), des pins et des « après-midis jardinage » (brochure), mais ces éléments relèvent de l'agrément et de la vie collective, non d'une vocation déclarée envers le vivant non-humain. Aucune source ne place la protection du vivant parmi les fins de l'association."
+analyse:
+  forces:
+    - "Gouvernance autogérée : une quinzaine de membres actifs, occupant et habitant le lieu, décident collectivement."
+    - "Lieu ouvert : plus d'une centaine d'artistes accueillis en résidence."
+    - "Foncier soustrait au marché par l'association propriétaire Parpaing Libre, sous tiers garant CLIP."
+  fragilites:
+    - "Nature et durée précises du titre d'usage liant les deux associations non documentées (le droit de veto sur la revente, lui, est sourcé)."
+    - "Statuts complets, comptes et clause de dévolution de l'association non publiés."
+    - "Tarification de l'accueil en résidence non détaillée par les sources."
+  leviers:
+    - "Formaliser et publier le titre d'usage liant La Déviation à Parpaing Libre."
+    - "Documenter publiquement les statuts, les comptes et la clause de dévolution."
+    - "Préciser le régime d'accès au lieu et la place faite au vivant non-humain sur le site."
+  synthese: >
+    La Déviation est le maillon vivant d'un lieu en propriété d'usage : une
+    association autogérée d'une quinzaine de membres qui habitent et animent une
+    ancienne carrière de L'Estaque, devenue site de création artistique ouvert.
+    La propriété est verrouillée hors marché par l'association sœur Parpaing
+    Libre ; sa marge de progression tient à la publication du titre d'usage et du
+    fonctionnement interne du collectif.
+fiabilite: >
+  Faits vérifiés (sources ladeviation.org, Arteplan, Makery, Journal Ventilo et
+  CLIP, consultées en mai-juin 2026) : association usagère et habitante du lieu
+  de La Déviation à L'Estaque, une quinzaine de membres actifs, site autogéré de
+  création et de recherche artistique pluridisciplinaire, plus de cent artistes
+  accueillis en résidence, 1 220 m² de bâti et 1 500 m² de terrain, une dizaine
+  d'habitats légers en carrière où l'on vit, travaille et reçoit, foncier porté
+  par l'association propriétaire Parpaing Libre (dont l'association usagère est
+  l'un des deux seuls membres avec CLIP, chacun doté d'un droit de veto sur la
+  revente), membres bénévoles autofinançant les charges, recettes du lieu
+  (guinguette à prix libre, restauration, activités culturelles) affectées au
+  remboursement des prêts (Métropolitiques). La structure usagère est l'association
+  En Devenir (SIREN 789457306, déclarée le 22 octobre 2012), nommément l'un des deux
+  membres de Parpaing Libre avec le CLIP (Arteplan) — et non l'homonyme En Devenir 2
+  (SIREN 833981731, arts du spectacle vivant, créée le 2 octobre 2017). L'usage est
+  garanti « ad vitam aeternam » par la brochure Parpaing Libre, et en cas de
+  défaillance de l'usagère, Parpaing Libre et le CLIP s'engagent à confier l'usage à
+  un autre collectif. L'incendie du 8 juillet 2025 a détruit l'atelier bois/métal,
+  la boulangerie, l'atelier céramique et tous les logements de résidence, suivi de
+  coulées de boue ; une longue phase de reconstruction par chantiers participatifs
+  est engagée (Made in Marseille, France Bleu, fin 2025). Non confirmé : statuts
+  complets et comptes, texte d'une clause de dévolution statutaire, nature juridique
+  et durée chiffrée du titre d'usage, tarification détaillée de l'accueil en résidence.
+voir_aussi: [parpaing-libre, clip]
+dossier:
+  identite:
+    siren: "789457306"
+    adresse: "210 chemin de la Nerthe, 13016 Marseille (L'Estaque)"
+    note: "La structure usagère est l'association En Devenir (SIREN 789457306, déclarée le 22 octobre 2012, « autre création artistique »), qui anime le lieu sous le nom « La Déviation » et est nommément l'un des deux membres de Parpaing Libre (Arteplan : « L'association Parpaing Libre rassemble deux associations : En devenir et le CLIP » ; collectif créé en 2012). Une seconde association à la même adresse, En Devenir 2 (SIREN 833981731, arts du spectacle vivant, créée le 2 octobre 2017), existe aussi — vraisemblablement un véhicule sœur monté au moment du projet d'achat —, mais aucune source ne la désigne comme l'usagère membre de Parpaing Libre. L'usufruitière est donc En Devenir (789457306), pas En Devenir 2."
+  echelle:
+    personnes: "Une quinzaine de membres actifs ; plus de 100 artistes accueillis en résidence."
+    lieux: "1 lieu (halle et annexes, habitats légers en carrière)"
+    surface: "1 220 m² de bâti et 1 500 m² de terrain"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Titre d'usage liant l'association usagère à l'association propriétaire Parpaing Libre ; nature et durée non documentées."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: partiel
+      note: "Nature juridique et montant précis du titre d'usage non publiés ; mais l'usage est garanti « ad vitam aeternam » (brochure Parpaing Libre) et le modèle CLIP est non rentier — le loyer ne couvre que le remboursement des prêts d'acquisition et les charges, et à terme n'équilibre que les charges (Métropolitiques)."
+sources:
+  - titre: "La Déviation — site officiel"
+    url: "https://www.ladeviation.org/"
+  - titre: "La Déviation — Arteplan (surfaces, habitats légers en carrière)"
+    url: "https://arteplan.org/initiative/la-deviation/"
+  - titre: "La Déviation, site d'expérimentation artistique aux portes de L'Estaque — Makery"
+    url: "https://www.makery.info/en/2022/01/31/la-deviation-site-dexperimentation-artistique-aux-portes-de-lestaque-a-marseille/"
+  - titre: "La Déviation, lieu autogéré de création — Journal Zibeline (bénévolat, autofinancement, guinguette)"
+    url: "https://www.journalzibeline.fr/societe/a-marseille-la-deviation-sur-la-bonne-voie/"
+  - titre: "Trois dispositifs de lutte contre la spéculation foncière — Métropolitiques (double veto, loyer non rentier)"
+    url: "https://metropolitiques.eu/Trois-dispositifs-de-lutte-contre-la-speculation-fonciere.html"
+  - titre: "Association En Devenir (SIREN 789457306) — Annuaire des entreprises (data.gouv.fr)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/en-devenir-789457306"
+  - titre: "La Déviation — Arteplan (équipe : « Parpaing Libre rassemble En Devenir et le CLIP »)"
+    url: "https://arteplan.org/initiative/la-deviation/"
+  - titre: "Brochure « Libérons les parpaings » — Parpaing Libre (usage ad vitam aeternam, dévolution d'usage, libre don, prix libre)"
+    url: "http://www.ladeviation.org/wp-content/uploads/2018/05/ParpaingLibre_brochure_mai.compressed.pdf"
+  - titre: "À l'Estaque, des chantiers participatifs pour reconstruire La Déviation après l'incendie — Made in Marseille"
+    url: "https://madeinmarseille.net/a-la-une-marseille/196220-deviation-chantiers-participatifs-incendie/"
+  - titre: "CLIP — Les projets"
+    url: "https://clip.ouvaton.org/les-projets/"

@@ -576,6 +576,38 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "hautes-planches-bretoncelles",
+    "nom": "Les Hautes-Planches",
+    "categorie": "lieu",
+    "sous_titre": "Lieu d'habitat, d'accueil et d'activités en propriété d'usage CLIP, dans le Perche",
+    "idl": 76,
+    "idl_brut": 84,
+    "idl_intrinseque": 76,
+    "score_type": "calcule",
+    "completude": 0.8,
+    "axes": {
+      "1": 92,
+      "2": 100,
+      "3": 65,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 92,
+      "2": 100,
+      "3": 65,
+      "4": 100,
+      "5": 69
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Commun libre et vivant"
+  },
+  {
     "uid": "jardin-petit-pessicart",
     "nom": "Jardin du Petit Pessicart",
     "categorie": "lieu",
@@ -768,6 +800,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "la-deviation-marseille",
+    "nom": "La Déviation",
+    "categorie": "lieu",
+    "sous_titre": "Ancienne cimenterie de L'Estaque libérée en propriété d'usage, lieu de création habité, à Marseille",
+    "idl": 68,
+    "idl_brut": 72,
+    "idl_intrinseque": 68,
+    "score_type": "calcule",
+    "completude": 0.9,
+    "axes": {
+      "1": 81,
+      "2": 100,
+      "3": 65,
+      "4": 71,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 81,
+      "2": 100,
+      "3": 65,
+      "4": 71,
+      "5": 50
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Commun libre et vivant"
+  },
+  {
     "uid": "la-durette",
     "nom": "La Durette",
     "categorie": "lieu",
@@ -861,6 +925,38 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "la-porcheritz-perche",
+    "nom": "La Porcheritz",
+    "categorie": "lieu",
+    "sous_titre": "Habitat collectif du Perche en propriété d'usage CLIP, à Vichères (Eure-et-Loir)",
+    "idl": 44,
+    "idl_brut": 57,
+    "idl_intrinseque": 44,
+    "score_type": "calcule",
+    "completude": 0.55,
+    "axes": {
+      "1": 50,
+      "2": 100,
+      "3": 50,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 100,
+      "3": 50,
+      "4": 50,
+      "5": 50
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -1182,6 +1278,38 @@
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "moulinage-de-chirols",
+    "nom": "Le Moulinage de Chirols",
+    "categorie": "lieu",
+    "sous_titre": "Ancien moulinage de soie réhabilité en habitat et tiers-lieu, porté en propriété d'usage par une SAS gérée selon des principes coopératifs, en Ardèche",
+    "idl": 69,
+    "idl_brut": 73,
+    "idl_intrinseque": 69,
+    "score_type": "calcule",
+    "completude": 0.9,
+    "axes": {
+      "1": 83,
+      "2": 50,
+      "3": 80,
+      "4": 100,
+      "5": 61
+    },
+    "axes_intrinseques": {
+      "1": 83,
+      "2": 50,
+      "3": 80,
+      "4": 100,
+      "5": 61
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "SAS à capital variable gérée selon des principes coopératifs (porteur : SAS Le Moulinage de Chirols) + association loi 1901 (usufruitier des communs)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "nddl",
@@ -1888,6 +2016,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "la-porcheritz",
+    "nom": "Association La Porcheritz",
+    "categorie": "porteur",
+    "sous_titre": "Association propriétaire en propriété d'usage, second membre CLIP, à Paris",
+    "idl": 48,
+    "idl_brut": 61,
+    "idl_intrinseque": 56,
+    "score_type": "calcule",
+    "completude": 0.579,
+    "axes": {
+      "1": 50,
+      "2": 100,
+      "3": 70,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 100,
+      "3": 70,
+      "4": 100,
+      "5": 50
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "le-temps-des-possibles",
     "nom": "SAS Le Temps des Possibles",
     "categorie": "porteur",
@@ -1920,6 +2080,38 @@
     "nature_juridique": "Économie sociale marchande"
   },
   {
+    "uid": "les-donnettes",
+    "nom": "Les Donnettes",
+    "categorie": "porteur",
+    "sous_titre": "Association propriétaire du foncier des Hautes-Planches, co-membre du réseau CLIP",
+    "idl": 51,
+    "idl_brut": 62,
+    "idl_intrinseque": 51,
+    "score_type": "calcule",
+    "completude": 0.632,
+    "axes": {
+      "1": 69,
+      "2": 100,
+      "3": 70,
+      "4": 38,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 69,
+      "2": 100,
+      "3": 70,
+      "4": 38,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Commun libre et vivant"
+  },
+  {
     "uid": "lurzaindia-sca",
     "nom": "Lurzaindia (SCA)",
     "categorie": "porteur",
@@ -1950,6 +2142,38 @@
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Économie sociale marchande"
+  },
+  {
+    "uid": "parpaing-libre",
+    "nom": "Parpaing Libre",
+    "categorie": "porteur",
+    "sous_titre": "Association propriétaire du foncier de La Déviation, à L'Estaque, dédiée à la propriété d'usage",
+    "idl": 62,
+    "idl_brut": 69,
+    "idl_intrinseque": 62,
+    "score_type": "calcule",
+    "completude": 0.789,
+    "axes": {
+      "1": 65,
+      "2": 100,
+      "3": 78,
+      "4": 60,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 65,
+      "2": 100,
+      "3": 78,
+      "4": 60,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Commun libre et vivant"
   },
   {
     "uid": "sc-hameau-des-buis",
@@ -2075,6 +2299,38 @@
     "palier_label": "Libération partielle",
     "palier_couleur": "#bc5d3a",
     "forme_juridique": "Société coopérative d'intérêt collectif (SCIC)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "scic-moulinage-de-chirols",
+    "nom": "SAS Le Moulinage de Chirols",
+    "categorie": "porteur",
+    "sous_titre": "Société par actions simplifiée propriétaire et gestionnaire du Moulinage de Chirols, gérée selon des principes coopératifs, en Ardèche",
+    "idl": 58,
+    "idl_brut": 63,
+    "idl_intrinseque": 59,
+    "score_type": "calcule",
+    "completude": 0.842,
+    "axes": {
+      "1": 69,
+      "2": 50,
+      "3": 89,
+      "4": 64,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 69,
+      "2": 55,
+      "3": 89,
+      "4": 64,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Société par actions simplifiée (SAS) à capital variable, constituée comme société commerciale (RCS Aubenas, NAF 6820B) ; gérée selon des principes coopératifs (capital variable, parts anti-spéculatives, 1 personne = 1 voix) — sans statut coopératif (SCIC/SCOP) certifié au registre",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
     "nature_juridique": "Mutualisme d'usagers"
@@ -2429,6 +2685,38 @@
     "forme_juridique": "Association loi 1901",
     "montage_type": "demembrement",
     "montage_label": "Dissociation propriété / usage (démembrement)",
+    "nature_juridique": "Commun libre et vivant"
+  },
+  {
+    "uid": "association-moulinage-de-chirols",
+    "nom": "Association du Moulinage de Chirols",
+    "categorie": "usufruitier",
+    "sous_titre": "Association loi 1901 qui a porté la rénovation et anime la vie culturelle du Moulinage de Chirols, en Ardèche",
+    "idl": 58,
+    "idl_brut": 66,
+    "idl_intrinseque": 67,
+    "score_type": "calcule",
+    "completude": 0.765,
+    "axes": {
+      "1": 88,
+      "2": 50,
+      "3": 64,
+      "4": 88,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 64,
+      "4": 88,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
     "nature_juridique": "Commun libre et vivant"
   },
   {
@@ -3232,6 +3520,70 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "hautes-planches",
+    "nom": "Hautes Planches",
+    "categorie": "usufruitier",
+    "sous_titre": "Association habitante et usagère gérant le lieu des Hautes-Planches, dans le Perche",
+    "idl": 76,
+    "idl_brut": 89,
+    "idl_intrinseque": 77,
+    "score_type": "calcule",
+    "completude": 0.706,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 69
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 73
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Commun libre et vivant"
+  },
+  {
+    "uid": "la-deviation",
+    "nom": "La Déviation",
+    "categorie": "usufruitier",
+    "sous_titre": "Association usagère et habitante animant le lieu de création de L'Estaque, à Marseille",
+    "idl": 72,
+    "idl_brut": 77,
+    "idl_intrinseque": 75,
+    "score_type": "calcule",
+    "completude": 0.882,
+    "axes": {
+      "1": 88,
+      "2": 100,
+      "3": 86,
+      "4": 71,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 100,
+      "3": 86,
+      "4": 75,
+      "5": 59
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Commun libre et vivant"
+  },
+  {
     "uid": "le-village-vertical",
     "nom": "Coopérative Le Village Vertical",
     "categorie": "usufruitier",
@@ -3262,6 +3614,38 @@
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
     "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
+    "uid": "les-habitants-de-la-porcheritz",
+    "nom": "Les Habitants de la Porcheritz",
+    "categorie": "usufruitier",
+    "sous_titre": "Association habitante d'un habitat collectif solidaire et autogéré, à Vichères (Perche)",
+    "idl": 49,
+    "idl_brut": 62,
+    "idl_intrinseque": 51,
+    "score_type": "calcule",
+    "completude": 0.588,
+    "axes": {
+      "1": 75,
+      "2": 100,
+      "3": 50,
+      "4": 50,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 100,
+      "3": 50,
+      "4": 50,
+      "5": 59
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "reneta",

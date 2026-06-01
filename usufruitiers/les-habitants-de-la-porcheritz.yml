@@ -1,0 +1,171 @@
+uid: les-habitants-de-la-porcheritz
+categorie: usufruitier
+nom: "Les Habitants de la Porcheritz"
+sous_titre: "Association habitante d'un habitat collectif solidaire et autogéré, à Vichères (Perche)"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Vichères (Perche)"
+  departement: "Eure-et-Loir (28)"
+  region: "Centre-Val de Loire"
+annee: 2013
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  Les Habitants de la Porcheritz est l'association « habitante » du montage de
+  propriété d'usage CLIP de La Porcheritz, lieu d'habitat collectif du Perche, à
+  Vichères (Eure-et-Loir). Déclarée le 8 avril 2013 (RNA W751219283, SIREN
+  812406882), siège « La Cave » à Vichères, elle a pour objet de créer et gérer
+  un habitat collectif solidaire et autogéré et de mettre en place les
+  structures juridiques nécessaires. Selon le schéma CLIP, elle porte l'usage et
+  la gestion quotidienne du lieu et fonde l'association propriétaire La
+  Porcheritz, dont elle est membre. La résidence permanente du collectif est
+  désormais établie : le compte rendu d'AG du CLIP de janvier 2022 décrit La
+  Porcheritz comme un lieu membre habité — collectif vivant sur place, chantiers,
+  médiation interne, plénières, habitant·es représentant le lieu — et le réseau
+  distingue explicitement ces collectifs « qui vivent sur place ».
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Association La Porcheritz (association propriétaire, second membre CLIP)"
+  usufruitier: "Les Habitants de la Porcheritz (association habitante)"
+  description: >
+    Dans le schéma CLIP, l'association habitante Les Habitants de la Porcheritz
+    porte l'usage et la gestion du lieu et fonde l'association propriétaire La
+    Porcheritz, dont elle est membre aux côtés du réseau CLIP — second membre
+    garant de la non-revente. C'est l'association propriétaire qui détient le
+    foncier en propriété d'usage ; l'association habitante en fait vivre l'usage,
+    pour un habitat collectif solidaire et autogéré. La résidence du collectif
+    sur place est attestée par le compte rendu d'AG du CLIP de janvier 2022. À
+    confirmer : la nature et la durée du titre d'usage liant les deux associations
+    ne sont pas documentées par les sources publiques.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 : forme structurellement non lucrative, à l'objet
+    d'habitat collectif solidaire et autogéré. Maillon usager d'un montage de
+    propriété d'usage CLIP, dont la résidence permanente du collectif est attestée
+    (compte rendu d'AG du CLIP de janvier 2022). Réserve : la nature et la durée
+    du titre d'usage liant l'association habitante à l'association propriétaire ne
+    sont pas documentées.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Une association loi 1901 n'a pas de capital appropriable : ses membres ne peuvent ni revendre ni capter à titre privé la valeur du foncier, porté par l'association propriétaire."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une association loi 1901 n'a pas de parts ni de titres cessibles : aucune valeur n'est appropriable par un membre."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "L'existence d'une clause de dévolution désintéressée dans les statuts de l'association habitante n'est pas documentée par les sources."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Les Habitants de la Porcheritz est une association loi 1901 — personne morale de droit civil non lucrative — et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association loi 1901 ne partage pas de bénéfices : les éventuels excédents sont réinvestis dans l'objet — l'habitat collectif solidaire et autogéré."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Le principe « une personne, une voix » est usuel en association loi 1901, mais les statuts de l'association ne sont pas publiés : le mode de décision n'est pas documenté."
+  - critere: usagers_decident
+    valeur: partiel
+    note: "Le compte rendu d'AG du CLIP de janvier 2022 atteste un collectif d'habitant·es vivant sur place et s'autogérant (plénières, chantiers, médiation interne, décisions prises en présence) : la résidence et l'autogestion sont documentées. Le détail formel des règles de décision (statuts, organe) reste non publié."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "L'organisation de l'arrivée de nouveaux membres et du renouvellement n'est pas documentée par les sources."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "L'accessibilité des comptes et décisions aux membres et au public n'est pas documentée par les sources."
+  - critere: objet_ig
+    valeur: partiel
+    note: "L'objet — créer et gérer un habitat collectif solidaire et autogéré — relève d'un intérêt général (habitat digne, solidarité) ; sa portée au-delà d'un habitat partagé entre membres reste à préciser."
+  - critere: public_non_restreint
+    valeur: inconnu
+    note: "L'ouverture du lieu au-delà du cercle de ses habitant·es n'est pas documentée par les sources."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Une finalité explicite d'accueil ou de préservation du vivant non-humain n'est pas documentée par les sources."
+  - critere: duree_usage
+    valeur: partiel
+    note: "Le modèle CLIP, documenté par le réseau, fait de l'association habitante la locataire stable de l'association propriétaire, et le lieu est attesté habité de longue date (compte rendu d'AG 2022) ; mais la nature juridique et la durée exactes du titre liant les deux associations ne sont pas documentées."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant l'association habitante au foncier n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "L'articulation est claire dans le schéma CLIP : l'association habitante fonde l'association propriétaire et en est membre, aux côtés de CLIP garant — relation contractualisée par la structure même du montage."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Le modèle CLIP, documenté par le réseau, repose sur un loyer interne calibré pour rembourser l'emprunt d'acquisition (à prix coûtant, sans rendement) ; le principe non marchand est posé, mais le régime d'usage concret de La Porcheritz (gratuité, contribution, montant) n'est pas publié."
+  - critere: loyer_soutenable
+    valeur: partiel
+    note: "Le modèle CLIP, documenté par le réseau, prévoit un loyer versé par l'association habitante à l'association propriétaire, calibré pour rembourser l'emprunt (sans marge ni rendement) ; le principe d'un loyer soutenable est posé, mais son montant pour ce lieu n'est pas publié."
+analyse:
+  forces:
+    - "Association loi 1901 d'habitant·es : forme non lucrative, sans capital appropriable."
+    - "Objet explicite d'habitat collectif solidaire et autogéré, porté par les usager·es eux-mêmes."
+    - "Articulation claire dans le schéma CLIP : fonde l'association propriétaire et en est membre."
+  fragilites:
+    - "Nature et durée exactes du titre d'usage liant l'association habitante à l'association propriétaire non documentées."
+    - "Statuts, gouvernance, comptes et montant du loyer interne non publiés."
+    - "Acte d'achat du foncier (date, consistance, prix) non documenté, même si le lieu est attesté habité."
+  leviers:
+    - "Formaliser et publier le titre d'usage liant l'association habitante à l'association propriétaire (nature, durée, loyer)."
+    - "Publier les statuts, la clause de dévolution et le régime d'usage interne."
+    - "Documenter l'acte d'achat du foncier porté par l'association propriétaire."
+synthese: >
+  Les Habitants de la Porcheritz est le maillon usager d'un montage de propriété
+  d'usage CLIP : association loi 1901 d'habitant·es, à l'objet d'habitat collectif
+  solidaire et autogéré, qui fonde l'association propriétaire et en fait vivre
+  l'usage. La forme est non lucrative, l'articulation au porteur lisible, et la
+  résidence permanente du collectif sur place est désormais attestée (compte rendu
+  d'AG du CLIP de janvier 2022) ; restent à confirmer la nature et la durée
+  exactes du titre d'usage et le détail du régime interne.
+fiabilite: >
+  Faits relevés (sources : Assoce.fr, Pappers, Gralon, Annuaire des entreprises
+  data.gouv.fr, site CLIP et compte rendu d'AG du CLIP du 29 janvier 2022,
+  consultés les 31 mai et 1er juin 2026) : association
+  loi 1901 Les Habitants de la Porcheritz, RNA
+  W751219283, SIREN 812406882, déclarée le 8 avril 2013, siège RNA « La Cave » à
+  Vichères (28480) — l'établissement SIRENE est enregistré au 156 boulevard de
+  Magenta, 75010 Paris (NAF 9499Z) —, objet de créer et gérer un habitat
+  collectif solidaire et
+  autogéré et de mettre en place les structures juridiques nécessaires ;
+  inscription dans le schéma CLIP (association habitante fondant l'association
+  propriétaire La Porcheritz). Résidence permanente établie : le compte rendu
+  d'AG du CLIP de janvier 2022 décrit La Porcheritz comme un lieu membre habité
+  (collectif vivant sur place, chantiers, médiation interne, plénières,
+  habitant·es représentant le lieu), et le modèle CLIP fait des occupant·es des
+  locataires de la structure propriétaire (loyers remboursant l'emprunt). À
+  confirmer : la nature et la durée du titre d'usage liant l'association habitante
+  à l'association propriétaire, le montant du loyer interne, les statuts, la
+  gouvernance et la transparence des comptes.
+voir_aussi: [clip, la-porcheritz]
+dossier:
+  identite:
+    siren: "812406882"
+    rna: "W751219283"
+    adresse: "siège RNA « La Cave », 28480 Vichères ; établissement SIRENE 156 boulevard de Magenta, 75010 Paris"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association habitante non publiés en ligne par les sources consultées."
+    - type: acte_montage
+      statut: inconnu
+      note: "Titre d'usage liant l'association habitante à l'association propriétaire La Porcheritz ; nature et durée non documentées (le modèle CLIP fait de l'habitante une locataire de la propriétaire, mais le titre propre à ce lieu n'est pas publié)."
+    - type: rapport_financier
+      statut: inconnu
+sources:
+  - titre: "LES HABITANTS DE LA PORCHERITZ (W751219283) — Assoce.fr"
+    url: "https://assoce.fr/waldec/W751219283/LES-HABITANTS-DE-LA-PORCHERITZ"
+  - titre: "Association LES HABITANTS DE LA PORCHERITZ (SIREN 812406882) — Pappers"
+    url: "https://www.pappers.fr/entreprise/les-habitants-de-la-porcheritz-812406882"
+  - titre: "Les habitants de la Porcheritz (SIREN 812406882, étab. 75010 Paris) — Annuaire des entreprises (data.gouv.fr)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/les-habitants-de-la-porcheritz-812406882"
+  - titre: "Les habitants de la Porcheritz — habitat collectif, Vichères — Gralon"
+    url: "https://www.gralon.net/mairies-france/eure-et-loir/association-les-habitants-de-la-porcheritz-vicheres_W751219283.htm"
+  - titre: "CLIP — Les lieux (La Porcheritz (28) listée parmi les 17 lieux du réseau)"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "CLIP — Compte rendu de l'Assemblée Générale du 29 janvier 2022 (météo des lieux : La Porcheritz, collectif vivant sur place, chantiers, médiation)"
+    url: "https://clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf"
+  - titre: "Qu'est-ce que le Clip ? (modèle : occupant·es locataires de la structure propriétaire, loyers remboursant l'emprunt)"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
