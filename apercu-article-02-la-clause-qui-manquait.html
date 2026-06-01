@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La clause qui manquait — Terres Libérées</title>
+<meta name="description" content="Six libérations célèbres, un même point de rupture : un foncier qu&#x27;on pouvait vendre">
+<meta name="theme-color" content="#221f1a">
+<link rel="canonical" href="https://communs.actitude.org/revues/memoire/02-la-clause-qui-manquait/index.html">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Terres Libérées">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="La clause qui manquait — Terres Libérées">
+<meta property="og:description" content="Six libérations célèbres, un même point de rupture : un foncier qu&#x27;on pouvait vendre">
+<meta property="og:url" content="https://communs.actitude.org/revues/memoire/02-la-clause-qui-manquait/index.html">
+<meta property="og:image" content="https://communs.actitude.org/assets/og-default.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La clause qui manquait — Terres Libérées">
+<meta name="twitter:description" content="Six libérations célèbres, un même point de rupture : un foncier qu&#x27;on pouvait vendre">
+<meta name="twitter:image" content="https://communs.actitude.org/assets/og-default.svg">
+<style>
+
+:root{
+ --ink:#221f1a;--muted:#5f5849;--faint:#6e6655;--paper:#f5f2e9;--card:#fffdf6;
+ --line:#ddd4bf;--green:#4a7a3a;--green-dk:#356026;--terra:#bc5d3a;
+ --terra-dk:#8f3f25;--blue:#36748a;--blue-dk:#2a5566;--gold:#b0843a;
+ --gold-dk:#8a6420;--beige:#efe9d8;--beige-dk:#e6ddc6;
+ --axe-1:#bc5d3a;--axe-2:#4a6b8a;--axe-3:#36748a;--axe-4:#4a7a3a;--axe-5:#b0822f;
+ --radius:8px;--radius-sm:4px;--radius-pill:999px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ color:var(--ink);background:var(--paper);line-height:1.58;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.3rem;}
+a{color:var(--green-dk);}
+a:hover{color:var(--green);}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:var(--radius-sm);}
+
+/* utilitaire : visuellement masqué mais lisible par lecteur d'écran */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+ overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+.skiplink{position:absolute;left:-999px;top:0;background:var(--ink);
+ color:var(--paper);padding:.6rem 1rem;z-index:100;border-radius:0 0 var(--radius) 0;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.9rem;}
+.skiplink:focus{left:0;color:var(--paper);}
+
+/* échelle typographique */
+h1{font-size:2.6rem;line-height:1.15;letter-spacing:-.018em;margin:1.4rem 0 .6rem;}
+h2.sec{font-size:1.7rem;font-family:inherit;text-transform:none;
+ letter-spacing:-.01em;color:var(--ink);font-weight:600;
+ border-bottom:1px solid var(--line);padding-bottom:.4rem;margin:2.4rem 0 1.2rem;}
+h2.sec::before{content:"";display:inline-block;width:1.5rem;height:3px;
+ background:var(--terra);vertical-align:.35em;margin-right:.55rem;border-radius:2px;}
+h3{font-size:1.28rem;font-weight:600;letter-spacing:-.005em;margin:1.2rem 0 .4rem;}
+p{font-size:1.05rem;}
+.sans,.topnav,.toolbar,.tag,.axis-block,.card-meta,.enbref,.idl-badge,.fiab,
+.completude,.note,.crumb,.foot-links,.score-cap,.pal-chip,.fbtn,.count,
+.cat-n,.row-sub,table,.chip,.axe-legend,.crit-axe,.hero-kicker,.step-n,
+.sort-lab,.filter-lab,select,.no-result,.gloss-item dt{
+ font-family:-apple-system,system-ui,"Segoe UI",sans-serif;}
+
+/* masthead */
+.masthead{border-bottom:2px solid var(--ink);background:var(--paper);}
+.masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;
+ justify-content:space-between;gap:.6rem 1.4rem;padding-top:1.1rem;padding-bottom:.6rem;}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink);}
+.logo-mark{font-family:-apple-system,system-ui,sans-serif;font-size:1.2rem;font-weight:800;
+ letter-spacing:0;background:var(--green-dk);color:var(--paper);
+ padding:.32rem .5rem;border-radius:var(--radius);line-height:1;}
+.brand-name{font-size:1.4rem;font-weight:700;letter-spacing:-.01em;display:block;}
+.baseline{font-size:.76rem;color:var(--muted);font-family:-apple-system,system-ui,sans-serif;}
+@media (max-width:480px){.baseline{display:none;}}
+.topnav{display:flex;gap:1.05rem;flex-wrap:wrap;font-size:.88rem;}
+.topnav a{text-decoration:none;color:var(--muted);padding:.45rem .2rem;
+ display:inline-block;min-height:24px;
+ border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
+.topnav a:hover{color:var(--green-dk);border-bottom-color:var(--line);}
+.topnav a.active{color:var(--ink);font-weight:600;border-bottom-color:var(--terra);}
+/* la Méthode est la référence : un peu détachée des destinations */
+.topnav a.nav-ref{margin-left:auto;color:var(--faint);}
+@media (max-width:640px){.topnav a.nav-ref{margin-left:0;}}
+
+/* hub Annuaire — bloc « Commencer ici » (entrées dominantes) */
+.start-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:.6rem 0 .4rem;}
+.start-card{display:block;background:var(--beige);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.3rem 1.4rem;text-decoration:none;color:var(--ink);
+ transition:border-color .15s,box-shadow .15s;}
+.start-card:hover{border-color:var(--green);box-shadow:0 6px 20px rgba(33,29,24,.10);}
+.start-card h3{margin:0 0 .35rem;font-size:1.25rem;}
+.start-card p{font-size:.92rem;color:var(--muted);margin:.2rem 0 .6rem;}
+.acteurs-fold>summary.sec{cursor:pointer;width:fit-content;}
+.acteurs-fold>summary.sec .fold-hint{font-weight:400;font-size:.8rem;color:var(--muted);text-transform:none;letter-spacing:0;}
+
+main.wrap{padding-bottom:4rem;}
+
+/* hero */
+.hero{padding:3.4rem 0 2.6rem;border-bottom:1px solid var(--line);}
+.hero-kicker{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;
+ color:var(--terra-dk);font-weight:700;margin:0 0 .4rem;}
+.hero h1{font-size:2.9rem;max-width:18ch;margin:.1rem 0 .7rem;}
+.hero-lead{font-size:1.22rem;line-height:1.5;color:var(--ink);max-width:46ch;}
+.hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem;}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1.7fr);gap:2.4rem;align-items:start;}
+.hero-entry .sec{margin:.2rem 0 .6rem;}
+/* la colonne de droite tient elle-même 2 colonnes d'encarts (→ 3 colonnes au total).
+   Double classe pour l'emporter sur la règle .intent-cards auto-fit déclarée plus bas. */
+.intent-cards.intent-cards-hero{grid-template-columns:1fr 1fr;gap:.7rem;margin:0;}
+.intent-cards-hero .intent-card{padding:.8rem .9rem;}
+.intent-cards-hero .intent-card h3{font-size:1rem;}
+.intent-cards-hero .intent-card p{font-size:.82rem;}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:1.6rem;}}
+@media (max-width:520px){.intent-cards.intent-cards-hero{grid-template-columns:1fr;}}
+.cta{display:inline-block;background:var(--green-dk);color:var(--paper)!important;
+ text-decoration:none;padding:.6rem 1.2rem;border-radius:var(--radius);font-weight:600;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.92rem;
+ transition:background .15s,box-shadow .15s;}
+.cta:hover{background:var(--green);}
+.cta:focus-visible{outline-color:var(--ink);}
+.cta-ghost{background:transparent;color:var(--green-dk)!important;border:1.5px solid var(--green);}
+.cta-ghost:hover{background:var(--card);}
+.lead{font-size:1.05rem;color:var(--muted);max-width:70ch;}
+.lead a,.prose a,.grille-intro a,.linkrow a{text-decoration:underline;
+ text-underline-offset:2px;text-decoration-thickness:1px;}
+
+/* fil de liens secondaires — dégradé par rapport au chapô .lead */
+.linkrow{font-family:-apple-system,system-ui,sans-serif;font-size:.9rem;
+ color:var(--faint);margin:.9rem 0 .2rem;}
+
+/* sommaire ancré de page de référence */
+.page-toc{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:1rem 0 .4rem;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.88rem;}
+.page-toc a{color:var(--green-dk);text-decoration:none;}
+.page-toc a:hover{text-decoration:underline;}
+
+/* comment lire — étapes */
+.steps{list-style:none;padding:0;margin:1.2rem 0;display:grid;gap:1rem;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.step{background:var(--card);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.1rem 1.2rem 1.2rem;position:relative;}
+.step-n{display:inline-flex;align-items:center;justify-content:center;
+ width:1.9rem;height:1.9rem;border-radius:50%;background:var(--terra-dk);
+ color:var(--paper);font-weight:700;font-size:.95rem;}
+.step h3{margin:.6rem 0 .3rem;}
+.step p{font-size:.95rem;color:var(--muted);}
+
+/* explain */
+/* chiffres-clés (accueil) */
+.chiffres{margin:1.4rem 0;}
+.stat-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:.6rem 0 1rem;}
+.stat{background:var(--beige);border-radius:var(--radius);padding:1rem 1.1rem;text-align:center;}
+.stat-n{display:block;font-size:2.4rem;line-height:1;font-weight:700;color:var(--green-dk);}
+.stat-l{display:block;margin-top:.4rem;font-size:.86rem;color:var(--muted);
+ font-family:-apple-system,system-ui,sans-serif;}
+a.stat{color:inherit;text-decoration:none;transition:box-shadow .15s,transform .15s;}
+a.stat:hover,a.stat:focus-visible{box-shadow:0 2px 10px rgba(0,0,0,.10);transform:translateY(-1px);}
+/* entrées par intention (accueil) */
+.intent-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
+.intent-card{background:var(--card);border:1px solid transparent;border-radius:var(--radius);
+ padding:1.1rem 1.2rem;transition:border-color .15s,box-shadow .15s;}
+.intent-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(33,29,24,.08);}
+.intent-card h3{margin-top:0;}
+.intent-card p{font-size:.92rem;color:var(--muted);}
+.intent-links{font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;}
+/* bandeau « À lire » — vignettes de récits sur l'accueil */
+.accueil-dossiers{margin:1.6rem 0;}
+/* 1.10 — section « En vue » : meilleures entrées par catégorie */
+.accueil-best{margin:1.6rem 0;}
+.accueil-best .best-grp{font-size:.92rem;text-transform:uppercase;
+ letter-spacing:.06em;color:var(--muted);margin:1.2rem 0 .2rem;}
+.dossier-vignettes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:.6rem 0;}
+.dossier-vignette{display:block;background:var(--card);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.1rem 1.2rem;text-decoration:none;color:var(--ink);
+ transition:border-color .15s,box-shadow .15s;}
+.dossier-vignette:hover{border-color:var(--terra-dk);box-shadow:0 4px 16px rgba(33,29,24,.08);}
+.dossier-vignette h3{margin:0 0 .35rem;font-size:1.12rem;line-height:1.3;}
+.dossier-vignette p{font-size:.9rem;color:var(--muted);margin:.2rem 0 .6rem;}
+.dossier-vignette .dv-meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;font-weight:600;color:var(--terra-dk);}
+/* aperçu de carte vivant sur l'accueil */
+.carte-teaser{margin:1.6rem 0;}
+.carte-teaser .sec{margin-top:0;}
+.carte-teaser .lead{max-width:60ch;}
+.carte-home-link{display:block;position:relative;border-radius:var(--radius);
+ overflow:hidden;text-decoration:none;border:1px solid var(--line);}
+.carte-home-map{height:340px;width:100%;pointer-events:none;background:#e8efe6;}
+.carte-home-cta{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
+ z-index:1001;background:var(--ink);color:#fff;padding:.6rem 1.3rem;border-radius:999px;
+ font-weight:600;font-size:.95rem;box-shadow:0 4px 18px rgba(0,0,0,.3);
+ font-family:-apple-system,system-ui,sans-serif;}
+.carte-home-link:hover .carte-home-cta{background:var(--green-dk);}
+@media (max-width:480px){.carte-home-map{height:260px;}}
+
+.explain-grid,.cat-cards{display:grid;gap:1rem;}
+.explain-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.explain-grid h3{margin-top:0;}
+.explain-grid p{font-size:.95rem;color:var(--muted);}
+.cat-cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.cat-card{display:block;background:var(--card);border:1px solid transparent;
+ border-radius:var(--radius);padding:1.1rem 1.2rem;text-decoration:none;
+ color:var(--ink);transition:border-color .15s,box-shadow .15s;}
+.cat-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(33,29,24,.08);}
+.cat-card h3{margin-top:0;}
+.cat-card p{font-size:.92rem;color:var(--muted);}
+.cat-n{font-family:-apple-system,system-ui,sans-serif;font-size:.83rem;
+ font-weight:600;color:var(--green-dk);}
+
+/* cards */
+.cards{list-style:none;padding:0;margin:1.2rem 0;display:grid;gap:.9rem;
+ grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+.card{position:relative;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius);padding:1rem 1.15rem;
+ transition:border-color .15s,box-shadow .15s;}
+.card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(33,29,24,.07);}
+/* stretched-link : l'indicateur de focus porte sur la carte entière, pas sur
+   le seul titre, pour refléter la cible cliquable réelle (audit a11y C, I5). */
+.card:focus-within{border-color:var(--green);
+ outline:2px solid var(--ink);outline-offset:2px;}
+.card-link:focus-visible{outline:none;}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;}
+.card h3{margin:.5rem 0 .2rem;font-size:1.16rem;line-height:1.3;}
+.card h3 a{text-decoration:none;color:var(--ink);}
+.card h3 a:hover{color:var(--green-dk);}
+/* stretched link : toute la carte est cliquable, zéro JS */
+.card-link::after{content:"";position:absolute;inset:0;border-radius:var(--radius);}
+.card-sub{font-size:.9rem;color:var(--muted);margin:.1rem 0;}
+.card-meta{font-size:.8rem;color:var(--faint);margin:.2rem 0 .5rem;}
+.card-viz{display:flex;justify-content:center;}
+
+/* tags */
+.tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;
+ padding:.2rem .5rem;border-radius:var(--radius-sm);color:var(--paper);white-space:nowrap;}
+.tag-lieu{background:var(--green-dk);}
+.tag-porteur{background:var(--terra-dk);}
+.tag-usufruitier{background:var(--blue-dk);}
+.tag-modele{background:var(--gold-dk);}
+.tag-reseau{background:var(--ink);}
+/* verdict calculé du lieu */
+.verdict{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
+ font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-pill);
+ white-space:nowrap;border:1.5px solid currentColor;}
+.verdict-sanctuaire{color:var(--green-dk);background:rgba(53,96,38,.10);}
+.verdict-hybride{color:var(--gold-dk);background:rgba(138,100,32,.10);}
+.verdict-marchand{color:var(--terra-dk);background:rgba(143,63,37,.10);}
+.verdict-na{color:var(--faint);background:transparent;font-weight:600;}
+/* carte des lieux (Leaflet) */
+.carte-map{height:70vh;min-height:400px;width:100%;border-radius:var(--radius);
+ border:1px solid var(--line);margin:.5rem 0 1rem;z-index:0;}
+.carte-legende{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin:.6rem 0;}
+.carte-leg-item{display:inline-flex;align-items:center;gap:.4rem;
+ font-size:.82rem;color:var(--muted);}
+.carte-leg-dot{display:inline-block;width:.85rem;height:.85rem;border-radius:50%;
+ border:1.5px solid var(--paper);box-shadow:0 0 0 1px var(--line);}
+.carte-pop{display:flex;flex-direction:column;gap:.3rem;min-width:9rem;}
+.carte-pop-nom{font-weight:700;font-size:.98rem;color:var(--green-dk);}
+.carte-pop-verdict{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;
+ font-weight:700;}
+.carte-pop-meta{font-size:.82rem;color:var(--muted);}
+.carte-pop-lieu{font-size:.8rem;color:var(--faint);}
+.carte-pop-link{font-size:.85rem;font-weight:600;}
+/* étiquettes de contexte de chaîne — porteur / réseau */
+.ctx-labs{display:inline;}
+.ctx-lab{display:inline-block;vertical-align:middle;white-space:nowrap;
+ margin:.1rem 0 .1rem .4rem;font-size:.68rem;font-weight:400;
+ padding:.13rem .5rem;border-radius:var(--radius-pill);background:var(--beige);
+ color:var(--muted)!important;border:1px solid var(--line);
+ text-decoration:none;line-height:1.4;}
+.ctx-lab:hover{border-color:var(--muted);color:var(--ink)!important;}
+.ctx-k{font-size:.58rem;text-transform:uppercase;letter-spacing:.05em;
+ font-weight:700;color:var(--faint);}
+
+/* pentagone radar de profil à cinq axes */
+.tri{width:118px;height:auto;display:block;flex:0 0 auto;}
+.tri.compact{width:100px;}
+.score-main .tri{width:160px;margin:.6rem auto 0;}
+.tri-frame{fill:none;stroke:var(--line);stroke-width:1;}
+.tri-grid{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:2 2;}
+/* remplissage neutre, découplé des couleurs d'axe (audit dataviz B, M5) */
+.tri-fill{fill:rgba(34,31,26,.10);stroke:var(--ink);stroke-width:1.6;
+ stroke-linejoin:round;}
+/* arête vers un axe non renseigné : hachurée, signale une donnée indéterminée */
+.tri-edge-na{stroke:var(--faint);stroke-width:1.6;stroke-dasharray:3 2;}
+.tri-vtx.tri-na{fill:var(--paper);stroke:var(--faint);stroke-width:1;
+ stroke-dasharray:2 1.5;}
+/* numéro d'axe : posé hors du sommet, donc en encre foncée et non en blanc */
+.tri-lab{font:700 8px -apple-system,system-ui,sans-serif;fill:var(--muted);
+ text-anchor:middle;dominant-baseline:central;}
+.tri-scale{font:6px -apple-system,system-ui,sans-serif;fill:var(--faint);
+ text-anchor:middle;}
+
+/* note de chaîne : écart indice intrinsèque / effectif sur la fiche */
+.chaine-note{font-size:.82rem;color:var(--faint);margin:.5rem 0 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+
+/* cinq pôles (page régimes) */
+.pole-grid{display:grid;gap:1rem;margin:1.1rem 0;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.pole-card{border:1px solid var(--line);border-top:3px solid var(--terra);
+ border-radius:var(--radius);padding:.5rem 1.1rem 1rem;background:var(--card);}
+.pole-card:nth-child(1){border-top-color:var(--green-dk);}
+.pole-card:nth-child(2){border-top-color:var(--green);}
+.pole-card:nth-child(3){border-top-color:var(--gold);}
+.pole-card:nth-child(4){border-top-color:var(--terra);}
+.pole-card:nth-child(5){border-top-color:var(--terra-dk);}
+.pole-rang{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;
+ color:var(--faint);font-weight:700;margin:.2rem 0 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+.pole-card h3{font-size:1.05rem;margin:.2rem 0 .3rem;}
+.pole-role{color:var(--faint);font-style:italic;font-size:.86rem;}
+.pole-line{font-size:.88rem;color:var(--muted);margin:.35rem 0;}
+
+/* idl badge — anneau */
+.idl-badge{display:inline-flex;flex-direction:column;align-items:center;
+ gap:.15rem;line-height:1.1;}
+.idl-ring{width:46px;height:46px;}
+.idl-badge.big .idl-ring{width:92px;height:92px;}
+.idl-track{fill:none;stroke:var(--beige-dk);}
+.idl-arc{fill:none;stroke:var(--pal,#999);stroke-linecap:round;}
+/* le chiffre de l'Indice est porté par var(--ink) : contraste > 12:1, la
+   couleur du palier restant sur l'anneau (audit a11y C, I1). */
+.idl-num{fill:var(--ink);font-weight:800;text-anchor:middle;
+ dominant-baseline:central;font-family:-apple-system,system-ui,sans-serif;}
+.idl-pal{font-size:.62rem;text-transform:uppercase;letter-spacing:.04em;
+ color:var(--muted);text-align:center;max-width:9rem;}
+/* sur la carte, le palier est déjà porté par la couleur de l'anneau et le
+   classement ; on masque le libellé répété pour alléger la grille (design B, M8) */
+.card .idl-pal{display:none;}
+.idl-badge.big .idl-pal{font-size:.78rem;letter-spacing:.06em;}
+.idl-estime .idl-arc{stroke-dasharray:4 3;}
+.idl-estime .idl-num{font-style:italic;}
+.idl-na{display:inline-block;border:2px solid var(--faint);color:var(--faint);
+ border-radius:var(--radius);padding:.3rem .6rem;font-family:-apple-system,system-ui,sans-serif;
+ font-size:.8rem;}
+
+/* jauge linéaire idl */
+.idl-scale{position:relative;margin:.8rem 0 .2rem;}
+.idl-scale-track{position:relative;display:block;height:12px;border-radius:6px;
+ overflow:hidden;background:var(--beige-dk);}
+.idl-seg{position:absolute;top:0;height:100%;}
+.idl-cursor{position:absolute;top:-3px;width:5px;height:18px;background:var(--ink);
+ border-radius:2px;box-shadow:0 0 0 1.6px #fff,0 1px 3px rgba(0,0,0,.4);
+ transform:translateX(-50%);}
+.idl-ghost{position:absolute;top:-6px;width:0;height:0;
+ border-left:3.5px solid transparent;border-right:3.5px solid transparent;
+ border-top:5px solid rgba(34,31,26,.34);transform:translateX(-50%);}
+.idl-scale-ends{display:flex;justify-content:space-between;font-size:.68rem;
+ color:var(--faint);font-family:-apple-system,system-ui,sans-serif;margin-top:.15rem;}
+
+/* axis bars */
+.axis-block{margin:.6rem 0;}
+.axis-row{display:flex;align-items:center;gap:.5rem;margin:.3rem 0;font-size:.82rem;}
+.axis-label{flex:0 0 8.4rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;
+ white-space:nowrap;}
+.axis-track{flex:1;height:.5rem;background:var(--beige-dk);
+ border-radius:var(--radius-sm);overflow:hidden;}
+/* liseré 1px var(--ink) : garantit le 3:1 de délimitation de la jauge
+   quelle que soit la couleur d'axe (audit a11y C, I2). */
+.axis-fill{display:block;height:100%;border-radius:var(--radius-sm);
+ box-shadow:inset 0 0 0 1px rgba(34,31,26,.55);}
+.axis-fill.axis-na{box-shadow:none;}
+.axis-fill.axis-na{background:repeating-linear-gradient(45deg,#ddd,#ddd 3px,#eee 3px,#eee 6px)!important;}
+.axis-val{flex:0 0 2.1rem;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;}
+.axis-block.compact .axis-label{flex-basis:5.6rem;font-size:.72rem;}
+.axis-block.compact .axis-row{font-size:.72rem;margin:.22rem 0;}
+
+/* toolbar / filtres */
+.toolbar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:1.3rem 0 .7rem;}
+.toolbar input[type=search]{flex:1;min-width:180px;font:inherit;font-size:.9rem;
+ padding:.45rem .65rem;border:1px solid var(--line);border-radius:var(--radius);
+ background:var(--card);font-family:-apple-system,system-ui,sans-serif;
+ transition:border-color .15s,box-shadow .15s;}
+.toolbar input[type=search]:focus{border-color:var(--green);
+ box-shadow:0 0 0 3px rgba(74,122,58,.15);outline:none;}
+.sort-lab{font-size:.85rem;color:var(--muted);}
+select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85rem;
+ padding:.4rem .6rem;border:1px solid var(--line);border-radius:var(--radius);
+ background:var(--card);color:var(--ink);cursor:pointer;}
+.count{margin-left:auto;color:var(--faint);font-size:.85rem;}
+.count b{color:var(--green-dk);}
+/* filtres avancés repliés — n'occupent pas de hauteur avant les cartes */
+.filter-details{margin:.4rem 0 .8rem;}
+.filter-details summary{font-family:-apple-system,system-ui,sans-serif;
+ font-size:.84rem;color:var(--muted);cursor:pointer;padding:.3rem 0;
+ width:fit-content;}
+.filter-details summary:hover{color:var(--green-dk);}
+.filter-details[open] summary{margin-bottom:.3rem;}
+.filter-bar{display:flex;flex-direction:column;gap:.5rem;margin:.2rem 0 1.2rem;}
+.filter-row{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;}
+.filter-lab{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;
+ color:var(--faint);font-weight:700;flex:0 0 4.4rem;}
+.fbtn{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.83rem;
+ min-height:32px;padding:.4rem .8rem;border:1px solid var(--line);
+ border-radius:var(--radius-pill);
+ background:var(--card);color:var(--muted);cursor:pointer;
+ transition:background .15s,color .15s,border-color .15s;}
+.fbtn:hover{border-color:var(--green);color:var(--ink);}
+.fbtn.active{background:var(--green-dk);color:var(--paper);border-color:var(--green-dk);}
+.fbtn:focus-visible{outline-color:var(--ink);}
+.no-result{background:var(--beige);
+ padding:.7rem 1rem;border-radius:var(--radius);font-size:.92rem;color:var(--muted);}
+.cat-foot{font-family:-apple-system,system-ui,sans-serif;font-size:.86rem;
+ margin:1.6rem 0 .4rem;}
+
+/* fiche */
+.crumb{font-size:.85rem;font-family:-apple-system,system-ui,sans-serif;
+ margin:1.2rem 0 0;color:var(--muted);}
+.crumb a{text-decoration:none;}
+.crumb a:hover{text-decoration:underline;}
+.crumb [aria-current]{color:var(--faint);}
+.fiche-head{margin:.5rem 0 1rem;}
+.fiche-head h1{margin:.3rem 0 .15rem;}
+.fiche-sub{color:var(--muted);font-size:1.08rem;line-height:1.45;margin:0;}
+
+/* score panel — composant primaire */
+.score-panel{display:flex;gap:1.6rem;flex-wrap:wrap;align-items:flex-start;
+ background:var(--card);border:1px solid var(--line);
+ border-left:3px solid var(--pal,var(--green));border-radius:var(--radius);
+ padding:1.6rem 1.8rem;margin:1.4rem 0;box-shadow:0 3px 14px rgba(33,29,24,.06);}
+.score-main{text-align:center;flex:0 0 12rem;max-width:12rem;}
+.score-main .axes-calc{font-size:.78rem;color:var(--muted);margin:.3rem 0 0;
+ line-height:1.35;overflow-wrap:break-word;word-break:normal;hyphens:auto;}
+.score-cap{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
+ color:var(--muted);margin:0 0 .35rem;}
+/* un seul séparateur : le gap suffit, le filet gauche est retiré (design B, M5) */
+/* un peu moins de largeur au centre (axes), un peu plus à Repères :
+   évite que Repères saute à la ligne quand axes-calc a un texte long. */
+.score-axes{flex:1;min-width:200px;}
+/* 3e colonne du panneau de score — repères compacts */
+.score-bref{flex:0 0 14rem;font-size:.8rem;}
+.score-bref dl{margin:.1rem 0 0;}
+.sb-item{display:flex;justify-content:space-between;gap:.7rem;
+ padding:.26rem 0;border-bottom:1px solid var(--line);}
+.sb-item:last-child{border-bottom:none;}
+.sb-item dt{color:var(--faint);}
+.sb-item dd{margin:0;text-align:right;overflow-wrap:anywhere;}
+.fiab{font-size:.82rem;margin:.6rem 0 0;font-weight:600;}
+.fiab-ok{color:var(--green-dk);}
+.fiab-gold{color:var(--gold-dk);}
+.fiab-faint{color:var(--faint);}
+.completude{font-size:.8rem;color:var(--faint);margin:.2rem 0 0;}
+
+/* 1.5 — objet-verdict composite : ligne en tête du panneau de score, pleine
+   largeur (force un retour avant les colonnes flex). Trois libellés distincts :
+   badge verdict coloré · nombre /100 · étiquette de palier. */
+.verdict-composite{flex:0 0 100%;display:flex;flex-wrap:wrap;align-items:center;
+ gap:.6rem 1rem;padding-bottom:1rem;margin-bottom:.3rem;
+ border-bottom:1px solid var(--line);}
+.vco-line{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
+ font-size:1.05rem;}
+.vco-sep{color:var(--faint);font-weight:400;}
+.vco-idl b{font-size:1.25rem;font-variant-numeric:tabular-nums;}
+.vco-idl .vco-unit{font-size:.78rem;color:var(--faint);margin-left:.1rem;}
+.vco-pal{font-size:.82rem;font-weight:600;color:var(--pal,var(--green-dk));
+ background:color-mix(in srgb,var(--pal,var(--green)) 14%,transparent);
+ border-radius:999px;padding:.12rem .6rem;}
+.vco-renvoi{font-size:.8rem;color:var(--muted);margin-left:auto;white-space:nowrap;}
+.vco-renvoi:hover{color:var(--green-dk);}
+
+/* 1.4 — « Plafonds appliqués » : une seule ligne repliable regroupant les
+   annotations de plafonnement (chaîne, maillon limitant, complétude). */
+.plafonds-fold{margin:.6rem 0 0;font-family:-apple-system,system-ui,sans-serif;}
+.plafonds-fold>summary{font-size:.82rem;color:var(--muted);cursor:pointer;
+ width:fit-content;}
+.plafonds-fold>summary:hover{color:var(--green-dk);}
+.plafonds-list{margin:.4rem 0 .2rem;padding-left:1.05rem;}
+.plafonds-list li{font-size:.82rem;color:var(--faint);margin:.35rem 0;
+ max-width:70ch;line-height:1.45;}
+.plafonds-list .chaine-renvoi{color:var(--muted);}
+
+/* clé de lecture de la fiche — repliée, sobre (audit pédagogie C, I1/I3) */
+.fiche-key{margin:-.4rem 0 1.2rem;font-family:-apple-system,system-ui,sans-serif;}
+.fiche-key summary{font-size:.84rem;color:var(--muted);cursor:pointer;
+ padding:.3rem 0;width:fit-content;}
+.fiche-key summary:hover{color:var(--green-dk);}
+.fiche-key ul{margin:.4rem 0 .2rem;padding-left:1.1rem;}
+.fiche-key li{font-size:.88rem;color:var(--muted);margin:.3rem 0;max-width:68ch;}
+
+/* 1.1 — rappel court sous le panneau de score (une phrase + lien Méthode) */
+.verdict-cle{font-size:.84rem;color:var(--muted);margin:-.6rem 0 1.2rem;
+ max-width:74ch;line-height:1.5;
+ font-family:-apple-system,system-ui,sans-serif;}
+.verdict-cle a{font-weight:600;}
+.fiche-dossier-lien{margin:.2rem 0 1rem;font-family:-apple-system,system-ui,sans-serif;
+ font-size:.92rem;font-weight:600;}
+
+/* grille repliable */
+.grille-fold>summary.sec{cursor:pointer;width:fit-content;}
+.grille-fold>summary.sec .fold-hint{font-weight:400;font-size:.8rem;color:var(--muted);
+ text-transform:none;letter-spacing:0;}
+
+/* droit de réponse du porteur (réversibilité) */
+.reponse-porteur{background:var(--paper,#fff);border:1px solid var(--line,#e0d9cc);
+ border-radius:var(--radius);padding:.8rem 1.1rem;margin:1.2rem 0;}
+.reponse-porteur .rp-chapeau{font-size:.85rem;color:var(--muted);
+ font-family:-apple-system,system-ui,sans-serif;margin:.2rem 0 .6rem;}
+.reponse-porteur .rp-texte{margin:.4rem 0;padding-left:.9rem;
+ border-left:3px solid var(--muted);font-style:italic;color:var(--ink);}
+.reponse-porteur .rp-meta{font-size:.82rem;color:var(--muted);text-align:right;margin:.3rem 0 0;}
+
+/* en bref — composant tertiaire (info) */
+.enbref{background:var(--beige);border-radius:var(--radius);
+ padding:1rem 1.3rem;margin:1.2rem 0;font-size:.92rem;}
+.enbref .bref-titre{font-size:.95rem;margin:0 0 .8rem;color:var(--muted);
+ font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+.enbref dl{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2.2rem;margin:0;}
+.enbref .bref-item{display:grid;grid-template-columns:max-content 1fr;
+ gap:.55rem 1rem;align-content:start;}
+.enbref dt{color:var(--muted);font-weight:600;}
+.enbref dd{margin:0;word-break:break-word;}
+.prose{font-size:1.05rem;max-width:68ch;}
+.prose.synthese{background:var(--beige);border-left:3px solid var(--green);
+ padding:.8rem 1.1rem;border-radius:var(--radius);max-width:none;}
+.grille-intro{font-size:.9rem;color:var(--muted);font-family:-apple-system,system-ui,sans-serif;}
+
+/* callouts */
+.callout{border-radius:var(--radius);padding:.8rem 1.1rem;margin:1.2rem 0;
+ background:var(--beige);}
+.callout p{font-size:.95rem;margin:.3rem 0;}
+.callout-note{border-left:3px solid var(--gold);}
+.callout-warn{border-left:3px solid var(--terra);}
+
+/* récap grille par axe */
+.grille-recap{margin:.8rem 0 1rem;display:flex;flex-direction:column;gap:.4rem;}
+.rk-row{display:flex;align-items:center;gap:.6rem;font-size:.82rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.rk-ax{flex:0 0 11rem;color:var(--muted);}
+.rk-bar{flex:0 0 130px;display:flex;height:.7rem;border-radius:var(--radius-sm);
+ overflow:hidden;background:var(--beige-dk);}
+.rk-seg{display:block;height:100%;}
+.rk-txt{color:var(--faint);font-size:.78rem;}
+
+/* corpus histogram */
+.corpus-hist{margin:1rem 0;}
+.corpus-hist svg{width:100%;max-width:420px;height:auto;}
+.corpus-hist figcaption{font-size:.82rem;color:var(--faint);
+ font-family:-apple-system,system-ui,sans-serif;margin-top:.3rem;}
+.hg-n{font:700 12px -apple-system,system-ui,sans-serif;text-anchor:middle;fill:var(--ink);}
+.hg-l{font:9px -apple-system,system-ui,sans-serif;text-anchor:middle;fill:var(--muted);}
+
+/* tables */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6rem 0;}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6rem 0;}
+table th,table td{border-bottom:1px solid var(--line);padding:.5rem .55rem;
+ text-align:left;vertical-align:top;}
+table th{color:var(--muted);font-weight:700;font-size:.72rem;text-transform:uppercase;
+ letter-spacing:.04em;border-bottom:1px solid var(--ink);}
+.fam-row td,.fam-row th{background:var(--beige);font-weight:700;font-size:.8rem;
+ text-transform:uppercase;letter-spacing:.04em;color:var(--muted);
+ border-top:2px solid var(--line);text-align:left;}
+.crit-name{font-weight:600;}
+.crit-note,.crit-def{color:var(--muted);font-size:.86rem;}
+.crit-oui{color:var(--green-dk);font-weight:700;}
+.crit-partiel{color:var(--gold-dk);font-weight:700;}
+.crit-non{color:var(--terra-dk);font-weight:700;}
+.crit-inconnu{color:var(--faint);font-style:italic;}
+.num{text-align:right;font-variant-numeric:tabular-nums;}
+.axe-dot{display:inline-block;width:.62rem;height:.62rem;border-radius:50%;
+ margin-right:.35rem;vertical-align:baseline;}
+.axe-1{background:var(--axe-1);}
+.axe-2{background:var(--axe-2);}
+.axe-3{background:var(--axe-3);}
+.axe-4{background:var(--axe-4);}
+.axe-5{background:var(--axe-5);}
+.axe-legend{font-size:.82rem;color:var(--muted);}
+.axe-legend .axe-dot{margin-left:.8rem;}
+.cat-legend{margin:.4rem 0 1rem;}
+
+/* classement — tri + mini-barres */
+.rank-tbl tbody tr:nth-child(even) td{background:rgba(221,212,191,.18);}
+.rank-tbl tbody tr:hover td{background:var(--beige);}
+.rank-tbl .rank{color:var(--faint);font-weight:700;font-variant-numeric:tabular-nums;}
+.rank-tbl .name a{font-weight:700;text-decoration:none;}
+.rank-tbl .name a:hover{text-decoration:underline;}
+.row-sub{display:block;font-size:.78rem;color:var(--faint);font-weight:400;}
+.rank-tbl td.idl-cell,.rank-tbl th.idl-cell{border-left:1px solid var(--line);}
+.idl-cell b{color:var(--ink);font-size:1.05rem;font-variant-numeric:tabular-nums;}
+.rank-tbl.small{max-width:640px;}
+th.sortable{white-space:nowrap;padding:0;}
+.th-sort{font:inherit;font-family:-apple-system,system-ui,sans-serif;
+ font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+ color:var(--muted);background:none;border:0;cursor:pointer;width:100%;
+ text-align:inherit;padding:.5rem .55rem;}
+th.num.sortable .th-sort{text-align:right;}
+.th-sort:hover{color:var(--terra-dk);}
+th.sortable::after{content:" \2195";opacity:.4;font-size:.8em;
+ display:inline-block;padding-right:.4rem;}
+th.sortable[aria-sort=ascending]::after{content:" \25B2";opacity:1;}
+th.sortable[aria-sort=descending]::after{content:" \25BC";opacity:1;}
+.sort-hint{margin:.4rem 0;}
+.axc{position:relative;}
+.axc .cbar{position:absolute;left:0;bottom:0;height:3px;width:var(--w,0);
+ background:var(--ac,#999);opacity:.85;}
+.axc .cv{position:relative;font-variant-numeric:tabular-nums;}
+.cbar-na{color:var(--faint);}
+
+/* analyse */
+.analyse-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ margin:1rem 0;}
+.an-col{border-radius:var(--radius);padding:.4rem 1rem 1rem;background:var(--card);}
+.an-col h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;}
+.an-col ul{margin:.3rem 0;padding-left:1.1rem;font-size:.92rem;}
+.an-col li{margin:.35rem 0;}
+.an-forces{border-top:3px solid var(--axe-4);}
+.an-frag{border-top:3px solid var(--axe-1);}
+.an-lev{border-top:3px solid var(--axe-3);}
+
+/* strat (grilles page) */
+.strat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+ padding:.6rem 1.2rem 1.2rem;margin:1rem 0 2rem;}
+
+/* chips — montages reliés avec profil */
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0;}
+.rel-grp{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;
+ color:var(--faint);font-weight:700;margin:1.1rem 0 .1rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.chip{display:inline-block;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius-pill);padding:.3rem .8rem;font-size:.85rem;
+ text-decoration:none;color:var(--ink);
+ font-family:-apple-system,system-ui,sans-serif;
+ transition:background .15s,border-color .15s,color .15s;}
+.chip:hover{border-color:var(--green);color:var(--ink);}
+.chip-rel{display:flex;align-items:center;gap:.55rem;border-radius:var(--radius);
+ padding:.5rem .8rem;}
+.chip-rel .tri.compact{flex:0 0 auto;width:54px;}
+.chip-txt{display:flex;flex-direction:column;line-height:1.25;}
+.chip-cat{font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;
+ color:var(--faint);}
+
+/* fiab box / sources — tertiaire */
+.fiab-box{background:var(--beige);border-radius:var(--radius);
+ padding:.7rem 1.2rem;margin:1.4rem 0;}
+.fiab-box h3{margin:.3rem 0;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;
+ font-family:-apple-system,system-ui,sans-serif;color:var(--muted);}
+.fiab-box p{font-size:.9rem;margin:.3rem 0;}
+.src-list{font-size:.9rem;}
+.backlink{font-family:-apple-system,system-ui,sans-serif;font-size:.88rem;margin-top:2rem;}
+
+/* classement legend */
+.paliers-legend{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0;}
+.pal-chip{font-size:.78rem;font-weight:600;border-left:3px solid var(--pal,#999);
+ background:var(--card);padding:.25rem .6rem;border-radius:var(--radius-sm);}
+.pal-chip em{color:var(--faint);font-style:normal;}
+
+/* axe cards (methode) — élargis d'un tiers */
+.axe-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(307px,1fr));
+ margin:1.1rem 0;}
+.axe-card{border:1px solid var(--line);border-top:3px solid var(--c,#999);
+ border-radius:var(--radius);padding:.4rem 1.1rem 1rem;background:var(--card);}
+.axe-card h3{font-size:1.05rem;}
+.axe-q{font-style:italic;color:var(--muted);font-size:.92rem;}
+.axe-card p{font-size:.9rem;}
+/* voix incarnée du double registre — glose en clair d'un concept */
+.enclair{color:var(--ink);border-left:3px solid var(--gold);padding-left:.75rem;
+ margin:.55rem 0;}
+code{background:var(--beige);padding:.1rem .35rem;border-radius:var(--radius-sm);font-size:.86rem;}
+.note{font-size:.83rem;color:var(--faint);}
+
+/* trois régimes du sol */
+.regime-grid{display:grid;gap:1rem;margin:1.1rem 0;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.regime-card{border:1px solid var(--line);border-top:3px solid var(--green);
+ border-radius:var(--radius);padding:.5rem 1.1rem 1rem;background:var(--card);}
+.regime-card:nth-child(2){border-top-color:var(--terra);}
+.regime-card:nth-child(3){border-top-color:var(--gold);}
+.regime-card h3{font-size:1.05rem;}
+.regime-card p{font-size:.9rem;margin:.45rem 0;}
+.regime-outils,.regime-but{color:var(--muted);}
+.regime-role{color:var(--faint);font-style:italic;font-size:.85rem!important;}
+.regimes-tbl th[scope=row]{font-weight:600;color:var(--ink);text-transform:none;
+ letter-spacing:0;font-size:.86rem;border-bottom:1px solid var(--line);}
+
+/* liens vers le glossaire — sobres : soulignement pointillé discret, pas de
+   couleur vive, pour ne pas surcharger la prose (audit pédagogie C, C1) */
+a.gloss-link{color:inherit;text-decoration:underline;
+ text-decoration-style:dotted;text-decoration-thickness:1px;
+ text-underline-offset:2px;text-decoration-color:var(--faint);}
+a.gloss-link:hover{color:var(--green-dk);text-decoration-color:var(--green-dk);}
+
+/* glossaire */
+.glossaire{margin:1.4rem 0;display:flex;flex-direction:column;gap:0;}
+.gloss-item{border-bottom:1px solid var(--line);padding:.9rem 0;}
+.gloss-item dt{font-size:1.05rem;font-weight:700;color:var(--ink);
+ margin-bottom:.2rem;}
+.gloss-item dd{margin:0;font-size:1.02rem;color:var(--muted);max-width:70ch;}
+
+/* comparateur — deux colonnes, réutilise les styles de carte et d'axes */
+.cmp-pickers{display:flex;gap:1rem;flex-wrap:wrap;margin:1.3rem 0 .6rem;}
+.cmp-pickers label{display:flex;flex-direction:column;gap:.25rem;flex:1 1 220px;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;
+ color:var(--muted);font-weight:600;}
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+.cmp-col{background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius);padding:1rem 1.15rem;}
+.cmp-col.cmp-empty{display:flex;align-items:center;justify-content:center;
+ min-height:8rem;border-style:dashed;}
+.cmp-col-head{display:flex;justify-content:space-between;align-items:flex-start;
+ gap:.5rem;}
+.cmp-idl{display:inline-flex;flex-direction:column;align-items:flex-end;
+ line-height:1.1;border-right:3px solid var(--pal,#999);padding-right:.5rem;}
+.cmp-idl b{font-size:1.2rem;font-variant-numeric:tabular-nums;color:var(--ink);
+ font-family:-apple-system,system-ui,sans-serif;}
+.cmp-name{font-size:1.2rem;margin:.6rem 0 .15rem;border:0;padding:0;}
+.cmp-name::before{display:none;}
+.cmp-sub{font-size:.88rem;color:var(--muted);margin:.1rem 0 .6rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.cmp-dl{display:grid;grid-template-columns:max-content 1fr;gap:.4rem 1rem;
+ margin:.8rem 0 .4rem;font-size:.86rem;
+ font-family:-apple-system,system-ui,sans-serif;}
+.cmp-dl dt{color:var(--muted);font-weight:600;}
+.cmp-dl dd{margin:0;}
+.cmp-link{font-family:-apple-system,system-ui,sans-serif;font-size:.86rem;
+ margin:.6rem 0 0;}
+@media(max-width:560px){.cmp-grid{grid-template-columns:1fr;}}
+
+/* footer */
+.footer{border-top:2px solid var(--ink);margin-top:3rem;background:var(--paper);}
+.footer .wrap{padding:1.6rem 1.3rem 2.2rem;}
+.footer p{font-size:.86rem;color:var(--muted);margin:.4rem 0;
+ font-family:-apple-system,system-ui,sans-serif;}
+.foot-links a{color:var(--green-dk);}
+
+/* tablette */
+@media(max-width:880px){
+ h1{font-size:2.1rem;}
+ .hero h1{font-size:2.2rem;}
+ h2.sec{font-size:1.45rem;}
+ .score-panel{flex-direction:column;}
+ .score-axes{border-left:none;border-top:1px solid var(--line);
+  padding-left:0;padding-top:1rem;}
+ .rk-ax{flex-basis:8rem;}
+}
+
+/* mobile */
+@media(max-width:620px){
+ h1{font-size:1.85rem;}
+ .hero{padding:2.4rem 0 1.8rem;}
+ .hero h1{font-size:1.95rem;}
+ .hero-lead{font-size:1.08rem;}
+ .enbref dl{grid-template-columns:1fr;}
+ .count{margin-left:0;}
+ .rk-row{flex-wrap:wrap;}
+ .rk-ax{flex-basis:100%;}
+ .rk-bar{flex:1 1 auto;}
+
+ /* nav — pleine largeur sous la marque, cibles tactiles 44px */
+ .masthead .wrap{padding-bottom:.3rem;}
+ .topnav{gap:.15rem .55rem;width:100%;margin-top:.4rem;
+  padding-top:.5rem;border-top:1px solid var(--line);font-size:.82rem;}
+ .topnav a{padding:.5rem .55rem;min-height:44px;
+  display:flex;align-items:center;}
+
+ /* classement — libellés contraints, sous-titre sur plusieurs lignes */
+ .rank-tbl{font-size:.82rem;}
+ .rank-tbl td,.rank-tbl th{padding:.4rem .4rem;}
+ .rank-tbl .name{min-width:11rem;max-width:13rem;}
+ .rank-tbl .row-sub{white-space:normal;line-height:1.25;}
+ .th-sort{padding:.45rem .4rem;}
+
+ /* régimes — le tableau déborde proprement, colonne critère figée */
+ .regimes-tbl{min-width:34rem;font-size:.82rem;}
+ .regimes-tbl th,.regimes-tbl td{padding:.45rem .5rem;}
+ .regimes-tbl th[scope=row]{position:sticky;left:0;
+  background:var(--card);z-index:1;}
+
+ /* toolbar / filtres — label pleine ligne, boutons et recherche élargis */
+ .toolbar{gap:.45rem;}
+ .toolbar > label{flex:0 0 100%;font-size:.8rem;
+  color:var(--muted);margin-bottom:.1rem;
+  font-family:-apple-system,system-ui,sans-serif;}
+ .fbtn{min-height:40px;padding:.5rem 1rem;}
+ .toolbar input[type=search]{flex:1 1 100%;min-width:0;}
+
+ /* fiche — score panel et axes empilés */
+ .score-panel{padding:1.1rem 1rem;}
+ .axis-row{flex-wrap:wrap;}
+ .axis-label{flex:1 1 100%;white-space:normal;
+  overflow:visible;margin-bottom:.1rem;}
+ .axis-track{flex:1 1 auto;}
+
+ /* cartes — colonne unique, triangle réduit */
+ .cards{grid-template-columns:1fr;}
+ .tri.compact{width:78px;}
+}
+
+/* très petit écran — hero resserré, CTA pleine largeur */
+@media(max-width:400px){
+ .hero{padding:1.9rem 0 1.4rem;}
+ .hero h1{font-size:1.7rem;}
+ .hero-lead{font-size:1rem;}
+ .hero-cta{gap:.5rem;}
+ .hero-cta .cta{flex:1 1 100%;text-align:center;}
+}
+
+</style>
+
+</head>
+<body>
+<a class="skiplink" href="#contenu">Aller au contenu</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="../../../index.html">
+      <span class="logo-mark">TL</span>
+      <span class="brand-txt"><span class="brand-name">Terres Libérées</span>
+      <span class="baseline">Annuaire critique des montages de libération des terres en France.</span></span>
+    </a>
+    <nav class="topnav"><a href="../../../index.html">Accueil</a><a href="../../../carte.html">Carte</a><a href="../../../dossiers/index.html">Dossiers</a><a href="../../../classement.html">Classement</a><a href="../../../methode.html" class="nav-ref">Méthode</a></nav>
+  </div>
+</header>
+<main class="wrap" id="contenu">
+<header class="article-head">
+  <p class="article-kicker"><a href="../index.html">Revue mémoire — sanctuaires fermés depuis 1900</a></p>
+  <h1>La clause qui manquait</h1>
+  <p class="article-soustitre">Six libérations célèbres, un même point de rupture : un foncier qu&#x27;on pouvait vendre</p>
+  <p class="article-meta">Écrit le <strong>1 juin 2026</strong><span class="sep">·</span>par <strong>Eozen</strong><span class="sep">·</span><span class="statut-chip statut-vivant">Vivant</span></p>
+</header>
+
+<article class="article-prose">
+  <p>Six lieux célèbres, admirés, étudiés. Certains ont tenu des décennies. Et
+pourtant, si l&rsquo;on relit aujourd&rsquo;hui leurs actes comme on relit un dossier, le
+même constat revient à chaque pièce : le foncier a fini <strong>vendu</strong>. Pas détourné,
+pas confisqué — vendu, régulièrement, dans les formes, à la dissolution. Ce
+n&rsquo;est pas un défaut de conviction. Ce n&rsquo;est pas une affaire de durée. C&rsquo;est une
+clause qui manquait à l&rsquo;acte : aucun de ces lieux n&rsquo;avait mis sa terre hors
+d&rsquo;atteinte de la vente.</p>
+<p>Trois manières de tenir un foncier reviennent dans ces six histoires. Toutes
+trois ont un point commun, et c&rsquo;est leur point de rupture : elles laissent la
+terre <strong>aliénable</strong>.</p>
+<h2>L&rsquo;achat privé — Aiglemont, Vaux</h2>
+<p>Les milieux libres anarchistes du début du siècle achetaient ou empruntaient
+leur terre à un particulier. À <strong>Aiglemont</strong> (Ardennes, 1903-1909), Fortuné
+Henry, justement pour ne pas dépendre d&rsquo;un donateur qui pourrait revendiquer le
+bien, <strong>achète lui-même</strong> le terrain — un hectare, quelques centaines de
+francs. La terre est alors sa propriété privée ; quand il se retire en 1909,
+elle se disperse. À <strong>Vaux</strong> (Aisne, 1902-1907), le « premier milieu libre »
+repose sur l&rsquo;apport d&rsquo;un propriétaire qui <strong>le reprend</strong>, forçant la colonie à
+louer ailleurs. Deux figures d&rsquo;une même fragilité : une terre achetée en nom
+propre ou prêtée reste à la merci de celui qui en tient le titre.</p>
+<h2>La société à parts ou à actions — Condé, « Terre Libérée »</h2>
+<p>Le <strong>phalanstère de Condé-sur-Vesgre</strong> (Yvelines, épisode fondateur 1832-1836)
+était porté par une <strong>société anonyme</strong> : l&rsquo;apport de terre valorisé 280 000
+francs, le reste en actions qu&rsquo;il fallait trouver. Le capital ne s&rsquo;est jamais
+réuni, le phalanstère fondateur a échoué ; la société et son foncier se sont
+ensuite transformés — société civile en 1860, copropriété aujourd&rsquo;hui. Le site
+survit ; la libération, non. À <strong>Luynes</strong>, la « <strong>Terre Libérée</strong> » de Louis
+Rimbault (1923-1949) — homonyme trompeur, sans lien avec la libération des
+terres au sens de ce corpus — était une cité végétalienne limitée à <strong>vingt
+actionnaires</strong> à maisons individuelles, sur un terrain acheté 16 000 francs.
+Après l&rsquo;accident de Rimbault, il cherche en vain à vendre ; à sa mort, sa veuve
+<strong>vend en viager</strong>. Une société à parts ou à actions peut toujours être
+dissoute et ses biens liquidés — et ils l&rsquo;ont été.</p>
+<h2>La coopérative — Familistère, Bellevilloise, Bascon</h2>
+<p>C&rsquo;est la forme la plus solide des trois, et la plus instructive parce qu&rsquo;elle a
+tenu le plus longtemps. Le <strong>Familistère de Guise</strong> (1880-1968) a porté le
+Palais social par l&rsquo;Association coopérative du Capital et du Travail de Godin
+pendant <strong>quatre-vingt-huit ans</strong> ; puis la coopérative s&rsquo;est dissoute en
+société anonyme en 1968, et les logements ont été progressivement <strong>vendus à
+leurs occupants</strong>. Le patrimoine collectif a été privatisé. La <strong>Bellevilloise</strong>
+(Paris, 1877-1936), coopérative de consommation et d&rsquo;éducation populaire, a fait
+<strong>faillite</strong> en 1936 et a été liquidée. La <strong>colonie naturiste et végétalienne
+de Bascon</strong> (Aisne, 1911-1951) tenait son foncier par une société coopérative
+fondée vers 1920 ; à la <strong>dissolution de la coopérative, en 1931, le domaine est
+vendu</strong> — il ne reste qu&rsquo;une colonie de vacances jusqu&rsquo;en 1951. Une part de
+coopérative est un titre : on peut le récupérer, le transmettre, le vendre. Les
+réserves impartageables protègent l&rsquo;excédent, pas les murs.</p>
+<h2>Tenir la formule n&rsquo;est pas verrouiller la terre</h2>
+<p>On pourrait objecter qu&rsquo;<a href="01-trois-lieux-qui-ont-tenu-la-formule.html">un précédent article</a>
+décrivait trois lieux — Boimondau, Nauvoo, la Ruche — comme ayant « tenu la
+formule jusqu&rsquo;au bout » : patrimoine collectif, aucun bénéfice servi,
+gouvernance d&rsquo;assemblée. C&rsquo;est exact. Mais <strong>tenir la formule</strong> et <strong>verrouiller
+le foncier</strong> sont deux clauses distinctes. La première protège le commun aussi
+longtemps que le collectif vit. La seconde le protège <strong>après</strong>. Ces trois lieux
+exemplaires ont tenu la formule — et leur terre a tout de même été liquidée : le
+foncier de Boimondau dans la procédure de dissolution, le domaine de la Ruche
+revendu pour apurer les dettes. La formule gouverne les vivants ; seule
+l&rsquo;inaliénabilité survit au collectif.</p>
+<p>C&rsquo;est pourquoi, dans la grille du corpus, la <strong>condition d&rsquo;inaliénabilité vient
+en premier</strong> — non par hiérarchie de mérite, mais par ordre de portance. Elle
+est la poutre : tout le reste s&rsquo;appuie dessus. Les outils qui la réalisent
+vraiment — fondation, <a class="gloss-link" href="../../../glossaire.html#g-fonds-de-dotation">fonds de dotation</a>, dévolution désintéressée opposable,
+propriété publique inaliénable, <a class="gloss-link" href="../../../glossaire.html#g-bail-emphyteotique">bail emphytéotique</a> consenti par un porteur
+hors-marché, ou le double verrou associatif d&rsquo;un réseau comme le CLIP — sont
+<strong>récents et rares</strong>. Les communautés anciennes ne les avaient pas, ou ne s&rsquo;en
+sont pas servies ; elles s&rsquo;en sont remises à la conviction et à la forme
+coopérative, qui protègent pendant la vie mais pas au-delà. L&rsquo;intention ne se
+transmet pas par acte. L&rsquo;inaliénabilité, si.</p>
+<h2>Ce que dit un sommet vide</h2>
+<p>On a cherché, dans les archives, un sanctuaire disparu : une libération fermée
+qui aurait, de son vivant, réuni le foncier verrouillé, l&rsquo;habitat du vivant, le
+milieu protégé, l&rsquo;usage non marchand et le travail hors salariat. On n&rsquo;en a pas
+trouvé. Ce vide n&rsquo;est pas un trou dans l&rsquo;archive — c&rsquo;est la même loi, lue par
+l&rsquo;autre bout : <strong>ce qui verrouille vraiment le foncier ne disparaît pas</strong> — la
+fondation survit au collectif, c&rsquo;est sa fonction même ; <strong>ce qui a disparu
+n&rsquo;avait pas verrouillé.</strong> Le sommet est vide au passé comme au présent, et pour
+une seule raison.</p>
+<p>Les six lieux de cet article n&rsquo;ont pas fini parce qu&rsquo;ils manquaient de grandeur.
+Ils ont fini parce que leur grandeur n&rsquo;avait jamais été inscrite dans la seule
+clause qui survit à ceux qui l&rsquo;écrivent.</p>
+<p><em>Libérer une terre, c&rsquo;est la soustraire à l&rsquo;exploitation abusive et la préserver
+comme habitat pour le vivant (<a href="../../methode.html">la méthode</a>).</em></p>
+</article>
+
+
+
+<section class="article-changelog">
+  <h2>Journal des modifications</h2>
+  <ol><li><span class="ch-date">1 juin 2026</span><span class="ch-version">v1</span><span>Article transversal — l&#x27;échec partagé à la condition 1 (verrou foncier), lu à travers six cas documentés.</span></li></ol>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>Terres Libérées — annuaire critique des montages de libération des terres en
+    France. Une évaluation selon un cadre assumé, <a href="../../../methode.html">non un
+    label</a>.</p>
+    <p class="foot-links"><strong>Découvrir</strong> ·
+    <a href="../../../dossiers/index.html">Dossiers</a> ·
+    <a href="../../../revues/index.html">Revues</a> ·
+    <a href="../../../regimes.html">Régimes et pôles</a> ·
+    <a href="../../../glossaire.html">Glossaire</a> ·
+    <a href="../../../themes.html">Thèmes</a></p>
+    <p class="foot-links"><strong>Explorer</strong> ·
+    <a href="../../../carte.html">Carte</a> ·
+    <a href="../../../lieux.html">Lieux</a> ·
+    <a href="../../../porteurs.html">Porteurs</a> ·
+    <a href="../../../usufruitiers.html">Usufruitiers</a> ·
+    <a href="../../../reseaux.html">Réseaux</a> ·
+    <a href="../../../modeles.html">Modèles voisins</a> ·
+    <a href="../../../classement.html">Classement</a> ·
+    <a href="../../../comparer.html">Comparer</a></p>
+    <p class="foot-links"><strong>Citer &amp; contribuer</strong> ·
+    <a href="../../../methode.html">Méthode</a> ·
+    <a href="../../../grilles.html">Grilles d'analyse</a> ·
+    <a href="../../../data.json">Données ouvertes (JSON)</a> ·
+    <a href="../../../changelog.html">Journal des versions</a> ·
+    <a href="../../../suggerer.html">Proposer un lieu</a></p>
+    <p>Terres Libérées · v2.0 · mai 2026</p>
+    <p>Site statique, généré automatiquement le 1 juin 2026.</p>
+  </div>
+</footer>
+</body>
+</html>

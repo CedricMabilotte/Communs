@@ -12,10 +12,16 @@ faisceau de cas) disparu ayant tenu sa formule jusqu'au bout.*
    lever : verrou hors-marché des parts (statuts).
 2. **La Bellevilloise** (Paris, 1877-1936) — coopérative de consommation + éducation
    populaire ; faillite datée (1936). Réserve : parts cessibles ? (statuts).
-3. **Asymétrie verrouillage→durée** (article *transversal*, contre-exemple) — les
-   **communes libertaires d'Ariège** (dispersion-éclair faute de foncier verrouillé)
-   vs les puristes qui *survivent* (Longo Maï, l'Arche, Le Cun, SCTL/Larzac). Leçon :
-   *ce qui verrouille le foncier dure ; ce qui ne le verrouille pas se disperse.*
+3. ~~**Asymétrie verrouillage→durée** (article *transversal*, contre-exemple)~~
+   **✅ TRAITÉ (1er juin 2026)** → `revues/memoire/articles/02-la-clause-qui-manquait.md`.
+   L'angle « asymétrie verrouillage→durée » est devenu un article transversal
+   adossé aux six cas documentés (Familistère, Bellevilloise, Bascon, Terre Libérée,
+   Aiglemont/Vaux, Condé) : tous échouent dès la condition 1 (foncier aliénable —
+   achat privé / société à parts / coopérative — vendu à la dissolution). Pivot
+   *tenir la formule ≠ verrouiller la terre* (réconcilie avec l'art. 01) ; clôture
+   sur le sommet vide. Longo Maï / l'Arche / SCTL restent disponibles comme
+   prolongement « les puristes qui survivent » si un futur article veut le miroir
+   positif.
 
 ## Priorité moyenne
 4. **L'Union de Lille** (coopérative monumentale, ~1892-1950 ; bâti démoli 1994,

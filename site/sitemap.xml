@@ -1039,6 +1039,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/revues/memoire/02-la-clause-qui-manquait/index.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/revues/memoire/01-trois-lieux-qui-ont-tenu-la-formule/index.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
