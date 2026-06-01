@@ -3507,19 +3507,27 @@ def render_index(all_sc, cfg, n_by_cat):
         + "".join(best_blocks) + '</section>') if best_blocks else ""
 
     body = f"""{tri_defs(axes_cfg)}<section class="hero">
-  <p class="hero-kicker">Annuaire critique · libération des terres</p>
-  <h1>La terre n'est pas une marchandise.</h1>
-  <p class="hero-lead">Pourtant elle se vend, se loue, s'épuise. Partout en
-  France, des collectifs l'en soustraient — et la rendent à un usage commun,
-  vivant et durable. Cet annuaire les recense sans complaisance : il distingue
-  les libérations réelles des montages qui en empruntent le vocabulaire, au
-  regard d'un cadre explicite et assumé — celui d'une économie citoyenne, non
-  lucrative, qui retire la terre du marché. C'est une prise de position, défendable et
-  contestable, non une mesure neutre.</p>
-  <p class="hero-cta">
-    <a class="cta" href="carte.html">Voir la carte</a>
-    <a class="cta cta-ghost" href="methode.html">Comprendre la méthode</a>
-  </p>
+  <div class="hero-grid">
+    <div class="hero-intro">
+      <p class="hero-kicker">Annuaire critique · libération des terres</p>
+      <h1>La terre n'est pas une marchandise.</h1>
+      <p class="hero-lead">Pourtant elle se vend, se loue, s'épuise. Partout en
+      France, des collectifs l'en soustraient — et la rendent à un usage commun,
+      vivant et durable. Cet annuaire les recense sans complaisance : il distingue
+      les libérations réelles des montages qui en empruntent le vocabulaire, au
+      regard d'un cadre explicite et assumé — celui d'une économie citoyenne, non
+      lucrative, qui retire la terre du marché. C'est une prise de position, défendable et
+      contestable, non une mesure neutre.</p>
+      <p class="hero-cta">
+        <a class="cta" href="carte.html">Voir la carte</a>
+        <a class="cta cta-ghost" href="methode.html">Comprendre la méthode</a>
+      </p>
+    </div>
+    <div class="hero-entry">
+      <h2 class="sec">Par où entrer</h2>
+      <div class="intent-cards intent-cards-hero">{intentions}</div>
+    </div>
+  </div>
 </section>
 
 <section class="chiffres corpus">
@@ -3547,11 +3555,6 @@ def render_index(all_sc, cfg, n_by_cat):
 {doss_section}
 
 {best_section}
-
-<section>
-  <h2 class="sec">Par où entrer</h2>
-  <div class="intent-cards">{intentions}</div>
-</section>
 
 <section>
   <h2 class="sec">Modèles voisins de référence</h2>
@@ -4528,6 +4531,16 @@ main.wrap{padding-bottom:4rem;}
 .hero h1{font-size:2.9rem;max-width:18ch;margin:.1rem 0 .7rem;}
 .hero-lead{font-size:1.22rem;line-height:1.5;color:var(--ink);max-width:46ch;}
 .hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem;}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1.7fr);gap:2.4rem;align-items:start;}
+.hero-entry .sec{margin:.2rem 0 .6rem;}
+/* la colonne de droite tient elle-même 2 colonnes d'encarts (→ 3 colonnes au total).
+   Double classe pour l'emporter sur la règle .intent-cards auto-fit déclarée plus bas. */
+.intent-cards.intent-cards-hero{grid-template-columns:1fr 1fr;gap:.7rem;margin:0;}
+.intent-cards-hero .intent-card{padding:.8rem .9rem;}
+.intent-cards-hero .intent-card h3{font-size:1rem;}
+.intent-cards-hero .intent-card p{font-size:.82rem;}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:1.6rem;}}
+@media (max-width:520px){.intent-cards.intent-cards-hero{grid-template-columns:1fr;}}
 .cta{display:inline-block;background:var(--green-dk);color:var(--paper)!important;
  text-decoration:none;padding:.6rem 1.2rem;border-radius:var(--radius);font-weight:600;
  font-family:-apple-system,system-ui,sans-serif;font-size:.92rem;

@@ -19,29 +19,45 @@ localisation:
   region: "Auvergne-Rhône-Alpes"
   code_postal: "07380"
 entites_pressenties:
-  - nom: "SCIC du Moulinage de Chirols"
+  - nom: "SCIC Le Moulinage de Chirols"
     forme: scic_sas_capital_variable
     siren: "845026277"
     role: porteur_et_usage
-  - nom: "Association (vie culturelle du lieu)"
+    nature_interet: non_lucratif_de_fait   # SCIC loi 1947 : lucrativité encadrée, 1 pers = 1 voix, réserves impartageables, parts statutairement anti-spéculatives (récupération de la mise sans plus-value)
+  - nom: "Association du Moulinage de Chirols (vie culturelle)"
     forme: association_loi_1901
     siren: null
-    role: animation
+    role: animation_et_usufruit_communs   # a porté la rénovation (créée 2016), anime la vie culturelle, locataire des espaces communs auprès de la SCIC
+echelle:
+  habitants_cible: "~30 résident·es permanent·es / jusqu'à 17 foyers (cible)"
+  habitants_installes: "1re phase travaux début 2024, 4 premiers foyers — effectif 2026 à confirmer"
+  membres_scic: "~60"
+  fondateurs: "23 signataires de l'acte d'achat (printemps 2019)"
+  surface_bati: "~4 500 m²"
+  surface_cultivee: "~2 000 m² de faysses (terrasses) en permaculture bio + ruches (~20) + poules (~60) + fruitiers"
 montage:
   type: propriete_collective   # SCIC propriétaire, propriété d'usage non spéculative
   articulations:
-    - usufruitier: _a_qualifier_scic-moulinage-de-chirols
-      titre: propriete_usage_parts
+    - usufruitier: scic-moulinage-de-chirols
+      titre: propriete_usage_parts        # parts sociales + droit d'usage (habitant·es et porteur·ses d'activité)
+    - usufruitier: association-moulinage-de-chirols
+      titre: location_espaces_communs     # l'association loue/anime les communs auprès de la SCIC
+  anti_speculatif: true   # pacte d'associés : récupération de la mise initiale sans plus-value (anti-gentrification) ; parts « V » de travail bénévole
   description: >
-    Ancien moulinage de soie (~4 500 m²) racheté en mai 2019 par une SCIC SAS à
-    capital variable. Accès à l'habitat par souscription de parts sociales + droit
-    d'usage (parts non spéculatives, pas de lots privatifs aliénables) : propriété
-    d'usage coopérative, foncier soustrait au marché par la forme SCIC.
+    Ancien moulinage de soie (~4 500 m²) + une partie des faysses (terrasses)
+    rachetés en mai 2019 par la SCIC SAS à capital variable, propriétaire et
+    gestionnaire. Accès à l'usage (habiter / travailler) par souscription de
+    parts sociales + droit d'usage : parts statutairement non spéculatives
+    (récupération de la mise sans plus-value), pas de lots privatifs aliénables,
+    engagement de travail bénévole (parts « V »). Gouvernance coopérative
+    1 personne = 1 voix, habitant·es et porteur·ses d'activité à poids égal.
+    Foncier (murs + terrasses) soustrait au marché par la forme SCIC.
 chaine:
   porteurs:
-    - _a_qualifier_scic-moulinage-de-chirols
+    - scic-moulinage-de-chirols            # propriété + gestion (SCIC, non lucratif de fait)
   usufruitiers:
-    - _a_qualifier_scic-moulinage-de-chirols
+    - scic-moulinage-de-chirols            # organise aussi l'usage (parts + droit d'usage)
+    - association-moulinage-de-chirols     # usufruit/animation des espaces communs
 sources_veille:
   - source: qualification-bascule-2026-05-31
     url: https://annuaire-entreprises.data.gouv.fr/entreprise/845026277
@@ -49,10 +65,19 @@ sources_veille:
     score: 0
 note_genese: >
   Promu en pré-fiche par l'opérateur (passe de qualification lot Bascule,
-  31 mai 2026). Verdict de lead : DANS LE PÉRIMÈTRE — mécanisme foncier formalisé
-  (SCIC en propriété d'usage). Deux réserves à trancher avant fiche : (1) le bien
-  est un BÂTI INDUSTRIEL (moulinage), non une terre agricole/naturelle — relève-
-  t-il de « terres libérées » ou d'une catégorie « tiers-lieux bâtis » à part ?
-  (2) place du vivant non-humain non documentée. Habitat humain permanent ≈30
-  résidents (en cours). Seul lien attesté : accompagnement par la Coopérative
-  Oasis ; aucun lien formel avec la Bascule Argoat.
+  31 mai 2026), puis APPROFONDI le 31 mai 2026 (recherche web). DÉCISION
+  OPÉRATEUR : lieu ÉLIGIBLE AU CORPUS — il y a un collectif d'habitat et une
+  activité diversifiée ; la réserve initiale « bâti industriel » est LEVÉE vers
+  l'inclusion. La recherche confirme par ailleurs un vivant non-humain tangible
+  (2 000 m² de faysses en permaculture, ~20 ruches, ~60 poules, fruitiers), donc
+  la 2e réserve (« vivant non documenté ») tombe aussi. Mécanisme foncier
+  formalisé : SCIC SAS loi 1947 propriétaire (murs + part des terrasses), usage
+  par parts sociales non spéculatives + droit d'usage (pacte d'associés : mise
+  récupérée sans plus-value ; parts « V » de travail). Verdict pressenti : HYBRIDE
+  (propriété d'usage coopérative + habitat collectif + dimension vivante).
+  Collectif : 23 fondateur·rices (2019), ~60 membres SCIC, cible ~30 résident·es /
+  17 foyers, premiers foyers en travaux depuis 2024. À confirmer pour fiche :
+  effectif installé en 2026, existence d'un collège habitant·es distinct, montants
+  d'accès à jour, statut des faysses non détenues par la SCIC. Seul lien externe
+  attesté : accompagnement par la Coopérative Oasis ; aucun lien formel avec la
+  Bascule Argoat.

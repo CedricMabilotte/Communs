@@ -51,7 +51,7 @@ extracted:
     siren: []
     siret: []
   montage_type: null
-statut: actif
+statut: rejete
 ---
 
 # Lead — Égrégore
@@ -178,3 +178,6 @@ présent.
   rhétorique) — communauté de visibilité, pas de partenariat foncier attesté.
 - **GFA Familial d'Essubras** (Saint-Christophe) : **écarté** — coïncidence
   de commune, lieu-dit distinct, aucun lien établi.
+
+## Décision opérateur — 31 mai 2026
+**Hors corpus (out).** Écarté par l'opérateur : montage foncier non documenté et objet associatif artistique/culturel, sans portage foncier de libération. Statut `rejete`. Réouvrable si un véhicule foncier inaliénable était documenté ultérieurement.

@@ -1,0 +1,72 @@
+categorie: lieu
+slug: la-porcheritz-perche
+nom: La Porcheritz
+statut_fiche: prefiche
+_source_lead: discovery/leads/la-porcheritz-perche.md
+_genere_le: '2026-05-31'
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: true
+  siren: true
+  geoportail_localisable: true
+
+localisation:
+  commune: "Vichères (Perche)"
+  departement: Eure-et-Loir
+  region: Centre-Val de Loire
+  adresse: "« La Cave », 28480 Vichères"
+  contexte: "Perche — milieu rural"
+
+entites_pressenties:
+  - nom: Les Habitants de la Porcheritz
+    role: association habitante / usagère
+    rna: W751219283
+    siren: "812406882"
+    note: "déclarée 08/04/2013 ; objet : créer et gérer un habitat collectif solidaire et autogéré, mettre en place les structures juridiques nécessaires ; siège à Vichères"
+  - nom: La Porcheritz
+    role: association propriétaire
+    rna: W751224981
+    note: "déclarée 12/06/2014, Paris ; objet : devenir propriétaire de bâtiments pour les affecter à des lieux solidaires/autogérés (habitat ou profession) en propriété d'usage"
+  - nom: CLIP (Collectif pour l'Institutionnalisation de la Propriété d'usage)
+    role: réseau garant — second membre de l'asso propriétaire, garant anti-revente
+
+montage:
+  type: propriete_collective
+  articulations:
+    - "asso habitante (Les Habitants de la Porcheritz) — usage, habitat collectif"
+    - "asso propriétaire (La Porcheritz, Paris) — détient le foncier, objet propriété d'usage"
+    - "CLIP — garant de la non-revente (droit de veto inter-lieux)"
+  description: >
+    Propriété d'usage formalisée dans sa structure (schéma CLIP à deux
+    associations + veto réseau). Le CLIP décrit La Porcheritz comme un projet
+    d'habitat collectif du Perche. À CONFIRMER : l'achat effectif (date, bien)
+    n'a pas été retrouvé dans les sources publiques consultées, et la
+    résidence permanente actuelle n'est pas directement documentée.
+
+chaine:
+  porteurs:
+    - "La Porcheritz (asso propriétaire, Paris) — détention du foncier en propriété d'usage"
+    - "CLIP — instance garante de l'inaliénabilité"
+  usufruitiers:
+    - "Les Habitants de la Porcheritz (asso habitante) — collectif d'habitat solidaire et autogéré"
+
+sources_veille:
+  - "https://assoce.fr/waldec/W751219283/LES-HABITANTS-DE-LA-PORCHERITZ"
+  - "https://assoce.fr/waldec/W751224981/LA-PORCHERITZ"
+  - "https://www.pappers.fr/entreprise/les-habitants-de-la-porcheritz-812406882"
+  - "https://www.net1901.org/association/LA-PORCHERITZ,1303618.html"
+  - "https://clip.ouvaton.org/les-projets/"
+
+note_genese: >
+  Pré-fiche générée le 2026-05-31 depuis le lead la-porcheritz-perche.md
+  (graine de l'étude réseau CLIP). Dans le périmètre avec réserve : le
+  montage formalisé d'inaliénabilité (propriété d'usage CLIP, double
+  association + veto réseau) est confirmé dans sa structure et le projet est
+  explicitement un habitat collectif (CLIP). Deux points restent À CONFIRMER
+  avant fiche publiée : (1) l'achat effectif — date et bien non retrouvés ;
+  (2) la résidence permanente actuelle. À approfondir : acte d'achat, statuts
+  de l'asso propriétaire (clause anti-revente, dévolution), nombre de
+  résident·es, place du vivant non-humain. Aucune donnée inventée ; mentions
+  « à confirmer » conservées.

@@ -80,6 +80,16 @@ main.wrap{padding-bottom:4rem;}
 .hero h1{font-size:2.9rem;max-width:18ch;margin:.1rem 0 .7rem;}
 .hero-lead{font-size:1.22rem;line-height:1.5;color:var(--ink);max-width:46ch;}
 .hero-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem;}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1.7fr);gap:2.4rem;align-items:start;}
+.hero-entry .sec{margin:.2rem 0 .6rem;}
+/* la colonne de droite tient elle-même 2 colonnes d'encarts (→ 3 colonnes au total).
+   Double classe pour l'emporter sur la règle .intent-cards auto-fit déclarée plus bas. */
+.intent-cards.intent-cards-hero{grid-template-columns:1fr 1fr;gap:.7rem;margin:0;}
+.intent-cards-hero .intent-card{padding:.8rem .9rem;}
+.intent-cards-hero .intent-card h3{font-size:1rem;}
+.intent-cards-hero .intent-card p{font-size:.82rem;}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:1.6rem;}}
+@media (max-width:520px){.intent-cards.intent-cards-hero{grid-template-columns:1fr;}}
 .cta{display:inline-block;background:var(--green-dk);color:var(--paper)!important;
  text-decoration:none;padding:.6rem 1.2rem;border-radius:var(--radius);font-weight:600;
  font-family:-apple-system,system-ui,sans-serif;font-size:.92rem;

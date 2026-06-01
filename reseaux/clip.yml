@@ -1,0 +1,113 @@
+uid: clip
+categorie: reseau
+nom: "CLIP"
+sous_titre: "Réseau de lieux en propriété d'usage"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+localisation: null
+annee: 2006
+url: "https://clip.ouvaton.org/"
+resume: >
+  CLIP — Réseau de lieux en propriété d'usage est une association loi 1901
+  créée en 2006, directement inspirée du Mietshäuser Syndikat allemand
+  (fédération de communs de logement, depuis 1987). Le réseau n'est pas un
+  lieu : c'est une faîtière qui fournit un cadre juridique de propriété
+  d'usage et fédère un archipel de lieux solidaires et autogérés qui se
+  garantissent mutuellement la non-revente. Pour chaque lieu, les occupant·es
+  forment une association habitante (ou usagère) qui fonde une seconde
+  association propriétaire ; CLIP en est le second membre et garantit
+  l'inaliénabilité. Mission déclarée : promouvoir des lieux en propriété
+  d'usage, tisser un réseau de solidarité entre eux, accompagner les nouveaux
+  projets. Le réseau revendique environ dix-sept lieux (chiffre à confirmer),
+  dont trois sont nommés et documentés publiquement.
+montage:
+  type: propriete_protegee
+  description: >
+    Le montage est porté lieu par lieu, à deux associations. Les futur·es
+    occupant·es forment une association habitante (ou usagère) qui porte
+    l'usage et la gestion quotidienne ; cette association en fonde une seconde,
+    l'association propriétaire, dont elle est membre et dont CLIP est le second
+    et unique autre membre. C'est cette association propriétaire qui achète le
+    bien — emprunt remboursé par les loyers, une part des loyers alimentant un
+    fonds de solidarité qui finance la création d'autres projets du réseau.
+    Toute décision d'un collectif, notamment une revente, est soumise à
+    l'approbation de tous les autres lieux, chacun disposant d'un droit de
+    veto. CLIP, membre de chaque association propriétaire, garantit la
+    non-revente et choisirait le cas échéant le collectif gestionnaire suivant.
+    La propriété est légitimée par l'usage reconnu par le collectif, non par le
+    titre ni par l'argent. Il s'agit de propriété d'usage associative, non d'un
+    démembrement notarié ni d'une foncière classique.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Inaliénabilité formalisée par montage associatif — statuts verrouillant la
+    non-revente et veto réseau exercé par CLIP comme co-membre de chaque
+    association propriétaire — hors marché. Réserve : les statuts types ne sont
+    pas tous publics et les clauses anti-revente et de dévolution restent à
+    recouper lieu par lieu.
+analyse:
+  forces:
+    - "Mécanisme d'inaliénabilité formalisée par double association et veto réseau."
+    - "Modèle décentralisé inspiré du Mietshäuser Syndikat, éprouvé depuis les années 2000."
+    - "Fonds de solidarité alimenté par les loyers, finançant la création d'autres lieux."
+  fragilites:
+    - "Propriété d'usage associative, sans démembrement notarié ni foncière : solidité variable selon les statuts de chaque lieu."
+    - "Statuts types et clauses de dévolution non tous publics, à recouper lieu par lieu."
+    - "Liste exhaustive des lieux non publiquement énumérée ; seuls trois sont documentés."
+  leviers:
+    - "Publier les statuts types (clause anti-revente et de dévolution) pour rendre lisible la garantie portée par le réseau."
+    - "Documenter la liste complète des lieux membres et leur situation."
+    - "Confirmer la résidence permanente du vivant lieu par lieu avant qualification en fiche-lieu."
+  synthese: >
+    CLIP est une faîtière porteuse d'un mécanisme d'inaliénabilité hors marché :
+    elle ne possède pas de foncier en propre mais devient co-membre de chaque
+    association propriétaire, ce qui lui donne un rôle de garant de la
+    non-revente. Sa valeur pour le corpus tient à ce modèle de propriété d'usage
+    associative, diffusé et mutualisé sur un archipel de lieux.
+fiabilite: >
+  Faits relevés (sources : site officiel clip.ouvaton.org, Revue Silence n°526
+  de 2023, Movilab, document CLIP de 2012, Politiques des communs, et entité
+  CLIP via annuaire-entreprises.data.gouv.fr, Pappers, net1901, Gralon —
+  consultées le 31 mai 2026, plusieurs via extraits WebSearch car non joignables
+  en fetch direct) : association loi 1901, SIREN 532346822, RNA W751205674,
+  siège Paris 75018, création en 2006, inspiration du Mietshäuser Syndikat,
+  montage à deux associations avec CLIP second membre et garant de la
+  non-revente, fonds de solidarité alimenté par les loyers. Non confirmé : date
+  exacte d'immatriculation SIRENE par rapport à 2006, nombre exact de lieux
+  (environ dix-sept revendiqués), liste exhaustive des lieux membres, statuts
+  types et clauses de dévolution. Lieux contextuels non confirmés comme membres :
+  La Générale (Paris, a accueilli une assemblée générale du réseau), Quartier
+  Libre des Lentillères (Dijon), Le Sabot — appartenance non établie.
+dossier:
+  identite:
+    siren: "532346822"
+    rna: "W751205674"
+    adresse: "Paris 75018"
+  echelle:
+    personnes: null
+    lieux: "Environ dix-sept lieux revendiqués (à confirmer) ; trois nommés et documentés publiquement"
+    surface_ha: null
+  pieces:
+    - type: presentation
+      statut: public
+      url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
+      note: "Présentation du réseau et du mécanisme de propriété d'usage sur le site officiel."
+    - type: statuts
+      statut: inconnu
+      note: "Statuts types des associations habitante et propriétaire non tous publiés en ligne ; clauses anti-revente et de dévolution à recouper lieu par lieu."
+    - type: rapport_financier
+      statut: inconnu
+# Membres pressentis — en pré-fiche (discovery/prefiches/), à promouvoir dans un
+# `membres:` à la racine une fois carvés en fiches-lieu (sinon liens cassés) :
+#   hautes-planches-bretoncelles · la-porcheritz-perche · la-deviation-marseille
+sources:
+  - titre: "CLIP — site officiel"
+    url: "https://clip.ouvaton.org/"
+  - titre: "Qu'est-ce que le Clip ? — site officiel"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
+  - titre: "Le Clip : un réseau de lieux hors de la propriété privée — Revue Silence n°526 (2023)"
+    url: "https://www.revuesilence.net/numeros/526-Alternatives-en-Catalogne/le-clip-un-reseau-de-lieux-hors-de-la-propriete-privee"
+  - titre: "Le Clip — Movilab (wiki)"
+    url: "https://movilab.org/wiki/Le_Clip"
+  - titre: "CLIP — SIREN 532346822 — annuaire-entreprises.data.gouv.fr"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/clip-reseau-de-lieux-en-propriete-dusage-532346822"

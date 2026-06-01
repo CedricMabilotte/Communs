@@ -1,0 +1,73 @@
+categorie: lieu
+slug: hautes-planches-bretoncelles
+nom: Les Hautes-Planches (Moulin de Haute Planche)
+statut_fiche: prefiche
+_source_lead: discovery/leads/hautes-planches-bretoncelles.md
+_genere_le: '2026-05-31'
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: true
+  siren: true
+  geoportail_localisable: true
+
+localisation:
+  commune: Bretoncelles
+  departement: Orne
+  region: Normandie
+  adresse: "3 lieu-dit Haute Planche, 61110 Bretoncelles"
+  contexte: "Perche — milieu rural"
+
+entites_pressenties:
+  - nom: Hautes Planches
+    role: association usagère / habitante
+    siret: "83460748300015"
+    siren: "834607483"
+  - nom: Les Donnettes
+    role: association propriétaire
+    rna: W613001936
+    note: "ne compte que deux membres : Hautes Planches et CLIP"
+  - nom: CLIP (Collectif pour l'Institutionnalisation de la Propriété d'usage)
+    role: réseau garant — second membre de l'asso propriétaire, autorité anti-revente
+
+montage:
+  type: propriete_collective
+  articulations:
+    - "asso usagère (Hautes Planches) — usage et gestion du lieu"
+    - "asso propriétaire (Les Donnettes) — détient le foncier, 2 membres : Hautes Planches + CLIP"
+    - "CLIP — garant de la non-revente / pérennité (modèle Mietshäuser Syndikat ; droit de veto inter-lieux)"
+  description: >
+    Propriété d'usage formalisée. Le corps principal de l'ancien moulin a été
+    acheté en octobre 2017 par l'association propriétaire Les Donnettes ; une
+    parcelle complémentaire (« du broc ») a été acquise par financement
+    participatif et chantiers collectifs. Le foncier est soustrait au marché :
+    CLIP, membre de l'asso propriétaire, garantit la non-revente, et tout lieu
+    du réseau dispose d'un veto sur la mise en marché des autres.
+
+chaine:
+  porteurs:
+    - "Les Donnettes (asso propriétaire) — détention du foncier"
+    - "CLIP — instance garante de l'inaliénabilité"
+  usufruitiers:
+    - "Hautes Planches (asso usagère) — collectif d'env. 15 personnes gérant le lieu"
+    - "résident·es permanent·es ; artisan·es et artistes en atelier ; 370 adhérent·es en 2024"
+
+sources_veille:
+  - "https://www.helloasso.com/associations/les-donnettes"
+  - "https://www.helloasso.com/associations/hautes-planches"
+  - "https://www.helloasso.com/associations/les-donnettes/collectes/achat-du-broc"
+  - "https://clip.ouvaton.org/les-projets/"
+  - "https://hoodspot.fr/associations/hautes-planches-83460748300015/"
+
+note_genese: >
+  Pré-fiche générée le 2026-05-31 depuis le lead
+  hautes-planches-bretoncelles.md (graine de l'étude réseau CLIP). Lieu le
+  plus solide des trois membres CLIP qualifiés : montage propriété d'usage
+  confirmé (achat oct. 2017, double association + veto réseau), habitat
+  permanent confirmé, activité riche (habitat, accueil, ateliers, imprimerie
+  d'art, gymnase, chorale, fanfare, cabaret, résidences). À approfondir avant
+  fiche publiée : statuts de Les Donnettes (clause anti-revente, dévolution),
+  nombre exact de résident·es permanent·es, place explicite du vivant
+  non-humain. Aucune donnée inventée ; points ouverts marqués « à confirmer »
+  dans le lead.

@@ -1,0 +1,71 @@
+categorie: lieu
+slug: la-deviation-marseille
+nom: La Déviation
+statut_fiche: prefiche
+_source_lead: discovery/leads/la-deviation-marseille.md
+_genere_le: '2026-05-31'
+_indices_structurels:
+  nom_propre: true
+  localisation: true
+  entite_juridique: true
+  montage_explicite: true
+  siren: false
+  geoportail_localisable: true
+
+localisation:
+  commune: "Marseille (L'Estaque, 16e arr.)"
+  departement: Bouches-du-Rhône
+  region: Provence-Alpes-Côte d'Azur
+  contexte: "ancienne cimenterie / carrière sur les hauteurs de L'Estaque, Val de Riaux — 1220 m² bâti, 1500 m² terrain"
+
+entites_pressenties:
+  - nom: Parpaing Libre (Parpaings Libres)
+    role: association propriétaire
+    note: "objet : devenir propriétaire de bâtiments pour les affecter à des lieux solidaires et autogérés (habitat ou profession) en propriété d'usage ; empêcher la revente. SIREN/RNA à confirmer."
+  - nom: La Déviation
+    role: association usagère / collectif gestionnaire
+    note: "env. 15 membres actifs ; SIREN/RNA à confirmer"
+  - nom: CLIP (Collectif pour l'Institutionnalisation de la Propriété d'usage)
+    role: réseau garant — second membre de l'asso propriétaire, veille anti-revente
+
+montage:
+  type: propriete_collective
+  articulations:
+    - "asso usagère (La Déviation) — usage, habitat léger, création artistique"
+    - "asso propriétaire (Parpaing Libre) — détient le foncier, objet anti-revente"
+    - "CLIP — instance de veille garantissant la non-revente (droit de veto inter-lieux)"
+  description: >
+    Propriété d'usage formalisée. Achat en 2019 pour 410 000 €, sans banque,
+    via de nombreux prêts solidaires (collecte « Libérons les parpaings »).
+    Le bien est porté par l'association propriétaire Parpaing Libre, dont
+    l'objet statutaire est d'empêcher la revente et d'affecter le bâti à des
+    usages solidaires et autogérés en propriété d'usage. La propriété est
+    légitimée par l'usage du collectif, non par l'argent ; CLIP est le second
+    membre garant.
+
+chaine:
+  porteurs:
+    - "Parpaing Libre (asso propriétaire) — détention du foncier, objet anti-revente"
+    - "CLIP — instance garante de l'inaliénabilité"
+  usufruitiers:
+    - "La Déviation (collectif usager) — env. 15 membres actifs"
+    - "une dizaine d'habitats légers individuels en carrière (on y vit, travaille, reçoit) ; plus de 100 artistes accueillis en résidence"
+
+sources_veille:
+  - "https://www.ladeviation.org/"
+  - "http://www.ladeviation.org/parpaing-libre/"
+  - "https://www.helloasso.com/associations/parpaing-libre/collectes/liberons-les-parpaings"
+  - "https://arteplan.org/initiative/la-deviation/"
+  - "https://clip.ouvaton.org/les-projets/"
+  - "https://www.makery.info/en/2022/01/31/la-deviation-site-dexperimentation-artistique-aux-portes-de-lestaque-a-marseille/"
+
+note_genese: >
+  Pré-fiche générée le 2026-05-31 depuis le lead la-deviation-marseille.md
+  (graine de l'étude réseau CLIP). Le point ouvert au départ — habitat
+  permanent vs simple lieu d'activité/résidence artistique — est levé : une
+  source (Arteplan) confirme une dizaine d'habitats légers individuels en
+  carrière, occupés par les membres actifs, où l'on vit, travaille et reçoit.
+  Montage propriété d'usage confirmé (achat 2019, double association + CLIP).
+  À approfondir avant fiche publiée : SIREN/RNA des deux associations, statuts
+  de Parpaing Libre (clause anti-revente, dévolution), place explicite du
+  vivant non-humain (carrière, falaise). Aucune donnée inventée.
