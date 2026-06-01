@@ -1,0 +1,163 @@
+uid: association-proprietaire-kerlano
+categorie: porteur
+nom: "Association propriétaire de Kerlano (en cours de constitution)"
+sous_titre: "Maillon propriétaire pressenti du montage de propriété d'usage CLIP de Kerlano, à Rosnoën — bascule en cours"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 (propriétaire CLIP — en cours de constitution)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Rosnoën"
+  departement: "Finistère (29)"
+  region: "Bretagne"
+  adresse: "Lieu-dit Kerlano, 29590 Rosnoën"
+annee: null
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  Dans le modèle de propriété d'usage du CLIP, chaque lieu repose sur deux
+  associations : une association usagère (ou habitante) qui fonde une seconde
+  association propriétaire, dont le CLIP est le second membre et le garant de la
+  non-revente. À Kerlano, le lieu a été acquis en indivision il y a une dizaine
+  d'années par les habitant·es ; le collectif a engagé un « auto-rachat » sous
+  forme associative (mise en commun d'environ 80 000 €) pour sortir des parts
+  d'indivision et entrer dans le schéma CLIP. Le maillon propriétaire — cette
+  association propriétaire que le modèle CLIP appelle — n'est pas encore
+  documenté comme constitué et titulaire du foncier : la bascule est EN COURS.
+  Un risque de préemption SAFER (ancien terrain agricole) a été signalé au PV de
+  l'AG du CLIP de 2022. Cette fiche décrit le maillon propriétaire pressenti
+  d'un montage encore en formation.
+montage:
+  type: propriete_collective
+  description: >
+    Le foncier de Kerlano, acheté en indivision il y a une dizaine d'années,
+    fait l'objet d'un auto-rachat associatif visant à le faire porter par une
+    association propriétaire au sens du modèle CLIP — association dont le
+    collectif usager et le CLIP seraient les membres, le CLIP garantissant la
+    non-revente. À la date de la fiche, la constitution effective de cette
+    association propriétaire, sa titularité du foncier et l'issue du risque de
+    préemption SAFER ne sont pas documentées : le montage est en cours de
+    formalisation et l'inaliénabilité n'est pas encore pleinement acquise.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Maillon propriétaire pressenti d'un montage CLIP — association loi 1901 sans
+    capital appropriable visée comme porteuse, avec le CLIP en co-membre garant.
+    Mais la bascule depuis l'indivision est EN COURS : la constitution effective
+    du porteur, sa titularité du foncier et l'issue du risque SAFER ne sont pas
+    établies.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le modèle CLIP vise une inaliénabilité formalisée par le veto réseau ; mais la bascule depuis l'indivision est en cours et l'association propriétaire n'est pas documentée comme constituée et titulaire du foncier : l'inaliénabilité n'est pas encore pleinement acquise."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "Une association propriétaire loi 1901 serait sans capital appropriable ; mais le foncier est encore en indivision (parts entre indivisaires), et l'auto-rachat n'est pas documenté comme abouti."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "L'association loi 1901 visée protège mieux qu'une société commerciale mais moins qu'une fondation ou une personne publique ; et le maillon propriétaire n'est pas encore documenté comme constitué."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence d'une clause de dévolution désintéressée dans les statuts de l'association propriétaire pressentie n'est pas documentée : la structure n'est pas documentée comme constituée."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Le modèle CLIP fait porter la propriété par une association loi 1901, forme structurellement non lucrative ; le collectif usager (Le Collectif de Kerlano) est lui-même une association déclarée."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association sans capital ne rémunère ni dividende ni plus-value ; l'auto-rachat vise à sortir le lieu de la logique de parts, non à dégager un rendement."
+  - critere: gestion_desinteressee
+    valeur: partiel
+    note: "Le projet relève d'une logique d'habitat solidaire autogéré et d'accueil de personnes en détresse, sans but lucratif apparent ; le caractère désintéressé de la gestion du porteur n'est pas formellement documenté."
+  - critere: independance_rendement
+    valeur: oui
+    note: "L'acquisition repose sur une mise en commun d'environ 80 000 € entre habitant·es et un soutien réseau, non sur des investisseurs attendant une plus-value."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La composition et le fonctionnement de l'organe de direction de l'association propriétaire pressentie ne sont pas documentés."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Le CLIP est appelé à être co-membre garant de l'association propriétaire ; l'association d'autres parties prenantes n'est pas documentée et la structure n'est pas constituée."
+  - critere: autogestion_usagers
+    valeur: oui
+    note: "Dans le modèle CLIP, l'association usagère est membre de l'association propriétaire : les usager·es de Kerlano participeraient aux décisions structurantes sur le bien, dont la revente sous veto réseau."
+  - critere: transparence
+    valeur: partiel
+    note: "La situation du lieu a été présentée au PV de l'AG du CLIP de 2022 (indivision, auto-rachat, risque SAFER) ; les statuts et comptes de l'association propriétaire ne sont pas publiés."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "L'auto-rachat vise explicitement à soustraire le lieu au marché et à entrer dans le schéma CLIP — objet de protection foncière affiché dans le projet ; sa traduction statutaire dans une association propriétaire constituée n'est pas documentée."
+  - critere: agrement_ig
+    valeur: non
+    note: "Aucune reconnaissance d'utilité publique ni agrément d'intérêt général n'est documenté pour le maillon propriétaire pressenti."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition à un risque de requalification fiscale n'est pas un enjeu documenté ; le risque documenté est ici la préemption SAFER, de nature différente."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "La situation du lieu a été rendue compte publiquement au sein du réseau CLIP (PV d'AG) ; une reddition de comptes formelle au-delà des membres n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Le modèle CLIP vise une mise à disposition en propriété d'usage hors logique de rendement ; le régime précis (gratuité, redevance) liant le porteur pressenti au collectif usager n'est pas documenté, le montage étant en cours."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le modèle vise une jouissance durable garantie par le veto réseau ; la nature et la durée du titre d'usage ne sont pas documentées et le porteur n'est pas constitué."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "La place d'une finalité de préservation du vivant non-humain dans l'objet du maillon propriétaire pressenti n'est pas documentée."
+analyse:
+  forces:
+    - "Trajectoire de libération foncière exemplaire : sortie d'une indivision vers le schéma CLIP par auto-rachat."
+    - "Maillon propriétaire visé sous forme associative non lucrative, avec le CLIP en garant."
+    - "Acquisition par mise en commun militante, hors logique de rendement."
+  fragilites:
+    - "Bascule EN COURS : l'association propriétaire n'est pas documentée comme constituée et titulaire du foncier."
+    - "Risque de préemption SAFER signalé (ancien terrain agricole) — issue non documentée."
+    - "Statuts, clause de dévolution et titre d'usage non documentés."
+  leviers:
+    - "Aboutir et publier la constitution de l'association propriétaire et le transfert du foncier."
+    - "Sécuriser l'issue du risque SAFER."
+    - "Publier les statuts (clause anti-revente et de dévolution) et formaliser le titre d'usage."
+  synthese: >
+    Le maillon propriétaire de Kerlano est, à la date de la fiche, un porteur
+    pressenti d'un montage CLIP encore en formation : le lieu sort d'une
+    indivision par auto-rachat associatif, mais l'association propriétaire
+    n'est pas documentée comme constituée et titulaire du foncier, et un risque
+    de préemption SAFER demeure. La trajectoire de libération est nette, son
+    aboutissement n'est pas encore acquis.
+fiabilite: >
+  Faits relevés (sources : page « Les lieux » du CLIP, PV de l'AG du CLIP du
+  29/01/2022, registres Pappers / annuaire-entreprises / net1901 / Gralon,
+  consultés le 1ᵉʳ juin 2026) : lieu de Kerlano acquis en indivision il y a une
+  dizaine d'années, auto-rachat associatif engagé (mise en commun ~80 000 €,
+  ~15 000 € restant à financer), entrée visée dans le schéma de propriété
+  d'usage du CLIP, risque de préemption SAFER signalé (ancien terrain agricole).
+  Non confirmé : constitution effective de l'association propriétaire CLIP, sa
+  titularité du foncier, ses identifiants et statuts, clause de dévolution,
+  issue du risque SAFER, nature et durée du titre d'usage, finalisation de la
+  bascule. Le montage est EN COURS : l'inaliénabilité n'est pas encore
+  pleinement formalisée.
+voir_aussi: [habitants-de-kerlano, clip]
+dossier:
+  identite:
+    adresse: "Lieu-dit Kerlano, 29590 Rosnoën"
+  echelle:
+    surface: "Lieu d'environ 6 000 m² (manoir, grande maison collective, caravanes, cabanes)."
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association propriétaire CLIP non documentés ; structure non documentée comme constituée."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Auto-rachat depuis l'indivision en cours ; transfert du foncier vers une association propriétaire CLIP non documenté comme abouti ; risque SAFER signalé."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Titre d'usage liant le porteur pressenti au collectif usager non documenté."
+sources:
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "PV de l'AG du CLIP du 29/01/2022 (météo de Kerlano : indivision, auto-rachat, risque SAFER)"
+    url: "https://clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf"

@@ -1,0 +1,155 @@
+uid: les-agites-du-local
+categorie: lieu
+nom: "Écolieu de Saleix"
+sous_titre: "Écolieu d'habitat collectif et de maraîchage bio, membre du réseau de propriété d'usage CLIP, à Sorges-et-Ligueux-en-Périgord (Dordogne)"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Sorges-et-Ligueux-en-Périgord"
+  departement: "Dordogne (24)"
+  region: "Nouvelle-Aquitaine"
+  adresse: "Rue Écolieu de Saleix, 24420 Sorges-et-Ligueux-en-Périgord"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.8783,45.2806&z=15"
+annee: null
+url: "https://les-agites-du-local.jimdosite.com/"
+resume: >
+  L'écolieu de Saleix, porté par l'association Les Agités du Local, est installé
+  sur une ancienne ferme familiale à Sorges-et-Ligueux-en-Périgord, en Dordogne.
+  Plus d'une dizaine de personnes — en yourtes, en familles, en solo, en
+  colocation et en maisons individuelles — y vivent collectivement depuis
+  environ dix-huit mois, dans un lieu d'accueil, de rencontre et de transmission
+  à faible empreinte carbone. Le lieu est quasi-autonome en eau (autonomie
+  électrique en projet) et autosuffisant en fruits et légumes cultivés en bio.
+  L'écolieu est membre du réseau CLIP — Réseau de lieux en propriété d'usage ;
+  mais le détail du montage (association propriétaire, forme et date de la
+  bascule en propriété d'usage) n'est pas documenté par les sources : il reste à
+  instruire sur statuts.
+montage:
+  type: propriete_collective
+  articulations:
+    - usufruitier: collectif-agites-du-local
+      titre: convention
+      note: "L'association Les Agités du Local porte l'usage de l'écolieu. Le lieu est membre du réseau CLIP, dont le modèle suppose une association propriétaire distincte garante de la non-revente ; mais cette association propriétaire et la nature du titre d'usage ne sont pas documentées par les sources. L'articulation reste à recouper sur statuts."
+  description: >
+    L'écolieu de Saleix est habité et animé par l'association Les Agités du
+    Local, sur une ancienne ferme familiale. Le lieu figure parmi les lieux du
+    réseau CLIP de propriété d'usage. Le modèle CLIP suppose une association
+    propriétaire — dont l'association usagère et le CLIP seraient les membres —
+    garante de la non-revente ; mais aucune source ne documente, pour Saleix,
+    cette association propriétaire, ses statuts, ni la forme ou la date de la
+    bascule en propriété d'usage. Le montage est ici pressenti, à instruire sur
+    statuts.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Chaîne associative non lucrative : une association usagère établie, un
+    maillon propriétaire CLIP pressenti mais non documenté. L'inaliénabilité est
+    l'inférence du réseau, non un fait recoupé sur statuts.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "L'appartenance au CLIP vise à soustraire le foncier au marché ; mais l'association propriétaire et le dispositif anti-revente ne sont pas documentés pour Saleix : la sortie du marché est inférée du réseau, non recoupée."
+  - critere: montage_documente
+    valeur: non
+    note: "Le montage de propriété d'usage de Saleix n'est pas documenté : aucune source ne précise l'association propriétaire, l'acte d'acquisition ni le titre d'usage liant l'usage à la propriété."
+  - critere: irreversibilite
+    valeur: inconnu
+    note: "Le modèle CLIP vise une irréversibilité par veto réseau ; aucune source ne documente le dispositif anti-revente pour Saleix : l'irréversibilité n'est pas recoupée."
+  - critere: origine_non_speculative
+    valeur: inconnu
+    note: "Les modalités de l'acquisition du foncier (dons, épargne, emprunt) ne sont pas documentées par les sources."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "L'association usagère est sans capital appropriable ; mais le maillon propriétaire n'est pas documenté : la non-cessibilité de l'ensemble de la chaîne n'est pas recoupée."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, clause environnementale) n'est documenté pour le lieu."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "L'association usagère est non lucrative ; le maillon propriétaire pressenti le serait aussi dans le modèle CLIP, mais il n'est pas documenté : la non-lucrativité globale de la chaîne n'est pas pleinement recoupée."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "Les maillons attendus de la chaîne sont des associations loi 1901 non lucratives (modèle CLIP) : aucun maillon commercial n'est documenté ni inféré."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "L'écolieu est habité et animé collectivement ; l'objet associatif vise explicitement la cohabitation et l'action collective : les usager·es décident ensemble de son devenir."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le lieu se présente comme lieu d'accueil, de rencontre et de transmission ; l'association formelle du voisinage ou des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le lieu accueille une diversité d'habitat et s'est étoffé sur ~18 mois ; le modèle CLIP organiserait la transmission via le réseau, mais ce dispositif n'est pas documenté pour Saleix."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "L'écolieu est habité, cultivé et animé par le travail des habitant·es dans une logique d'autosuffisance et de transmission ; aucun salariat de marché n'est documenté sur le travail qui fait vivre le lieu."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Lieu d'accueil, de rencontre et de transmission à faible empreinte carbone, promouvant agriculture, artisanat, culture et social : usage au service d'un intérêt qui dépasse ses seuls habitant·es."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "Le lieu se veut ouvert à l'accueil et à la transmission ; le degré d'ouverture effective au territoire au-delà du collectif résident n'est pas précisément documenté."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'écolieu cultive en bio, vise une faible empreinte carbone et une autonomie en eau — soin du milieu présent dans la pratique ; la reconnaissance explicite du vivant non-humain comme cohabitant au-delà de la production n'est pas affichée."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'écolieu repose sur une logique d'autosuffisance, de cohabitation et de partage ; le détail du régime d'accès (contributions, accueil) n'est pas documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant et le régime des contributions des habitant·es ou de la redevance au porteur pressenti ne sont pas documentés."
+  - critere: securite_jouissance
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant l'association usagère à la propriété ne sont pas documentées, le montage CLIP n'étant pas recoupé : la sécurité de jouissance ne peut être appréciée."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Maraîchage en bio, faible empreinte carbone et quasi-autonomie en eau : les pratiques attestées relèvent du soin du lieu et de la préservation du fonds."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "L'écolieu rural cultive en bio sur une ancienne ferme ; des espaces effectivement laissés ou aménagés pour le vivant non-humain (haies, mares, friches) ne sont pas documentés au-delà du volet productif."
+analyse:
+  forces:
+    - "Habitat collectif réel et durable : une dizaine de personnes vivant sur place depuis ~18 mois."
+    - "Volet agricole assumé : autosuffisance en fruits et légumes bio, quasi-autonomie en eau, faible empreinte carbone."
+    - "Association non lucrative à objet de cohabitation et d'action collective, membre du CLIP."
+  fragilites:
+    - "Montage CLIP non documenté : association propriétaire, titre d'usage et inaliénabilité non recoupés."
+    - "Sécurité de jouissance non appréciable faute de titre d'usage documenté."
+    - "Statuts non publiés ; protection du milieu et place du vivant non documentées au-delà du maraîchage."
+  leviers:
+    - "Identifier et documenter l'association propriétaire et le titre d'usage liant l'usage à la propriété."
+    - "Publier les statuts (clause de dévolution) et les comptes."
+    - "Préciser la finalité de préservation du vivant au-delà de la production."
+  synthese: >
+    L'écolieu de Saleix est un habitat collectif réel et autosuffisant, à faible
+    empreinte, porté par une association non lucrative et membre du réseau CLIP.
+    L'habitat, le maraîchage bio et la gouvernance collective sont bien attestés ;
+    mais le montage de propriété d'usage — association propriétaire, titre
+    d'usage, inaliénabilité — n'est pas documenté et reste, plus que pour tout
+    autre lieu CLIP de ce lot, à instruire sur statuts.
+fiabilite: >
+  Faits vérifiés (sources : page « Les lieux » du CLIP, registres Gralon /
+  societe.com / Pappers / Assoce.fr, site associatif, presse locale France Bleu
+  et AlterCampagne / AlterTour, consultés le 1ᵉʳ juin 2026) : écolieu de Saleix
+  porté par l'association Les Agités du Local (RNA W411008139, SIREN 852581404),
+  installé sur une ancienne ferme familiale à Sorges-et-Ligueux-en-Périgord ;
+  plus d'une dizaine d'habitant·es (yourtes, familles, solo, colocation, maisons
+  individuelles) vivant sur place depuis ~18 mois ; quasi-autonomie en eau,
+  autonomie électrique en projet ; autosuffisance en fruits et légumes cultivés
+  en bio ; faible empreinte carbone ; lieu d'accueil, de rencontre et de
+  transmission ; membre du réseau CLIP. Non confirmé : association propriétaire
+  au sens CLIP, forme et date de la bascule en propriété d'usage, statuts
+  (clause de dévolution), nature et durée du titre d'usage, surface du lieu,
+  régime des contributions, place du vivant non-humain au-delà de la production.
+chaine:
+  porteurs: [association-proprietaire-saleix]
+  usufruitiers: [collectif-agites-du-local]
+voir_aussi: [clip]
+sources:
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "Les Agités du local (RNA W411008139) — Gralon"
+    url: "https://www.gralon.net/mairies-france/dordogne/association-les-agites-du-local-sorges_W411008139.htm"
+  - titre: "Les Agités du Local — site associatif"
+    url: "https://les-agites-du-local.jimdosite.com/"
+  - titre: "Les Agités du Local (SIREN 852581404) — societe.com"
+    url: "https://www.societe.com/societe/les-agites-du-local-852581404.html"

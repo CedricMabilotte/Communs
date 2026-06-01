@@ -1,0 +1,165 @@
+uid: collectif-de-kerlano
+categorie: lieu
+nom: "Collectif de Kerlano"
+sous_titre: "Habitat collectif solidaire et autogéré, en bascule vers la propriété d'usage CLIP, à Rosnoën (Finistère)"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Rosnoën"
+  departement: "Finistère (29)"
+  region: "Bretagne"
+  adresse: "Lieu-dit Kerlano, 29590 Rosnoën (fond de la rade de Brest)"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-4.2167,48.2667&z=15"
+annee: null
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  Le Collectif de Kerlano est un habitat collectif solidaire et autogéré établi
+  au lieu-dit Kerlano, à Rosnoën, au fond de la rade de Brest. Sur un lieu
+  d'environ 6 000 m² articulé autour du manoir de Kerlano (bâti patrimonial
+  inventorié), d'une grande maison collective, de caravanes et de cabanes,
+  vivent une dizaine d'adultes et quatre enfants ; des rénovations sont en cours
+  et des espaces sont gardés comme zone d'accueil de personnes en détresse.
+  L'usage est porté par l'association Le Collectif de Kerlano (créée en 2022,
+  objet : habitat collectif solidaire et autogéré). Le lieu, acheté en
+  indivision il y a une dizaine d'années, est engagé dans un auto-rachat
+  associatif (mise en commun d'environ 80 000 €) pour basculer dans le schéma de
+  propriété d'usage du CLIP, dont il est membre. Cette bascule est EN COURS :
+  l'association porte l'usage, le maillon propriétaire CLIP reste à formaliser et
+  un risque de préemption SAFER (ancien terrain agricole) a été signalé.
+montage:
+  type: propriete_collective
+  articulations:
+    - usufruitier: habitants-de-kerlano
+      titre: convention
+      note: "L'association Le Collectif de Kerlano porte l'usage du lieu. La propriété, aujourd'hui en indivision, doit basculer vers une association propriétaire au sens du modèle CLIP, dont le maillon n'est pas documenté comme constitué. La nature et la durée du titre d'usage ne sont pas documentées : le montage est en cours."
+  description: >
+    Le lieu de Kerlano a été acheté en indivision il y a une dizaine d'années
+    par ses habitant·es ; le collectif a engagé un auto-rachat associatif pour
+    sortir des parts d'indivision et entrer dans le schéma de propriété d'usage
+    du CLIP — une association propriétaire dont le collectif usager et le CLIP
+    seraient les membres, le CLIP garantissant la non-revente. À la date de la
+    fiche, l'association propriétaire n'est pas documentée comme constituée et
+    titulaire du foncier, et un risque de préemption SAFER a été signalé : la
+    bascule est en cours et l'inaliénabilité n'est pas encore pleinement
+    formalisée. L'usage est aujourd'hui porté par l'association Le Collectif de
+    Kerlano.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Chaîne associative non lucrative en formation : une association usagère
+    établie, un maillon propriétaire CLIP en cours de constitution. Le foncier
+    sort d'une indivision vers le schéma CLIP, mais la bascule est EN COURS :
+    l'inaliénabilité n'est pas encore pleinement acquise.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "L'auto-rachat associatif vise à soustraire le lieu au marché via le schéma CLIP ; mais le foncier est encore en indivision et la bascule n'est pas documentée comme aboutie : la sortie du marché n'est pas pleinement acquise."
+  - critere: montage_documente
+    valeur: partiel
+    note: "La trajectoire (indivision, auto-rachat, entrée CLIP, risque SAFER) est documentée par le PV de l'AG du CLIP de 2022 ; mais l'acte de transfert, les statuts de l'association propriétaire et le titre d'usage ne sont pas publiés."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Le modèle CLIP vise une inaliénabilité par veto réseau ; mais tant que l'association propriétaire n'est pas constituée et titulaire du foncier, ce dispositif d'irréversibilité n'est pas encore en place : à coter à nouveau une fois la bascule actée."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition initiale relève d'une indivision habitante, et l'auto-rachat repose sur une mise en commun d'environ 80 000 € entre habitant·es et un soutien réseau, non sur un endettement spéculatif."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "L'association usagère est sans capital appropriable ; mais le foncier est encore détenu en indivision (parts entre indivisaires en cours de rachat) : la cessibilité résiduelle des parts d'indivision n'est pas encore éteinte."
+  - critere: milieu_protege
+    valeur: inconnu
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, clause environnementale) n'est documenté pour ce lieu rural."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Les maillons documentés — association usagère, maillon propriétaire associatif visé — sont non lucratifs et sans capital appropriable : aucun maillon ne capte de plus-value foncière à titre privé."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "Les maillons de la chaîne sont des associations loi 1901 non lucratives : aucun maillon commercial."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Habitat explicitement solidaire et autogéré ; les habitant·es gèrent le lieu collectivement, l'objet de l'association visant la gestion collective une fois le projet en place."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le CLIP est partie prenante du montage en formation et le lieu garde des espaces d'accueil ; l'association formelle du voisinage ou des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le modèle CLIP organise la transmission du lieu à un autre collectif via le réseau ; les modalités internes de renouvellement des habitant·es ne sont pas documentées, et le dispositif de transmission n'est pas encore en place faute de bascule actée."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Le lieu est habité, rénové et géré par le travail bénévole et autogéré des habitant·es (0 salarié au répertoire) ; aucun salariat de marché n'est documenté sur le travail qui fait vivre le lieu."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Habitat collectif solidaire qui garde des espaces d'accueil de personnes en détresse (hébergement social) : usage au service d'un intérêt qui dépasse ses seuls habitant·es."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "Le lieu connaît du passage et une petite programmation culturelle, mais « ce n'est pas un lieu centré sur l'activité » (PV 2022) : ouverture réelle mais non première, dans un cadre rural isolé."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Le lieu est rural (fond de la rade de Brest) ; la place d'une finalité de préservation du vivant non-humain (jardin, potager, animaux) dans le projet n'est pas documentée par les sources."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "L'habitat repose sur une logique de mise en commun et d'accueil solidaire ; le détail du régime (contributions, gratuité de l'accueil) n'est pas documenté."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Le montant et le régime des contributions des habitant·es ou de la redevance versée au futur porteur ne sont pas documentés, le montage étant en cours."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le collectif occupe le lieu de longue date (une dizaine d'années) ; mais le titre d'usage formel liant l'usage à la future association propriétaire n'est pas documenté et la bascule CLIP n'est pas actée : la sécurité de jouissance de long terme n'est pas encore pleinement formalisée."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Des rénovations sont en cours sur un bâti patrimonial ; les pratiques d'entretien et leur effet sur le lieu ne sont pas documentés."
+  - critere: place_au_vivant
+    valeur: inconnu
+    note: "Le lieu rural de ~6 000 m² offre un cadre où une place pourrait être faite au vivant ; aucun aménagement effectif pour le vivant non-humain (haies, mare, friches) n'est documenté par les sources."
+analyse:
+  forces:
+    - "Habitat collectif solidaire dense et ancien : une dizaine d'adultes, quatre enfants, sur ~6 000 m²."
+    - "Trajectoire de libération foncière exemplaire : sortie d'indivision par auto-rachat vers le schéma CLIP."
+    - "Chaîne associative non lucrative, travail bénévole et autogéré, accueil de personnes en détresse."
+  fragilites:
+    - "Bascule CLIP EN COURS : irréversibilité et titre d'usage non encore formalisés ; foncier encore en indivision."
+    - "Risque de préemption SAFER (ancien terrain agricole) signalé — issue non documentée."
+    - "Place du vivant non-humain et protection du milieu non documentées."
+  leviers:
+    - "Aboutir et publier la bascule CLIP : constitution du porteur, transfert du foncier, titre d'usage long."
+    - "Sécuriser l'issue du risque SAFER."
+    - "Documenter la finalité de préservation du vivant et l'usage du lieu rural."
+  synthese: >
+    Le Collectif de Kerlano est un habitat collectif solidaire et autogéré
+    établi de longue date, engagé dans une sortie d'indivision vers la propriété
+    d'usage CLIP. L'habitat et la chaîne associative non lucrative sont bien
+    réels ; mais la libération foncière est EN COURS — le maillon propriétaire
+    reste à constituer, le titre d'usage à formaliser, le risque SAFER à lever.
+    Le lieu illustre une trajectoire de libération en train de se faire plus
+    qu'un montage abouti : sa cotation du sol est volontairement prudente.
+fiabilite: >
+  Faits vérifiés (sources : page « Les lieux » du CLIP, PV de l'AG du CLIP du
+  29/01/2022, registres Pappers / annuaire-entreprises / net1901 / Gralon,
+  base Mérimée, consultés le 1ᵉʳ juin 2026) : habitat collectif solidaire et
+  autogéré au lieu-dit Kerlano (Rosnoën, fond de la rade de Brest), manoir de
+  Kerlano inventorié (base Mérimée), lieu d'environ 6 000 m² (manoir, grande
+  maison, caravanes, cabanes), une dizaine d'adultes et quatre enfants,
+  rénovations en cours, espaces d'accueil de personnes en détresse, association
+  Le Collectif de Kerlano (créée le 12/03/2022, RNA W292007744, SIREN
+  928728351, objet habitat collectif solidaire et autogéré), membre du CLIP,
+  lieu acquis en indivision il y a une dizaine d'années, auto-rachat associatif
+  engagé (~80 000 €), risque de préemption SAFER signalé. Non confirmé :
+  constitution de l'association propriétaire CLIP, transfert du foncier, statuts
+  et clause de dévolution, nature et durée du titre d'usage, issue du risque
+  SAFER, régime des contributions, place du vivant. La bascule en propriété
+  d'usage est EN COURS — l'inaliénabilité n'est pas encore pleinement formalisée.
+chaine:
+  porteurs: [association-proprietaire-kerlano]
+  usufruitiers: [habitants-de-kerlano]
+voir_aussi: [clip]
+sources:
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "PV de l'AG du CLIP du 29/01/2022 (météo de Kerlano : indivision, auto-rachat, risque SAFER)"
+    url: "https://clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf"
+  - titre: "Le Collectif de Kerlano (SIREN 928728351) — Pappers"
+    url: "https://www.pappers.fr/entreprise/le-collectif-de-kerlano-928728351"
+  - titre: "Le Collectif de Kerlano (RNA W292007744) — Gralon"
+    url: "https://www.gralon.net/mairies-france/finistere/association-le-collectif-de-kerlano-rosnoen_W292007744.htm"
+  - titre: "Manoir de Kerlano (Rosnoën) — base Mérimée"
+    url: "https://pop.culture.gouv.fr/notice/merimee/IA29000024"

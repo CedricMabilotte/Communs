@@ -56,7 +56,7 @@ extracted:
   identite_double: "le collectif Bazarrière porte son projet via l'association Les Recoins (même projet : habitat + activité, propriété d'usage, Mermoz Lyon 8 ; à confirmer formellement, fort recoupement)"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — Bazarrière (Lyon)

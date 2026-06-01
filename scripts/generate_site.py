@@ -5718,6 +5718,42 @@ def verifier_chaines(fiches):
     return avert
 
 
+# Cohérence pôle (integrite_montage.niveau) ↔ verdict calculé du lieu (garde-fou
+# souple ajouté en #11 — avertit, ne bloque pas). Le pôle « situe » et peut être
+# une aspiration (≠ verdict, cf. L3) ; on ne flague donc QUE les incohérences
+# nettes : un pôle élevé sur une chaîne marchande ou non établie, ou
+# `economie_marchande` sur un sanctuaire.
+_POLES_ELEVES = {"commun_citoyen", "mutualisme", "ig_institue"}
+
+
+def verifier_poles(fiches, by_uid):
+    avert = []
+    for f in fiches:
+        if f.get("categorie") != "lieu":
+            continue
+        niveau = (f.get("integrite_montage") or {}).get("niveau")
+        if not niveau:
+            continue
+        v = compute_verdict(f, by_uid)
+        uid = f.get("uid")
+        if v == "marchand" and niveau in _POLES_ELEVES:
+            avert.append(f"  lieu {uid} — pôle «{niveau}» sur chaîne marchande "
+                         f"(verdict marchand)")
+        elif v is None and niveau in _POLES_ELEVES:
+            avert.append(f"  lieu {uid} — pôle «{niveau}» sur chaîne non établie "
+                         f"(verdict à établir)")
+        elif niveau == "economie_marchande" and v == "sanctuaire":
+            avert.append(f"  lieu {uid} — pôle «economie_marchande» sur un "
+                         f"sanctuaire (contradiction)")
+    if avert:
+        print(f"Contrôle des pôles : {len(avert)} signalement·s —")
+        for a in avert:
+            print(a)
+    else:
+        print("Contrôle des pôles : cohérence pôle↔verdict OK.")
+    return avert
+
+
 def main():
     global BASE_URL
     cfg = load_config()
@@ -5760,6 +5796,8 @@ def main():
 
     # contrôle de cohérence des chaînes (chantier A) — avertit, ne bloque pas.
     verifier_chaines(fiches)
+    # contrôle de cohérence pôle↔verdict (#11) — avertit, ne bloque pas.
+    verifier_poles(fiches, by_uid)
 
     sc_by_uid = {f["uid"]: sc for f, sc in all_sc}
 

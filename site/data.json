@@ -64,6 +64,38 @@
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
+    "uid": "bazarriere-lyon",
+    "nom": "La Bazarrière",
+    "categorie": "lieu",
+    "sous_titre": "Maison d'habitat collectif et lieu de vie ouvert, en propriété d'usage CLIP, à Lyon 8e",
+    "idl": 80,
+    "idl_brut": 84,
+    "idl_intrinseque": 80,
+    "score_type": "calcule",
+    "completude": 0.9,
+    "axes": {
+      "1": 80,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 64
+    },
+    "axes_intrinseques": {
+      "1": 80,
+      "2": 100,
+      "3": 80,
+      "4": 100,
+      "5": 64
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "captage-cheze-canut",
     "nom": "Captage de la Chèze-Canut",
     "categorie": "lieu",
@@ -157,6 +189,38 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "collectif-de-kerlano",
+    "nom": "Collectif de Kerlano",
+    "categorie": "lieu",
+    "sous_titre": "Habitat collectif solidaire et autogéré, en bascule vers la propriété d'usage CLIP, à Rosnoën (Finistère)",
+    "idl": 62,
+    "idl_brut": 71,
+    "idl_intrinseque": 62,
+    "score_type": "calcule",
+    "completude": 0.75,
+    "axes": {
+      "1": 58,
+      "2": 100,
+      "3": 80,
+      "4": 80,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 58,
+      "2": 100,
+      "3": 80,
+      "4": 80,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -285,7 +349,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
-    "nature_juridique": "Mutualisme d'usagers"
+    "nature_juridique": "Économie sociale marchande"
   },
   {
     "uid": "ecolieu-de-la-gasnerie",
@@ -797,7 +861,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Économie sociale marchande"
   },
   {
     "uid": "la-deviation-marseille",
@@ -1056,6 +1120,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "les-agites-du-local",
+    "nom": "Écolieu de Saleix",
+    "categorie": "lieu",
+    "sous_titre": "Écolieu d'habitat collectif et de maraîchage bio, membre du réseau de propriété d'usage CLIP, à Sorges-et-Ligueux-en-Périgord (Dordogne)",
+    "idl": 55,
+    "idl_brut": 61,
+    "idl_intrinseque": 55,
+    "score_type": "calcule",
+    "completude": 0.8,
+    "axes": {
+      "1": 30,
+      "2": 75,
+      "3": 80,
+      "4": 71,
+      "5": 67
+    },
+    "axes_intrinseques": {
+      "1": 30,
+      "2": 75,
+      "3": 80,
+      "4": 71,
+      "5": 67
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "les-petites-berouettes",
     "nom": "Les Petites Berouettes",
     "categorie": "lieu",
@@ -1181,7 +1277,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Économie sociale marchande"
   },
   {
     "uid": "magnantru",
@@ -1565,6 +1661,70 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "association-proprietaire-kerlano",
+    "nom": "Association propriétaire de Kerlano (en cours de constitution)",
+    "categorie": "porteur",
+    "sous_titre": "Maillon propriétaire pressenti du montage de propriété d'usage CLIP de Kerlano, à Rosnoën — bascule en cours",
+    "idl": 52,
+    "idl_brut": 58,
+    "idl_intrinseque": 52,
+    "score_type": "calcule",
+    "completude": 0.789,
+    "axes": {
+      "1": 50,
+      "2": 90,
+      "3": 71,
+      "4": 42,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 90,
+      "3": 71,
+      "4": 42,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901 (propriétaire CLIP — en cours de constitution)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "association-proprietaire-saleix",
+    "nom": "Association propriétaire de l'écolieu de Saleix (montage CLIP — non documenté)",
+    "categorie": "porteur",
+    "sous_titre": "Maillon propriétaire pressenti de l'écolieu de Saleix, à Sorges-et-Ligueux-en-Périgord — non documenté par les sources",
+    "idl": 15,
+    "idl_brut": 20,
+    "idl_intrinseque": 15,
+    "score_type": "calcule",
+    "completude": 0.474,
+    "axes": {
+      "1": 50,
+      "2": 50,
+      "3": 50,
+      "4": 0,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 50,
+      "2": 50,
+      "3": 50,
+      "4": 0,
+      "5": 50
+    },
+    "palier": "eloigne",
+    "palier_label": "Éloigné du modèle",
+    "palier_couleur": "#8f3829",
+    "forme_juridique": "Association loi 1901 (propriétaire CLIP — non documentée)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
     "nature_juridique": "Intérêt général institué"
   },
   {
@@ -2110,6 +2270,38 @@
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
     "nature_juridique": "Commun libre et vivant"
+  },
+  {
+    "uid": "les-recoins",
+    "nom": "Association Les Recoins",
+    "categorie": "porteur",
+    "sous_titre": "Association propriétaire de la maison de la Bazarrière, à Lyon, dans le montage de propriété d'usage du CLIP",
+    "idl": 62,
+    "idl_brut": 69,
+    "idl_intrinseque": 64,
+    "score_type": "calcule",
+    "completude": 0.789,
+    "axes": {
+      "1": 88,
+      "2": 90,
+      "3": 71,
+      "4": 42,
+      "5": 64
+    },
+    "axes_intrinseques": {
+      "1": 88,
+      "2": 90,
+      "3": 71,
+      "4": 42,
+      "5": 75
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "lurzaindia-sca",
@@ -2784,6 +2976,38 @@
     "nature_juridique": "Commun libre et vivant"
   },
   {
+    "uid": "collectif-agites-du-local",
+    "nom": "Les Agités du Local",
+    "categorie": "usufruitier",
+    "sous_titre": "Association habitante et usagère de l'écolieu de Saleix, à Sorges-et-Ligueux-en-Périgord (Dordogne)",
+    "idl": 61,
+    "idl_brut": 69,
+    "idl_intrinseque": 64,
+    "score_type": "calcule",
+    "completude": 0.765,
+    "axes": {
+      "1": 75,
+      "2": 75,
+      "3": 81,
+      "4": 69,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 100,
+      "3": 81,
+      "4": 69,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901 (association déclarée)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
     "uid": "collectif-aubascule",
     "nom": "Collectif de l'Aubascule",
     "categorie": "usufruitier",
@@ -2814,6 +3038,38 @@
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Commun libre et vivant"
+  },
+  {
+    "uid": "collectif-bazarriere",
+    "nom": "Collectif Bazarrière",
+    "categorie": "usufruitier",
+    "sous_titre": "Collectif habitant et usager de la maison de la Bazarrière, à Lyon 8e, en propriété d'usage CLIP",
+    "idl": 80,
+    "idl_brut": 88,
+    "idl_intrinseque": 82,
+    "score_type": "calcule",
+    "completude": 0.824,
+    "axes": {
+      "1": 100,
+      "2": 100,
+      "3": 81,
+      "4": 100,
+      "5": 64
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 81,
+      "4": 100,
+      "5": 73
+    },
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
+    "forme_juridique": "Collectif d'habitant·es (association loi 1901)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "collectif-gasnerie",
@@ -3483,6 +3739,38 @@
     "palier_label": "Engagement réel",
     "palier_couleur": "#b08431",
     "forme_juridique": "Société civile (groupement foncier agricole)",
+    "montage_type": "propriete_collective",
+    "montage_label": "Propriété collective",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "habitants-de-kerlano",
+    "nom": "Le Collectif de Kerlano",
+    "categorie": "usufruitier",
+    "sous_titre": "Association habitante et usagère de l'habitat collectif de Kerlano, à Rosnoën (Finistère)",
+    "idl": 63,
+    "idl_brut": 74,
+    "idl_intrinseque": 63,
+    "score_type": "calcule",
+    "completude": 0.706,
+    "axes": {
+      "1": 75,
+      "2": 100,
+      "3": 81,
+      "4": 75,
+      "5": 50
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 100,
+      "3": 81,
+      "4": 75,
+      "5": 50
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Association loi 1901 (association déclarée)",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
     "nature_juridique": "Intérêt général institué"

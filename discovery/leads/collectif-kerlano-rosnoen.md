@@ -67,7 +67,7 @@ extracted:
   vivant_non_humain: "cadre rural (fond de la rade de Brest) ; bâti patrimonial (manoir de Kerlano, inventorié base Mérimée) ; jardin/potager/animaux non détaillés dans les sources vues — à préciser"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — Collectif de Kerlano (Rosnoën)

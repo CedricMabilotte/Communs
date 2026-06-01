@@ -19,7 +19,7 @@ resume: >
   l'inaliénabilité. Mission déclarée : promouvoir des lieux en propriété
   d'usage, tisser un réseau de solidarité entre eux, accompagner les nouveaux
   projets. Le réseau revendique environ dix-sept lieux (chiffre à confirmer),
-  dont trois sont nommés et documentés publiquement.
+  dont la liste exhaustive (17) est connue ; six sont fichés au corpus.
 montage:
   type: propriete_protegee
   description: >
@@ -121,7 +121,8 @@ dossier:
       note: "Statuts types des associations habitante et propriétaire non tous publiés en ligne ; clauses anti-revente et de dévolution à recouper lieu par lieu."
     - type: rapport_financier
       statut: inconnu
-membres: [hautes-planches-bretoncelles, la-porcheritz-perche, la-deviation-marseille]
+membres: [hautes-planches-bretoncelles, la-porcheritz-perche, la-deviation-marseille,
+          bazarriere-lyon, collectif-de-kerlano, les-agites-du-local]
 sources:
   - titre: "CLIP — site officiel"
     url: "https://clip.ouvaton.org/"

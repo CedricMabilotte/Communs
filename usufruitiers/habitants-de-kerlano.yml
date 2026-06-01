@@ -1,0 +1,169 @@
+uid: habitants-de-kerlano
+categorie: usufruitier
+nom: "Le Collectif de Kerlano"
+sous_titre: "Association habitante et usagère de l'habitat collectif de Kerlano, à Rosnoën (Finistère)"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 (association déclarée)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Rosnoën"
+  departement: "Finistère (29)"
+  region: "Bretagne"
+  adresse: "Lieu-dit Kerlano, 29590 Rosnoën"
+annee: 2022
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  Le Collectif de Kerlano est l'association loi 1901 (créée le 12 mars 2022, RNA
+  W292007744, SIREN 928728351) qui porte l'habitat collectif solidaire et
+  autogéré du lieu-dit Kerlano, à Rosnoën, au fond de la rade de Brest. Sur un
+  lieu d'environ 6 000 m² articulé autour du manoir de Kerlano (bâti
+  patrimonial), d'une grande maison collective, de caravanes et de cabanes,
+  vivent une dizaine d'adultes et quatre enfants ; des espaces sont gardés comme
+  zone d'accueil de personnes en détresse. Le lieu, acquis en indivision il y a
+  une dizaine d'années, est engagé dans un auto-rachat associatif pour basculer
+  dans le schéma de propriété d'usage du CLIP, dont il est membre. Cette
+  bascule est en cours : l'association porte aujourd'hui l'usage, tandis que le
+  maillon propriétaire CLIP reste à formaliser.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Association propriétaire de Kerlano (CLIP — en cours de constitution)"
+  usufruitier: "Le Collectif de Kerlano (association habitante / usagère)"
+  description: >
+    Le Collectif de Kerlano habite et gère le lieu au quotidien. La propriété,
+    aujourd'hui en indivision, doit basculer vers une association propriétaire
+    au sens du modèle CLIP, dont le collectif et le CLIP seraient les membres.
+    Cette bascule est en cours : la nature et la durée du titre d'usage qui
+    liera l'association usagère à l'association propriétaire ne sont pas
+    documentées, et le maillon propriétaire n'est pas documenté comme constitué.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 sans capital appropriable, habitante et usagère d'un
+    habitat collectif solidaire. Le foncier sort d'une indivision vers le schéma
+    CLIP ; la bascule est en cours et la sécurité de jouissance n'est pas encore
+    pleinement formalisée.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "L'auto-rachat vise à soustraire le lieu à l'appropriation privée des parts d'indivision ; mais tant que la bascule CLIP n'est pas formalisée, le verrou anti-appropriation n'est pas pleinement acquis."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Le Collectif de Kerlano est une association loi 1901 (association déclarée) sans capital appropriable : aucune part de l'association n'est cessible. La cessibilité résiduelle porte sur les parts d'indivision en cours de rachat, non sur l'association."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Les statuts du Collectif de Kerlano sont déposés au RNA mais non publiés en ligne ; l'existence d'une clause de dévolution désintéressée n'est pas documentée."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Le collectif est une association loi 1901 (association déclarée, SIREN 928728351, RNA W292007744), personne morale de droit civil non lucrative, labellisée ESS au répertoire."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans partage de bénéfices ; objet déclaré d'habitat collectif solidaire et autogéré et d'accueil, sans distribution aux membres."
+  - critere: une_voix
+    valeur: oui
+    note: "Habitat explicitement autogéré ; une association loi 1901 fonctionne sur le principe « une personne, une voix » en assemblée, indépendamment des apports."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les habitant·es gèrent le lieu collectivement — l'objet statutaire vise à « assurer la gestion du projet une fois mis en place » : les usager·es décident effectivement de ce qui les concerne."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu connaît du passage et garde des espaces d'accueil ; les modalités formelles d'entrée de nouveaux habitant·es au sein du collectif ne sont pas documentées."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "La situation du lieu a été présentée publiquement au PV de l'AG du CLIP de 2022 ; la publication régulière des comptes et décisions du collectif n'est pas documentée."
+  - critere: objet_ig
+    valeur: oui
+    note: "Objet déclaré : créer et gérer un habitat collectif solidaire et autogéré ; le lieu garde des espaces d'accueil de personnes en détresse (NAF 87.90B, hébergement social) — intérêt général identifié au-delà du seul logement des membres."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "Au-delà du collectif résident, le lieu accueille des personnes en détresse et connaît du passage et une petite programmation culturelle ; mais « ce n'est pas un lieu centré sur l'activité » (PV 2022) — l'ouverture existe sans être l'axe premier."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Le lieu est rural (fond de la rade de Brest) ; la place d'une finalité de préservation du vivant non-humain (jardin, potager, animaux) dans l'objet du collectif n'est pas documentée par les sources."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La bascule CLIP étant en cours, la nature et la durée du titre d'usage qui liera le collectif à l'association propriétaire ne sont pas documentées."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant le collectif au foncier n'est pas documentée par les sources."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Dans le modèle CLIP, l'association usagère est membre de l'association propriétaire — articulation organique ; mais le maillon propriétaire n'est pas documenté comme constitué, l'articulation effective reste donc à formaliser."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'habitat repose sur une logique de mise en commun et d'accueil solidaire ; le détail du régime (contributions des habitant·es, gratuité de l'accueil) n'est pas documenté."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant et le régime de la contribution ou redevance versée par le collectif au futur porteur ne sont pas documentés, le montage étant en cours."
+analyse:
+  forces:
+    - "Association loi 1901 réelle et active, objet d'habitat collectif solidaire et autogéré, labellisée ESS."
+    - "Habitat permanent dense : une dizaine d'adultes, quatre enfants, sur ~6 000 m² ; espaces d'accueil de personnes en détresse."
+    - "Trajectoire de libération foncière : auto-rachat depuis l'indivision vers le schéma CLIP."
+  fragilites:
+    - "Bascule CLIP en cours : sécurité de jouissance et titre d'usage non encore formalisés."
+    - "Statuts non publiés : clause de dévolution non recoupée."
+    - "Place du vivant non-humain non documentée."
+  leviers:
+    - "Aboutir la bascule CLIP et formaliser un titre d'usage long."
+    - "Publier les statuts (clause de dévolution) et les comptes."
+    - "Documenter la finalité de préservation du vivant et l'usage du lieu rural."
+  synthese: >
+    Le Collectif de Kerlano est le maillon vivant et l'association porteuse de
+    l'usage d'un habitat collectif solidaire ancien et dense, engagé dans une
+    sortie d'indivision vers la propriété d'usage CLIP. L'association non
+    lucrative et l'habitat sont bien établis ; la sécurité foncière, elle, est
+    en cours de construction — le titre d'usage et le maillon propriétaire
+    restent à formaliser.
+fiabilite: >
+  Faits vérifiés (sources : page « Les lieux » du CLIP, PV de l'AG du CLIP du
+  29/01/2022, registres Pappers / annuaire-entreprises / net1901 / Gralon,
+  base Mérimée pour le manoir, consultés le 1ᵉʳ juin 2026) : association Le
+  Collectif de Kerlano (association déclarée, créée le 12/03/2022, RNA
+  W292007744, SIREN 928728351, SIRET 92872835100018, NAF 87.90B hébergement
+  social, labellisée ESS, 0 salarié), objet « créer et gérer un projet
+  d'habitat collectif, solidaire et autogéré », lieu-dit Kerlano à Rosnoën
+  (manoir inventorié base Mérimée), habitat d'une dizaine d'adultes et quatre
+  enfants sur ~6 000 m² (manoir, grande maison, caravanes, cabanes), espaces
+  d'accueil de personnes en détresse, lieu acquis en indivision il y a une
+  dizaine d'années, auto-rachat associatif engagé (~80 000 €) pour basculer
+  dans le schéma CLIP, membre du réseau. Non confirmé : statuts (clause de
+  dévolution), aboutissement de la bascule CLIP, nature et durée du titre
+  d'usage, régime des contributions, place du vivant non-humain, issue du
+  risque SAFER.
+voir_aussi: [association-proprietaire-kerlano, clip]
+dossier:
+  identite:
+    siren: "928728351"
+    rna: "W292007744"
+    adresse: "Lieu-dit Kerlano, 29590 Rosnoën"
+  echelle:
+    personnes: "Une dizaine d'adultes et 4 enfants"
+    lieux: "1 lieu (manoir, grande maison collective, caravanes, cabanes)"
+    surface: "Environ 6 000 m²"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts déposés au RNA le 14/03/2022 mais non publiés en ligne ; clause de dévolution non recoupée."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Auto-rachat depuis l'indivision vers une association propriétaire CLIP en cours ; non documenté comme abouti ; risque SAFER signalé au PV 2022."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Titre d'usage liant le collectif au futur porteur non documenté ; bascule en cours."
+sources:
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "PV de l'AG du CLIP du 29/01/2022 (météo de Kerlano)"
+    url: "https://clip.ouvaton.org/wp-content/uploads/2022/02/clip-ag-2022-01-29-pv.pdf"
+  - titre: "Le Collectif de Kerlano (SIREN 928728351) — Pappers"
+    url: "https://www.pappers.fr/entreprise/le-collectif-de-kerlano-928728351"
+  - titre: "Le Collectif de Kerlano (RNA W292007744) — Gralon"
+    url: "https://www.gralon.net/mairies-france/finistere/association-le-collectif-de-kerlano-rosnoen_W292007744.htm"
+  - titre: "Manoir de Kerlano (Rosnoën) — base Mérimée"
+    url: "https://pop.culture.gouv.fr/notice/merimee/IA29000024"

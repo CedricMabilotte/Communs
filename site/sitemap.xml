@@ -103,6 +103,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/l/bazarriere-lyon.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/l/captage-cheze-canut.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,6 +122,12 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/l/chateau-de-la-mhotte.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/l/collectif-de-kerlano.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -289,6 +301,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/l/les-agites-du-local.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/l/les-petites-berouettes.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -380,6 +398,18 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/l/villarceaux.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/p/association-proprietaire-kerlano.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/p/association-proprietaire-saleix.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -482,6 +512,12 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/p/les-donnettes.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/p/les-recoins.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -613,7 +649,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://communs.actitude.org/u/collectif-agites-du-local.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://communs.actitude.org/u/collectif-aubascule.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/collectif-bazarriere.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -740,6 +788,12 @@
   </url>
   <url>
     <loc>https://communs.actitude.org/u/gfa-mutuels.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://communs.actitude.org/u/habitants-de-kerlano.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

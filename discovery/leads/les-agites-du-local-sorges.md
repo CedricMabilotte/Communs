@@ -46,7 +46,7 @@ extracted:
   vivant: "présent — autosuffisance en fruits et légumes cultivés en bio ; volet agricole de l'écolieu"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
-statut: pre_fiche
+statut: promu
 ---
 
 # Lead — Les Agités du local (Sorges-et-Ligueux-en-Périgord)

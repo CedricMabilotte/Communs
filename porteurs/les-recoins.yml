@@ -1,0 +1,163 @@
+uid: les-recoins
+categorie: porteur
+nom: "Association Les Recoins"
+sous_titre: "Association propriétaire de la maison de la Bazarrière, à Lyon, dans le montage de propriété d'usage du CLIP"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Lyon (8e arrondissement)"
+  departement: "Rhône (69)"
+  region: "Auvergne-Rhône-Alpes"
+  adresse: "Quartier Mermoz, Lyon 8e"
+annee: null
+url: "https://www.helloasso.com/associations/les-recoins/collectes/les-recoins-un-habitat-collectif-et-lieu-de-vie-ouvert-a-lyon"
+resume: >
+  L'association Les Recoins est la structure propriétaire de la grande maison de
+  400 m² avec jardin, dans le quartier Mermoz à Lyon 8e, qui abrite le projet
+  d'habitat collectif et de lieu de vie ouvert porté par le collectif
+  Bazarrière. Créée pour que le bien « n'appartienne à personne » et ne puisse
+  jamais être revendu sur le marché, elle achète la maison et la met à
+  disposition de ses usager·es en propriété d'usage. Le montage s'inscrit dans
+  le réseau CLIP — Réseau de lieux en propriété d'usage : le CLIP est le second
+  membre de l'association propriétaire et joue le rôle de tiers-bloqueur en cas
+  de projet de revente menaçant l'existence du lieu. Le compromis de vente a été
+  signé en juillet (~560 000 € + ~41 000 € de frais) et l'acte authentique
+  annoncé pour novembre 2025.
+montage:
+  type: propriete_collective
+  description: >
+    La maison de la Bazarrière est achetée par l'association Les Recoins, qui en
+    détient la propriété. Conformément au modèle CLIP, l'association
+    propriétaire compte deux membres : l'association usagère — le collectif
+    Bazarrière — et le CLIP, qui garantit la non-revente et disposerait, le cas
+    échéant, du choix du collectif gestionnaire suivant. Le bien est mis à
+    disposition des usager·es en propriété d'usage. Les statuts précis de Les
+    Recoins (clause anti-revente, clause de dévolution) ne sont pas publiés en
+    ligne et restent à recouper.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 propriétaire, sans capital appropriable, dont le CLIP
+    est co-membre garant de la non-revente : forme non lucrative et
+    inaliénabilité formalisée par le montage associatif. Réserve : les statuts
+    ne sont pas publiés ; la clause de dévolution n'est pas recoupée.
+grille:
+  - critere: inalienabilite
+    valeur: oui
+    note: "La maison est sortie du marché par le montage CLIP : l'association propriétaire ne peut revendre sans l'accord du CLIP, second membre et tiers-bloqueur. L'inaliénabilité est formalisée par le montage associatif, sans démembrement notarié."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "L'association Les Recoins est une structure loi 1901 sans capital appropriable : aucune part ni action ne porte la valeur du bien ; rien n'est cessible."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Une association loi 1901 protège mieux qu'une société commerciale, mais offre une protection moindre qu'une fondation RUP ou une personne publique : la garantie repose sur les statuts et sur le veto du CLIP, non sur une dotation inaliénable."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "L'existence d'une clause de dévolution désintéressée dans les statuts de Les Recoins n'est pas documentée par les sources : les statuts ne sont pas publiés en ligne."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Les Recoins est une association loi 1901, forme structurellement non lucrative, et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une association sans capital ne rémunère ni dividende ni plus-value ; la maison a vocation à être habitée en propriété d'usage, non à dégager un rendement."
+  - critere: gestion_desinteressee
+    valeur: partiel
+    note: "Le projet relève d'une logique militante et collective, sans but lucratif apparent ; le caractère désintéressé de la gestion et l'absence de cercle restreint ne sont toutefois pas formellement documentés par les statuts."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Le bien est financé par emprunt remboursé par les contributions des habitant·es et un soutien militant, non par des investisseurs attendant une plus-value foncière."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La composition et le mode de fonctionnement de l'organe de direction de l'association Les Recoins ne sont pas documentés par les sources."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Le CLIP est co-membre de l'association propriétaire et y porte une voix de garant réseau ; l'association des collectivités ou du voisinage à la gouvernance du porteur n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: oui
+    note: "Dans le modèle CLIP, l'association usagère — le collectif Bazarrière — est membre de l'association propriétaire : les usager·es participent aux décisions structurantes sur le bien, la revente étant soumise au veto réseau."
+  - critere: transparence
+    valeur: partiel
+    note: "Le projet a été présenté publiquement (appels à soutien, collecte HelloAsso, soirées Rebellyon) ; mais ni les statuts ni les comptes de l'association ne sont publiés."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "L'association a été explicitement créée pour que le bien « n'appartienne à personne » et ne puisse jamais être revendu sur le marché — objet de protection foncière affiché dans la communication ; sa traduction statutaire précise n'est pas documentée."
+  - critere: agrement_ig
+    valeur: non
+    note: "Aucune reconnaissance d'utilité publique ni agrément d'intérêt général n'est documenté pour l'association."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "L'exposition de l'association à un risque de requalification fiscale n'est pas un enjeu documenté par les sources."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "L'association rend compte de son projet par des appels à soutien publics et une collecte en ligne ; une reddition de comptes formelle au-delà de ses membres n'est pas documentée."
+  - critere: regime_usage_offert
+    valeur: oui
+    note: "L'association propriétaire met la maison à disposition de ses usager·es en propriété d'usage, dans une logique de soutien au collectif habitant, sans recherche de revenu locatif de marché."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le modèle CLIP vise une jouissance durable, garantie par le veto réseau contre la revente ; la nature et la durée du titre d'usage liant l'association propriétaire au collectif usager ne sont toutefois pas documentées."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "La place d'une finalité de préservation du vivant non-humain dans l'objet de l'association n'est pas documentée ; un jardin est attesté, son usage ne l'est pas."
+analyse:
+  forces:
+    - "Association loi 1901 sans capital appropriable, créée pour soustraire le bien au marché."
+    - "Inaliénabilité formalisée par le montage CLIP, avec le réseau comme tiers-bloqueur garant."
+    - "Bien financé par emprunt et soutien militant, hors logique de rendement."
+  fragilites:
+    - "Statuts non publiés : clause de dévolution et objet foncier précis non recoupés."
+    - "Protection associative moins robuste qu'une dotation inaliénable de fondation."
+    - "Titre d'usage liant l'association au collectif usager non documenté."
+  leviers:
+    - "Publier les statuts de l'association — clause anti-revente et clause de dévolution."
+    - "Formaliser et publier le titre d'usage liant l'association propriétaire au collectif Bazarrière."
+    - "Documenter la gouvernance et les comptes de l'association."
+  synthese: >
+    L'association Les Recoins est le maillon propriétaire d'un montage de
+    propriété d'usage CLIP : une structure non lucrative, sans capital
+    appropriable, dont le CLIP est co-membre garant de la non-revente. La
+    maison est ainsi soustraite au marché par un mécanisme associatif éprouvé.
+    Restent à recouper les statuts — clause de dévolution, objet foncier — et le
+    titre d'usage liant l'association au collectif habitant.
+fiabilite: >
+  Faits relevés (sources : collecte HelloAsso de Les Recoins, soirées de
+  soutien Rebellyon, page « Les lieux » du CLIP, consultées le 1ᵉʳ juin 2026) :
+  association Les Recoins propriétaire d'une maison de 400 m² avec jardin
+  (quartier Mermoz, Lyon 8e), acquise via le montage de propriété d'usage du
+  CLIP, le CLIP étant tiers-bloqueur en cas de projet de revente ; compromis
+  signé en juillet (~560 000 € + ~41 000 € de frais), acte authentique annoncé
+  pour novembre 2025 ; bien mis à disposition du collectif Bazarrière en
+  propriété d'usage. Non confirmé : SIREN / RNA de l'association, date de
+  création, statuts, clause de dévolution, gouvernance, comptes, finalisation
+  effective de l'acte de vente, nature et durée du titre d'usage liant
+  l'association au collectif usager.
+voir_aussi: [collectif-bazarriere, clip]
+dossier:
+  identite:
+    adresse: "Quartier Mermoz, Lyon 8e (69008)"
+  echelle:
+    surface: "Maison de 400 m² avec jardin."
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association non publiés en ligne ; clause anti-revente et clause de dévolution à recouper."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Compromis de vente signé en juillet, acte authentique annoncé pour novembre 2025 ; finalisation non confirmée par les sources."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Titre d'usage liant l'association propriétaire au collectif Bazarrière ; nature et durée non documentées."
+sources:
+  - titre: "Les Recoins — habitat collectif et lieu de vie ouvert à Lyon (HelloAsso)"
+    url: "https://www.helloasso.com/associations/les-recoins/collectes/les-recoins-un-habitat-collectif-et-lieu-de-vie-ouvert-a-lyon"
+  - titre: "Soirée de soutien — achat d'un lieu autogéré Lyon 8 (Rebellyon)"
+    url: "https://rebellyon.info/Soiree-de-soutien-Achat-d-un-lieu-31672"
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"

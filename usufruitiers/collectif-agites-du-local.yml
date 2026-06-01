@@ -1,0 +1,166 @@
+uid: collectif-agites-du-local
+categorie: usufruitier
+nom: "Les Agités du Local"
+sous_titre: "Association habitante et usagère de l'écolieu de Saleix, à Sorges-et-Ligueux-en-Périgord (Dordogne)"
+statut_fiche: publie
+forme_juridique: "Association loi 1901 (association déclarée)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Sorges-et-Ligueux-en-Périgord"
+  departement: "Dordogne (24)"
+  region: "Nouvelle-Aquitaine"
+  adresse: "Rue Écolieu de Saleix, 24420 Sorges-et-Ligueux-en-Périgord"
+annee: 2019
+url: "https://les-agites-du-local.jimdosite.com/"
+resume: >
+  Les Agités du Local est l'association loi 1901 (RNA W411008139, SIREN
+  852581404, SIRET 85258140400021) qui porte l'écolieu de Saleix, installé sur
+  une ancienne ferme familiale à Sorges-et-Ligueux-en-Périgord, en Dordogne.
+  L'objet associatif est de favoriser la création, la cohabitation et l'action
+  collective « dans un esprit de joie et de simplicité », et de promouvoir une
+  diversité de pratiques (agriculture, artisanat, culture, social). Plus d'une
+  dizaine de personnes — en yourtes, en familles, en solo, en colocation et en
+  maisons individuelles — vivent collectivement sur place ; le lieu est
+  quasi-autonome en eau et autosuffisant en fruits et légumes cultivés en bio.
+  L'écolieu est membre du réseau CLIP — Réseau de lieux en propriété d'usage ;
+  le détail du montage (association propriétaire, forme de la bascule) n'est pas
+  documenté par les sources.
+montage:
+  type: propriete_collective
+  nu_proprietaire: "Association propriétaire de l'écolieu de Saleix (CLIP — non documentée)"
+  usufruitier: "Les Agités du Local (association habitante / usagère)"
+  description: >
+    Les Agités du Local habite et anime l'écolieu de Saleix. Le lieu est listé
+    membre du réseau CLIP de propriété d'usage, dont le modèle suppose une
+    association propriétaire distincte garante de la non-revente ; mais aucune
+    source ne documente cette association propriétaire ni la nature et la durée
+    du titre d'usage liant l'association usagère à la propriété. Le maillon
+    propriétaire est pressenti, l'articulation reste à instruire sur statuts.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Association loi 1901 sans capital appropriable, habitante et usagère d'un
+    écolieu. Membre du réseau CLIP ; le détail du montage et la sécurité de
+    jouissance ne sont pas documentés.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "L'appartenance au CLIP vise à exclure l'appropriation privée de la valeur foncière ; mais le montage propriétaire de Saleix n'étant pas documenté, le verrou anti-appropriation n'est pas recoupé."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Les Agités du Local est une association loi 1901 (association déclarée) sans capital appropriable : aucune part ni titre n'est cessible ni ne porte la valeur du foncier."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Les statuts de l'association ne sont pas publiés en ligne ; l'existence d'une clause de dévolution désintéressée n'est pas documentée."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "L'association est une personne morale de droit civil non lucrative (association déclarée, RNA W411008139, SIREN 852581404), et non une société commerciale."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Association sans partage de bénéfices ; objet de cohabitation et d'action collective, sans distribution aux membres."
+  - critere: une_voix
+    valeur: oui
+    note: "Écolieu collectif ; une association loi 1901 fonctionne sur le principe « une personne, une voix » en assemblée, indépendamment des apports."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les habitant·es vivent et animent collectivement l'écolieu ; l'objet associatif vise explicitement la cohabitation et l'action collective : les usager·es décident de ce qui les concerne."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Le lieu accueille une diversité d'habitat (yourtes, familles, solo, colocation, maisons individuelles) et s'est étoffé sur ~18 mois ; les modalités formelles d'entrée de nouveaux membres ne sont pas documentées."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "L'association a un site et une présence publique ; la publication régulière des comptes et décisions n'est pas documentée."
+  - critere: objet_ig
+    valeur: oui
+    note: "Objet associatif : favoriser la création, la cohabitation et l'action collective, promouvoir une diversité de pratiques (agriculture, artisanat, culture, social) — intérêt général identifié au-delà du seul logement des membres."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "L'écolieu est un lieu de rencontre, d'accueil et de transmission ; mais le degré d'ouverture effective au-delà du collectif résident n'est pas précisément documenté."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'écolieu cultive en bio et vise une faible empreinte carbone et une autonomie en eau — soin du milieu présent dans la pratique ; la reconnaissance explicite du vivant non-humain comme cohabitant (au-delà de la production) n'est pas affichée."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage liant l'association à la propriété ne sont pas documentées, le montage CLIP n'étant pas recoupé."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'inscription de clauses d'usage ou environnementales dans le titre liant l'association au foncier n'est pas documentée."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Le modèle CLIP fait de l'association usagère un membre de l'association propriétaire ; mais le maillon propriétaire de Saleix n'est pas documenté : l'articulation effective reste à recouper."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "L'écolieu repose sur une logique de cohabitation, d'autosuffisance et de partage ; le détail du régime d'accès (contributions, accueil) n'est pas documenté."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Le montant et le régime de la contribution ou redevance versée par l'association au porteur pressenti ne sont pas documentés."
+analyse:
+  forces:
+    - "Association loi 1901 réelle et active portant un écolieu habité par une dizaine de personnes."
+    - "Volet agricole assumé : autosuffisance en fruits et légumes bio, quasi-autonomie en eau."
+    - "Objet de cohabitation et d'action collective ; diversité de pratiques (agriculture, artisanat, culture, social)."
+  fragilites:
+    - "Montage CLIP non documenté : association propriétaire, titre d'usage et inaliénabilité non recoupés."
+    - "Statuts non publiés : clause de dévolution non établie."
+    - "Reconnaissance du vivant non-humain comme cohabitant non affichée au-delà de la production."
+  leviers:
+    - "Documenter l'association propriétaire et le titre d'usage liant l'usage à la propriété."
+    - "Publier les statuts (clause de dévolution) et les comptes."
+    - "Préciser la finalité de préservation du vivant au-delà du maraîchage."
+  synthese: >
+    Les Agités du Local est le maillon vivant et l'association porteuse de
+    l'usage de l'écolieu de Saleix : un habitat collectif réel, autosuffisant en
+    fruits et légumes bio, à faible empreinte. L'association non lucrative et
+    l'habitat sont solides ; mais le montage de propriété d'usage CLIP —
+    association propriétaire, titre d'usage, inaliénabilité — n'est pas
+    documenté et reste à instruire sur statuts.
+fiabilite: >
+  Faits vérifiés (sources : page « Les lieux » du CLIP, registres Gralon /
+  societe.com / Pappers / Assoce.fr, site associatif, presse locale France Bleu
+  et AlterCampagne, consultés le 1ᵉʳ juin 2026) : association Les Agités du
+  Local (association déclarée, RNA W411008139, SIREN 852581404, SIRET
+  85258140400021), objet de création, cohabitation et action collective ;
+  écolieu de Saleix installé sur une ancienne ferme familiale à
+  Sorges-et-Ligueux-en-Périgord ; plus d'une dizaine de personnes y vivent
+  collectivement (yourtes, familles, solo, colocation, maisons individuelles)
+  depuis ~18 mois ; quasi-autonomie en eau, autonomie électrique en projet ;
+  autosuffisance en fruits et légumes cultivés en bio ; membre du réseau CLIP.
+  Non confirmé : date exacte de création (2019 selon un registre), association
+  propriétaire au sens CLIP, forme et date de la bascule en propriété d'usage,
+  statuts (clause de dévolution), nature et durée du titre d'usage, surface du
+  lieu, régime des contributions.
+voir_aussi: [association-proprietaire-saleix, clip]
+dossier:
+  identite:
+    siren: "852581404"
+    rna: "W411008139"
+    adresse: "Rue Écolieu de Saleix, 24420 Sorges-et-Ligueux-en-Périgord"
+  echelle:
+    personnes: "Plus d'une dizaine d'habitant·es (familles, solo, colocations)"
+    lieux: "1 écolieu (ancienne ferme familiale ; yourtes et maisons individuelles)"
+    surface: "Non documentée"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts de l'association non publiés en ligne ; clause de dévolution non recoupée."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Forme et date de la bascule en propriété d'usage CLIP non documentées ; association propriétaire non identifiée."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Titre d'usage liant l'association au porteur pressenti non documenté."
+sources:
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "Les Agités du local (RNA W411008139) — Gralon"
+    url: "https://www.gralon.net/mairies-france/dordogne/association-les-agites-du-local-sorges_W411008139.htm"
+  - titre: "Les Agités du Local — site associatif"
+    url: "https://les-agites-du-local.jimdosite.com/"
+  - titre: "Les Agités du Local (SIREN 852581404) — societe.com"
+    url: "https://www.societe.com/societe/les-agites-du-local-852581404.html"

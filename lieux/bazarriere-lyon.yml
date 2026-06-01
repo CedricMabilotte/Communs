@@ -1,0 +1,159 @@
+uid: bazarriere-lyon
+categorie: lieu
+nom: "La Bazarrière"
+sous_titre: "Maison d'habitat collectif et lieu de vie ouvert, en propriété d'usage CLIP, à Lyon 8e"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Lyon (8e arrondissement)"
+  departement: "Rhône (69)"
+  region: "Auvergne-Rhône-Alpes"
+  adresse: "Quartier Mermoz, Lyon 8e"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.8728,45.7305&z=15"
+annee: 2025
+url: "https://clip.ouvaton.org/les-projets/"
+resume: >
+  La Bazarrière est une grande maison de 400 m² avec jardin, dans le quartier
+  Mermoz à Lyon 8e, transformée en habitat collectif et lieu de vie ouvert. Une
+  dizaine d'adultes et d'enfants — onze personnes de 3 à 62 ans — y vivent et la
+  restaurent collectivement, autour d'environ dix chambres et d'un dortoir, et
+  y accueillent des activités artistiques, militantes et conviviales ouvertes au
+  quartier : réunions, projections, repas, assemblées. Le lieu est membre du
+  réseau CLIP — Réseau de lieux en propriété d'usage : la maison a été achetée
+  par l'association Les Recoins, créée pour que le bien « n'appartienne à
+  personne » et ne puisse jamais être revendu sur le marché, et mise à
+  disposition du collectif Bazarrière en propriété d'usage. Le CLIP, second
+  membre de l'association propriétaire, garantit la non-revente comme
+  tiers-bloqueur. Compromis signé en juillet, acte authentique annoncé pour
+  novembre 2025.
+montage:
+  type: propriete_collective
+  articulations:
+    - usufruitier: collectif-bazarriere
+      titre: convention
+      note: "Le collectif Bazarrière use de la maison en propriété d'usage ; la propriété est portée par l'association Les Recoins, dont le collectif et le CLIP sont les deux membres. La nature et la durée du titre d'usage liant le collectif à l'association propriétaire ne sont pas documentées par les sources."
+  description: >
+    La maison de la Bazarrière est achetée par l'association Les Recoins, qui en
+    détient la propriété, et mise à disposition du collectif Bazarrière en
+    propriété d'usage. Conformément au modèle CLIP, l'association propriétaire
+    compte deux membres — le collectif usager et le CLIP, ce dernier garantissant
+    la non-revente et disposant d'un veto en cas de projet de cession menaçant
+    l'existence du lieu. Il s'agit de propriété d'usage associative, non d'un
+    démembrement notarié. Les statuts (clause anti-revente, clause de
+    dévolution) et le titre d'usage liant les deux associations ne sont pas
+    publiés.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Chaîne entièrement associative et non lucrative : une association
+    propriétaire dont le CLIP est co-membre garant, un collectif usager
+    autogéré. Inaliénabilité formalisée par le montage CLIP. Réserve : statuts
+    non publiés, titre d'usage non documenté.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "La maison est achetée par une association loi 1901 sans capital appropriable et verrouillée par le veto CLIP contre toute revente : le foncier est effectivement soustrait au marché spéculatif."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le montage de propriété d'usage CLIP — association propriétaire Les Recoins, collectif usager Bazarrière, CLIP tiers-bloqueur — est public dans son principe ; les statuts des associations et le titre d'usage liant les deux ne sont pas publiés."
+  - critere: irreversibilite
+    valeur: oui
+    note: "Le CLIP, second membre de l'association propriétaire, dispose d'un droit de veto sur toute revente ; le mécanisme de non-revente du réseau rend le retour au marché très difficile. L'inaliénabilité est formalisée par le montage associatif."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition (~560 000 € + ~41 000 € de frais) repose sur un emprunt remboursé par les contributions des habitant·es et un soutien militant (collecte, soirées de soutien), non sur un endettement attendant une plus-value."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Les deux maillons sont des associations loi 1901 sans capital appropriable : aucune part ni titre n'est cessible ni ne porte la valeur du bien."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable et durable de protection du milieu (ORE, clause environnementale au titre d'usage) n'est documenté pour ce lieu urbain."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Aucun maillon de la chaîne ne capte de plus-value foncière : association propriétaire et collectif usager sont l'une et l'autre non lucratifs, sans capital appropriable."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "Tous les maillons de la chaîne sont des associations loi 1901 non lucratives : aucun maillon commercial."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Le collectif habitant restaure, habite et gouverne le lieu collectivement, en assemblées : les usager·es décident ensemble de son devenir."
+  - critere: tripartisme
+    valeur: partiel
+    note: "Le lieu s'ouvre largement au quartier et le CLIP est co-garant du montage ; l'association formelle du voisinage ou des collectivités à la gouvernance n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: partiel
+    note: "Le mécanisme CLIP organise la transmission du lieu à un autre collectif en cas de départ, le réseau choisissant le gestionnaire suivant ; les modalités internes de renouvellement des habitant·es ne sont pas documentées."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "La maison est restaurée et animée par le travail bénévole et autogéré des habitant·es et du réseau de soutien ; aucun salariat de marché n'est documenté sur le travail qui fait vivre le lieu."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Le lieu associe habitat digne, accueil ouvert du quartier et activités artistiques et militantes : son usage sert un intérêt qui dépasse ses seuls habitant·es."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Espaces communs dédiés aux réunions, projections, repas et assemblées ouverts au quartier Mermoz, et visée d'un groupe élargi d'usager·es : le lieu est utile à son territoire et ouvert au-delà de ses résidents."
+  - critere: vivant_finalite
+    valeur: inconnu
+    note: "Un jardin est attesté ; la place d'une finalité de préservation du vivant non-humain dans le projet n'est pas documentée par les sources."
+  - critere: usage_non_marchand
+    valeur: oui
+    note: "L'accès au lieu pour ses habitant·es et au quartier repose sur une logique de partage et de mise en commun (santé, travail, alimentation), non sur une tarification de marché."
+  - critere: loyer_non_rentier
+    valeur: partiel
+    note: "Le modèle CLIP repose sur des contributions des habitant·es remboursant l'emprunt, sans logique de rendement ; une part des loyers alimente le fonds de solidarité du réseau ; le montant et le caractère soutenable de ces contributions ne sont pas documentés pour ce lieu."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Le veto CLIP contre la revente sécurise la maîtrise du lieu dans la durée ; la nature et la durée précises du titre d'usage liant le collectif à l'association propriétaire ne sont toutefois pas documentées."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Le lieu est en cours de restauration par le collectif ; les pratiques d'entretien et leur effet sur le bâti et le jardin ne sont pas documentés."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Le lieu dispose d'un jardin en cœur urbain — une place possible pour le vivant à l'échelle de la ville ; son aménagement effectif pour le vivant non-humain n'est pas documenté."
+analyse:
+  forces:
+    - "Foncier soustrait au marché par un montage CLIP entièrement associatif, avec veto réseau contre la revente."
+    - "Habitat collectif réel et dense : onze personnes, dont des enfants, et un lieu de vie ouvert au quartier."
+    - "Chaîne sans aucun maillon commercial ; travail bénévole et autogéré."
+  fragilites:
+    - "Statuts des deux associations non publiés : clause de dévolution et objet foncier non recoupés."
+    - "Nature et durée du titre d'usage liant le collectif à l'association propriétaire non documentées."
+    - "Place du vivant non-humain (usage du jardin) et protection du milieu non documentées."
+  leviers:
+    - "Publier les statuts des deux associations et le titre d'usage liant l'usage à la propriété."
+    - "Documenter la finalité de préservation du vivant et l'usage du jardin."
+    - "Confirmer la finalisation de l'acte de vente (annoncé pour novembre 2025)."
+  synthese: >
+    La Bazarrière est l'un des montages les plus aboutis du réseau CLIP recensés
+    ici : une maison urbaine soustraite au marché par une chaîne entièrement
+    associative et non lucrative, habitée par un collectif autogéré de onze
+    personnes et largement ouverte à son quartier. L'inaliénabilité est
+    formalisée par le veto réseau. Restent à recouper, comme souvent dans le
+    modèle CLIP, les statuts et le titre d'usage liant l'usage à la propriété ;
+    la place faite au vivant non-humain reste à documenter.
+fiabilite: >
+  Faits relevés (sources : collecte HelloAsso de Les Recoins, soirées de
+  soutien Rebellyon, concert de soutien Infolibertaire, page « Les lieux » du
+  CLIP, consultées le 1ᵉʳ juin 2026) : maison de 400 m² avec jardin (quartier
+  Mermoz, Lyon 8e), habitat collectif de onze personnes (3 à 62 ans), environ
+  dix chambres et un dortoir, espaces communs ouverts au quartier, achat par
+  l'association Les Recoins via le montage de propriété d'usage du CLIP, CLIP
+  tiers-bloqueur contre la revente, compromis signé en juillet (~560 000 € +
+  ~41 000 € de frais), acte authentique annoncé pour novembre 2025. Non
+  confirmé : identifiants juridiques des deux associations, articulation
+  formelle Bazarrière / Les Recoins, statuts, clause de dévolution, nature et
+  durée du titre d'usage, montant des contributions, finalisation effective de
+  l'acte, usage du jardin et place du vivant.
+chaine:
+  porteurs: [les-recoins]
+  usufruitiers: [collectif-bazarriere]
+voir_aussi: [clip]
+sources:
+  - titre: "Les Recoins — habitat collectif et lieu de vie ouvert à Lyon (HelloAsso)"
+    url: "https://www.helloasso.com/associations/les-recoins/collectes/les-recoins-un-habitat-collectif-et-lieu-de-vie-ouvert-a-lyon"
+  - titre: "Soirée de soutien — achat d'un lieu autogéré Lyon 8 (Rebellyon)"
+    url: "https://rebellyon.info/Soiree-de-soutien-Achat-d-un-lieu-31672"
+  - titre: "Concert flamenco de soutien au collectif Bazarrière (Infolibertaire)"
+    url: "https://www.infolibertaire.net/concert-flamenco-de-soutien-au-collectif-bazarriere/"
+  - titre: "CLIP — Les lieux"
+    url: "https://clip.ouvaton.org/les-projets/"
