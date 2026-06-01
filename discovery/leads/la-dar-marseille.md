@@ -25,11 +25,16 @@ sources_vues:
     url: https://radar.squat.net/fr/marseille/la-dar
     titre: "La Dar, Marseille — radar.squat.net"
     score: 0
+  - source: marsactu
+    date: '2026-06-01'
+    url: https://marsactu.fr/bref/le-centre-social-autogere-la-dar-reussit-le-pari-de-racheter-ses-murs/
+    titre: "La Dar rachète ses murs — asso Nébien propriétaire le 24/10/2023, intégration au réseau CLIP"
+    score: 0
 indices_structurels:
   nom_propre: true
   localisation: true
   entite_juridique: true
-  montage_explicite: false
+  montage_explicite: true
   siren: false
   geoportail_localisable: true
 extracted:
@@ -39,8 +44,15 @@ extracted:
     departement: "Bouches-du-Rhône"
     region: "Provence-Alpes-Côte d'Azur"
     adresse: "127 rue d'Aubagne, Noailles / La Plaine, Marseille"
-  montage_type: "propriété d'usage CLIP — à recouper ; local acheté fin 2023 par le collectif (sources : la-dar.org / HelloAsso) ; appartenance CLIP attestée par la liste officielle"
-  habitat: "à confirmer — centre social de quartier (cantine, bibliothèque, concerts, AG) actif depuis 2013 ; lieu d'activité urbain, résidence permanente non établie"
+  entites:
+    - role: "propriétaire / gestionnaire (asso 1901)"
+      nom: "Nébien"
+      identifiant: "à confirmer (SIREN/RNA non relevé dans les sources vues)"
+    - role: "tiers-bloqueur (réseau de propriété collective hors marché)"
+      nom: "CLIP"
+  montage_clip: "asso Nébien propriétaire des murs depuis le 24/10/2023 ; intégration au réseau CLIP (« réseau de lieux en propriété collective qui sort les biens du marché ») ; financement : prêt bancaire + ~20 prêts sans intérêt pour moitié, ~150 000 € de dons de 600+ personnes pour le reste"
+  habitat: "NON (résidence permanente non établie) — centre social de quartier (cantine, bibliothèque, concerts, ateliers, AG) actif depuis 2013, libre d'accès ; lieu d'activité urbain, aucune mention de logement/résidents sur place dans les sources vues"
+  vivant_non_humain: "inconnu — lieu urbain (Noailles / La Plaine), pas de mention de jardin/vivant dans les sources vues"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
 statut: actif
@@ -48,34 +60,44 @@ statut: actif
 
 # Lead — La Dar (Marseille)
 
-## À instruire
+## Synthèse
 
 **Membre CLIP confirmé** (nommé sur `clip.ouvaton.org/les-projets/`,
 Bouches-du-Rhône). **Centre social autogéré** au **127 rue d'Aubagne**, entre
-Noailles et La Plaine (Marseille, quartier en gentrification).
+Noailles et La Plaine (Marseille, 6e arr., quartier en gentrification).
 
-**Ce qu'on sait.** Espace d'autonomie collective géré par et pour ses usager·es,
-**libre d'accès**, ouvert sur le quartier et les mouvements sociaux. Accueille
-depuis **2013** ateliers autogérés, cantines, soirées de soutien, projections,
-discussions, assemblées ; bibliothèque, concerts, spectacles. **Local acheté
-fin 2023** par le collectif (présentation `la-dar.org` + collecte HelloAsso).
+**Montage CLIP recoupé et confirmé.** L'association **Nébien**, qui gère La Dar,
+est devenue **propriétaire des murs le 24 octobre 2023**, au terme d'une collecte
+lancée six mois plus tôt : la moitié des fonds via un prêt bancaire et ~20 prêts
+sans intérêt, les ~**150 000 €** restants par dons de **plus de 600 personnes**.
+Marsactu titre que le centre social « réussit le pari de racheter ses murs ». Le
+lieu est désormais **intégré au réseau CLIP**, décrit comme « un réseau de lieux
+en propriété collective qui sort les biens du marché » — inaliénabilité
+formalisée (✓). (Asso propriétaire identifiée ; SIREN/RNA et clause statutaire
+précise restent à relever.)
 
-**Ce qu'il reste à rechercher.** **Montage de propriété d'usage CLIP** : l'achat
-fin 2023 est documenté mais le rôle de CLIP / l'asso propriétaire / la clause
-anti-revente ne le sont pas dans les sources vues — **à recouper** (appartenance
-attestée par la liste CLIP). Habitat permanent du vivant : profil de **centre
-social urbain** — résidence permanente non établie.
+**Le discriminant habitat n'est pas rempli.** Espace d'autonomie collective géré
+par et pour ses usager·es, **libre d'accès**, actif depuis **2013** : ateliers
+autogérés, cantines, soirées de soutien, projections, AG, bibliothèque, concerts.
+C'est un **centre social urbain de quartier** : aucune source vue ne fait état de
+**logement ou de résidents permanents** sur place, ni de jardin / vivant
+non-humain.
 
-## Sources consultées
+## Sources
 
 - CLIP, *Les lieux* — https://clip.ouvaton.org/les-projets/ (La Dar listé,
-  Bouches-du-Rhône) — **page lue directement**.
-- Site officiel `la-dar.org`, HelloAsso (achat fin 2023), radar.squat.net —
-  recoupés par recherche web.
+  Bouches-du-Rhône).
+- Marsactu — https://marsactu.fr/bref/le-centre-social-autogere-la-dar-reussit-le-pari-de-racheter-ses-murs/
+  — Nébien propriétaire le 24/10/2023, financement, intégration au réseau CLIP.
+- Site officiel `la-dar.org`, mars-infos.org (appel à cotisations CSA),
+  HelloAsso (appel à soutien), radar.squat.net — recoupés par recherche web.
 
 ## Verdict de lead
 
-**À instruire — réserve sur habitat.** Membre CLIP confirmé ; achat collectif
-récent (fin 2023) d'un local de quartier, profil de **centre social autogéré
-urbain** sans résidence établie. Montage CLIP à recouper. Cf. lead réseau
-`clips.md`.
+**Hors-corpus (sur le discriminant habitat) — repli : fiche réseau CLIP.**
+Montage de propriété d'usage CLIP confirmé et inaliénabilité formalisée (✓), mais
+La Dar est un **centre social autogéré urbain sans résidence permanente** : il ne
+satisfait pas le discriminant *terre libérée habitée* du corpus Communs. **Pas de
+promotion en pré-fiche.** À conserver comme **lieu membre cité dans la fiche
+réseau CLIP** (`clips.md`) — bel exemple de rachat collectif des murs (2023).
+Statut laissé `actif`, marqué hors-corpus.

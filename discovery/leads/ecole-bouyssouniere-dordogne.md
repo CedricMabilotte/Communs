@@ -22,38 +22,54 @@ extracted:
   localisation:
     departement: "Dordogne (24)"
     region: "Nouvelle-Aquitaine"
+    commune: "non identifiée"
   montage_type: "propriété d'usage CLIP — non documenté hors liste officielle"
-  habitat: "inconnu (ancienne école, probable — à confirmer ; ne pas confondre avec « L'école buissonnière », homonymes touristiques/culturels de Dordogne sans lien CLIP)"
+  habitat: "inconnu — non vérifiable (le nom évoque une ancienne école, hypothèse non confirmée ; ne pas confondre avec « L'école buissonnière », homonymes touristiques/culturels de Dordogne sans lien CLIP)"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
+qualification:
+  date: '2026-06-01'
+  identifie: false
+  raison_non_identifie: "Membre CLIP confirmé (liste officielle), mais aucune source web ne situe « L'École bouyssounière » en Dordogne ni ne la rattache au réseau. Le nom (graphie occitane de « buissonnière ») se confond avec des homonymes touristiques/culturels écartés : L'École Buissonnière / Café des Arts à Vitrac. Hypothèse d'une ancienne école reconvertie non confirmée. Pages CLIP non récupérables (restriction de provenance)."
+  habitat_verifie: false
+  eligibilite: "indéterminée (lieu non identifié)"
 statut: actif
 ---
 
 # Lead — L'École bouyssounière (Dordogne)
 
-## À instruire
+## Synthèse
 
-**Membre CLIP confirmé** (nommé sur `clip.ouvaton.org/les-projets/`, dépt 24).
-**Lieu mal identifié** : la seule source est la liste officielle CLIP.
+**Membre CLIP confirmé** (liste `clip.ouvaton.org/les-projets/`, dépt 24) mais
+**non identifié**. La qualification du 2026-06-01 n'a rien ajouté : aucune source
+web ne situe « L'École bouyssounière » en Dordogne ni ne la rattache au réseau
+CLIP. La graphie occitane (« bouyssounière » = « buissonnière ») la fait collisionner
+avec des **homonymes touristiques/culturels écartés** — notamment **L'École
+Buissonnière / Café des Arts à Vitrac** (près de Sarlat) — sans lien CLIP établi.
+L'hypothèse d'une **ancienne école reconvertie** (suggérée par le nom) reste non
+confirmée. À distinguer de l'autre membre CLIP de Dordogne, *Les Agités du local*
+(Sorges), qui a son propre lead.
 
-**Ce qu'on sait.** Nom (orthographe occitane « bouyssounière », = « buissonnière »)
-et département (Dordogne) ; probable reconversion d'une **ancienne école**.
-**Attention** : les recherches renvoient des homonymes touristiques/culturels en
-Dordogne (café des arts à Vitrac, chambres d'hôtes au Buisson-de-Cadouin) **sans
-lien établi avec CLIP** — ne pas confondre. Distinct de l'autre membre CLIP de
-Dordogne, *Les Agités du local* (Sorges), qui a son propre lead.
+Aucune commune, aucune entité juridique, aucun habitat permanent vérifié. Les pages
+du site CLIP ne sont pas récupérables dans cette session (restriction de
+provenance), ce qui bloque l'identification.
 
-**Ce qu'il reste à rechercher.** Tout : commune exacte, nature du lieu (habitat /
-activité), entité juridique, montage de propriété d'usage. Piste : PV d'AG CLIP
-récents, annuaire associatif Dordogne.
+**Reste à rechercher.** Commune exacte, nature du lieu (habitat / activité), entité
+juridique, montage CLIP. Pistes hors session : page CLIP du lieu (à ouvrir
+directement), PV d'AG CLIP, annuaire associatif Dordogne (net1901 / assoce.fr,
+portail aides.dordogne.fr), presse locale (Sud Ouest 24), contact réseau CLIP.
 
-## Sources consultées
+## Sources
 
 - CLIP, *Les lieux* — https://clip.ouvaton.org/les-projets/ (L'École bouyssounière
-  listé, Dordogne) — **page lue directement**. Aucune autre source fiable trouvée
-  (homonymes écartés).
+  listé, Dordogne). Liste confirmée par recherche web.
+- Homonyme écarté : https://www.dordogne-perigord-tourisme.fr/offres/lecole-buissonniere-cafe-des-arts-vitrac-fr-2942432/
+  (Café des Arts, Vitrac — sans lien CLIP).
 
 ## Verdict de lead
 
-**À instruire — quasi vide.** Membre CLIP confirmé mais non identifié ; ne pas
-surinterpréter les homonymes. Lead-traceur à enrichir. Cf. lead réseau `clips.md`.
+**Actif — à préciser (non identifié).** Membre CLIP authentique (propriété d'usage
+✓) mais non localisable depuis les sources disponibles ; ne pas surinterpréter les
+homonymes. Discriminant **habitat permanent** non vérifiable (hypothèse « ancienne
+école » non confirmée). Ne pas créer de pré-fiche. Lead-traceur à reprendre quand
+les pages CLIP seront accessibles. Cf. lead réseau `clips.md`.

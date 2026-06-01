@@ -22,37 +22,59 @@ extracted:
   localisation:
     departement: "Morbihan (56)"
     region: "Bretagne"
+    commune: "non identifiée"
   montage_type: "propriété d'usage CLIP — non documenté hors liste officielle"
-  habitat: "inconnu"
+  habitat: "inconnu — non vérifiable"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
+qualification:
+  date: '2026-06-01'
+  identifie: false
+  raison_non_identifie: "Membre CLIP confirmé (liste officielle), mais aucune source web ne situe ce lieu en Morbihan. Homonymes nombreux et écartés : asso la-breche.fr (Livradois-Forez/Puy-de-Dôme), coop de la Brèche (Saumont-la-Poterie, Normandie), centre social autogéré (Morogues/Cher). Pages CLIP non récupérables (restriction de provenance) — identification fine impossible."
+  habitat_verifie: false
+  eligibilite: "indéterminée (lieu non identifié)"
 statut: actif
 ---
 
 # Lead — La Brèche (Morbihan)
 
-## À instruire
+## Synthèse
 
-**Membre CLIP confirmé** (nommé sur `clip.ouvaton.org/les-projets/`, dépt 56).
-**Lieu mal identifié** : la seule source est la liste officielle CLIP.
+**Membre CLIP confirmé** (liste `clip.ouvaton.org/les-projets/`, dépt 56) mais
+**non identifié**. La qualification du 2026-06-01 n'a rien ajouté à la connaissance
+de départ : aucune source web ne situe un lieu « La Brèche » en Morbihan rattaché
+au CLIP. Toutes les occurrences trouvées sont des **homonymes sans lien établi** :
 
-**Ce qu'on sait.** Rien de plus que le nom et le département (Morbihan). Les
-recherches web renvoient plusieurs « La Brèche » homonymes (centre social
-autogéré à Morogues/Cher ; collectif La Brèche Maison Cozette ; asso d'éducation
-populaire), **aucun confirmé en Morbihan** — à ne pas confondre.
+- **asso La Brèche** (`la-breche.fr`) — accompagnement d'habitat écologique, mais
+  basée en **Livradois-Forez** (Puy-de-Dôme), pas en Morbihan ;
+- **la coop de la Brèche** — Saumont-la-Poterie (Seine-Maritime, Normandie) ;
+- centre social autogéré « La Brèche » — Morogues (Cher).
 
-**Ce qu'il reste à rechercher.** Tout : commune exacte, nature du lieu (habitat /
-activité), entité juridique (RNA/SIREN), montage de propriété d'usage CLIP. Piste
-prioritaire : annuaire associatif Morbihan, PV d'AG CLIP plus récents, contact
-réseau.
+Aucun montage de propriété d'usage, aucune commune, aucune entité juridique (RNA /
+SIREN) ni présence d'habitat permanent n'ont pu être établis. Les pages du site
+CLIP ne sont pas récupérables dans cette session (restriction de provenance du
+fetch), ce qui bloque l'identification fine.
 
-## Sources consultées
+**Reste à rechercher.** Commune exacte, nature du lieu (habitat / activité),
+entité juridique, montage CLIP. Pistes hors session : page CLIP du lieu (à ouvrir
+directement), PV d'AG CLIP récents (AG signalée le 15 octobre à La Générale,
+Paris), annuaire associatif Morbihan (net1901 / assoce.fr), presse locale
+(Le Télégramme, Ouest-France 56), contact réseau CLIP.
+
+## Sources
 
 - CLIP, *Les lieux* — https://clip.ouvaton.org/les-projets/ (La Brèche listé,
-  Morbihan) — **page lue directement**. Aucune autre source fiable trouvée.
+  Morbihan). Liste confirmée par recherche web (membres : La Brèche 56, La Dar 13,
+  Kervern 29, L'École bouyssounière 24, Isba 09, L'Atelier Fluo 38, La Chapelle 31,
+  Les Oiseaux de la tempête 35, Bazarrière 69…).
+- Homonymes écartés : https://www.la-breche.fr/habitat/ (Livradois-Forez),
+  https://www.facebook.com/coopdelabreche/ (Saumont-la-Poterie).
+- AG CLIP (existence d'instances) — https://www.lagenerale.fr/fr/projet/15-octobre-clip-reseau-de-lieux-en-propriete-dusage-assemblee-generale
 
 ## Verdict de lead
 
-**À instruire — quasi vide.** Membre CLIP confirmé mais non identifié : ne pas
-surinterpréter les homonymes. Lead-traceur à enrichir avant tout verdict de
-périmètre. Cf. lead réseau `clips.md`.
+**Actif — à préciser (non identifié).** Membre CLIP authentique (propriété d'usage
+✓) mais impossible à localiser ou rattacher à une entité depuis les sources
+disponibles. Le discriminant **habitat permanent** n'est pas vérifiable. Ne pas
+créer de pré-fiche : ne pas surinterpréter les homonymes. Lead-traceur à reprendre
+quand les pages CLIP seront accessibles. Cf. lead réseau `clips.md`.

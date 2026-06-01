@@ -22,36 +22,55 @@ extracted:
   localisation:
     departement: "Finistère (29)"
     region: "Bretagne"
+    commune: "non identifiée (toponyme breton très répandu : nombreux lieux-dits Kervern en 29)"
   montage_type: "propriété d'usage CLIP — non documenté hors liste officielle"
-  habitat: "inconnu (à ne pas confondre avec le Collectif de Kerlano, Rosnoën, autre membre CLIP du 29)"
+  habitat: "inconnu — non vérifiable (à ne pas confondre avec le Collectif de Kerlano, Rosnoën, autre membre CLIP du 29)"
   origine: "rebond — réseau CLIP 2026-06-01"
 origine: "rebond — réseau CLIP 2026-06-01"
+qualification:
+  date: '2026-06-01'
+  identifie: false
+  raison_non_identifie: "Membre CLIP confirmé (liste officielle), mais aucune source web ne rattache un lieu collectif « Kervern » au réseau ni ne donne sa commune. « Kervern » est un toponyme breton très répandu (de nombreux lieux-dits du Finistère le portent), ce qui noie toute recherche. Homonymes sans lien CLIP : habitats groupés Kervillé (Beuzec-Cap-Sizun) et Stang Kerim (Riec-sur-Bélon). Pages CLIP non récupérables (restriction de provenance)."
+  habitat_verifie: false
+  eligibilite: "indéterminée (lieu non identifié)"
 statut: actif
 ---
 
 # Lead — Kervern (Finistère)
 
-## À instruire
+## Synthèse
 
-**Membre CLIP confirmé** (nommé sur `clip.ouvaton.org/les-projets/`, dépt 29).
-**Lieu mal identifié** : la seule source est la liste officielle CLIP.
+**Membre CLIP confirmé** (liste `clip.ouvaton.org/les-projets/`, dépt 29) mais
+**non identifié**. La qualification du 2026-06-01 n'a rien ajouté : aucune source
+web ne rattache un lieu collectif « Kervern » au réseau CLIP, ni ne donne sa
+commune. Difficulté de fond : **« Kervern » est un toponyme breton très répandu**
+(de nombreux lieux-dits du Finistère le portent), ce qui noie toute recherche
+ciblée. Les habitats groupés finistériens trouvés — **Kervillé** (Beuzec-Cap-Sizun)
+et **Stang Kerim** (Riec-sur-Bélon) — sont des homonymes/proches sans lien CLIP
+établi, à ne pas confondre. À ne pas confondre non plus avec le **Collectif de
+Kerlano** (Rosnoën, 29), autre membre CLIP du Finistère, listé séparément.
 
-**Ce qu'on sait.** Nom et département (Finistère). **Attention** : ne pas
-confondre avec le **Collectif de Kerlano** (Rosnoën, 29), autre membre CLIP du
-Finistère faisant l'objet d'un lead distinct — « Kervern » est listé séparément.
-Les recherches web sur « Kervern Finistère lieu collectif » n'ont rien renvoyé de
-probant.
+Aucune commune, aucune entité juridique, aucun habitat permanent vérifié. Les pages
+du site CLIP ne sont pas récupérables dans cette session (restriction de
+provenance), ce qui bloque l'identification.
 
-**Ce qu'il reste à rechercher.** Tout : commune exacte, nature du lieu, entité
-juridique, montage de propriété d'usage. Piste : PV d'AG CLIP récents, annuaire
-associatif Finistère.
+**Reste à rechercher.** Commune exacte, nature du lieu, entité juridique, montage
+CLIP. Pistes hors session : page CLIP du lieu (à ouvrir directement), PV d'AG CLIP,
+annuaire associatif Finistère (net1901 / assoce.fr), presse locale (Le Télégramme,
+Ouest-France 29), contact réseau CLIP.
 
-## Sources consultées
+## Sources
 
 - CLIP, *Les lieux* — https://clip.ouvaton.org/les-projets/ (Kervern listé,
-  Finistère) — **page lue directement**. Aucune autre source fiable trouvée.
+  Finistère). Liste confirmée par recherche web.
+- Homonymes/proches écartés : https://cooperative-oasis.org/oasis/stang-kerim/
+  (Riec-sur-Bélon), https://www.bleu-tomate.fr/loasis-kerville-le-pari-de-lautonomie/
+  (Kervillé, Beuzec-Cap-Sizun).
 
 ## Verdict de lead
 
-**À instruire — quasi vide.** Membre CLIP confirmé mais non identifié.
-Lead-traceur à enrichir. Cf. lead réseau `clips.md`.
+**Actif — à préciser (non identifié).** Membre CLIP authentique (propriété d'usage
+✓) mais non localisable depuis les sources disponibles ; le toponyme générique
+empêche toute recherche fiable. Discriminant **habitat permanent** non vérifiable.
+Ne pas créer de pré-fiche. Lead-traceur à reprendre quand les pages CLIP seront
+accessibles. Cf. lead réseau `clips.md`.
