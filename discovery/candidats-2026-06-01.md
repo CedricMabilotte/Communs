@@ -2,7 +2,7 @@
 
 0 candidat·s repéré·s sur 0 sources scannées (39 hors fenêtre de fréquence, 39 sources au total) — 0 hors fiches existantes, 0 sur un angle mort ; 0 écarté·s via discovery/ignore.txt. Score pondéré ; à examiner et promouvoir manuellement.
 
-**Pipeline** — 69 leads actifs ; 0 leads touchés cette passe ; 0 pré-fiches générées (Z2 → Z3, seuil 25, 2 indices min).
+**Pipeline** — 66 leads actifs ; 0 leads touchés cette passe ; 0 pré-fiches générées (Z2 → Z3, seuil 25, 2 indices min).
 
 ### Sources hors fenêtre (39)
 

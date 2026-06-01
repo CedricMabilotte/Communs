@@ -7,4 +7,4 @@ Derniere passe : 2026-06-01
 - [Santé des sources](sources-sante.md)
 - [Pipeline — spec et conventions](PIPELINE.md)
 
-Pipeline en cours : 69 leads actifs ; 0 pré-fiches générées aujourd'hui.
+Pipeline en cours : 66 leads actifs ; 0 pré-fiches générées aujourd'hui.
