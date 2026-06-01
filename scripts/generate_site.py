@@ -1324,8 +1324,14 @@ def nature_label(nid, concepts):
 # capte le fonds et se lit `commerciale` → `marchand`. Cf. taf/spec-A1-implementation.md §3.
 _BAIL_TITRES_SECURISES = {
     "bail_rural", "bail_emphyteotique", "bail_reel_solidaire", "bail_a_construction",
+    # commodat (prêt à usage, gratuit par nature — art. 1875 C. civ.) : créditant
+    # SOUS porteur hors-marché — la gratuité + un porteur hors-marché l'emportent
+    # sur la précarité du titre (décision #11, cas Villarceaux/FPH). La condition
+    # `porteurs_hors_marche` reste exigée plus bas, donc un commodat sous porteur
+    # marchand resterait, lui, non créditant.
+    "commodat",
 }
-# `convention`/`commodat` = usage précaire, non créditants (décision #10).
+# `convention` (titre générique vague) = usage précaire, non créditant.
 _PORTEUR_HORS_MARCHE = {
     "non_lucrative", "commerciale_desactivee", "commerciale_encadree",
 }

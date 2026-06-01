@@ -461,9 +461,10 @@ nature_interet:
 verdict:
   regle: >
     La nature de chaque maillon est lue EFFECTIVEMENT : un maillon
-    `exploitation_agricole` preneur d'un bail sécurisé sous un porteur
-    hors-marché garde cette nature ; détenteur ou intégré à la propriété, il se
-    lit `commerciale`. Puis : `marchand` si la chaîne compte un maillon effectif
+    `exploitation_agricole` preneur d'un bail sécurisé — ou d'un commodat gratuit
+    (décision #11) — sous un porteur hors-marché garde cette nature ; détenteur,
+    intégré à la propriété, ou sous titre précaire (convention) sans porteur
+    hors-marché, il se lit `commerciale`. Puis : `marchand` si la chaîne compte un maillon effectif
     `commerciale` ou `privee_individuelle`. Sinon `hybride` si elle compte un
     maillon `commerciale_encadree` ou `exploitation_agricole` (intérêt privé
     encadré ou bénéfice d'exploitation approprié : plafond du sommet). Sinon —

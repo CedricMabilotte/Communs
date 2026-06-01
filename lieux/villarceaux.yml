@@ -80,7 +80,7 @@ grille:
     note: "Les dispositifs de transmission et de renouvellement ne sont pas décrits par les sources consultées."
   - critere: montage_non_commercial
     valeur: oui
-    note: "L'usufruitier inclut l'EARL du Chemin Neuf, société civile d'exploitation agricole : non commerciale au sens du marché, et preneuse d'un commodat (prêt à usage gratuit, 25 ans) sous une fondation non lucrative — elle exploite sans détenir le foncier ni verser de loyer rentier. Aucun titre cessible ne rend la valeur du foncier captable (porteur hors-marché). Mais l'EARL reste lucrative pour ses associé·es et son titre — un commodat — est précaire et non créditant au sens du modèle (décision #10) : le maillon d'exploitation est donc lu commercial, ce qui classe le lieu marchand."
+    note: "L'usufruitier inclut l'EARL du Chemin Neuf, société civile d'exploitation agricole : non commerciale au sens du marché, et preneuse d'un commodat (prêt à usage gratuit, 25 ans) sous une fondation non lucrative — elle exploite sans détenir le foncier ni verser de loyer rentier. Aucun titre cessible ne rend la valeur du foncier captable (porteur hors-marché), et son titre — un commodat gratuit sous porteur hors-marché — est désormais créditant (décision #11) : le maillon d'exploitation garde sa nature `exploitation_agricole`, ce qui tient le lieu en hybride (sous le sommet), sans le rendre marchand. L'EARL reste lucrative pour ses associé·es, ce qui le maintient sous le sommet."
   - critere: usage_non_marchand
     valeur: inconnu
     note: "Le régime d'accès à la terre et à ses fruits n'est pas documenté ; l'exploitation agroécologique est conduite par une EARL et le détail des activités de formation et d'accueil n'est pas précisé."
@@ -123,15 +123,14 @@ analyse:
     lucrative, dont l'usage agricole est confié à l'EARL du Chemin Neuf par un
     commodat — prêt à usage gratuit consenti pour 25 ans sous charte
     agroécologique stricte. Le foncier est hors-marché et sans loyer rentier ;
-    mais selon le modèle (décision #10), un commodat est un titre *précaire et
-    non créditant* : l'exploitation agricole preneuse y est alors lue comme un
-    maillon commercial, ce qui classe le lieu **marchand** — non parce que la
-    valeur du foncier serait captable (nul titre cessible ne le permet), mais à
-    cause de la précarité du titre d'usage. Un reclassement en hybride
-    supposerait un titre ouvrant un droit au renouvellement (bail rural
-    environnemental, usufruit), plus de transparence sur la gouvernance — ou un
-    arbitrage doctrinal traitant le commodat gratuit sous porteur hors-marché
-    comme créditant.
+    un commodat gratuit sous un porteur hors-marché est, par décision #11, un
+    titre **créditant** (la gratuité et la solidité du porteur l'emportent sur
+    la précarité formelle du prêt à usage). Le lieu est donc **hybride** :
+    l'EARL reste une société civile d'exploitation lucrative pour ses associé·es
+    (appropriation du bénéfice), ce qui le tient sous le sommet sans le rendre
+    marchand. La consolidation passerait par un titre ouvrant un droit au
+    renouvellement (bail rural environnemental, usufruit) et par plus de
+    transparence sur la gouvernance.
 fiabilite: >
   Faits vérifiés : propriété du domaine par la FPH, surface d'environ 600 hectares,
   exploitation par l'EARL du Chemin Neuf (constituée en 2006), transition
