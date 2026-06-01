@@ -8,7 +8,7 @@ localisation:
   commune: "Gensac-de-Boulogne"
   departement: "Haute-Garonne (31)"
   region: "Occitanie"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.588,43.252&z=16"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.5973,43.2728&z=17"
 annee: 2009
 url: "https://ecolectif.jimdofree.com/"
 resume: >
@@ -137,6 +137,9 @@ fiabilite: >
   tout compris, écohameau référencé dans le réseau de la Coopérative Oasis et de
   Colibris. Non confirmé : financement direct par la Coopérative Oasis, clause de
   dévolution, durée des baux d'occupation, rôle exact de la société MV Finance.
+  Localisation Géoportail approximative (hameau de Bernadaou, lieu-dit « Le
+  Paoulé », siège de la SCI Terres d'Ecolectif) ; bâti exact de l'écohameau non
+  confirmé.
 chaine:
   porteurs: [sci-terres-ecolectif]
   usufruitiers: [chemins-ecolectif]

@@ -8,7 +8,7 @@ localisation:
   commune: "Maxent"
   departement: "Ille-et-Vilaine (35)"
   region: "Bretagne"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=-2.032,47.984&z=16"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-1.9869,48.0008&z=14"
 annee: null
 url: "https://www.eaudubassinrennais-collectivite.fr/notre-reseau/ressources-eau/ressource-cheze-canut/"
 resume: >
@@ -143,7 +143,10 @@ fiabilite: >
   rattachement au dispositif Terres de Sources. Non confirmé : statut
   d'inaliénabilité du foncier, identité des exploitant·es preneur·ses, montant
   du fermage, contenu précis des clauses environnementales, date de mise en
-  place du dispositif.
+  place du dispositif. Localisation Géoportail approximative : le lieu est une
+  aire d'alimentation de captage (bassin versant d'environ 62 km²), non un site
+  ponctuel ; le repère est posé sur le barrage du Canut (commune de Maxent),
+  infrastructure éponyme du captage, à titre indicatif.
 chaine:
   porteurs: [eau-bassin-rennais]
   usufruitiers: [exploitants-brce-cheze-canut]

@@ -8,7 +8,7 @@ localisation:
   commune: "Lamonzie-Montastruc (Bergeracois, Périgord pourpre)"
   departement: "Dordogne (24)"
   region: "Nouvelle-Aquitaine"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.595,44.895&z=16"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.6219,44.9101&z=17"
 annee: 2010
 url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
 resume: >
@@ -135,8 +135,9 @@ fiabilite: >
   court, siège de l'exploitation au lieu-dit Domaine d'Eyssal, 24520
   Lamonzie-Montastruc (commune confirmée par l'adresse du GAEC d'Eyssal, et non
   Bergerac comme indiqué initialement). Non confirmé : surface totale exploitée,
-  niveau du fermage, clauses du bail rural, dispositifs de transmission, exactitude
-  des coordonnées Geoportail (laissées en l'état, à recaler sur Lamonzie-Montastruc).
+  niveau du fermage, clauses du bail rural, dispositifs de transmission. Coordonnées
+  Geoportail recalées (juin 2026) sur l'Impasse d'Eyssal à Lamonzie-Montastruc
+  (siège du GAEC, source OpenStreetMap) ; localisation jugée précise.
 chaine:
   porteurs: [fonciere-terre-de-liens]
   usufruitiers: [gaec-eyssal]

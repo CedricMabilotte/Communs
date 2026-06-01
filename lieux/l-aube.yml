@@ -5,10 +5,11 @@ sous_titre: "Écolieu d'accueil légué à un fonds de dotation, dans la Drôme"
 statut_fiche: publie
 forme_juridique: null
 localisation:
-  commune: null
+  commune: "Piégros-la-Clastre"
   departement: "Drôme (26)"
   region: "Auvergne-Rhône-Alpes"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.097,44.699&z=16"
+  code_postal: "26400"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=5.1007,44.6948&z=14"
 annee: 2022
 url: "https://www.aubascule.fr/"
 resume: >
@@ -140,7 +141,13 @@ fiabilite: >
   association loi 1901 « L'Aub'ascule », SIREN 938330586, déclarée à la
   préfecture de Die le 12/10/2024, gestion officielle du lieu depuis le 1er
   novembre 2024. Non confirmé : nature et durée du titre d'usage, montant
-  d'une éventuelle redevance, caractère consomptible de la dotation.
+  d'une éventuelle redevance, caractère consomptible de la dotation. Commune
+  identifiée (juin 2026) : Piégros-la-Clastre (26400), au lieu-dit La Motte /
+  Les Combeaux (sources Drôme Tourisme, Pages Jaunes, Coopérative Oasis) — le
+  champ `commune` reste à renseigner par l'opérateur. Le repère Geoportail est
+  centré sur le bourg de Piégros-la-Clastre (zoom élargi z=14) : l'emplacement
+  exact de l'écolieu (lieu-dit en combe non géocodable depuis les sources)
+  n'étant pas localisable au mètre, la localisation est approximative.
 chaine:
   porteurs: [fonds-fraternite-pour-demain]
   usufruitiers: [collectif-aubascule]

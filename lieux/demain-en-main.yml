@@ -8,7 +8,7 @@ localisation:
   commune: "Locoal-Mendon"
   departement: "Morbihan (56)"
   region: "Bretagne"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=-3.1,47.7167&z=16"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=-3.1063,47.6953&z=17"
 annee: 2021
 url: "https://demainenmain.fr/"
 resume: >

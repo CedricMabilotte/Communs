@@ -8,7 +8,7 @@ localisation:
   commune: "La Cavalerie / Millau"
   departement: "Aveyron (12)"
   region: "Occitanie"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=3.159,44.009&z=16"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=3.1572,44.0082&z=13"
 annee: 1985
 url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
 resume: >
@@ -123,7 +123,12 @@ fiabilite: >
   décembre 1982, bail emphytéotique signé en 1985 pour 60 ans puis prolongé en
   2013 à 99 ans (échéance 2083), attribution de l'usage par baux de long terme, hausse du
   nombre de paysan·nes d'environ 20 %. Non confirmé : modalités précises
-  d'association des collectivités et du voisinage à la gouvernance.
+  d'association des collectivités et du voisinage à la gouvernance. Le repère
+  Geoportail est centré sur le village de La Cavalerie (zoom élargi z=13) : la
+  SCTL gère un vaste territoire (~6 300 hectares) sur le plateau, sans point
+  unique ; il s'agit donc d'un repère indicatif et non d'une adresse de site. À
+  noter : le siège social de la SCTL est en fait à Montredon, 12100
+  La Roque-Sainte-Marguerite (registres publics).
 chaine:
   porteurs: [etat-larzac]
   usufruitiers: [sctl]

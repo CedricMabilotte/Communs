@@ -8,7 +8,7 @@ localisation:
   commune: "Sazilly"
   departement: "Indre-et-Loire (37)"
   region: "Centre-Val de Loire"
-  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.343,47.135&z=16"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.3389,47.1283&z=17"
 annee: 2018
 url: "https://www.fermeduplaisir.fr/"
 resume: >
