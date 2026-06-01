@@ -4,7 +4,7 @@ nom: "Société Civile le Hameau des Buis"
 sous_titre: "Société civile propriétaire du foncier de l'écovillage, aux parts détenues par une association"
 statut_fiche: publie
 forme_juridique: "Société civile"
-nature_interet: inconnu
+nature_interet: commerciale_encadree
 localisation:
   commune: "Lablachère"
   departement: "Ardèche (07)"
@@ -16,9 +16,15 @@ resume: >
   de l'écovillage intergénérationnel du Hameau des Buis, en sud Ardèche. Sa
   particularité tient à la détention de ses parts : sur 520 parts sociales, 519
   étaient détenues par l'association loi 1901 La Ferme des Enfants, la dernière
-  par une société financière. Le pouvoir de décision était ainsi placé in fine
-  dans une structure associative sans but lucratif, montage conçu pour soustraire
-  le foncier à la spéculation et préserver la vocation du lieu. À la suite d'un
+  par MV Finances (Michel Valentin Finances), SARL du mécène Michel Valentin —
+  proche de Pierre Rabhi — qui finançait le projet par un prêt. Le pouvoir de
+  décision était ainsi placé in fine, à 519 parts sur 520, dans une structure
+  associative sans but lucratif, montage conçu pour soustraire le foncier à la
+  spéculation et préserver la vocation du lieu. La présence d'une part détenue
+  par une SARL — société commerciale — empêche toutefois la désactivation
+  intégrale de l'intérêt privé (qui suppose 100 % des parts entre des mains non
+  lucratives) : la nature du porteur est donc commerciale à lucrativité encadrée,
+  non désactivée. À la suite d'un
   conflit interne ayant conduit au départ de La Ferme des Enfants en 2021, le
   collectif a transformé la société civile en SAS coopérative, constituée le
   28 janvier 2023. La société civile décrite ici est donc le porteur historique
@@ -30,8 +36,11 @@ montage:
     civile dont le capital — environ 2,3 millions d'euros apportés par les
     personnes réservant un logement et 52 000 euros par La Ferme des Enfants —
     se répartissait en 520 parts sociales. L'association La Ferme des Enfants en
-    détenait 519, une société financière la dernière : le pouvoir de décision
-    était ainsi verrouillé dans une association sans but lucratif. Les
+    détenait 519, MV Finances (SARL du mécène Michel Valentin) la dernière ; le
+    13 juillet 2010, l'association a cédé une part à l'association des habitant·es
+    du Hameau des Buis. Le pouvoir de décision était ainsi verrouillé, à très
+    large majorité, dans des associations sans but lucratif, une seule part
+    restant entre les mains d'une société commerciale. Les
     habitant·es finançaient le lieu par un prêt sans intérêt indexé sur l'indice
     de référence des loyers, sans devenir propriétaires, et disposaient d'un
     droit d'usage de leur logement par un contrat de résident. Le démembrement
@@ -40,22 +49,24 @@ montage:
 integrite_montage:
   niveau: mutualisme
   commentaire: >
-    Société civile dont les parts étaient quasi intégralement détenues par une
-    association loi 1901 : la nature non lucrative du contrôle reposait sur ce
-    montage de parts, et non sur des verrous statutaires propres à la société
-    civile, non documentés par les sources. La société civile n'étant pas une
-    forme structurellement non lucrative et sa non-lucrativité effective n'étant
-    pas établie (nature_interet inconnu), le profil ne peut être rattaché à
-    l'intérêt général institué : il relève d'une propriété collective dont les
-    fruits servent un cercle de sociétaires (mutualisme), sous réserve de la
-    documentation des verrous statutaires.
+    Société civile dont les parts étaient quasi intégralement détenues par des
+    associations loi 1901 (519 sur 520, puis 518 + 1 part à l'association des
+    habitant·es après 2010) : le caractère non lucratif du contrôle reposait sur
+    ce montage de parts, et non sur des verrous statutaires propres à la société
+    civile, non documentés par les sources. La dernière part étant détenue par
+    une SARL commerciale (MV Finances), l'intérêt privé n'est pas intégralement
+    désactivé — la désactivation suppose 100 % des parts entre des mains non
+    lucratives — : la nature du porteur est commerciale à lucrativité encadrée.
+    Le profil relève d'une propriété collective dont les fruits servent un cercle
+    de sociétaires (mutualisme), sous réserve de la documentation des verrous
+    statutaires.
 grille:
   - critere: inalienabilite
     valeur: partiel
     note: "Le foncier était porté par une société civile dont les parts étaient quasi intégralement détenues par une association, ce qui en freinait la sortie ; aucune clause statutaire d'inaliénabilité n'est documentée par les sources."
   - critere: parts_non_cessibles
     valeur: partiel
-    note: "Les parts de la société civile étaient concentrées à 519 sur 520 dans une association loi 1901 ; les sources ne documentent ni clause de plafonnement du prix de cession, ni interdiction statutaire de cession libre."
+    note: "Les parts de la société civile étaient concentrées à 519 sur 520 dans une association loi 1901, la dernière dans une SARL (MV Finances) ; une part a été cédée à l'association des habitant·es en juillet 2010, preuve que les parts étaient cessibles. Les sources ne documentent ni clause de plafonnement du prix de cession, ni interdiction statutaire de cession libre."
   - critere: nature_protectrice
     valeur: non
     note: "La société civile occupe le dernier rang de l'échelle de protection foncière, derrière la personne publique, la fondation reconnue d'utilité publique et le fonds de dotation."
@@ -64,7 +75,7 @@ grille:
     note: "Le sort de l'actif de la société civile en cas de dissolution n'est pas documenté par les sources consultées."
   - critere: forme_non_lucrative
     valeur: partiel
-    note: "La société civile n'est pas une forme structurellement non lucrative ; sa non-lucrativité reposait sur la détention de 519 parts sur 520 par l'association loi 1901 La Ferme des Enfants."
+    note: "La société civile n'est pas une forme structurellement non lucrative ; sa non-lucrativité reposait sur la détention de 519 parts sur 520 par l'association loi 1901 La Ferme des Enfants, la dernière étant détenue par MV Finances, SARL commerciale — d'où l'absence de désactivation intégrale de l'intérêt privé (nature commerciale à lucrativité encadrée)."
   - critere: non_lucrativite_effective
     valeur: partiel
     note: "Les habitant·es finançaient le lieu par un prêt sans intérêt indexé sur l'indice de référence des loyers, sans plus-value attendue ; l'absence de rémunération du capital n'est pas confirmée par des clauses statutaires documentées."
@@ -109,7 +120,7 @@ grille:
     note: "Le montage portait le foncier d'un écovillage intergénérationnel pensé pour ses habitant·es humain·es ; aucune finalité de préservation de la biodiversité n'est documentée par les sources."
 analyse:
   forces:
-    - "Parts de la société civile détenues à 519 sur 520 par une association loi 1901 sans but lucratif."
+    - "Parts de la société civile détenues à 519 sur 520 par une association loi 1901 sans but lucratif (la dernière par MV Finances, SARL du mécène finançant le projet)."
     - "Foncier financé par des prêts sans intérêt des habitant·es, hors logique spéculative."
     - "Montage public et documenté, conçu pour préserver la vocation du lieu."
   fragilites:
@@ -123,19 +134,30 @@ analyse:
   synthese: >
     La Société Civile le Hameau des Buis illustre un montage de propriété
     collective où la non-lucrativité reposait non sur la forme juridique du
-    porteur, mais sur la détention de ses parts par une association. Ce montage
+    porteur, mais sur la détention de ses parts par une association (519 sur 520).
+    La dernière part, détenue par une SARL commerciale, empêche la désactivation
+    intégrale de l'intérêt privé : le porteur est de nature commerciale à
+    lucrativité encadrée, non désactivée. Ce montage
     a verrouillé le foncier sans le rendre inaliénable au plus haut niveau, et la
     concentration du pouvoir décisionnel dans une seule association s'est
     révélée un point de tension, conduisant au conflit interne puis à la
     transformation de la société civile en SAS coopérative en 2023.
 fiabilite: >
-  Faits vérifiés (sources Hameau des Buis, Mouvement Colibris et Revue Silence,
-  consultées en mai 2026) : société civile constituée le 12 février 2004 pour
-  porter le foncier et le bâti du Hameau des Buis, capital d'environ 2,3 millions
+  Faits vérifiés (sources Hameau des Buis, Mouvement Colibris, Revue Silence et
+  document « Comprendre le conflit » de La Ferme des Enfants, consultées en mai
+  et juin 2026) : société civile constituée le 12 février 2004 pour
+  porter le foncier et le bâti du Hameau des Buis (immatriculée SIREN 453458622,
+  siège à Berrias-et-Casteljau, Ardèche), capital d'environ 2,3 millions
   d'euros apportés par les futur·es habitant·es et 52 000 euros par La Ferme des
   Enfants, 520 parts sociales dont 519 détenues par l'association loi 1901 La
-  Ferme des Enfants et une par une société financière, pouvoir de décision placé
-  in fine dans cette association, financement des habitant·es par prêt sans
+  Ferme des Enfants et une par MV Finances (SARL du mécène Michel Valentin,
+  proche de Pierre Rabhi, qui finançait le projet par un prêt) ; une part cédée
+  par l'association à l'association des habitant·es le 13 juillet 2010. Le
+  caractère commercial de MV Finances (SARL) interdit la désactivation intégrale
+  de l'intérêt privé : la nature retenue est commerciale à lucrativité encadrée.
+  Pouvoir de décision placé
+  in fine, à très large majorité, dans des associations sans but lucratif,
+  financement des habitant·es par prêt sans
   intérêt indexé sur l'indice de référence des loyers, contrat de résident avec
   montant calé sur le marché locatif local, conflit interne et départ de La
   Ferme des Enfants en 2021, transformation en SAS coopérative le 28 janvier
@@ -168,3 +190,9 @@ sources:
     url: "https://www.colibris-lemouvement.org/projets/projet-oasis/oasis-a-decouvrir/hameau-buis"
   - titre: "Tempête sur le Hameau des Buis — Revue Silence"
     url: "https://www.revuesilence.net/numeros/499-L-ecologie-du-livre/tempete-sur-le-hameau-des-buis"
+  - titre: "Comprendre le Hameau des Buis et son conflit en quelques pages — La Ferme des Enfants"
+    url: "https://la-ferme-des-enfants.com/wp-content/uploads/sites/2/2020/01/comprendre-conflit.pdf"
+  - titre: "HDB Hameau des Buis (SIREN 453458622) — Pappers"
+    url: "https://www.pappers.fr/entreprise/hdb-hameau-des-buis-453458622"
+  - titre: "Épargne éthique et solidaire — Hameau des Buis"
+    url: "https://hameaudesbuis.org/epargne-ethique-et-solidaire/"

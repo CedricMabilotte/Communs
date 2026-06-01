@@ -18,7 +18,8 @@ resume: >
   été acheté en septembre 2016 par un groupe de couples ami·es de la région
   rennaise et réhabilité en habitat participatif — neuf logements, un gîte, des
   logements d'accueil social, un fournil. Le foncier est porté par une société
-  civile d'habitant·es ; la SCIC Le Ruisseau, créée en 2021, porte les
+  civile d'attribution d'habitant·es (SCIA) — parts indexées sur la valeur des
+  lots, cessibles et appropriables à titre privé ; la SCIC Le Ruisseau, créée en 2021, porte les
   activités de transition écologique et alimentaire, l'accueil et la rénovation
   d'une grange. La Coopérative Oasis a soutenu le projet par un apport en compte
   courant d'associé de 160 000 € accordé en 2022.
@@ -29,41 +30,46 @@ montage:
       titre: integre
   description: >
     Le foncier et le bâti de l'écohameau sont détenus collectivement par une
-    société civile constituée par les habitant·es — décrite par les sources
-    tantôt comme société civile d'attribution, tantôt comme société civile
-    immobilière. Les habitant·es sont à la fois associé·es de la société civile
-    propriétaire et usager·es du lieu : la chaîne est intégrée. La SCIC Le
+    société civile d'attribution (SCIA) constituée par les habitant·es — forme
+    établie par le registre (SIREN 821271442) : son objet est la division de
+    l'ensemble immobilier en fractions attribuées en propriété ou en jouissance
+    aux associé·es. Les habitant·es sont à la fois associé·es de la société
+    civile propriétaire et usager·es du lieu : la chaîne est intégrée. Les parts,
+    proportionnelles à la valeur du lot attribué, portent une valeur patrimoniale
+    appropriable à titre privé et sont cessibles, sans verrou anti-spéculatif
+    documenté. La SCIC Le
     Ruisseau porte les activités d'accueil et de transition, sans détenir
     l'habitat. La Coopérative Oasis est intervenue comme financeur (apport de
     160 000 € en 2022), non comme maillon de la chaîne.
 integrite_montage:
-  niveau: mutualisme
+  niveau: economie_marchande
   commentaire: >
-    Foncier porté par une société civile d'habitant·es ; chaîne intégrée
-    propriétaire ≡ usagère. Forme civile collective, sans verrou anti-spéculatif
-    documenté.
+    Foncier porté par une société civile d'attribution d'habitant·es ; chaîne
+    intégrée propriétaire ≡ usagère. Parts indexées sur la valeur du lot,
+    cessibles et appropriables à titre privé, sans verrou anti-spéculatif :
+    lucrativité ouverte, valeur du lieu captable.
 grille:
   - critere: foncier_hors_marche
-    valeur: partiel
-    note: "Le foncier est porté collectivement par la société civile des habitant·es et n'est pas destiné à la revente ; aucun verrou anti-spéculatif sur la valeur des parts n'est documenté."
+    valeur: non
+    note: "Le foncier est logé dans une société civile d'attribution dont les parts, indexées sur la valeur du lot (art. L.212-5 CCH), portent la valeur appropriable du bâti et sont cessibles ; aucun verrou anti-spéculatif n'est documenté. Le foncier n'est pas soustrait au marché."
   - critere: montage_documente
-    valeur: partiel
-    note: "Le montage — société civile d'habitant·es propriétaire, SCIC Le Ruisseau pour les activités — est public, mais la forme exacte de la société civile n'est pas tranchée par les sources."
+    valeur: oui
+    note: "Le montage est public et tranché : société civile d'attribution (SCIA) propriétaire (registre SIREN 821271442), SCIC Le Ruisseau pour les activités. Détails statutaires internes (mode de décision, dévolution) non publiés."
   - critere: irreversibilite
-    valeur: partiel
-    note: "La détention collective en société civile freine la sortie individuelle ; aucune clause d'inaliénabilité ni de plafonnement de la valeur des parts n'est documentée."
+    valeur: non
+    note: "Société civile d'attribution à parts cessibles indexées sur la valeur du lot ; aucune clause d'inaliénabilité ni de plafonnement de la valeur des parts n'est documentée. La sortie individuelle au prix de marché reste possible."
   - critere: origine_non_speculative
     valeur: oui
     note: "L'écohameau a été acquis par l'apport des couples fondateurs, puis l'apport solidaire de la Coopérative Oasis, hors endettement spéculatif."
   - critere: parts_non_cessibles
-    valeur: partiel
-    note: "Les parts de la société civile sont généralement cessibles sous agrément des associé·es, mais à un prix non plafonné documenté."
+    valeur: non
+    note: "Les parts de la société civile d'attribution sont cessibles (librement entre associé·es et familles, aux tiers sous agrément) et portent la valeur du lot attribué, sans plafonnement de prix documenté."
   - critere: non_lucratif_global
-    valeur: partiel
-    note: "Aucun maillon ne recherche de plus-value spéculative ; la chaîne est composée d'une société civile et d'une SCIC, sans structure structurellement non lucrative."
+    valeur: non
+    note: "La société civile d'attribution n'a aucun verrou de non-lucrativité : ses associé·es personnes physiques s'attribuent des lots dont les parts portent une valeur patrimoniale privée. La chaîne ne comporte aucune structure structurellement non lucrative."
   - critere: montage_non_commercial
-    valeur: partiel
-    note: "Le foncier de l'habitat est porté par une société civile (non commerciale) ; la SCIC Le Ruisseau, qui porte les activités, est une société commerciale de forme coopérative à lucrativité encadrée."
+    valeur: non
+    note: "La société civile d'attribution, bien que de droit civil, loge un foncier valorisable à titre privé via des parts cessibles : elle relève d'une lucrativité ouverte (`commerciale` au sens du cadre). La SCIC Le Ruisseau porte les activités à lucrativité encadrée."
   - critere: gouvernance_collective
     valeur: oui
     note: "Les habitant·es, associé·es de la société civile propriétaire, gouvernent eux-mêmes l'écohameau et son habitat."
@@ -106,7 +112,7 @@ analyse:
     - "Lieu réellement ouvert : accueil social, fournil, distribution de produits fermiers."
     - "Ancrage territorial fort, relayé par la SCIC Le Ruisseau."
   fragilites:
-    - "Forme exacte de la société civile non tranchée par les sources."
+    - "Société civile d'attribution : parts indexées sur la valeur du lot, cessibles et appropriables à titre privé — lucrativité ouverte, foncier non soustrait au marché."
     - "Pas de verrou anti-spéculatif documenté sur la valeur des parts."
     - "Chaîne intégrée : pas de contre-pouvoir externe entre propriété et usage."
   leviers:
@@ -115,10 +121,13 @@ analyse:
     - "Articuler une garantie foncière externe pérennisant la soustraction au marché."
   synthese: >
     La Bigotière est un écohameau d'habitat participatif à chaîne intégrée : les
-    habitant·es sont à la fois propriétaires, via une société civile, et
-    usager·es du lieu. Sa force est une réelle ouverture sociale et un fort
-    ancrage territorial ; sa marge de progression tient à l'absence de verrou
-    anti-spéculatif documenté sur les parts de la société civile.
+    habitant·es sont à la fois propriétaires, via une société civile
+    d'attribution, et usager·es du lieu. Sa force est une réelle ouverture
+    sociale et un fort ancrage territorial ; mais la forme retenue — parts
+    indexées sur la valeur des lots, cessibles et sans verrou anti-spéculatif —
+    laisse la valeur du foncier captable à titre privé. Le lieu relève d'un
+    montage marchand au regard du cadre, non par esprit spéculatif des
+    habitant·es, mais par la structure juridique choisie.
 fiabilite: >
   Faits vérifiés (sources la Bigotière, Le Ruisseau Coopérative, Coopérative
   Oasis et presse, consultées en mai 2026) : écohameau d'Épiniac acheté en
@@ -126,9 +135,13 @@ fiabilite: >
   bois, environ 1 000 m² de bâtiments, habitat participatif réhabilité (neuf
   logements, gîte, logements d'accueil social, fournil), foncier porté par une
   société civile d'habitant·es, SCIC Le Ruisseau créée en 2021 pour les
-  activités, apport de la Coopérative Oasis de 160 000 € en 2022. Non confirmé :
-  forme exacte de la société civile, modalités de cession des parts, clause de
-  dévolution, modalités financières internes, transparence comptable.
+  activités, apport de la Coopérative Oasis de 160 000 € en 2022. Forme de la
+  société civile désormais établie par le registre (SIREN 821271442,
+  annuaire-entreprises et Pappers) et corroborée par la presse (France 3) :
+  société civile d'attribution, division de l'ensemble immobilier en fractions
+  attribuées en propriété ou en jouissance aux associé·es personnes physiques.
+  Non confirmé : prix effectif et plafonnement éventuel de cession des parts,
+  clause de dévolution, modalités financières internes, transparence comptable.
 chaine:
   porteurs: [societe-civile-bigotiere]
   usufruitiers: [societe-civile-bigotiere]
@@ -140,3 +153,7 @@ sources:
     url: "https://cooperative-oasis.org/oasis/bigotiere/"
   - titre: "Épargner écolo : 3 exemples où l'épargne solidaire finance la transition écologique — Coopérative Oasis"
     url: "https://cooperative-oasis.org/articles/ecolieux-exemples-epargne-solidaire-finance-la-transition-ecologique/"
+  - titre: "LA BIGOTIERE (SIREN 821271442) — Annuaire des entreprises (data.gouv.fr)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/la-bigotiere-821271442"
+  - titre: "Société LA BIGOTIERE — Pappers (objet : société civile d'attribution)"
+    url: "https://www.pappers.fr/entreprise/la-bigotiere-821271442"

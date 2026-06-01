@@ -3,8 +3,8 @@ categorie: usufruitier
 nom: "Collectif de l'Aubascule"
 sous_titre: "Collectif d'habitant·es animant l'écolieu de l'Aube, dans la Drôme"
 statut_fiche: publie
-forme_juridique: "Collectif d'habitant·es (forme juridique non documentée)"
-nature_interet: inconnu
+forme_juridique: "Association loi 1901 « L'Aub'ascule » (SIREN 938330586, déclarée à la préfecture de Die le 12/10/2024)"
+nature_interet: non_lucrative
 localisation:
   commune: null
   departement: "Drôme (26)"
@@ -32,30 +32,35 @@ montage:
     Le fonds en a confié la gestion à la Coopérative Oasis, laquelle — n'ayant
     pas vocation à gérer directement un écolieu — y a installé le collectif de
     l'Aubascule. Le collectif assure l'usage et l'animation du lieu en
-    autogestion ; les sources publiques ne précisent ni sa forme juridique
-    propre, ni la nature exacte du titre d'usage qui le lie au foncier.
+    autogestion. Il s'est doté en octobre 2024 d'une forme juridique propre :
+    l'association loi 1901 « L'Aub'ascule » (déclarée à la préfecture de Die le
+    12/10/2024, SIREN 938330586), qui assure officiellement la gestion du lieu
+    depuis le 1er novembre 2024. La nature exacte du titre d'usage liant
+    l'association au foncier n'est pas précisée par les sources publiques.
 integrite_montage:
   niveau: commun_citoyen
   commentaire: >
-    Collectif citoyen d'habitant·es autogéré faisant vivre le lieu ; sa forme
-    juridique précise n'est pas documentée par les sources publiques, ce qui
-    laisse un angle mort sur la nature du maillon usufruitier.
+    Collectif citoyen d'habitant·es autogéré faisant vivre le lieu, désormais
+    constitué en association loi 1901 (« L'Aub'ascule ») — personne morale de
+    droit civil structurellement non lucrative : le maillon usufruitier est de
+    nature non lucrative établie. Subsiste un angle mort sur la nature du titre
+    d'usage liant l'association au foncier.
 grille:
   - critere: non_appropriation
     valeur: oui
     note: "La propriété du lieu reste au fonds de dotation Fraternité pour Demain : le collectif ne peut ni revendre ni capter la valeur du foncier."
   - critere: parts_non_cessibles
-    valeur: inconnu
-    note: "La forme juridique du collectif de l'Aubascule n'est pas documentée par les sources : l'existence ou non de parts cessibles ne peut être établie."
+    valeur: oui
+    note: "L'usufruitier est une association loi 1901 (« L'Aub'ascule ») : une association n'a pas de capital social ni de parts, donc rien de cessible ni de captable."
   - critere: devolution_usufruitier
-    valeur: inconnu
-    note: "Le sort de l'actif du collectif en cas de dissolution n'est pas documenté, sa forme juridique n'étant pas connue."
-  - critere: personne_morale_civile
-    valeur: inconnu
-    note: "Les sources décrivent un « collectif » sans en préciser la forme juridique : son caractère de personne morale de droit civil ne peut être établi."
-  - critere: non_lucrativite_effective
     valeur: partiel
-    note: "Le collectif fait vivre un lieu d'accueil et de partage sans logique de profit apparente ; sa structure juridique n'étant pas documentée, la non-lucrativité effective n'est pas pleinement vérifiable."
+    note: "L'association loi 1901 ne distribue pas son boni de liquidation à ses membres (art. 1er, loi de 1901) ; la clause statutaire précise de dévolution de l'actif en cas de dissolution n'est pas publiée."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "« L'Aub'ascule » est une association loi 1901 déclarée (SIREN 938330586, préfecture de Die, 12/10/2024) : personne morale de droit civil sans but lucratif."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "L'usufruitier est une association loi 1901 à objet d'accueil et de transition écologique et sociale : structure non lucrative par construction, sans capital appropriable."
   - critere: une_voix
     valeur: oui
     note: "Le collectif, intergénérationnel et autogéré, fonctionne sur un mode horizontal de décision sans indexation sur un apport en capital."
@@ -70,7 +75,7 @@ grille:
     note: "La publication des comptes et des décisions du collectif n'est pas documentée par les sources."
   - critere: objet_ig
     valeur: oui
-    note: "Accueil de stages, accueil solidaire de personnes en situation de vulnérabilité, pôle permacole : l'objet porte un intérêt général social et écologique."
+    note: "Objet statutaire de l'association : créer, gérer et animer un lieu de vie collectif et d'accueil de stages, formations et rencontres autour de la transition écologique et sociale, l'agroécologie, la solidarité, la culture et le développement personnel — intérêt général social et écologique."
   - critere: public_non_restreint
     valeur: oui
     note: "Le pôle d'accueil solidaire fait du lieu un espace de vie partagée entre résident·es et personnes vivant un moment de vulnérabilité : les bénéfices dépassent le cercle des habitant·es."
@@ -97,20 +102,24 @@ analyse:
     - "Pôle d'accueil solidaire ouvrant le lieu à des personnes en situation de vulnérabilité."
     - "Obligation Réelle Environnementale inscrivant l'écologie dans le droit du lieu."
     - "Collectif autogéré, intergénérationnel, soudé par un parcours de formation commun."
+    - "Maillon usufruitier de nature non lucrative établie : association loi 1901 déclarée, sans capital appropriable."
   fragilites:
-    - "Forme juridique du collectif non documentée : angle mort sur la nature du maillon usufruitier."
-    - "Nature et durée du titre d'usage liant le collectif au foncier non documentées."
+    - "Nature et durée du titre d'usage liant l'association au foncier non documentées."
     - "Articulation indirecte avec le porteur, via la Coopérative Oasis gestionnaire."
+    - "Statuts, dévolution de l'actif et comptes de l'association non publiés."
   leviers:
-    - "Documenter et publier la forme juridique du collectif de l'Aubascule."
+    - "Publier les statuts de l'association (clause de dévolution, gouvernance)."
     - "Sécuriser et publier un titre d'usage long et direct sur le foncier."
     - "Préciser le régime de la redevance et l'articulation avec le fonds de dotation."
 synthese: >
   Le collectif de l'Aubascule est le maillon vivant de l'écolieu de l'Aube :
   un collectif citoyen autogéré, ouvert par son pôle solidaire au-delà de ses
   habitant·es, sur un foncier porté hors-marché par donation à un fonds de dotation.
-  Sa principale zone d'ombre est sa propre forme juridique et la nature du
-  titre d'usage qui le lie au lieu.
+  Il s'est doté fin 2024 d'une forme propre — l'association loi 1901
+  « L'Aub'ascule » —, personne morale de droit civil non lucrative : le maillon
+  usufruitier est solidement caractérisé. Sa zone d'ombre résiduelle est la
+  nature du titre d'usage qui le lie au lieu, et la publication de ses statuts
+  et comptes.
 fiabilite: >
   Faits vérifiés (sources Coopérative Oasis et l'Aubascule, consultées en mai
   2026) : écolieu de l'Aube dans la Drôme aux pieds des Trois Becs, donation
@@ -118,9 +127,13 @@ fiabilite: >
   à la Coopérative Oasis qui y installe le collectif de l'Aubascule, collectif
   fondé par six personnes issues de la Pépinière Oasis 2021, aujourd'hui une
   quinzaine d'habitant·es, trois pôles d'activité (accueil de stages, accueil
-  solidaire, permaculture), Obligation Réelle Environnementale. Non confirmé :
-  forme juridique du collectif, nature et durée du titre d'usage, montant
-  d'une éventuelle redevance, transparence comptable.
+  solidaire, permaculture), Obligation Réelle Environnementale. Forme juridique
+  établie (registres publics consultés juin 2026) : association loi 1901
+  « L'Aub'ascule », SIREN 938330586, déclarée à la préfecture de Die le
+  12/10/2024, siège 4 les Combeaux, 26400 Piégros-la-Clastre, gestion
+  officielle du lieu depuis le 1er novembre 2024. Non confirmé : nature et
+  durée du titre d'usage, montant d'une éventuelle redevance, statuts et
+  comptes (non publiés).
 voir_aussi: [fonds-fraternite-pour-demain]
 dossier:
   identite:
@@ -132,6 +145,7 @@ dossier:
   pieces:
     - type: statuts
       statut: inconnu
+      note: "Association déclarée à la préfecture de Die le 12/10/2024 (SIREN 938330586) : des statuts existent donc, mais leur contenu n'est pas publié."
     - type: reglement_interieur
       statut: inconnu
     - type: charte
@@ -149,3 +163,7 @@ sources:
     url: "https://cooperative-oasis.org/oasis/aube/"
   - titre: "L'Aube / L'Aubascule — site officiel"
     url: "https://www.aubascule.fr/"
+  - titre: "Annuaire des Entreprises (data.gouv.fr) — Association L'AUB'ASCULE, SIREN 938330586"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/l-aub-ascule-938330586"
+  - titre: "Pappers — Association L'AUB'ASCULE (938330586)"
+    url: "https://www.pappers.fr/entreprise/laubascule-938330586"

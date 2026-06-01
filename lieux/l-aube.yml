@@ -29,22 +29,26 @@ montage:
   articulations:
     - usufruitier: collectif-aubascule
       titre: convention
-      note: "Titre précis non documenté par les sources : la nature et la durée du titre d'usage liant le collectif au foncier ne sont pas publiques."
+      note: "L'usufruitier est l'association loi 1901 « L'Aub'ascule » (SIREN 938330586), gestionnaire officiel du lieu depuis le 01/11/2024 ; la nature et la durée précises du titre d'usage la liant au foncier ne sont pas publiques."
   description: >
     En 2022, l'écolieu de l'Aube a fait l'objet d'une donation au fonds de
     dotation Fraternité pour Demain, structure non lucrative qui en conserve la
     propriété protégée hors marché. Le fonds en a confié la gestion à la
     Coopérative Oasis, laquelle — n'ayant pas vocation à gérer directement un
     écolieu — y a installé le collectif de l'Aubascule, qui en assure l'usage
-    et l'animation en autogestion. La nature et la durée exactes du titre
-    d'usage liant le collectif au foncier ne sont pas documentées par les
-    sources publiques.
+    et l'animation en autogestion. Le collectif s'est constitué fin 2024 en
+    association loi 1901 (« L'Aub'ascule », SIREN 938330586), gestionnaire
+    officiel du lieu depuis le 1er novembre 2024. La nature et la durée exactes
+    du titre d'usage liant l'association au foncier ne sont pas documentées par
+    les sources publiques.
 integrite_montage:
   niveau: ig_institue
   commentaire: >
     Propriété portée par un fonds de dotation de droit privé non lucratif ;
-    usage assuré par un collectif citoyen autogéré, dont la forme juridique
-    précise n'est pas documentée par les sources.
+    usage assuré par un collectif citoyen autogéré, constitué fin 2024 en
+    association loi 1901 (« L'Aub'ascule ») — chaîne entièrement non lucrative.
+    Subsiste comme zone d'ombre la nature et la durée du titre d'usage liant
+    l'association au foncier.
 grille:
   - critere: foncier_hors_marche
     valeur: oui
@@ -59,14 +63,14 @@ grille:
     valeur: oui
     note: "Le foncier est entré dans le fonds de dotation par donation, hors tout endettement ou logique de plus-value."
   - critere: parts_non_cessibles
-    valeur: partiel
-    note: "Le fonds de dotation n'a pas de capital appropriable ; la forme juridique du collectif de l'Aubascule n'étant pas documentée, l'absence de parts cessibles à ce maillon ne peut être pleinement établie."
+    valeur: oui
+    note: "Ni le fonds de dotation (pas de capital appropriable) ni l'usufruitier — association loi 1901 « L'Aub'ascule », sans parts sociales — ne comportent de titres cessibles : la chaîne est sans part captable."
   - critere: non_lucratif_global
-    valeur: partiel
-    note: "Le fonds de dotation est non lucratif ; la forme juridique du collectif usager n'étant pas documentée, le caractère non lucratif de toute la chaîne ne peut être pleinement vérifié."
+    valeur: oui
+    note: "Chaîne entièrement non lucrative : fonds de dotation (porteur) et association loi 1901 (usufruitier), deux personnes morales structurellement non lucratives."
   - critere: montage_non_commercial
-    valeur: partiel
-    note: "Le porteur est un fonds de dotation non commercial ; la forme du collectif de l'Aubascule n'étant pas documentée, on ne peut exclure qu'un maillon soit de nature commerciale."
+    valeur: oui
+    note: "Aucun maillon commercial : porteur = fonds de dotation, usufruitier = association loi 1901 (SIREN 938330586) — deux structures non commerciales."
   - critere: gouvernance_collective
     valeur: oui
     note: "Le collectif de l'Aubascule, intergénérationnel et autogéré, décide collectivement des usages du lieu et consacre des temps réguliers au soin du lien collectif."
@@ -108,20 +112,22 @@ analyse:
     - "Foncier protégé par donation à un fonds de dotation non lucratif."
     - "Pôle d'accueil solidaire ouvrant le lieu à des personnes en situation de vulnérabilité."
     - "Obligation Réelle Environnementale inscrivant l'écologie dans le droit du lieu."
+    - "Chaîne entièrement non lucrative : porteur fonds de dotation et usufruitier association loi 1901."
   fragilites:
-    - "Forme juridique du collectif usager et titre d'usage non documentés : sécurité de jouissance inconnue."
+    - "Titre d'usage liant l'association au foncier non documenté : sécurité de jouissance inconnue."
     - "Gestion intermédiée par la Coopérative Oasis : articulation directe collectif-porteur non documentée."
     - "Caractère consomptible de la dotation du fonds non confirmé."
   leviers:
-    - "Documenter et publier la forme juridique du collectif et le titre d'usage sur le foncier."
-    - "Formaliser une articulation directe entre le collectif et le fonds de dotation."
+    - "Sécuriser et publier un titre d'usage long et direct sur le foncier."
+    - "Formaliser une articulation directe entre l'association et le fonds de dotation."
     - "Confirmer le caractère non consomptible de la dotation du fonds."
   synthese: >
     L'Aube est un écolieu d'accueil dont le foncier a été protégé par
     donation à un fonds de dotation : un montage solide côté propriété et
-    ouvert par son pôle solidaire. Sa principale zone d'ombre est la
-    formalisation du maillon usager — forme du collectif et titre d'usage —
-    qui reste à documenter et à sécuriser.
+    ouvert par son pôle solidaire. La chaîne est entièrement non lucrative —
+    fonds de dotation porteur, association loi 1901 (« L'Aub'ascule »)
+    usufruitière. Sa zone d'ombre résiduelle est le titre d'usage liant
+    l'association au foncier, qui reste à documenter et à sécuriser.
 fiabilite: >
   Faits vérifiés (sources Coopérative Oasis et l'Aubascule, consultées en mai
   2026) : écolieu de l'Aube dans la Drôme aux pieds des Trois Becs, une
@@ -129,9 +135,12 @@ fiabilite: >
   années 1970, donation du lieu en 2022 au fonds de dotation Fraternité pour
   Demain, gestion confiée à la Coopérative Oasis qui y installe le collectif de
   l'Aubascule, trois pôles d'activité, Obligation Réelle Environnementale,
-  lieu à l'origine du projet de foncière de la Coopérative Oasis. Non
-  confirmé : forme juridique du collectif, nature et durée du titre d'usage,
-  montant d'une éventuelle redevance, caractère consomptible de la dotation.
+  lieu à l'origine du projet de foncière de la Coopérative Oasis. Forme
+  juridique de l'usufruitier établie (registres publics consultés juin 2026) :
+  association loi 1901 « L'Aub'ascule », SIREN 938330586, déclarée à la
+  préfecture de Die le 12/10/2024, gestion officielle du lieu depuis le 1er
+  novembre 2024. Non confirmé : nature et durée du titre d'usage, montant
+  d'une éventuelle redevance, caractère consomptible de la dotation.
 chaine:
   porteurs: [fonds-fraternite-pour-demain]
   usufruitiers: [collectif-aubascule]
@@ -141,3 +150,5 @@ sources:
     url: "https://cooperative-oasis.org/oasis/aube/"
   - titre: "L'Aube / L'Aubascule — site officiel"
     url: "https://www.aubascule.fr/"
+  - titre: "Annuaire des Entreprises (data.gouv.fr) — Association L'AUB'ASCULE, SIREN 938330586"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/l-aub-ascule-938330586"

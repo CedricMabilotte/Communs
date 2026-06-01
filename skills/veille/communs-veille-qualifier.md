@@ -35,3 +35,13 @@ identifiable → le dire.
 - Corrige une hypothèse erronée de l'opérateur si les sources la démentent (L33).
 - « Réseau ami » = réseau seulement si lien partenarial **documenté** (L33).
 - Statut lead : actif · pre_fiche · promu · rejete.
+
+## Cas non identifiable (empreinte publique nulle) — règle (#11)
+Si un lead n'a, après recherche, qu'un nom + une localité et **aucune source
+publique** établissant entité, montage ou habitat (cas typique : un lieu seulement
+nommé par un réseau, sans site ni mention presse/registre) : ne PAS fabriquer.
+- Garder `statut: actif`, noter en corps « empreinte publique nulle — non perçable
+  sans documents internes du réseau ou apport de l'opérateur ».
+- Escalade explicite : (a) demander à l'opérateur une URL / un contact ; (b) rouvrir
+  si le lieu publie. La profondeur a un plafond : on lit toute pièce primaire qui
+  existe, on n'invente jamais ce qui n'est pas publié.

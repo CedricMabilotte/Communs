@@ -3,8 +3,8 @@ categorie: usufruitier
 nom: "Société civile de la Bigotière"
 sous_titre: "Société civile d'habitant·es propriétaire et usagère de l'écohameau de la Bigotière"
 statut_fiche: publie
-forme_juridique: "Société civile (d'attribution)"
-nature_interet: inconnu
+forme_juridique: "Société civile d'attribution (SCIA, art. L.212-1 et s. CCH)"
+nature_interet: commerciale
 localisation:
   commune: "Épiniac"
   departement: "Ille-et-Vilaine (35)"
@@ -20,35 +20,43 @@ resume: >
   l'habitat participatif réhabilité : neuf logements, un gîte locatif, des
   logements d'accueil social, un fournil. Les habitant·es sont à la fois
   associé·es de la société civile propriétaire et usager·es du lieu : la chaîne
-  est intégrée. Les activités de transition écologique et alimentaire sont
-  portées par une structure distincte, la SCIC Le Ruisseau.
+  est intégrée. La forme est établie par le registre (SIREN 821271442) : une
+  société civile d'attribution (SCIA), dont l'objet est la division de
+  l'ensemble immobilier en fractions attribuées en propriété ou en jouissance
+  aux associé·es ; les parts, proportionnelles à la valeur du lot attribué
+  (art. L.212-5 CCH), portent la valeur du bâti et sont cessibles sous agrément,
+  sans verrou anti-spéculatif documenté. Les activités de transition écologique
+  et alimentaire sont portées par une structure distincte, la SCIC Le Ruisseau.
 montage:
   type: propriete_collective
   nu_proprietaire: "Société civile de la Bigotière (société civile d'habitant·es)"
   usufruitier: "Société civile de la Bigotière — chaîne intégrée : les habitant·es sont à la fois associé·es et usager·es"
   description: >
-    Les habitant·es de la Bigotière se sont réuni·es dans une société civile —
-    décrite par les sources tantôt comme société civile d'attribution, tantôt
-    comme société civile immobilière — pour acquérir et réhabiliter l'écohameau.
-    Cette société civile détient le foncier et le bâti et les attribue en
-    jouissance à ses associé·es habitant·es : propriété et usage sont portés par
-    la même entité collective. La SCIC Le Ruisseau, structure distincte, porte
+    Les habitant·es de la Bigotière se sont réuni·es dans une société civile
+    d'attribution (SCIA) — forme établie par le registre — pour acquérir et
+    réhabiliter l'écohameau. Cette société civile détient le foncier et le bâti
+    et les attribue en propriété ou en jouissance à ses associé·es habitant·es,
+    par fractions proportionnelles à la valeur du lot (art. L.212-5 CCH) :
+    propriété et usage sont portés par la même entité collective, mais les parts
+    portent une valeur patrimoniale appropriable à titre privé. La SCIC Le Ruisseau, structure distincte, porte
     les activités d'accueil et de transition et n'est pas propriétaire de
     l'habitat.
 integrite_montage:
   niveau: mutualisme
   commentaire: >
-    Société civile d'habitant·es : structure collective de droit civil, sans
-    lucrativité spéculative documentée, mais dont le bénéfice — la jouissance
-    des logements — profite à ses associé·es. Chaîne intégrée propriétaire ≡
-    usagère.
+    Société civile d'attribution d'habitant·es : structure collective de droit
+    civil dont les parts, indexées sur la valeur du lot attribué, portent une
+    valeur patrimoniale privée cessible et sans plafond documenté. Sans
+    lucrativité d'exploitation spéculative, mais le bénéfice — la jouissance et
+    la valeur des logements — est approprié par ses associé·es personnes
+    physiques. Chaîne intégrée propriétaire ≡ usagère.
 grille:
   - critere: non_appropriation
-    valeur: partiel
-    note: "Le foncier est porté collectivement par la société civile ; dans une société civile d'attribution, les parts ouvrent toutefois un droit de jouissance attaché à une valeur potentiellement appropriable, sans verrou anti-spéculatif documenté."
+    valeur: non
+    note: "Forme établie : société civile d'attribution (SCIA). Les parts, proportionnelles à la valeur du lot attribué (art. L.212-5 CCH), portent la valeur appropriable du bâti à titre privé ; aucun verrou anti-spéculatif n'est documenté."
   - critere: parts_non_cessibles
-    valeur: partiel
-    note: "Une société civile a un capital en parts ; la cession est généralement soumise à l'agrément des associé·es, mais sans plafonnement de prix documenté par les sources."
+    valeur: non
+    note: "En SCIA, les parts sont cessibles : librement entre associé·es, ascendants, descendants et conjoints, et aux tiers sous agrément collectif. Elles portent la valeur du lot attribué, sans plafonnement de prix documenté."
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif de la société civile en cas de dissolution n'est pas documenté par les sources consultées."
@@ -56,8 +64,8 @@ grille:
     valeur: oui
     note: "Société civile : personne morale de droit civil, et non société commerciale."
   - critere: non_lucrativite_effective
-    valeur: partiel
-    note: "Aucune recherche de profit spéculatif n'est documentée ; une société civile d'attribution n'a toutefois pas de verrou statutaire de non-lucrativité comparable à celui d'une association."
+    valeur: non
+    note: "Société civile d'attribution sans aucun verrou statutaire de non-lucrativité : les associé·es personnes physiques s'attribuent la propriété ou la jouissance de lots dont les parts portent une valeur patrimoniale privée et cessible. La lucrativité n'est pas spéculative d'exploitation, mais l'appropriation privée de la valeur n'est pas neutralisée."
   - critere: une_voix
     valeur: inconnu
     note: "Le mode de décision de la société civile — proportionnel aux parts ou « une personne, une voix » — n'est pas documenté par les sources."
@@ -99,8 +107,7 @@ analyse:
     - "Foncier porté collectivement par les habitant·es eux-mêmes, en société civile."
     - "Chaîne intégrée : aucune précarité locative vis-à-vis d'un tiers."
     - "Lieu réellement ouvert : accueil social, fournil, distribution de produits fermiers."
-  fragilites:
-    - "Société civile d'attribution sans verrou anti-spéculatif documenté sur la valeur des parts."
+    - "Société civile d'attribution : les parts portent la valeur appropriable du bâti et sont cessibles, sans verrou anti-spéculatif."
     - "Chaîne intégrée : pas de contre-pouvoir externe entre propriété et usage."
     - "Mode de décision, transparence comptable et clause de dévolution non documentés."
   leviers:
@@ -108,12 +115,14 @@ analyse:
     - "Publier les statuts, le mode de décision et la clause de dévolution."
     - "Articuler une garantie foncière externe pour pérenniser la sortie du marché."
   synthese: >
-    La société civile de la Bigotière est une chaîne intégrée : les habitant·es
-    sont à la fois propriétaires, via la société civile, et usager·es de
-    l'écohameau. Sa force tient à l'absence de précarité locative et à une
-    réelle ouverture sociale du lieu ; sa fragilité, à l'absence de verrou
-    anti-spéculatif documenté et de contre-pouvoir externe entre propriété et
-    usage.
+    La société civile de la Bigotière est une société civile d'attribution
+    (SCIA) à chaîne intégrée : les habitant·es sont à la fois propriétaires, via
+    la société civile, et usager·es de l'écohameau. Sa force tient à l'absence
+    de précarité locative et à une réelle ouverture sociale du lieu ; sa
+    fragilité, à des parts qui portent la valeur appropriable du bâti, cessibles
+    et sans verrou anti-spéculatif, et à l'absence de contre-pouvoir externe
+    entre propriété et usage. La structure relève d'une lucrativité ouverte : la
+    valeur du lieu reste captable à titre privé.
 fiabilite: >
   Faits vérifiés (sources la Bigotière, Le Ruisseau Coopérative, Coopérative
   Oasis et presse, consultées en mai 2026) : écohameau d'Épiniac acheté en
@@ -122,9 +131,14 @@ fiabilite: >
   participatif réhabilité (neuf logements, gîte, logements d'accueil social,
   fournil), constitution d'une société civile par les habitant·es pour acquérir
   et rénover le lieu, SCIC Le Ruisseau portant les activités de transition.
-  Non confirmé : forme exacte de la société civile (société civile d'attribution
-  ou société civile immobilière), mode de décision, modalités de cession des
-  parts, clause de dévolution, transparence comptable.
+  Forme désormais établie par le registre (SIREN 821271442, annuaire-entreprises
+  et Pappers) : société civile d'attribution, objet de division de l'ensemble
+  immobilier en fractions attribuées en propriété ou en jouissance aux
+  associé·es personnes physiques ; corroboré par la presse (France 3, qui
+  mentionne la « société civile d'attribution » montée par le groupe fondateur).
+  Non confirmé : mode de décision (proportionnel aux parts ou « une voix »),
+  prix effectif de cession des parts et plafonnement éventuel, clause de
+  dévolution, transparence comptable.
 voir_aussi: [cooperative-oasis]
 dossier:
   identite:
@@ -136,8 +150,8 @@ dossier:
     surface: "4,3 hectares, dont 1,5 ha de terres agricoles et 0,5 ha de bois"
   pieces:
     - type: statuts
-      statut: inconnu
-      note: "Forme exacte et statuts de la société civile non documentés (société civile d'attribution ou immobilière selon les sources)."
+      statut: partiel
+      note: "Forme établie par le registre : société civile d'attribution (objet de division en fractions attribuées en propriété ou jouissance). Statuts intégraux (mode de décision, plafonnement de cession des parts, dévolution) non publiés."
     - type: reglement_interieur
       statut: inconnu
     - type: charte
@@ -157,3 +171,9 @@ sources:
     url: "https://cooperative-oasis.org/oasis/bigotiere/"
   - titre: "Le Ruisseau Coopérative — Les Scic"
     url: "https://www.les-scic.coop/le-ruisseau-cooperative"
+  - titre: "LA BIGOTIERE (SIREN 821271442) — Annuaire des entreprises (data.gouv.fr)"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/la-bigotiere-821271442"
+  - titre: "Société LA BIGOTIERE — Pappers (objet : société civile d'attribution)"
+    url: "https://www.pappers.fr/entreprise/la-bigotiere-821271442"
+  - titre: "Vivre ensemble. Immersion à la Bigotière — France 3 Bretagne (société civile d'attribution)"
+    url: "https://france3-regions.franceinfo.fr/bretagne/ille-et-vilaine/vivre-ensemble-immersion-a-la-bigotiere-un-habitat-partage-ou-douze-quinquagenaires-se-la-jouent-collectif-2045236.html"

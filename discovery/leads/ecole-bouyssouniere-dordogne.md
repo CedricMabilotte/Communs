@@ -73,3 +73,10 @@ portail aides.dordogne.fr), presse locale (Sud Ouest 24), contact réseau CLIP.
 homonymes. Discriminant **habitat permanent** non vérifiable (hypothèse « ancienne
 école » non confirmée). Ne pas créer de pré-fiche. Lead-traceur à reprendre quand
 les pages CLIP seront accessibles. Cf. lead réseau `clips.md`.
+
+## Traitement — empreinte publique nulle (1er juin 2026)
+Membre CLIP confirmé (page « Les lieux ») mais **aucune source publique** au-delà
+du nom + département : ni site, ni presse, ni registre identifiable. Non perçable
+en l'état (la page CLIP ne donne pas le détail par lieu ; le PV d'AG ne le nomme
+pas). `statut: actif`. Reprise : URL/contact fourni par l'opérateur, ou publication
+du lieu. Aucune donnée fabriquée.

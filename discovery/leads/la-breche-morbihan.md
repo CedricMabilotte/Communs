@@ -78,3 +78,10 @@ Paris), annuaire associatif Morbihan (net1901 / assoce.fr), presse locale
 disponibles. Le discriminant **habitat permanent** n'est pas vérifiable. Ne pas
 créer de pré-fiche : ne pas surinterpréter les homonymes. Lead-traceur à reprendre
 quand les pages CLIP seront accessibles. Cf. lead réseau `clips.md`.
+
+## Traitement — empreinte publique nulle (1er juin 2026)
+Membre CLIP confirmé (page « Les lieux ») mais **aucune source publique** au-delà
+du nom + département : ni site, ni presse, ni registre identifiable. Non perçable
+en l'état (la page CLIP ne donne pas le détail par lieu ; le PV d'AG ne le nomme
+pas). `statut: actif`. Reprise : URL/contact fourni par l'opérateur, ou publication
+du lieu. Aucune donnée fabriquée.

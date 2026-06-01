@@ -4,7 +4,7 @@ nom: "Société Civile des Terres du Larzac"
 sous_titre: "Office foncier local gérant les terres publiques du Larzac"
 statut_fiche: publie
 forme_juridique: "Société civile"
-nature_interet: inconnu
+nature_interet: commerciale_encadree
 localisation: null
 annee: 1985
 url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
@@ -41,7 +41,7 @@ grille:
     note: "La SCTL organise l'installation et le maintien de paysan·nes, un intérêt général agricole et territorial."
   - critere: non_lucrativite_effective
     valeur: partiel
-    note: "La SCTL fonctionne comme un office foncier au service des paysan·nes, mais la non-lucrativité statutaire n'est pas détaillée."
+    note: "La SCTL n'a pas d'objet commercial ; son seul revenu est le fermage, plafonné par barème préfectoral, et elle ne détient que les droits du propriétaire sauf vendre et hypothéquer. Mais ce n'est pas une structure non lucrative par construction : société civile à capital privé (parts détenues par les usagers, ≥ moitié + une aux exploitants), sa lucrativité est statutairement bornée et désamorcée sur le foncier, non désactivée — d'où nature_interet: commerciale_encadree."
   - critere: public_non_restreint
     valeur: oui
     note: "La SCTL favorise l'installation de nouveaux paysan·nes, avec une hausse de leur nombre d'environ 20 %."
@@ -59,7 +59,7 @@ grille:
     note: "Le foncier reste propriété de l'État ; les paysan·nes en ont l'usage par bail et ne peuvent le revendre."
   - critere: parts_non_cessibles
     valeur: partiel
-    note: "La SCTL est une société civile dont les associés sont les utilisateurs des terres ; les parts sont liées à cette qualité d'usager, mais l'encadrement statutaire de leur cession n'est pas documenté. Surtout, le foncier appartenant à l'État, sa valeur n'est de toute façon pas captable."
+    note: "La SCTL est une société civile à capital variable dont les associés sont les utilisateurs des terres ; les parts sont liées à cette qualité d'usager (statutairement, ≥ moitié + une détenues par les associés exploitants), mais l'encadrement précis de leur cession n'est pas documenté. Surtout, le foncier appartenant à l'État et la société n'ayant pas le droit de vendre ni d'hypothéquer, la valeur du foncier n'est de toute façon pas captable par les parts."
   - critere: une_voix
     valeur: partiel
     note: "La SCTL associe les utilisateurs des terres, mais les modalités de vote dans la société civile ne sont pas détaillées."
@@ -103,12 +103,21 @@ analyse:
     solidité tient à la propriété publique en amont et au bail emphytéotique de
     99 ans, et gagnerait à documenter sa gouvernance interne.
 fiabilite: >
-  Faits vérifiés : forme de société civile constituée le 29 avril 1985, après une
-  recherche de structure engagée dès décembre 1982, bail emphytéotique signé en
-  1985 pour 60 ans puis prolongé en 2013 à 99 ans (échéance 2083), attribution de
-  l'usage aux paysan·nes par des baux de long terme, associés étant les utilisateurs
-  des terres, hausse du nombre de paysan·nes d'environ 20 %. Non confirmé : clauses
-  environnementales des baux, modalités de vote et de transparence interne.
+  Faits vérifiés : forme de société civile constituée le 29 avril 1985 (SIREN
+  331605527), après une recherche de structure engagée dès décembre 1982, bail
+  emphytéotique signé en 1985 pour 60 ans puis prolongé en 2013 à 99 ans (échéance
+  2083), attribution de l'usage aux paysan·nes par des baux de long terme, associés
+  étant les utilisateurs des terres, hausse du nombre de paysan·nes d'environ 20 %.
+  Nature lucrative établie sur sources : la SCTL n'a pas d'objet commercial, son
+  unique recette est le fermage plafonné par barème préfectoral, elle détient tous
+  les droits du propriétaire sauf vendre et hypothéquer, et son capital (variable)
+  est détenu par les usagers eux-mêmes — dont, statutairement, ≥ moitié + une des
+  parts par les associés exploitants. D'où nature_interet: commerciale_encadree —
+  société civile à intérêt privé présent mais discipliné (verrou d'actif sur le
+  foncier), non désactivé (les parts ne sont pas détenues à 100 % par des organismes
+  non lucratifs d'intérêt général). Non confirmé : politique précise de
+  distribution/réinvestissement des résultats, clauses environnementales des baux,
+  modalités de vote et de transparence interne.
 dossier:
   identite:
     siren: "331605527"
@@ -134,5 +143,9 @@ dossier:
 sources:
   - titre: "SCTL — Larzac.org"
     url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
-  - titre: "AGTER — La SCTL du Larzac"
+  - titre: "AGTER — La SCTL du Larzac, une approche novatrice de la gestion foncière"
     url: "https://www.agter.org/bdf/fr/corpus_chemin/fiche-chemin-9.html"
+  - titre: "Annuaire des entreprises (data.gouv) — SCTL, SIREN 331605527"
+    url: "https://annuaire-entreprises.data.gouv.fr/entreprise/soc-civile-des-terres-du-larzac-sctl-331605527"
+  - titre: "Un office foncier en France : la société civile des terres du Larzac (HAL/INRAE)"
+    url: "https://hal.inrae.fr/hal-02857509"
