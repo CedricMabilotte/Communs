@@ -72,7 +72,7 @@ réserves impartageables protègent l'excédent, pas les murs.
 
 ## Tenir la formule n'est pas verrouiller la terre
 
-On pourrait objecter qu'[un précédent article](01-trois-lieux-qui-ont-tenu-la-formule.html)
+On pourrait objecter qu'[un précédent article](../01-trois-lieux-qui-ont-tenu-la-formule/index.html)
 décrivait trois lieux — Boimondau, Nauvoo, la Ruche — comme ayant « tenu la
 formule jusqu'au bout » : patrimoine collectif, aucun bénéfice servi,
 gouvernance d'assemblée. C'est exact. Mais **tenir la formule** et **verrouiller
@@ -110,4 +110,4 @@ Ils ont fini parce que leur grandeur n'avait jamais été inscrite dans la seule
 clause qui survit à ceux qui l'écrivent.
 
 *Libérer une terre, c'est la soustraire à l'exploitation abusive et la préserver
-comme habitat pour le vivant ([la méthode](../../methode.html)).*
+comme habitat pour le vivant ([la méthode](../../../methode.html)).*
