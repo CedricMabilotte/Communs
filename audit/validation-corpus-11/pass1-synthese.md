@@ -41,3 +41,25 @@ grep des formes ; articulations sur montage dissocié ; rôles↔prose ; cohére
 pôle↔nature ; intégrité référentielle du graphe ; note↔valeur ; uid trompeur).
 **Passe 2** : appliquer ces contrôles, corriger les 6 bloquantes, et envisager
 un garde-fou générateur d'intégrité référentielle + table nature→pôle.
+
+## Passe 2 (re-validation, méthode améliorée) — résultat
+Toutes les bloquantes pass 1 **résolues** (Flocques articulations+rôles+entités
+recatégorisées ; Villarceaux EARL chaînée ; coop-du-tilleul forme confirmée ;
+loiselière pôle). Corpus sain : intégrité référentielle complète, 0 entité HTML,
+0 doublon uid, désync Pommiers OK. Rapports : `pass2-lieux.md`, `pass2-entites.md`.
+
+## Backlog passe 3 (résidus non bloquants)
+1. **Table `nature_interet → pôles admissibles`** en garde-fou du générateur :
+   résoudrait d'un coup les `integrite_montage.niveau` mal calibrés (riglanne
+   corrigé à la main ; restent archipel-de-la-vallee, ecolectif, hameau-des-buis,
+   la-bigotiere — `mutualisme` discutable). Règle observée :
+   GAEC/EARL pluripersonnel → `mutualisme` ; exploitant individuel/générique sous
+   porteur public → `ig_institue` ; nature inconnue/commerciale → pas de pôle haut.
+2. **Villarceaux — verdict marchand vs hybride** : dépend du titre réel de l'EARL
+   du Chemin Neuf (convention précaire → commerciale → marchand ; bail rural
+   sécurisé → exploitation_agricole → hybride). Lever le fait, puis aligner le
+   titre d'articulation et la note `montage_non_commercial`.
+3. **uid trompeurs** `scic-moulinage-de-chirols` (SAS) et `fonciere-antidote`
+   (fonds de dotation) : renommer + propager dans les chaînes (cosmétique).
+4. **tera** : chaîne représentée par l'actionnaire `fonds-sdh` plutôt que la SCI
+   Le Tilleul réelle (à recouper).

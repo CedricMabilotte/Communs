@@ -55,8 +55,8 @@ grille:
     valeur: partiel
     note: "Le foncier est détenu collectivement, mais les parts du GFA restent cessibles, ce qui ouvre une appropriation possible de la valeur."
   - critere: parts_non_cessibles
-    valeur: non
-    note: "Les parts du GFA, société civile, restent par défaut cessibles ; le GFA mutuel ou solidaire peut les encadrer statutairement, mais aucun verrouillage systématique n'est documenté : la valeur foncière reste captable."
+    valeur: partiel
+    note: "Les parts du GFA, société civile, restent par défaut cessibles ; mais le GFA mutuel ou solidaire peut les encadrer statutairement, et les statuts varient d'un GFA à l'autre. Fiche générique : sans verrouillage documenté ni cessibilité libre attestée, « partiel » — cohérent avec non_appropriation : partiel."
   - critere: une_voix
     valeur: inconnu
     note: "Les modalités de vote dans les GFA mutuels ne sont pas détaillées par les sources."

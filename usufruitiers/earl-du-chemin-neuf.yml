@@ -1,0 +1,155 @@
+uid: earl-du-chemin-neuf
+categorie: usufruitier
+nom: "EARL du Chemin Neuf"
+sous_titre: "Société agricole d'Olivier Ranke, exploitant la ferme de la Bergerie de Villarceaux"
+statut_fiche: publie
+forme_juridique: "EARL (Exploitation agricole à responsabilité limitée — société civile)"
+nature_interet: exploitation_agricole
+localisation:
+  commune: "Chaussy"
+  departement: "Val-d'Oise (95)"
+  region: "Île-de-France"
+annee: 2006
+url: "https://www.bergerie-villarceaux.org/"
+resume: >
+  Exploitation agricole à responsabilité limitée immatriculée à Chaussy
+  (Val-d'Oise), à la Ferme de la Bergerie de Villarceaux, au capital de 15 000
+  euros, gérée par Olivier Ranke. Elle conduit l'exploitation agricole d'environ
+  370 hectares du domaine de Villarceaux — dont la Fondation Charles Léopold
+  Mayer pour le Progrès de l'Homme (FPH) détient le foncier — en polyculture-élevage
+  biologique : bovins, ovins, céréales, légumineuses, boulange. Olivier Ranke a
+  repris la ferme en 1995 et conduit la transition agroécologique du domaine.
+  L'EARL est le maillon exploitant du site ; elle est lucrative pour ses
+  associé·es (appropriation du bénéfice d'exploitation), sans détenir le foncier,
+  porté par une fondation non lucrative.
+montage:
+  type: propriete_protegee
+  nu_proprietaire: "Fondation Charles Léopold Mayer pour le Progrès de l'Homme (FPH)"
+  usufruitier: "EARL du Chemin Neuf (société civile d'exploitation agricole, gérant Olivier Ranke)"
+  description: >
+    La propriété du domaine est portée par la FPH, fondation non lucrative.
+    L'usage agricole — environ 370 hectares — est confié à l'EARL du Chemin Neuf,
+    qui exploite la ferme en agroécologie. La nature exacte du titre liant l'EARL
+    à la fondation (bail rural, convention, autorisation d'exploiter) n'est pas
+    documentée publiquement : l'EARL est clairement exploitante tierce et non
+    détentrice du foncier, mais la sécurité juridique de sa jouissance n'est pas
+    établie par les sources.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    L'usufruitier est une société civile à capital — EARL — exploitant la ferme
+    pour le compte de ses associé·es ; sa lucrativité n'est pas verrouillée par
+    des statuts non lucratifs et le bénéfice de l'exploitation se concentre sur
+    ses associé·es. Le foncier reste hors de sa main, chez la fondation.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "La propriété du domaine reste à la Fondation Charles Léopold Mayer ; l'EARL exploite sans détenir le foncier et ne peut en capter la valeur."
+  - critere: parts_non_cessibles
+    valeur: non
+    note: "L'EARL est une société civile à capital de 15 000 euros, dont les parts sont cessibles : aucun verrou statutaire ne plafonne leur valeur."
+  - critere: devolution_usufruitier
+    valeur: non
+    note: "L'EARL est une société civile : en cas de dissolution, le boni de liquidation revient aux associé·es, sans clause de dévolution désintéressée."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "L'EARL est une personne morale de droit civil à objet agricole, mais c'est une société à capital sans verrou de non-lucrativité, et non une association ou une coopérative."
+  - critere: non_lucrativite_effective
+    valeur: non
+    note: "L'EARL est une société d'exploitation à but lucratif : les bénéfices peuvent être distribués à ses associé·es exploitant·es."
+  - critere: une_voix
+    valeur: partiel
+    note: "L'EARL est gérée par Olivier Ranke ; le pouvoir y reste lié aux parts sociales détenues, sans principe « une personne, une voix »."
+  - critere: usagers_decident
+    valeur: oui
+    note: "L'exploitant qui travaille la ferme, Olivier Ranke, est le gérant de l'EARL et décide de ses usages agricoles."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Les modalités d'entrée de nouveaux·elles associé·es dans l'EARL ne sont pas documentées par les sources."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "Les statuts et l'immatriculation de l'EARL sont publics au registre des entreprises ; la publication régulière de ses comptes et décisions n'est pas documentée."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet — exploitation agricole biologique en polyculture-élevage, boulange, formation à l'agroécologie — porte un intérêt général agricole et alimentaire."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "La ferme accueille du public (vente, visites, rôle de centre technique de l'agriculture biologique), mais l'exploitation profite d'abord à ses associé·es."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La nature et la durée du titre d'usage de l'EARL sur le domaine (bail rural, convention) ne sont pas documentées par les sources."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses environnementales ou d'usage formalisées dans le titre liant l'EARL et la fondation n'est pas documentée."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "L'EARL exploite un foncier détenu par la FPH, mais la nature exacte de l'acte qui les lie n'est pas documentée par les sources."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "L'usage que fait vivre l'EARL repose sur la production agricole vendue (viande, farines, pain, légumineuses) : il relève d'une logique marchande."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "L'existence et le niveau d'un loyer ou d'une redevance versé à la fondation ne sont pas documentés par les sources."
+  - critere: vivant_finalite
+    valeur: partiel
+    note: "L'EARL conduit une agroécologie de longue date (replantation de haies, agroforesterie) servant la biodiversité ; sa finalité reste néanmoins l'exploitation agricole, non la protection de la nature comme telle."
+analyse:
+  forces:
+    - "Exploitation conduite en agroécologie depuis le milieu des années 1990 par l'exploitant qui travaille la ferme."
+    - "Foncier sécurisé en amont par une fondation non lucrative, hors de la main de l'EARL."
+    - "Polyculture-élevage biologique diversifiée, rôle de centre technique de l'agriculture biologique."
+  fragilites:
+    - "EARL : société civile à capital lucratif, sans verrou de non-lucrativité ni clause de dévolution désintéressée."
+    - "Parts sociales cessibles ; bénéfice de l'exploitation concentré sur les associé·es."
+    - "Nature et durée du titre d'usage liant l'EARL à la fondation non documentées : sécurité de jouissance non établie."
+  leviers:
+    - "Documenter et publier l'acte d'usage (bail rural environnemental ou convention) liant l'EARL à la fondation."
+    - "Formaliser une jouissance longue et des clauses environnementales opposables."
+    - "Documenter le fonctionnement interne, les comptes et l'ouverture à de nouveaux·elles associé·es."
+  synthese: >
+    L'EARL du Chemin Neuf est le maillon exploitant de Villarceaux : une société
+    civile agricole qui conduit, de longue date et en agroécologie, l'exploitation
+    d'un domaine dont la fondation porte le foncier. Solide sur la conduite
+    agroécologique et l'absence de détention du sol, elle reste, par sa nature de
+    société civile à capital lucratif et faute de titre d'usage documenté, un
+    maillon à intérêt privé qui plafonne le lieu sous le sommet du commun.
+fiabilite: >
+  Faits vérifiés (sources : site de la Bergerie de Villarceaux, registre des
+  entreprises, presse, consultés en juin 2026) : EARL du Chemin Neuf immatriculée
+  à Chaussy (SIREN 488246521), constituée en 2006, capital de 15 000 euros, gérée
+  par Olivier Ranke, exploitation d'environ 370 hectares en polyculture-élevage
+  biologique (bovins, ovins, céréales, légumineuses, boulange), reprise de la
+  ferme en 1995 et conduite de la transition agroécologique du domaine de
+  Villarceaux. Non confirmé : nature et durée exactes du titre d'usage liant
+  l'EARL à la Fondation Charles Léopold Mayer, montant d'un éventuel loyer,
+  comptes de la société, modalités internes de gouvernance.
+voir_aussi: [fondation-fph, ecosite-villarceaux]
+dossier:
+  identite:
+    siren: "488246521"
+    adresse: "Ferme de la Bergerie, 95710 Chaussy"
+  echelle:
+    personnes: "Olivier Ranke, gérant, et son équipe"
+    lieux: "la ferme de la Bergerie de Villarceaux, à Chaussy"
+    surface: "environ 370 hectares en agriculture biologique"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Statuts et immatriculation de l'EARL publics au registre des entreprises ; non mis en ligne."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Nature exacte de l'acte liant l'EARL à la Fondation Charles Léopold Mayer non documentée."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Nature et durée du titre d'usage de l'EARL sur le domaine non documentées."
+sources:
+  - titre: "La Bergerie de Villarceaux — Nous découvrir"
+    url: "https://www.bergerie-villarceaux.org/nous-decouvrir/"
+  - titre: "Société EARL DU CHEMIN NEUF — registre des entreprises (Pappers)"
+    url: "https://www.pappers.fr/entreprise/earl-du-chemin-neuf-488246521"

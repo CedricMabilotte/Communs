@@ -38,11 +38,15 @@ montage:
     hectares de terres. Le montage combine donc une part de foncier protégé
     et une part de propriété privée du bâti et d'une parcelle.
 integrite_montage:
-  niveau: mutualisme
+  niveau: ig_institue
   commentaire: >
-    L'essentiel du foncier est protégé par la Foncière Terre de Liens, mais
-    le bâti et deux hectares restent en propriété privée de l'exploitant ; le
-    porteur est une société en commandite par actions à actionnariat solidaire.
+    L'essentiel du foncier est protégé par la Foncière Terre de Liens — foncier
+    non lucratif gouverné par une instance solidaire, non par les usager·es —,
+    mais le bâti et deux hectares restent en propriété privée de l'exploitant ;
+    le porteur est une société en commandite par actions à actionnariat
+    solidaire. Le profil relève de l'intérêt général institué (foncier protégé,
+    gouvernance descendante) et non du mutualisme : aucun maillon n'est une
+    coopérative ou SCIC à sociétariat.
 grille:
   - critere: foncier_hors_marche
     valeur: partiel

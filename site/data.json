@@ -317,7 +317,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
-    "nature_juridique": "Commun libre et vivant"
+    "nature_juridique": ""
   },
   {
     "uid": "ecolieu-la-filerie",
@@ -1085,7 +1085,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Mutualisme d'usagers"
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "limans",
@@ -1181,7 +1181,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Mutualisme d'usagers"
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "magnantru",
@@ -1371,8 +1371,8 @@
     "palier_label": "Montage solide",
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "",
-    "montage_type": "propriete_collective",
-    "montage_label": "Propriété collective",
+    "montage_type": "propriete_protegee",
+    "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Mutualisme d'usagers"
   },
   {
@@ -1405,7 +1405,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Mutualisme d'usagers"
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "tera",
@@ -1540,28 +1540,28 @@
     "nom": "Bergerie de Villarceaux",
     "categorie": "lieu",
     "sous_titre": "Domaine agroécologique du Vexin français",
-    "idl": 61,
-    "idl_brut": 72,
-    "idl_intrinseque": 61,
+    "idl": 67,
+    "idl_brut": 79,
+    "idl_intrinseque": 71,
     "score_type": "calcule",
     "completude": 0.7,
     "axes": {
       "1": 77,
-      "2": 25,
+      "2": 40,
       "3": 100,
       "4": 100,
       "5": 100
     },
     "axes_intrinseques": {
       "1": 77,
-      "2": 25,
+      "2": 50,
       "3": 100,
       "4": 100,
       "5": 100
     },
-    "palier": "engage",
-    "palier_label": "Engagement réel",
-    "palier_couleur": "#b08431",
+    "palier": "solide",
+    "palier_label": "Montage solide",
+    "palier_couleur": "#4a7a3a",
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
@@ -1595,6 +1595,38 @@
     "palier_label": "Montage solide",
     "palier_couleur": "#4a7a3a",
     "forme_juridique": "Association loi 1901 d'intérêt général, agréée",
+    "montage_type": "propriete_protegee",
+    "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "commune-flocques",
+    "nom": "Commune de Flocques",
+    "categorie": "porteur",
+    "sous_titre": "Collectivité propriétaire du foncier public confié par bail emphytéotique pour les 12 logements Chênelet",
+    "idl": 60,
+    "idl_brut": 60,
+    "idl_intrinseque": 77,
+    "score_type": "calcule",
+    "completude": 1.0,
+    "axes": {
+      "1": 100,
+      "2": 50,
+      "3": 44,
+      "4": 61,
+      "5": 57
+    },
+    "axes_intrinseques": {
+      "1": 100,
+      "2": 100,
+      "3": 44,
+      "4": 61,
+      "5": 100
+    },
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
+    "forme_juridique": "Collectivité territoriale (commune)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Intérêt général institué"
@@ -1760,38 +1792,6 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
-    "uid": "fonciere-chenelet",
-    "nom": "Foncière Chênelet",
-    "categorie": "porteur",
-    "sous_titre": "Foncière solidaire de logement social écologique",
-    "idl": 45,
-    "idl_brut": 48,
-    "idl_intrinseque": 49,
-    "score_type": "calcule",
-    "completude": 0.895,
-    "axes": {
-      "1": 50,
-      "2": 50,
-      "3": 29,
-      "4": 61,
-      "5": 57
-    },
-    "axes_intrinseques": {
-      "1": 50,
-      "2": 60,
-      "3": 29,
-      "4": 61,
-      "5": 75
-    },
-    "palier": "partiel",
-    "palier_label": "Libération partielle",
-    "palier_couleur": "#bc5d3a",
-    "forme_juridique": "Foncière solidaire (entreprise solidaire d'utilité sociale, ESUS)",
-    "montage_type": "propriete_protegee",
-    "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Économie sociale marchande"
-  },
-  {
     "uid": "fonciere-terre-de-liens",
     "nom": "Foncière Terre de Liens",
     "categorie": "porteur",
@@ -1828,14 +1828,14 @@
     "nom": "Fondation Charles Léopold Mayer pour le Progrès de l'Homme",
     "categorie": "porteur",
     "sous_titre": "Fondation propriétaire du domaine de Villarceaux",
-    "idl": 32,
-    "idl_brut": 38,
+    "idl": 38,
+    "idl_brut": 45,
     "idl_intrinseque": 45,
     "score_type": "calcule",
     "completude": 0.684,
     "axes": {
       "1": 81,
-      "2": 25,
+      "2": 50,
       "3": 20,
       "4": 50,
       "5": null
@@ -1847,9 +1847,9 @@
       "4": 50,
       "5": null
     },
-    "palier": "eloigne",
-    "palier_label": "Éloigné du modèle",
-    "palier_couleur": "#8f3829",
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
     "forme_juridique": "Fondation (de droit suisse selon les sources ; forme exacte au regard du droit français non confirmée)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
@@ -2205,7 +2205,7 @@
     "forme_juridique": "Société civile",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "sci-terres-ecolectif",
@@ -2237,7 +2237,7 @@
     "forme_juridique": "Société civile immobilière (SCI)",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
-    "nature_juridique": "Mutualisme d'usagers"
+    "nature_juridique": "Économie sociale marchande"
   },
   {
     "uid": "scic-coq-a-lame",
@@ -2362,7 +2362,7 @@
     "palier": "solide",
     "palier_label": "Montage solide",
     "palier_couleur": "#4a7a3a",
-    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC) multi-acteurs",
+    "forme_juridique": "Société coopérative d'intérêt collectif (SCIC) multi-acteurs ; le foncier des aires de captage est, lui, acquis et détenu par la collectivité publique Eau du Bassin Rennais",
     "montage_type": "propriete_publique",
     "montage_label": "Propriété publique inaliénable",
     "nature_juridique": "Intérêt général institué"
@@ -2436,20 +2436,20 @@
     "nom": "Assemblée des usages de la ZAD de Notre-Dame-des-Landes",
     "categorie": "usufruitier",
     "sous_titre": "Collectif de gestion de l'usage des terres de l'ancienne ZAD",
-    "idl": 81,
-    "idl_brut": 83,
-    "idl_intrinseque": 82,
+    "idl": 76,
+    "idl_brut": 78,
+    "idl_intrinseque": 77,
     "score_type": "calcule",
     "completude": 0.941,
     "axes": {
-      "1": 100,
+      "1": 75,
       "2": 50,
       "3": 94,
       "4": 100,
       "5": 83
     },
     "axes_intrinseques": {
-      "1": 100,
+      "1": 75,
       "2": 50,
       "3": 94,
       "4": 100,
@@ -2724,28 +2724,28 @@
     "nom": "Les Champs des Possibles",
     "categorie": "usufruitier",
     "sous_titre": "Couveuse et coopérative d'activités agricoles en Île-de-France",
-    "idl": 67,
-    "idl_brut": 71,
-    "idl_intrinseque": 67,
+    "idl": 62,
+    "idl_brut": 66,
+    "idl_intrinseque": 62,
     "score_type": "calcule",
     "completude": 0.882,
     "axes": {
       "1": 75,
-      "2": 75,
+      "2": 50,
       "3": 75,
       "4": 86,
       "5": 50
     },
     "axes_intrinseques": {
       "1": 75,
-      "2": 75,
+      "2": 50,
       "3": 75,
       "4": 88,
       "5": 50
     },
-    "palier": "solide",
-    "palier_label": "Montage solide",
-    "palier_couleur": "#4a7a3a",
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
     "forme_juridique": "Société anonyme coopérative (depuis juin 2024 ; SCIC depuis 2016, association depuis 2009)",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",
@@ -2848,38 +2848,6 @@
     "nature_juridique": "Commun libre et vivant"
   },
   {
-    "uid": "commune-flocques",
-    "nom": "Commune de Flocques",
-    "categorie": "usufruitier",
-    "sous_titre": "Collectivité bailleresse du foncier et garante locative des 12 logements Chênelet",
-    "idl": 58,
-    "idl_brut": 60,
-    "idl_intrinseque": 64,
-    "score_type": "calcule",
-    "completude": 0.941,
-    "axes": {
-      "1": 100,
-      "2": 50,
-      "3": 38,
-      "4": 71,
-      "5": 57
-    },
-    "axes_intrinseques": {
-      "1": 100,
-      "2": 75,
-      "3": 38,
-      "4": 75,
-      "5": 59
-    },
-    "palier": "engage",
-    "palier_label": "Engagement réel",
-    "palier_couleur": "#b08431",
-    "forme_juridique": "Collectivité territoriale (commune)",
-    "montage_type": "propriete_protegee",
-    "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
-  },
-  {
     "uid": "communs-la-marinie",
     "nom": "Les Communs de la Marinie",
     "categorie": "usufruitier",
@@ -2916,21 +2884,21 @@
     "nom": "Coop du Tilleul",
     "categorie": "usufruitier",
     "sous_titre": "Collectif d'usage exploitant la ferme de Lartel au cœur de TERA",
-    "idl": 55,
-    "idl_brut": 65,
-    "idl_intrinseque": 55,
+    "idl": 59,
+    "idl_brut": 69,
+    "idl_intrinseque": 64,
     "score_type": "calcule",
     "completude": 0.706,
     "axes": {
-      "1": 75,
+      "1": 100,
       "2": 50,
       "3": 71,
       "4": 86,
       "5": 50
     },
     "axes_intrinseques": {
-      "1": 75,
-      "2": 50,
+      "1": 100,
+      "2": 75,
       "3": 71,
       "4": 88,
       "5": 50
@@ -2976,6 +2944,38 @@
     "nature_juridique": "Intérêt général institué"
   },
   {
+    "uid": "earl-du-chemin-neuf",
+    "nom": "EARL du Chemin Neuf",
+    "categorie": "usufruitier",
+    "sous_titre": "Société agricole d'Olivier Ranke, exploitant la ferme de la Bergerie de Villarceaux",
+    "idl": 35,
+    "idl_brut": 40,
+    "idl_intrinseque": 35,
+    "score_type": "calcule",
+    "completude": 0.765,
+    "axes": {
+      "1": 38,
+      "2": 25,
+      "3": 75,
+      "4": 69,
+      "5": 20
+    },
+    "axes_intrinseques": {
+      "1": 38,
+      "2": 25,
+      "3": 75,
+      "4": 69,
+      "5": 20
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "EARL (Exploitation agricole à responsabilité limitée — société civile)",
+    "montage_type": "propriete_protegee",
+    "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Mutualisme d'usagers"
+  },
+  {
     "uid": "earl-ferme-de-magnantru",
     "nom": "EARL La Ferme de Magnantru",
     "categorie": "usufruitier",
@@ -3012,14 +3012,14 @@
     "nom": "Association Écosite de Villarceaux",
     "categorie": "usufruitier",
     "sous_titre": "Structure d'animation et d'usage du domaine de Villarceaux",
-    "idl": 48,
-    "idl_brut": 60,
+    "idl": 55,
+    "idl_brut": 69,
     "idl_intrinseque": 63,
     "score_type": "calcule",
     "completude": 0.588,
     "axes": {
       "1": 100,
-      "2": 25,
+      "2": 50,
       "3": 70,
       "4": 88,
       "5": 50
@@ -3031,9 +3031,9 @@
       "4": 88,
       "5": 50
     },
-    "palier": "partiel",
-    "palier_label": "Libération partielle",
-    "palier_couleur": "#bc5d3a",
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
     "forme_juridique": "Association loi 1901",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
@@ -3101,7 +3101,7 @@
     "forme_juridique": "",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Mutualisme d'usagers"
+    "nature_juridique": "Intérêt général institué"
   },
   {
     "uid": "exploitation-maraichere-la-chaudeau",
@@ -3134,6 +3134,38 @@
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
     "nature_juridique": "Intérêt général institué"
+  },
+  {
+    "uid": "fonciere-chenelet",
+    "nom": "Foncière Chênelet",
+    "categorie": "usufruitier",
+    "sous_titre": "Foncière solidaire preneuse emphytéotique, bâtisseuse et gestionnaire du logement social écologique",
+    "idl": 47,
+    "idl_brut": 52,
+    "idl_intrinseque": 50,
+    "score_type": "calcule",
+    "completude": 0.824,
+    "axes": {
+      "1": 75,
+      "2": 50,
+      "3": 25,
+      "4": 71,
+      "5": 57
+    },
+    "axes_intrinseques": {
+      "1": 75,
+      "2": 50,
+      "3": 25,
+      "4": 75,
+      "5": 73
+    },
+    "palier": "partiel",
+    "palier_label": "Libération partielle",
+    "palier_couleur": "#bc5d3a",
+    "forme_juridique": "Foncière solidaire (entreprise solidaire d'utilité sociale, ESUS)",
+    "montage_type": "propriete_protegee",
+    "montage_label": "Propriété conservée + bail de long terme",
+    "nature_juridique": "Économie sociale marchande"
   },
   {
     "uid": "gaec-bergers-de-la-sure",
@@ -3197,7 +3229,7 @@
     "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "gaec-de-riglanne",
@@ -3261,7 +3293,7 @@
     "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "gaec-eyssal",
@@ -3293,7 +3325,7 @@
     "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "gaec-ferme-du-plaisir",
@@ -3325,7 +3357,7 @@
     "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "gaec-ferme-la-durette",
@@ -3389,7 +3421,7 @@
     "forme_juridique": "Groupement agricole d'exploitation en commun (GAEC)",
     "montage_type": "propriete_protegee",
     "montage_label": "Propriété conservée + bail de long terme",
-    "nature_juridique": "Intérêt général institué"
+    "nature_juridique": "Mutualisme d'usagers"
   },
   {
     "uid": "gaec-les-ptites-berouettes",
@@ -3428,28 +3460,28 @@
     "nom": "Groupements fonciers agricoles mutuels et solidaires",
     "categorie": "usufruitier",
     "sous_titre": "Sociétés civiles agricoles de propriété foncière collective",
-    "idl": 44,
-    "idl_brut": 51,
-    "idl_intrinseque": 44,
+    "idl": 50,
+    "idl_brut": 59,
+    "idl_intrinseque": 50,
     "score_type": "calcule",
     "completude": 0.706,
     "axes": {
-      "1": 25,
+      "1": 50,
       "2": 75,
       "3": 50,
       "4": 50,
       "5": 77
     },
     "axes_intrinseques": {
-      "1": 25,
+      "1": 50,
       "2": 75,
       "3": 50,
       "4": 50,
       "5": 77
     },
-    "palier": "partiel",
-    "palier_label": "Libération partielle",
-    "palier_couleur": "#bc5d3a",
+    "palier": "engage",
+    "palier_label": "Engagement réel",
+    "palier_couleur": "#b08431",
     "forme_juridique": "Société civile (groupement foncier agricole)",
     "montage_type": "propriete_collective",
     "montage_label": "Propriété collective",

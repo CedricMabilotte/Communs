@@ -31,11 +31,12 @@ montage:
     agricole ; il exploite les terres et les bâtiments et y développe une
     activité paysanne de transformation.
 integrite_montage:
-  niveau: ig_institue
+  niveau: mutualisme
   commentaire: >
-    Le GAEC est une société civile agricole à objet non lucratif de partage de
-    bénéfices, mais à gouvernance familiale resserrée ; il s'articule à un
-    porteur, la Foncière Terre de Liens, de nature sociétaire.
+    Le GAEC est une société civile agricole dont le bénéfice agricole est partagé
+    entre les associé·es, à gouvernance familiale resserrée : un mutualisme
+    d'usagers au cercle fermé. Il s'articule à un porteur, la Foncière Terre de
+    Liens, de nature sociétaire.
 grille:
   - critere: non_appropriation
     valeur: oui

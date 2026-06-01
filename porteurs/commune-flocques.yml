@@ -1,0 +1,160 @@
+uid: commune-flocques
+categorie: porteur
+nom: "Commune de Flocques"
+sous_titre: "Collectivité propriétaire du foncier public confié par bail emphytéotique pour les 12 logements Chênelet"
+statut_fiche: publie
+forme_juridique: "Collectivité territoriale (commune)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Flocques"
+  departement: "Seine-Maritime (76)"
+  region: "Normandie"
+annee: 2021
+url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"
+resume: >
+  Petite commune rurale de Seine-Maritime, proche d'Eu et de la côte normande,
+  porteuse avec la Foncière Chênelet d'un projet de revitalisation par le
+  logement très social et écologique. La commune a fourni le terrain de
+  l'opération de douze logements et en reste propriétaire : c'est elle qui
+  détient le foncier, relevant du patrimoine public communal, et le confie à la
+  Foncière par un bail emphytéotique de 99 ans. Elle assure en outre une gestion
+  locative de proximité — elle verse les loyers au bailleur puis les recouvre
+  auprès des locataires, ce qui garantit des prix très modérés. Le projet,
+  conduit depuis 2016 entre le maire de Flocques et le président de la Foncière
+  Chênelet, vise à maintenir les personnes âgées au village et à densifier
+  l'habitat en cœur de bourg.
+montage:
+  type: propriete_protegee
+  description: >
+    La commune de Flocques détient le terrain (le sol) de l'opération et le
+    confie à la Foncière Chênelet par un bail emphytéotique de 99 ans : la
+    Foncière construit et détient les murs des douze logements pendant la durée
+    du bail, la commune en récupérant les constructions à son terme et restant
+    propriétaire du foncier. En tant que personne publique, la commune verrouille
+    durablement le sol hors marché ; elle organise par ailleurs une gestion
+    locative de proximité (versement des loyers au bailleur puis recouvrement
+    auprès des locataires, garantie de loyers très modérés).
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Collectivité publique : personne morale de droit public structurellement non
+    lucrative, à gouvernance représentative élue. Elle porte le foncier public
+    de l'opération et le confie par bail emphytéotique long ; les conditions
+    d'usage sont administrées par la municipalité et la Foncière, non par un
+    collectif autogéré de locataires.
+grille:
+  - critere: inalienabilite
+    valeur: oui
+    note: "Le terrain relève du patrimoine d'une personne publique et n'est pas mobilisable sur le marché : la commune en reste propriétaire et récupère les constructions au terme du bail emphytéotique. La domanialité publique offre une inaliénabilité de fait, sans clause statutaire d'inaliénabilité perpétuelle documentée au-delà du terme du bail."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Une commune est une personne morale de droit public sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable par un particulier."
+  - critere: nature_protectrice
+    valeur: oui
+    note: "Sur l'échelle de protection décroissante (personne publique > fondation RUP > fonds de dotation > société civile), la commune occupe le degré le plus protecteur : personne publique."
+  - critere: clause_devolution
+    valeur: oui
+    note: "Une collectivité territoriale ne se dissout pas au profit de personnes privées ; son patrimoine relève du domaine public ou privé communal, sans dévolution possible vers des membres."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "La commune est une personne morale de droit public structurellement non lucrative — un établissement de droit public, et non une société commerciale, fût-elle solidaire."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Une commune ne rémunère aucun capital apporté : pas de dividende, d'intérêt ni de plus-value distribuée. Les ressources de l'opération servent le logement social et la revitalisation du village."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "Les élu·es municipaux exercent un mandat encadré et non lucratif ; la commune ne fonctionne pas au profit d'un cercle restreint de personnes privées."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Le patrimoine communal n'est pas soumis à des investisseurs attendant une plus-value ou un dividende : il n'y a pas de capital appropriable à rémunérer."
+  - critere: ca_collegial
+    valeur: partiel
+    note: "Le conseil municipal est un organe collégial et élu, indépendant d'un fondateur privé unique ; mais il s'agit d'une instance politique représentative, non d'un conseil d'administration pluraliste associant les parties prenantes du foncier porté."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Le projet associe la Foncière Chênelet et l'association Béguinage et Compagnie ; les locataires et habitant·es ne sont pas, selon les sources, représenté·es ou consulté·es de manière organisée dans les décisions sur le foncier."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Porteur de droit public : la commune décide des conditions d'usage (baux, loyers, affectation) par voie d'administration représentative élue, sans dispositif statutaire associant les locataires à voix délibérative. La grille coche par défaut « non » pour un porteur public, faute de dispositif explicite d'association des usager·es."
+  - critere: transparence
+    valeur: oui
+    note: "Une commune est soumise à des obligations légales de publicité de ses délibérations et de ses comptes ; les détails propres à l'opération ne sont toutefois pas publiés."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "La commune affecte durablement le terrain à un programme de logement très social et le soustrait au marché par le bail emphytéotique ; mais cette affectation relève d'une décision de politique locale, non d'un objet statutaire permanent de protection foncière inscrit dans des statuts."
+  - critere: agrement_ig
+    valeur: oui
+    note: "Une commune est une personne publique relevant par nature de l'intérêt général ; aucun agrément spécifique n'est requis."
+  - critere: risque_requalification
+    valeur: oui
+    note: "Personne publique non lucrative par nature : aucun risque de requalification fiscale faisant perdre la qualité d'intérêt général."
+  - critere: redevabilite_publique
+    valeur: oui
+    note: "La commune rend compte de son action au-delà de ses seuls membres : reddition de comptes au public, délibérations et comptes soumis à publicité légale."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'opération vise le logement très social et la revitalisation rurale ; son caractère écologique porte sur le bâti et l'énergie, sans dimension biodiversité affichée dans la finalité du portage."
+  - critere: regime_usage_offert
+    valeur: oui
+    note: "La commune confie le foncier à la Foncière par un bail emphytéotique de long terme à des conditions non rentières, dans une logique de logement très social, et non en recherchant un revenu locatif de marché sur le terrain."
+  - critere: securite_usage_offerte
+    valeur: oui
+    note: "Le bail emphytéotique de 99 ans accordé à la Foncière est un titre d'usage long et sécurisé, qui permet au preneur de bâtir et gérer le logement dans la durée."
+analyse:
+  forces:
+    - "Personne publique : foncier verrouillé hors marché, inaliénable de fait, pérenne."
+    - "Bail emphytéotique de 99 ans à des conditions non rentières offert à la Foncière."
+    - "Garantie communale des loyers : prix très modérés pour des ménages à bas revenus."
+  fragilites:
+    - "Gouvernance représentative élue : les usager·es n'ont pas voix délibérative sur le foncier."
+    - "Affectation décidée en politique locale, sans objet statutaire permanent de protection foncière."
+    - "Aucune finalité biodiversité affichée dans le portage."
+  leviers:
+    - "Inscrire l'affectation foncière dans un cadre opposable au-delà du terme du bail."
+    - "Associer locataires et habitant·es à une instance de décision sur la vie du lieu."
+    - "Publier les clauses du bail emphytéotique liant la commune à la Foncière."
+  synthese: >
+    La commune de Flocques tient le maillon « porteur » de l'opération Chênelet :
+    personne publique propriétaire du terrain, elle verrouille le sol hors marché
+    de manière pérenne et le confie à la Foncière par un bail emphytéotique de
+    99 ans à des conditions non rentières. Sa solidité tient à la nature publique
+    du portage — inaliénabilité de fait, non-lucrativité, redevabilité — mais le
+    foncier est administré par voie représentative élue, sans voix délibérative
+    des usager·es : un intérêt général institué plus qu'un commun citoyen autogéré.
+fiabilite: >
+  Faits vérifiés (sources Foncière Chênelet, Réseau des Maisons de
+  l'Architecture et presse locale, consultées en mai 2026) : la commune de
+  Flocques (Seine-Maritime) a fourni le terrain de l'opération de douze
+  logements sociaux écologiques et en reste propriétaire dans le cadre d'un bail
+  emphytéotique de 99 ans confié à la Foncière Chênelet ; elle assure une
+  gestion locative de proximité, verse les loyers au bailleur puis les recouvre
+  auprès des locataires, garantissant des prix très modérés ; le projet est
+  conduit avec la Foncière depuis 2016 et a été inauguré en novembre 2021. Non
+  confirmé : montant des loyers, clauses du bail emphytéotique, objet statutaire
+  éventuel de l'affectation foncière, modalités d'association des locataires.
+voir_aussi: [fonciere-chenelet]
+dossier:
+  echelle:
+    lieux: "une opération de douze logements très sociaux en cœur de bourg"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "La commune est une collectivité territoriale : pas de statuts au sens d'une personne morale de droit privé."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans entre la commune et la Foncière Chênelet ; non publié."
+    - type: rapport_financier
+      statut: inconnu
+      note: "Une commune est soumise à des obligations légales de publicité de ses délibérations et de ses comptes ; les détails propres à l'opération ne sont pas publiés."
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans confiant le terrain à la Foncière Chênelet ; non publié."
+sources:
+  - titre: "12 logements à Flocques (76) — Foncière Chênelet"
+    url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"
+  - titre: "Des logements sociaux à Flocques — Réseau des Maisons de l'Architecture"
+    url: "https://www.ma-lereseau.org/panorama-des-images/des-logements-sociaux-flocques"

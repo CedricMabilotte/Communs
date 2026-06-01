@@ -25,6 +25,9 @@ montage:
     - usufruitier: ecosite-villarceaux
       titre: convention
       note: "Titre précis non documenté par les sources : les actes liant la fondation aux structures d'usage ne sont pas publiquement détaillés ; le montage n'est pas un démembrement strict."
+    - usufruitier: earl-du-chemin-neuf
+      titre: convention
+      note: "L'EARL du Chemin Neuf est l'exploitant agricole tiers du domaine ; la nature exacte du titre la liant à la fondation (bail rural, convention) n'est pas documentée publiquement."
   description: >
     La fondation conserve la pleine propriété du domaine et en confie l'usage à
     des structures tierces. L'exploitation agricole a pris en 2005 la forme d'une
@@ -58,7 +61,7 @@ grille:
     note: "Agriculture agroécologique, élevage, formation et accueil servent un intérêt dépassant les seuls occupant·es."
   - critere: non_lucratif_global
     valeur: partiel
-    note: "Le porteur est non lucratif, mais une EARL exploite la ferme : forme commerciale dont la non-lucrativité n'est pas confirmée."
+    note: "Le porteur est non lucratif, mais une EARL — société civile d'exploitation agricole — exploite la ferme : lucrative pour ses associé·es, sa non-lucrativité n'est pas établie."
   - critere: ancrage_territorial
     valeur: oui
     note: "Le domaine s'inscrit dans le Parc naturel régional du Vexin français et accueille formation et public."
@@ -72,8 +75,8 @@ grille:
     valeur: inconnu
     note: "Les dispositifs de transmission et de renouvellement ne sont pas décrits par les sources consultées."
   - critere: montage_non_commercial
-    valeur: non
-    note: "L'usufruitier inclut l'EARL du Chemin Neuf, société commerciale d'exploitation agricole dont la non-lucrativité n'est pas établie ; le foncier est en revanche porté par une fondation non lucrative."
+    valeur: partiel
+    note: "L'usufruitier inclut l'EARL du Chemin Neuf, société civile d'exploitation agricole : non commerciale au sens du marché, mais lucrative pour ses associé·es (appropriation du bénéfice d'exploitation). Elle exploite sans détenir le foncier, porté par une fondation non lucrative ; le titre d'usage n'étant pas documenté, la prudence retient un montage partiellement non commercial, non un montage marchand."
   - critere: usage_non_marchand
     valeur: inconnu
     note: "Le régime d'accès à la terre et à ses fruits n'est pas documenté ; l'exploitation agroécologique est conduite par une EARL et le détail des activités de formation et d'accueil n'est pas précisé."
@@ -105,7 +108,7 @@ analyse:
     - "Pluralité de structures permettant d'articuler exploitation, animation et formation."
   fragilites:
     - "Montage d'usage peu documenté publiquement et non assimilable à un démembrement strict."
-    - "Présence d'une EARL, forme commerciale dont la non-lucrativité n'est pas établie."
+    - "Présence d'une EARL, société civile d'exploitation lucrative pour ses associé·es, dont la non-lucrativité n'est pas établie."
     - "Gouvernance et dispositifs de transmission non décrits par les sources."
   leviers:
     - "Documenter et publier les actes liant fondation et structures d'usage."
@@ -124,7 +127,7 @@ fiabilite: >
   existence d'un démembrement strict, modalités de gouvernance et de transmission.
 chaine:
   porteurs: [fondation-fph]
-  usufruitiers: [ecosite-villarceaux]
+  usufruitiers: [ecosite-villarceaux, earl-du-chemin-neuf]
 sources:
   - titre: "Bergerie de Villarceaux — site officiel"
     url: "https://www.bergerie-villarceaux.org/"

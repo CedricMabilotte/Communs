@@ -9,7 +9,7 @@ localisation:
   commune: "Masquières"
   departement: "Lot-et-Garonne (47)"
   region: "Nouvelle-Aquitaine"
-annee: null
+annee: 2017
 url: "https://www.tera.coop/"
 resume: >
   La Coop du Tilleul est la structure d'usage qui fait vivre la ferme de Lartel,
@@ -36,26 +36,25 @@ montage:
 integrite_montage:
   niveau: ig_institue
   commentaire: >
-    Collectif d'usage à but non lucratif, mais inséré dans un écosystème de
+    Association loi 1901 à but non lucratif, insérée dans un écosystème de
     plusieurs structures juridiques (SCI, fonds de dotation, SCIC) ; la nature
-    exacte de la Coop du Tilleul et de son titre d'usage reste partiellement
-    documentée.
+    de son titre d'usage reste partiellement documentée.
 grille:
   - critere: non_appropriation
     valeur: oui
     note: "Le foncier reste la propriété de la SCI Le Tilleul : la Coop du Tilleul, simple locataire, ne peut ni le revendre ni en capter la valeur."
   - critere: parts_non_cessibles
-    valeur: partiel
-    note: "La Coop du Tilleul est présentée comme une structure associative sans capital appropriable ; sa forme juridique exacte n'est pas confirmée par les sources."
+    valeur: oui
+    note: "Association loi 1901 (RNA W473002310) : sans capital social ni parts, il n'y a rien de cessible ni d'appropriable."
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "Le sort de l'actif de la Coop du Tilleul en cas de dissolution n'est pas documenté par les sources consultées."
   - critere: personne_morale_civile
-    valeur: partiel
-    note: "La Coop du Tilleul fait vivre les activités nourricières de TERA en collectif ; sa forme juridique précise (association ou société coopérative) n'est pas confirmée par les sources."
+    valeur: oui
+    note: "Association loi 1901 (RNA W473002310, déclarée le 01/04/2017) : personne morale de droit civil sans but lucratif."
   - critere: non_lucrativite_effective
     valeur: partiel
-    note: "Le projet TERA repose sur une logique de revenu d'autonomie et de coopération non lucrative ; le régime des excédents de la Coop du Tilleul n'est pas documenté."
+    note: "La forme association loi 1901 pose la non-lucrativité de principe (pas de partage de bénéfices) ; le régime effectif des excédents et la gestion désintéressée ne sont pas documentés par les sources consultées."
   - critere: une_voix
     valeur: partiel
     note: "TERA revendique une gouvernance coopérative et partagée ; le mode de décision propre à la Coop du Tilleul n'est pas précisément documenté."
@@ -98,37 +97,40 @@ analyse:
     - "Activités nourricières et épicerie de proximité au service du territoire rural."
     - "Inséré dans un projet coopératif vaste et structuré, TERA."
   fragilites:
-    - "Forme juridique exacte de la Coop du Tilleul non confirmée."
     - "Nature, durée et clauses du bail liant la SCI à la Coop non documentées."
     - "Transparence comptable et régime des excédents non documentés."
+    - "Gouvernance interne (mode de décision propre à la Coop) peu détaillée."
   leviers:
-    - "Documenter publiquement la forme juridique et la gouvernance de la Coop du Tilleul."
+    - "Publier la gouvernance interne et les comptes de la Coop du Tilleul."
     - "Publier la nature et la durée du titre d'usage de la ferme de Lartel."
     - "Préciser le régime d'usage et le montant du loyer."
   synthese: >
     La Coop du Tilleul est le maillon d'usage qui fait vivre la ferme de Lartel
-    au sein de TERA : un collectif nourricier ancré dans son territoire. Sa
-    lisibilité gagnerait à la publication de sa forme juridique et des clauses du
-    bail qui le lie à la SCI foncière.
+    au sein de TERA : une association loi 1901 nourricière ancrée dans son
+    territoire. Sa lisibilité gagnerait à la publication de sa gouvernance interne
+    et des clauses du bail qui la lie à la SCI foncière.
 fiabilite: >
   Faits vérifiés (sources tera.coop, wiki TERA et presse, consultées en mai
-  2026) : la ferme de Lartel à Masquières est louée à la Coop du Tilleul,
-  structure d'usage des activités alimentaires de TERA, projet né en 2015 et
-  déployé sur trois communes du Lot-et-Garonne, environ 400 adhérent·es,
-  épicerie « l'Alvéole » à Tournon-d'Agenais. Non confirmé : forme juridique
-  précise de la Coop du Tilleul, année de création, nature et durée du bail,
-  montant du loyer, gouvernance interne, comptes.
+  2026 ; forme juridique recoupée au registre — annuaire des associations,
+  juin 2026) : la Coop du Tilleul est une association loi 1901 (RNA W473002310,
+  SIREN 829556232, déclarée le 01/04/2017 à Masquières), structure d'usage des
+  activités alimentaires de TERA ; la ferme de Lartel à Masquières lui est
+  louée ; TERA est un projet né en 2015 et déployé sur trois communes du
+  Lot-et-Garonne, environ 400 adhérent·es, épicerie « l'Alvéole » à
+  Tournon-d'Agenais. Non confirmé : nature et durée du bail, montant du loyer,
+  gouvernance interne, comptes.
 voir_aussi: [fonds-sdh, cooperative-oasis]
 dossier:
   identite:
     siren: "829556232"
+    rna: "W473002310"
     adresse: "Lartel, 47370 Masquières"
   echelle:
     lieux: "la ferme de Lartel et l'épicerie « l'Alvéole » à Tournon-d'Agenais"
   pieces:
     - type: statuts
       statut: inconnu
-      note: "Forme juridique exacte de la Coop du Tilleul non confirmée par les sources."
+      note: "Forme confirmée — association loi 1901 (RNA W473002310) ; statuts eux-mêmes non publiés."
     - type: reglement_interieur
       statut: inconnu
     - type: charte

@@ -33,10 +33,11 @@ montage:
     société civile agricole ; il a acheté les bâtiments de la ferme et exploite
     les terres en collectif.
 integrite_montage:
-  niveau: ig_institue
+  niveau: mutualisme
   commentaire: >
-    Le GAEC est une société civile agricole à gouvernance collective réelle ;
-    il s'articule à un porteur, la Foncière Terre de Liens, de nature
+    Le GAEC est une société civile agricole à gouvernance collective réelle,
+    dont le revenu agricole est partagé entre les associé·es : un mutualisme
+    d'usagers. Il s'articule à un porteur, la Foncière Terre de Liens, de nature
     sociétaire à actionnariat solidaire.
 grille:
   - critere: non_appropriation

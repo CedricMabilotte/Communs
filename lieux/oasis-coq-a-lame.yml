@@ -25,7 +25,7 @@ resume: >
   28 août 2025, avec l'accompagnement technique, juridique et financier de la
   Coopérative Oasis, une Obligation Réelle Environnementale.
 montage:
-  type: propriete_collective
+  type: propriete_protegee
   articulations:
     - usufruitier: habitants-echoisy
       titre: bail_emphyteotique

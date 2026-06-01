@@ -34,12 +34,19 @@ montage:
     négociables, mais une fraction du capital est détenue par une société tierce
     et la SCI demeure une structure de forme civile et non non lucrative.
 integrite_montage:
-  niveau: mutualisme
+  niveau: economie_marchande
   commentaire: >
     Société civile immobilière à parts non librement négociables, gérée par une
     association collégiale ; une fraction du capital est toutefois détenue par
-    une société tierce, et la SCI n'est pas une structure structurellement non
-    lucrative.
+    une société tierce (MV Finance), au régime de rémunération non documenté, et
+    le prix de cession des parts n'est pas plafonné. La SCI n'est pas une
+    structure structurellement non lucrative et son intérêt privé n'est ni
+    désactivé (capital non intégralement non lucratif) ni statutairement encadré
+    par un verrou documenté : sa nature reste commerciale (lucrativité ouverte).
+    Le fonctionnement interne est mutualiste — usager·es prêteur·ses-cogérant·es,
+    loyers modiques — mais la présence d'un co-associé commercial sans plafond de
+    cession maintient le foncier valorisable à titre privé, ce qui place le
+    profil au pôle de l'économie marchande tant que le capital n'est pas verrouillé.
 grille:
   - critere: inalienabilite
     valeur: partiel

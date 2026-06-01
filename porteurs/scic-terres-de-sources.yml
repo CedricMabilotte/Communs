@@ -3,8 +3,8 @@ categorie: porteur
 nom: "SCIC Terres de Sources"
 sous_titre: "Coopérative territoriale protégeant le foncier des aires de captage"
 statut_fiche: publie
-forme_juridique: "Société coopérative d'intérêt collectif (SCIC) multi-acteurs"
-nature_interet: commerciale_encadree
+forme_juridique: "Société coopérative d'intérêt collectif (SCIC) multi-acteurs ; le foncier des aires de captage est, lui, acquis et détenu par la collectivité publique Eau du Bassin Rennais"
+nature_interet: non_lucrative
 localisation: null
 annee: 2022
 url: "https://www.eaudubassinrennais-collectivite.fr/blog/la-scic-terres-de-sources-est-creee/"
@@ -31,7 +31,12 @@ integrite_montage:
   niveau: ig_institue
   commentaire: >
     Acquisition foncière publique articulée à une SCIC multi-acteurs ; montage
-    coopératif fortement adossé à une politique publique de l'eau.
+    coopératif fortement adossé à une politique publique de l'eau. La nature du
+    porteur se lit sur le maillon qui DÉTIENT le foncier — la collectivité
+    publique Eau du Bassin Rennais (non lucrative) — et non sur la SCIC, qui
+    organise les débouchés (notamment les marchés publics de restauration
+    collective) sans gouverner ni détenir la terre ; la forme coopérative de la
+    SCIC, à lucrativité encadrée, ne porte donc pas la valeur foncière.
 grille:
   - critere: forme_non_lucrative
     valeur: oui

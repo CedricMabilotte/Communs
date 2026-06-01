@@ -20,6 +20,10 @@ resume: >
   d'habitant·es et les activités collectives nées de la lutte en assurent l'usage.
 montage:
   type: propriete_protegee
+  articulations:
+    - usufruitier: assemblee-des-usages-nddl
+      titre: convention
+      note: "Titre non documenté : l'usage relève des collectifs d'habitant·es et des activités collectives nées de la lutte, mais les actes liant le fonds de dotation aux usager·es, parcelle par parcelle, ne sont pas confirmés par les sources consultées."
   description: >
     Le fonds de dotation « La Terre en commun », personne morale créée par la loi
     du 4 août 2008, acquiert progressivement bâtis et terres pour en faire une

@@ -38,12 +38,17 @@ montage:
     n'est pas civil au sens du Code civil : c'est la propriété collective d'une
     société civile, contrôlée par une association, qui tient lieu de verrou.
 integrite_montage:
-  niveau: ig_institue
+  niveau: mutualisme
   commentaire: >
     Société civile dont les parts étaient quasi intégralement détenues par une
     association loi 1901 : la nature non lucrative du contrôle reposait sur ce
     montage de parts, et non sur des verrous statutaires propres à la société
-    civile, non documentés par les sources.
+    civile, non documentés par les sources. La société civile n'étant pas une
+    forme structurellement non lucrative et sa non-lucrativité effective n'étant
+    pas établie (nature_interet inconnu), le profil ne peut être rattaché à
+    l'intérêt général institué : il relève d'une propriété collective dont les
+    fruits servent un cercle de sociétaires (mutualisme), sous réserve de la
+    documentation des verrous statutaires.
 grille:
   - critere: inalienabilite
     valeur: partiel

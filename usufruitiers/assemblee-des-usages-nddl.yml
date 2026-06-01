@@ -48,8 +48,8 @@ grille:
     valeur: oui
     note: "L'usage des terres relève de baux ruraux et de conventions ; le foncier racheté est porté par le fonds de dotation « La Terre en commun », sans appropriation privée possible par les usager·es."
   - critere: parts_non_cessibles
-    valeur: oui
-    note: "L'Assemblée des usages est un collectif sans capital ni parts sociales : aucun titre cessible, aucune valeur foncière captable."
+    valeur: partiel
+    note: "L'Assemblée des usages, collectif sans personnalité juridique, n'a ni capital ni parts : il n'y a donc rien de cessible — mais c'est une absence d'objet, pas un verrou statutaire. Le verrou anti-spéculatif réel tient au fonds de dotation « La Terre en commun » qui porte le foncier, non à l'assemblée elle-même."
   - critere: devolution_usufruitier
     valeur: inconnu
     note: "L'Assemblée des usages n'ayant pas de personnalité juridique propre, la question d'une clause de dévolution d'actif ne se pose pas dans les termes documentés par les sources."

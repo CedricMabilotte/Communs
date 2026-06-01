@@ -37,10 +37,12 @@ montage:
     foncière distincte documentée, la chaîne est provisoirement renseignée comme
     intégrée sur le collectif, sous réserve de confirmation.
 integrite_montage:
-  niveau: commun_citoyen
   commentaire: >
     Écolieu porté par un collectif citoyen ; la nature juridique du portage du
-    foncier n'étant pas documentée, ce niveau est indicatif et provisoire.
+    foncier n'étant pas documentée — chaîne entièrement cotée « inconnu »,
+    verdict suspendu —, aucun pôle d'intégrité n'est projeté : l'apposer
+    (a fortiori le pôle de tête) contredirait la réserve honnête tant que le
+    montage n'est pas établi.
 grille:
   - critere: foncier_hors_marche
     valeur: inconnu

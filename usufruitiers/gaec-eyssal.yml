@@ -32,10 +32,11 @@ montage:
     bâtiments et une partie des terres, le foncier Terre de Liens venant
     consolider une exploitation préexistante.
 integrite_montage:
-  niveau: ig_institue
+  niveau: mutualisme
   commentaire: >
-    Le GAEC est une société civile agricole de droit civil à gouvernance de
-    couple ; il s'articule à un porteur, la Foncière Terre de Liens, de nature
+    Le GAEC est une société civile agricole à gouvernance de couple, dont le
+    revenu agricole revient aux associé·es : un mutualisme d'usagers au cercle
+    resserré. Il s'articule à un porteur, la Foncière Terre de Liens, de nature
     sociétaire, et reste par ailleurs propriétaire d'une part de son foncier.
 grille:
   - critere: non_appropriation

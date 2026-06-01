@@ -5,7 +5,10 @@ sous_titre: "Couveuse et coopérative d'activités agricoles en Île-de-France"
 statut_fiche: publie
 forme_juridique: "Société anonyme coopérative (depuis juin 2024 ; SCIC depuis 2016, association depuis 2009)"
 nature_interet: commerciale_encadree
-localisation: null
+localisation:
+  commune: "Villenauxe-la-Petite (siège — Hameau de Toussacq) ; fermes d'accueil en périurbain francilien"
+  departement: "Seine-et-Marne (77)"
+  region: "Île-de-France"
 annee: 2009
 url: "https://www.leschampsdespossibles.fr/"
 resume: >
@@ -36,8 +39,8 @@ integrite_montage:
     coopérative encadrant la lucrativité, l'usage organisé étant transitoire.
 grille:
   - critere: personne_morale_civile
-    valeur: oui
-    note: "Les Champs des Possibles est une société coopérative relevant de l'économie sociale et solidaire, personne morale non lucrative."
+    valeur: partiel
+    note: "Société anonyme coopérative (ex-SCIC) relevant de l'économie sociale et solidaire : société commerciale, mais à lucrativité encadrée par sa forme coopérative — coté « partiel » comme les autres coopératives du corpus."
   - critere: objet_ig
     valeur: oui
     note: "L'objet — faciliter l'installation agricole par le test d'activité — relève d'un intérêt général agricole et de renouvellement des générations."

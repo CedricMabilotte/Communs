@@ -35,11 +35,12 @@ montage:
     de façon collective sans en être propriétaire et n'en capte pas la valeur
     foncière.
 integrite_montage:
-  niveau: ig_institue
+  niveau: mutualisme
   commentaire: >
-    Le GAEC est une société civile agricole non lucrative dont les associé·es
-    sont des exploitant·es ; sa gouvernance est collective et son
-    renouvellement effectif, mais centrée sur le cercle des associé·es du
+    Le GAEC est une société civile agricole dont les associé·es sont des
+    exploitant·es : revenu agricole partagé entre eux et gouvernance collective,
+    mais à renouvellement effectif tout en restant centrée sur le cercle fermé
+    des associé·es du
     groupement.
 grille:
   - critere: non_appropriation

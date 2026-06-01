@@ -25,6 +25,11 @@ resume: >
   et joue un rôle de garante locative.
 montage:
   type: propriete_protegee
+  articulations:
+    - usufruitier: fonciere-chenelet
+      titre: bail_emphyteotique
+      duree: "99 ans"
+      note: "La commune de Flocques, propriétaire du terrain, le confie à la Foncière Chênelet par bail emphytéotique de 99 ans : la Foncière construit et détient les murs pendant la durée du bail, la commune récupérant les constructions à son terme."
   description: >
     La commune de Flocques est propriétaire du terrain et l'a confié à la
     Foncière Chênelet par un bail emphytéotique de 99 ans : la Foncière construit
@@ -46,7 +51,7 @@ integrite_montage:
 grille:
   - critere: foncier_hors_marche
     valeur: oui
-    note: "Le terrain reste propriété de la commune ; les murs sont portés par la Foncière Chênelet, foncière solidaire non spéculative qui ne les destine pas à la revente sur le marché libre."
+    note: "Le terrain (le sol) reste propriété de la commune de Flocques, personne publique, et n'est pas mobilisable sur le marché : c'est ce maillon foncier qui est durablement hors marché. Les murs, portés par la Foncière Chênelet via le bail emphytéotique, reviennent à la commune au terme."
   - critere: montage_documente
     valeur: oui
     note: "Le montage — terrain communal, bail emphytéotique de 99 ans à la Foncière Chênelet, gestion locative par la commune — est public et décrit par la Foncière et la presse locale."
@@ -136,8 +141,8 @@ fiabilite: >
   loyers, durée et renouvellement des baux d'habitation, clauses du bail
   emphytéotique, encadrement statutaire de la cession des actions de la Foncière.
 chaine:
-  porteurs: [fonciere-chenelet]
-  usufruitiers: [commune-flocques]
+  porteurs: [commune-flocques]
+  usufruitiers: [fonciere-chenelet]
 sources:
   - titre: "12 logements à Flocques (76) — Foncière Chênelet"
     url: "https://fonciere-chenelet.org/constructions/operations/12-logements-flocques-76"

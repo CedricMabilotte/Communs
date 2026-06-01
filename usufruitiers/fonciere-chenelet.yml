@@ -1,0 +1,154 @@
+uid: fonciere-chenelet
+categorie: usufruitier
+nom: "Foncière Chênelet"
+sous_titre: "Foncière solidaire preneuse emphytéotique, bâtisseuse et gestionnaire du logement social écologique"
+statut_fiche: publie
+forme_juridique: "Foncière solidaire (entreprise solidaire d'utilité sociale, ESUS)"
+nature_interet: commerciale_encadree
+localisation: null
+annee: 2009
+url: "https://fonciere-chenelet.org/"
+resume: >
+  Foncière solidaire fondée en 2009 par François Marty, dans la mouvance du
+  groupe d'insertion Chênelet. À Flocques, elle est preneuse d'un bail
+  emphytéotique de 99 ans accordé par la commune propriétaire du terrain : elle
+  construit et détient les murs des douze logements pendant la durée du bail,
+  qu'elle loue à des ménages à très faibles revenus avec des charges fortement
+  réduites. Reconnue entreprise solidaire d'utilité sociale (ESUS) et agréée
+  maîtrise d'ouvrage d'insertion dans plusieurs régions, elle construit en
+  matériaux sains et basse consommation, avec des clauses d'insertion
+  obligatoires dans ses marchés de construction. C'est elle qui fait exister et
+  gère l'usage du logement, sur un foncier qu'elle ne possède pas.
+montage:
+  type: propriete_protegee
+  nu_proprietaire: "Commune de Flocques (collectivité publique, propriétaire du terrain)"
+  usufruitier: "Foncière Chênelet (foncière solidaire ESUS, preneuse emphytéotique)"
+  description: >
+    À Flocques, la Foncière Chênelet est preneuse d'un bail emphytéotique de
+    99 ans : elle bâtit et détient les murs des douze logements sociaux
+    écologiques sur un terrain dont la commune reste propriétaire, et les loue
+    durablement à des ménages à très faibles revenus. La Foncière joue ainsi le
+    rôle de bailleur social pérenne — maillon vivant qui fait exister et gère le
+    logement —, sans posséder le foncier, qui lui revient à charge de le rendre
+    au terme du bail. La construction en matériaux sains permet des charges
+    résidentielles nettement réduites par rapport au logement social
+    conventionnel.
+integrite_montage:
+  niveau: economie_marchande
+  commentaire: >
+    Foncière de forme sociétaire (SAS) à finalité solidaire, agréée ESUS ; la
+    non-lucrativité repose sur l'agrément et les clauses encadrant le capital.
+    Preneuse emphytéotique, elle bâtit et gère l'usage du logement sans détenir
+    le foncier.
+grille:
+  - critere: non_appropriation
+    valeur: oui
+    note: "Le terrain reste propriété de la commune et les locataires ne peuvent ni revendre ni capter à titre privé la valeur du foncier ; la Foncière elle-même n'en est que preneuse emphytéotique et rend les constructions à la commune au terme du bail."
+  - critere: parts_non_cessibles
+    valeur: partiel
+    note: "La Foncière repose sur un capital solidaire encadré par l'agrément ESUS, mais c'est une SAS dont le plafonnement du prix de cession des titres n'est pas documenté : la cession est encadrée sans être verrouillée comme dans une structure non lucrative."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de la Foncière en cas de dissolution n'est pas documenté par les sources consultées."
+  - critere: personne_morale_civile
+    valeur: partiel
+    note: "La Foncière Chênelet est une société commerciale (SAS) à lucrativité encadrée par l'agrément ESUS ; elle n'est pas une personne morale de droit civil non lucrative au sens strict de la grille — comme une SCIC, ce maillon est noté « partiel »."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "L'agrément ESUS encadre la lucrativité et plafonne la rémunération du capital, mais une rémunération limitée des apporteurs solidaires n'est pas exclue par construction : les excédents ne sont pas pleinement verrouillés en réserves impartageables documentées."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Le mode de gouvernance interne de la Foncière — proportionnalité ou non du pouvoir au capital apporté — n'est pas documenté par les sources consultées."
+  - critere: usagers_decident
+    valeur: non
+    note: "Bailleur social : la Foncière fixe loyers et baux dans le cadre du logement social agréé ; l'association des locataires aux décisions qui les concernent n'est ni documentée ni inscrite dans le modèle ESUS."
+  - critere: ouverture_entrants
+    valeur: partiel
+    note: "Les logements s'adressent à de nouveaux ménages à bas revenus selon les critères du logement social ; mais il s'agit d'attribution de logements locatifs, non d'une ouverture à de nouveaux membres d'un collectif gouvernant le lieu."
+  - critere: transparence_interne
+    valeur: partiel
+    note: "La Foncière communique sur son modèle et ses réalisations, mais le détail de la publication de ses comptes et de ses décisions n'est pas confirmé."
+  - critere: objet_ig
+    valeur: oui
+    note: "L'objet porte un intérêt général identifié : logement digne, très social et écologique pour des ménages à très faibles revenus, avec insertion par l'activité économique."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Les logements s'adressent à des ménages à bas revenus et à des personnes âgées du territoire ; ils ne profitent pas à un cercle restreint de membres fondateurs."
+  - critere: duree_usage
+    valeur: oui
+    note: "La Foncière est preneuse d'un bail emphytéotique de 99 ans accordé par la commune : un titre d'usage long, bien au-delà de l'usufruit de 30 ans d'une personne morale, assurant une jouissance durable du foncier pour bâtir et gérer le logement."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "L'existence de clauses d'usage ou environnementales formalisées dans le bail emphytéotique n'est pas documentée par les sources ; le procédé constructif écologique relève du modèle de la Foncière, sans clause de bail attestée."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "La Foncière est liée à la commune propriétaire par un bail emphytéotique clair de 99 ans, et coopère avec elle depuis 2016 dans un projet de territoire concerté ; pas de conflit d'intérêts documenté."
+  - critere: regime_usage_non_marchand
+    valeur: non
+    note: "L'usage que la Foncière fait vivre repose sur un bail d'habitation et le paiement d'un loyer : régime locatif, certes très social, et non gratuité, don ou troc."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "La Foncière vise des loyers et des charges résidentielles très faibles pour des ménages à très faibles revenus, hors logique de rendement locatif de marché ; la commune garantit en outre des prix très modérés."
+  - critere: vivant_finalite
+    valeur: non
+    note: "La finalité est le logement social écologique pour des ménages humains à très faibles revenus ; l'écologie porte sur les matériaux et la performance du bâti, sans finalité de préservation de la biodiversité affichée."
+analyse:
+  forces:
+    - "Bail emphytéotique de 99 ans : titre d'usage long et sécurisé sur le foncier."
+    - "Logement social écologique à charges très réduites pour des ménages à très faibles revenus."
+    - "Clauses d'insertion obligatoires et part importante des marchés confiée à des entreprises locales."
+  fragilites:
+    - "Forme sociétaire (SAS) : non-lucrativité dépendante de l'agrément ESUS et des statuts."
+    - "Bailleur social : les locataires ne participent pas aux décisions sur le lieu."
+    - "Régime locatif marchand, même très social, sans logique de partage non marchand."
+  leviers:
+    - "Inscrire des clauses d'usage et environnementales explicites dans le bail emphytéotique."
+    - "Documenter publiquement la gouvernance et le sort de l'actif de la Foncière."
+    - "Associer les locataires à la vie et aux décisions du lieu."
+  synthese: >
+    À Flocques, la Foncière Chênelet est le maillon usufruitier de l'opération :
+    preneuse d'un bail emphytéotique de 99 ans sur un terrain communal, elle bâtit
+    et gère durablement du logement social écologique pour les ménages les plus
+    modestes. Sa solidité tient à la longueur du titre d'usage et à son ancrage
+    dans l'insertion ; ses limites tiennent à sa forme sociétaire, dont la
+    non-lucrativité dépend de l'agrément ESUS, et à un usage locatif administré
+    en bailleur social, sans association des locataires à la décision.
+fiabilite: >
+  Faits vérifiés (sources Foncière Chênelet, Impactivist et presse locale,
+  consultées en mai 2026) : foncière solidaire fondée en 2009 par François Marty
+  dans la mouvance du groupe d'insertion Chênelet, reconnaissance ESUS, agrément
+  maîtrise d'ouvrage d'insertion dans plusieurs régions, construction de logement
+  social écologique en matériaux sains et basse consommation, charges
+  résidentielles fortement réduites, clauses d'insertion obligatoires dans les
+  marchés de construction ; à Flocques, preneuse d'un bail emphytéotique de
+  99 ans sur un terrain communal, opération de douze logements inaugurée en
+  novembre 2021. Non confirmé : clause de dévolution, plafonnement de cession des
+  titres, composition de la gouvernance, détail des comptes, clauses du bail
+  emphytéotique.
+voir_aussi: [commune-flocques]
+dossier:
+  identite:
+    siren: "515161248"
+    adresse: "34 rue de Moyecques, 62250 Landrethun-le-Nord"
+  pieces:
+    - type: statuts
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans accordé par la commune de Flocques ; non publié."
+    - type: rapport_financier
+      statut: inconnu
+    - type: bail
+      statut: inconnu
+      note: "Bail emphytéotique de 99 ans (preneuse) ; baux d'habitation des locataires non documentés."
+sources:
+  - titre: "Foncière Chênelet — site officiel"
+    url: "https://fonciere-chenelet.org/"
+  - titre: "Foncière Chênelet — Qui sommes-nous"
+    url: "https://fonciere-chenelet.org/nous"
+  - titre: "Impactivist — Chênelet"
+    url: "https://www.impactivist.co/chenelet"

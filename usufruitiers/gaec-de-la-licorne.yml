@@ -31,11 +31,12 @@ montage:
     GAEC est une société civile agricole : il exploite la terre sans en être
     propriétaire et n'en capte pas la valeur foncière.
 integrite_montage:
-  niveau: ig_institue
+  niveau: mutualisme
   commentaire: >
-    Le GAEC est une société civile agricole non lucrative dont les associé·es
-    sont des exploitant·es ; sa gouvernance est collective mais centrée sur le
-    cercle des associé·es du groupement.
+    Le GAEC est une société civile agricole dont les associé·es sont des
+    exploitant·es : gouvernance collective mais cercle fermé d'associé·es, et
+    revenu agricole partagé entre eux. C'est le mutualisme d'usagers — une
+    société de sociétaires au bénéfice resserré, non un intérêt général institué.
 grille:
   - critere: non_appropriation
     valeur: oui
@@ -120,6 +121,7 @@ dossier:
   identite:
     siren: "420321218"
     adresse: "Lieu-dit Le Breuil, 03450 Chouvigny"
+    note: "Le SIREN 420321218 a une racine d'immatriculation ancienne (séquence 42x, fin des années 1990), antérieure à l'acquisition foncière par la Foncière Terre de Liens (fin 2024) : le GAEC préexistait vraisemblablement à l'installation sur ce foncier. Antériorité non confirmée par les sources ; SIREN à recouper."
   echelle:
     personnes: "5 associé·es exploitant·es"
     surface: "Environ 50 hectares"

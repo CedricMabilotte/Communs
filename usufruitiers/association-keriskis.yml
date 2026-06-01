@@ -85,7 +85,7 @@ grille:
     note: "Le collectif est lié au fonds de dotation Antidote ; chaque lieu du réseau intègre la gouvernance du fonds via « Les Passagères de l'usage »."
   - critere: regime_usage_non_marchand
     valeur: oui
-    note: "Les activités agricoles du lieu sont explicitement décrites comme « agricool non marchandes » : le régime d'usage repose sur l'entraide et le partage."
+    note: "Les activités agricoles du lieu sont explicitement décrites comme « agricoles non marchandes » : le régime d'usage repose sur l'entraide et le partage."
   - critere: loyer_soutenable
     valeur: inconnu
     note: "Le montant de la redevance versée à Antidote n'est pas documenté par les sources."

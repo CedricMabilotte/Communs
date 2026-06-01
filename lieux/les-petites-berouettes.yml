@@ -36,12 +36,16 @@ montage:
     publique visait environ 47 728 euros pour couvrir 60 % du prix total
     d'acquisition, travaux et frais inclus.
 integrite_montage:
-  niveau: mutualisme
+  niveau: ig_institue
   commentaire: >
-    Foncier protégé par une structure non spéculative ; mais le porteur est
-    une société en commandite par actions à actionnariat solidaire, et
-    l'usufruitier un GAEC, société civile d'exploitation dont le bénéfice est
-    partagé entre les paysan·nes associé·es.
+    Foncier protégé par la Foncière Terre de Liens, structure non spéculative
+    à gouvernance solidaire descendante ; le porteur est une société en
+    commandite par actions à actionnariat solidaire, et l'usufruitier un GAEC,
+    société civile d'exploitation dont le bénéfice est partagé entre les
+    paysan·nes associé·es. Le profil relève de l'intérêt général institué et
+    non du mutualisme : aucun maillon n'est une coopérative ou SCIC à
+    sociétariat ; le GAEC est une exploitation agricole, non une mutuelle
+    d'usagers.
 grille:
   - critere: foncier_hors_marche
     valeur: oui
