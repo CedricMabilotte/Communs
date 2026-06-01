@@ -97,8 +97,7 @@ dossier:
       note: "Statuts types des associations habitante et propriétaire non tous publiés en ligne ; clauses anti-revente et de dévolution à recouper lieu par lieu."
     - type: rapport_financier
       statut: inconnu
-membres: [hautes-planches-bretoncelles, la-porcheritz-perche, la-deviation-marseille,
-          les-donnettes, la-porcheritz, parpaing-libre]
+membres: [hautes-planches-bretoncelles, la-porcheritz-perche, la-deviation-marseille]
 sources:
   - titre: "CLIP — site officiel"
     url: "https://clip.ouvaton.org/"

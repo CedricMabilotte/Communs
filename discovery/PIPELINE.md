@@ -310,3 +310,24 @@ nettoyer si nécessaire avant un commit.
   réelle, il faudra observer combien de leads passent et ajuster.
   L'historique cumulé de mai 2026 suggère que `terre-de-liens` produit
   des leads très étoffés qui franchiront vite le seuil — c'est attendu.
+
+---
+
+## Skills du pipeline (slash-commands, `~/.claude/commands/`)
+
+Chaque étape de constitution d'un item est encapsulée dans un skill, codifiant
+la méthode et les garde-fous (posés en session #11) :
+
+| Étape | Skill | Rôle |
+|-------|-------|------|
+| 1 — amorce (Z2) | `/communs-veille-lead <nom>` | Crée/normalise un lead (graine, rebond, détection) |
+| 2 — qualification | `/communs-veille-qualifier <slug>` | Recherche + verdict d'éligibilité dans le lead |
+| 3 — pré-fiche (Z3) | `/communs-veille-prefiche <slug>` | Promotion lead → pré-fiche (schéma partiel) |
+| 4 — carvage (Z4) | `/communs-veille-carver <slug>` | Pré-fiche → fiche réelle + entités, cotation grille |
+| 5 — approfondissement | `/communs-veille-approfondir <slug>` | Lève les inconnu/partiel par sources réelles |
+| 6 — validation | `/communs-veille-valider <slug\|lot>` | Passe Checker adversariale (MARS-prod) |
+
+Discipline transverse : recherche `WebSearch` → `web_fetch` (provenance : URL
+issue d'une recherche) ; cotation honnête (`inconnu` si non sourcé, jamais de
+`oui`/`non` fabriqué) ; verdict calculé jamais saisi ; garde-fous du générateur
+verts ; boucle MARS-prod (Assistant ↔ Checker) sur tout livrable non trivial.
