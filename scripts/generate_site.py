@@ -4003,11 +4003,11 @@ def render_article(revue, article, cfg):
             for slugd in ("l", "p", "u", "m", "r"):
                 cible = SITE / slugd / f"{uid}.html"
                 if cible.exists():
-                    href = f"../../{slugd}/{uid}.html"
+                    href = f"../../../{slugd}/{uid}.html"  # article = prof. 3
                     break
             if href is None:
                 # fallback raisonnable : lieux
-                href = f"../../l/{uid}.html"
+                href = f"../../../l/{uid}.html"
             liens.append(f'<li><a href="{e(href)}">{e(uid)}</a></li>')
         if liens:
             cas_html = f"""<div class="article-relations">
@@ -5658,6 +5658,47 @@ def verifier_entites_html():
     return fautes
 
 
+def verifier_liens():
+    """Garde-fou (leçon L54, session #11) : tout lien interne relatif d'une page
+    produite doit résoudre vers un fichier existant. Le corps Markdown d'un article
+    de revue n'est PAS réécrit selon la profondeur de la page (seul le chrome l'est
+    via `up`), si bien qu'un lien `../../methode.html` correct au manifeste (prof. 2)
+    pointe vers un 404 dans un article (prof. 3). Ce contrôle scanne les `href`
+    relatifs du site produit et fait échouer la génération si l'un ne résout pas.
+    On ignore les liens externes (http, //, mailto, tel, javascript, data),
+    les ancres pures (`#…`) et les href vides."""
+    href_pat = re.compile(r'href="([^"]*)"')
+    script_pat = re.compile(r"<script\b.*?</script>", re.DOTALL | re.IGNORECASE)
+    skip_pref = ("http://", "https://", "//", "mailto:", "tel:", "javascript:",
+                 "data:", "#")
+    casses = []
+    racine = SITE.resolve()
+    for fp in sorted(SITE.rglob("*.html")):
+        base = fp.parent
+        # on retire les blocs <script> : un href construit en JS n'est pas un lien statique
+        contenu = script_pat.sub("", fp.read_text(encoding="utf-8"))
+        for href in href_pat.findall(contenu):
+            h = href.strip()
+            if not h or h.startswith(skip_pref):
+                continue
+            h = h.split("#", 1)[0].split("?", 1)[0]   # retirer fragment et query
+            if not h:
+                continue
+            start = racine if h.startswith("/") else base
+            cible = (start / h.lstrip("/")).resolve()
+            if cible.is_dir() or h.endswith("/"):
+                cible = cible / "index.html"
+            try:
+                cible.relative_to(racine)
+                hors = False
+            except ValueError:
+                hors = True
+            if hors or not cible.exists():
+                casses.append(f"{fp.relative_to(SITE)} : href=\"{href}\""
+                              + ("  (hors site)" if hors else "  (cible absente)"))
+    return casses
+
+
 def verifier_chaines(fiches):
     """Contrôle de cohérence des chaînes (chantier A, session #3).
 
@@ -5972,6 +6013,15 @@ def main():
             print(f"  {f}")
         raise SystemExit(1)
     print("Contrôle des entités HTML : aucune anomalie.")
+
+    # garde-fou — tout lien interne relatif doit résoudre vers un fichier existant
+    liens_casses = verifier_liens()
+    if liens_casses:
+        print(f"ÉCHEC — {len(liens_casses)} lien(s) interne(s) cassé(s) :")
+        for l in liens_casses[:20]:
+            print(f"  {l}")
+        raise SystemExit(1)
+    print("Contrôle des liens internes : aucun lien cassé.")
 
 
 if __name__ == "__main__":
