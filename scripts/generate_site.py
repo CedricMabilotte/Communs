@@ -22,6 +22,12 @@ from pathlib import Path
 
 import yaml
 
+try:
+    import weasyprint as _weasyprint  # noqa: F401
+    HAS_WEASYPRINT = True
+except Exception:
+    HAS_WEASYPRINT = False
+
 # Date de génération du site — affichée en pied de page et dans le sitemap.
 BUILD_DATE = datetime.date.today().isoformat()
 
@@ -3858,7 +3864,7 @@ def render_revue(revue, articles, cfg):
 
     # bouton PDF — dès le premier article publié (session #8)
     pdf_html = ""
-    if len(articles) >= 1:
+    if len(articles) >= 1 and HAS_WEASYPRINT:
         today_compact = datetime.date.today().strftime("%Y%m%d")
         pdf_name = f"{slug}-edition-{today_compact}.pdf"
         if len(articles) >= 2:
