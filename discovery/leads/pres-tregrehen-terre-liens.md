@@ -2,7 +2,7 @@
 slug: pres-tregrehen-terre-liens
 nom: Prés Trégrehen Terre Liens
 cree: '2026-05-27'
-dernier_repere: '2026-05-27'
+dernier_repere: '2026-06-05'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
