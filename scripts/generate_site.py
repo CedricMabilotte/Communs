@@ -625,6 +625,7 @@ NAV = [
     ("dossiers/index.html", "Dossiers"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
+    ("faisceau.html", "Le faisceau"),
 ]
 # Pages-catalogues dont l'onglet actif est « Classement » (le classement réunit
 # toutes les entrées ; les catalogues par rôle restent accessibles via le pied
@@ -5795,6 +5796,85 @@ def verifier_poles(fiches, by_uid):
     return avert
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Le faisceau libéré (v3.1) — PILOTE (grille + 3 fiches revues). Additif : ne
+# touche pas au rendu des 52 fiches v2. Migration en cours (cf. SEQUENCE).
+# ─────────────────────────────────────────────────────────────────────────────
+FAISCEAU_CSS = """
+.fsc-intro{background:#f4f1ea;border-left:4px solid #6b8f71;padding:12px 16px;border-radius:6px;font-size:.96rem;margin:14px 0}
+.fsc-card{border:1px solid #d8d3c6;border-radius:10px;padding:18px 20px;margin:22px 0}
+.fsc-hd{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #eee;padding-bottom:6px}
+.fsc-hd h3{margin:0;font-size:1.25rem} .fsc-loc{color:#777;font-size:.85rem}
+.fsc-porteur{font-size:.85rem;color:#555;margin:6px 0 10px}
+.fsc-score{margin:8px 0 12px} .fsc-band{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.8rem;font-weight:bold;color:#fff;margin-right:6px}
+.fb-autogere{background:#3d7a4e}.fb-sorti{background:#b08a3e}
+.fsc-q{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9rem}
+.fsc-q td,.fsc-q th{padding:5px 8px;border-bottom:1px solid #f0ece2;vertical-align:top;text-align:left}
+.fsc-q th{font-weight:bold;width:90px}
+.fsc-sym{text-align:center;width:38px;font-size:1.1rem}.s-ok{color:#3d7a4e}.s-mid{color:#b08a3e}.s-no{color:#b04a4a}.s-na{color:#999;font-size:.75rem}
+.fsc-nt{color:#555;font-size:.85rem}.fsc-pf{margin-top:6px;font-weight:bold}
+.fsc-dr{margin-top:10px;font-size:.8rem;color:#666;background:#faf8f3;padding:8px 10px;border-radius:6px}
+.fsc-note{font-size:.8rem;color:#999;margin-top:26px}
+"""
+
+def _fsc_card(nom, loc, porteur, band_cls, band_lbl, note, badge, pf, rows):
+    qr = "".join(
+        f'<tr><td>{q}</td><td class="fsc-sym {c}">{s}</td><td class="fsc-nt">{n}</td></tr>'
+        for q, s, c, n in rows)
+    return f"""<div class="fsc-card">
+  <div class="fsc-hd"><h3>{nom}</h3><span class="fsc-loc">{loc}</span></div>
+  <div class="fsc-porteur">{porteur}</div>
+  <div class="fsc-score"><span class="fsc-band {band_cls}">{band_lbl}</span> libération {note} · {badge}</div>
+  <table class="fsc-q"><tr><th>la porte</th><td class="fsc-sym s-ok">●</td><td class="fsc-nt">Sortie du marché, pour toujours (préalable franchi).</td></tr>{qr}</table>
+  <div class="fsc-pf">Point faible nommé : <b>{pf}</b>.</div>
+  <div class="fsc-dr">Vous représentez ce lieu ? <b>Droit de réponse</b> : correction sur pièce, levée d'un « non établi » sur témoignage, réponse libre sans retouche — contact avant toute publication.</div>
+</div>"""
+
+def render_faisceau(cfg, project=None):
+    marinie = _fsc_card(
+        "La Marinie", "Causse-et-Diège (12)",
+        "Fonds de dotation Antidote → association Les Communs de la Marinie (bail emphytéotique 99 ans)",
+        "fb-autogere", "autogéré", "<b>62</b> / 100",
+        "<span style='color:#999;font-size:.85rem'>badge non évalué</span>", "le don",
+        [("Le milieu","non établi","s-na","Clauses environnementales du bail non documentées."),
+         ("Le vivant","◐","s-mid","Agriculture paysanne, céréales anciennes ; rien d'agi délibérément pour le vivant."),
+         ("L'ouverture","●","s-ok","Fournil, savonnerie, activités culturelles ouvertes au-delà des membres."),
+         ("Le don","◐","s-mid","Mise en commun, redevance modique ; régime d'accès aux fruits non documenté."),
+         ("La durée","●","s-ok","Bail emphytéotique 99 ans."),
+         ("La voix","●","s-ok","Les usager·es décident (association des Communs de la Marinie).")])
+    rayol = _fsc_card(
+        "Domaine du Rayol", "Rayol-Canadel-sur-Mer (83)",
+        "Conservatoire du littoral (domaine propre, inaliénable) → association gestionnaire",
+        "fb-sorti", "sorti du marché", "<b>45</b> / 100",
+        "🌿🌿 <b>Sanctuaire</b>", "le don",
+        [("Le milieu","●","s-ok","Domaine propre du Conservatoire, jardin botanique de conservation."),
+         ("Le vivant","●","s-ok","Espace côtier des Maures sauvegardé."),
+         ("L'ouverture","●","s-ok","Ouvert au public, ~95 000 visiteur·es/an, pédagogie."),
+         ("Le don","○","s-no","Accès payant (billet) ; gestion par équipe salariée."),
+         ("La durée","◐","s-mid","Convention renouvelée ; gestionnaires, non une communauté qui « reste »."),
+         ("La voix","◐","s-mid","Association gestionnaire sous convention publique, non une autogestion des usager·es.")])
+    larzac = _fsc_card(
+        "Terres du Larzac", "Plateau du Larzac (12)",
+        "Propriété de l'État → SCTL (bail emphytéotique 99 ans) → baux longs aux paysan·nes",
+        "fb-autogere", "autogéré", "<b>62</b> / 100",
+        "<span style='color:#999;font-size:.85rem'>badge non évalué</span>", "le don",
+        [("Le milieu","○","s-no","Baux longs non assortis d'une protection environnementale opposable documentée."),
+         ("Le vivant","non établi","s-na","Place au vivant non documentée par les sources."),
+         ("L'ouverture","●","s-ok","Office foncier qui réinstalle des paysan·nes (+~20 %)."),
+         ("Le don","◐","s-mid","Office foncier sans recherche de rente ; régime d'accès non documenté."),
+         ("La durée","●","s-ok","Baux longs sécurisant la jouissance ; emphytéose 99 ans (2083) en amont."),
+         ("La voix","●","s-ok","Les associé·es de la SCTL sont les usager·es ; fonctionnement continu depuis 1985.")])
+    body = f"""<style>{FAISCEAU_CSS}</style>
+<h1>Le faisceau libéré <span style="font-weight:normal;font-size:1rem;color:#999">(nouvelle grille — pilote)</span></h1>
+<div class="fsc-intro"><b>Comment lire.</b> Une <b>porte</b> (sortir du marché) puis <b>six questions</b> du lieu vers le groupe ; une <b>échelle de libération</b> (marchand → sorti du marché → autogéré → usage libéré → commun vivant) lue au point le plus faible <i>du chemin</i> ; un <b>badge « Sanctuaire »</b> écologique <i>à côté</i> de la note, jamais dedans. On note <b>un degré de sortie du marché, pas un lieu</b> ; ce qu'on ne peut établir reste « non établi », jamais deviné. <a href="methode.html">La méthode en détail →</a></div>
+<p>Notre grille évolue. Voici <b>trois fiches revues sur sources</b> selon le nouveau cadre. Le reste de l'annuaire reste pour l'instant noté selon la grille précédente, le temps de la migration.</p>
+{marinie}{rayol}{larzac}
+<p class="fsc-note">Pilote — chiffres calculés, évaluations revues à la main sur les grilles sourcées. Cadre daté, signé, contestable : tout amendement argumenté est instruit. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>"""
+    return page("Le faisceau libéré", body, "faisceau.html", depth=0,
+                project=project, description="La nouvelle grille de libération des terres — pilote.",
+                path="faisceau.html", link_gloss=False)
+
+
 def main():
     global BASE_URL
     cfg = load_config()
@@ -5896,6 +5976,7 @@ def main():
     write(SITE / "grilles.html", render_grilles(cfg))
     write(SITE / "glossaire.html", render_glossaire(cfg))
     write(SITE / "methode.html", render_methode(cfg, n_by_cat, all_sc))
+    write(SITE / "faisceau.html", render_faisceau(cfg, project=PROJECT if "PROJECT" in dir() else None))
     write(SITE / "themes.html", render_themes(all_sc, cfg))
     write(SITE / "comparer.html", render_comparer(all_sc, cfg))
     write(SITE / "suggerer.html", render_suggerer(cfg))
@@ -5940,7 +6021,7 @@ def main():
         sitemap_paths.append((CAT_PAGE[cat], "0.8"))
     for p in ("classement.html", "carte.html", "regimes.html",
               "grilles.html", "methode.html", "themes.html", "comparer.html",
-              "glossaire.html", "suggerer.html"):
+              "glossaire.html", "suggerer.html", "faisceau.html"):
         sitemap_paths.append((p, "0.6"))
     for f, sc in all_sc:
         sitemap_paths.append((f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html', "0.7"))
