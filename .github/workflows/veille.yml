@@ -3,18 +3,19 @@ name: Veille & publication — Communs
 # Veille hebdomadaire des montages de libération des terres, régénération du
 # site, puis publication sur GitHub Pages (communs.actitude.org).
 on:
-  schedule:
-    - cron: "0 6 * * 1"          # tous les lundis à 06h00 UTC
-  workflow_dispatch:              # déclenchement manuel possible
-  push:
-    branches: [main]
-    paths:                       # republier dès qu'une donnée change
-      - "lieux/**"
-      - "porteurs/**"
-      - "usufruitiers/**"
-      - "modeles/**"
-      - "config/**"
-      - "scripts/generate_site.py"
+  # === GELÉ pour migration v3.1 (2026-06-05, @eozen/@neo) — réactiver après bascule (étape F) ===
+  #   schedule:
+  #     - cron: "0 6 * * 1"          # tous les lundis à 06h00 UTC
+  workflow_dispatch:              # déclenchement manuel uniquement pendant le gel
+  #   push:
+  #     branches: [main]
+  #     paths:
+  #       - "lieux/**"
+  #       - "porteurs/**"
+  #       - "usufruitiers/**"
+  #       - "modeles/**"
+  #       - "config/**"
+  #       - "scripts/generate_site.py"
 
 permissions:
   contents: write                 # pour committer les candidats de veille
