@@ -139,3 +139,50 @@ sources:
     url: "https://www.ecolieudelagasnerie.fr/"
   - titre: "Écolieu de la Gasnerie — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/ecolieu-de-la-gasnerie/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: La structure détenant le foncier et son caractère spéculatif ou non ne sont
+      pas documentés par les sources.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable — obligation réelle environnementale,
+        classement, clause inscrite à un bail — n'est documenté ; le foncier n'est
+        protégé que par l'intention écologique du collectif.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Le projet se réclame d'un mode de vie écologique et le lieu accueille
+        une biodiversité affirmée (oiseaux, grenouilles, deux mares), mais le vivant
+        non-humain n'est pas posé comme finalité dans des statuts ou une charte.
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: Le projet — mode de vie écologique, tiers-lieu d'accueil, ateliers et
+        résidences — porte un intérêt général écologique et social encore largement
+        en devenir.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Le collectif se réclame du partage et de la coopération ; les séjours,
+        ateliers et formations envisagés comportent une part marchande, sans régime
+        d'usage documenté.
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: Le titre par lequel le collectif a l'usage du lieu et sa durée ne sont
+        pas documentés par les sources.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Le lieu est porté et habité par le collectif lui-même, qui se réclame
+        de valeurs de partage et de coopération.
+      decisive: true

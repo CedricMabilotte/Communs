@@ -138,3 +138,48 @@ sources:
     url: "https://www.prolongomaif.ch/longo-ma%C3%AF/coop%C3%A9ratives/mas-de-granier-fr/"
   - titre: "Le Mas de Granier, une ferme collective qui nourrit des luttes — Revue Silence"
     url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/le-mas-de-granier-une-ferme-collective-qui-nourrit-des-luttes"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Les terres de la ferme sont détenues de façon inaliénable par le Fonds de
+      Terre Européenne, à l'abri de la spéculation.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: La ferme conduit ses prairies et cultures en bio, mais aucun dispositif
+        opposable et durable de protection du milieu (ORE, espace protégé, clause
+        environnementale au bail) n'est documenté pour le foncier du Mas de Granier.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Les prairies naturelles de la plaine de la Crau accueillent une faune
+        et une flore propres, mais aucun aménagement explicite en faveur du vivant
+        (haies, mares, friches gérées) n'est documenté.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Maraîchage nourricier, conserverie ouverte aux paysan·nes voisin·es et
+        soutien à des luttes sociales donnent au lieu une portée qui dépasse ses occupant·es.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'autogestion et l'autoconsommation relèvent d'une logique de partage,
+        mais une part marchande coexiste (vente de conserves sur les marchés).
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le foncier est inaliénable et le site fonctionne depuis 1990, mais les
+        actes formalisant la durée de l'usage ne sont pas documentés.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La quinzaine de coopérant·es décide collectivement de la ferme en autogestion,
+        dans la tradition libertaire de Longo Maï.
+      decisive: true

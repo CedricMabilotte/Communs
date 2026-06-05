@@ -142,3 +142,50 @@ sources:
     url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
   - titre: "La Faille — fiche association (Gralon)"
     url: "https://www.gralon.net/mairies-france/gard/association-la-faille-monoblet_W303005610.htm"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: La propriété de la ferme a été transmise au fonds de dotation Antidote,
+      structure non spéculative qui la détient hors marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucune obligation réelle environnementale ni clause environnementale du
+        bail emphytéotique n'est documentée ; les clauses du bail ne sont pas connues
+        des sources.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Les sources décrivent les vocations agricole et culturelle du lieu, mais
+        ne mentionnent pas le vivant non-humain comme cohabitant parmi ses finalités.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Accès à la culture en milieu rural, accueil de compagnies, maraîchage
+        nourricier : le lieu sert un intérêt général culturel et agricole qui dépasse
+        ses occupant·es.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Concerts à bas coût et résidences à prix libre relèvent d'une logique
+        de partage ; la châtaigne est une activité économique commercialisée, et le
+        régime d'accès aux fruits du lieu n'est pas pleinement documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: L'usage est confié par bail emphytéotique de longue durée, qui sécurise
+        la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements
+        civils.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Le lieu est autogéré ; le collectif travaille une gouvernance qu'il veut
+        toujours plus horizontale et inclusive.
+      decisive: true

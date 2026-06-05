@@ -153,3 +153,52 @@ sources:
     url: "https://les-agites-du-local.jimdosite.com/"
   - titre: "Les Agités du Local (SIREN 852581404) — societe.com"
     url: "https://www.societe.com/societe/les-agites-du-local-852581404.html"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: 'L''appartenance au CLIP vise à soustraire le foncier au marché ; mais l''association
+      propriétaire et le dispositif anti-revente ne sont pas documentés pour Saleix
+      : la sortie du marché est inférée du réseau, non recoupée.'
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, clause
+        environnementale) n'est documenté pour le lieu.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: L'écolieu rural cultive en bio sur une ancienne ferme ; des espaces effectivement
+        laissés ou aménagés pour le vivant non-humain (haies, mares, friches) ne sont
+        pas documentés au-delà du volet productif.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Lieu d''accueil, de rencontre et de transmission à faible empreinte carbone,
+        promouvant agriculture, artisanat, culture et social : usage au service d''un
+        intérêt qui dépasse ses seuls habitant·es.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'écolieu repose sur une logique d'autosuffisance, de cohabitation et
+        de partage ; le détail du régime d'accès (contributions, accueil) n'est pas
+        documenté.
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: 'La nature et la durée du titre d''usage liant l''association usagère
+        à la propriété ne sont pas documentées, le montage CLIP n''étant pas recoupé
+        : la sécurité de jouissance ne peut être appréciée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'L''écolieu est habité et animé collectivement ; l''objet associatif vise
+        explicitement la cohabitation et l''action collective : les usager·es décident
+        ensemble de son devenir.'
+      decisive: true

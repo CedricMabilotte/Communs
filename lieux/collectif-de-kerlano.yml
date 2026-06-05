@@ -163,3 +163,52 @@ sources:
     url: "https://www.gralon.net/mairies-france/finistere/association-le-collectif-de-kerlano-rosnoen_W292007744.htm"
   - titre: "Manoir de Kerlano (Rosnoën) — base Mérimée"
     url: "https://pop.culture.gouv.fr/notice/merimee/IA29000024"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: 'L''auto-rachat associatif vise à soustraire le lieu au marché via le schéma
+      CLIP ; mais le foncier est encore en indivision et la bascule n''est pas documentée
+      comme aboutie : la sortie du marché n''est pas pleinement acquise.'
+  questions:
+    milieu:
+      valeur: non_etabli
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, clause
+        environnementale) n'est documenté pour ce lieu rural.
+    vivant:
+      valeur: non_etabli
+      maillon: lieu
+      note: Le lieu est rural (fond de la rade de Brest) ; la place d'une finalité
+        de préservation du vivant non-humain (jardin, potager, animaux) dans le projet
+        n'est pas documentée par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Habitat collectif solidaire qui garde des espaces d''accueil de personnes
+        en détresse (hébergement social) : usage au service d''un intérêt qui dépasse
+        ses seuls habitant·es.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'habitat repose sur une logique de mise en commun et d'accueil solidaire
+        ; le détail du régime (contributions, gratuité de l'accueil) n'est pas documenté.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: 'Le collectif occupe le lieu de longue date (une dizaine d''années) ;
+        mais le titre d''usage formel liant l''usage à la future association propriétaire
+        n''est pas documenté et la bascule CLIP n''est pas actée : la sécurité de
+        jouissance de long terme n''est pas encore pleinement formalisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Habitat explicitement solidaire et autogéré ; les habitant·es gèrent le
+        lieu collectivement, l'objet de l'association visant la gestion collective
+        une fois le projet en place.
+      decisive: true

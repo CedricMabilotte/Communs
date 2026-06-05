@@ -151,3 +151,50 @@ sources:
     url: "https://oasis-ducoqalame.fr/presentation-de-loasis-du-coq-a-lame/les-structures/"
   - titre: "Oasis du Coq à l'Âme — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/oasis-du-coq-a-lame/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le domaine est porté par une SCIC dédiée, non spéculative, mais grevé d'apports
+      remboursables sur vingt-cinq ans ; aucune clause d'inaliénabilité explicite
+      n'est documentée.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Une Obligation Réelle Environnementale a été signée le 28 août 2025 :
+        un dispositif opposable et durable attachant au foncier des engagements de
+        préservation de la biodiversité.'
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: Sur 26 hectares, l'ORE attache durablement des engagements de préservation
+        de la biodiversité ; le domaine accueille déjà ferme pédagogique et activités
+        tournées vers le vivant.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Autonomie alimentaire, écoconstruction, sensibilisation à la nature,
+        expérimentation agroécologique : le lieu sert un intérêt général écologique
+        et social.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'écolieu vise une « sobriété heureuse » fondée sur la mutualisation,
+        mais son modèle économique repose en partie sur des activités marchandes.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''association des habitant·es dispose d''un bail emphytéotique, titre
+        d''usage long pouvant courir jusqu''à 99 ans : jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'La gouvernance partagée est l''un des cinq invariants des oasis : les
+        foyers décident collectivement de l''usage du lieu.'
+      decisive: true

@@ -142,3 +142,50 @@ sources:
     url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
   - titre: "La collecte de dons pour la ferme de Pommiers est lancée ! — Terre de Liens"
     url: "https://terredeliens.org/rhone-alpes/actu/la-collecte-de-dons-pour-la-ferme-de-pommiers-est-lancee-10-12-2018/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le foncier est porté hors marché par la Fondation Terre de Liens, fondation
+      reconnue d'utilité publique non spéculative, par donation et acquisition complémentaire.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Le foncier est porté par la Fondation Terre de Liens, dont la mission
+        statutaire préserve durablement la vocation agricole, mais aucune obligation
+        réelle environnementale ni clause environnementale du bail rural n'est documentée
+        par les sources.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Le foncier comprend des prairies de moyenne montagne, mais les sources
+        ne documentent pas d'espaces (haies, mares, friches) effectivement laissés
+        ou aménagés pour le vivant non-humain.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Élevage ovin laitier en agriculture biologique, transformation fromagère,
+        vocation d''accueil paysan : le lieu sert un intérêt général agricole et social.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: La production fromagère est vendue en circuit court ; l'accueil paysan
+        relève d'une logique de partage sans rendre l'usage du lieu pleinement non
+        marchand.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : le GAEC dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La ferme est exploitée par le GAEC des Bergers de la Sure, groupement
+        agricole où les associé·es décident collectivement, à raison d'une voix chacun·e.
+      decisive: true

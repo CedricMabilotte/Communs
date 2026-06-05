@@ -137,3 +137,49 @@ sources:
     url: "https://www.prolongomaif.ch/longo-ma%C3%AF/coop%C3%A9ratives/treynas-fr/"
   - titre: "Communauté Longo Maï de Treynas — Réseau pour les Alternatives Forestières"
     url: "https://www.alternativesforestieres.org/Communaute-Longo-Mai-de-Treynas-356"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Les quelque 200 hectares sont détenus de façon inaliénable par le Fonds
+      de Terre Européenne, à l'abri de la spéculation.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Le site mêle forêt et terres agricoles, mais aucun dispositif opposable
+        et durable de protection du milieu (ORE, espace protégé, clause environnementale)
+        n'est documenté pour le foncier de Treynas.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Le site comporte une forêt et un milieu de montagne au bout d'une vallée
+        enclavée, mais aucun aménagement explicite en faveur du vivant ni gestion
+        conservatoire de la forêt n'est documenté.
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: Sylviculture, scierie et agriculture entretiennent un territoire de montagne
+        et une activité collective ; l'ouverture au-delà du réseau n'est pas pleinement
+        explicitée.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'autogestion et l'absence de propriété individuelle relèvent d'une logique
+        de partage, mais une part marchande coexiste (vente de bois sciés).
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le foncier est inaliénable et le site fonctionne depuis la fin des années
+        1980, mais les actes formalisant la durée de l'usage ne sont pas documentés.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La trentaine de personnes du hameau décide collectivement, sans hiérarchie
+        ni salariat, dans la tradition libertaire de Longo Maï.
+      decisive: true

@@ -5821,16 +5821,17 @@ FAISCEAU_CSS = """
 .fsc-nt{color:#555;font-size:.85rem}.fsc-pf{margin-top:6px;font-weight:bold}
 .fsc-dr{margin-top:10px;font-size:.8rem;color:#666;background:#faf8f3;padding:8px 10px;border-radius:6px}
 .fsc-note{font-size:.8rem;color:#999;margin-top:26px}
+.fsc-src{font-size:.72rem;color:#884488;background:#f3eef5;padding:1px 6px;border-radius:8px}.fsc-src.ok{color:#3d7a4e;background:#eef5ef}
 """
 
-def _fsc_card(nom, loc, porteur, band_cls, band_lbl, note, badge, pf, rows):
+def _fsc_card(nom, loc, porteur, band_cls, band_lbl, note, badge, pf, rows, src=""):
     qr = "".join(
         f'<tr><td>{q}</td><td class="fsc-sym {c}">{s}</td><td class="fsc-nt">{n}</td></tr>'
         for q, s, c, n in rows)
     return f"""<div class="fsc-card">
   <div class="fsc-hd"><h3>{nom}</h3><span class="fsc-loc">{loc}</span></div>
   <div class="fsc-porteur">{porteur}</div>
-  <div class="fsc-score"><span class="fsc-band {band_cls}">{band_lbl}</span> libération {note} · {badge}</div>
+  <div class="fsc-score"><span class="fsc-band {band_cls}">{band_lbl}</span> libération {note} · {badge}{src}</div>
   <table class="fsc-q"><tr><th>la porte</th><td class="fsc-sym s-ok">●</td><td class="fsc-nt">Sortie du marché, pour toujours (préalable franchi).</td></tr>{qr}</table>
   <div class="fsc-pf">Point faible nommé : <b>{pf}</b>.</div>
   <div class="fsc-dr">Vous représentez ce lieu ? <b>Droit de réponse</b> : correction sur pièce, levée d'un « non établi » sur témoignage, réponse libre sans retouche — contact avant toute publication.</div>
@@ -5882,12 +5883,14 @@ def render_faisceau(fiches, cfg, project=None):
         if mdep: loc=f"{loc} ({mdep.group(1)})"
         note=f"suspendue — palier : {FB_LABEL[band]}" if susp else f"<b>{num}</b> / 100"
         rows=[(lab,_FB_SYM[ev['questions'][k]['valeur']][0],_FB_SYM[ev['questions'][k]['valeur']][1],e(ev['questions'][k].get('note',''))) for k,lab in Q_LABEL]
-        cards+=_fsc_card(e(f["nom"]),e(loc),e(f.get("sous_titre","")),FB_CLASS[band],FB_LABEL[band],note,_FB_BADGE[badge],PF_LABEL[pf],rows)
+        src=(' &middot; <span class="fsc-src ok">revu sur sources</span>' if f.get("v3_revue_sources")
+             else ' &middot; <span class="fsc-src">converti &middot; revision en cours</span>')
+        cards+=_fsc_card(e(f["nom"]),e(loc),e(f.get("sous_titre","")),FB_CLASS[band],FB_LABEL[band],note,_FB_BADGE[badge],PF_LABEL[pf],rows,src)
     n=len(revues)
     body=f"""<style>{FAISCEAU_CSS}</style>
 <h1>Le faisceau libéré <span style="font-weight:normal;font-size:1rem;color:#999">(nouvelle grille — pilote)</span></h1>
 <div class="fsc-intro"><b>Comment lire.</b> Une <b>porte</b> (sortir du marché) puis <b>six questions</b> du lieu vers le groupe ; une <b>échelle de libération</b> (marchand → sorti du marché → autogéré → usage libéré → commun vivant) lue au point le plus faible <i>du chemin</i> ; un <b>badge « Sanctuaire »</b> écologique <i>à côté</i> de la note, jamais dedans. On note <b>un degré de sortie du marché, pas un lieu</b> ; ce qu'on ne peut établir reste « non établi », jamais deviné. <a href="methode.html">La méthode en détail →</a></div>
-<p>Notre grille évolue. Voici <b>{n} fiches revues sur sources</b> selon le nouveau cadre. Le reste de l'annuaire reste pour l'instant noté selon la grille précédente, le temps de la migration.</p>
+<p>Notre grille évolue. Les <b>{n} lieux</b> de l'annuaire sont désormais lus selon ce cadre : quelques-uns <b>revus finement sur sources</b>, les autres <b>convertis depuis la grille sourcée</b> existante puis révisés au fil de l'eau. Chaque chiffre est <b>calculé</b>, jamais saisi ; une évaluation peut évoluer — <a href="suggerer.html">écrivez-nous</a>.</p>
 {cards}
 <p class="fsc-note">Pilote — chiffres calculés (l'invariant « degré calculé, jamais saisi » est tenu par le générateur), évaluations revues à la main sur les grilles sourcées. Cadre daté, signé, contestable. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>"""
     return page("Le faisceau libéré", body, "faisceau.html", depth=0,

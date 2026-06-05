@@ -134,6 +134,7 @@ sources:
 
 # --- Évaluation v3.1 (faisceau libéré) — revue sur sources, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true
 evaluation:
   porte: { valeur: oui, cran: pour_toujours, voie: nature_porteur,
            note: "Fonds de dotation Antidote, acquisition par dons, pas de parts." }

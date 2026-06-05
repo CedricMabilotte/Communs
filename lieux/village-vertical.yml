@@ -135,3 +135,49 @@ sources:
     url: "https://www.habicoop.fr/t5-disponible-au-village-vertical-de-villeurbanne-69/"
   - titre: "Le Labo de l'ESS — Le Village Vertical de Villeurbanne, un habitat solidaire et non spéculatif"
     url: "https://www.lelabo-ess.org/le-village-vertical-de-villeurbanne-un-habitat-solidaire-et-non-speculatif"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le bâti et le foncier sont la propriété unique de la coopérative ; ils ne
+      sont pas destinés à la revente sur le marché libre.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Le lieu est un immeuble d'habitat coopératif urbain ; aucun dispositif
+        opposable de protection d'un milieu (ORE, clause environnementale) n'est documenté
+        ni n'a d'objet évident à cette échelle.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: À l'échelle d'un immeuble urbain, le critère s'évalue par les espaces
+        de pleine terre, cour ou toiture ; les sources ne documentent aucun aménagement
+        de ce type pour le vivant non-humain.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'L''immeuble compte 14 logements dont 9 sociaux et 4 très sociaux : l''usage
+        sert un intérêt général de logement abordable.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: 'L''accès au logement repose sur une redevance et non sur la gratuité,
+        mais l''immeuble compte 9 logements sociaux et 4 très sociaux : une logique
+        de logement abordable coexiste avec une part contributive.'
+    duree:
+      valeur: oui
+      maillon: usage
+      note: Chaque ménage signe un contrat coopératif lui conférant un droit de jouissance
+        durable sur son logement, sans précarité locative de marché.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'La coopérative d''habitants fonctionne sur le principe « une personne,
+        une voix » : les coopérateur·rices décident collectivement.'
+      decisive: true

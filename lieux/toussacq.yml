@@ -132,3 +132,49 @@ sources:
     url: "https://www.leschampsdespossibles.fr/lieu/la-ferme-collective-de-toussacq/"
   - titre: "Toussacq — Fermes Terre de Liens"
     url: "https://fermes.terredeliens.org/ile-de-france/fermes-de-la-r%C3%A9gion-ile-de-france/toussacq/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le foncier a été acquis en 2011 par la Foncière Terre de Liens, structure
+      non spéculative, et retiré du marché spéculatif.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Ferme de polyculture-élevage et couveuse agricole conduites selon des
+        pratiques accompagnées d''installation agroécologique : des pratiques de maintien
+        attestées, sans logique extractive.'
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: La ferme est un site de polyculture-élevage de 74 hectares, mais aucun
+        aménagement explicite en faveur du vivant (haies, mares, continuités écologiques)
+        n'est documenté par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Accompagnement et formation à l''installation agricole, maraîchage, élevage,
+        transformation : le lieu sert un intérêt général agricole et alimentaire.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage est confié par bail rural moyennant un fermage ; les actions de
+        la Foncière ne versent pas de dividende, mais le caractère soutenable du loyer
+        n'est pas documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : la coopérative dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La ferme est gérée collectivement par la coopérative Les Champs des Possibles,
+        qui réunit porteur·ses de projet en test et paysan·nes installé·es.
+      decisive: true

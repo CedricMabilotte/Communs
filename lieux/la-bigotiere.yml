@@ -157,3 +157,53 @@ sources:
     url: "https://annuaire-entreprises.data.gouv.fr/entreprise/la-bigotiere-821271442"
   - titre: "Société LA BIGOTIERE — Pappers (objet : société civile d'attribution)"
     url: "https://www.pappers.fr/entreprise/la-bigotiere-821271442"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: non
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est logé dans une société civile d'attribution dont les parts,
+      indexées sur la valeur du lot (art. L.212-5 CCH), portent la valeur appropriable
+      du bâti et sont cessibles ; aucun verrou anti-spéculatif n'est documenté. Le
+      foncier n'est pas soustrait au marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable (ORE, statut d'espace protégé, clause
+        environnementale) protégeant le milieu n'est documenté ; la chaîne étant intégrée,
+        aucun bail tiers ne porte de clause de ce type.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: L'écohameau affiche une vocation de transition écologique et alimentaire
+        portée par la SCIC Le Ruisseau ; l'accueil de la biodiversité non-humaine
+        comme cohabitant n'est pas explicité parmi les finalités.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Habitat écologique, accueil de mères isolées avec enfants, fournil, activités
+        culturelles : le lieu sert un intérêt général d''habitat digne et de lien
+        social.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage habitant relève du partage entre associé·es ; une part marchande
+        coexiste (gîte locatif, distribution de produits, activités) sans tarification
+        de marché documentée du lieu.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'Les habitant·es détiennent leur jouissance via leur qualité d''associé·es
+        de la société civile propriétaire : l''usage n''est ni précaire ni plafonné
+        dans le temps.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Les habitant·es, associé·es de la société civile propriétaire, gouvernent
+        eux-mêmes l'écohameau et son habitat.
+      decisive: true

@@ -145,3 +145,48 @@ sources:
     url: "https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-petites-berouettes/"
   - titre: "GAEC Les P'tites Berouettes — boutique en ligne"
     url: "https://lesptitesberouettes.fr/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le foncier a été acquis en 2022 par la Foncière Terre de Liens, structure
+      non spéculative, et retiré du marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucune clause environnementale, ORE ou statut protégé n'est inscrit au
+        bail rural ; la fiche note d'ailleurs parmi ses leviers d'« inscrire des clauses
+        environnementales formelles dans le bail ».
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: L'existence de haies, mares, friches ou continuités écologiques sur les
+        7 hectares de la ferme n'est pas documentée par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Installation paysanne, maraîchage diversifié en agriculture biologique,
+        vente en circuits courts : la ferme sert un intérêt général agricole et alimentaire.'
+    don:
+      valeur: non
+      maillon: chaine
+      note: L'activité de la ferme est une production maraîchère vendue en circuits
+        courts au prix du marché ; l'usage n'est pas non marchand.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : le GAEC dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'La ferme est exploitée par le GAEC Les P''tites Berouettes : les associé·es
+        paysan·nes décident ensemble des choix de l''exploitation, avec des réunions
+        de coordination régulières.'
+      decisive: true

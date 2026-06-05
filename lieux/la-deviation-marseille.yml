@@ -191,3 +191,58 @@ sources:
     url: "https://www.journalzibeline.fr/societe/a-marseille-la-deviation-sur-la-bonne-voie/"
   - titre: "Association Parpaing Libre (SIREN 833981764) — Annuaire des entreprises (data.gouv.fr)"
     url: "https://annuaire-entreprises.data.gouv.fr/entreprise/parpaing-libre-833981764"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est porté par l'association Parpaing Libre, à l'objet explicitement
+      anti-revente, et n'est pas destiné au marché libre ; CLIP veille à la non-revente.
+  questions:
+    milieu:
+      valeur: non_etabli
+      maillon: lieu
+      note: L'existence d'un dispositif opposable et durable de protection du milieu
+        (clause environnementale au titre d'usage, statut d'espace protégé) sur le
+        site de carrière et de falaise n'est pas documentée par les sources.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: 'La finalité affichée du lieu est la création artistique, la recherche
+        et l''habitat ; il s''agit d''une carrière et d''une falaise urbaines. Le
+        site abrite potager, poulailler, jardins (173 m²), pins et « après-midis jardinage
+        » (brochure), mais aucune source ne place le vivant non-humain parmi les vocations
+        du lieu : ces éléments sont d''agrément, non de finalité.'
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Le lieu sert un intérêt général culturel : site autogéré de création
+        et de recherche artistique, ouvert, ayant accueilli plus d''une centaine d''artistes
+        en résidence.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: 'Le montant d''un loyer ou d''une redevance précis versé par l''association
+        usagère à Parpaing Libre n''est pas publié. Mais le modèle CLIP, dont relève
+        le montage, est explicitement non rentier : le loyer ne sert qu''à rembourser
+        les prêts d''acquisition et les charges courantes, et à terme qu''à équilibrer
+        les charges (Métropolitiques) ; les recettes de l''activité du lieu alimentent
+        ce remboursement.'
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: 'L''usage est confié à l''association sœur dans un montage de propriété
+        d''usage dont l''objet est de « garantir l''usage [...] ad vitam aeternam
+        » (brochure) : la jouissance est voulue pérenne. La nature juridique et la
+        durée chiffrée du titre d''usage liant les deux associations ne sont toutefois
+        pas publiées.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'Le lieu est autogéré : une quinzaine de membres actifs, qui l''occupent
+        et l''habitent, décident collectivement de son devenir et de sa programmation.'
+      decisive: true

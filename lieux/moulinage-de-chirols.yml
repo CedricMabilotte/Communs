@@ -251,3 +251,67 @@ sources:
     url: "https://lecoleduterrain.fr/projet/un-lieu-infini/"
   - titre: "Copains des bois — Le moulinage de Chirols, un projet de fous (SCOP, anti-spéculation)"
     url: "https://copindesbois.fr/paysage/moulinage-de-chirols/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier — murs et part des faysses — est porté par une SAS à capital
+      variable gérée selon des principes coopératifs et un pacte d'associés anti-spéculatif,
+      n'est pas destiné à la revente sur le marché libre, et l'accès se fait par parts
+      non spéculatives ouvrant un droit d'usage, non par lots privatifs aliénables.
+  questions:
+    milieu:
+      valeur: partiel
+      maillon: lieu
+      note: Les faysses sont cultivées en maraîchage permaculture bio et la préservation
+        des écosystèmes est affichée comme principe du collectif, mais aucun dispositif
+        opposable et durable (obligation réelle environnementale, statut d'espace
+        protégé, clause environnementale au bail) n'est documenté.
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Environ 2 000 m² de faysses sont rendues à la culture vivrière, avec
+        fruitiers, ~20 ruches et ~60 poules : des espaces sont effectivement aménagés
+        pour le vivant non-humain à l''échelle du lieu.'
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Le lieu sert un intérêt qui dépasse ses occupant·es : ateliers ouverts
+        au public à prix accessibles (céramique, cyanotype, vannerie, gravure, danse,
+        théâtre enfants), salle de spectacle, résidences artistiques, cantine participative,
+        reprise d''activités artisanales.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: 'Le régime d''accès des habitant·es et porteur·ses d''activité est documenté
+        : souscription de parts sociales (30 parts × 100 € = 3 000 € pour un·e habitant·e,
+        1 000 € pour un·e porteur·se d''activité, 500 € pour un·e « œuvrier·e » sympathisant·e),
+        un apport aux espaces communs (de l''ordre de 15 000 € par adulte rejoignant
+        le projet), un apport acquisitif proportionnel à la surface privative réservée
+        (chiffres 2021 : ~616 €/m² pour les appartements, ~260 €/m² pour les ateliers),
+        puis des charges mensuelles partagées entre usager·es. Il s''agit donc d''apports
+        acquisitifs ouvrant un droit d''usage, non d''un loyer capté par un tiers
+        rentier ; mais le régime exact des contributions de l''association à la SAS
+        pour les communs reste non documenté, d''où « partiel ». Sources : Coopérative
+        Oasis, base de données Habitat participatif & Oasis.'
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Habiter ou travailler ouvre un droit d'usage adossé à des parts sociales
+        dans la SAS dont on est associé·e, ce qui offre une jouissance non précaire
+        ; mais la nature et la durée formelles du titre d'usage (et celui liant l'association
+        aux communs) ne sont pas documentées.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'La gouvernance repose sur « une personne, une voix », habitant·es et
+        porteur·ses d''activité à poids égal en tant qu''associé·es ; les décisions
+        sont prises collectivement et l''accès à l''usage est conditionné à la participation
+        à l''intérêt général (chantiers, commissions de travail). Source : Coopérative
+        Oasis.'
+      decisive: true

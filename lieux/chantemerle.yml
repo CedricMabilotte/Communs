@@ -136,3 +136,49 @@ sources:
     url: "https://filature-longomai.org/"
   - titre: "La filature de Longo Maï : une usine autogérée depuis 1976"
     url: "https://filature-longomai.org/le-projet/usine-autogeree/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le site est détenu de façon inaliénable par le Fonds de Terre Européenne,
+      fondation qui porte les terres de Longo Maï à l'abri du marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Site industriel d'une ancienne filature ; aucun dispositif opposable et
+        durable de protection d'un milieu (ORE, espace protégé, clause environnementale)
+        n'est documenté.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: La vocation du site est la filière laine, de la tonte à la confection
+        ; le vivant non-humain n'est pas affiché comme cohabitant parmi les finalités
+        du lieu.
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: La filière laine éthique et le maintien d'un savoir-faire textile ont
+        une portée collective ; l'ouverture au-delà du réseau n'est pas pleinement
+        explicitée.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'autogestion relève d'une logique de partage, mais l'activité comporte
+        une part marchande (vente de textiles transformés).
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le foncier est rendu inaliénable et le site fonctionne depuis 1976, mais
+        les actes formalisant la durée de l'usage ne sont pas documentés.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'La filature fonctionne en autogestion depuis 1976 : les coopérant·es
+        décident collectivement, dans la tradition libertaire de Longo Maï.'
+      decisive: true

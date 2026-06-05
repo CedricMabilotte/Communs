@@ -138,3 +138,52 @@ sources:
     url: "https://www.cen-occitanie.org/gorges-du-gardon/"
   - titre: "Réserve naturelle régionale des gorges du Gardon — Wikipédia"
     url: "https://fr.wikipedia.org/wiki/R%C3%A9serve_naturelle_r%C3%A9gionale_des_gorges_du_Gardon"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le classement en réserve naturelle régionale soumet les 491 hectares à une
+      réglementation protectrice durable, mais il ne transfère pas le foncier — pour
+      partie privé — hors de la sphère de propriété marchande.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Le site est classé réserve naturelle régionale depuis 2007 : statut d''espace
+        protégé durable et opposable, soumettant les 491 hectares à une réglementation
+        protectrice du milieu.'
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: Les 491 hectares de garrigues, falaises calcaires et milieux rivulaires
+        constituent un espace entièrement dédié au vivant non-humain.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: La réserve protège plus de 1 200 espèces dont l'aigle de Bonelli et le
+        vautour percnoptère, et porte une mission de préservation de la biodiversité
+        d'intérêt général manifeste.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: La réserve est un espace naturel protégé ouvert à la découverte ; certaines
+        activités d'animation peuvent être tarifées, sans que le régime d'accès soit
+        précisément documenté.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le classement en réserve naturelle régionale et le plan de gestion confèrent
+        aux gestionnaires un cadre d'intervention durable, mais les sources ne documentent
+        pas de titre d'usage de longue durée sur le foncier.
+      decisive: true
+    voix:
+      valeur: partiel
+      maillon: usage
+      note: La réserve est gérée par deux cogestionnaires institutionnels — le CEN
+        Occitanie et la commune — dans un cadre réglementaire ; il ne s'agit pas d'une
+        autogestion par un collectif d'usager·es du lieu.
+      decisive: true

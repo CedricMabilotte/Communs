@@ -145,3 +145,49 @@ sources:
     url: "https://fermes.terredeliens.org/normandie/fermes-de-la-r%C3%A9gion-normandie/loiseliere/"
   - titre: "L'Oiselière — Terre de Liens"
     url: "https://terredeliens.org/l-oiseliere.html"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Quarante hectares ont été acquis par la Foncière Terre de Liens et retirés
+      du marché ; le bâti et deux hectares restent en propriété privée de l'exploitant.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé
+        n'est documenté pour le foncier de la ferme.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: L'élevage en plein air sur dix hectares est favorable au vivant, mais
+        l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est
+        pas documentée par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Installation paysanne, élevage en agriculture biologique, préservation
+        de la race menacée du porc de Bayeux : la ferme sert un intérêt général agricole
+        et de biodiversité.'
+    don:
+      valeur: non
+      maillon: chaine
+      note: L'activité de la ferme est une production agricole vendue en vente directe
+        au prix du marché ; l'usage n'est pas non marchand.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage des terres de la Foncière est confié par bail rural, dont le
+        renouvellement est d''ordre public : l''exploitation dispose d''une jouissance
+        durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: non
+      maillon: usage
+      note: La ferme paraît exploitée par un éleveur seul, Côme Pascal ; aucune gouvernance
+        collective n'est documentée par les sources.
+      decisive: true

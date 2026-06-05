@@ -218,3 +218,56 @@ sources:
     url: "https://www.gralon.net/mairies-france/orne/association-hautes-planches-bretoncelles_W613001799.htm"
   - titre: "Annuaire-mairie — associations de Bretoncelles (RNA Les Donnettes W613001811 « Logement », Hautes Planches W613001799)"
     url: "https://www.annuaire-mairie.fr/association-bretoncelles.html"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: 'Le foncier est détenu par l''association propriétaire Les Donnettes — structure
+      sans capital appropriable — et n''est pas destiné à être revendu : CLIP, second
+      membre de l''association, garantit la non-revente.'
+  questions:
+    milieu:
+      valeur: non_etabli
+      maillon: lieu
+      note: L'existence d'un dispositif opposable et durable de protection du milieu
+        (ORE, espace protégé, clause environnementale au titre d'usage) n'est pas
+        documentée par les sources.
+    vivant:
+      valeur: non_etabli
+      maillon: lieu
+      note: La place faite au vivant non-humain dans la vocation du lieu n'est pas
+        explicitée par les sources ; le contexte est rural (parcelles agricoles ou
+        naturelles, dont « du broc ») mais non détaillé.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Le lieu sert un intérêt qui dépasse ses occupant·es : accueil, ateliers,
+        imprimerie d''art, gymnase, résidences artistiques, chorale, fanfare et cabaret
+        ouverts au territoire.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: 'Dans le montage type CLIP que suit le lieu, l''association usagère est
+        locataire de l''association propriétaire et lui verse des loyers qui remboursent
+        l''emprunt d''achat et alimentent un fonds solidaire d''aide à d''autres projets
+        CLIP — un loyer non rentier par construction (source : CLIP, « Qu''est-ce
+        que le CLIP »). Le montant exact pratiqué aux Hautes-Planches n''est pas documenté.'
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: 'Dans le montage type CLIP, l''association usagère est locataire de l''association
+        propriétaire dont elle est elle-même membre fondatrice (source : CLIP, « Qu''est-ce
+        que le CLIP ») : la jouissance est sécurisée par cette appartenance croisée
+        et par l''impossibilité de revente. La nature et la durée précises du titre
+        d''usage propre aux Hautes-Planches ne sont pas publiées.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Un collectif d'environ quinze personnes gère le lieu ; l'usage et la gestion
+        sont portés par l'association usagère Hautes Planches, qui réunit ses membres.
+      decisive: true

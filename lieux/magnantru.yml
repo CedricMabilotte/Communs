@@ -149,3 +149,51 @@ sources:
     url: "https://www.feve.co/les-feves-financees/magnantru"
   - titre: "La ferme de Magnantru transmise via Fermes en Vie — Web-agri"
     url: "https://www.web-agri.fr/installation-transmission/article/181383/la-ferme-de-magnantru-deux-sevres-transmise-via-la-plateforme-de-financement-participatif-fermes-en"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier a été acquis en 2021 par la foncière solidaire de FEVE grâce
+      à l'épargne citoyenne, hors logique spéculative.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Le bail rural environnemental comporte des clauses contraignantes en
+        faveur de la biodiversité et du maintien de l''agriculture biologique : dispositif
+        opposable inscrit au bail.'
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Les clauses de biodiversité du bail engagent en faveur du vivant ; l'existence
+        d'éléments concrets effectivement aménagés (haies, mares, friches) n'est pas
+        détaillée par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Agriculture biologique, élevage, transformation et accueil : le lieu
+        sert un intérêt général agricole et alimentaire, et illustre le renouvellement
+        des générations agricoles.'
+    don:
+      valeur: non
+      maillon: chaine
+      note: 'L''activité repose sur la production agricole vendue et l''accueil touristique
+        payant : l''usage du lieu relève d''une logique marchande.'
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : l''EARL dispose d''une jouissance durable, avec en outre une option
+        d''achat à sept ans.'
+      decisive: true
+    voix:
+      valeur: partiel
+      maillon: usage
+      note: La ferme est gérée par les deux paysan·nes exploitant·es ; l'accueil d'autres
+        porteur·ses de projet est envisagé, mais une gouvernance collective élargie
+        n'est pas documentée.
+      decisive: true

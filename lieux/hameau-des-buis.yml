@@ -138,3 +138,49 @@ sources:
     url: "https://hameaudesbuis.org/lhistoire/"
   - titre: "Le Hameau des Buis — site officiel"
     url: "https://hameaudesbuis.org/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est porté collectivement par une SAS coopérative à gouvernance
+      partagée, mais aucun verrouillage anti-spéculatif statutaire n'est documenté
+      par les sources.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable — obligation réelle environnementale,
+        classement, clause environnementale statutaire — n'est documenté pour le foncier
+        porté par la SAS coopérative.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Le lieu affiche une vocation de transition écologique et conduit un maraîchage
+        en agroforesterie, mais le vivant non-humain comme cohabitant n'est pas posé
+        explicitement parmi ses finalités.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Habitat intergénérationnel, ferme-école et pédagogie servent un intérêt
+        dépassant les seuls résidents.
+    don:
+      valeur: non_etabli
+      maillon: chaine
+      note: Le régime d'accès aux logements et aux fruits du lieu (gratuité, contribution,
+        tarification) n'est pas documenté par les sources.
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: La nature exacte des titres d'occupation des logements et leur durée ne
+        sont pas détaillées par les sources.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'Le Hameau fonctionne en SAS coopérative à gouvernance partagée : les
+        habitant·es membres décident collectivement.'
+      decisive: true

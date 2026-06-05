@@ -150,3 +150,52 @@ sources:
     url: "https://fonciere-chenelet.org/actus/inauguration-12-logements-flocques-76"
   - titre: "Des logements sociaux à Flocques — Réseau des Maisons de l'Architecture"
     url: "https://www.ma-lereseau.org/panorama-des-images/des-logements-sociaux-flocques"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: 'Le terrain (le sol) reste propriété de la commune de Flocques, personne
+      publique, et n''est pas mobilisable sur le marché : c''est ce maillon foncier
+      qui est durablement hors marché. Les murs, portés par la Foncière Chênelet via
+      le bail emphytéotique, reviennent à la commune au terme.'
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucune clause environnementale opposable, ORE ou statut protégé n'est
+        documenté pour le terrain de l'opération de logements.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: L'opération est un programme de logement très social pensé pour ses habitant·es
+        ; le vivant non-humain n'est pas affiché parmi ses finalités.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Logement très social et écologique, maintien des personnes âgées au village,
+        revitalisation rurale et chantiers d''insertion : l''opération sert un intérêt
+        général qui dépasse ses occupants.'
+    don:
+      valeur: non
+      maillon: chaine
+      note: L'accès aux logements repose sur un bail d'habitation et le paiement d'un
+        loyer ; il s'agit d'un régime locatif, certes très social, et non d'un usage
+        gratuit ou en partage.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Les locataires bénéficient d'un bail d'habitation de logement social adossé
+        à une foncière pérenne et au bail emphytéotique de 99 ans ; la durée et les
+        modalités de renouvellement des baux d'habitation ne sont pas documentées.
+      decisive: true
+    voix:
+      valeur: non
+      maillon: usage
+      note: L'usage est gouverné par la Foncière, la commune et l'association Béguinage
+        et Compagnie ; aucune instance collective réunissant les locataires pour décider
+        du devenir du lieu n'est documentée.
+      decisive: true

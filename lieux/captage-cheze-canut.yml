@@ -156,3 +156,52 @@ sources:
     url: "https://www.eaudubassinrennais-collectivite.fr/notre-reseau/ressources-eau/ressource-cheze-canut/"
   - titre: "Eau du Bassin Rennais — La protection foncière"
     url: "https://www.eaudubassinrennais-collectivite.fr/la-solidarite-internationale/preservation-ressources-eau/protection-fonciere/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier de protection du captage est acquis et détenu par Eau du Bassin
+      Rennais, collectivité publique, et n'est pas destiné à la revente sur le marché.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: Les parcelles agricoles sont remises par bail rural à clauses environnementales
+        (BRCE), qui inscrit dans le contrat des engagements opposables de pratiques
+        favorables à la qualité de l'eau ; la finalité même du foncier est la protection
+        de la ressource.
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Une partie des parcelles est aménagée et gérée écologiquement en boisements,
+        haies bocagères et mares : des espaces sont effectivement laissés au vivant
+        non-humain.'
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Le lieu sert un intérêt général majeur — la protection d'une ressource
+        d'eau potable alimentant l'agglomération rennaise — combiné à un usage agricole
+        nourricier.
+    don:
+      valeur: non
+      maillon: chaine
+      note: L'usage agricole des parcelles relève d'une production marchande classique
+        encadrée par des clauses environnementales ; il ne repose pas sur la gratuité,
+        le don ou le troc.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : l''exploitant·e dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: non
+      maillon: usage
+      note: La gouvernance du foncier de protection relève des instances de la collectivité
+        Eau du Bassin Rennais ; aucune décision collective des usager·es du lieu n'est
+        documentée.
+      decisive: true

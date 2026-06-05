@@ -137,3 +137,50 @@ sources:
     url: "https://fermes.terredeliens.org/midi-pyrenees/fermes-de-la-r%C3%A9gion-midi-pyr%C3%A9n%C3%A9es/la-ferme-du-pegarou/"
   - titre: "Les Croquants, une ferme collective en Ariège — Ferme des Croquants"
     url: "https://fermedescroquants.fr/les-croquants-une-ferme-collective-en-ariege/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le foncier a été acquis en 2022 par la Foncière Terre de Liens, structure
+      non spéculative, et retiré du marché spéculatif.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Le foncier porté par la Foncière Terre de Liens est conduit en agriculture
+        biologique et sa vocation agricole est préservée, mais aucune obligation réelle
+        environnementale ni clause environnementale du bail rural n'est documentée
+        par les sources.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: La fiche mentionne une restauration de la biodiversité du foncier de 32
+        hectares, mais le vivant non-humain comme cohabitant n'est pas affirmé comme
+        finalité explicite du projet.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: La ferme produit une alimentation paysanne biologique diversifiée (pain,
+        légumes, bière, œufs) et restaure la biodiversité d'un foncier de 32 hectares.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage est confié par bail rural moyennant un fermage ; les actions de
+        la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas
+        documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : le GAEC dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La ferme est gérée collectivement par le GAEC Les Croquants, qui réunit
+        six paysan·nes associé·es décidant ensemble de la conduite du lieu.
+      decisive: true

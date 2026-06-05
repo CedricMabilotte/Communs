@@ -145,3 +145,49 @@ sources:
     url: "https://cooperative-oasis.org/oasis/demain-en-main/"
   - titre: "À Locoal-Mendon, un éco-hameau pour reprendre « demain en main » — Eco-Bretons"
     url: "https://www.eco-bretons.info/a-locoal-mendon-un-eco-hameau-pour-reprendre-demain-en-mains/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est porté par une SCIC non spéculative et n'est pas destiné à
+      la revente ; aucune clause d'inaliénabilité documentée ne verrouille toutefois
+      cette soustraction.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, espace
+        protégé, clause environnementale au titre d'usage) n'est documenté par les
+        sources.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Le foncier d'une vingtaine d'hectares comprend une dizaine d'hectares
+        de forêt aux côtés des terres agricoles ; aucun aménagement délibéré pour
+        le vivant n'est documenté.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Maraîchage, ferme-auberge, accueil et habitat écologique : l''activité
+        du lieu sert un intérêt général agricole, social et de transition écologique.'
+    don:
+      valeur: non
+      maillon: chaine
+      note: Le travail-cœur agricole (maraîchage, ferme-auberge) est encadré par une
+        SCOP, coopérative qui salarie.
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: La nature et la durée du titre d'usage liant la coopérative d'habitants
+        à la SCIC propriétaire ne sont pas documentées par les sources.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Le collectif de huit familles vit et gouverne le lieu en démocratie participative
+        ; les habitant·es décident ensemble de son devenir.
+      decisive: true

@@ -141,3 +141,49 @@ sources:
     url: "https://www.lafilerie.org/"
   - titre: "Écolieu la Filerie — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/ecolieu-la-filerie/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: non
+    cran: a_terme
+    voie: nature_porteur
+    note: 'Le foncier reste la propriété privée de la famille Bargue : il n''est pas
+      porté par une structure non spéculative et n''est pas soustrait au marché.'
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucune obligation réelle environnementale ni clause environnementale inscrite
+        au bail à construction n'est documentée ; l'existence d'un dispositif opposable
+        n'est pas établie par les sources.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Le terrain d'un hectare s'inscrit au milieu de cent hectares de forêt
+        et comporte des jardins en permaculture ; des aménagements dédiés au vivant
+        non-humain ne sont pas davantage documentés.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Formation aux métiers de la transition, écotourisme, ateliers de sensibilisation,
+        visites apprenantes : le lieu sert un intérêt général écologique et pédagogique.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Les activités de formation et d'écotourisme relèvent en partie d'une logique
+        marchande, tempérée par la vocation de transition et l'ouverture des ateliers.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: 'Le bail à construction sécurise la jouissance pour dix-huit ans : durée
+        significative mais bornée, et le renouvellement au-delà n''est pas garanti
+        par les sources.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La SCIC Les Semeurs de Graines fonctionne sur le principe coopératif «
+        une personne, une voix », en cercles de gouvernance, avec vingt-huit sociétaires.
+      decisive: true

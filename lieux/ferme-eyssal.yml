@@ -146,3 +146,51 @@ sources:
     url: "https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/eyssal/"
   - titre: "Eyssal — Terre de Liens"
     url: "https://terredeliens.org/eyssal.html"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Les 18 hectares acquis en 2010 par la Foncière Terre de Liens sont soustraits
+      au marché ; les autres terres et les bâtiments de la ferme appartiennent aux
+      éleveur·ses.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Les 18 hectares portés par la Foncière Terre de Liens préservent durablement
+        leur vocation agricole en biodynamie ; aucune obligation réelle environnementale
+        ni clause environnementale opposable du bail n'est documentée par les sources.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: La fiche évoque un environnement à forte biodiversité, mais les sources
+        ne documentent pas d'espaces (haies, mares, friches) spécifiquement laissés
+        ou aménagés pour le vivant non-humain.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: La ferme produit en biodynamie une alimentation locale (lait, fromages)
+        et préserve un environnement à forte biodiversité, d'une portée qui dépasse
+        ses exploitant·es.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage des 18 hectares est confié par bail rural moyennant un fermage
+        ; les actions de la Foncière ne versent pas de dividende, mais le niveau du
+        fermage n'est pas documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage des 18 hectares est confié par bail rural, dont le renouvellement
+        est d''ordre public : le GAEC dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: partiel
+      maillon: usage
+      note: La ferme est exploitée par le GAEC d'Eyssal, animé par Hugues Doche et
+        sa compagne Fanny ; la gouvernance dépasse peu le couple exploitant.
+      decisive: true

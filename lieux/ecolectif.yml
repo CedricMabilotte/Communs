@@ -149,3 +149,49 @@ sources:
     url: "https://ecolectif.jimdofree.com/pr%C3%A9sentation/cadre-l%C3%A9gal/"
   - titre: "Écolectif — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/ecolectif/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est porté par une SCI dédiée à parts non négociables, soustrait
+      au marché libre ; une fraction du capital reste détenue par une société tierce.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, espace
+        protégé, clause environnementale aux baux) n'est documenté par les sources.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: L'écohameau s'inscrit sur un domaine agricole d'environ 46 hectares en
+        milieu rural ; aucun aménagement délibéré pour le vivant (haies, mares, friches)
+        n'est documenté par les sources.
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: Habitat écologique autoconstruit et chantiers pédagogiques portent un
+        intérêt général d'écologie et de transmission ; le lieu est d'abord un lieu
+        de vie résidentiel.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Les loyers d'occupation sont modiques et contributifs (de 60 à 200 euros
+        tout compris) ; l'usage relève d'une logique de partage sans gratuité généralisée.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Les résident·es disposent d'un bail d'occupation de leur espace de vie
+        ; la durée et les conditions de renouvellement de ces baux ne sont pas documentées.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'L''association collégiale Chemins d''Ecolectif décide « au consentement
+        » : les résident·es gouvernent collectivement et horizontalement l''usage
+        du lieu.'
+      decisive: true

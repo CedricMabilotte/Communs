@@ -140,3 +140,50 @@ sources:
     url: "https://asso-alc.com/archipel-de-la-vallee"
   - titre: "Archipel de la vallée — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/archipel-de-la-vallee/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est porté par une SCI dont les seul·es associé·es sont trois
+      associations non lucratives ; aucune clause d'inaliénabilité ni de verrou anti-spéculatif
+      n'est documentée.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Le lieu est au cœur du parc naturel régional de la haute vallée de Chevreuse,
+        qui encadre l'usage des sols ; aucun dispositif opposable propre au lieu (ORE,
+        clause environnementale au bail) n'est documenté.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Le lieu comprend quatre hectares de prairies en milieu rural ; aucun aménagement
+        délibéré pour le vivant (haies, mares, continuités) n'est documenté par les
+        sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Tiers-lieu inclusif adapté aux handicaps, favorisant la rencontre entre
+        la communauté du handicap et les habitant·es : l''usage sert un intérêt général
+        social affirmé.'
+    don:
+      valeur: non_etabli
+      maillon: chaine
+      note: Le régime d'accès au tiers-lieu et à ses activités — gratuité, contribution,
+        tarification — n'est pas documenté par les sources.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'Les associations exploitent le lieu en leur qualité d''associé·es de
+        la SCI propriétaire : l''usage n''est ni précaire ni plafonné dans le temps.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'Les trois associations qui exploitent le lieu sont les associé·es de
+        la SCI propriétaire : les usagères gouvernent elles-mêmes le tiers-lieu.'
+      decisive: true

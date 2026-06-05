@@ -136,3 +136,50 @@ sources:
     url: "https://fermes.terredeliens.org/lorraine/fermes-de-la-r%C3%A9gion-lorraine/la-chaudeau/"
   - titre: "À Pierre-la-Treiche, une exploitation agricole reprend vie grâce à Terre de Liens (54) — Banque des Territoires"
     url: "https://www.banquedesterritoires.fr/pierre-la-treiche-une-exploitation-agricole-reprend-vie-grace-terre-de-liens-54"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Les 3,66 hectares et les bâtiments ont été acquis en 2013 par la Foncière
+      Terre de Liens, structure non spéculative, et retirés du marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: L'usage est confié par bail rural sans que les sources précisent s'il
+        s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable
+        de protection du milieu n'est documenté.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Ancien site de cresson et de pisciculture remis en culture sur 3,66 hectares
+        ; aucune trace d'aménagement délibéré (haies, mares, friches) pour le vivant
+        non-humain dans les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Maraîchage biologique nourricier, remise en culture d''une terre abandonnée
+        et approvisionnement d''une AMAP : le lieu sert un intérêt général agricole
+        et alimentaire.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage est confié par bail rural moyennant un fermage ; les actions de
+        la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas
+        documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : l''exploitant dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: non
+      maillon: usage
+      note: 'L''exploitation est conduite individuellement par le maraîcher installé
+        : il n''y a pas de gouvernance collective du lieu.'
+      decisive: true

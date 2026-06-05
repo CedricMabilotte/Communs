@@ -159,3 +159,49 @@ sources:
     url: "https://www.aubascule.fr/"
   - titre: "Annuaire des Entreprises (data.gouv.fr) — Association L'AUB'ASCULE, SIREN 938330586"
     url: "https://annuaire-entreprises.data.gouv.fr/entreprise/l-aub-ascule-938330586"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le lieu a fait l'objet en 2022 d'une donation au fonds de dotation Fraternité
+      pour Demain, structure non lucrative qui le protège hors marché.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Une Obligation Réelle Environnementale a été signée fin 2024 pour 99
+        ans : dispositif opposable et durable interdisant les intrants chimiques,
+        encadrant fauche et coupes, avec contrôle périodique.'
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: L'écolieu, niché en combe, laisse une place effective au vivant — orchidées
+        en nombre, arbres feuillus, espaces préservés par l'ORE pour 99 ans.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Accueil de stages, accueil solidaire de personnes en situation de vulnérabilité
+        et pôle permacole servent un intérêt général social et écologique.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'accueil solidaire et le pôle permacole relèvent d'une logique de partage
+        ; le pôle d'accueil de stages comporte une part marchande qui coexiste avec
+        cette logique.
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: 'La nature et la durée du titre d''usage liant le collectif de l''Aubascule
+        au foncier ne sont pas documentées : la sécurité de jouissance dans le temps
+        ne peut être appréciée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Le collectif de l'Aubascule, intergénérationnel et autogéré, décide collectivement
+        des usages du lieu et consacre des temps réguliers au soin du lien collectif.
+      decisive: true

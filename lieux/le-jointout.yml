@@ -139,3 +139,49 @@ sources:
     url: "https://fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/le-jointout/"
   - titre: "Terre de Liens — Ferme du Jointout"
     url: "http://www.fermedujointout.fr/terre-de-liens/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le foncier d'environ 50 hectares a été racheté en 2011 par Terre de Liens,
+      mouvement non spéculatif, et retiré du marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé
+        n'est documenté pour le foncier du Jointout.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Le maintien de 41 hectares de prairies est favorable au vivant, mais l'existence
+        d'éléments dédiés (haies, mares, continuités écologiques) n'est pas documentée
+        par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Élevage laitier, transformation fromagère, boulangerie et maraîchage
+        en agriculture biologique : le lieu sert un intérêt général agricole et alimentaire.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage est confié par bail rural moyennant un fermage ; les véhicules
+        de Terre de Liens ne recherchent pas de rendement, mais le niveau du fermage
+        n'est pas documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : le collectif dispose d''une jouissance durable et sécurisée depuis
+        2010-2011.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La ferme est exploitée collectivement depuis 2010 par six associé·es réuni·es
+        en GAEC, qui décident ensemble de la conduite du lieu.
+      decisive: true

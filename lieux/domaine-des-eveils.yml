@@ -144,3 +144,50 @@ sources:
     url: "https://cooperative-oasis.org/oasis/domaine-des-eveils/"
   - titre: "Domaine des Éveils — site officiel"
     url: "https://www.domainedeseveils.fr/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est détenu par la SAS Le Temps des Possibles, société par actions
+      ; les actions à valeur nominale tempèrent la spéculation, mais aucune structure
+      non lucrative ni inaliénabilité ne le soustrait pleinement au marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, espace
+        protégé, clause environnementale) n'est documenté par les sources.
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Sur ses 16 hectares de prairies, forêts et jardins, le domaine maintient
+        une mare et préserve des espaces sauvages laissés à toutes les espèces : des
+        espaces sont effectivement laissés au vivant.'
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: Le domaine est un espace de ressourcement, d'expérimentation collective
+        et d'accueil ; sa vocation d'intérêt général coexiste avec une activité de
+        gîte commercial.
+    don:
+      valeur: non
+      maillon: chaine
+      note: 'Le gîte de 100 places est exploité par une SCIC réunissant habitant·es
+        et salarié·es : équipe salariée pour le travail-cœur d''accueil.'
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: 'La nature et la durée du titre d''usage liant la SCIC exploitante à la
+        SAS propriétaire ne sont pas documentées : la sécurité de jouissance ne peut
+        être appréciée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La vie au domaine s'organise autour d'un noyau de sept habitant·es et
+        salarié·es réuni·es dans la gouvernance coopérative de la SCIC.
+      decisive: true

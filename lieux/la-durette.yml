@@ -139,3 +139,50 @@ sources:
     url: "https://fermes.terredeliens.org/provence-alpes-c%C3%B4te-dazur/fermes-de-la-r%C3%A9gion-provence-alpes-c%C3%B4te-dazur/la-durette/"
   - titre: "Ferme pilote de la Durette — GRAB"
     url: "https://www.grab.fr/durette/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Le foncier a été acquis par la Foncière Terre de Liens, structure non spéculative,
+      qui l'a retiré du marché après sa mise en vente en 2018.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: L'usage est confié par bail rural sans que les sources précisent s'il
+        s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable
+        de protection du milieu n'est documenté.
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Bandes de maraîchage alternant avec des lignes de fruitiers et volailles
+        intégrées : un système agroforestier qui ménage structurellement une place
+        au vivant non-humain.'
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Ferme pilote en agroforesterie étudiée par le GRAB, produisant fruits
+        et légumes bio en vente directe : le lieu sert un intérêt général agricole
+        et de recherche.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: La production agricole est vendue en circuit court ; visites, fête de
+        la ferme et recherche relèvent d'une logique de partage sans rendre l'usage
+        pleinement non marchand.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : le GAEC dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La ferme est exploitée par un GAEC, groupement agricole où les associé·es
+        décident collectivement, sur le principe d'une voix par associé·e.
+      decisive: true

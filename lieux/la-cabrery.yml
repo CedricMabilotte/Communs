@@ -136,3 +136,49 @@ sources:
     url: "https://www.lacabrery.org/"
   - titre: "La Cabrery, des vins nature anticapitalistes et féministes — Revue Silence"
     url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/la-cabrery-des-vins-natures-anticapitalistes-et-feministes"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Les quelque 23 hectares sont détenus de façon inaliénable par le Fonds de
+      Terre Européenne, à l'abri de la spéculation.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Production de vins nature attestée, complétée de maraîchage et d''élevage
+        à échelle communautaire : pratiques de faible intrant, peu compatibles avec
+        un usage extractif du sol.'
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: 'Ferme de 23 hectares mêlant vigne, maraîchage, céréales, bois et élevage
+        : la diversité des milieux ménage de fait des espaces au vivant, sans aménagement
+        écologique délibéré documenté.'
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: Viticulture nature, maraîchage et transformation ont une portée collective
+        ; l'ouverture au-delà du réseau n'est pas pleinement explicitée.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: 'Habitant·es nourri·es et logé·es par la communauté via une caisse commune
+        : logique de partage à l''interne, mais une part marchande coexiste (vente
+        de vin).'
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le foncier est inaliénable et le site fonctionne depuis 1993, mais les
+        actes formalisant la durée de l'usage ne sont pas documentés.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La dizaine d'habitant·es décide collectivement de la ferme en autogestion,
+        dans une perspective libertaire et féministe revendiquée.
+      decisive: true

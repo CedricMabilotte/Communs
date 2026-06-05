@@ -142,3 +142,51 @@ sources:
     url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
   - titre: "La Foncière Antidote — La Maison Blanche de l'Antre Toit (collecte)"
     url: "https://www.helloasso.com/associations/la-fonciere-antidote/collectes/la-maison-blanche-de-l-antre-toit"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: La propriété de la maison est acquise par le fonds de dotation Antidote,
+      structure non spéculative qui la détient hors marché.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif de protection durable et opposable du milieu (clause
+        environnementale au bail, ORE, statut protégé) n'est documenté pour cette
+        maison urbaine de Gaillac.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: À l'échelle d'un lieu d'habitat urbain, l'existence d'une cour, d'un pied
+        d'immeuble végétalisé ou de tout espace laissé au vivant n'est pas documentée
+        par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Hébergement et accompagnement de jeunes exilé·es vers leurs droits fondamentaux
+        : le lieu sert un intérêt général social manifeste qui dépasse ses occupant·es.'
+    don:
+      valeur: oui
+      maillon: chaine
+      note: 'Maison collective autogérée : accueil et accompagnement assurés bénévolement,
+        projet autofinancé par des événements de soutien, hors rapport salarial pour
+        le travail-cœur.'
+    duree:
+      valeur: oui
+      maillon: usage
+      note: L'usage est confié par bail emphytéotique de longue durée, qui sécurise
+        la jouissance du lieu bien au-delà du plafond de 30 ans des démembrements
+        civils.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La maison est collective et autogérée ; les jeunes qui y vivent participent
+        aux décisions concernant l'avenir du lieu, et l'association se forme à la
+        décision collective.
+      decisive: true

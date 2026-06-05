@@ -134,3 +134,48 @@ sources:
     url: "https://www.prolongomaif.ch/"
   - titre: "Association Longo Maï — Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Association_Longo_Ma%C3%AF"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Les 270 hectares sont détenus de façon inaliénable par le Fonds de Terre
+      Européenne, à l'abri de la spéculation.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: La détention inaliénable par la fondation protège la propriété mais n'est
+        pas un dispositif de protection du milieu ; aucune ORE, clause environnementale
+        ou statut d'espace protégé n'est documenté.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Le domaine de 270 hectares comporte des terres labourables et de la forêt,
+        mais aucun espace effectivement dédié au vivant non-humain (haies, mares,
+        friches) n'est documenté.
+    ouverture:
+      valeur: partiel
+      maillon: chaine
+      note: Élevage, agriculture, transformation et accueil ont une portée collective
+        ; l'ouverture au-delà du cercle des coopérant·es n'est pas explicitée.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'autogestion et les activités collectives relèvent d'une logique de partage,
+        mais une part marchande (vente de produits transformés) coexiste.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le foncier est protégé de façon inaliénable et le site fonctionne depuis
+        1973, mais les actes formalisant la durée de l'usage ne sont pas documentés.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'La coopérative fonctionne en autogestion depuis 1973 : les usager·es
+        décident collectivement, dans une tradition libertaire.'
+      decisive: true

@@ -137,3 +137,50 @@ sources:
     url: "https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/la-licorne/"
   - titre: "Retour en images sur la fête de l'acquisition de la Ferme de La Licorne — Terre de Liens Auvergne"
     url: "https://terredeliens.org/auvergne/actu/retour-en-images-sur-la-f%C3%AAte-de-lacquisition-de-la-ferme-de-la-licorne-18-03-2025/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: Les quelque 50 hectares ont été acquis fin 2024 par la Foncière Terre de
+      Liens, structure non spéculative, et retirés du marché.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'L''usage est confié par un bail rural environnemental selon le cadre
+        Terre de Liens : dispositif opposable et durable inscrivant la préservation
+        du milieu dans le contrat de location.'
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Ferme de quelque 50 hectares de polyculture-élevage près des gorges de
+        la Sioule, milieu diversifié ; aucun aménagement écologique délibéré (haies,
+        mares) n'est documenté par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Polyculture-élevage nourricière, maraîchage, boulangerie et transformation
+        fromagère en agriculture biologique : le lieu sert un intérêt général agricole
+        et alimentaire.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: L'usage est confié par bail rural moyennant un fermage ; les actions de
+        la Foncière ne versent pas de dividende, mais le niveau du fermage n'est pas
+        documenté.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'L''usage est confié par bail rural, dont le renouvellement est d''ordre
+        public : le collectif dispose d''une jouissance durable et sécurisée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: La ferme est exploitée collectivement par cinq associé·es réuni·es en
+        GAEC, qui décident ensemble de la conduite du lieu.
+      decisive: true

@@ -144,3 +144,48 @@ sources:
     url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
   - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
     url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier a vocation à être porté par le fonds de dotation Antidote, structure
+      non spéculative qui le détient hors marché, sans destination de revente.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif de protection durable et opposable du milieu (ORE, statut
+        d'espace protégé, clause environnementale au bail) n'est documenté pour ce
+        lieu de bâti sur les causses du Quercy.
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: Les sources ne documentent ni haies, mares, friches ni aucun espace effectivement
+        aménagé ou laissé pour le vivant non-humain sur le coteau du lieu.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Stages, rencontres, débats, cercles et hébergements ponctuels font du
+        lieu un espace d'éducation populaire et de lien social qui dépasse ses occupant·es.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Le modèle Antidote prévoit un loyer symbolique versé par l'association
+        au fonds ; son montant pour ce lieu n'est pas documenté par les sources.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le modèle confie l'usage par bail emphytéotique de longue durée ; la signature
+        effective du bail sur ce lieu et sa durée précise ne sont pas confirmées par
+        les sources.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'Le lieu est autogéré : l''association des lieux, une dizaine de personnes
+        actives, décide collectivement des usages, dans une attention déclarée à l''horizontalité.'
+      decisive: true

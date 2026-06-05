@@ -145,3 +145,50 @@ sources:
     url: "https://wiki.tera.coop/tera:structures_juridiques"
   - titre: "TERA — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/tera/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier productif est porté par une SCI majoritairement détenue par le
+      fonds de dotation SDH, structure non spéculative, mais une fraction des parts
+      reste hors du fonds.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Le foncier productif est conduit en agroécologie, mais aucun dispositif
+        opposable et durable de protection du milieu (ORE, espace protégé, clause
+        environnementale) n'est documenté pour les terres de TERA.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: La forêt-jardin constitue un espace à dimension écologique, mais aucun
+        aménagement explicite plus large en faveur du vivant (haies, mares, continuités)
+        n'est documenté.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Maraîchage, forêt-jardin, épicerie de proximité, centre de formation,
+        quartier rural : le projet sert un intérêt général alimentaire, social et
+        territorial.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: TERA vise un revenu d'autonomie et la coopération hors marché, mais l'épicerie
+        et les productions relèvent en partie d'une logique marchande.
+    duree:
+      valeur: non_etabli
+      maillon: usage
+      note: La nature et la durée des titres d'usage liant la SCI Le Tilleul aux structures
+        d'usage de TERA ne sont pas documentées par les sources.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: TERA revendique une gouvernance coopérative et partagée ; environ 400
+        adhérent·es participent aux décisions et activités du projet.
+      decisive: true

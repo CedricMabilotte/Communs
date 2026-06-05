@@ -140,3 +140,51 @@ sources:
     url: "https://aventure-antidote.org/qui-sommes-nous/nos-lieux/"
   - titre: "Antidote — Actualités : transferts de propriété et nouvelles de Keriskis"
     url: "https://aventure-antidote.org/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: La ferme a été transmise au fonds de dotation Antidote, structure non spéculative
+      qui la détient hors marché.
+  questions:
+    milieu:
+      valeur: non_etabli
+      maillon: lieu
+      note: 'Les clauses du bail emphytéotique ne sont pas documentées : l''existence
+        d''une clause environnementale ou d''un autre dispositif opposable de protection
+        du milieu n''est pas établie.'
+    vivant:
+      valeur: non
+      maillon: lieu
+      note: La vocation documentée du lieu est sociale (entraide, lien social, rencontres
+        politiques) ; l'accueil de la biodiversité non-humaine n'est pas affiché parmi
+        les finalités par les sources.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Entraide et lien social pour des personnes isolées en ruralité, circulation
+        de savoirs, rencontres politiques : le lieu sert un intérêt général social
+        qui dépasse ses occupant·es.'
+    don:
+      valeur: oui
+      maillon: chaine
+      note: Les activités agricoles du lieu sont explicitement décrites comme non
+        marchandes et le collectif autogéré repose sur l'entraide et le partage, hors
+        salariat.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Comme les autres lieux Antidote, l'usage relève d'un bail emphytéotique
+        de longue durée ; la durée exacte et le renouvellement ne sont pas confirmés
+        pour Keriskis.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'Le lieu est autogéré : le collectif se réunit à chaque saison en assemblée
+        générale, avec des commissions thématiques restituant leur travail.'
+      decisive: true

@@ -162,3 +162,54 @@ sources:
     url: "https://www.resilience.org/stories/2025-06-19/the-eu-has-the-funds-but-lacks-focus-this-farm-shows-whats-possible-with-both/"
   - titre: "Sanson et Calame, Courrier de l'environnement de l'INRA n°64 (2014) — La Bergerie de Villarceaux, un laboratoire pour une transition agricole"
     url: "https://www.bergerie-villarceaux.org/wp-content/uploads/2022/08/article_bergerie_2014_Sanson_Calame.pdf"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le domaine est porté par la Fondation Charles Léopold Mayer, structure non
+      lucrative, et n'est pas destiné à la revente.
+  questions:
+    milieu:
+      valeur: partiel
+      maillon: lieu
+      note: Le domaine est inclus dans le Parc naturel régional du Vexin français,
+        cadre de protection sans portée directement contraignante sur le foncier ;
+        aucun dispositif opposable spécifique (ORE, classement, clause au bail) n'est
+        documenté.
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Le domaine compte environ 5 km de haies héritées et 8 km de haies plantées,
+        des alignements intra-parcellaires et plus de 650 arbres champêtres, aménagés
+        pour rétablir l''équilibre écologique : une place concrète et substantielle
+        faite au vivant.'
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Agriculture agroécologique, élevage, formation et accueil servent un intérêt
+        dépassant les seuls occupant·es.
+    don:
+      valeur: oui
+      maillon: chaine
+      note: 'Le titre liant l''EARL à la fondation est un commodat — prêt à usage
+        gratuit : la mise à disposition des terres et des infrastructures est sans
+        loyer ni redevance. La fondation ne capte aucun fructus rentier sur le foncier.'
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: 'Le titre est désormais établi : un commodat consenti en 2006 pour 25
+        ans (mise à disposition gratuite des terres et infrastructures, charte agroécologique).
+        Horizon long, mais sécurité plus faible qu''un bail rural — le commodat n''ouvre
+        pas le droit au renouvellement d''ordre public du statut du fermage et reste,
+        en principe, plus reprenable par le prêteur.'
+      decisive: true
+    voix:
+      valeur: non_etabli
+      maillon: usage
+      note: Les modalités de décision entre fondation, exploitation et association
+        ne sont pas documentées par les sources.
+      decisive: true

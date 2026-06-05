@@ -145,3 +145,48 @@ sources:
     url: "https://cooperative-oasis.org/oasis/chateau-de-la-mhotte/"
   - titre: "École Steiner-Waldorf de la Mhotte — site officiel"
     url: "https://www.lamhotte.fr/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: a_terme
+    voie: nature_porteur
+    note: Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour
+      Demain, structure non lucrative qui le porte hors marché.
+  questions:
+    milieu:
+      valeur: oui
+      maillon: lieu
+      note: 'Une Obligation Réelle Environnementale inscrit l''engagement écologique
+        dans le droit du lieu : dispositif opposable et durable de protection du milieu.'
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: Le domaine d'une quinzaine d'hectares comprend bois, parc, prairies et
+        mare ; engagé dans une démarche Oasis de Biodiversité, il laisse effectivement
+        des espaces au vivant non-humain.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Éducation indépendante, habitat participatif et solidaire, jardins nourriciers
+        et démarche de sensibilisation à la nature servent un intérêt général éducatif,
+        social et écologique.
+    don:
+      valeur: non
+      maillon: chaine
+      note: 'École Steiner-Waldorf indépendante : le travail-cœur éducatif repose
+        sur une équipe enseignante salariée.'
+    duree:
+      valeur: oui
+      maillon: usage
+      note: Le bail emphytéotique de 99 ans assure aux deux associations une jouissance
+        longue et sécurisée, bien au-delà du plafond de 30 ans des démembrements civils.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Les deux associations ont un fonctionnement collégial ; familles de l'école
+        et habitant·es d'Acoeur prennent soin du lieu et participent aux décisions.
+      decisive: true

@@ -140,3 +140,51 @@ sources:
     url: "https://www.societe.com/societe/e3p-ecole-de-permaculture-du-petit-pessicart-900960964.html"
   - titre: "Zeste — École de permaculture du Petit Pessicart"
     url: "https://www.zeste.coop/en/e3p"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: partiel
+    cran: a_terme
+    voie: nature_porteur
+    note: Le foncier est porté par la SCIC E3P et n'est pas destiné à la revente ;
+      mais il est détenu par la coopérative usagère elle-même, sans structure non
+      lucrative tierce ni dispositif d'inaliénabilité documenté.
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, statut
+        d'espace protégé, clause environnementale) n'est documenté ; la chaîne étant
+        intégrée, aucun bail ni convention ne porte de clause de cette nature.
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Tiers-lieu d''un hectare conduit en permaculture avec une École de la
+        Forêt et une recherche sur la revégétalisation : des espaces sont effectivement
+        aménagés pour le vivant.'
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: Formation à la permaculture, école de la forêt, recherche sur la revégétalisation
+        périurbaine et accueil de classes servent un intérêt général écologique et
+        éducatif.
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Chantiers participatifs et accueil de classes relèvent d'une logique de
+        partage ; formations certifiantes et accueil de groupes en team-building comportent
+        une part marchande.
+    duree:
+      valeur: oui
+      maillon: usage
+      note: 'La SCIC est propriétaire du foncier : son usage n''est borné par aucun
+        titre à terme, la chaîne étant intégrée.'
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: Les coopérateur·rices qui font vivre le Jardin décident ensemble de son
+        devenir, sur un modèle inspiré de l'holacratie à trois pôles.
+      decisive: true

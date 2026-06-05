@@ -157,3 +157,52 @@ sources:
     url: "https://www.infolibertaire.net/concert-flamenco-de-soutien-au-collectif-bazarriere/"
   - titre: "CLIP — Les lieux"
     url: "https://clip.ouvaton.org/les-projets/"
+
+# --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte:
+    valeur: oui
+    cran: pour_toujours
+    voie: nature_porteur
+    note: 'La maison est achetée par une association loi 1901 sans capital appropriable
+      et verrouillée par le veto CLIP contre toute revente : le foncier est effectivement
+      soustrait au marché spéculatif.'
+  questions:
+    milieu:
+      valeur: non
+      maillon: lieu
+      note: Aucun dispositif opposable et durable de protection du milieu (ORE, clause
+        environnementale au titre d'usage) n'est documenté pour ce lieu urbain.
+    vivant:
+      valeur: partiel
+      maillon: lieu
+      note: Le lieu dispose d'un jardin en cœur urbain — une place possible pour le
+        vivant à l'échelle de la ville ; son aménagement effectif pour le vivant non-humain
+        n'est pas documenté.
+    ouverture:
+      valeur: oui
+      maillon: chaine
+      note: 'Le lieu associe habitat digne, accueil ouvert du quartier et activités
+        artistiques et militantes : son usage sert un intérêt qui dépasse ses seuls
+        habitant·es.'
+    don:
+      valeur: partiel
+      maillon: chaine
+      note: Le modèle CLIP repose sur des contributions des habitant·es remboursant
+        l'emprunt, sans logique de rendement ; une part des loyers alimente le fonds
+        de solidarité du réseau ; le montant et le caractère soutenable de ces contributions
+        ne sont pas documentés pour ce lieu.
+    duree:
+      valeur: partiel
+      maillon: usage
+      note: Le veto CLIP contre la revente sécurise la maîtrise du lieu dans la durée
+        ; la nature et la durée précises du titre d'usage liant le collectif à l'association
+        propriétaire ne sont toutefois pas documentées.
+      decisive: true
+    voix:
+      valeur: oui
+      maillon: usage
+      note: 'Le collectif habitant restaure, habite et gouverne le lieu collectivement,
+        en assemblées : les usager·es décident ensemble de son devenir.'
+      decisive: true
