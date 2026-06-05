@@ -5813,7 +5813,7 @@ FAISCEAU_CSS = """
 .fsc-hd h3{margin:0;font-size:1.25rem} .fsc-loc{color:#777;font-size:.85rem}
 .fsc-porteur{font-size:.85rem;color:#555;margin:6px 0 10px}
 .fsc-score{margin:8px 0 12px} .fsc-band{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.8rem;font-weight:bold;color:#fff;margin-right:6px}
-.fb-autogere{background:#3d7a4e}.fb-sorti{background:#b08a3e}
+.fb-autogere{background:#3d7a4e}.fb-sorti{background:#b08a3e}.fb-transition{background:#a86a4a}.fb-marchand{background:#9a9a9a}.fb-usage{background:#2f6e8f}.fb-commun{background:#274}
 .fsc-q{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9rem}
 .fsc-q td,.fsc-q th{padding:5px 8px;border-bottom:1px solid #f0ece2;vertical-align:top;text-align:left}
 .fsc-q th{font-weight:bold;width:90px}
@@ -5836,46 +5836,60 @@ def _fsc_card(nom, loc, porteur, band_cls, band_lbl, note, badge, pf, rows):
   <div class="fsc-dr">Vous représentez ce lieu ? <b>Droit de réponse</b> : correction sur pièce, levée d'un « non établi » sur témoignage, réponse libre sans retouche — contact avant toute publication.</div>
 </div>"""
 
-def render_faisceau(cfg, project=None):
-    marinie = _fsc_card(
-        "La Marinie", "Causse-et-Diège (12)",
-        "Fonds de dotation Antidote → association Les Communs de la Marinie (bail emphytéotique 99 ans)",
-        "fb-autogere", "autogéré", "<b>62</b> / 100",
-        "<span style='color:#999;font-size:.85rem'>badge non évalué</span>", "le don",
-        [("Le milieu","non établi","s-na","Clauses environnementales du bail non documentées."),
-         ("Le vivant","◐","s-mid","Agriculture paysanne, céréales anciennes ; rien d'agi délibérément pour le vivant."),
-         ("L'ouverture","●","s-ok","Fournil, savonnerie, activités culturelles ouvertes au-delà des membres."),
-         ("Le don","◐","s-mid","Mise en commun, redevance modique ; régime d'accès aux fruits non documenté."),
-         ("La durée","●","s-ok","Bail emphytéotique 99 ans."),
-         ("La voix","●","s-ok","Les usager·es décident (association des Communs de la Marinie).")])
-    rayol = _fsc_card(
-        "Domaine du Rayol", "Rayol-Canadel-sur-Mer (83)",
-        "Conservatoire du littoral (domaine propre, inaliénable) → association gestionnaire",
-        "fb-sorti", "sorti du marché", "<b>45</b> / 100",
-        "🌿🌿 <b>Sanctuaire</b>", "le don",
-        [("Le milieu","●","s-ok","Domaine propre du Conservatoire, jardin botanique de conservation."),
-         ("Le vivant","●","s-ok","Espace côtier des Maures sauvegardé."),
-         ("L'ouverture","●","s-ok","Ouvert au public, ~95 000 visiteur·es/an, pédagogie."),
-         ("Le don","○","s-no","Accès payant (billet) ; gestion par équipe salariée."),
-         ("La durée","◐","s-mid","Convention renouvelée ; gestionnaires, non une communauté qui « reste »."),
-         ("La voix","◐","s-mid","Association gestionnaire sous convention publique, non une autogestion des usager·es.")])
-    larzac = _fsc_card(
-        "Terres du Larzac", "Plateau du Larzac (12)",
-        "Propriété de l'État → SCTL (bail emphytéotique 99 ans) → baux longs aux paysan·nes",
-        "fb-autogere", "autogéré", "<b>62</b> / 100",
-        "<span style='color:#999;font-size:.85rem'>badge non évalué</span>", "le don",
-        [("Le milieu","○","s-no","Baux longs non assortis d'une protection environnementale opposable documentée."),
-         ("Le vivant","non établi","s-na","Place au vivant non documentée par les sources."),
-         ("L'ouverture","●","s-ok","Office foncier qui réinstalle des paysan·nes (+~20 %)."),
-         ("Le don","◐","s-mid","Office foncier sans recherche de rente ; régime d'accès non documenté."),
-         ("La durée","●","s-ok","Baux longs sécurisant la jouissance ; emphytéose 99 ans (2083) en amont."),
-         ("La voix","●","s-ok","Les associé·es de la SCTL sont les usager·es ; fonctionnement continu depuis 1985.")])
-    body = f"""<style>{FAISCEAU_CSS}</style>
+FB_CLASS={"marchand":"fb-marchand","en_transition":"fb-transition","sorti_du_marche":"fb-sorti","autogere":"fb-autogere","usage_decommodifie":"fb-usage","commun_vivant":"fb-commun"}
+FB_LABEL={"marchand":"marchand","en_transition":"en transition","sorti_du_marche":"sorti du marché","autogere":"autogéré","usage_decommodifie":"usage libéré","commun_vivant":"commun vivant"}
+FB_ORDER=["commun_vivant","usage_decommodifie","autogere","sorti_du_marche","en_transition","marchand"]
+Q_LABEL=[("milieu","Le milieu"),("vivant","Le vivant"),("ouverture","L'ouverture"),("don","Le don"),("duree","La durée"),("voix","La voix")]
+PF_LABEL={"milieu":"le milieu","vivant":"le vivant","ouverture":"l'ouverture","don":"le don","duree":"la durée","voix":"la voix","porte":"la porte"}
+_FB_SYM={"oui":("●","s-ok"),"partiel":("◐","s-mid"),"non":("○","s-no"),"non_etabli":("non établi","s-na"),"projete":("projeté","s-na")}
+_FB_BADGE={0:"<span style=\'color:#999;font-size:.85rem\'>pas de badge</span>",1:"🌿 <b>Sanctuaire</b>",2:"🌿🌿 <b>Sanctuaire</b>","non_etabli":"<span style=\'color:#999;font-size:.85rem\'>badge non évalué</span>"}
+_FB_S={"oui":1.0,"partiel":0.5,"non":0.0}
+_FB_UNK={"non_etabli","projete"}
+_FB_BANDS={"marchand":(0,20),"en_transition":(20,40),"sorti_du_marche":(20,50),"autogere":(50,75),"usage_decommodifie":(75,90),"commun_vivant":(90,100)}
+
+def _fsc_derive(ev):
+    """Tient l'invariant : bande/suspension/point faible/badge calculés, jamais saisis."""
+    porte=ev["porte"]["valeur"]; q=ev["questions"]
+    v=lambda n:q[n]["valeur"]; sc=lambda n:_FB_S.get(v(n))
+    susp=(porte=="non_etabli") or any(v(n)=="non_etabli" for n in ("voix","duree"))
+    if porte=="non": band="marchand"
+    elif porte=="partiel": band="en_transition"
+    elif susp: band="sorti_du_marche"
+    elif sc("voix")==1.0 and sc("duree")==1.0: band="usage_decommodifie" if sc("don")==1.0 else "autogere"
+    else: band="sorti_du_marche"
+    mil,viv=v("milieu"),v("vivant")
+    badge="non_etabli" if (mil in _FB_UNK or viv in _FB_UNK) else (2 if _FB_S[mil]==1 and _FB_S[viv]==1 else (1 if _FB_S[mil]+_FB_S[viv]>=1 else 0))
+    if band=="usage_decommodifie" and isinstance(badge,int) and badge>=1: band="commun_vivant"
+    chemin=("voix","duree","don","ouverture")
+    rank=lambda n:(0 if n in ("voix","duree") and v(n)=="non_etabli" else 1, 9 if v(n) in _FB_UNK else _FB_S[v(n)])
+    pf=min(chemin,key=rank); lo,hi=_FB_BANDS[band]
+    if susp: num=None
+    elif band=="sorti_du_marche": num=round(lo+(hi-lo)*(((1.0 if porte=="oui" else .5)+(sc("ouverture") or 0)+(sc("duree") or 0))/3))
+    elif band=="autogere": num=round(lo+(hi-lo)*(sc("don") or 0))
+    elif band=="usage_decommodifie": num=round(lo+(hi-lo)*(1.0 if badge!="non_etabli" and badge>=1 else .3))
+    else: num=round((lo+hi)/2)
+    return band,susp,pf,badge,num
+
+def render_faisceau(fiches, cfg, project=None):
+    revues=[f for f in fiches if f.get("v3_revue") and f.get("evaluation") and f.get("categorie")=="lieu"]
+    revues.sort(key=lambda f:(FB_ORDER.index(_fsc_derive(f["evaluation"])[0]), f["nom"]))
+    cards=""
+    for f in revues:
+        ev=f["evaluation"]; band,susp,pf,badge,num=_fsc_derive(ev)
+        loc=(f.get("localisation") or {}).get("commune","")
+        dep=(f.get("localisation") or {}).get("departement","")
+        mdep=re.search(r"\((\d{2,3}[AB]?)\)",dep)
+        if mdep: loc=f"{loc} ({mdep.group(1)})"
+        note=f"suspendue — palier : {FB_LABEL[band]}" if susp else f"<b>{num}</b> / 100"
+        rows=[(lab,_FB_SYM[ev['questions'][k]['valeur']][0],_FB_SYM[ev['questions'][k]['valeur']][1],e(ev['questions'][k].get('note',''))) for k,lab in Q_LABEL]
+        cards+=_fsc_card(e(f["nom"]),e(loc),e(f.get("sous_titre","")),FB_CLASS[band],FB_LABEL[band],note,_FB_BADGE[badge],PF_LABEL[pf],rows)
+    n=len(revues)
+    body=f"""<style>{FAISCEAU_CSS}</style>
 <h1>Le faisceau libéré <span style="font-weight:normal;font-size:1rem;color:#999">(nouvelle grille — pilote)</span></h1>
 <div class="fsc-intro"><b>Comment lire.</b> Une <b>porte</b> (sortir du marché) puis <b>six questions</b> du lieu vers le groupe ; une <b>échelle de libération</b> (marchand → sorti du marché → autogéré → usage libéré → commun vivant) lue au point le plus faible <i>du chemin</i> ; un <b>badge « Sanctuaire »</b> écologique <i>à côté</i> de la note, jamais dedans. On note <b>un degré de sortie du marché, pas un lieu</b> ; ce qu'on ne peut établir reste « non établi », jamais deviné. <a href="methode.html">La méthode en détail →</a></div>
-<p>Notre grille évolue. Voici <b>trois fiches revues sur sources</b> selon le nouveau cadre. Le reste de l'annuaire reste pour l'instant noté selon la grille précédente, le temps de la migration.</p>
-{marinie}{rayol}{larzac}
-<p class="fsc-note">Pilote — chiffres calculés, évaluations revues à la main sur les grilles sourcées. Cadre daté, signé, contestable : tout amendement argumenté est instruit. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>"""
+<p>Notre grille évolue. Voici <b>{n} fiches revues sur sources</b> selon le nouveau cadre. Le reste de l'annuaire reste pour l'instant noté selon la grille précédente, le temps de la migration.</p>
+{cards}
+<p class="fsc-note">Pilote — chiffres calculés (l'invariant « degré calculé, jamais saisi » est tenu par le générateur), évaluations revues à la main sur les grilles sourcées. Cadre daté, signé, contestable. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>"""
     return page("Le faisceau libéré", body, "faisceau.html", depth=0,
                 project=project, description="La nouvelle grille de libération des terres — pilote.",
                 path="faisceau.html", link_gloss=False)
@@ -5982,7 +5996,7 @@ def main():
     write(SITE / "grilles.html", render_grilles(cfg))
     write(SITE / "glossaire.html", render_glossaire(cfg))
     write(SITE / "methode.html", render_methode(cfg, n_by_cat, all_sc))
-    write(SITE / "faisceau.html", render_faisceau(cfg, project=PROJECT if "PROJECT" in dir() else None))
+    write(SITE / "faisceau.html", render_faisceau(fiches, cfg, project=None))
     write(SITE / "themes.html", render_themes(all_sc, cfg))
     write(SITE / "comparer.html", render_comparer(all_sc, cfg))
     write(SITE / "suggerer.html", render_suggerer(cfg))

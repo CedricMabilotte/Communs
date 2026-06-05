@@ -147,3 +147,16 @@ sources:
     url: "https://lafonciereantidote.org/qui-sommes-nous/nos-lieux/"
   - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
     url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"
+
+# --- Évaluation v3.1 (faisceau libéré) — revue sur sources, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte: { valeur: oui, cran: pour_toujours, voie: nature_porteur,
+           note: "Foncier porté hors marché par le fonds de dotation Antidote ; pas de parts." }
+  questions:
+    milieu:    { valeur: non,     maillon: lieu,   note: "Immeuble urbain ; aucun dispositif de protection d'un milieu." }
+    vivant:    { valeur: non,     maillon: lieu,   note: "Finalités pensées pour les humains ; vivant non-humain non visé." }
+    ouverture: { valeur: oui,     maillon: chaine, note: "Logements solidaires, imprimerie, bibliothèque, éducation populaire ; ouvert sur le quartier." }
+    don:       { valeur: partiel, maillon: chaine, note: "Part non marchande (gratuité, éducation pop.) ; loyers modérés assurent l'autofinancement." }
+    duree:     { valeur: partiel, maillon: usage,  note: "Bail emphytéotique de longue durée prévu ; signature sur ce lieu non confirmée.", decisive: true }
+    voix:      { valeur: oui,     maillon: usage,  note: "Collectif Ancrage, décision collective et horizontale.", decisive: true }

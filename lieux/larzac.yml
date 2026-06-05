@@ -137,3 +137,16 @@ sources:
     url: "https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/"
   - titre: "AGTER — La SCTL du Larzac"
     url: "https://www.agter.org/bdf/fr/corpus_chemin/fiche-chemin-9.html"
+
+# --- Évaluation v3.1 (faisceau libéré) — revue sur sources, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte: { valeur: oui, cran: pour_toujours, voie: nature_porteur,
+           note: "Propriété publique inaliénable + bail emphytéotique 99 ans (SCTL)." }
+  questions:
+    milieu:    { valeur: non,        maillon: lieu,   note: "Baux longs non assortis d'une protection environnementale opposable documentée." }
+    vivant:    { valeur: non_etabli, maillon: lieu,   note: "Place au vivant non documentée par les sources." }
+    ouverture: { valeur: oui,        maillon: chaine, note: "Office foncier qui réinstalle des paysan·nes (+~20 %)." }
+    don:       { valeur: partiel,    maillon: chaine, note: "Office foncier sans recherche de rente ; régime d'accès non documenté." }
+    duree:     { valeur: oui,        maillon: usage,  note: "Baux longs ; emphytéose 99 ans (2083) en amont.", decisive: true }
+    voix:      { valeur: oui,        maillon: usage,  note: "Les associé·es de la SCTL sont les usager·es ; continu depuis 1985.", decisive: true }

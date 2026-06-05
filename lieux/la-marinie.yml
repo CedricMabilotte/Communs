@@ -131,3 +131,16 @@ sources:
     url: "https://lescommunsdelamarinie.fr/"
   - titre: "La Foncière Antidote — Les communs de la Marinie"
     url: "https://www.helloasso.com/associations/la-fonciere-antidote/collectes/les-communs-de-la-marinie"
+
+# --- Évaluation v3.1 (faisceau libéré) — revue sur sources, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte: { valeur: oui, cran: pour_toujours, voie: nature_porteur,
+           note: "Fonds de dotation Antidote, acquisition par dons, pas de parts." }
+  questions:
+    milieu:    { valeur: non_etabli, maillon: lieu,   note: "Clauses environnementales du bail non documentées." }
+    vivant:    { valeur: partiel,    maillon: lieu,   note: "Agriculture paysanne, céréales anciennes ; rien d'agi délibérément pour le vivant." }
+    ouverture: { valeur: oui,        maillon: chaine, note: "Fournil, savonnerie, activités culturelles ouvertes au-delà des membres." }
+    don:       { valeur: partiel,    maillon: chaine, note: "Mise en commun, redevance modique ; régime d'accès aux fruits non documenté." }
+    duree:     { valeur: oui,        maillon: usage,  note: "Bail emphytéotique 99 ans.", decisive: true }
+    voix:      { valeur: oui,        maillon: usage,  note: "Les usager·es décident (association des Communs de la Marinie).", decisive: true }

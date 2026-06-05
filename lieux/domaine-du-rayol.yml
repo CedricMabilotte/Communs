@@ -143,3 +143,16 @@ sources:
     url: "https://www.domainedurayol.org/"
   - titre: "Domaine du Rayol — Conservatoire du littoral"
     url: "https://www.conservatoire-du-littoral.fr/siteLittoral/202/28-domaine-du-rayol-83_var.htm"
+
+# --- Évaluation v3.1 (faisceau libéré) — revue sur sources, 2026-06-05 ---
+v3_revue: true
+evaluation:
+  porte: { valeur: oui, cran: pour_toujours, voie: nature_porteur,
+           note: "Domaine propre du Conservatoire du littoral, inaliénable." }
+  questions:
+    milieu:    { valeur: oui,     maillon: lieu,   note: "Domaine propre du Conservatoire, jardin botanique de conservation." }
+    vivant:    { valeur: oui,     maillon: lieu,   note: "Espace côtier des Maures sauvegardé." }
+    ouverture: { valeur: oui,     maillon: chaine, note: "Ouvert au public, ~95 000 visiteur·es/an, pédagogie." }
+    don:       { valeur: non,     maillon: chaine, note: "Accès payant (billet) ; gestion par équipe salariée." }
+    duree:     { valeur: partiel, maillon: usage,  note: "Convention renouvelée ; gestionnaires, non une communauté qui « reste ».", decisive: true }
+    voix:      { valeur: partiel, maillon: usage,  note: "Association gestionnaire sous convention publique, non une autogestion des usager·es.", decisive: true }
