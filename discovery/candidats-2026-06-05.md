@@ -1,12 +1,36 @@
 # Veille — candidats du 2026-06-05
 
-26 candidat·s repéré·s sur 24 sources scannées (15 hors fenêtre de fréquence, 39 sources au total) — 25 hors fiches existantes, 15 sur un angle mort ; 0 écarté·s via discovery/ignore.txt. Score pondéré ; à examiner et promouvoir manuellement.
+0 candidat·s repéré·s sur 0 sources scannées (39 hors fenêtre de fréquence, 39 sources au total) — 0 hors fiches existantes, 0 sur un angle mort ; 0 écarté·s via discovery/ignore.txt. Score pondéré ; à examiner et promouvoir manuellement.
 
-**Pipeline** — 70 leads actifs ; 24 leads touchés cette passe ; 0 pré-fiches générées (Z2 → Z3, seuil 25, 2 indices min).
+**Pipeline** — 70 leads actifs ; 0 leads touchés cette passe ; 0 pré-fiches générées (Z2 → Z3, seuil 25, 2 indices min).
 
-### Sources hors fenêtre (15)
+### Sources hors fenêtre (39)
 
+- terre-de-liens — fréquence hebdomadaire
+- terre-de-liens-ressources — fréquence hebdomadaire
+- encommun — fréquence hebdomadaire
+- cooperative-oasis — fréquence hebdomadaire
+- lurzaindia — fréquence hebdomadaire
+- larzac — fréquence hebdomadaire
+- reseau-cen — fréquence hebdomadaire
+- foncier-solidaire — fréquence hebdomadaire
+- rtes — fréquence hebdomadaire
+- habitat-participatif — fréquence hebdomadaire
+- habicoop — fréquence hebdomadaire
+- labo-ess — fréquence hebdomadaire
+- reseau-ecolieux — fréquence hebdomadaire
+- fonciere-chenelet — fréquence hebdomadaire
+- terres-de-sources — fréquence hebdomadaire
+- reporterre — fréquence hebdomadaire
 - terrestres — fréquence mensuelle
+- lundi-matin — fréquence hebdomadaire
+- basta — fréquence hebdomadaire
+- politis — fréquence hebdomadaire
+- le-postillon — fréquence hebdomadaire
+- la-brique — fréquence hebdomadaire
+- lutopiks — fréquence hebdomadaire
+- mr-mondialisation — fréquence hebdomadaire
+- le-vent-se-leve — fréquence hebdomadaire
 - lage-de-faire — fréquence mensuelle
 - cff-annuaire — fréquence trimestrielle
 - data-gouv-fondations — fréquence trimestrielle
@@ -22,34 +46,5 @@
 - kisskissbankbank — fréquence mensuelle
 - tudigo — fréquence trimestrielle
 
-## Nouveautés possibles (25)
+## Nouveautés possibles (0)
 
-- **[22 · ANGLE MORT]** [La Fondation Terre de Liens — Terre de Liens](https://terredeliens.org/national/la-fondation-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, bail, donation, ferme, foncière, fondation, fonds de dotation, société civile
-- **[14 · ANGLE MORT]** [Ferme de la Coccinelle — Terre de Liens](https://fermes.terredeliens.org/alsace/fermes-de-la-r%C3%A9gion-alsace/ferme-de-la-coccinelle/) — source : terre-de-liens — statut : revu — mots-clés : acquisition, association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [La Foncière Terre de Liens, première structure d'investissement solidaire agricole — Terre de Liens](https://terredeliens.org/national/fonciere-terre-de-liens/la-fonciere-terre-de-liens-premiere-structure-dinvestissement-solidaire-agricole/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les associations territoriales Terre de Liens — Terre de Liens](https://terredeliens.org/national/les-associations-territoriales-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Transmettre des terres — Terre de Liens](https://terredeliens.org/national/transmettre-des-terres/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les fermes Terre de Liens](https://terredeliens.org/national/hub-ferme/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [M'installer avec Terre de Liens — Terre de Liens](https://terredeliens.org/national/minstaller-avec-terre-de-liens/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [A la ferme du Pré-Tords, des vaches, de l’eau… et le retour de la Barge à queue noire! — Terre de Liens](https://terredeliens.org/national/actu/a-la-ferme-du-pr%C3%A9-tords-des-vaches-de-leau-et-le-retour-de-la-barge-%C3%A0-queue-noire-22-05-2026/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les fermes Terre de Liens](https://fermes.terredeliens.org/national/hub-ferme/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [La Voulperie — Terre de Liens](https://fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/la-voulperie/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Sous le Bois — Terre de Liens](https://fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/sous-le-bois/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Domaine de Saint-Laurent — Terre de Liens](https://fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/domaine-de-saint-laurent/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Les Prés de Trégrehen — Terre de Liens](https://fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-pr%C3%A9s-de-tr%C3%A9grehen/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[13 · ANGLE MORT]** [Le Grand Bray — Terre de Liens](https://fermes.terredeliens.org/centre/fermes-de-la-r%C3%A9gion-centre/le-grand-bray/) — source : terre-de-liens — statut : revu — mots-clés : association, ferme, foncière, fondation, société civile
-- **[3 · ANGLE MORT]** [location Foncier communal cherche projets de maraîchage 1,3 Ha Fresnes-sur-Escaut (59970) • Hauts-de-France Voir l'annonce](https://www.objectif-terres.org/annonces/9550) — source : terre-de-liens — statut : revu — mots-clés : foncier
-- **[11]** [Gestion foncière – Larzac.org](https://larzac.org/accueil/un-territoire-organise/la-gestion-fonciere/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
-- **[11]** [What are Foncier Solidaire France and the concept of OFS/BRS ? – Foncier Solidaire France](https://www.foncier-solidaire.fr/principles-of-solidarity-land/) — source : foncier-solidaire — statut : revu — mots-clés : BRS, OFS, association, bail réel solidaire, foncier solidaire
-- **[11]** [Société Civile Gestion Foncière Agricole du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa/) — source : larzac — statut : revu — mots-clés : SCTL, association, foncière, gestion foncière, gfa, société civile, terres
-- **[10]** [la terre en commun enfin propriétaire des Q de plomb! | la terre en commun](https://encommun.eco/actualites/terre-en-commun-enfin-proprietaire-q-de-plomb) — source : encommun — statut : revu — mots-clés : commun, fonds de dotation, terres
-- **[9]** [Foncière Oasis - Coopérative Oasis](https://cooperative-oasis.org/nos-offres/fonciere-oasis/) — source : cooperative-oasis — statut : revu — mots-clés : foncière, fonds de dotation, oasis, écolieu
-- **[4]** [Rejoindre l'association Les Ami·es de Politis](https://www.politis.fr/politis-fr-devenir-societaire/) — source : politis — statut : revu — mots-clés : association, scic
-- **[4]** [Rejoindre l'association Les Ami·es de Politis](https://www.politis.fr/association-amis-politis/) — source : politis — statut : revu — mots-clés : association, scic
-- **[4]** [Le portage foncier agricole - Rapport #3 - Centre de Ressources - Terre de liens](https://ressources.terredeliens.org/les-ressources/le-portage-foncier-agricole-rapport-3) — source : terre-de-liens — statut : revu — mots-clés : foncier, foncière
-- **[4]** [Protéger la biodiversité avec les ORE - Coopérative Oasis](https://cooperative-oasis.org/nos-offres/proteger-la-biodiversite-ore/) — source : cooperative-oasis — statut : revu — mots-clés : association, foncier, foncière, oasis
-- **[3]** [La SCIC Terres de Sources](https://terresdesources.fr/la-scic-terres-de-sources/) — source : terres-de-sources — statut : revu — mots-clés : SCIC, scic
-
-## Déjà référencés (1)
-
-- [14] [Société Civile des Terres du Larzac – Larzac.org](https://larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl/) — larzac
