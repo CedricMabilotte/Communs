@@ -140,21 +140,25 @@ sources:
   - titre: "Terre de Liens — Ferme du Jointout"
     url: "http://www.fermedujointout.fr/terre-de-liens/"
 
+  - titre: "Ferme du Jointout — site officiel (GAEC, ateliers, foncier TdL 2011)"
+    url: "http://www.fermedujointout.fr/"
+  - titre: "Pour l'amour du bio — Agri 71"
+    url: "https://www.agri71.fr/articles/pour-l-amour-du-bio-53716/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: Le foncier d'environ 50 hectares a été racheté en 2011 par Terre de Liens,
       mouvement non spéculatif, et retiré du marché.
   questions:
     milieu:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé
-        n'est documenté pour le foncier du Jointout.
+      note: 'Ferme Terre de Liens en bail rural (le bail rural environnemental est l''outil systématique de TdL), mais aucune clause environnementale propre au bail du Jointout n''est attestée par une source : non établi plutôt qu''affirmé.'
     vivant:
       valeur: non
       maillon: lieu

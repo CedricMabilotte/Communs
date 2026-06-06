@@ -219,8 +219,11 @@ sources:
   - titre: "Annuaire-mairie — associations de Bretoncelles (RNA Les Donnettes W613001811 « Logement », Hautes Planches W613001799)"
     url: "https://www.annuaire-mairie.fr/association-bretoncelles.html"
 
+  - titre: "Qu'est-ce que le CLIP (veto revente, locataires sans titre, loyers + fonds solidaire)"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

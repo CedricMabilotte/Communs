@@ -192,12 +192,17 @@ sources:
   - titre: "Association Parpaing Libre (SIREN 833981764) — Annuaire des entreprises (data.gouv.fr)"
     url: "https://annuaire-entreprises.data.gouv.fr/entreprise/parpaing-libre-833981764"
 
+  - titre: "Parpaing Libre / propriété d'usage — La Déviation"
+    url: "http://www.ladeviation.org/parpaing-libre/"
+  - titre: "La Déviation : chantiers participatifs après l'incendie — Made in Marseille"
+    url: "https://madeinmarseille.net/a-la-une-marseille/196220-deviation-chantiers-participatifs-incendie/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Le foncier est porté par l'association Parpaing Libre, à l'objet explicitement
       anti-revente, et n'est pas destiné au marché libre ; CLIP veille à la non-revente.

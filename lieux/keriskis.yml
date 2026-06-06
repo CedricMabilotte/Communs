@@ -141,12 +141,17 @@ sources:
   - titre: "Antidote — Actualités : transferts de propriété et nouvelles de Keriskis"
     url: "https://aventure-antidote.org/"
 
+  - titre: "Notre fonctionnement — Aventure Antidote (bail emphytéotique 99 ans, redevance modique)"
+    url: "https://aventure-antidote.org/comment-ca-marche/notre-fonctionnement/"
+  - titre: "Le fonds de dotation, une brèche dans la propriété privée — Reporterre"
+    url: "https://reporterre.net/Le-fonds-de-dotation-une-breche-dans-la-conception-francaise-de-la-propriete-prive"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: La ferme a été transmise au fonds de dotation Antidote, structure non spéculative
       qui la détient hors marché.
@@ -176,11 +181,9 @@ evaluation:
         marchandes et le collectif autogéré repose sur l'entraide et le partage, hors
         salariat.
     duree:
-      valeur: partiel
+      valeur: oui
       maillon: usage
-      note: Comme les autres lieux Antidote, l'usage relève d'un bail emphytéotique
-        de longue durée ; la durée exacte et le renouvellement ne sont pas confirmés
-        pour Keriskis.
+      note: 'Modèle Antidote = bail emphytéotique de 99 ans contre redevance modique (source Antidote « Notre fonctionnement ») : titre d''usage long et sûr par construction. Le détail de l''acte propre à Keriskis n''est pas publié, mais la nature du titre (droit réel long) est établie.'
       decisive: true
     voix:
       valeur: oui

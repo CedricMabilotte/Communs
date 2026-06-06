@@ -139,12 +139,17 @@ sources:
   - titre: "Réserve naturelle régionale des gorges du Gardon — Wikipédia"
     url: "https://fr.wikipedia.org/wiki/R%C3%A9serve_naturelle_r%C3%A9gionale_des_gorges_du_Gardon"
 
+  - titre: "RNR gorges du Gardon — terrain acquis/assimilé par un CEN (acquisition + bail emphytéotique) — INPN FR1506775"
+    url: "https://inpn.mnhn.fr/espace/protege/FR1506775"
+  - titre: "Délibération CR-09/15.586 du 18/12/2009 (classement RNR) — AIDA Ineris"
+    url: "https://aida.ineris.fr/reglementation/deliberation-conseil-regional-ndeg-cr-0915586-181209-relative-classement-a"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Le classement en réserve naturelle régionale soumet les 491 hectares à une
       réglementation protectrice durable, mais il ne transfère pas le foncier — pour

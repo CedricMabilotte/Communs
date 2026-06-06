@@ -147,23 +147,26 @@ sources:
   - titre: "Eyssal — Terre de Liens"
     url: "https://terredeliens.org/eyssal.html"
 
+  - titre: "Les fermes Terre de Liens — Centre de Ressources (BRE systématique)"
+    url: "https://www.ressources.terredeliens.org/les-ressources/les-fermes-terre-de-liens"
+  - titre: "Ferme d'Eyssal : des fromages 100 % Périgord"
+    url: "https://perigord.mcweb.fr/eyssal/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Les 18 hectares acquis en 2010 par la Foncière Terre de Liens sont soustraits
       au marché ; les autres terres et les bâtiments de la ferme appartiennent aux
       éleveur·ses.
   questions:
     milieu:
-      valeur: non
+      valeur: partiel
       maillon: lieu
-      note: Les 18 hectares portés par la Foncière Terre de Liens préservent durablement
-        leur vocation agricole en biodynamie ; aucune obligation réelle environnementale
-        ni clause environnementale opposable du bail n'est documentée par les sources.
+      note: 'Terres louées via bail rural environnemental — pratique systématique de la Foncière Terre de Liens (clause opposable : bio, maintien haies/arbres, couvert). Acte-type établi ; clauses du bail propre non publiées → partiel.'
     vivant:
       valeur: partiel
       maillon: lieu

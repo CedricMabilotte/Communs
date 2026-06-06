@@ -141,12 +141,15 @@ sources:
   - titre: "Zeste — École de permaculture du Petit Pessicart"
     url: "https://www.zeste.coop/en/e3p"
 
+  - titre: "E3P École de permaculture du Petit Pessicart (SCIC-SAS, statuts) — Pappers"
+    url: "https://www.pappers.fr/entreprise/e3p-ecole-de-permaculture-du-petit-pessicart-900960964"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: Le foncier est porté par la SCIC E3P et n'est pas destiné à la revente ;
       mais il est détenu par la coopérative usagère elle-même, sans structure non

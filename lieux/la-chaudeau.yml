@@ -137,22 +137,25 @@ sources:
   - titre: "À Pierre-la-Treiche, une exploitation agricole reprend vie grâce à Terre de Liens (54) — Banque des Territoires"
     url: "https://www.banquedesterritoires.fr/pierre-la-treiche-une-exploitation-agricole-reprend-vie-grace-terre-de-liens-54"
 
+  - titre: "La Chaudeau — Terre de Liens (bail rural à clauses environnementales)"
+    url: "https://terredeliens.org/la-chaudeau.html"
+  - titre: "Pierre-la-Treiche : une exploitation reprend vie grâce à Terre de Liens — Banque des Territoires"
+    url: "https://www.banquedesterritoires.fr/pierre-la-treiche-une-exploitation-agricole-reprend-vie-grace-terre-de-liens-54"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: Les 3,66 hectares et les bâtiments ont été acquis en 2013 par la Foncière
       Terre de Liens, structure non spéculative, et retirés du marché.
   questions:
     milieu:
-      valeur: non
+      valeur: partiel
       maillon: lieu
-      note: L'usage est confié par bail rural sans que les sources précisent s'il
-        s'agit d'un bail à clauses environnementales ; aucun autre dispositif opposable
-        de protection du milieu n'est documenté.
+      note: 'Source Terre de Liens : bail rural à clauses environnementales (« comme la plupart des fermiers Terre de Liens ») — clause opposable attachée au titre d''usage → partiel.'
     vivant:
       valeur: non
       maillon: lieu

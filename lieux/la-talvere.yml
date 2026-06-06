@@ -145,8 +145,13 @@ sources:
   - titre: "La foncière Antidote — entretien, Récits de l'Anthropocène"
     url: "https://recitsanthropocene.net/2024/01/14/la-fonciere-antidote/"
 
+  - titre: "La Foncière Antidote — La Talvère"
+    url: "https://latalvere.org/le-fonds-de-dotation/"
+  - titre: "L'Antidote : des lieux que personne ne possède — Revue Silence n°517"
+    url: "https://www.revuesilence.net/numeros/517-Lieux-collectifs-reinventer-la-propriete/l-antidote-des-lieux-que-personne-ne-possede"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
