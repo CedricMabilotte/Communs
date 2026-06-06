@@ -1044,7 +1044,7 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
     (gx, gy), verts = _penta_geom(axes_cfg, size)
     col = {ax["id"]: ax["couleur"] for ax in axes_cfg}
     pts, missing = _penta_profile_points(axes_cfg, axes_scores, size)
-    label = "Profil à cinq axes — " + ", ".join(
+    label = "Profil des six questions — " + ", ".join(
         f"{ax['label']} "
         f"{_fmtnum(axes_scores.get(ax['id'])) if axes_scores.get(ax['id']) is not None else 'non renseigné'}"
         for ax in axes_cfg)
@@ -1284,6 +1284,7 @@ def card(fiche, sc, axes_cfg, depth=0, concepts=None):
   <h3><a class="card-link" href="{href}">{e(fiche['nom'])}</a>{ctx_labels_html(fiche, up)}</h3>
   <p class="card-sub">{e(clean(fiche.get('sous_titre','')))}</p>
   <p class="card-meta">{e(loc)}{(' · ' + e(montage_lab)) if montage_lab else ''}</p>
+  {f'<div class="card-viz">{axis_triangle(Q6_CFG, sc["q6"], compact=True)}</div>' if sc.get("q6") else ''}
 </li>"""
 
 
@@ -1963,8 +1964,11 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
         if not tgt:
             continue
         tcat = tgt["categorie"]
+        _tsc = sc_by_uid.get(uid)
+        _tri = (axis_triangle(Q6_CFG, _tsc["q6"], compact=True)
+                if _tsc and _tsc.get("q6") else "")
         chip = (f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{uid}.html">'
-                f'<span class="chip-txt">{e(tgt["nom"])}'
+                f'{_tri}<span class="chip-txt">{e(tgt["nom"])}'
                 f'<span class="chip-cat">{e(tcat)}</span></span></a>')
         chips_par_cat.setdefault(tcat, []).append(chip)
     if chips_par_cat:
@@ -2006,7 +2010,7 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
                 f' · <a href="../classement.html">Voir le classement</a></p>')
     # le <defs> tri-base n'est utile que si la fiche rend au moins un triangle
     # compact, c'est-à-dire si elle a des chips reliés (audit fonctionnel C, M2).
-    defs = tri_defs(axes_cfg) if chips_par_cat else ""
+    defs = tri_defs(Q6_CFG) if chips_par_cat else ""
     # ordre de lecture (session #3) : le récit avant la preuve — les « Repères »
     # sont intégrés au panneau de score (chantier 7) ; puis présentation,
     # montage, analyse, chaîne, dossier, et la grille reléguée en fin.
@@ -2155,9 +2159,11 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
         tsc = sc_by_uid.get(muid)
         if tcat == "lieu":
             lieux_membres.append((tgt, tsc))
+        _tri = (axis_triangle(Q6_CFG, tsc["q6"], compact=True)
+                if tsc and tsc.get("q6") else "")
         chips.append(
             f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{muid}.html">'
-            f'<span class="chip-txt">{e(tgt["nom"])}'
+            f'{_tri}<span class="chip-txt">{e(tgt["nom"])}'
             f'<span class="chip-cat">{e(CAT_LABEL.get(tcat, tcat))}</span>'
             f'</span></a>')
     # Repères du réseau — nombre de porteurs et de lieux (session #4)
@@ -2241,7 +2247,7 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
         _rev_panel = (_v3_score_panel_standalone(_rev)
             + '<p class="verdict-cle"><b>Réseau.</b> Évalué sur la même grille que les lieux, sa note est la '
               '<b>synthèse de libération</b> des lieux que son réseau fédère. <a href="../methode.html">Méthode →</a></p>')
-    defs = tri_defs(axes_cfg) if chips else ""
+    defs = tri_defs(Q6_CFG) if chips else ""
     body = (defs + head + _rev_panel + intro + reperes_html + resume + montage_html
             + membres_html + distrib_html + analyse_html + fiab + sources_html
             + backlink)
@@ -2338,7 +2344,7 @@ def render_catalogue(cat, fiches_sc, cfg):
 
     carte_lien = ('\n<a href="carte.html">Voir les lieux sur la carte →</a>'
                   if cat == "lieu" else "")
-    body = f"""{tri_defs(axes_cfg)}<h1>{e(title)}</h1>
+    body = f"""{tri_defs(Q6_CFG)}<h1>{e(title)}</h1>
 <p class="lead">{e(intro)}
 <a href="methode.html">Comprendre la note et les six questions →</a>{carte_lien}</p>
 {modeles_note}
@@ -3327,7 +3333,7 @@ def render_themes(all_sc, cfg):
 {grid}
 </section>""")
 
-    body = f"""{tri_defs(axes_cfg)}<h1>Thèmes transversaux</h1>
+    body = f"""{tri_defs(Q6_CFG)}<h1>Thèmes transversaux</h1>
 <p class="lead">Les catalogues classent l'annuaire par rôle dans le montage ;
 le classement, par la note de libération. Cette page propose une troisième lecture, par
 sujet : à quoi sert la terre, et qui la porte. Un même montage peut relever de
@@ -3532,7 +3538,7 @@ def render_index(all_sc, cfg, n_by_cat):
         '→</a></p>'
         + "".join(best_blocks) + '</section>') if best_blocks else ""
 
-    body = f"""{tri_defs(axes_cfg)}<section class="hero">
+    body = f"""{tri_defs(Q6_CFG)}<section class="hero">
   <div class="hero-grid">
     <div class="hero-intro">
       <p class="hero-kicker">Annuaire critique · libération des terres</p>
@@ -5855,6 +5861,7 @@ FB_LABEL={"marchand":"marchand","en_transition":"en transition","sorti_du_marche
 FB_ORDER=["commun_vivant","usage_decommodifie","autogere","sorti_du_marche","en_transition","marchand"]
 Q_LABEL=[("milieu","Le milieu"),("vivant","Le vivant"),("ouverture","L'ouverture"),("don","Le don"),("duree","La durée"),("voix","La voix")]
 Q6_AXES=[("1","Le milieu","#7a5230"),("2","Le vivant","#3d7a4e"),("3","L'ouverture","#2f6e8f"),("4","Le don","#8a5a8a"),("5","La durée","#b08a3e"),("6","La voix","#225588")]
+Q6_CFG=[{"id":a,"label":l,"court":l,"couleur":c} for a,l,c in Q6_AXES]
 def _q_scores_from_ev(ev):
     out={}
     for _i,(_k,_l) in enumerate(Q_LABEL,1):
@@ -6387,6 +6394,7 @@ def main():
         _s["idl"] = _v["note"]                      # None si suspendue
         _s["palier"] = {"id": _v["band"], "label": _v["label"], "couleur": _v["bcol"]}
         _s["susp_v3"] = _v["susp"]
+        _s["q6"] = _v.get("qscores")
         _s["score_type"] = "vrai"
 
     sc_by_uid = {f["uid"]: sc for f, sc in all_sc}
