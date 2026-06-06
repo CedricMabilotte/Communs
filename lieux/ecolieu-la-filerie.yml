@@ -152,7 +152,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: non
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: 'Le foncier reste la propriété privée de la famille Bargue : il n''est pas
       porté par une structure non spéculative et n''est pas soustrait au marché.'

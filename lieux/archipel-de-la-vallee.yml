@@ -151,7 +151,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: Le foncier est porté par une SCI dont les seul·es associé·es sont trois
       associations non lucratives ; aucune clause d'inaliénabilité ni de verrou anti-spéculatif

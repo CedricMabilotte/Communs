@@ -156,7 +156,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: Le foncier est porté par une SCIC non spéculative et n'est pas destiné à
       la revente ; aucune clause d'inaliénabilité documentée ne verrouille toutefois

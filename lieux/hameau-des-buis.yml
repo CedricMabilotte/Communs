@@ -149,7 +149,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: Le foncier est porté collectivement par une SAS coopérative à gouvernance
       partagée, mais aucun verrouillage anti-spéculatif statutaire n'est documenté

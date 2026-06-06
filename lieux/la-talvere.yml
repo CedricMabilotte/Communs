@@ -155,7 +155,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Le foncier a vocation à être porté par le fonds de dotation Antidote, structure
       non spéculative qui le détient hors marché, sans destination de revente.

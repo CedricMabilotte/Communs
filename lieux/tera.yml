@@ -158,7 +158,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: Le foncier productif est porté par une SCI majoritairement détenue par le
       fonds de dotation SDH, structure non spéculative, mais une fraction des parts

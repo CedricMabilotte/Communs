@@ -153,7 +153,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: La Foncière Terre de Liens a acquis en 2013 la moitié des terres exploitées
       et les a retirées du marché ; l'autre moitié n'est pas portée par la Foncière.

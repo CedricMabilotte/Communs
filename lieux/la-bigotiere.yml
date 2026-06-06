@@ -168,7 +168,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: non
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Le foncier est logé dans une société civile d'attribution dont les parts,
       indexées sur la valeur du lot (art. L.212-5 CCH), portent la valeur appropriable

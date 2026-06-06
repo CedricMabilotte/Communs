@@ -150,7 +150,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: non_etabli
-    cran: a_terme
+    cran: non_etabli
     voie: nature_porteur
     note: 'La structure détenant le foncier n''est pas documentée publiquement (ni SCI, ni association, ni acte) ; la porte étant décisive, on ne la devine pas. Ouverture du tiers-lieu visée au printemps 2027.'
   questions:

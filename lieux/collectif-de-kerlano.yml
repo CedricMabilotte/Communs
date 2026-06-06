@@ -172,7 +172,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: 'L''auto-rachat associatif vise à soustraire le lieu au marché via le schéma
       CLIP ; mais le foncier est encore en indivision et la bascule n''est pas documentée
