@@ -746,6 +746,12 @@ def page(title, body, active, depth=0, project=None, description="",
     <a href="{up}modeles.html">Modèles voisins</a> ·
     <a href="{up}classement.html">Classement</a> ·
     <a href="{up}comparer.html">Comparer</a></p>
+    <p class="foot-links"><strong>Comprendre la note</strong> ·
+    <a href="{up}methode.html">Méthode</a> ·
+    <a href="{up}ce-que-la-note-ne-dit-pas.html">Ce qu'elle ne dit pas</a> ·
+    <a href="{up}faq.html">FAQ</a> ·
+    <a href="{up}exemples.html">Exemples calculés</a> ·
+    <a href="{up}droit-de-reponse.html">Droit de réponse</a></p>
     <p class="foot-links"><strong>Citer &amp; contribuer</strong> ·
     <a href="{up}methode.html">Méthode</a> ·
     <a href="{up}grilles.html">Grilles d'analyse</a> ·
@@ -1125,7 +1131,7 @@ def idl_badge(sc, big=False):
     pal = sc["palier"]
     if idl is None or pal is None:
         return ('<span class="idl-badge idl-na">n.r.'
-                '<span class="visually-hidden">Indice non renseigné</span></span>')
+                '<span class="visually-hidden">Note non renseignée</span></span>')
     estime = sc.get("score_type") == "estime"
     r, sw = (34, 7) if big else (16, 4)
     c = 2 * math.pi * r
@@ -1769,7 +1775,7 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
         _triangle = ""
     _axbar = axis_bar(_axc, _axs) if _ev_lieu else ""
     _scale = idl_scale(_sc_b, _rk) if _ev_lieu else ""
-    _axesnote = "" if _ev_lieu else axes_note
+    _axesnote = "" if (_ev_lieu or sc.get("idl") is None) else axes_note
     _scorecap = ('<p class="score-cap"><a href="../methode.html">Note de libération</a></p>'
                  if _ev_lieu else
                  '<p class="score-cap"><a href="../methode.html">Note de libération</a></p>')
@@ -2190,7 +2196,7 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
         rows = "".join(f"<li>{e(k)} — {v}</li>" for k, v in rep.items())
         distrib_html = (f'<section><h2 class="sec">Distribution des lieux</h2>'
                         f'<p class="lead">{len(lieux_membres)} lieu·x concret·s '
-                        f'détaillé·s, répartis par palier de l\'Indice :</p>'
+                        f'détaillé·s, répartis par palier de libération :</p>'
                         f'<ul>{rows}</ul></section>')
     else:
         distrib_html = ('<section><h2 class="sec">Distribution des lieux</h2>'
@@ -2278,8 +2284,8 @@ def render_catalogue(cat, fiches_sc, cfg):
         modeles_note = (
             '<div class="callout callout-note"><p><strong>Hors classement '
             'principal.</strong> Les modèles voisins ne sont pas notés par les '
-            'grilles de l\'annuaire : leur Indice est <em>estimé</em> '
-            '(axes estimés, hors grille) et signalé par un anneau en pointillé. '
+            'grilles de l\'annuaire : leur note est <em>estimée</em> '
+            '(hors grille) et signalé par un anneau en pointillé. '
             'Ils servent de points de comparaison et n\'apparaissent pas dans '
             'le classement.</p></div>')
     else:
@@ -2333,13 +2339,13 @@ def render_catalogue(cat, fiches_sc, cfg):
                   if cat == "lieu" else "")
     body = f"""{tri_defs(axes_cfg)}<h1>{e(title)}</h1>
 <p class="lead">{e(intro)}
-<a href="methode.html">Comprendre l'Indice et les axes →</a>{carte_lien}</p>
+<a href="methode.html">Comprendre la note et les six questions →</a>{carte_lien}</p>
 {modeles_note}
 <div class="toolbar">
   <input type="search" id="q" placeholder="Rechercher un nom…" aria-label="Rechercher par nom" aria-controls="resultats">
   <label class="sort-lab" for="sort">Trier :</label>
   <select id="sort">
-    <option value="idl">Par indice (décroissant)</option>
+    <option value="idl">Par note (décroissant)</option>
     <option value="nom">Par nom (A→Z)</option>
     {"".join(f'<option value="ax{a["id"]}">Par axe {a["id"]} — {e(a["court"])}</option>' for a in axes_cfg)}
   </select>
@@ -2641,7 +2647,7 @@ inconnu) ; le score en découle directement.
 <a href="regimes.html">Le cadre des régimes et des pôles du sol →</a></p>
 <p class="axe-legend">{axe_legend(axes_cfg, "Cinq axes : ")}</p>
 {''.join(blocks)}
-<p class="linkrow"><a href="methode.html">La méthode et le calcul de l'Indice →</a> ·
+<p class="linkrow"><a href="methode.html">La méthode et le calcul de la note →</a> ·
 <a href="regimes.html">Régimes et pôles du sol →</a> ·
 <a href="glossaire.html">Glossaire des termes →</a></p>"""
     return page("Grilles", body, "grilles.html", project=project,
@@ -2894,7 +2900,7 @@ point faible et le badge en sont <em>dérivés</em> à la publication. Un pseudo
 donc pas afficher une bande haute : la porte le bloque, quoi qu'on saisisse ailleurs.</p>
 <p class="prose"><strong>Droit de réponse.</strong> Parce que c'est une lecture et non un
 arrêt, tout porteur, usufruitier ou collectif peut répondre : sa réponse est reproduite sur la
-fiche concernée, sans retouche. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>
+fiche concernée, sans retouche. <a href="droit-de-reponse.html">La page droit de réponse →</a></p>
 </section>"""
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
@@ -3029,6 +3035,7 @@ civil d'intérêt général / droit commercial / propriété privée ; les
 catégorie ; le <a href="glossaire.html">glossaire</a> définit les termes
 pivots ; les <a href="modeles.html">modèles voisins</a> servent de points de
 comparaison hors classement.</p>
+<p class="prose"><strong>Accompagnement.</strong> <a href="ce-que-la-note-ne-dit-pas.html">Ce que la note ne dit pas</a> · <a href="faq.html">Questions fréquentes</a> · <a href="exemples.html">Trois exemples calculés pas à pas</a> · <a href="droit-de-reponse.html">Droit de réponse</a>.</p>
 </section>"""
     return page("Méthode", body, "methode.html", project=project,
                 description="Méthode de l'annuaire : le faisceau libéré — la porte, les six questions, l'échelle de libération.",
@@ -3138,12 +3145,12 @@ GLOSSAIRE = [
      "Règle attribuant chaque axe d'évaluation au maillon de la chaîne où il se "
      "joue réellement : l'axe 1 au porteur, l'axe 3 à l'usufruitier, l'axe 5 à "
      "la convention d'usage, les axes 2 et 4 à toute la chaîne."),
-    ("Indice intrinsèque / indice effectif",
-     "L'indice intrinsèque note une entité sur ce qu'elle est, ses propres "
-     "critères. L'indice effectif le relit à travers les chaînes qu'elle noue : "
-     "pour les axes contaminables, l'axe effectif retient le minimum entre le "
-     "score intrinsèque et la médiane des lieux reliés. L'écart est toujours "
-     "affiché et annoté sur la fiche."),
+    ("Note d'un groupe (agrégation)",
+     "Un porteur, un usufruitier ou un réseau n'a pas de grille à part : sa note "
+     "agrège les six questions des lieux qu'il tient, anime ou fédère — on juge un "
+     "groupe par ce qu'il libère réellement. Un pseudo-portage tire ses lieux vers "
+     "le bas, et l'agrégat le contient ; un groupe sans lieu agrégeable reste non "
+     "noté."),
     ("Faux ami",
      "Entité qui mobilise le vocabulaire du commun et de l'utilité sociale tout "
      "en étant structurellement commerciale et lucrative au profit d'un cercle "
@@ -3171,10 +3178,9 @@ GLOSSAIRE = [
      "membres et reste affectée à l'objet de la structure. Clause qui, comme le "
      "verrou d'actif, tempère ou neutralise la lucrativité."),
     ("Complétude",
-     "Part des critères d'une fiche effectivement renseignés. Une faible "
-     "complétude pénalise l'indice affiché et signale les angles morts du "
-     "recensement. Elle se distingue du nombre d'axes sur lesquels l'Indice "
-     "est calculé."),
+     "Part des éléments d'une fiche effectivement documentés par nos sources. "
+     "Une faible complétude signale les angles morts du recensement ; quand un "
+     "point décisif manque, la note n'est pas devinée mais suspendue."),
     ("Utilité publique",
      "Reconnaissance officielle, par l'État, qu'un organisme ou un projet "
      "sert l'intérêt de la collectivité. Elle conditionne notamment le statut "
@@ -3210,13 +3216,13 @@ GLOSSAIRE = [
      "Indicateur complémentaire, non noté et non hiérarchique : il situe la "
      "chaîne du montage parmi cinq pôles, du commun libre et vivant à la "
      "propriété marchande, sans les classer. La protection effective du foncier est "
-     "mesurée à part, par l'axe 1 (le sol) de l'Indice ; la nature civile non "
-     "lucrative, par l'axe 2 (la structure)."),
+     "lue à part, par la porte du faisceau (le bien est-il soustrait au marché ?) "
+     "et le profil des six questions."),
     ("Modèle voisin",
      "Montage de référence — français ou étranger — proche de l'idéal de "
      "libération des terres, recensé à titre de comparaison. Les modèles "
-     "voisins ne sont pas notés par les grilles de l'annuaire : leur Indice "
-     "est estimé (axes posés éditorialement) et ils restent hors du classement "
+     "voisins ne sont pas notés par la grille de l'annuaire : ils restent "
+     "descriptifs et hors du classement "
      "principal."),
     ("Idéal-type",
      "Construction de référence qui décrit un montage sous sa forme la plus "
@@ -3234,9 +3240,9 @@ def render_glossaire(cfg):
         for term, defn in GLOSSAIRE)
     body = f"""<h1>Glossaire</h1>
 <p class="lead">Définitions simples des termes pivots employés dans l'annuaire.
-Pour le détail du calcul de l'Indice, voir la <a href="methode.html">Méthode</a>.</p>
+Pour le détail du calcul de la note, voir la <a href="methode.html">Méthode</a>.</p>
 <dl class="glossaire">{items}</dl>
-<p class="linkrow"><a href="methode.html">La méthode et le calcul de l'Indice →</a> ·
+<p class="linkrow"><a href="methode.html">La méthode et le calcul de la note →</a> ·
 <a href="regimes.html">Régimes et pôles du sol →</a> ·
 <a href="grilles.html">Grilles d'analyse →</a></p>
 <p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
@@ -3320,9 +3326,9 @@ def render_themes(all_sc, cfg):
 
     body = f"""{tri_defs(axes_cfg)}<h1>Thèmes transversaux</h1>
 <p class="lead">Les catalogues classent l'annuaire par rôle dans le montage ;
-le classement, par l'Indice. Cette page propose une troisième lecture, par
+le classement, par la note de libération. Cette page propose une troisième lecture, par
 sujet : à quoi sert la terre, et qui la porte. Un même montage peut relever de
-deux thèmes. <a href="methode.html">Comprendre l'Indice et les axes →</a></p>
+deux thèmes. <a href="methode.html">Comprendre la note et les six questions →</a></p>
 <nav class="page-toc" aria-label="Sommaire des thèmes">{toc}</nav>
 {bands_legend()}
 {''.join(sections)}
@@ -3564,7 +3570,7 @@ def render_index(all_sc, cfg, n_by_cat):
   ({n_hybride}) : des communs juridiquement solides, mais qu'un maillon, un usage
   rémunéré ou une condition encore non établie tient à distance du sommet — un
   horizon, non une case à remplir. Répartition de toutes les entrées notées par
-  palier d'Indice :</p>
+  palier de libération :</p>
   {hist}
 </section>
 
@@ -3577,7 +3583,7 @@ def render_index(all_sc, cfg, n_by_cat):
 <section>
   <h2 class="sec">Modèles voisins de référence</h2>
   <p class="lead">Des modèles proches — français et étrangers — recensés à titre
-  de comparaison. Hors classement principal, leur indice est <em>estimé</em>.
+  de comparaison. Hors classement principal, leur note est <em>estimée</em>.
   <a href="modeles.html">Voir les modèles voisins →</a></p>
 </section>"""
     site_desc = meta_desc(concepts["project"]["description"])
@@ -4232,7 +4238,7 @@ def render_dossier(dossier, cfg, by_uid, sc_by_uid):
     if lu and by_uid.get(lu):
         v = verdict_badge(compute_verdict(by_uid[lu], by_uid), cfg["concepts"])
         sc = sc_by_uid.get(lu)
-        idl = f" · Indice {sc['idl']}" if sc and sc.get("idl") is not None else ""
+        idl = f" · note {sc['idl']}" if sc and sc.get("idl") is not None else ""
         fiche_lien = (f'<aside class="dossier-fiche">{v}'
                       f'<span class="df-txt">Ce lieu est aussi analysé, à barème '
                       f'égal avec les autres, dans le catalogue{idl}. '
@@ -6117,6 +6123,197 @@ jamais saisi. <a href="suggerer.html">Nous écrire / droit de réponse →</a></
                 path="faisceau.html", link_gloss=False)
 
 
+def render_comms_pages(cfg):
+    """Pages d'accompagnement public (réserve @lumen #3) : ce que la note ne dit pas,
+    FAQ, exemples calculés, droit de réponse. HTML autonome (aucune dépendance markdown)."""
+    project = cfg["concepts"]["project"]
+    pages = []
+
+    # 1 — Ce que la note ne dit pas
+    b1 = """<h1>Ce que la note ne dit pas</h1>
+<p class="lead"><em>Une note tient sur un axe. Pour qu'elle serve sans tromper, il faut dire
+franchement tout ce qu'elle <strong>ne</strong> mesure pas.</em></p>
+<p class="prose"><strong>Elle ne dit pas si le lieu est réussi.</strong> Beau, accueillant, vivant,
+bien tenu au quotidien, utile à son territoire : rien de tout cela n'entre dans la note de libération.
+Un lieu admirable peut être à mi-chemin de la sortie du marché.</p>
+<p class="prose"><strong>Elle ne dit pas si le lieu est écologique.</strong> Ça, c'est le badge
+« Sanctuaire » 🌿, affiché <em>à côté</em> — exprès. Un lieu peut être un sanctuaire du vivant
+<strong>et</strong> avoir une note de libération basse (son usage n'est pas encore rendu) ; ou être très
+libéré <strong>sans</strong> badge (en ville, rien à agir pour le non-humain).</p>
+<p class="prose"><strong>Elle ne dit pas si le lieu est viable économiquement.</strong> La fragilité
+financière — pouvoir ne pas survivre — est un drapeau à part, jamais un point qui pénalise. On ne note
+pas la pauvreté.</p>
+<p class="prose"><strong>Elle ne classe pas des personnes.</strong> Elle situe un montage juridique.
+Derrière une note basse il n'y a pas des gens « moins bien » : il y a une architecture de droits qui
+n'a pas (encore) franchi telle marche.</p>
+<p class="prose"><strong>Elle ne compare pas les lieux en valeur.</strong> Deux lieux à la même note
+peuvent être deux réussites différentes — un commun de conservation et un commun habité ne se ressemblent
+pas. La note <em>situe</em> sur une échelle commune ; le profil et le point faible nommé disent le reste.</p>
+<p class="prose"><strong>Elle ne prétend pas être neutre.</strong> C'est une lecture argumentée selon un
+parti pris assumé (économie citoyenne, non lucrative, du vivant), avec des seuils datés et contestables
+— pas une mesure de laboratoire.</p>
+<p class="prose"><strong>Et quand elle ne sait pas, elle le dit.</strong> Un point non documenté reste
+« non établi », jamais comblé à votre désavantage ; si un point décisif manque, la note est
+<strong>suspendue</strong> plutôt que devinée.</p>
+<blockquote class="prose"><p>En une phrase : <strong>on note un degré de sortie du marché, pas un
+lieu.</strong></p></blockquote>
+<p class="prose backlink"><a href="methode.html">← La méthode</a> · <a href="faq.html">Questions
+fréquentes</a> · <a href="exemples.html">Trois exemples calculés</a></p>"""
+    pages.append(("ce-que-la-note-ne-dit-pas.html", "Ce que la note ne dit pas", b1,
+                  "Les limites assumées de la note de libération : ce qu'elle ne mesure pas."))
+
+    # 2 — FAQ
+    _faq = [
+        ("« Que mesure exactement votre note ? »",
+         "Une seule chose, nommée : <em>à quel point une terre est sortie du marché et rendue à celles et ceux qui l'usent.</em> C'est une coordonnée sur un axe — la libération — pas un jugement de valeur du lieu."),
+        ("« Pourquoi un lieu que j'aime a-t-il une note basse ? »",
+         "Parce que la note ne juge pas le lieu, mais <em>le degré de sortie du marché et de retour aux usagers</em>. Un lieu précieux, beau, utile, peut être à mi-chemin sur cet axe — et porter par ailleurs le badge « Sanctuaire », ou être un modèle de conservation. La note basse dit « le chemin n'est pas fini », pas « ce lieu vaut peu »."),
+        ("« Pourquoi un grand jardin protégé (le Conservatoire…) n'est-il pas tout en haut ? »",
+         "Parce qu'il protège la terre sans (encore) en rendre l'usage à un collectif autogéré. C'est une autre réussite, que nous signalons par le badge écologique « Sanctuaire », pas par la note de libération. Les deux s'affichent côte à côte exprès."),
+        ("« Vous comparez des lieux qui n'ont rien à voir — est-ce juste ? »",
+         "On ne dresse pas un palmarès qui dit « ce lieu est meilleur que celui-là ». On situe chaque montage sur une même échelle de libération, avec son profil et son point faible nommé. Deux lieux à la même note peuvent être deux réussites différentes ; la note les situe, elle ne les classe pas en valeur."),
+        ("« La note est-elle objective ? »",
+         "Non, et nous l'assumons. C'est une lecture argumentée selon un cadre explicite — une économie citoyenne, non lucrative, attentive au vivant — pas une mesure neutre. Les seuils sont datés, signés, contestables, et nous appelons la critique (voir la <a href=\"methode.html\">note de méthode</a>)."),
+        ("« Pourquoi certains lieux n'ont-ils pas de note du tout ? »",
+         "Parce qu'un point décisif (la sortie du marché, la durée d'usage, ou qui décide) est resté non établi — non documenté de notre côté. Dans ce cas nous suspendons la note plutôt que de deviner : nous affichons le palier atteint avec certitude et signalons le reste comme « non établi (en cours d'évaluation) ». Ce n'est pas un mauvais score — c'est un manque de pièces, jamais retenu à votre désavantage."),
+        ("« Vous risquez de décourager des porteurs de bonne foi. »",
+         "Notre but est l'inverse : montrer <em>où</em> le chemin de libération se poursuit, pas distribuer des mauvaises notes. Le point faible nommé est une indication de progression, pas une sanction ; et le badge honore ce qui est déjà accompli pour le vivant."),
+        ("« De quel droit notez-vous notre lieu sans nous demander ? »",
+         "Nous évaluons des montages juridiques et des faits publics — comment une terre est tenue en droit — pas des personnes ni des vies privées, à partir des informations publiquement disponibles. C'est une lecture documentaire, faillible, qui ne prétend pas détenir une vérité ; sa contrepartie est ferme : contact <strong>avant</strong> publication d'une fiche nommée, <a href=\"droit-de-reponse.html\">droit de réponse</a> sans retouche, et tout « non établi » levable sur pièce ou témoignage."),
+        ("« Qui produit ces évaluations — une IA ? »",
+         "Une lecture humaine, assumée et signée, aidée d'outils d'analyse (dont l'IA). La grille et chaque fiche engagent une responsabilité éditoriale nommée, pas un algorithme anonyme."),
+        ("« Et si vous vous trompez sur notre lieu ? »",
+         "Écrivez-nous : vous avez un <a href=\"droit-de-reponse.html\">droit de réponse</a>. On corrige tout fait prouvé, on lève un « non établi » sur pièce ou sur témoignage, et votre réponse libre est reproduite sans retouche, en tête de la fiche. Avant toute publication d'une fiche nommée, le lieu est contacté d'abord."),
+        ("« Vos seuils peuvent-ils changer ? »",
+         "Oui. Ce sont une convention publique datée (2026), révisable ; tout amendement argumenté est versé au <a href=\"changelog.html\">journal des versions</a>. La grille évolue au grand jour, pas en douce."),
+    ]
+    b2 = '<h1>Questions fréquentes sur la note</h1>\n<p class="lead">On note un degré de sortie du marché, pas un lieu. Voici les questions qui reviennent — et nos réponses, fermes et faillibles.</p>\n'
+    b2 += "".join(f'<section class="faq-q"><h3>{q}</h3><p class="prose">{a}</p></section>\n' for q, a in _faq)
+    b2 += '<p class="prose backlink"><a href="methode.html">← La méthode</a> · <a href="ce-que-la-note-ne-dit-pas.html">Ce que la note ne dit pas</a> · <a href="droit-de-reponse.html">Droit de réponse</a></p>'
+    pages.append(("faq.html", "Questions fréquentes", b2,
+                  "Questions fréquentes sur la note de libération."))
+
+    # 3 — Exemples calculés
+    def _qrow(q, sym, why):
+        return f'<tr><td>{q}</td><td class="num">{sym}</td><td>{why}</td></tr>'
+    t1 = "".join([
+        _qrow("Le milieu", "○", "Immeuble urbain ; rien d'agi sur le sol / l'eau."),
+        _qrow("Le vivant", "○", "Rien d'aménagé pour le non-humain."),
+        _qrow("L'ouverture", "◐", "Coopérative ouverte sur le quartier, mais d'abord pour ses habitants."),
+        _qrow("Le don", "◐", "<strong>Point faible.</strong> L'accès reste une redevance ; le logement n'est pas « donné »."),
+        _qrow("La durée", "●", "Les habitants peuvent rester (bail coopératif stable)."),
+        _qrow("La voix", "●", "Une voix par personne ; ils décident vraiment."),
+    ])
+    t2 = "".join([
+        _qrow("Le milieu", "●", "Remarquablement préservé (jardin de conservation)."),
+        _qrow("Le vivant", "●", "Biodiversité protégée, gestion écologique attestée."),
+        _qrow("L'ouverture", "●", "Lieu ouvert au public, vocation pédagogique."),
+        _qrow("Le don", "○", "L'accès est payant (billet d'entrée)."),
+        _qrow("La durée", "◐", "Personnel et gestionnaires, pas une communauté d'usagers qui « reste »."),
+        _qrow("La voix", "○", "<strong>Point faible.</strong> Géré d'en haut (établissement), pas par ses usagers."),
+    ])
+    t3 = "".join([
+        _qrow("Le milieu", "●", "Obligation Réelle Environnementale signée fin 2024."),
+        _qrow("Le vivant", "●", "Démarche Oasis de Biodiversité ; place effective au vivant."),
+        _qrow("L'ouverture", "●", "Écolieu intergénérationnel ouvert, à vocation d'intérêt général."),
+        _qrow("Le don", "?", "Régime d'accès et d'usage non documenté par nos sources."),
+        _qrow("La durée", "?", "<strong>Décisive.</strong> La nature et la durée du titre d'usage ne sont pas attestées."),
+        _qrow("La voix", "●", "<strong>Décisive.</strong> Collectif intergénérationnel autogéré ; gouvernance réelle."),
+    ])
+    _thead = '<thead><tr><th>Question</th><th class="num"></th><th>Pourquoi</th></tr></thead>'
+    b3 = f"""<h1>Comment on arrive à une note — trois exemples, pas à pas</h1>
+<p class="lead"><em>On ne demande pas de nous croire sur parole. Voici, déroulée, la lecture de trois lieux
+très différents. À chaque fois la même marche : la porte (sortir du marché ? sinon, rien ne commence),
+puis six questions du lieu vers le groupe, puis on se place sur l'échelle au point le plus faible, et on
+dit ce qu'on n'a pas pu vérifier.</em></p>
+<blockquote class="prose"><p>marchand (0-20) → sorti du marché (20-50) → autogéré (50-75) → usage libéré
+(75-90) → commun vivant (90-100)</p></blockquote>
+<p class="prose">Et le badge « Sanctuaire » 🌿 (l'écologie) est à côté de la note, jamais dedans.</p>
+<h2 class="sec">Exemple 1 — un lieu haut : Le Village Vertical <span class="enclair">(coopérative d'habitants, Villeurbanne)</span></h2>
+<p class="prose"><strong>La porte — franchie.</strong> Les parts sont au nominal, sans plus-value à la
+revente ; personne ne capte la valeur du bâti. → <em>on entre sur l'échelle.</em></p>
+<table class="rank-tbl small">{_thead}<tbody>{t1}</tbody></table>
+<p class="prose"><strong>On se place.</strong> Porte ● + voix ● + durée ● → palier <strong>autogéré</strong>
+(50-75). Le don n'est que ◐ → on ne franchit pas <em>usage libéré</em>. Le milieu ○ et le vivant ○ ne
+situent pas dans le palier : ils ne font que fermer le badge. La position suit la plus faible des
+questions du chemin — ici le don (◐). → <strong>Libération 60-66 · commun autogéré · pas de badge.</strong>
+Point faible : le don. <em>Un lieu où l'on décide et où l'on reste, mais où habiter se paie encore.</em></p>
+<h2 class="sec">Exemple 2 — l'écologie n'est pas la note : Le Domaine du Rayol <span class="enclair">(Conservatoire du littoral)</span></h2>
+<p class="prose"><strong>La porte — franchie, pour toujours.</strong> Domaine public inaliénable : la
+valeur est soustraite à toute revente, définitivement. → <em>on entre sur l'échelle.</em></p>
+<table class="rank-tbl small">{_thead}<tbody>{t2}</tbody></table>
+<p class="prose"><strong>On se place.</strong> Porte ● mais la voix est ○ : l'usage n'est pas rendu à un
+collectif. On reste au palier <strong>sorti du marché</strong> (20-50). → <strong>Libération ≈ 45 · commun
+institué · 🌿🌿 Sanctuaire.</strong> Point faible : la voix. <em>Le lieu est écologiquement exemplaire — d'où
+le badge fort — et sa note de libération est basse, parce que l'usage n'est pas encore rendu. Les deux
+informations cohabitent ; aucune n'efface l'autre.</em></p>
+<h2 class="sec">Exemple 3 — quand on ne sait pas : on suspend, on n'invente pas <span class="enclair">(cas type : L'Aube)</span></h2>
+<p class="prose"><strong>La porte — franchie.</strong> Donation à un fonds de dotation : la valeur est
+soustraite au marché. → <em>on entre sur l'échelle.</em></p>
+<table class="rank-tbl small">{_thead}<tbody>{t3}</tbody></table>
+<p class="prose"><strong>On se place — et on s'arrête.</strong> La durée (le titre d'usage) est une question
+décisive, et elle est non établie. La règle : on ne devine pas une décisive. → la note est
+<strong>suspendue</strong>. On affiche seulement le palier atteint avec certitude (sorti du marché) et on
+marque les « ? » comme une dette datée. → <strong>Type : sorti du marché — sommet non attesté · note
+suspendue · 🌿🌿 Sanctuaire.</strong></p>
+<blockquote class="prose"><p><strong>La suspension est une honnêteté, pas une faiblesse.</strong> Mieux
+vaut dire « nous n'avons pas la pièce » que prêter une note que les sources ne fondent pas — appliqué sans
+exception, au plus connu comme au plus discret.</p></blockquote>
+<p class="prose"><em>Les chiffres ci-dessus sont des illustrations de méthode ; chaque fiche réelle est
+calculée et sourcée pièce par pièce, et ouverte au <a href="droit-de-reponse.html">droit de réponse</a>.</em></p>
+<p class="prose backlink"><a href="methode.html">← La méthode</a> · <a href="ce-que-la-note-ne-dit-pas.html">Ce que la note ne dit pas</a></p>"""
+    pages.append(("exemples.html", "Trois exemples calculés", b3,
+                  "Trois exemples déroulés pas à pas : comment on arrive à une note de libération."))
+
+    # 4 — Droit de réponse
+    b4 = """<h1>Droit de réponse</h1>
+<p class="lead"><em>Nous évaluons des montages juridiques, sur des faits publics, selon un cadre explicite.
+Nous pouvons nous tromper, ou manquer une pièce. Cette page vous donne les moyens de corriger, compléter
+ou répondre — et nous engage sur la manière dont nous traitons votre demande.</em></p>
+<h2 class="sec">Avant toute publication d'une fiche nommée</h2>
+<p class="prose"><strong>Tout lieu nommé est contacté avant la mise en ligne de sa fiche</strong> — pas
+seulement ceux dont l'évaluation évolue à la baisse. Vous disposez d'un délai pour répondre, corriger ou
+compléter <strong>avant</strong> publication ; la fiche n'est pas mise en ligne pendant cette fenêtre.
+<em>(Nous ne parlons pas de « classe » ni de « niveau » : une évaluation qui change est une lecture qui
+s'affine sur pièces, pas un bulletin.)</em></p>
+<h2 class="sec">Ce que vous pouvez demander</h2>
+<ol class="prose">
+<li><strong>La correction d'un fait.</strong> Apportez la preuve (statuts, bail, acte, délibération…) :
+nous rectifions et datons la correction, visible dans l'historique de la fiche.</li>
+<li><strong>L'ajout d'une pièce qui lève un « non établi ».</strong> Un point que nos sources ne
+documentaient pas peut être attesté par écrit <em>ou</em> par témoignage / visite — pour ne pas pénaliser
+les lieux discrets, qui ne communiquent pas mais existent. La case passe de « non établi » à sa valeur
+réelle.</li>
+<li><strong>Une réponse libre.</strong> Jusqu'à un format court, reproduite sans retouche, en tête de
+votre fiche — que vous soyez d'accord ou non avec notre lecture. <em>(Seule réserve : nous ne pouvons pas
+mettre en ligne un contenu manifestement illégal ; nous vous le signalerions pour reformulation.)</em></li>
+</ol>
+<h2 class="sec">Ce que nous ne ferons pas</h2>
+<ul class="prose">
+<li>Retirer une évaluation fondée sur des faits publics au seul motif qu'elle déplaît (mais votre réponse
+libre est toujours affichée à côté).</li>
+<li>Modifier une note sans pièce : un désaccord d'appréciation se discute, un fait se prouve.</li>
+<li>Réécrire votre réponse : elle paraît telle quelle.</li>
+</ul>
+<h2 class="sec">Comment nous écrire</h2>
+<p class="prose">Indiquez : le <strong>lieu concerné</strong>, le <strong>point visé</strong> (la porte,
+l'une des six questions, le badge, ou un fait descriptif), <strong>ce que vous demandez</strong>
+(correction / ajout de pièce / réponse libre), et la <strong>pièce ou le témoignage</strong> s'il y en a
+un. → <a href="suggerer.html">Nous écrire</a>.</p>
+<h2 class="sec">Notre engagement de délai</h2>
+<p class="prose">Accusé de réception sous quelques jours ouvrés ; instruction d'une correction factuelle
+prouvée <strong>avant</strong> toute (re)publication de la fiche concernée ; réponse libre mise en ligne
+rapidement après vérification (légalité uniquement, pas le fond).</p>
+<p class="prose backlink"><a href="methode.html">← La méthode</a> · <a href="faq.html">Questions fréquentes</a></p>"""
+    pages.append(("droit-de-reponse.html", "Droit de réponse", b4,
+                  "Droit de réponse : corriger un fait, lever un « non établi », répondre sans retouche."))
+
+    out = []
+    for fname, title, body, desc in pages:
+        out.append((fname, page(title, body, "methode.html", depth=0, project=project,
+                                 description=desc, path=fname)))
+    return out
+
 def main():
     global BASE_URL
     cfg = load_config()
@@ -6239,6 +6436,8 @@ def main():
     write(SITE / "grilles.html", render_grilles(cfg))
     write(SITE / "glossaire.html", render_glossaire(cfg))
     write(SITE / "methode.html", render_methode(cfg, n_by_cat, all_sc))
+    for _cfn, _chtml in render_comms_pages(cfg):
+        write(SITE / _cfn, _chtml)
     write(SITE / "faisceau.html", render_faisceau(fiches, cfg, project=None))
     write(SITE / "themes.html", render_themes(all_sc, cfg))
     write(SITE / "comparer.html", render_comparer(all_sc, cfg))
