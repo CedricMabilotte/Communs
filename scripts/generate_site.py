@@ -1054,7 +1054,7 @@ def axis_triangle(axes_cfg, axes_scores, size=_TRI_SIZE, compact=False):
     # confondent au centre et le polygone devient auto-sécant. On ne trace alors
     # pas la zone remplie — seulement le cadre et une mention « profil
     # incomplet ». Les barres d'axe chiffrées, elles, restent inchangées.
-    degenere = len(missing) >= 2
+    degenere = (len(axes_cfg) - len(missing)) < 3
 
     # arêtes du polygone : hachurer celles qui touchent un sommet absent (None)
     # pour signaler une donnée indéterminée plutôt qu'un score nul.
@@ -2401,6 +2401,7 @@ def render_classement(all_sc, cfg):
         rows.append(f"""<tr data-cat="{cat}">
   <td class="rank">{i}</td>
   <td class="name"><a href="{href}">{e(f['nom'])}</a>
+      {ctx_labels_html(f, "")}
       <span class="row-sub">{e(clean(f.get('sous_titre','')))}</span></td>
   <td><span class="tag tag-{cat}">{catlabel.get(cat,cat)}</span></td>
   <td><span class="pal-chip" style="--pal:{v['bcol']}">{e(v['label'])}</span></td>
