@@ -151,12 +151,17 @@ sources:
   - titre: "Des logements sociaux à Flocques — Réseau des Maisons de l'Architecture"
     url: "https://www.ma-lereseau.org/panorama-des-images/des-logements-sociaux-flocques"
 
+  - titre: "Mise en service de 12 logements sociaux écologiques à Flocques — Amundi/OneHeart"
+    url: "https://amundi.oneheart.fr/articles/retour-sur-la-mise-en-service-de-12-logements-sociaux-ecologiques-a-flocques-76-par-l-informateur-d-eu--24943"
+  - titre: "Gouvernance — Foncière Chênelet (SAS, ESUS)"
+    url: "https://fonciere-chenelet.org/gouvernance/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: partiel
     voie: nature_porteur
     note: 'Le terrain (le sol) reste propriété de la commune de Flocques, personne
       publique, et n''est pas mobilisable sur le marché : c''est ce maillon foncier

@@ -146,12 +146,15 @@ sources:
   - titre: "GAEC Les P'tites Berouettes — boutique en ligne"
     url: "https://lesptitesberouettes.fr/"
 
+  - titre: "Les Petites Bérouettes — Fermes Terre de Liens (Foncière TdL ; collecte en cours)"
+    url: "https://fermes.terredeliens.org/bretagne/fermes-de-la-region-bretagne/les-petites-berouettes/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: Le foncier a été acquis en 2022 par la Foncière Terre de Liens, structure
       non spéculative, et retiré du marché.

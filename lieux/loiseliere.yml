@@ -146,27 +146,29 @@ sources:
   - titre: "L'Oiselière — Terre de Liens"
     url: "https://terredeliens.org/l-oiseliere.html"
 
+  - titre: "La Foncière — Terre de Liens (SCA, bail rural environnemental)"
+    url: "https://terredeliens.org/la-fonciere.html"
+  - titre: "C Côme Cochon (exploitant, plein air, l'Oiselière à Ver)"
+    url: "https://www.aurendezvousdesnormands.fr/c-come-cochon"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Quarante hectares ont été acquis par la Foncière Terre de Liens et retirés
       du marché ; le bâti et deux hectares restent en propriété privée de l'exploitant.
   questions:
     milieu:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: Aucune clause environnementale au bail rural, ORE ou statut d'espace protégé
-        n'est documenté pour le foncier de la ferme.
+      note: 'Terre de Liens loue par défaut via bail rural environnemental, mais aucune source ne l''atteste pour ce lieu précis : non établi plutôt qu''affirmé.'
     vivant:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: L'élevage en plein air sur dix hectares est favorable au vivant, mais
-        l'existence d'éléments dédiés (haies, mares, continuités écologiques) n'est
-        pas documentée par les sources.
+      note: 'Élevage plein air favorable au vivant, mais aucun aménagement dédié (haies, mares) documenté pour ce lieu : non établi, pas un zéro.'
     ouverture:
       valeur: oui
       maillon: chaine

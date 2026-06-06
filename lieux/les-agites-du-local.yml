@@ -154,12 +154,17 @@ sources:
   - titre: "Les Agités du Local (SIREN 852581404) — societe.com"
     url: "https://www.societe.com/societe/les-agites-du-local-852581404.html"
 
+  - titre: "CLIP — Les lieux (Les Agités du local parmi les 17 lieux)"
+    url: "https://clip.ouvaton.org/les-projets/"
+  - titre: "Qu'est-ce que le CLIP ?"
+    url: "https://clip.ouvaton.org/quest-ce-que-le-clip/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: 'L''appartenance au CLIP vise à soustraire le foncier au marché ; mais l''association
       propriétaire et le dispositif anti-revente ne sont pas documentés pour Saleix

@@ -143,28 +143,29 @@ sources:
   - titre: "La Foncière Antidote — La Maison Blanche de l'Antre Toit (collecte)"
     url: "https://www.helloasso.com/associations/la-fonciere-antidote/collectes/la-maison-blanche-de-l-antre-toit"
 
+  - titre: "La foncière Antidote : un fonds de dotation pour pérenniser les luttes (dotation non consomptible, baux 99 ans) — Socialter"
+    url: "https://www.socialter.fr/article/la-fonciere-antidote-fond-dotation-lutte"
+  - titre: "La Foncière Antidote — Terre de Liens RéCiFAc"
+    url: "https://ressources.terredeliens.org/recifac/la-fonciere-antidote"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: pour_toujours
     voie: nature_porteur
     note: La propriété de la maison est acquise par le fonds de dotation Antidote,
       structure non spéculative qui la détient hors marché.
   questions:
     milieu:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: Aucun dispositif de protection durable et opposable du milieu (clause
-        environnementale au bail, ORE, statut protégé) n'est documenté pour cette
-        maison urbaine de Gaillac.
+      note: 'Maison urbaine ; le critère a peu de prise et aucune clause/aménagement n''est documenté : non établi plutôt qu''absence avérée.'
     vivant:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: À l'échelle d'un lieu d'habitat urbain, l'existence d'une cour, d'un pied
-        d'immeuble végétalisé ou de tout espace laissé au vivant n'est pas documentée
-        par les sources.
+      note: 'À l''échelle d''un habitat urbain, l''existence d''un espace laissé au vivant n''est pas documentée : non établi.'
     ouverture:
       valeur: oui
       maillon: chaine
