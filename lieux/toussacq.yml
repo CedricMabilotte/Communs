@@ -133,8 +133,13 @@ sources:
   - titre: "Toussacq — Fermes Terre de Liens"
     url: "https://fermes.terredeliens.org/ile-de-france/fermes-de-la-r%C3%A9gion-ile-de-france/toussacq/"
 
+  - titre: "Les Champs des Possibles — L'ambitieux programme d'agroforesterie de Toussacq"
+    url: "https://www.leschampsdespossibles.fr/lambitieux-programme-dagroforesterie-de-toussacq/"
+  - titre: "Les Champs des Possibles — Nouvelle organisation et gouvernance (SCIC-SA, juin 2024)"
+    url: "https://www.leschampsdespossibles.fr/nouvelle-organisation-et-gouvernance-aux-champs-des-possibles/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
@@ -144,17 +149,19 @@ evaluation:
       non spéculative, et retiré du marché spéculatif.
   questions:
     milieu:
+      valeur: partiel
+      maillon: lieu
+      note: 'Pratiques agroécologiques accompagnées attestées, mais aucune clause
+        environnementale opposable propre au bail de Toussacq n''est documentée sur source
+        publique (le bail rural environnemental relève de la pratique générique Terre de
+        Liens, non d''un acte propre au lieu) : lecture au point faible, partiel.'
+    vivant:
       valeur: oui
       maillon: lieu
-      note: 'Ferme de polyculture-élevage et couveuse agricole conduites selon des
-        pratiques accompagnées d''installation agroécologique : des pratiques de maintien
-        attestées, sans logique extractive.'
-    vivant:
-      valeur: non
-      maillon: lieu
-      note: La ferme est un site de polyculture-élevage de 74 hectares, mais aucun
-        aménagement explicite en faveur du vivant (haies, mares, continuités écologiques)
-        n'est documenté par les sources.
+      note: 'Programme d''agroforesterie documenté depuis novembre 2022 : ~7 500 arbres
+        et arbustes plantés sur ~4 km de haies, conçues comme brise-vent et « refuges de
+        biodiversité », étagement des floraisons pour les pollinisateurs (partenariat
+        Agrof''île / Terre de Liens IDF) — une place explicite au non-humain est attestée.'
     ouverture:
       valeur: oui
       maillon: chaine

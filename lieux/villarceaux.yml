@@ -163,8 +163,15 @@ sources:
   - titre: "Sanson et Calame, Courrier de l'environnement de l'INRA n°64 (2014) — La Bergerie de Villarceaux, un laboratoire pour une transition agricole"
     url: "https://www.bergerie-villarceaux.org/wp-content/uploads/2022/08/article_bergerie_2014_Sanson_Calame.pdf"
 
+  - titre: "Mémoire A. Roux — Les Obligations Réelles Environnementales (projet d'ORE « puits du bois », Chaussy)"
+    url: "https://www.bergerie-villarceaux.org/wp-content/uploads/2024/08/Memoire-Alexandre-Roux-Les-Obligations-Reelles-Environnementales.pdf"
+  - titre: "Écosite de Villarceaux — accueil et commodat"
+    url: "https://ecosite-villarceaux.org/"
+  - titre: "Agroof — Bergerie de Villarceaux, agroforesterie et R&D"
+    url: "https://agroof.net/recherche/fichesRD/bergerieVillarceaux.html"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
@@ -176,10 +183,11 @@ evaluation:
     milieu:
       valeur: partiel
       maillon: lieu
-      note: Le domaine est inclus dans le Parc naturel régional du Vexin français,
-        cadre de protection sans portée directement contraignante sur le foncier ;
-        aucun dispositif opposable spécifique (ORE, classement, clause au bail) n'est
-        documenté.
+      note: 'Domaine inclus dans le Parc naturel régional du Vexin français (cadre
+        sans portée directement contraignante sur le foncier) ; une obligation réelle
+        environnementale est à l''étude (projet sur la ressource en eau, « puits du bois »
+        à Chaussy, via le Centre d''Écodéveloppement) mais non signée ni opposable à ce
+        jour : partiel.'
     vivant:
       valeur: oui
       maillon: lieu
@@ -210,6 +218,8 @@ evaluation:
     voix:
       valeur: non_etabli
       maillon: usage
-      note: Les modalités de décision entre fondation, exploitation et association
-        ne sont pas documentées par les sources.
+      note: 'L''indépendance décisionnelle de l''EARL vis-à-vis de la FPH depuis 2006
+        est attestée, mais c''est une séparation propriétaire/exploitant — aucune instance
+        d''autogouvernance des usager·es du lieu n''est documentée : non établi (on ne
+        devine pas une décisive), ce n''est pas un « non ».'
       decisive: true

@@ -136,8 +136,15 @@ sources:
   - titre: "Le Labo de l'ESS — Le Village Vertical de Villeurbanne, un habitat solidaire et non spéculatif"
     url: "https://www.lelabo-ess.org/le-village-vertical-de-villeurbanne-un-habitat-solidaire-et-non-speculatif"
 
+  - titre: "Institut Paris Région — Un projet pionnier d'habitat coopératif : le Village Vertical"
+    url: "https://www.institutparisregion.fr/societe-et-habitat/habitat-et-logement/habiter-autrement/un-projet-pionnier-dhabitat-cooperatif-le-village-vertical-a-villeurbanne/"
+  - titre: "RECMA — « Ni propriétaires, ni locataires : coopérateurs »"
+    url: "http://www.recma.org/actualite/ni-proprietaires-ni-locataires-cooperateurs"
+  - titre: "Reporterre — Le Village vertical, précurseur des coopératives d'habitants"
+    url: "https://reporterre.net/C-est-genial-de-vivre-la-Le-Village-vertical-precurseur-des-cooperatives-d-habitants"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

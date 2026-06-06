@@ -139,8 +139,13 @@ sources:
   - titre: "Le Hameau des Buis — site officiel"
     url: "https://hameaudesbuis.org/"
 
+  - titre: "L'école du terrain — La coopérative d'habitantEs (contrat de résident, loyer au marché, prêts à la structure)"
+    url: "https://lecoleduterrain.fr/maniere-de-faire/la-cooperative-dhabitantes/"
+  - titre: "Hameau des Buis — Épargne éthique et solidaire (prêts non spéculatifs)"
+    url: "https://hameaudesbuis.org/epargne-ethique-et-solidaire/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
@@ -168,10 +173,12 @@ evaluation:
       note: Habitat intergénérationnel, ferme-école et pédagogie servent un intérêt
         dépassant les seuls résidents.
     don:
-      valeur: non_etabli
+      valeur: non
       maillon: chaine
-      note: Le régime d'accès aux logements et aux fruits du lieu (gratuité, contribution,
-        tarification) n'est pas documenté par les sources.
+      note: 'Chaque résident·e signe un « contrat de résident » assorti d''un montant
+        mensuel « correspondant au marché locatif local » : l''accès relève d''une
+        redevance au prix du marché, non du don (en contrepartie, les habitant·es ont
+        prêté à la structure d''intérêt général).'
     duree:
       valeur: non_etabli
       maillon: usage

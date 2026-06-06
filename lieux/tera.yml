@@ -146,8 +146,15 @@ sources:
   - titre: "TERA — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/tera/"
 
+  - titre: "Wiki TERA — Structures juridiques (terres à titre gracieux ; ferme louée à la Coop du Tilleul ; SCI donnée au fonds SDH 2017)"
+    url: "https://wiki.tera.coop/tera:structures_juridiques"
+  - titre: "Fonds SDH — TERA, un écosystème coopératif territorial"
+    url: "https://sdh-lefonds.org/tera/"
+  - titre: "Avise — Portrait de TERA (gouvernance)"
+    url: "https://www.avise.org/portraits/tera"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
