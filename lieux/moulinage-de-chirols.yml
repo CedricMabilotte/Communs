@@ -252,8 +252,13 @@ sources:
   - titre: "Copains des bois — Le moulinage de Chirols, un projet de fous (SCOP, anti-spéculation)"
     url: "https://copindesbois.fr/paysage/moulinage-de-chirols/"
 
+  - titre: "Statuts SAS coopérative — Le Moulinage de Chirols (PDF public)"
+    url: "https://lemoulinagedechirols.org/wp-content/uploads/2018/12/Statuts-Coop%C3%A9rative-SAS-Le-moulinage-de-Chirols-.pdf"
+  - titre: "Charte du collectif du Moulinage de Chirols (nov. 2021)"
+    url: "https://lemoulinagedechirols.org/wp-content/uploads/2021/11/La-Charte-du-collectif-du-Moulinage-de-Chirols-novembre-2021.pdf"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

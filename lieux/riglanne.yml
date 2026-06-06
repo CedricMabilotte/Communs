@@ -145,8 +145,11 @@ sources:
   - titre: "Riglanne — Terre de Liens Pays de la Loire"
     url: "https://terredeliens-paysdelaloire.org/les-fermes/riglanne/"
 
+  - titre: "Riglanne — Terre de Liens Pays de la Loire (transmission 2025, GAEC)"
+    url: "https://terredeliens-paysdelaloire.org/les-fermes/riglanne/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel

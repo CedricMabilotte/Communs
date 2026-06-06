@@ -138,8 +138,11 @@ sources:
   - titre: "Communauté Longo Maï de Treynas — Réseau pour les Alternatives Forestières"
     url: "https://www.alternativesforestieres.org/Communaute-Longo-Mai-de-Treynas-356"
 
+  - titre: "Communauté Longo Maï de Treynas — Réseau Alternatives Forestières"
+    url: "https://www.alternativesforestieres.org/Communaute-Longo-Mai-de-Treynas-356"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

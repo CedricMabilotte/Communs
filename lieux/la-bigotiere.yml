@@ -158,8 +158,13 @@ sources:
   - titre: "Société LA BIGOTIERE — Pappers (objet : société civile d'attribution)"
     url: "https://www.pappers.fr/entreprise/la-bigotiere-821271442"
 
+  - titre: "Immersion à la Bigotière, habitat partagé (montage société civile d'attribution) — France 3"
+    url: "https://france3-regions.franceinfo.fr/bretagne/ille-et-vilaine/vivre-ensemble-immersion-a-la-bigotiere-un-habitat-partage-ou-douze-quinquagenaires-se-la-jouent-collectif-2045236.html"
+  - titre: "Le Ruisseau coopérative — habitat participatif"
+    url: "https://leruisseau-coop.bzh/habitat-participatif/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: non

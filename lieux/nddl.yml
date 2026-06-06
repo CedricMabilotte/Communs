@@ -126,23 +126,33 @@ sources:
   - titre: "ZAD Nadir — Fonds de dotation La Terre en commun"
     url: "https://zad.nadir.org/spip.php?article6260="
 
+  - titre: "Feu vert du département sur la rétrocession des terres (baux emphytéotiques 25 ans, 10/10/2024) — Terre-net"
+    url: "https://www.terre-net.fr/idees-et-debats/article/146613/feu-vert-du-departement-sur-la-retrocession-des-terres"
+  - titre: "La lutte pour l'usage des terres à NDDL — Multitudes 2023"
+    url: "https://shs.cairn.info/revue-multitudes-2023-3-page-129?lang=fr"
+  - titre: "ZNIEFF Bocage humide au sud de NDDL — INPN"
+    url: "https://inpn.mnhn.fr/zone/znieff/520620013"
+  - titre: "Assemblée des Usages, gouvernance du fonds — encommun.eco"
+    url: "https://encommun.eco/fonds-de-dotation/gouvernance-et-fonctionnement"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
-    valeur: oui
-    cran: a_terme
+    valeur: partiel
+    cran: solide
     voie: nature_porteur
-    note: Le fonds de dotation acquiert bâtis et terres pour les soustraire à l'appropriation
-      privée.
+    note: 'Le foncier de l''ex-ZAD a été rétrocédé pour l''essentiel au Conseil départemental
+      de Loire-Atlantique (propriété publique, soustraite de fait mais aliénable en droit) ;
+      le fonds de dotation « La Terre en commun » n''a acquis que des bâtis ponctuels. La
+      soustraction au marché est solide, non « pour toujours ».'
   questions:
     milieu:
-      valeur: partiel
+      valeur: oui
       maillon: lieu
-      note: Les terres agricoles de la commune sont depuis 2019 dans un périmètre
-        de protection des espaces agricoles et naturels, qui freine l'urbanisation
-        ; mais aucun dispositif opposable spécifique (ORE, classement) attaché aux
-        terres du fonds de dotation n'est documenté.
+      note: 'Bocage humide en ZNIEFF et zone humide protégée par la loi ; surtout, les
+        baux signés sont des baux ruraux environnementaux — clauses environnementales
+        opposables attachées aux terres exploitées.'
     vivant:
       valeur: oui
       maillon: lieu
@@ -161,14 +171,17 @@ evaluation:
         et de partage, mais le régime précis d'accès au lieu et à ses fruits n'est
         pas documenté.
     duree:
-      valeur: non_etabli
+      valeur: oui
       maillon: usage
-      note: La nature et la durée des titres d'usage des collectifs d'habitant·es
-        ne sont pas documentées ; les conventions d'usage ne sont pas confirmées.
+      note: 'Le 10 octobre 2024, la commission permanente du Département a validé des
+        baux emphytéotiques de 25 ans au profit d''associations de représentants des
+        usagers, sur plusieurs secteurs ; s''y ajoutent des baux ruraux de 9 ans
+        renouvelables. Titre d''usage long désormais établi par acte public.'
       decisive: true
     voix:
-      valeur: partiel
+      valeur: oui
       maillon: usage
-      note: L'usage relève de collectifs d'habitant·es, mais l'articulation avec la
-        gouvernance du fonds n'est pas documentée.
+      note: 'L''usage est porté par des associations de représentants des usagers,
+        titulaires des baux emphytéotiques 2024, et l''Assemblée des Usages gouverne
+        collectivement : autogouvernance des usagers réelle et formalisée.'
       decisive: true

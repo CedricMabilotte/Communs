@@ -135,8 +135,15 @@ sources:
   - titre: "Association Longo Maï — Wikipédia"
     url: "https://fr.wikipedia.org/wiki/Association_Longo_Ma%C3%AF"
 
+  - titre: "Une révolution vivante depuis 50 ans — Revue Silence n°527"
+    url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/une-revolution-vivante-depuis-50-ans"
+  - titre: "L'exceptionnelle longévité de Longo Maï — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/articles/lexceptionnelle-longevite-de-longo-mai/"
+  - titre: "Coopérative européenne Longo Maï — Wikipédia (Fonds de Terre Européenne, inaliénabilité)"
+    url: "https://fr.wikipedia.org/wiki/Coop%C3%A9rative_europ%C3%A9enne_Longo_Ma%C3%AF"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

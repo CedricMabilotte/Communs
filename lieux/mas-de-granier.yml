@@ -139,8 +139,11 @@ sources:
   - titre: "Le Mas de Granier, une ferme collective qui nourrit des luttes — Revue Silence"
     url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/le-mas-de-granier-une-ferme-collective-qui-nourrit-des-luttes"
 
+  - titre: "Le Mas de Granier, une ferme collective qui nourrit des luttes — Revue Silence"
+    url: "https://www.revuesilence.net/numeros/527-Vivre-et-resister-a-Longo-Mai/le-mas-de-granier-une-ferme-collective-qui-nourrit-des-luttes"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

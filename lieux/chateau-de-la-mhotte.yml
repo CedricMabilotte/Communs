@@ -146,20 +146,25 @@ sources:
   - titre: "École Steiner-Waldorf de la Mhotte — site officiel"
     url: "https://www.lamhotte.fr/"
 
+  - titre: "Les projets de sanctuarisation — Fraternité pour Demain"
+    url: "https://fraternitepourdemain.org/les-projets-de-sanctuarisation/"
+  - titre: "Fonds de dotation Fraternité pour Demain (SIREN 911307734) — Pappers"
+    url: "https://www.pappers.fr/entreprise/fonds-de-dotation-fraternite-pour-demain-911307734"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: solide
     voie: nature_porteur
     note: Le domaine a été acquis en 2026 par le fonds de dotation Fraternité pour
       Demain, structure non lucrative qui le porte hors marché.
   questions:
     milieu:
-      valeur: oui
+      valeur: non_etabli
       maillon: lieu
-      note: 'Une Obligation Réelle Environnementale inscrit l''engagement écologique
+      note: 'L''Obligation Réelle Environnementale n''est attestée que par la communication du réseau Oasis, sans acte public consultable : par méfiance de méthode, non établi plutôt qu''affirmé. (Engagement écologique
         dans le droit du lieu : dispositif opposable et durable de protection du milieu.'
     vivant:
       valeur: oui

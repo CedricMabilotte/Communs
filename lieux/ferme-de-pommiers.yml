@@ -143,12 +143,17 @@ sources:
   - titre: "La collecte de dons pour la ferme de Pommiers est lancée ! — Terre de Liens"
     url: "https://terredeliens.org/rhone-alpes/actu/la-collecte-de-dons-pour-la-ferme-de-pommiers-est-lancee-10-12-2018/"
 
+  - titre: "La Ferme de Pommiers — Fermes Terre de Liens"
+    url: "https://fermes.terredeliens.org/rhone-alpes/fermes-de-la-r%C3%A9gion-rh%C3%B4ne-alpes/la-ferme-de-pommiers/"
+  - titre: "Transmettre sa ferme d'élevage avec Terre de Liens — Web-agri"
+    url: "https://www.web-agri.fr/installation-transmission/article/144560/transmettre-sa-ferme-d-elevage-avec-terre-de-liens"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: Le foncier est porté hors marché par la Fondation Terre de Liens, fondation
       reconnue d'utilité publique non spéculative, par donation et acquisition complémentaire.

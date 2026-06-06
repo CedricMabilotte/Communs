@@ -150,8 +150,13 @@ sources:
   - titre: "Écolectif — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/ecolectif/"
 
+  - titre: "SCI Terres d'Ecolectif (SIREN 751111386) — societe.com"
+    url: "https://www.societe.com/societe/terres-d-ecolectif-751111386.html"
+  - titre: "EcolectiF — Base Habitat Participatif & Oasis (capital 90/10, sociocratie)"
+    url: "https://www.basededonnees-habitatparticipatif-oasis.fr/wakka.php?wiki=EcolectiF"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
