@@ -150,7 +150,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: Le foncier a été acquis par la Foncière Terre de Liens, structure non spéculative,
       qui l'a retiré du marché après sa mise en vente en 2018.

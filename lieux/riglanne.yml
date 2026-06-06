@@ -159,11 +159,9 @@ evaluation:
       et les a retirées du marché ; l'autre moitié n'est pas portée par la Foncière.
   questions:
     milieu:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: 'Les terres portées par la Foncière Terre de Liens font souvent l''objet
-        de baux ruraux à clauses environnementales, mais la nature exacte du bail
-        de Riglanne n''est pas documentée : aucun dispositif opposable n''est confirmé.'
+      note: 'Le bail de Riglanne est probablement un bail rural environnemental (pratique Terre de Liens), mais sa nature exacte n''est pas documentée pour ce lieu : non établi plutôt qu''affirmé.'
     vivant:
       valeur: non
       maillon: lieu

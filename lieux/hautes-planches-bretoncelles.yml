@@ -227,7 +227,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: 'Le foncier est détenu par l''association propriétaire Les Donnettes — structure
       sans capital appropriable — et n''est pas destiné à être revendu : CLIP, second

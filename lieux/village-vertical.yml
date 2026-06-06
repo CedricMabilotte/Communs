@@ -148,7 +148,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: Le bâti et le foncier sont la propriété unique de la coopérative ; ils ne
       sont pas destinés à la revente sur le marché libre.

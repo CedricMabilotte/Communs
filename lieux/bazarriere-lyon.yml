@@ -168,7 +168,7 @@ v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: pour_toujours
+    cran: solide
     voie: nature_porteur
     note: 'La maison est achetée par une association loi 1901 sans capital appropriable
       et verrouillée par le veto CLIP contre toute revente : le foncier est effectivement

@@ -40,8 +40,8 @@ BUILD_DATE_FR = f"{_today.day} {_MOIS_FR[_today.month - 1]} {_today.year}"
 # Version publique du site — affichée discrètement en pied de page et reprise
 # dans le journal des versions (changelog.html). Version majeure 2.0 = modèle
 # d'évaluation renforcé.
-SITE_VERSION = "2.0"
-SITE_VERSION_DATE = "mai 2026"
+SITE_VERSION = "3.1"
+SITE_VERSION_DATE = "juin 2026"
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config"
@@ -1200,6 +1200,7 @@ def corpus_histogram(all_sc, ranking=None):
         if pal and pal.get("id") in counts:
             counts[pal["id"]]+=1
     total=sum(counts.values()); mx=max(counts.values()) or 1
+    susp_n=sum(1 for f,s in all_sc if f.get("categorie")!="modele" and (s.get("palier")) and s.get("idl") is None)
     W,H,pad=480,180,30
     bw=(W-2*pad)/len(order)
     bars=""
@@ -1212,9 +1213,9 @@ def corpus_histogram(all_sc, ranking=None):
                f'<text class="hg-n" x="{x+bw/2:.1f}" y="{y-5:.1f}">{n}</text>'
                f'<text class="hg-l" x="{x+bw/2:.1f}" y="{H-pad+13:.1f}">{e(short[b])}</text>')
     return (f'<figure class="corpus-hist"><svg viewBox="0 0 {W} {H}" role="img" '
-            f'aria-label="Répartition des {total} entrées notées par palier de libération">{bars}</svg>'
-            f'<figcaption>Répartition des {total} entrées notées par palier de libération '
-            f'(modèles voisins exclus).</figcaption></figure>')
+            f'aria-label="Répartition des {total} entrées situées sur l\'échelle de libération">{bars}</svg>'
+            f'<figcaption>Répartition des {total} entrées situées sur l\'échelle, par palier '
+            f'(dont {susp_n} suspendues, sans note chiffrée ; modèles voisins exclus).</figcaption></figure>')
 def grille_recap(criteres_evalues, gril, axes_cfg):
     """Bandeau récapitulatif : part de oui/partiel/non/inconnu par axe."""
     order = ["oui", "partiel", "non", "inconnu"]
@@ -2635,6 +2636,7 @@ def render_grilles(cfg):
 </section>""")
 
     body = f"""<h1>Grilles de lecture et d'analyse stratégique</h1>
+<div class="callout callout-warn"><p><strong>Grille héritée (v2).</strong> Cette page détaille la grille d'analyse à cinq axes (sol · structure · pouvoir · finalité · usage) qui a précédé <a href="methode.html">le faisceau libéré</a>. L'annuaire note désormais chaque montage selon <strong>la porte et les six questions</strong> du faisceau ; cette page est conservée comme <em>matériau de référence et d'archive</em>, non comme la grille courante.</p></div>
 <p class="lead">Chaque catégorie de l'annuaire est lue à travers une grille
 dédiée. Une grille combine des <strong>critères de lecture</strong> — chacun
 rattaché à un axe du classement et pondéré — et une <strong>lecture
@@ -2842,6 +2844,9 @@ def render_methode(cfg, n_by_cat, all_sc):
     notees = [(f, sc) for f, sc in all_sc
               if f["categorie"] != "modele" and sc.get("idl") is not None]
     n_notees = len(notees)
+    n_susp = sum(1 for f, sc in all_sc
+                 if f["categorie"] != "modele" and sc.get("palier") and sc.get("idl") is None)
+    n_sur_echelle = n_notees + n_susp
     Q_CARDS_CFG = [
         ("1", "Le milieu", "#7a5230", "Le sol, l'eau, la terre sont-ils ménagés plutôt qu'exploités ?",
          "Ce qui est fait au vivant non-humain du lieu : sol vivant, eau, haies, pratiques de soin."),
@@ -3006,9 +3011,11 @@ du corpus</a>.</li>
 <p class="prose">{n_by_cat['lieu']} lieux · {n_by_cat['porteur']} porteurs de
 nue-propriété · {n_by_cat['usufruitier']} organismes usufruitiers ·
 {n_by_cat['modele']} modèles voisins de comparaison. Les {n_total_fiches}
-fiches sont publiées ; le corpus est construit, non exhaustif. <strong>{n_notees}</strong>
-entrées portent une note de libération calculée ; les autres (groupes sans lieu agrégeable,
-modèles voisins) restent non notées.</p>
+fiches sont publiées ; le corpus est construit, non exhaustif. <strong>{n_sur_echelle}</strong>
+entrées sont situées sur l'échelle du faisceau : <strong>{n_notees}</strong> portent une note
+chiffrée et <strong>{n_susp}</strong> sont <strong>suspendues</strong> (une question décisive
+n'est pas documentée — on n'affiche alors que le palier atteint avec certitude, jamais un chiffre
+deviné). Les autres entrées (groupes sans lieu agrégeable, modèles voisins) restent non situées.</p>
 {corpus_histogram(all_sc, ranking)}
 <p class="prose"><strong>Posture du recensement.</strong> Le projet regarde le
 sujet depuis la tradition de l'<strong>éducation populaire</strong> et des
@@ -3433,7 +3440,7 @@ def render_index(all_sc, cfg, n_by_cat):
                    [("La carte", "carte.html"), ("Les lieux", "lieux.html"),
                     ("Le classement", "classement.html")]),
         _intention("Je veux la méthode",
-                   "Comment chaque montage est lu, noté et qualifié — grille et verdict.",
+                   "Comment chaque montage est lu, noté et situé — la grille de lecture.",
                    [("La méthode", "methode.html"), ("Les grilles", "grilles.html")]),
         _intention("Je suis chercheur·euse ou journaliste",
                    "Un référentiel citable : cadre explicite, statut du chiffre, versions datées.",
@@ -3451,8 +3458,7 @@ def render_index(all_sc, cfg, n_by_cat):
         m = d["meta"]
         slug = m.get("slug", "")
         lu = m.get("lieu")
-        vb = (verdict_badge(compute_verdict(_by_uid[lu], _by_uid), concepts)
-              if lu and _by_uid.get(lu) else "")
+        vb = (band_chip(_by_uid[lu], _by_uid) if lu and _by_uid.get(lu) else "")
         _dcards.append(
             f'<a class="dossier-vignette" href="dossiers/{e(slug)}.html">'
             f'<h3>{e(clean(m.get("titre","")))}</h3>'
@@ -4192,7 +4198,7 @@ def render_dossiers_index(dossiers, cfg, sc_by_uid, by_uid):
         lu = m.get("lieu")
         vbadge = ""
         if lu and by_uid.get(lu):
-            vbadge = verdict_badge(compute_verdict(by_uid[lu], by_uid), cfg["concepts"])
+            vbadge = band_chip(by_uid[lu], by_uid)
         cards.append(f"""<a class="revue-card" href="{e(slug)}.html">
   <h3>{e(titre)}</h3>
   {f'<p class="revue-card-sous">{e(sous)}</p>' if sous else ""}
@@ -4232,7 +4238,7 @@ def render_dossier(dossier, cfg, by_uid, sc_by_uid):
     # lien vers la fiche-catalogue + badge verdict
     fiche_lien = ""
     if lu and by_uid.get(lu):
-        v = verdict_badge(compute_verdict(by_uid[lu], by_uid), cfg["concepts"])
+        v = band_chip(by_uid[lu], by_uid)
         sc = sc_by_uid.get(lu)
         idl = f" · note {sc['idl']}" if sc and sc.get("idl") is not None else ""
         fiche_lien = (f'<aside class="dossier-fiche">{v}'
@@ -6097,6 +6103,11 @@ def fiche_v3(f, by_uid):
             "note":(None if susp else num),"susp":susp,"pf":pf,"badge":badge,
             "qscores":_q_scores_from_ev(ev)}
 
+def band_chip(f, by_uid):
+    """Petite puce de palier v3.1 (remplace l'ancien badge de verdict v2)."""
+    v=fiche_v3(f, by_uid)
+    if not v: return ""
+    return f'<span class="pal-chip" style="--pal:{v["bcol"]}">{e(v["label"])}</span>'
 def render_faisceau(fiches, cfg, project=None):
     project = project or cfg["concepts"]["project"]
     body = """<h1>Le faisceau libéré</h1>

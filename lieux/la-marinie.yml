@@ -136,7 +136,7 @@ sources:
 v3_revue: true
 v3_revue_sources: true
 evaluation:
-  porte: { valeur: oui, cran: pour_toujours, voie: nature_porteur,
+  porte: { valeur: oui, cran: solide, voie: nature_porteur,
            note: "Fonds de dotation Antidote, acquisition par dons, pas de parts." }
   questions:
     milieu:    { valeur: non_etabli, maillon: lieu,   note: "Clauses environnementales du bail non documentées." }
