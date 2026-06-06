@@ -213,7 +213,7 @@ a.stat:hover,a.stat:focus-visible{box-shadow:0 2px 10px rgba(0,0,0,.10);transfor
 .tag-porteur{background:var(--terra-dk);}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
-.tag-reseau{background:var(--ink);}
+.tag-reseau{background:var(--ink);}.tag-montage{background:#7a6a52;}
 /* verdict calculé du lieu */
 .verdict{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
  font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-pill);
@@ -405,7 +405,7 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
    évite que Repères saute à la ligne quand axes-calc a un texte long. */
 .score-axes{flex:1;min-width:200px;}
 /* 3e colonne du panneau de score — repères compacts */
-.score-bref{flex:0 0 14rem;font-size:.8rem;}
+.score-bref{flex:0 0 21rem;font-size:.8rem;}
 .score-bref dl{margin:.1rem 0 0;}
 .sb-item{display:flex;justify-content:space-between;gap:.7rem;
  padding:.26rem 0;border-bottom:1px solid var(--line);}

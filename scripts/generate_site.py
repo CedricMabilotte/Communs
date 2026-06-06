@@ -631,7 +631,6 @@ NAV = [
     ("dossiers/index.html", "Dossiers"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
-    ("faisceau.html", "Le faisceau"),
 ]
 # Pages-catalogues dont l'onglet actif est « Classement » (le classement réunit
 # toutes les entrées ; les catalogues par rôle restent accessibles via le pied
@@ -1137,7 +1136,7 @@ def idl_badge(sc, big=False):
         cls += " idl-estime"
     pal_lab = e(pal["label"]) + (" · estimé" if estime else "")
     num_sz = "1.6rem" if big else ".82rem"
-    sr = (f'<span class="visually-hidden">Indice de libération {idl} sur 100, '
+    sr = (f'<span class="visually-hidden">Note de libération {idl} sur 100, '
           f'{e(pal["label"])}{" (estimé)" if estime else ""}.</span>')
     return (
         f'<span class="{cls}" style="--pal:{pal["couleur"]}">'
@@ -1183,39 +1182,33 @@ def idl_scale(sc, ranking):
             f'</div>')
 
 
-def corpus_histogram(all_sc, ranking):
-    """Histogramme SVG de la distribution des entrées notées par palier."""
-    paliers = ranking["paliers"]
-    counts = {p["id"]: 0 for p in paliers}
+def corpus_histogram(all_sc, ranking=None):
+    """Histogramme de la distribution des entrées par palier de libération (v3.1)."""
+    order=["marchand","en_transition","sorti_du_marche","autogere","usage_decommodifie","commun_vivant"]
+    short={"marchand":"marchand","en_transition":"transition","sorti_du_marche":"sorti","autogere":"autogéré","usage_decommodifie":"usage","commun_vivant":"commun"}
+    counts={b:0 for b in order}
     for f, s in all_sc:
-        if f["categorie"] == "modele":
+        if f.get("categorie")=="modele":
             continue
-        if s["palier"]:
-            counts[s["palier"]["id"]] += 1
-    total = sum(counts.values())
-    mx = max(counts.values()) or 1
-    W, H, pad = 360, 180, 30
-    bw = (W - 2 * pad) / len(paliers)
-    bars = ""
-    for i, p in enumerate(reversed(paliers)):  # bas → haut de l'échelle
-        n = counts[p["id"]]
-        bh = (H - 2 * pad - 14) * n / mx
-        x = pad + i * bw
-        y = H - pad - bh
-        bars += (f'<rect class="hg-bar" x="{x + 8:.1f}" y="{y:.1f}" '
-                 f'width="{bw - 16:.1f}" height="{max(bh, 0.5):.1f}" '
-                 f'fill="{p["couleur"]}" rx="2"/>'
-                 f'<text class="hg-n" x="{x + bw / 2:.1f}" y="{y - 5:.1f}">{n}</text>'
-                 f'<text class="hg-l" x="{x + bw / 2:.1f}" y="{H - pad + 13:.1f}">'
-                 f'{e(p["label"])}</text>')
-    return (f'<figure class="corpus-hist"><svg viewBox="0 0 {W} {H}" '
-            f'role="img" aria-label="Répartition des {total} entrées notées '
-            f'par palier d\'Indice de libération">{bars}</svg>'
-            f'<figcaption>Répartition des {total} entrées notées par palier '
-            f'd\'Indice de libération (modèles voisins exclus).</figcaption>'
-            f'</figure>')
-
-
+        pal=s.get("palier")
+        if pal and pal.get("id") in counts:
+            counts[pal["id"]]+=1
+    total=sum(counts.values()); mx=max(counts.values()) or 1
+    W,H,pad=480,180,30
+    bw=(W-2*pad)/len(order)
+    bars=""
+    for i,b in enumerate(order):
+        n=counts[b]
+        bh=(H-2*pad-14)*n/mx
+        x=pad+i*bw; y=H-pad-bh
+        bars+=(f'<rect class="hg-bar" x="{x+8:.1f}" y="{y:.1f}" '
+               f'width="{bw-16:.1f}" height="{max(bh,0.5):.1f}" fill="{FB_HEX[b]}" rx="2"/>'
+               f'<text class="hg-n" x="{x+bw/2:.1f}" y="{y-5:.1f}">{n}</text>'
+               f'<text class="hg-l" x="{x+bw/2:.1f}" y="{H-pad+13:.1f}">{e(short[b])}</text>')
+    return (f'<figure class="corpus-hist"><svg viewBox="0 0 {W} {H}" role="img" '
+            f'aria-label="Répartition des {total} entrées notées par palier de libération">{bars}</svg>'
+            f'<figcaption>Répartition des {total} entrées notées par palier de libération '
+            f'(modèles voisins exclus).</figcaption></figure>')
 def grille_recap(criteres_evalues, gril, axes_cfg):
     """Bandeau récapitulatif : part de oui/partiel/non/inconnu par axe."""
     order = ["oui", "partiel", "non", "inconnu"]
@@ -1284,7 +1277,6 @@ def card(fiche, sc, axes_cfg, depth=0, concepts=None):
   <h3><a class="card-link" href="{href}">{e(fiche['nom'])}</a>{ctx_labels_html(fiche, up)}</h3>
   <p class="card-sub">{e(clean(fiche.get('sous_titre','')))}</p>
   <p class="card-meta">{e(loc)}{(' · ' + e(montage_lab)) if montage_lab else ''}</p>
-  {'' if cat == "reseau" else f'<div class="card-viz">{axis_triangle(axes_cfg, sc["axes"], compact=True)}</div>'}
 </li>"""
 
 
@@ -1514,6 +1506,37 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     if cat == "lieu":
         verdict_html = "\n  " + verdict_badge(compute_verdict(fiche, by_uid),
                                               cfg["concepts"])
+    # --- v3.1 : si le lieu porte un bloc evaluation, on réalimente les composants existants ---
+    _ev_lieu = fiche.get("evaluation") if cat == "lieu" else (porteur_eval(fiche, by_uid) if cat in ("porteur","usufruitier","reseau") else None)
+    _is_porteur = (cat == "porteur" and _ev_lieu is not None)
+    _is_group = (cat in ("porteur","usufruitier","reseau") and _ev_lieu is not None)
+    _BAND_COL = {"marchand":"#9a9a9a","en_transition":"#a86a4a","sorti_du_marche":"#b08a3e",
+                 "autogere":"#3d7a4e","usage_decommodifie":"#2f6e8f","commun_vivant":"#224477"}
+    if _ev_lieu:
+        _band,_susp,_pf,_badge,_num = _fsc_derive(_ev_lieu)
+        _bcol = _BAND_COL[_band]
+        _sc_v3 = {"idl": (None if _susp else _num),
+                  "palier": {"label": FB_LABEL[_band], "couleur": _bcol},
+                  "idl_brut": None, "score_type": "calcule"}
+        _ranking_v3 = {"paliers":[
+            {"min":0,"couleur":_BAND_COL["marchand"],"label":"marchand"},
+            {"min":20,"couleur":_BAND_COL["sorti_du_marche"],"label":"sorti du marché"},
+            {"min":50,"couleur":_BAND_COL["autogere"],"label":"autogéré"},
+            {"min":75,"couleur":_BAND_COL["usage_decommodifie"],"label":"usage libéré"},
+            {"min":90,"couleur":_BAND_COL["commun_vivant"],"label":"commun vivant"}]}
+        _NUMS=["1","2","3","4","5","6"]
+        _QCOL={"milieu":"#6b8f71","vivant":"#3d7a4e","ouverture":"#4a6b8a","don":"#b08a3e","duree":"#8a6db0","voix":"#bc5d3a"}
+        _qv={"oui":100,"partiel":50,"non":0}
+        _q_cfg=[{"id":_NUMS[i],"label":Q_LABEL[i][1],"couleur":_QCOL[Q_LABEL[i][0]]} for i in range(6)]
+        _q_scores={_NUMS[i]: _qv.get(_ev_lieu["questions"][Q_LABEL[i][0]]["valeur"]) for i in range(6)}
+        _mtype = (fiche.get("montage") or {}).get("type")
+        verdict_html = ('\n  <span class="tag tag-montage">'
+                        + e(montage_label(_mtype, cfg["concepts"])) + '</span>') if _mtype else ""
+        if _is_porteur:
+            _pctx = porteur_porte_context(fiche)
+            verdict_html = '\n  <span class="tag tag-montage">' + e(_pctx["label"]) + '</span>'
+
+
 
     # fil d'Ariane complet : Accueil › Catégorie › Fiche
     head = f"""<nav class="crumb" aria-label="Fil d'Ariane">
@@ -1586,8 +1609,10 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
                                    f"est ramené de {vi} à {ve}")
             if len(baisses) == 1:
                 axes_phrase = baisses[0]
-            else:
+            elif baisses:
                 axes_phrase = (", ".join(baisses[:-1]) + " et " + baisses[-1])
+            else:
+                axes_phrase = ""
             comp_phrase = ""
             if sc.get("idl_brut") is not None and sc["idl_brut"] != sc["idl"]:
                 comp_phrase = (" La note replacée intègre aussi la pénalité de "
@@ -1615,8 +1640,10 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
 
     # pour un lieu sans contamination de chaîne mais avec pénalité de complétude :
     # la phrase de complétude est déjà dans `plafonds` (cas `not contamine` ci-dessus).
+    if _ev_lieu or sc.get("idl") is None:
+        comp = ""
     plafonds_html = ""
-    if plafonds:
+    if plafonds and not _ev_lieu and sc.get("idl") is not None:
         items = "".join(f"<li>{p}</li>" for p in plafonds)
         plafonds_html = (
             '<details class="plafonds-fold"><summary>Plafonds appliqués '
@@ -1694,10 +1721,13 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     bref_compact = "".join(
         f'<div class="sb-item"><dt>{k}</dt><dd>{v}</dd></div>'
         for k, v in rows)
+    if _ev_lieu and sc.get("idl_v2") is not None:
+        rows.append(("Ancienne note (v2)", f'{sc["idl_v2"]}/100 · archivée'))
+        bref_compact = "".join(f'<div class="sb-item"><dt>{k}</dt><dd>{v}</dd></div>' for k, v in rows)
     bref_col = (f'<div class="score-bref"><p class="score-cap">Repères</p>'
                 f'<dl>{bref_compact}</dl></div>') if rows else ""
 
-    pal_col = sc["palier"]["couleur"] if sc["palier"] else "var(--green)"
+    pal_col = _bcol if _ev_lieu else (sc["palier"]["couleur"] if sc["palier"] else "var(--green)")
 
     # 1.5 — objet-verdict composite : verdict · Indice · palier rapprochés sur une
     # ligne en tête de panneau, trois libellés typographiquement distincts (badge
@@ -1719,18 +1749,41 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
             '<a class="vco-renvoi" href="../methode.html#verdict">'
             'Pourquoi ces trois ? → Méthode</a>'
             '</div>')
+    if _ev_lieu:
+        _nd = ('<span class="vco-idl"><b>suspendue</b></span>' if _susp
+               else f'<span class="vco-idl"><b>{_num}</b><span class="vco-unit">/100</span></span>')
+        composite_html = (
+            '<div class="verdict-composite"><span class="vco-line">'
+            f'{_nd}<span class="vco-sep">·</span>'
+            f'<span class="vco-pal" style="--pal:{_bcol}">{e(FB_LABEL[_band])}</span>'
+            '</span><a class="vco-renvoi" href="../methode.html">La méthode →</a></div>')
 
+    _sc_b = _sc_v3 if _ev_lieu else sc
+    _axc = _q_cfg if _ev_lieu else axes_cfg
+    _axs = _q_scores if _ev_lieu else sc['axes']
+    _rk = _ranking_v3 if _ev_lieu else ranking
+    if _ev_lieu:
+        _tr = axis_triangle(_q_cfg, _q_scores).replace("Profil à cinq axes", "Profil des six questions")
+        _triangle = re.sub(r'<text class="tri-scale"[^>]*>[^<]*</text>', '', _tr)
+    else:
+        _triangle = ""
+    _axbar = axis_bar(_axc, _axs) if _ev_lieu else ""
+    _scale = idl_scale(_sc_b, _rk) if _ev_lieu else ""
+    _axesnote = "" if _ev_lieu else axes_note
+    _scorecap = ('<p class="score-cap"><a href="../methode.html">Note de libération</a></p>'
+                 if _ev_lieu else
+                 '<p class="score-cap"><a href="../methode.html">Note de libération</a></p>')
     score_block = f"""<section class="score-panel" style="--pal:{pal_col}">
   {composite_html}
   <div class="score-main">
-    <p class="score-cap"><a href="../methode.html#indice">Indice de libération</a></p>
-    {idl_badge(sc, big=True)}
-    {axes_note}
-    {axis_triangle(axes_cfg, sc['axes'])}
+    {_scorecap}
+    {idl_badge(_sc_b, big=True)}
+    {_axesnote}
+    {_triangle}
   </div>
   <div class="score-axes">
-    {axis_bar(axes_cfg, sc['axes'])}
-    {idl_scale(sc, ranking)}
+    {_axbar}
+    {_scale}
     <p class="fiab fiab-{fcls}">{e(flabel)}</p>
     {comp}
     {plafonds_html}
@@ -1752,9 +1805,17 @@ def render_fiche(fiche, sc, cfg, by_uid, sc_by_uid):
     # 1.1 — une seule phrase + lien Méthode, placée SOUS le panneau de score
     # (l'encart à puces « Trois lectures » est supprimé ; la distinction est
     # désormais portée par l'objet-verdict composite en tête de panneau).
-    verdict_cle = ("""<p class="verdict-cle">Verdict, Indice et palier ne disent pas
+    if _ev_lieu and cat == "lieu":
+        verdict_cle = ("""<p class="verdict-cle">La note et le palier situent un <strong>degré de """
+            """sortie du marché</strong>, pas la valeur d'un lieu ; on lit au <strong>point le plus """
+            """faible</strong>, et le badge écologique est <em>à côté</em> de la note. """
+            """<a href="../methode.html#indice">Comment les lire → Méthode</a></p>""")
+    elif cat == "lieu":
+        verdict_cle = ("""<p class="verdict-cle">Verdict, Indice et palier ne disent pas
 la même chose : un Indice élevé peut rester « solide » sans être « abouti ».
-<a href="../methode.html#verdict">Comment les lire → Méthode</a></p>""" if cat == "lieu" else "")
+<a href="../methode.html#verdict">Comment les lire → Méthode</a></p>""")
+    else:
+        verdict_cle = ""
     # 1.2 — version courte et accessible : on décrit ce que MONTRENT les visuels
     # (pentagone, barres, badge), sans ré-expliquer la règle d'agrégation (qui vit
     # sur la Méthode, vers laquelle on renvoie).
@@ -1771,6 +1832,16 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
   <p class="fiche-key-more"><a href="../methode.html#indice">Comment l'Indice est
   calculé → Méthode</a></p>
 </details>"""
+    if _ev_lieu:
+        lecture = ("""<details class="fiche-key"><summary>Comment lire les visuels de cette fiche</summary><ul>"""
+          """<li><strong>Anneau de note</strong> — la note de libération de 0 à 100 ; sa couleur indique le palier.</li>"""
+          """<li><strong>Étoile à six branches</strong> — un sommet par question (1 Le milieu, 2 Le vivant, 3 L'ouverture, 4 Le don, 5 La durée, 6 La voix), numérotées comme les barres.</li>"""
+          """<li><strong>Barres</strong> — les six questions chiffrées (● tenu 100 · ◐ partiel 50 · ○ absent 0 · n.r. non établi).</li>"""
+          """<li><strong>Échelle</strong> — du marchand au commun vivant ; le curseur situe la note.</li>"""
+          """<li><strong>Badge « Sanctuaire »</strong> — distinction écologique, <i>à part</i> de la note.</li></ul>"""
+          """<p class="fiche-key-more"><a href="../methode.html">Comment la note est calculée → Méthode</a></p></details>""")
+    elif cat != "lieu":
+        lecture = ""
 
     # (les « Repères » sont désormais construits plus haut et intégrés au
     # panneau de score comme 3e colonne — chantier 7, TAF 3.)
@@ -1788,7 +1859,9 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
 
     # grille détaillée + récapitulatif par axe
     grille_html = ""
-    if cat != "modele" and sc["criteres_evalues"]:
+    if _ev_lieu:
+        grille_html = _v3_grille_fold(_ev_lieu)
+    elif cat != "modele" and sc["criteres_evalues"]:
         gril = grilles.get(cat, {})
         vmap = {"oui": ("Oui", "crit-oui"), "partiel": ("Partiel", "crit-partiel"),
                 "non": ("Non", "crit-non"), "inconnu": ("Inconnu", "crit-inconnu")}
@@ -1883,11 +1956,8 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
         if not tgt:
             continue
         tcat = tgt["categorie"]
-        tsc = sc_by_uid.get(uid)
-        tri = (axis_triangle(axes_cfg, tsc["axes"], compact=True)
-               if tsc else "")
         chip = (f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{uid}.html">'
-                f'{tri}<span class="chip-txt">{e(tgt["nom"])}'
+                f'<span class="chip-txt">{e(tgt["nom"])}'
                 f'<span class="chip-cat">{e(tcat)}</span></span></a>')
         chips_par_cat.setdefault(tcat, []).append(chip)
     if chips_par_cat:
@@ -1905,8 +1975,7 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
                                f'<div class="chips">{"".join(lot)}</div>')
         liens_html = ('<section><h2 class="sec">Reliés dans l\'annuaire</h2>'
                       '<p class="lead">Montages directement reliés à cette '
-                      'fiche, regroupés par nature ; le profil à cinq axes '
-                      'permet la comparaison visuelle.</p>'
+                      'fiche, regroupés par nature.</p>'
                       + "".join(groupes) + '</section>')
 
     # fiabilité + sources
@@ -1939,7 +2008,24 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
     dossier_lien = (f'<p class="fiche-dossier-lien"><a href="../dossiers/'
                     f'{e(dossier_slug)}.html">Lire le dossier — le récit de ce '
                     f'lieu →</a></p>' if dossier_slug else "")
-    body = (defs + head + dossier_lien + score_block + verdict_cle + lecture + resume
+    _group_extra = ""
+    if _is_group:
+        _GH={"porteur":("Les lieux qu'il tient","Sa note de libération est la synthèse de ces lieux — un porteur se juge à ce qu'il libère."),
+             "usufruitier":("Les lieux qu'il anime","Sa note de libération est la synthèse des lieux dont il a l'usage."),
+             "reseau":("Les lieux de son réseau","Sa note de libération est la synthèse des lieux que son réseau fédère.")}
+        _h,_l=_GH[cat]
+        if _is_porteur:
+            _pctx=porteur_porte_context(fiche)
+            _ctx=(f'<p class="verdict-cle"><b>Démarche / modèle.</b> Portage de type <b>{e(_pctx["label"])}</b> : '
+                  f'la solidité de la porte que ce porteur apporte à la chaîne conditionne ce que ses lieux peuvent '
+                  f'atteindre. La note ci-dessus est la <b>synthèse de libération</b> de ces lieux. <a href="../methode.html">Méthode →</a></p>')
+        else:
+            _kind={"usufruitier":"Collectif usager","reseau":"Réseau"}[cat]
+            _ctx=(f'<p class="verdict-cle"><b>{_kind}.</b> Évalué sur la <b>même grille</b> que les lieux, '
+                  f'sa note est la <b>synthèse de libération</b> des lieux qu\'il {"anime" if cat=="usufruitier" else "fédère"}. '
+                  f'<a href="../methode.html">Méthode →</a></p>')
+        _group_extra = _ctx + (_member_lieux(fiche, by_uid, _h, _l) if cat != "usufruitier" else "")
+    body = (defs + head + dossier_lien + score_block + verdict_cle + lecture + _group_extra + resume
             + montage_html + analyse_html + reponse_html + liens_html + grille_html
             + dossier_html + fiab + sources_html + backlink)
 
@@ -1990,6 +2076,30 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
 # Pages — catalogues
 # ─────────────────────────────────────────────────────────────────────────────
 
+QCOL_V3={"milieu":"#6b8f71","vivant":"#3d7a4e","ouverture":"#4a6b8a","don":"#b08a3e","duree":"#8a6db0","voix":"#bc5d3a"}
+RANKING_V3={"paliers":[{"min":0,"couleur":"#9a9a9a","label":"marchand"},
+    {"min":20,"couleur":"#b08a3e","label":"sorti du marché"},
+    {"min":50,"couleur":"#3d7a4e","label":"autogéré"},
+    {"min":75,"couleur":"#2f6e8f","label":"usage libéré"},
+    {"min":90,"couleur":"#224477","label":"commun vivant"}]}
+
+def _v3_score_panel_standalone(ev):
+    """Panneau de score v3 (anneau + étoile six branches + barres + échelle) à partir d'un eval — réutilisé hors render_fiche (réseaux)."""
+    band,susp,pf,badge,num=_fsc_derive(ev)
+    bcol=FB_HEX[band]
+    sc_v3={"idl":(None if susp else num),"palier":{"label":FB_LABEL[band],"couleur":bcol},"idl_brut":None,"score_type":"calcule"}
+    NUMS=["1","2","3","4","5","6"]; qv={"oui":100,"partiel":50,"non":0}
+    q_cfg=[{"id":NUMS[i],"label":Q_LABEL[i][1],"couleur":QCOL_V3[Q_LABEL[i][0]]} for i in range(6)]
+    q_scores={NUMS[i]:qv.get(ev["questions"][Q_LABEL[i][0]]["valeur"]) for i in range(6)}
+    tri=re.sub(r'<text class="tri-scale"[^>]*>[^<]*</text>','',axis_triangle(q_cfg,q_scores).replace("Profil à cinq axes","Profil des six questions"))
+    nd=('<b>suspendue</b>' if susp else f'<b>{num}</b><span class="vco-unit">/100</span>')
+    composite=(f'<div class="verdict-composite"><span class="vco-line"><span class="vco-idl">{nd}</span>'
+               f'<span class="vco-sep">·</span><span class="vco-pal" style="--pal:{bcol}">{e(FB_LABEL[band])}</span></span>'
+               f'<a class="vco-renvoi" href="../methode.html">La méthode →</a></div>')
+    return (f'<section class="score-panel" style="--pal:{bcol}">{composite}'
+            f'<div class="score-main"><p class="score-cap">Note de libération</p>{idl_badge(sc_v3,big=True)}{tri}</div>'
+            f'<div class="score-axes">{axis_bar(q_cfg,q_scores)}{idl_scale(sc_v3,RANKING_V3)}</div></section>')
+
 def render_reseau(fiche, cfg, by_uid, sc_by_uid):
     """Rend la fiche d'un RÉSEAU : un hub non noté (cf. décision R1). Il
     présente l'entité-réseau, relie ses membres documentés et donnera la
@@ -2011,7 +2121,7 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
 
     intro = ('<section><p class="lead"><strong>Réseau.</strong> Cette entité '
              'fédère ou démultiplie plusieurs lieux : elle n\'est pas une chaîne '
-             'unique et ne porte donc pas d\'Indice de libération. Sa fiche est '
+             'unique : sa note de libération agrège les lieux qu\'elle fédère. Sa fiche est '
              'un hub — elle présente l\'entité, relie ses membres documentés et '
              'donnera la distribution de ses lieux concrets à mesure qu\'ils '
              'sont détaillés. <a href="../methode.html#chaine">La chaîne, et où '
@@ -2038,11 +2148,9 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
         tsc = sc_by_uid.get(muid)
         if tcat == "lieu":
             lieux_membres.append((tgt, tsc))
-        tri = (axis_triangle(axes_cfg, tsc["axes"], compact=True)
-               if (tsc and tsc.get("idl") is not None) else "")
         chips.append(
             f'<a class="chip chip-rel" href="../{CAT_SLUG[tcat]}/{muid}.html">'
-            f'{tri}<span class="chip-txt">{e(tgt["nom"])}'
+            f'<span class="chip-txt">{e(tgt["nom"])}'
             f'<span class="chip-cat">{e(CAT_LABEL.get(tcat, tcat))}</span>'
             f'</span></a>')
     # Repères du réseau — nombre de porteurs et de lieux (session #4)
@@ -2120,8 +2228,14 @@ def render_reseau(fiche, cfg, by_uid, sc_by_uid):
     backlink = ('<p class="backlink"><a href="../reseaux.html">← Retour aux '
                 'réseaux</a></p>')
 
+    _rev = porteur_eval(fiche, by_uid)
+    _rev_panel = ""
+    if _rev:
+        _rev_panel = (_v3_score_panel_standalone(_rev)
+            + '<p class="verdict-cle"><b>Réseau.</b> Évalué sur la même grille que les lieux, sa note est la '
+              '<b>synthèse de libération</b> des lieux que son réseau fédère. <a href="../methode.html">Méthode →</a></p>')
     defs = tri_defs(axes_cfg) if chips else ""
-    body = (defs + head + intro + reperes_html + resume + montage_html
+    body = (defs + head + _rev_panel + intro + reperes_html + resume + montage_html
             + membres_html + distrib_html + analyse_html + fiab + sources_html
             + backlink)
     fdesc = meta_desc(fiche.get("resume", "") or fiche.get("sous_titre", ""), 250)
@@ -2142,7 +2256,7 @@ def render_reseaux(reseaux_sc, cfg):
     body = f"""<h1>Réseaux</h1>
 <p class="lead">Les réseaux fédèrent ou démultiplient plusieurs lieux —
 mouvements, foncières multi-sites, dispositifs de financement. Ils ne portent
-pas d'Indice de libération : ce sont des hubs qui relient leurs membres et
+une note agrégée de leurs lieux : ce sont des hubs qui relient leurs membres et
 dont les lieux concrets sont détaillés un à un. {len(fiches)} réseau·x
 recensé·s.</p>
 {cards}"""
@@ -2242,7 +2356,7 @@ def render_catalogue(cat, fiches_sc, cfg):
     {region_block}
   </div>
 </details>
-<p class="axe-legend cat-legend">{axe_legend(axes_cfg, "Profil à cinq axes : ")}</p>
+{bands_legend()}
 {cards_grid(fiches_sc, axes_cfg, concepts=concepts, grid_id="resultats")}
 <p class="no-result" id="noresult" role="status" hidden>Aucune entrée ne correspond à ces filtres. Élargissez la sélection.</p>
 <p class="cat-foot"><a href="suggerer.html">Un lieu manque ou une fiche est incomplète ? Signalez-le →</a></p>
@@ -2258,102 +2372,56 @@ def render_catalogue(cat, fiches_sc, cfg):
 
 def render_classement(all_sc, cfg):
     project = cfg["concepts"]["project"]
-    ranking = cfg["ranking"]
-    axes_cfg = ranking["axes"]
-    core = [(f, s) for f, s in all_sc
-            if f["categorie"] not in ("modele", "reseau")]
-    core = sorted(core, key=lambda x: x[1]["idl"] or 0, reverse=True)
-    catlabel = {"lieu": "Lieu", "porteur": "Porteur", "usufruitier": "Usufruitier"}
-
-    axcol = {a["id"]: a["couleur"] for a in axes_cfg}
-
-    def cell(v, col):
-        if v is None:
-            return '<td class="num axc"><span class="cbar-na">—</span></td>'
-        return (f'<td class="num axc" style="--w:{v}%;--ac:{col}">'
-                f'<span class="cbar"></span><span class="cv">{v}</span></td>')
-
-    rows = []
-    for i, (f, s) in enumerate(core, 1):
-        cat = f["categorie"]
-        href = f'{CAT_SLUG[cat]}/{f["uid"]}.html'
-        a = s["axes"]
-        axes_cells = "".join(cell(a.get(ax["id"]), axcol[ax["id"]])
-                             for ax in axes_cfg)
+    by_uid = {f["uid"]: f for f, _ in all_sc}
+    entries=[]
+    for f, s in all_sc:
+        if f.get("categorie")=="modele": continue
+        v=fiche_v3(f, by_uid)
+        if not v: continue
+        entries.append((f, v))
+    entries.sort(key=lambda x:(x[1]["note"] if x[1]["note"] is not None else -1), reverse=True)
+    catlabel={"lieu":"Lieu","porteur":"Porteur","usufruitier":"Usufruitier","reseau":"Réseau"}
+    rows=[]
+    for i,(f,v) in enumerate(entries,1):
+        cat=f["categorie"]; href=f'{CAT_SLUG[cat]}/{f["uid"]}.html'
+        note=("suspendue" if v["susp"] else (v["note"] if v["note"] is not None else "—"))
         rows.append(f"""<tr data-cat="{cat}">
   <td class="rank">{i}</td>
   <td class="name"><a href="{href}">{e(f['nom'])}</a>
-      {ctx_labels_html(f, "")}
       <span class="row-sub">{e(clean(f.get('sous_titre','')))}</span></td>
-  <td><span class="tag tag-{cat}">{catlabel[cat]}</span></td>
-  {axes_cells}
-  <td class="num idl-cell" style="--pal:{s['palier']['couleur'] if s['palier'] else '#999'}">
-      <b>{s['idl'] if s['idl'] is not None else '—'}</b></td>
+  <td><span class="tag tag-{cat}">{catlabel.get(cat,cat)}</span></td>
+  <td><span class="pal-chip" style="--pal:{v['bcol']}">{e(v['label'])}</span></td>
+  <td class="num idl-cell" style="--pal:{v['bcol']}"><b>{note}</b></td>
 </tr>""")
-
-    paliers_legend = "".join(
-        f'<span class="pal-chip" style="--pal:{p["couleur"]}">'
-        f'{e(p["label"])} <em>≥ {p["min"]}</em></span>'
-        for p in ranking["paliers"])
-
-    axes_enum = ", ".join(f"{a['id']} {a['court'].lower()}" for a in axes_cfg)
-    body = f"""<h1>Classement par l'Indice de libération</h1>
-<p class="lead">L'Indice de libération (IdL) note chaque montage de 0 à 100 sur
-<a href="methode.html">cinq axes</a>, agrégés de sorte que l'axe le plus faible
-commande. <a href="methode.html">Méthode détaillée →</a> ·
-<a href="comparer.html">Comparer deux entrées en vis-à-vis →</a></p>
-<div class="callout callout-warn">
-  <p><strong>Un classement croisé, indicatif.</strong> Lieux, porteurs de
-  nue-propriété et usufruitiers sont notés par <strong>trois grilles
-  distinctes</strong>, adaptées à chaque catégorie : un lieu et un porteur ayant
-  le même indice ne sont pas pour autant strictement comparables. Le tableau les
-  réunit pour donner une vue d'ensemble — utilisez le filtre par catégorie pour
-  comparer des entrées de même nature.</p>
-</div>
-<div class="paliers-legend">{paliers_legend}</div>
+    bands=[("commun_vivant","commun vivant"),("usage_decommodifie","usage libéré"),
+           ("autogere","autogéré"),("sorti_du_marche","sorti du marché"),
+           ("en_transition","en transition"),("marchand","marchand")]
+    legend="".join(f'<span class="pal-chip" style="--pal:{FB_HEX[b]}">{e(lab)}</span>' for b,lab in bands)
+    body=f"""<h1>Classement par la note de libération</h1>
+<p class="lead">Chaque entrée — lieu, porteur, usufruitier, réseau — est notée de 0 à 100 sur la
+<a href="methode.html">même grille</a> (le faisceau libéré), lue au point le plus faible. Porteurs,
+usufruitiers et réseaux sont notés par <strong>agrégation des lieux</strong> qu'ils tiennent, animent ou
+fédèrent. <a href="methode.html">Méthode →</a></p>
+<div class="paliers-legend">{legend}</div>
 <div class="toolbar" role="group" aria-label="Filtrer par catégorie">
-  <span class="sort-lab">Filtrer par catégorie : </span>
+  <span class="sort-lab">Filtrer&nbsp;: </span>
   <button class="fbtn active" data-f="all" aria-pressed="true">Tout</button>
   <button class="fbtn" data-f="lieu" aria-pressed="false">Lieux</button>
   <button class="fbtn" data-f="porteur" aria-pressed="false">Porteurs</button>
   <button class="fbtn" data-f="usufruitier" aria-pressed="false">Usufruitiers</button>
+  <button class="fbtn" data-f="reseau" aria-pressed="false">Réseaux</button>
 </div>
-<p class="note sort-hint">Triez le tableau en activant un en-tête de colonne
-(Entrée, axes 1 à 5 ou IdL).</p>
-<p id="sort-status" role="status" class="visually-hidden"></p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="Tableau du classement">
-<table class="rank-tbl">
-<caption class="visually-hidden">Classement des entrées de l'annuaire par
-l'Indice de libération, du plus élevé au plus faible.</caption>
-<thead><tr>
-  <th scope="col">#</th>
-  <th scope="col" class="sortable" data-sort="text" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par entrée, ordre alphabétique">Entrée</button></th>
-  <th scope="col">Catégorie</th>
-  {"".join(f'<th scope="col" class="num sortable" data-sort="num" aria-sort="none"><button type="button" class="th-sort" aria-label="Trier par axe {a["id"]} — {e(a["court"])}">{a["id"]}</button></th>' for a in axes_cfg)}
-  <th scope="col" class="num sortable idl-cell" data-sort="num" aria-sort="descending"><button type="button" class="th-sort" aria-label="Trier par Indice de libération">IdL</button></th>
-</tr></thead>
-<tbody>{''.join(rows)}</tbody>
-</table></div>
-<p class="note">{" · ".join(f"{a['id']} — {e(a['label'])}" for a in axes_cfg)}.
-« — » : axe non renseigné. Les mini-barres de couleur accompagnent la lecture
-chiffrée.</p>
+<table class="rank-tbl"><thead><tr>
+  <th scope="col">#</th><th scope="col">Entrée</th><th scope="col">Catégorie</th>
+  <th scope="col">Palier</th><th scope="col" class="num">Note</th>
+</tr></thead><tbody>{''.join(rows)}</tbody></table></div>
+<p class="note">Note « suspendue » : une question décisive n'est pas documentée. La note se lit avec le
+profil des six questions sur chaque fiche.</p>
 <script defer src="assets/list.js"></script>"""
-    itemlist = {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Classement par l'Indice de libération",
-        "itemListOrder": "https://schema.org/ItemListOrderDescending",
-        "numberOfItems": len(core),
-        "itemListElement": [
-            {"@type": "ListItem", "position": i,
-             "url": canonical_url(f'{CAT_SLUG[f["categorie"]]}/{f["uid"]}.html'),
-             "name": f["nom"]}
-            for i, (f, s) in enumerate(core, 1)
-        ],
-    }
     return page("Classement", body, "classement.html", project=project,
-                description="Classement des montages de libération des terres par l'Indice de libération.",
-                path="classement.html", jsonld=[itemlist])
+                description="Classement par la note de libération (le faisceau libéré).",
+                path="classement.html")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -2412,6 +2480,7 @@ def carte_markers(all_sc, by_uid):
         commune = clean(loc.get("commune") or "")
         dept = clean(loc.get("departement") or "")
         commune_dept = " — ".join(x for x in (commune, dept) if x)
+        _v3m = lieu_v3(f)
         markers.append({
             "lat": lat, "lon": lon,
             "nom": f.get("nom", f["uid"]), "uid": f["uid"],
@@ -2419,6 +2488,11 @@ def carte_markers(all_sc, by_uid):
             "verdict_label": CARTE_VERDICT_LABELS.get(verdict, ""),
             "idl": sc.get("idl"),
             "palier": palier["label"] if palier else "",
+            "band": (_v3m["band"] if _v3m else ""),
+            "bcol": (_v3m["bcol"] if _v3m else ""),
+            "band_label": (_v3m["label"] if _v3m else ""),
+            "v3note": (_v3m["note"] if _v3m else None),
+            "v3susp": (bool(_v3m["susp"]) if _v3m else False),
             "commune": commune_dept,
         })
     return markers, omis
@@ -2438,18 +2512,20 @@ def render_carte(all_sc, cfg, by_uid):
 
     # légende des couleurs de verdict (ordre : sanctuaire → hybride → marchand →
     # à établir). Symétrique : une pastille de même taille par verdict.
-    leg_order = ["sanctuaire", "hybride", "marchand", None]
+    leg_order = [("commun_vivant","commun vivant"),("usage_decommodifie","usage libéré"),
+                 ("autogere","autogéré"),("sorti_du_marche","sorti du marché"),
+                 ("en_transition","en transition"),("marchand","marchand")]
     legende = "".join(
         f'<span class="carte-leg-item">'
-        f'<span class="carte-leg-dot" style="background:{CARTE_VERDICT_COULEURS[v]}"></span>'
-        f'{e(CARTE_VERDICT_LABELS[v])}</span>'
-        for v in leg_order)
+        f'<span class="carte-leg-dot" style="background:{FB_HEX[b]}"></span>'
+        f'{e(lab)}</span>'
+        for b,lab in leg_order)
 
     body = f"""<h1>Carte des lieux</h1>
 <p class="lead">Un marqueur par lieu de l'annuaire, géolocalisé et coloré selon
-son verdict. Cliquez un marqueur pour ouvrir sa fiche.
+son palier de libération (la nouvelle grille). Cliquez un marqueur pour ouvrir sa fiche.
 <a href="lieux.html">Voir le catalogue des lieux →</a></p>
-<div class="carte-legende" role="group" aria-label="Légende des verdicts">{legende}</div>
+<div class="carte-legende" role="group" aria-label="Légende des paliers de libération">{legende}</div>
 <div id="carte" class="carte-map" role="application"
   aria-label="Carte interactive des lieux de l'annuaire"></div>
 <p class="note">{n} lieu{'x' if n > 1 else ''} géolocalisé{'s' if n > 1 else ''}.
@@ -2480,18 +2556,19 @@ JavaScript. <a href="lieux.html">Consultez le catalogue des lieux →</a></p></n
   LIEUX.forEach(function (d) {{
     var marker = L.circleMarker([d.lat, d.lon], {{
       radius: 8, weight: 2, color: "#fffdf6",
-      fillColor: colorFor(d.verdict), fillOpacity: 0.95
+      fillColor: d.bcol || colorFor(d.verdict), fillOpacity: 0.95
     }}).addTo(map);
     var url = "l/" + encodeURIComponent(d.uid) + ".html";
     var lines = [];
     lines.push('<a class="carte-pop-nom" href="' + url + '">' + esc(d.nom) + '</a>');
-    if (d.verdict_label) {{
-      lines.push('<span class="carte-pop-verdict" style="color:' +
-        colorFor(d.verdict) + '">' + esc(d.verdict_label) + '</span>');
+    var vl = d.band_label || d.verdict_label;
+    var vc = d.bcol || colorFor(d.verdict);
+    if (vl) {{
+      lines.push('<span class="carte-pop-verdict" style="color:' + vc + '">' + esc(vl) + '</span>');
     }}
     var meta = [];
-    if (d.idl != null) meta.push("Indice " + esc(d.idl));
-    if (d.palier) meta.push(esc(d.palier));
+    if (d.v3susp) meta.push("note suspendue");
+    else if (d.v3note != null) meta.push("libération " + esc(d.v3note) + "/100");
     if (meta.length) lines.push('<span class="carte-pop-meta">' + meta.join(" · ") + '</span>');
     if (d.commune) lines.push('<span class="carte-pop-lieu">' + esc(d.commune) + '</span>');
     lines.push('<a class="carte-pop-link" href="' + url + '">Voir la fiche →</a>');
@@ -2723,9 +2800,9 @@ pôle unique.</p>
 
 {anti_html}
 
-<p class="prose">La grille de notation traduit ce cadre en critères, répartis
-sur cinq axes : voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul
-de l'Indice est détaillé dans la <a href="methode.html">méthode</a> ; les termes
+<p class="prose">La grille de notation traduit ce cadre par <strong>la porte et six
+questions</strong> : voir les <a href="grilles.html">grilles d'analyse</a>. Le calcul
+de la note est détaillé dans la <a href="methode.html">méthode</a> ; les termes
 pivots sont définis au <a href="glossaire.html">glossaire</a>.</p>"""
     # données structurées : les trois régimes en DefinedTermSet, bâti depuis la
     # même source que le HTML (audit SEO C, I1).
@@ -2758,108 +2835,81 @@ def render_methode(cfg, n_by_cat, all_sc):
     project = cfg["concepts"]["project"]
     ranking = cfg["ranking"]
     cc = cfg["concepts"]["concept_central"]
-
-    # chiffres de transparence calculés depuis all_sc (audit cycle D —
-    # transparence). Complétude moyenne et part de critères « inconnu » sur les
-    # seules entrées notées (modèles exclus).
     n_total_fiches = len(all_sc)
     notees = [(f, sc) for f, sc in all_sc
-              if f["categorie"] != "modele" and sc.get("completude") is not None]
+              if f["categorie"] != "modele" and sc.get("idl") is not None]
     n_notees = len(notees)
-    comp_vals = [sc["completude"] for _, sc in notees]
-    pct_complet = round(sum(comp_vals) / len(comp_vals) * 100) if comp_vals else 0
-    pct_inconnu = 100 - pct_complet
-    axes_html = "".join(
-        f"""<div class="axe-card" style="--c:{a['couleur']}">
-  <h3>Axe {a['id']} — {e(a['label'])}</h3>
-  <p class="enclair">{e(clean(a.get('en_clair','')))}</p>
-  <p class="axe-q">{e(clean(a['question']))}</p>
-  <p>{e(clean(a['description']))}</p>
-</div>""" for a in ranking["axes"])
-    paliers_html = "".join(
-        f"""<tr><td><span class="pal-chip" style="--pal:{p['couleur']}">
-{e(p['label'])}</span></td><td class="num">≥ {p['min']}</td>
-<td>{e(clean(p['sens']))}</td></tr>""" for p in ranking["paliers"])
-    # règles de domiciliage des axes sur la chaîne (cf. ranking.yml § chaine).
-    domiciliage_html = "".join(
-        f'<li><strong>Axe {d["axe"]}</strong> — {e(clean(d["regle"]))}</li>'
-        for d in ranking.get("chaine", {}).get("domiciliage", []))
+    Q_CARDS_CFG = [
+        ("1", "Le milieu", "#7a5230", "Le sol, l'eau, la terre sont-ils ménagés plutôt qu'exploités ?",
+         "Ce qui est fait au vivant non-humain du lieu : sol vivant, eau, haies, pratiques de soin."),
+        ("2", "Le vivant", "#3d7a4e", "Le non-humain a-t-il une place faite pour lui ?",
+         "Habitat partagé avec le vivant : espaces rendus, biodiversité, place effective au-delà de l'usage humain."),
+        ("3", "L'ouverture", "#2f6e8f", "Le lieu est-il ouvert au-dela de ceux qui l'habitent ?",
+         "Hospitalité, vocation d'intérêt général, accueil — par opposition à l'entre-soi clos."),
+        ("4", "Le don", "#8a5a8a", "L'accès relève-t-il du don plutôt que du paiement ?",
+         "L'usage se gagne-t-il par l'appartenance et l'entraide, ou reste-t-il une redevance, un loyer, un billet ?"),
+        ("5", "La durée", "#b08a3e", "Les usagers peuvent-ils rester — le titre d'usage est-il solide et long ?",
+         "La sécurité d'usage dans le temps : bail long, statut stable, impossibilité d'être délogé du jour au lendemain."),
+        ("6", "La voix", "#225588", "Ceux qui vivent le lieu décident-ils vraiment ?",
+         "Autogouvernance réelle des usagers — par opposition à une gestion descendante, d'en haut."),
+    ]
+    Q_CARDS = "".join(
+        f'<div class="axe-card" style="--c:{c}"><h3>{i} &middot; {e(lab)}</h3>'
+        f'<p class="axe-q">{e(q)}</p><p>{e(d)}</p></div>'
+        for i, lab, c, q, d in Q_CARDS_CFG)
+    BANDS_V3 = [
+        ("marchand", "#9a9a9a", "0-20", "Rien n'est sorti du marché — la porte n'est pas franchie."),
+        ("en transition", "#a86a4a", "20", "La porte n'est que partielle : la valeur n'est pas pleinement soustraite."),
+        ("sorti du marché", "#b08a3e", "20-50", "Le foncier est hors-marché, mais l'usage n'est pas encore rendu à un collectif."),
+        ("autogéré", "#3d7a4e", "50-75", "Porte franchie, et les usagers décident et peuvent rester (voix + durée tenues)."),
+        ("usage libéré", "#2f6e8f", "75-90", "En plus, l'accès relève du don plus que du paiement."),
+        ("commun vivant", "#224477", "90-100", "Le faisceau est entier, et la place du vivant est tenue."),
+    ]
+    bands_html = "".join(
+        f'<tr><td><span class="pal-chip" style="--pal:{col}">{e(lab)}</span></td>'
+        f'<td class="num">{seuil}</td><td>{e(sens)}</td></tr>'
+        for lab, col, seuil, sens in BANDS_V3)
     tri = cfg["concepts"].get("triptyque", {}) or {}
-    ed = ((cfg["concepts"].get("editorial", {}) or {})
-          .get("registres_d_ecriture", {}) or {})
-    # 1.7 — foyer unique de la version longue = Régimes. Ici, deux lignes + ancre.
     triptyque_html = f"""<section id="triptyque"><h2 class="sec">Les trois pouvoirs du propriétaire : usus, fructus, abusus</h2>
 <p class="enclair">{e(clean(tri.get('en_clair','')))}</p>
 <p class="prose"><strong>La formule.</strong> {e(clean(cc.get('formule','')))}</p>
 <p class="prose">Usus (utiliser), fructus (en tirer un revenu), abusus (en disposer
 jusqu'à détruire) : libérer une terre, c'est ré-agencer collectivement ces trois
-pouvoirs. Le détail des trois droits, avec les pôles et la typologie de montage,
-est exposé sur la page <a href="regimes.html#triptyque">Régimes et pôles du sol</a>.</p>
+pouvoirs — au fond, ce que teste <em>la porte</em>. Le détail des trois droits,
+avec les pôles et la typologie de montage, est sur la page
+<a href="regimes.html#triptyque">Régimes et pôles du sol</a>.</p>
 </section>"""
-    # Section « Les deux voix » retirée (session #5, 27 mai 2026) : le double
-    # registre voix exacte / voix incarnée est implicite à la lecture, pas
-    # besoin que le lecteur en prenne conscience pour bénéficier du site.
-    ecriture_html = ""
-    # Section « Le verdict du lieu » — construite depuis concepts.yml (verdict).
-    verdict_cfg = cfg["concepts"].get("verdict", {}) or {}
-    degres_li = "".join(
-        f'<li><span class="verdict verdict-{e(d["id"])}">{e(d["label"])}</span> — '
-        f'{e(clean(d.get("definition","")))}</li>'
-        for d in verdict_cfg.get("degres", []) or [])
-    verdict_html = f"""<section id="verdict"><h2 class="sec">Le verdict du lieu</h2>
-<p class="prose">À côté de l'Indice chiffré, chaque lieu reçoit un
-<strong>verdict</strong> — une qualification en trois niveaux qui dit où se tient
-la chaîne entre marché et commun. Le verdict ne se saisit jamais : il
-<strong>découle</strong> de la nature de chaque maillon, lue dans sa
-relation à la chaîne, puis des conditions d'accès au niveau le plus haut, que
-nous appelons <em>sanctuaire</em> (le « sommet » du commun).</p>
-<ul class="prose verdict-degres">{degres_li}</ul>
-<p class="prose"><strong>Une nature lue dans la chaîne, pas en soi.</strong> Ce
-qui fait basculer un lieu, ce n'est pas la forme juridique d'un maillon isolé mais
-sa <em>place</em> dans la chaîne. Une société civile d'exploitation agricole —
-GAEC, EARL — qui <em>prend à bail</em> sa terre sous un porteur qui la tient
-hors-marché ne capte pas le fonds : le lieu reste hybride, jamais marchand. La
-même exploitation, <em>propriétaire</em> de sa terre, la capte : le lieu devient
-marchand. Le titre de l'articulation (bail rural, emphytéotique) départage les
-deux, sur la chaîne déclarée par le lieu — seule source de vérité.</p>
-<p class="prose"><strong>Le sommet tient à plusieurs conditions à la fois.</strong> Le niveau
-« {e(next((d['label'] for d in verdict_cfg.get('degres',[]) if d['id']=='sanctuaire'), 'sanctuaire'))} »
-ne s'atteint qu'avec une chaîne entièrement non lucrative <em>et</em> des
-conditions observables toutes réunies : foncier irréversiblement hors-marché,
-habitat du vivant, protection durable et <em>opposable</em> du milieu (qu'on peut
-faire respecter en justice), usage non marchand
-au service de l'intérêt général, et travail non marchandisé (le travail qui fait
-vivre le lieu n'est pas tarifé en argent par un contrat de travail — don, troc,
-entraide, ou associé·es vivant du produit partagé, plutôt que salariat). Chacune
-se lit sur du vérifiable ; ce qui ne l'est pas — l'idéal d'une économie pleinement
-<em>décommodifiée</em> (entièrement retirée du marché) — éclaire le sommet sans en commander l'accès. Tant qu'une de ces conditions n'est pas établie, le lieu reste hybride.
-Le sommet est donc <strong>rare — un horizon plus qu'une case à remplir</strong> ;
-il peut rester momentanément vide à mesure que le corpus se documente, et c'est
-honnête.</p>
-<p class="prose"><strong>Statut de l'évaluation.</strong> Le verdict comme
-l'Indice sont une <strong>lecture argumentée</strong>, pas une mesure objective de
-la valeur d'un lieu. Comme tout indice — celui du développement humain, par
-exemple — ils agrègent des critères choisis et pondérés selon un cadre assumé. Ce
-cadre est perfectible et se discute ; il prend le parti d'une économie citoyenne,
-non lucrative et d'intérêt général, plutôt qu'une neutralité de surface. Parce que le verdict est une
-lecture et non un arrêt, tout porteur ou usufruitier peut exercer un
-<strong>droit de réponse</strong> : sa réponse est reproduite sur la fiche
-concernée, sans retouche.</p>
+    verdict_html = """<section id="verdict"><h2 class="sec">Statut de l'évaluation</h2>
+<p class="prose"><strong>Ce qu'est la note — et ce qu'elle n'est pas.</strong> La note de
+libération est une <strong>lecture argumentée à partir d'informations publiques</strong>,
+pas une mesure objective ni une vérité sur le lieu ou ses acteurs. On note
+<strong>un degré de sortie du marché, pas un lieu</strong> ; la critique porte sur le
+<em>montage</em>, jamais sur les personnes. Comme tout indice, le faisceau agrège des
+critères choisis selon un cadre assumé — celui d'une économie citoyenne, non lucrative et
+d'intérêt général. Ce cadre est <strong>daté, signé, contestable</strong> et appelle la
+critique.</p>
+<p class="prose"><strong>Le chiffre est calculé, jamais saisi.</strong> Ce qui est renseigné,
+ce sont seulement les faits — la porte et les six questions ; la bande, la suspension, le
+point faible et le badge en sont <em>dérivés</em> à la publication. Un pseudo-portage ne peut
+donc pas afficher une bande haute : la porte le bloque, quoi qu'on saisisse ailleurs.</p>
+<p class="prose"><strong>Droit de réponse.</strong> Parce que c'est une lecture et non un
+arrêt, tout porteur, usufruitier ou collectif peut répondre : sa réponse est reproduite sur la
+fiche concernée, sans retouche. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>
 </section>"""
     body = f"""<h1>Méthode</h1>
 <p class="lead">Comment l'annuaire recense, lit et note les montages de
-libération des terres.</p>
+libération des terres — selon <strong>le faisceau libéré</strong> : une porte, six questions,
+une échelle lue au point le plus faible.</p>
 <nav class="page-toc" aria-label="Sommaire de la page">
   <a href="#corpus">Ce que recense l'annuaire</a>
   <a href="#triptyque">Les trois pouvoirs du propriétaire</a>
-  <a href="#indice">L'Indice de libération</a>
-  <a href="#chaine">La chaîne, et où se lit chaque axe</a>
-  <a href="#verdict">Le verdict du lieu</a>
+  <a href="#indice">La note de libération</a>
+  <a href="#chaine">La chaîne, et la note d'un groupe</a>
+  <a href="#verdict">Statut de l'évaluation</a>
   <a href="#integrite">L'intégrité du montage</a>
   <a href="#limites">Limites</a>
   <a href="#etat">État du corpus</a>
 </nav>
-
 <section id="corpus"><h2 class="sec">Ce que recense l'annuaire</h2>
 <p class="enclair">{e(clean(cc.get('en_clair','')))}</p>
 <p class="prose">« Terres Libérées » recense des lieux français où le foncier a
@@ -2870,164 +2920,118 @@ usufruitier). {e(clean(cc['definition']))}</p>
 <p class="prose"><strong>Ressort juridique.</strong> {e(clean(cc['ressort_juridique']))}</p>
 <p class="prose"><strong>Verrou central.</strong> {e(clean(cc['verrou_cle']))}</p>
 </section>
-
 {triptyque_html}
-
-<section id="indice"><h2 class="sec">L'Indice de libération</h2>
-<p class="prose">Chaque entrée est notée de 0 à 100 sur <strong>cinq axes</strong>
-— cinq axes indépendants, du sol vers les gens puis vers le temps. Pour
-une fiche, le score d'un axe est la somme pondérée des critères remplis, ramenée
-à 100 : <code>score = Σ(poids × facteur) / Σ(poids) × 100</code>. Le facteur
-vaut 1 pour « oui », 0,5 pour « partiel », 0 pour « non ». Les critères
-« inconnu » sont <strong>exclus du calcul</strong> — ils ne pénalisent pas la
-note mais abaissent la complétude affichée de la fiche.</p>
-<div class="axe-cards">{axes_html}</div>
-<p class="prose"><strong>Cinq axes indépendants.</strong> Les cinq axes sont
-indépendants les uns des autres : un montage peut être haut sur l'un et bas sur
-un autre — propriété solidement verrouillée mais gouvernance fermée, ou
-l'inverse. Aucun axe ne se déduit d'un autre. C'est cette indépendance qui rend
-le profil à cinq axes informatif : il décompose la qualité du montage au lieu
-de la résumer d'un seul chiffre.</p>
-<p class="prose"><strong>L'axe le plus faible commande — une force ne rachète pas
-une faiblesse.</strong> L'Indice global n'est pas la moyenne arithmétique des
-axes : c'est leur <strong>moyenne géométrique</strong> (on parle d'<em>agrégation
-non compensatoire</em>) —
-<code>IdL brut = (score₁ × score₂ × … × score_k) ^ (1 / k)</code>, où
-<em>k</em> est le nombre d'axes renseignés. La moyenne géométrique fait peser
-l'axe le plus faible : un montage solide sur quatre axes mais commercial de
-nature (axe 2 effondré) ne peut pas racheter sa faiblesse par ses forces. Si un
-axe vaut 0, le produit vaut 0 et l'Indice tombe à 0 — c'est voulu : un « faux
-ami » ne peut structurellement pas afficher un score élevé.</p>
-<p class="prose"><strong>Pénalité de complétude.</strong> Pour ne pas surnoter
-les fiches lacunaires, l'indice affiché est pénalisé par la complétude :
-<code>IdL affiché = IdL brut × (0,5 + 0,5 × complétude)</code>. Une fiche
-entièrement renseignée n'est pas pénalisée ; une fiche dont la moitié des
-critères restent « inconnu » voit son indice ramené aux trois quarts de l'indice
-brut. L'indice brut est conservé pour information ; c'est l'indice affiché,
-pénalisé, qui sert au badge, au classement et à l'export <code>data.json</code>.</p>
-<p class="prose">Les modèles voisins, eux, ne sont pas notés par la grille :
-leur indice est <strong>estimé</strong> (axes estimés, hors grille) et marqué
-comme tel ; ils restent hors du classement principal.</p>
+<section id="indice"><h2 class="sec">La note de libération — la porte et les six questions</h2>
+<p class="prose"><strong>D'abord, la porte.</strong> Avant toute note, une question
+préalable : la valeur du lieu est-elle <strong>soustraite au marché</strong> ? Si rien n'en
+est sorti, le montage reste <em>marchand</em> et n'entre pas sur l'échelle. La porte franchie
+— partiellement, ou pour toujours quand le bien est rendu inaliénable — on lit alors six
+questions, du lieu vers le groupe.</p>
+<div class="axe-cards">{Q_CARDS}</div>
+<p class="prose"><strong>Quatre réponses possibles.</strong> Chaque question se lit
+<strong>&#9679; tenu</strong>, <strong>&#9680; partiel</strong>, <strong>&#9675; absent</strong>, ou
+<strong>non établi</strong> quand nos sources ne permettent pas de trancher. Le « non établi »
+n'est jamais compté comme un zéro, ni au désavantage du lieu : il appelle une pièce, pas un
+jugement.</p>
+<p class="prose"><strong>L'échelle monte par paliers — sans sauter de marche.</strong>
+On part du bas et l'on franchit chaque palier à condition de tenir le précédent : porte &#9679; →
+plancher <em>sorti du marché</em> ; puis <em>voix</em> &#9679; et <em>durée</em> &#9679; → <em>autogéré</em> ;
+puis <em>don</em> &#9679; → <em>usage libéré</em> ; enfin la place du vivant (le badge) → <em>commun
+vivant</em>.</p>
 <table class="rank-tbl small">
-<caption class="visually-hidden">Paliers de l'Indice de libération : seuil et sens.</caption>
+<caption class="visually-hidden">Paliers de la note de libération : seuil et sens.</caption>
 <thead><tr><th scope="col">Palier</th><th scope="col" class="num">Seuil</th><th scope="col">Sens</th></tr></thead>
-<tbody>{paliers_html}</tbody></table>
+<tbody>{bands_html}</tbody></table>
+<p class="prose"><strong>On lit au point le plus faible du chemin — une force ne rachète pas
+une faille.</strong> La position dans la bande suit la plus faible des questions <em>du
+chemin</em> (porte, voix, durée, don). Un lieu solide partout mais où l'on ne décide pas reste
+bas : la faiblesse commande, elle ne se moyenne pas avec les forces.</p>
+<p class="prose"><strong>Le chiffre est indicatif ; la bande fait foi.</strong> Le nombre
+(0-100) situe à l'intérieur de la bande, donné en <strong>fourchette</strong> « du sûr à
+l'estimé ». Ce qui est robuste, c'est la <strong>bande</strong>, le <strong>profil des six
+questions</strong> et le <strong>point faible</strong> — pas la décimale.</p>
+<p class="prose"><strong>Ne pas savoir suspend la note.</strong> Si une question
+<em>décisive</em> (la porte, la voix, la durée) est non établie, on <strong>suspend</strong> :
+pas de chiffre, seulement le palier atteint avec certitude, et la pièce manquante marquée comme
+une dette datée. Suspendre est une honnêteté, pas une faiblesse — un lieu remarquable peut
+rester suspendu si la pièce manque de notre côté.</p>
+<p class="prose"><strong>Le badge « Sanctuaire » est à côté de la note, jamais dedans.</strong>
+Le milieu et le vivant nourrissent un <strong>badge écologique</strong> (🌿 / 🌿🌿) qui dit le
+soin du lieu pour le vivant, <em>séparément</em> du chiffre. Un domaine de conservation peut
+ainsi être écologiquement exemplaire <em>et</em> avoir une note de libération basse parce que
+l'usage n'y est pas encore rendu : les deux informations cohabitent sans s'effacer.</p>
 </section>
-
-<section id="chaine"><h2 class="sec">La chaîne, et où se lit chaque axe</h2>
-<p class="prose">Un montage de libération des terres n'est pas une entité
-isolée mais une <strong>chaîne</strong> : un lieu, son porteur de
-nue-propriété, son organisme usufruitier. Chaque axe se lit sur le maillon où il
-se joue réellement. {e(clean(ranking['chaine']['coherence']))}</p>
-<ul class="prose">{domiciliage_html}</ul>
-<p class="prose" id="chaine-effectif"><strong>Une structure vaut par les lieux
-qu'elle fait vivre.</strong> Un porteur ou un usufruitier est d'abord noté sur
-ses propres statuts ; mais il n'existe, comme acteur de la libération des terres,
-qu'à travers les chaînes qu'il noue. Aussi sa note de principe est-elle relue à
-travers les lieux qu'il fait vivre : si ces lieux valent moins que cette note,
-c'est leur niveau qui compte. Une mauvaise chaîne fait baisser une note ; une
-bonne chaîne ne la rehausse jamais au-delà de la note de principe. Le détail de
-ce calcul (« indice intrinsèque / effectif », « axes contaminables ») est au
-<a href="glossaire.html#g-indice-intrinseque-indice-effectif">glossaire</a> ;
-faute de lieu relié, la note relue égale la note de principe.</p>
-<p class="prose"><strong>Lire le motif, pas l'instance.</strong> La
-contamination lit une <em>distribution</em> de chaînes, non un cas isolé : une
-mauvaise chaîne sur dix n'équivaut pas à huit sur dix. Un bon porteur affecté
-d'un locataire problématique unique n'est pas plombé comme un porteur
-systématiquement <em>rentier</em> (dont l'usage sert surtout à encaisser un
-loyer).</p>
-<p class="prose"><strong>Lire la trajectoire, pas l'instantané.</strong> Une
-chaîne en cours de dé-précarisation active — bail renégocié, usufruitier en
-transition — compte comme l'entité faisant son travail, non comme un échec.
-Sans cela, le modèle créerait une incitation perverse : refuser les cas
-difficiles pour protéger son score.</p>
+<section id="chaine"><h2 class="sec">La chaîne, et la note d'un groupe</h2>
+<p class="prose">Le faisceau n'évalue pas un lieu isolé mais toute la <strong>chaîne</strong>,
+réparti entre ses maillons : la <strong>porte</strong> → le porteur ; le <strong>milieu</strong>
+et le <strong>vivant</strong> → le lieu ; l'<strong>ouverture</strong> et le <strong>don</strong>
+→ la chaîne ; la <strong>durée</strong> et la <strong>voix</strong> → l'usufruitier. Le lieu est
+l'assemblage où tout converge — d'où son <strong>étoile complète à six branches</strong>.</p>
+<p class="prose"><strong>Noter un porteur, un usufruitier, un réseau.</strong> Pas de grille à
+part : on les note sur les <strong>six mêmes questions</strong>, par <strong>agrégation des
+lieux</strong> qu'ils tiennent, animent ou fédèrent — on juge un porteur par ce qu'il libère
+réellement. Un pseudo-portage tire ses lieux vers le bas : l'agrégat le contient. Sous l'étoile,
+le <strong>type de portage</strong> (verrou pour toujours · portage solide · partiel ·
+pseudo-portage) éclaire la note sans s'y substituer. Un groupe sans lieu agrégeable dans
+l'annuaire reste <strong>non noté</strong>.</p>
 </section>
-
 {verdict_html}
-
 <section id="integrite"><h2 class="sec">L'intégrité du montage</h2>
 <p class="prose">{e(clean(ranking['integrite_montage']['question']))}</p>
 <p class="prose">{e(clean(ranking['integrite_montage']['note_lecture']))}
-Cet indicateur complémentaire n'entre pas dans l'Indice : il
+Cet indicateur complémentaire n'entre pas dans la note : il
 <strong>situe</strong> le montage parmi les cinq pôles sans les hiérarchiser.
-Le cadre des régimes et des cinq pôles est exposé sur la
+Le cadre des régimes et des cinq pôles est sur la
 page <a href="regimes.html#poles">Régimes et pôles du sol</a>.</p>
 </section>
-
-{ecriture_html}
-
 <section id="limites"><h2 class="sec">Limites</h2>
 <ul class="prose">
-<li>Les fiches reposent sur des sources publiques ; les montages réels peuvent
+<li>Les fiches reposent sur des <strong>sources publiques</strong> ; les montages réels peuvent
 être plus précis ou avoir évolué. Chaque fiche distingue les faits vérifiés des
-points non confirmés.</li>
-<li>L'Indice est une évaluation au regard d'un cadre explicite, reproductible et
+points non confirmés, et tout acteur dispose d'un droit de réponse.</li>
+<li>La note est une lecture au regard d'un cadre explicite, reproductible et
 contestable — non un label.</li>
-<li>Une part élevée de critères « inconnu » rend une note peu fiable : la
-complétude est toujours affichée.</li>
+<li>Ce qu'on ne peut établir reste « non établi » et peut suspendre la note ; on ne devine pas.</li>
 <li>Le « montage de référence » (nue-propriété d'intérêt général + usufruit
 associatif) est un idéal-type ; peu de lieux réels le réalisent à la lettre.</li>
 <li>Le corpus est construit et non exhaustif ; sa composition — sous-représentation
 de l'habitat et de l'Outre-mer notamment — est détaillée dans l'<a href="#etat">État
 du corpus</a>.</li>
 </ul>
-<p class="prose"><strong>Ce que le modèle ne mesure pas.</strong> Le travail non
-marchandisé — non tarifé en argent par un contrat de travail — est lu
-<em>positivement</em> comme l'une des conditions d'accès au sommet, sur ce qui en
-est documenté ; mais cette lecture est partielle. Le critère teste la forme
-salariale, non l'autonomie : une domination sans salaire (autorité qu'on ne peut
-quitter) échappe au verdict et n'est portée qu'ici, comme limite assumée.
-L'auto-exploitation d'un collectif non lucratif — l'épuisement militant — reste
-hors champ de même : un groupe qui s'autodétermine ainsi porte sa responsabilité
-et ses raisons ; c'est une anomalie d'ordre sociologique, à une autre échelle que
-la qualification d'un montage, qui ne se laisse pas
-normaliser.</p>
 </section>
-
 <section id="etat"><h2 class="sec">État du corpus</h2>
 <p class="prose">{n_by_cat['lieu']} lieux · {n_by_cat['porteur']} porteurs de
 nue-propriété · {n_by_cat['usufruitier']} organismes usufruitiers ·
 {n_by_cat['modele']} modèles voisins de comparaison. Les {n_total_fiches}
-fiches sont publiées ; le corpus est construit, non exhaustif.</p>
+fiches sont publiées ; le corpus est construit, non exhaustif. <strong>{n_notees}</strong>
+entrées portent une note de libération calculée ; les autres (groupes sans lieu agrégeable,
+modèles voisins) restent non notées.</p>
 {corpus_histogram(all_sc, ranking)}
-<p class="prose"><strong>Complétude.</strong> Les {n_notees} entrées notées
-renseignent en moyenne {pct_complet} % des critères de leur grille ;
-{pct_inconnu} % restent « inconnu », faute de source publique. La complétude de
-chaque fiche est affichée sur la fiche elle-même ; quelques fiches restent
-nettement plus lacunaires et leur Indice est à lire avec prudence.</p>
 <p class="prose"><strong>Posture du recensement.</strong> Le projet regarde le
 sujet depuis la tradition de l'<strong>éducation populaire</strong> et des
 <strong>mouvements citoyens non-commerciaux</strong>. Il cherche les formes les
-plus pleinement non-marchandes : foncier irréversiblement soustrait au marché,
-chaîne entièrement non lucrative, habitat partagé pour le vivant humain et
-non-humain, usage autogéré par celles et ceux qui habitent le lieu. Les lieux
-qui s'écartent de cette ligne — par la nature commerciale d'un maillon de la
-chaîne, par une logique locative rentière, par une gouvernance descendante —
-sont décrits avec la même grille que les autres ; leur palier et leur verdict en
-rendent compte.</p>
+plus pleinement non-marchandes ; les lieux qui s'en écartent — par la nature
+commerciale d'un maillon, une logique locative rentière, une gouvernance
+descendante — sont décrits avec la <strong>même grille</strong> que les autres, et
+leur palier en rend compte.</p>
 <p class="prose"><strong>Ce que le corpus ne couvre pas encore.</strong> Le
-recensement est partiel et assume ses angles morts. Il est très majoritairement
-rural et agricole : l'habitat coopératif n'y figure que par quelques entrées
-récentes, le foncier solidaire de logement urbain et le périurbain structuré
-restent peu représentés. Géographiquement, les lieux se concentrent sur la
-moitié sud et est de la métropole — six régions environ — ; plusieurs régions
-et l'ensemble de l'Outre-mer ne sont pas couverts. Ces manques sont documentés
-dans les notes d'audit du projet et signalent des pistes d'enrichissement, non
-des choix d'exclusion.</p>
+recensement est très majoritairement rural et agricole ; l'habitat coopératif,
+le foncier solidaire urbain et le périurbain restent peu représentés.
+Géographiquement, les lieux se concentrent sur la moitié sud et est de la
+métropole ; plusieurs régions et l'ensemble de l'Outre-mer ne sont pas couverts.
+Ces manques sont des pistes d'enrichissement, non des choix d'exclusion.</p>
 </section>
-
 <section><h2 class="sec">Aller plus loin</h2>
 <p class="prose">Pour le détail du cadre et des grilles : la page
 <a href="regimes.html">Régimes et pôles du sol</a> expose l'opposition droit
-civil d'intérêt général / droit commercial / propriété privée et la décline en
-cinq pôles ; les
+civil d'intérêt général / droit commercial / propriété privée ; les
 <a href="grilles.html">grilles d'analyse</a> détaillent les critères de chaque
 catégorie ; le <a href="glossaire.html">glossaire</a> définit les termes
 pivots ; les <a href="modeles.html">modèles voisins</a> servent de points de
 comparaison hors classement.</p>
 </section>"""
     return page("Méthode", body, "methode.html", project=project,
-                description="Méthode de l'annuaire et calcul de l'Indice de libération.",
+                description="Méthode de l'annuaire : le faisceau libéré — la porte, les six questions, l'échelle de libération.",
                 path="methode.html")
 
 
@@ -3106,10 +3110,10 @@ GLOSSAIRE = [
      "distinct de l'intérêt général institué comme de la propriété privée."),
     ("Agrégation non compensatoire",
      "En clair : l'axe le plus faible commande — une force ne rachète pas une "
-     "faiblesse. C'est le mode de calcul de l'Indice : un montage solide sur "
-     "quatre axes mais effondré sur le cinquième ne peut afficher un indice "
-     "élevé. Techniquement, l'agrégation se fait par moyenne géométrique, qui "
-     "pénalise lourdement l'axe le plus bas. « Agrégation non compensatoire » "
+     "faiblesse. C'est le principe du faisceau : on lit la note au point le plus "
+     "faible du chemin (la porte, la voix, la durée, le don). Un montage solide "
+     "partout mais effondré sur une question décisive ne peut afficher une note "
+     "élevée. « Lecture non compensatoire » "
      "est l'étiquette technique de cette règle."),
     ("Chaîne",
      "Un montage de libération des terres n'est pas une entité isolée mais une "
@@ -3196,9 +3200,10 @@ GLOSSAIRE = [
      "plutôt que pour son usage. Les montages de l'annuaire visent à "
      "neutraliser cette logique, en verrouillant la cessibilité du foncier ou "
      "des parts qui en portent la valeur."),
-    ("Indice de libération",
+    ("Note de libération",
      "Note de synthèse de 0 à 100 attribuée à chaque entrée de l'annuaire. "
-     "Elle agrège cinq axes — le sol, la structure, le pouvoir, la finalité, "
+     "Elle découle de la porte et des six questions du faisceau — le milieu, le "
+     "vivant, l'ouverture, le don, la durée, la voix, "
      "l'usage — et résume la solidité du montage. L'axe le plus faible commande "
      "le résultat (voir « Agrégation non compensatoire »). Voir la page Méthode."),
     ("Intégrité du montage",
@@ -3319,7 +3324,7 @@ le classement, par l'Indice. Cette page propose une troisième lecture, par
 sujet : à quoi sert la terre, et qui la porte. Un même montage peut relever de
 deux thèmes. <a href="methode.html">Comprendre l'Indice et les axes →</a></p>
 <nav class="page-toc" aria-label="Sommaire des thèmes">{toc}</nav>
-<p class="axe-legend cat-legend">{axe_legend(axes_cfg, "Profil à cinq axes : ")}</p>
+{bands_legend()}
 {''.join(sections)}
 <p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
     return page("Thèmes", body, "themes.html", project=project,
@@ -3360,9 +3365,9 @@ def render_comparer(all_sc, cfg):
 
     selects = opts()
     body = f"""<h1>Comparer deux montages</h1>
-<p class="lead">Choisissez deux entrées de l'annuaire pour voir leurs indices,
-profils à cinq axes et caractéristiques en vis-à-vis.
-<a href="methode.html">Comprendre l'Indice →</a></p>
+<p class="lead">Choisissez deux entrées de l'annuaire pour voir leurs notes,
+profils des six questions et caractéristiques en vis-à-vis.
+<a href="methode.html">Comprendre la note →</a></p>
 <p class="note">Comparer ce qui est comparable : la comparaison critère à
 critère n'a de sens qu'entre entrées de même catégorie.
 <a href="classement.html">Pourquoi ? →</a></p>
@@ -3468,8 +3473,8 @@ def render_index(all_sc, cfg, n_by_cat):
                         ensure_ascii=False)
     carte_teaser = f"""<section class="carte-teaser">
   <h2 class="sec">La France des terres libérées</h2>
-  <p class="lead">{n_lieux} lieux géolocalisés, colorés selon leur verdict — du
-  rouge marchand au vert du commun. Un aperçu : cliquez pour plonger dans la carte.</p>
+  <p class="lead">{n_lieux} lieux géolocalisés, colorés selon leur palier de libération — du
+  gris marchand au bleu du commun vivant. Un aperçu : cliquez pour plonger dans la carte.</p>
   <a class="carte-home-link" href="carte.html" aria-label="Explorer la carte des {n_lieux} lieux">
     <div id="carte-home" class="carte-home-map" aria-hidden="true"></div>
     <span class="carte-home-cta">Explorer la carte →</span>
@@ -3496,7 +3501,7 @@ def render_index(all_sc, cfg, n_by_cat):
   LIEUX.forEach(function (d) {{
     L.circleMarker([d.lat, d.lon], {{
       radius: 6, weight: 1.5, color: "#fffdf6",
-      fillColor: colorFor(d.verdict), fillOpacity: 0.95, interactive: false
+      fillColor: d.bcol || colorFor(d.verdict), fillOpacity: 0.95, interactive: false
     }}).addTo(map);
   }});
 }})();
@@ -3514,8 +3519,8 @@ def render_index(all_sc, cfg, n_by_cat):
     best_section = (
         '<section class="accueil-best"><h2 class="sec">En vue — les montages '
         'les mieux notés</h2>'
-        '<p class="lead">Par catégorie, les entrées dont l\'Indice de libération '
-        'est le plus élevé. <a href="classement.html">Voir le classement complet '
+        '<p class="lead">Par catégorie, les entrées dont la note de libération '
+        'est la plus élevée. <a href="classement.html">Voir le classement complet '
         '→</a></p>'
         + "".join(best_blocks) + '</section>') if best_blocks else ""
 
@@ -3654,8 +3659,8 @@ reste à confirmer — est affiché explicitement.</p></section>
 
 <section><h2 class="sec">v1.x — {SITE_VERSION_DATE}</h2>
 <p class="prose">Première publication de l'annuaire et de la méthode : recensement
-des montages réels de libération des terres en France, Indice de libération à
-cinq axes, grilles d'analyse et glossaire.</p></section>
+des montages réels de libération des terres en France, note de libération (le
+faisceau : la porte et six questions), grilles d'analyse et glossaire.</p></section>
 
 <p class="backlink"><a href="index.html">← Retour à l'accueil</a></p>"""
     return page("Journal des versions", body, "", project=project,
@@ -3677,7 +3682,7 @@ existé.</p>
 <p class="prose">Vous pouvez repartir de l'une de ces pages :</p>
 <ul class="prose">
   <li><a href="/index.html">Accueil de l'annuaire</a></li>
-  <li><a href="/classement.html">Classement par l'Indice de libération</a></li>
+  <li><a href="/classement.html">Classement par la note de libération</a></li>
   <li><a href="/lieux.html">Catalogue des lieux</a></li>
   <li><a href="/porteurs.html">Catalogue des porteurs de nue-propriété</a></li>
   <li><a href="/usufruitiers.html">Catalogue des organismes usufruitiers</a></li>
@@ -4677,7 +4682,7 @@ a.stat:hover,a.stat:focus-visible{box-shadow:0 2px 10px rgba(0,0,0,.10);transfor
 .tag-porteur{background:var(--terra-dk);}
 .tag-usufruitier{background:var(--blue-dk);}
 .tag-modele{background:var(--gold-dk);}
-.tag-reseau{background:var(--ink);}
+.tag-reseau{background:var(--ink);}.tag-montage{background:#7a6a52;}
 /* verdict calculé du lieu */
 .verdict{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
  font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-pill);
@@ -4869,7 +4874,7 @@ select{font:inherit;font-family:-apple-system,system-ui,sans-serif;font-size:.85
    évite que Repères saute à la ligne quand axes-calc a un texte long. */
 .score-axes{flex:1;min-width:200px;}
 /* 3e colonne du panneau de score — repères compacts */
-.score-bref{flex:0 0 14rem;font-size:.8rem;}
+.score-bref{flex:0 0 21rem;font-size:.8rem;}
 .score-bref dl{margin:.1rem 0 0;}
 .sb-item{display:flex;justify-content:space-between;gap:.7rem;
  padding:.26rem 0;border-bottom:1px solid var(--line);}
@@ -5841,6 +5846,13 @@ FB_CLASS={"marchand":"fb-marchand","en_transition":"fb-transition","sorti_du_mar
 FB_LABEL={"marchand":"marchand","en_transition":"en transition","sorti_du_marche":"sorti du marché","autogere":"autogéré","usage_decommodifie":"usage libéré","commun_vivant":"commun vivant"}
 FB_ORDER=["commun_vivant","usage_decommodifie","autogere","sorti_du_marche","en_transition","marchand"]
 Q_LABEL=[("milieu","Le milieu"),("vivant","Le vivant"),("ouverture","L'ouverture"),("don","Le don"),("duree","La durée"),("voix","La voix")]
+Q6_AXES=[("1","Le milieu","#7a5230"),("2","Le vivant","#3d7a4e"),("3","L'ouverture","#2f6e8f"),("4","Le don","#8a5a8a"),("5","La durée","#b08a3e"),("6","La voix","#225588")]
+def _q_scores_from_ev(ev):
+    out={}
+    for _i,(_k,_l) in enumerate(Q_LABEL,1):
+        _v=(ev.get("questions",{}).get(_k,{}) or {}).get("valeur")
+        out[str(_i)]=(None if (_v in _FB_UNK or _v is None) else round(_FB_S.get(_v,0.0)*100))
+    return out
 PF_LABEL={"milieu":"le milieu","vivant":"le vivant","ouverture":"l'ouverture","don":"le don","duree":"la durée","voix":"la voix","porte":"la porte"}
 _FB_SYM={"oui":("●","s-ok"),"partiel":("◐","s-mid"),"non":("○","s-no"),"non_etabli":("non établi","s-na"),"projete":("projeté","s-na")}
 _FB_BADGE={0:"<span style=\'color:#999;font-size:.85rem\'>pas de badge</span>",1:"🌿 <b>Sanctuaire</b>",2:"🌿🌿 <b>Sanctuaire</b>","non_etabli":"<span style=\'color:#999;font-size:.85rem\'>badge non évalué</span>"}
@@ -5871,30 +5883,237 @@ def _fsc_derive(ev):
     else: num=round((lo+hi)/2)
     return band,susp,pf,badge,num
 
+def _v3_grille_fold(ev):
+    vmap={"oui":("●","crit-oui"),"partiel":("◐","crit-partiel"),"non":("○","crit-non"),
+          "non_etabli":("non établi","crit-inconnu"),"projete":("projeté","crit-inconnu")}
+    p=ev.get("porte",{})
+    pst={"oui":("franchie","crit-oui"),"partiel":("partielle","crit-partiel"),
+         "non":("non franchie","crit-non")}.get(p.get("valeur"),("?","crit-inconnu"))
+    trs='<tr class="fam-row"><th colspan="3" scope="colgroup">La porte — préalable (sortir du marché)</th></tr>'
+    trs+=f'<tr><td class="crit-name">Sortir du marché</td><td class="{pst[1]}">{pst[0]}</td><td class="crit-note">{e(clean(p.get("note","")))}</td></tr>'
+    trs+='<tr class="fam-row"><th colspan="3" scope="colgroup">Les six questions — du lieu vers le groupe</th></tr>'
+    for k,lab in Q_LABEL:
+        q=ev["questions"][k]; sym,cls=vmap.get(q["valeur"],vmap["non_etabli"])
+        trs+=f'<tr><td class="crit-name">{lab}</td><td class="{cls}">{sym}</td><td class="crit-note">{e(clean(q.get("note","")))}</td></tr>'
+    return ('<section class="grille-section"><details class="grille-fold">'
+      '<summary class="sec">Grille de lecture <span class="fold-hint">— déplier / replier</span></summary>'
+      '<p class="grille-intro">La porte (sortir du marché), puis six questions du lieu vers le groupe ; '
+      'la note se lit au point le plus faible du chemin. <a href="../methode.html">Comprendre la grille →</a></p>'
+      '<div class="table-scroll" tabindex="0" role="region" aria-label="Grille de lecture (faisceau v3.1)">'
+      '<table class="grille-tbl"><thead><tr><th scope="col">Critère</th><th scope="col">Évaluation</th>'
+      '<th scope="col">Lecture</th></tr></thead><tbody>'+trs+'</tbody></table></div></details></section>')
+
+def _v3_hexstar(ev):
+    """Étoile à six branches dédiée v3.1 — SVG autonome (styles inline), lisible :
+    labels en toutes lettres, grille concentrique, remplissage teinté palier, point coloré par question."""
+    import math as _m
+    band,susp,pf,badge,num=_fsc_derive(ev)
+    BC={"marchand":"#9a9a9a","en_transition":"#a86a4a","sorti_du_marche":"#b08a3e",
+        "autogere":"#3d7a4e","usage_decommodifie":"#2f6e8f","commun_vivant":"#224477"}
+    col=BC[band]
+    QS=[("milieu","Milieu"),("vivant","Vivant"),("ouverture","Ouverture"),
+        ("don","Don"),("duree","Durée"),("voix","Voix")]
+    F={"oui":1.0,"partiel":0.55,"non":0.0}
+    DOT={"oui":"#3d7a4e","partiel":"#b08a3e","non":"#b04a4a"}
+    cx,cy,R=130.0,104.0,66.0
+    ang=[-90+i*60 for i in range(6)]
+    rad=[a*_m.pi/180 for a in ang]
+    vx=[cx+R*_m.cos(r) for r in rad]; vy=[cy+R*_m.sin(r) for r in rad]
+    # grille concentrique (3 anneaux) + rayons
+    grid=""
+    for ring in (0.34,0.67,1.0):
+        pts=" ".join(f"{cx+R*ring*_m.cos(r):.1f},{cy+R*ring*_m.sin(r):.1f}" for r in rad)
+        grid+=f'<polygon points="{pts}" fill="none" stroke="#e3ded2" stroke-width="1"/>'
+    for i in range(6):
+        grid+=f'<line x1="{cx:.1f}" y1="{cy:.1f}" x2="{vx[i]:.1f}" y2="{vy[i]:.1f}" stroke="#ece8de" stroke-width="1"/>'
+    # polygone de profil + points colorés
+    poly=[]; dots=""
+    miss=0
+    for i,(k,_) in enumerate(QS):
+        val=ev["questions"][k]["valeur"]
+        if val in ("non_etabli","projete"):
+            f=0.0; miss+=1; dcol="#fff"; dstroke="#bbb"
+        else:
+            f=F.get(val,0.0); dcol=DOT.get(val,"#b04a4a"); dstroke=dcol
+        px=cx+(vx[i]-cx)*f; py=cy+(vy[i]-cy)*f
+        poly.append(f"{px:.1f},{py:.1f}")
+        dots+=f'<circle cx="{px:.1f}" cy="{py:.1f}" r="3.3" fill="{dcol}" stroke="{dstroke}" stroke-width="1.5"/>'
+    fill = "" if miss>=3 else f'<polygon points="{" ".join(poly)}" fill="{col}" fill-opacity="0.18" stroke="{col}" stroke-width="2" stroke-linejoin="round"/>'
+    # labels en toutes lettres
+    labs=""
+    for i,(k,lab) in enumerate(QS):
+        val=ev["questions"][k]["valeur"]
+        lx=cx+(vx[i]-cx)*1.34; ly=cy+(vy[i]-cy)*1.34
+        anchor="middle"
+        if lx-cx>10: anchor="start"
+        elif lx-cx<-10: anchor="end"
+        dy=-3 if (ly<cy-2) else (11 if ly>cy+2 else 4)
+        gcl="#999" if val in ("non_etabli","projete") else "#3a3a32"
+        labs+=f'<text x="{lx:.1f}" y="{ly+dy:.1f}" text-anchor="{anchor}" font-size="11" font-weight="600" fill="{gcl}">{lab}</text>'
+    aria="Profil des six questions : "+", ".join(f"{lab} {ev['questions'][k]['valeur']}" for k,lab in QS)
+    return (f'<svg class="v3-star" viewBox="0 0 260 208" role="img" aria-label="{e(aria)}" '
+            f'style="width:100%;max-width:300px;height:auto;display:block;margin:0 auto">'
+            f'{grid}{fill}{dots}{labs}'
+            f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="1.6" fill="#bbb"/></svg>')
+
+def _v3_chaine(ev):
+    """Colonne-chaîne (reco @graphiste) : six maillons ●◐○ étiquetés, maillon faible désigné.
+    Dit la doctrine — une chaîne casse au maillon faible — sans aire de moyenne. Labels 14px non rognables."""
+    band,susp,pf,badge,num=_fsc_derive(ev)
+    BC={"marchand":"#9a9a9a","en_transition":"#a86a4a","sorti_du_marche":"#b08a3e",
+        "autogere":"#3d7a4e","usage_decommodifie":"#2f6e8f","commun_vivant":"#224477"}
+    col=BC[band]
+    SYM={"oui":"#3d7a4e","partiel":"#b08a3e","non":"#b04a4a"}
+    QS=[("milieu","Le milieu"),("vivant","Le vivant"),("ouverture","L'ouverture"),
+        ("don","Le don"),("duree","La durée"),("voix","La voix")]
+    y0=30; STEP=37; cx=30
+    pfval=ev["questions"].get(pf,{}).get("valeur") if pf in ev["questions"] else None
+    weak_lab="suspend la note" if (susp and pfval in ("non_etabli","projete")) else "maillon faible"
+    bg=""; body=""
+    for i,(k,lab) in enumerate(QS):
+        cy=y0+i*STEP; val=ev["questions"][k]["valeur"]; weak=(k==pf)
+        if weak:
+            bg=f'<rect x="6" y="{cy-15}" width="288" height="30" rx="6" fill="{col}" opacity="0.10"/>'
+        if val=="oui":
+            g=f'<circle cx="{cx}" cy="{cy}" r="9" fill="{SYM["oui"]}"/>'
+        elif val=="partiel":
+            g=(f'<circle cx="{cx}" cy="{cy}" r="9" fill="#fcfbf8" stroke="{SYM["partiel"]}" stroke-width="1.5"/>'
+               f'<path d="M{cx} {cy-9} A9 9 0 0 1 {cx} {cy+9} Z" fill="{SYM["partiel"]}"/>')
+        elif val=="non":
+            g=f'<circle cx="{cx}" cy="{cy}" r="9" fill="#fcfbf8" stroke="{SYM["non"]}" stroke-width="2"/>'
+        else:
+            g=(f'<circle cx="{cx}" cy="{cy}" r="9" fill="#fcfbf8" stroke="#9a9a9a" stroke-width="1.5"/>'
+               f'<text x="{cx}" y="{cy+3}" text-anchor="middle" font-size="9" fill="#9a9a9a">n.é.</text>')
+        tag=(f' <tspan fill="{col}" font-size="11" font-weight="bold">· {weak_lab}</tspan>') if weak else ""
+        fw=' font-weight="bold"' if weak else ""
+        body+=g+f'<text x="50" y="{cy+5}" font-size="14" fill="#221f1a"{fw}>{e(lab)}{tag}</text>'
+    H=y0+5*STEP+22
+    line=f'<line x1="{cx}" y1="{y0-2}" x2="{cx}" y2="{y0+5*STEP+2}" stroke="#e3ded2" stroke-width="2"/>'
+    aria=f"Le faisceau libéré, lu au maillon faible : {PF_LABEL.get(pf,pf)}"
+    return (f'<svg class="v3-chaine" viewBox="0 0 300 {H}" role="img" aria-label="{e(aria)}" '
+            f'style="width:100%;max-width:300px;height:auto;font-family:Georgia,serif">'
+            f'{bg}{line}{body}</svg>')
+
+def bands_legend():
+    _b=[("marchand","#9a9a9a"),("transition","#a86a4a"),("sorti du marché","#b08a3e"),("autogéré","#3d7a4e"),("usage libéré","#2f6e8f"),("commun vivant","#224477")]
+    return '<p class="paliers-legend cat-legend">'+"".join(f'<span class="pal-chip" style="--pal:{c}">{l}</span>' for l,c in _b)+'</p>'
+FB_HEX={"marchand":"#9a9a9a","en_transition":"#a86a4a","sorti_du_marche":"#b08a3e",
+        "autogere":"#3d7a4e","usage_decommodifie":"#2f6e8f","commun_vivant":"#224477"}
+def lieu_v3(f):
+    """Profil v3.1 réutilisable d'un lieu (bande, couleur, libellé, note) — None si pas d'evaluation."""
+    ev=f.get("evaluation")
+    if not ev: return None
+    band,susp,pf,badge,num=_fsc_derive(ev)
+    return {"band":band,"bcol":FB_HEX[band],"label":FB_LABEL[band],
+            "note":(None if susp else num),"susp":susp,"badge":badge,"pf":pf}
+
+def _member_lieu_uids(f, by_uid):
+    """Lieux rattachés à un maillon-groupe : via `membres` (réseau) ou la chaîne (porteur/usufruitier).
+    Un membre porteur/usufruitier est étendu à ses propres lieux."""
+    seed = list(f.get("membres") or []) or list(chained_uids(f, by_uid))
+    lieux=set()
+    for u in seed:
+        g=by_uid.get(u)
+        if not g: continue
+        if g.get("categorie")=="lieu": lieux.add(u)
+        elif g.get("categorie") in ("porteur","usufruitier"):
+            for v in chained_uids(g, by_uid):
+                if (by_uid.get(v) or {}).get("categorie")=="lieu": lieux.add(v)
+    return list(lieux)
+
+def porteur_eval(f, by_uid):
+    """Synthèse six-questions d'un maillon-groupe, AGRÉGÉE sur ses lieux (son travail de libération)."""
+    uids=_member_lieu_uids(f, by_uid)
+    evs=[by_uid[u]["evaluation"] for u in uids if (by_uid.get(u) or {}).get("evaluation")]
+    if not evs: return None
+    S={"oui":1.0,"partiel":0.5,"non":0.0}
+    QK=["milieu","vivant","ouverture","don","duree","voix"]
+    MA={"milieu":"lieu","vivant":"lieu","ouverture":"chaine","don":"chaine","duree":"usage","voix":"usage"}
+    def agg(getter):
+        vals=[S[getter(ev)] for ev in evs if getter(ev) in S]
+        if not vals: return "non_etabli"
+        m=sum(vals)/len(vals)
+        return "oui" if m>=0.84 else ("non" if m<=0.16 else "partiel")
+    porte=agg(lambda ev: ev["porte"]["valeur"])
+    qs={}
+    for k in QK:
+        d={"valeur":agg(lambda ev,k=k: ev["questions"][k]["valeur"]),"maillon":MA[k],
+           "note":f"Agrégé sur {len(evs)} lieu·x porté·s."}
+        if k in ("duree","voix"): d["decisive"]=True
+        qs[k]=d
+    return {"porte":{"valeur":porte,"cran":"pour_toujours","voie":"nature_porteur",
+            "note":f"Synthèse sur {len(evs)} lieu·x."},"questions":qs,"_n":len(evs)}
+
+def porteur_porte_context(f):
+    """Démarche/modèle du porteur : type de portage (solidité de SA porte), en contexte de l'éval agrégée."""
+    G={e["critere"]:e.get("valeur") for e in (f.get("grille") or [])}
+    S={"oui":1.0,"partiel":0.5,"non":0.0}
+    def lv(cs):
+        v=[S[G[c]] for c in cs if c in G and G[c] in S]; return min(v) if v else None
+    inal=lv(["inalienabilite"]); cap=lv(["non_lucrativite_effective","independance_rendement"])
+    core=[x for x in (inal,cap) if x is not None]
+    allv=[lv([c]) for c in ["inalienabilite","parts_non_cessibles","nature_protectrice","clause_devolution"]]+[cap]
+    estab=[x for x in allv if x is not None]
+    if core and min(core)==0.0: lab="pseudo-portage"
+    elif estab and min(estab)==1.0: lab="verrou pour toujours"
+    elif estab and min(estab)>=0.5: lab="portage solide"
+    elif estab: lab="portage partiel"
+    else: lab="à établir"
+    return {"label":lab}
+
+def _member_lieux(f, by_uid, heading, lead):
+    uids=_member_lieu_uids(f, by_uid)
+    items=[]
+    for u in sorted(uids):
+        g=by_uid.get(u)
+        if not g or g.get("categorie")!="lieu": continue
+        v=lieu_v3(g)
+        if not v: continue
+        note=("suspendue" if v["susp"] else f'{v["note"]}/100')
+        items.append(f'<a class="pl-item" href="../l/{e(u)}.html" style="border-left:4px solid {v["bcol"]}">'
+                     f'<span class="pl-nom">{e(g.get("nom",u))}</span>'
+                     f'<span class="pl-band" style="color:{v["bcol"]}">{e(v["label"])} · {note}</span></a>')
+    if not items: return ""
+    return (f'<section class="porteur-lieux"><h2 class="sec">{e(heading)}</h2>'
+      f'<p class="lead">{e(lead)}</p>'
+      '<style>.pl-item{display:flex;justify-content:space-between;gap:10px;padding:8px 12px;margin:6px 0;background:#fcfbf8;border:1px solid #e3ded2;border-radius:6px;text-decoration:none;color:#221f1a}.pl-band{font-size:.85rem;font-weight:600;white-space:nowrap}</style>'
+      '<div>'+''.join(items)+'</div></section>')
+
+def fiche_v3(f, by_uid):
+    """Profil v3.1 (note, bande, couleur, libellé, scores par question) de n'importe quelle entité."""
+    cat=f.get("categorie")
+    if cat=="lieu":
+        ev=f.get("evaluation")
+        if not ev: return None
+    elif cat in ("porteur","usufruitier","reseau"):
+        ev=porteur_eval(f, by_uid)
+        if not ev: return None
+    else:
+        return None
+    band,susp,pf,badge,num=_fsc_derive(ev)
+    return {"band":band,"bcol":FB_HEX[band],"label":FB_LABEL[band],
+            "note":(None if susp else num),"susp":susp,"pf":pf,"badge":badge,
+            "qscores":_q_scores_from_ev(ev)}
+
 def render_faisceau(fiches, cfg, project=None):
-    revues=[f for f in fiches if f.get("v3_revue") and f.get("evaluation") and f.get("categorie")=="lieu"]
-    revues.sort(key=lambda f:(FB_ORDER.index(_fsc_derive(f["evaluation"])[0]), f["nom"]))
-    cards=""
-    for f in revues:
-        ev=f["evaluation"]; band,susp,pf,badge,num=_fsc_derive(ev)
-        loc=(f.get("localisation") or {}).get("commune","")
-        dep=(f.get("localisation") or {}).get("departement","")
-        mdep=re.search(r"\((\d{2,3}[AB]?)\)",dep)
-        if mdep: loc=f"{loc} ({mdep.group(1)})"
-        note=f"suspendue — palier : {FB_LABEL[band]}" if susp else f"<b>{num}</b> / 100"
-        rows=[(lab,_FB_SYM[ev['questions'][k]['valeur']][0],_FB_SYM[ev['questions'][k]['valeur']][1],e(ev['questions'][k].get('note',''))) for k,lab in Q_LABEL]
-        src=(' &middot; <span class="fsc-src ok">revu sur sources</span>' if f.get("v3_revue_sources")
-             else ' &middot; <span class="fsc-src">converti &middot; revision en cours</span>')
-        cards+=_fsc_card(e(f["nom"]),e(loc),e(f.get("sous_titre","")),FB_CLASS[band],FB_LABEL[band],note,_FB_BADGE[badge],PF_LABEL[pf],rows,src)
-    n=len(revues)
-    body=f"""<style>{FAISCEAU_CSS}</style>
-<h1>Le faisceau libéré <span style="font-weight:normal;font-size:1rem;color:#999">(nouvelle grille — pilote)</span></h1>
-<div class="fsc-intro"><b>Comment lire.</b> Une <b>porte</b> (sortir du marché) puis <b>six questions</b> du lieu vers le groupe ; une <b>échelle de libération</b> (marchand → sorti du marché → autogéré → usage libéré → commun vivant) lue au point le plus faible <i>du chemin</i> ; un <b>badge « Sanctuaire »</b> écologique <i>à côté</i> de la note, jamais dedans. On note <b>un degré de sortie du marché, pas un lieu</b> ; ce qu'on ne peut établir reste « non établi », jamais deviné. <a href="methode.html">La méthode en détail →</a></div>
-<p>Notre grille évolue. Les <b>{n} lieux</b> de l'annuaire sont désormais lus selon ce cadre : quelques-uns <b>revus finement sur sources</b>, les autres <b>convertis depuis la grille sourcée</b> existante puis révisés au fil de l'eau. Chaque chiffre est <b>calculé</b>, jamais saisi ; une évaluation peut évoluer — <a href="suggerer.html">écrivez-nous</a>.</p>
-{cards}
-<p class="fsc-note">Pilote — chiffres calculés (l'invariant « degré calculé, jamais saisi » est tenu par le générateur), évaluations revues à la main sur les grilles sourcées. Cadre daté, signé, contestable. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>"""
-    return page("Le faisceau libéré", body, "faisceau.html", depth=0,
-                project=project, description="La nouvelle grille de libération des terres — pilote.",
+    project = project or cfg["concepts"]["project"]
+    body = """<h1>Le faisceau libéré</h1>
+<p class="lead">La nouvelle grille de lecture — une porte, six questions, une échelle lue au
+point le plus faible — n'est plus une page à part : elle est désormais la grille de
+<strong>tout l'annuaire</strong>.</p>
+<p class="prose">Chaque lieu, porteur, usufruitier et réseau est lu selon ce cadre ; chaque
+fiche porte son <strong>étoile à six branches</strong>, sa <strong>note de libération</strong>
+et son <strong>point faible</strong>, et le badge écologique « Sanctuaire » se lit à côté de la
+note, jamais dedans.</p>
+<ul class="prose">
+  <li><a href="methode.html">La méthode en détail</a> — la porte, les six questions, l'échelle, la suspension.</li>
+  <li><a href="classement.html">Le classement</a> — toutes les entrées notées sur la même échelle.</li>
+  <li><a href="carte.html">La carte</a> — les lieux colorés par palier de libération.</li>
+</ul>
+<p class="prose note">Le cadre est daté, signé, contestable ; chaque chiffre est calculé,
+jamais saisi. <a href="suggerer.html">Nous écrire / droit de réponse →</a></p>"""
+    return page("Le faisceau libéré", body, "methode.html", depth=0,
+                project=project, description="Le faisceau libéré — la grille de libération des terres, désormais appliquée à tout l'annuaire.",
                 path="faisceau.html", link_gloss=False)
 
 
@@ -5930,6 +6149,7 @@ def main():
     # À faire après le scoring de TOUTES les fiches (besoin des axes des lieux).
     apply_chaine(all_sc, by_uid, ranking)
 
+
     # session #5 — plafond ax2 sur les LIEUX selon le pire nature_interet de la
     # chaîne. Doit précéder apply_palier_verdict_constraint (qui relit l'IdL).
     apply_lieu_plafond_chaine(all_sc, by_uid, ranking)
@@ -5942,6 +6162,28 @@ def main():
     verifier_chaines(fiches)
     # contrôle de cohérence pôle↔verdict (#11) — avertit, ne bloque pas.
     verifier_poles(fiches, by_uid)
+    # --- bascule v3.1 (APRÈS toutes les passes v2 : chaine, plafond, contrainte verdict) ---
+    for _f, _s in all_sc:
+        if _f.get("categorie") == "modele":
+            # modèle voisin : descriptif, sans note de libération (doctrine)
+            _s["idl_v2"] = _s.get("idl"); _s["palier_v2"] = _s.get("palier")
+            _s["idl"] = None; _s["palier"] = None
+            continue
+        _v = fiche_v3(_f, by_uid)
+        if not _v:
+            # groupe sans lieu agrégeable → non noté en v3 (n'hérite pas d'un score v2)
+            if _f.get("categorie") in ("porteur", "usufruitier", "reseau"):
+                _s["idl_v2"] = _s.get("idl")
+                _s["palier_v2"] = _s.get("palier")
+                _s["idl"] = None
+                _s["palier"] = None
+            continue
+        _s["idl_v2"] = _s.get("idl")
+        _s["palier_v2"] = _s.get("palier")
+        _s["idl"] = _v["note"]                      # None si suspendue
+        _s["palier"] = {"id": _v["band"], "label": _v["label"], "couleur": _v["bcol"]}
+        _s["susp_v3"] = _v["susp"]
+        _s["score_type"] = "vrai"
 
     sc_by_uid = {f["uid"]: sc for f, sc in all_sc}
 
@@ -5958,9 +6200,7 @@ def main():
     write(ASSETS / "list.js", LIST_JS)
     # compare.js : on injecte les cinq axes (id, libellé, couleur) lus depuis
     # ranking.yml — aucun axe codé en dur dans le JavaScript.
-    axes_js = json.dumps(
-        [[a["id"], a["label"], a["couleur"]] for a in ranking["axes"]],
-        ensure_ascii=False)
+    axes_js = json.dumps([[a, l, c] for a, l, c in Q6_AXES], ensure_ascii=False)
     write(ASSETS / "compare.js", COMPARE_JS.replace("__AXES__", axes_js))
     write(ASSETS / "favicon.svg", FAVICON_SVG)
     write(ASSETS / "og-default.svg", OG_SVG)
@@ -6080,16 +6320,17 @@ def main():
         im_niv = im.get("niveau", "") or ""
         im_lab = integrite_label(im_niv, ranking)[0] if im_niv else ""
         # axes exportés avec les clés entières 1..5 (sérialisées en chaînes).
+        _v3e = fiche_v3(f, by_uid)
         data.append({"uid": f["uid"], "nom": f["nom"], "categorie": f["categorie"],
                       "sous_titre": clean(f.get("sous_titre", "")),
-                      "idl": sc["idl"], "idl_brut": sc.get("idl_brut"),
-                      "idl_intrinseque": sc.get("idl_intr"),
+                      "idl": sc["idl"],
+                      "suspendue": bool(_v3e["susp"]) if _v3e else None,
+                      "point_faible": (PF_LABEL.get(_v3e["pf"], _v3e["pf"]) if _v3e else None),
+                      "badge": (_v3e["badge"] if _v3e else None),
                       "score_type": sc.get("score_type"),
                       "completude": (round(sc["completude"], 3)
                                      if sc.get("completude") is not None else None),
-                      "axes": {str(k): v for k, v in sc["axes"].items()},
-                      "axes_intrinseques": {str(k): v for k, v in
-                                            (sc.get("axes_intr") or {}).items()},
+                      "axes": (_v3e["qscores"] if _v3e else {}),
                       "palier": sc["palier"]["id"] if sc["palier"] else None,
                       "palier_label": (sc["palier"]["label"]
                                        if sc["palier"] else None),

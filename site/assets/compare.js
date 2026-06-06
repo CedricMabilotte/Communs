@@ -12,7 +12,7 @@
   });
  }
  /* Les cinq axes du modèle, injectés depuis ranking.yml à la génération. */
- var AXES=[[1, "Le sol", "#bc5d3a"], [2, "La structure", "#4a6b8a"], [3, "Le pouvoir", "#36748a"], [4, "La finalité", "#4a7a3a"], [5, "L'usage", "#b0822f"]];
+ var AXES=[["1", "Le milieu", "#7a5230"], ["2", "Le vivant", "#3d7a4e"], ["3", "L'ouverture", "#2f6e8f"], ["4", "Le don", "#8a5a8a"], ["5", "La durée", "#b08a3e"], ["6", "La voix", "#225588"]];
  var CATLAB={lieu:'Lieu',porteur:'Porteur',usufruitier:'Usufruitier',
    modele:'Modèle voisin'};
  var SLUG={lieu:'l',porteur:'p',usufruitier:'u',modele:'m'};
