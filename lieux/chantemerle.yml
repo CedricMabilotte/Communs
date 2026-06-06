@@ -137,8 +137,13 @@ sources:
   - titre: "La filature de Longo Maï : une usine autogérée depuis 1976"
     url: "https://filature-longomai.org/le-projet/usine-autogeree/"
 
+  - titre: "Autogestion et pulls écolos, l'une des dernières usines à laine — Reporterre"
+    url: "https://reporterre.net/Autogestion-et-pulls-ecolos-bienvenue-dans-l-une-des-dernieres-usines-a-laine-de-France"
+  - titre: "Coopérative européenne Longo Maï — Wikipédia"
+    url: "https://fr.wikipedia.org/wiki/Coop%C3%A9rative_europ%C3%A9enne_Longo_Ma%C3%AF"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
@@ -171,10 +176,9 @@ evaluation:
       note: L'autogestion relève d'une logique de partage, mais l'activité comporte
         une part marchande (vente de textiles transformés).
     duree:
-      valeur: partiel
+      valeur: non_etabli
       maillon: usage
-      note: Le foncier est rendu inaliénable et le site fonctionne depuis 1976, mais
-        les actes formalisant la durée de l'usage ne sont pas documentés.
+      note: 'Le foncier est inaliénable (porte), mais l''acte formalisant l''usage de la coopérative et sa durée ne sont pas documentés ; la continuité de fait depuis 1976 ne fonde pas le titre d''usage.'
       decisive: true
     voix:
       valeur: oui

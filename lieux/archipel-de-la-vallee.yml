@@ -141,8 +141,13 @@ sources:
   - titre: "Archipel de la vallée — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/archipel-de-la-vallee/"
 
+  - titre: "Archipel de la Vallée — Base Habitat Participatif & Oasis"
+    url: "https://www.basededonnees-habitatparticipatif-oasis.fr/?ArchipelDeLaVallee="
+  - titre: "Habitat durable et solidaire — La Nef"
+    url: "https://www.lanef.com/blog/habitat-durable-solidaire/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
@@ -176,10 +181,9 @@ evaluation:
       note: Le régime d'accès au tiers-lieu et à ses activités — gratuité, contribution,
         tarification — n'est pas documenté par les sources.
     duree:
-      valeur: oui
+      valeur: non_etabli
       maillon: usage
-      note: 'Les associations exploitent le lieu en leur qualité d''associé·es de
-        la SCI propriétaire : l''usage n''est ni précaire ni plafonné dans le temps.'
+      note: 'Aucun titre d''usage formalisé liant la SCI à ses associations usagères n''est documenté : la sécurité de jouissance dans le temps ne peut être appréciée (l''appartenance à la SCI fonde la voix, pas la durée).'
       decisive: true
     voix:
       valeur: oui

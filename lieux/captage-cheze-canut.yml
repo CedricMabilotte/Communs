@@ -157,8 +157,13 @@ sources:
   - titre: "Eau du Bassin Rennais — La protection foncière"
     url: "https://www.eaudubassinrennais-collectivite.fr/la-solidarite-internationale/preservation-ressources-eau/protection-fonciere/"
 
+  - titre: "Protection foncière des captages — Eau du Bassin Rennais (BRCE, génie écologique)"
+    url: "https://www.eaudubassinrennais-collectivite.fr/la-solidarite-internationale/preservation-ressources-eau/protection-fonciere/"
+  - titre: "Captage d'eau potable : une protection concertée — La Gazette des communes"
+    url: "https://www.lagazettedescommunes.com/313051/captage-deau-potable-une-protection-concertee/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui

@@ -158,8 +158,13 @@ sources:
   - titre: "CLIP — Les lieux"
     url: "https://clip.ouvaton.org/les-projets/"
 
+  - titre: "CLIP — propriété d'usage, tiers-bloqueur (modèle associatif, non démembrement)"
+    url: "https://clip.ouvaton.org/"
+  - titre: "La propriété d'usage — Politiques des communs"
+    url: "https://politiquesdescommuns.cc/outils/propriete-d-usage"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
@@ -194,11 +199,9 @@ evaluation:
         de solidarité du réseau ; le montant et le caractère soutenable de ces contributions
         ne sont pas documentés pour ce lieu.
     duree:
-      valeur: partiel
+      valeur: non_etabli
       maillon: usage
-      note: Le veto CLIP contre la revente sécurise la maîtrise du lieu dans la durée
-        ; la nature et la durée précises du titre d'usage liant le collectif à l'association
-        propriétaire ne sont toutefois pas documentées.
+      note: 'Le modèle CLIP est une propriété d''usage associative, non un démembrement ou un bail notarié ; le titre liant le collectif à l''association propriétaire et sa durée ne sont pas publiés. Le veto réseau sécurise la porte (non-revente), pas la durée d''usage.'
       decisive: true
     voix:
       valeur: oui

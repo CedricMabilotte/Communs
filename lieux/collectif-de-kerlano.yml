@@ -164,8 +164,11 @@ sources:
   - titre: "Manoir de Kerlano (Rosnoën) — base Mérimée"
     url: "https://pop.culture.gouv.fr/notice/merimee/IA29000024"
 
+  - titre: "Le Collectif de Kerlano — net1901 (habitat collectif solidaire et autogéré)"
+    url: "https://www.net1901.org/association/LE-COLLECTIF-DE-KERLANO,1000154517.html"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
@@ -198,12 +201,9 @@ evaluation:
       note: L'habitat repose sur une logique de mise en commun et d'accueil solidaire
         ; le détail du régime (contributions, gratuité de l'accueil) n'est pas documenté.
     duree:
-      valeur: partiel
+      valeur: non_etabli
       maillon: usage
-      note: 'Le collectif occupe le lieu de longue date (une dizaine d''années) ;
-        mais le titre d''usage formel liant l''usage à la future association propriétaire
-        n''est pas documenté et la bascule CLIP n''est pas actée : la sécurité de
-        jouissance de long terme n''est pas encore pleinement formalisée.'
+      note: 'Occupation de longue date, mais la bascule vers le portage CLIP n''est pas actée et le titre d''usage formel n''est pas documenté : décisive non tranchée.'
       decisive: true
     voix:
       valeur: oui

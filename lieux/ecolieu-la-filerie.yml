@@ -142,8 +142,13 @@ sources:
   - titre: "Écolieu la Filerie — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/ecolieu-la-filerie/"
 
+  - titre: "La Sologne — La Filerie (mares à tritons crêtés, libellules, amphibiens)"
+    url: "https://www.lafilerie.org/habitat/la-sologne/"
+  - titre: "Atelier Biodiversité de Sologne — La Filerie"
+    url: "https://www.lafilerie.org/formation/ateliers-mensuels/biodiversit%C3%A9-de-sologne/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: non
@@ -153,11 +158,9 @@ evaluation:
       porté par une structure non spéculative et n''est pas soustrait au marché.'
   questions:
     milieu:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: Aucune obligation réelle environnementale ni clause environnementale inscrite
-        au bail à construction n'est documentée ; l'existence d'un dispositif opposable
-        n'est pas établie par les sources.
+      note: 'Permaculture et jardins pédagogiques attestés, mais aucune clause environnementale opposable inscrite au bail à construction n''est documentée : non établi au point faible.'
     vivant:
       valeur: partiel
       maillon: lieu

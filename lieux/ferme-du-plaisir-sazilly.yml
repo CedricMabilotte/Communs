@@ -141,8 +141,13 @@ sources:
   - titre: "Ferme du Plaisir — site officiel"
     url: "https://www.fermeduplaisir.fr/"
 
+  - titre: "Fiche mémo : le bail rural environnemental (BRE) — Terre de Liens"
+    url: "https://ressources.terredeliens.org/les-ressources/fiche-memo-le-bail-rural-environnemental-bre"
+  - titre: "L'agroforesterie sur la Ferme du Plaisir à Sazilly — Terre de Liens Centre"
+    url: "https://terredeliens.org/centre/actu/lagroforesterie-sur-la-ferme-du-plaisir-propri%C3%A9t%C3%A9-terre-de-liens-%C3%A0-sazilly-en-indre-et-loire-23-08-2024/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
@@ -152,12 +157,9 @@ evaluation:
       non spéculative, et retiré du marché spéculatif.
   questions:
     milieu:
-      valeur: non
+      valeur: partiel
       maillon: lieu
-      note: Le foncier porté par la Foncière Terre de Liens préserve la vocation agricole
-        et la ferme a engagé l'agroforesterie contre l'érosion des sols ; aucune obligation
-        réelle environnementale ni clause environnementale opposable du bail n'est
-        toutefois documentée.
+      note: 'Bail rural environnemental Terre de Liens (clauses opposables bio/haies/couvert) ; site préservé de l''agriculture intensive (haies, arbres, bosquets, bois) et agroforesterie (1000+ arbres). Acte-type établi → partiel.'
     vivant:
       valeur: partiel
       maillon: lieu

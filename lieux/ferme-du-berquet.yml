@@ -143,27 +143,29 @@ sources:
   - titre: "La Faille — fiche association (Gralon)"
     url: "https://www.gralon.net/mairies-france/gard/association-la-faille-monoblet_W303005610.htm"
 
+  - titre: "Notre fonctionnement — Aventure Antidote (bail emphytéotique 99 ans, redevance modique, Conseil Communal)"
+    url: "https://aventure-antidote.org/comment-ca-marche/notre-fonctionnement/"
+  - titre: "La foncière Antidote, le fonds de dotation pour pérenniser les luttes — Socialter"
+    url: "https://www.socialter.fr/article/la-fonciere-antidote-fond-dotation-lutte"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
-    cran: a_terme
+    cran: pour_toujours
     voie: nature_porteur
     note: La propriété de la ferme a été transmise au fonds de dotation Antidote,
       structure non spéculative qui la détient hors marché.
   questions:
     milieu:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: Aucune obligation réelle environnementale ni clause environnementale du
-        bail emphytéotique n'est documentée ; les clauses du bail ne sont pas connues
-        des sources.
+      note: 'Maraîchage en traction animale et châtaigneraie (faible prélèvement), mais aucune clause environnementale du bail emphytéotique n''est publiée : non établi plutôt qu''absence avérée.'
     vivant:
-      valeur: non
+      valeur: non_etabli
       maillon: lieu
-      note: Les sources décrivent les vocations agricole et culturelle du lieu, mais
-        ne mentionnent pas le vivant non-humain comme cohabitant parmi ses finalités.
+      note: 'Couvert arboré existant (châtaigneraie), mais aucun aménagement dédié au vivant ni finalité explicite documentés : non établi, pas un zéro.'
     ouverture:
       valeur: oui
       maillon: chaine
@@ -171,11 +173,9 @@ evaluation:
         nourricier : le lieu sert un intérêt général culturel et agricole qui dépasse
         ses occupant·es.'
     don:
-      valeur: partiel
+      valeur: oui
       maillon: chaine
-      note: Concerts à bas coût et résidences à prix libre relèvent d'une logique
-        de partage ; la châtaigne est une activité économique commercialisée, et le
-        régime d'accès aux fruits du lieu n'est pas pleinement documenté.
+      note: 'Bail emphytéotique « moyennant une redevance modique » (source Antidote) ; concerts à bas coût, résidences à prix libre : l''accès relève davantage du don que du paiement.'
     duree:
       valeur: oui
       maillon: usage

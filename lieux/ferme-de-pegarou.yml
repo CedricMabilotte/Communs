@@ -138,8 +138,13 @@ sources:
   - titre: "Les Croquants, une ferme collective en Ariège — Ferme des Croquants"
     url: "https://fermedescroquants.fr/les-croquants-une-ferme-collective-en-ariege/"
 
+  - titre: "Fiche mémo : le bail rural environnemental (BRE) — Terre de Liens"
+    url: "https://ressources.terredeliens.org/les-ressources/fiche-memo-le-bail-rural-environnemental-bre"
+  - titre: "Les Croquants, une ferme collective en Ariège (bail 2021, acquisition Foncière 2022)"
+    url: "https://fermedescroquants.fr/les-croquants-une-ferme-collective-en-ariege/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: oui
@@ -149,12 +154,9 @@ evaluation:
       non spéculative, et retiré du marché spéculatif.
   questions:
     milieu:
-      valeur: non
+      valeur: partiel
       maillon: lieu
-      note: Le foncier porté par la Foncière Terre de Liens est conduit en agriculture
-        biologique et sa vocation agricole est préservée, mais aucune obligation réelle
-        environnementale ni clause environnementale du bail rural n'est documentée
-        par les sources.
+      note: 'Terres louées via bail rural environnemental — pratique systématique de la Foncière Terre de Liens (clauses opposables bio/haies/arbres/couvert) sanctionnées par résiliation. Acte-type établi ; clauses du bail propre non publiées → partiel.'
     vivant:
       valeur: partiel
       maillon: lieu

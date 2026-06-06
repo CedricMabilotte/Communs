@@ -140,15 +140,19 @@ sources:
   - titre: "Écolieu de la Gasnerie — Coopérative Oasis"
     url: "https://cooperative-oasis.org/oasis/ecolieu-de-la-gasnerie/"
 
+  - titre: "Le projet — Écolieu de la Gasnerie (ouverture visée printemps 2027)"
+    url: "https://www.ecolieudelagasnerie.fr/le-projet"
+  - titre: "Écolieu de la Gasnerie — Coopérative Oasis"
+    url: "https://cooperative-oasis.org/oasis/ecolieu-de-la-gasnerie/"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
-    valeur: oui
+    valeur: non_etabli
     cran: a_terme
     voie: nature_porteur
-    note: La structure détenant le foncier et son caractère spéculatif ou non ne sont
-      pas documentés par les sources.
+    note: 'La structure détenant le foncier n''est pas documentée publiquement (ni SCI, ni association, ni acte) ; la porte étant décisive, on ne la devine pas. Ouverture du tiers-lieu visée au printemps 2027.'
   questions:
     milieu:
       valeur: non

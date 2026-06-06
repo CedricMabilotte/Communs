@@ -145,8 +145,13 @@ sources:
   - titre: "Domaine des Éveils — site officiel"
     url: "https://www.domainedeseveils.fr/"
 
+  - titre: "Domaine des Éveils — Active 71 (montage SAS / SCIC, biodiversité)"
+    url: "https://active71.org/projets/domaine-des-eveils/"
+  - titre: "Le Domaine des Éveils — annuaire des entreprises (SIRET 91125291400013)"
+    url: "https://annuaire-entreprises.data.gouv.fr/etablissement/91125291400013"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel

@@ -146,8 +146,13 @@ sources:
   - titre: "À Locoal-Mendon, un éco-hameau pour reprendre « demain en main » — Eco-Bretons"
     url: "https://www.eco-bretons.info/a-locoal-mendon-un-eco-hameau-pour-reprendre-demain-en-mains/"
 
+  - titre: "Production agricole — Demain en Main (sol vivant, sans tracteur)"
+    url: "https://demainenmain.fr/qui-sommes-nous/production-agricole/"
+  - titre: "Ferme de Keruzerh — visite technique des jardins maraîchers (Triple Performance)"
+    url: "https://wiki.tripleperformance.fr/wiki/Ferme_de_Keruzerh_-_Visite_technique_des_jardins_mara%C3%AEchers"
 # --- Évaluation v3.1 (faisceau libéré) — convertie de la grille sourcée, 2026-06-05 ---
 v3_revue: true
+v3_revue_sources: true   # revu sur sources réelles (MARS-prod 2026-06-06)
 evaluation:
   porte:
     valeur: partiel
@@ -158,17 +163,13 @@ evaluation:
       cette soustraction.
   questions:
     milieu:
-      valeur: non
-      maillon: lieu
-      note: Aucun dispositif opposable et durable de protection du milieu (ORE, espace
-        protégé, clause environnementale au titre d'usage) n'est documenté par les
-        sources.
-    vivant:
       valeur: partiel
       maillon: lieu
-      note: Le foncier d'une vingtaine d'hectares comprend une dizaine d'hectares
-        de forêt aux côtés des terres agricoles ; aucun aménagement délibéré pour
-        le vivant n'est documenté.
+      note: 'Pratiques de soin attestées par sources tierces : maraîchage sur sol vivant sans tracteur ni labour, 700 m de haies et 300 fruitiers plantés depuis 2022, pâturage tournant dynamique. Non opposable (pas d''acte) → partiel.'
+    vivant:
+      valeur: oui
+      maillon: lieu
+      note: 'Place effective au non-humain attestée : haies et fruitiers plantés, ~10 ha de forêt maintenus, sol vivant développé pour la biodiversité.'
     ouverture:
       valeur: oui
       maillon: chaine
