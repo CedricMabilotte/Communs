@@ -2490,10 +2490,7 @@ def carte_markers(all_sc, by_uid):
         markers.append({
             "lat": lat, "lon": lon,
             "nom": f.get("nom", f["uid"]), "uid": f["uid"],
-            "verdict": verdict or "",
-            "verdict_label": CARTE_VERDICT_LABELS.get(verdict, ""),
             "idl": sc.get("idl"),
-            "palier": palier["label"] if palier else "",
             "band": (_v3m["band"] if _v3m else ""),
             "bcol": (_v3m["bcol"] if _v3m else ""),
             "band_label": (_v3m["label"] if _v3m else ""),
@@ -2567,7 +2564,7 @@ JavaScript. <a href="lieux.html">Consultez le catalogue des lieux →</a></p></n
     var url = "l/" + encodeURIComponent(d.uid) + ".html";
     var lines = [];
     lines.push('<a class="carte-pop-nom" href="' + url + '">' + esc(d.nom) + '</a>');
-    var vl = d.band_label || d.verdict_label;
+    var vl = d.band_label;
     var vc = d.bcol || colorFor(d.verdict);
     if (vl) {{
       lines.push('<span class="carte-pop-verdict" style="color:' + vc + '">' + esc(vl) + '</span>');
@@ -3127,24 +3124,23 @@ GLOSSAIRE = [
      "chaîne : un lieu, son porteur de nue-propriété, son organisme "
      "usufruitier. La qualité d'un porteur ou d'un usufruitier se lit à travers "
      "les montages qu'il noue effectivement."),
-    ("Verdict",
-     "La qualification d'un lieu en trois niveaux — marchand, hybride, "
-     "sanctuaire — qui dit où se tient sa chaîne entre le marché et le commun. "
-     "Il ne se saisit pas : il découle de la nature de chaque maillon, puis des "
-     "conditions d'accès au sommet. Marchand : la valeur du foncier reste "
-     "captable. Hybride : foncier libéré, mais un maillon garde une part "
-     "d'intérêt privé légitime. Sanctuaire : la formule entière est tenue — "
-     "rare, un horizon plus qu'une case à remplir."),
-    ("Condition du sommet",
-     "Le niveau le plus haut — le sanctuaire — n'est atteint que si plusieurs "
-     "conditions observables sont réunies à la fois : foncier irréversiblement "
-     "hors-marché, habitat du vivant, milieu durablement protégé, usage non "
-     "marchand d'intérêt général, travail non marchandisé. Chacune se lit sur du "
-     "vérifiable ; il suffit qu'une manque pour que le lieu reste hybride."),
-    ("Domiciliage des axes",
-     "Règle attribuant chaque axe d'évaluation au maillon de la chaîne où il se "
-     "joue réellement : l'axe 1 au porteur, l'axe 3 à l'usufruitier, l'axe 5 à "
-     "la convention d'usage, les axes 2 et 4 à toute la chaîne."),
+    ("Palier de libération",
+     "La bande où se situe une entrée sur l'échelle du faisceau : marchand, en "
+     "transition, sorti du marché, autogéré, usage libéré, commun vivant. Elle "
+     "ne se saisit pas : elle découle de la porte et des six questions, lues au "
+     "point le plus faible. Du marchand (rien n'est sorti du marché) au commun "
+     "vivant (le faisceau entier, la place du vivant tenue)."),
+    ("Condition du sommet (commun vivant)",
+     "Le palier le plus haut — commun vivant — n'est atteint que si le faisceau "
+     "est entier : porte franchie, usage rendu (voix et durée tenues), accès "
+     "relevant du don, et la place du vivant tenue (le badge écologique). Il "
+     "suffit qu'une marche manque pour rester en deçà. Rare — un horizon plus "
+     "qu'une case à remplir."),
+    ("Les maillons du faisceau",
+     "Le faisceau n'évalue pas un lieu isolé mais toute la chaîne, réparti entre "
+     "ses maillons : la porte au porteur ; le milieu et le vivant au lieu ; "
+     "l'ouverture et le don à la chaîne ; la durée et la voix à l'usufruitier. "
+     "Le lieu est l'assemblage où tout converge."),
     ("Note d'un groupe (agrégation)",
      "Un porteur, un usufruitier ou un réseau n'a pas de grille à part : sa note "
      "agrège les six questions des lieux qu'il tient, anime ou fédère — on juge un "
@@ -6299,7 +6295,7 @@ libre est toujours affichée à côté).</li>
 <p class="prose">Indiquez : le <strong>lieu concerné</strong>, le <strong>point visé</strong> (la porte,
 l'une des six questions, le badge, ou un fait descriptif), <strong>ce que vous demandez</strong>
 (correction / ajout de pièce / réponse libre), et la <strong>pièce ou le témoignage</strong> s'il y en a
-un. → <a href="suggerer.html">Nous écrire</a>.</p>
+un. → <a href="mailto:cedric.mabilotte@gmail.com?subject=Droit%20de%20r%C3%A9ponse%20Terres%20Lib%C3%A9r%C3%A9es">cedric.mabilotte@gmail.com</a> — un·e responsable éditorial·e traite chaque demande.</p>
 <h2 class="sec">Notre engagement de délai</h2>
 <p class="prose">Accusé de réception sous quelques jours ouvrés ; instruction d'une correction factuelle
 prouvée <strong>avant</strong> toute (re)publication de la fiche concernée ; réponse libre mise en ligne
