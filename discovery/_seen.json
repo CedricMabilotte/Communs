@@ -19,7 +19,7 @@
   },
   "cooperative-oasis.org/nos-offres/fonciere-oasis": {
     "dernier_score": 9,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -43,26 +43,32 @@
   },
   "fermes.terredeliens.org/alsace/fermes-de-la-r%C3%A9gion-alsace/ferme-de-la-coccinelle": {
     "dernier_score": 14,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/la-voulperie": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/sous-le-bois": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/domaine-de-saint-laurent": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
+    "statut": "nouveau"
+  },
+  "fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/envol-56": {
+    "dernier_score": 13,
+    "derniere_detection": "2026-06-15",
+    "premiere_detection": "2026-06-15",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/les-pr%C3%A9s-de-tr%C3%A9grehen": {
@@ -73,13 +79,13 @@
   },
   "fermes.terredeliens.org/centre/fermes-de-la-r%C3%A9gion-centre/le-grand-bray": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/national/hub-ferme": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -145,7 +151,7 @@
   },
   "foncier-solidaire.fr/principles-of-solidarity-land": {
     "dernier_score": 11,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -193,19 +199,19 @@
   },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa": {
     "dernier_score": 11,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl": {
     "dernier_score": 14,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "larzac.org/accueil/un-territoire-organise/la-gestion-fonciere": {
     "dernier_score": 11,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -269,9 +275,15 @@
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
+  "mrmondialisation.org/corse-mare-vivu-lutte-pollution-plastique": {
+    "dernier_score": 4,
+    "derniere_detection": "2026-06-15",
+    "premiere_detection": "2026-06-15",
+    "statut": "nouveau"
+  },
   "objectif-terres.org/annonces/9550": {
     "dernier_score": 3,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -287,15 +299,21 @@
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
+  "politis.fr/articles/2026/06/etats-unis-coupe-du-monde-de-football-la-societe-civile-etats-unienne-se-mobilise-contre-lice": {
+    "dernier_score": 5,
+    "derniere_detection": "2026-06-15",
+    "premiere_detection": "2026-06-15",
+    "statut": "nouveau"
+  },
   "politis.fr/association-amis-politis": {
     "dernier_score": 4,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
   "politis.fr/politis-fr-devenir-societaire": {
     "dernier_score": 4,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
@@ -319,7 +337,7 @@
   },
   "terredeliens.org/national/actu/a-la-ferme-du-pr%C3%A9-tords-des-vaches-de-leau-et-le-retour-de-la-barge-%C3%A0-queue-noire-22-05-2026": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -331,43 +349,43 @@
   },
   "terredeliens.org/national/fonciere-terre-de-liens/la-fonciere-terre-de-liens-premiere-structure-dinvestissement-solidaire-agricole": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/hub-ferme": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/la-fondation-terre-de-liens": {
     "dernier_score": 22,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/les-associations-territoriales-terre-de-liens": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/minstaller-avec-terre-de-liens": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/transmettre-des-terres": {
     "dernier_score": 13,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terresdesources.fr/la-scic-terres-de-sources": {
     "dernier_score": 3,
-    "derniere_detection": "2026-06-05",
+    "derniere_detection": "2026-06-15",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },

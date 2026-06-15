@@ -2,7 +2,7 @@
 slug: pre-tords-barge
 nom: Pré-Tords Barge
 cree: '2026-06-05'
-dernier_repere: '2026-06-05'
+dernier_repere: '2026-06-15'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
