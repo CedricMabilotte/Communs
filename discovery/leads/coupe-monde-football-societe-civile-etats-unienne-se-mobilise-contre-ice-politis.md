@@ -3,7 +3,7 @@ slug: coupe-monde-football-societe-civile-etats-unienne-se-mobilise-contre-ice-p
 nom: 'Coupe du monde de football : la société civile états-unienne se mobilise contre
   l’ICE - POLITIS'
 cree: '2026-06-15'
-dernier_repere: '2026-06-15'
+dernier_repere: '2026-06-22'
 score_cumule: 5
 sources_vues:
 - source: politis
