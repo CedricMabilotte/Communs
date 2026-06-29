@@ -2,7 +2,7 @@
 slug: gestion-larzac
 nom: Gestion Larzac
 cree: '2026-05-27'
-dernier_repere: '2026-06-22'
+dernier_repere: '2026-06-29'
 score_cumule: 11
 sources_vues:
 - source: larzac

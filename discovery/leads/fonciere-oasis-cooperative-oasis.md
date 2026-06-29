@@ -2,7 +2,7 @@
 slug: fonciere-oasis-cooperative-oasis
 nom: Foncière Oasis Coopérative Oasis
 cree: '2026-05-28'
-dernier_repere: '2026-06-22'
+dernier_repere: '2026-06-29'
 score_cumule: 9
 sources_vues:
 - source: cooperative-oasis

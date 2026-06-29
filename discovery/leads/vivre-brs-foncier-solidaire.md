@@ -2,7 +2,7 @@
 slug: vivre-brs-foncier-solidaire
 nom: Vivre BRS Foncier Solidaire
 cree: '2026-05-27'
-dernier_repere: '2026-05-27'
+dernier_repere: '2026-06-29'
 score_cumule: 7
 sources_vues:
 - source: foncier-solidaire

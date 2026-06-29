@@ -2,7 +2,7 @@
 slug: proteger-ore-cooperative-oasis
 nom: Protéger ORE Coopérative Oasis
 cree: '2026-06-05'
-dernier_repere: '2026-06-05'
+dernier_repere: '2026-06-29'
 score_cumule: 4
 sources_vues:
 - source: cooperative-oasis

@@ -2,7 +2,7 @@
 slug: brs-foncier-solidaire-france
 nom: BRS Foncier Solidaire France
 cree: '2026-05-27'
-dernier_repere: '2026-05-27'
+dernier_repere: '2026-06-29'
 score_cumule: 22
 sources_vues:
 - source: foncier-solidaire
