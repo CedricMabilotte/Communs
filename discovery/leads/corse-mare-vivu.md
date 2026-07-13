@@ -2,7 +2,7 @@
 slug: corse-mare-vivu
 nom: Corse Mare Vivu
 cree: '2026-06-15'
-dernier_repere: '2026-07-06'
+dernier_repere: '2026-07-13'
 score_cumule: 4
 sources_vues:
 - source: mr-mondialisation

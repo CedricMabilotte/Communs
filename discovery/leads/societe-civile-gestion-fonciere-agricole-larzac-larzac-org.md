@@ -2,7 +2,7 @@
 slug: societe-civile-gestion-fonciere-agricole-larzac-larzac-org
 nom: Société Civile Gestion Foncière Agricole du Larzac – Larzac.org
 cree: '2026-05-27'
-dernier_repere: '2026-07-06'
+dernier_repere: '2026-07-13'
 score_cumule: 11
 sources_vues:
 - source: larzac
