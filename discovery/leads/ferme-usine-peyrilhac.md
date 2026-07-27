@@ -2,7 +2,7 @@
 slug: ferme-usine-peyrilhac
 nom: Ferme-usine Peyrilhac
 cree: '2026-07-20'
-dernier_repere: '2026-07-20'
+dernier_repere: '2026-07-27'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens

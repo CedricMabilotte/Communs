@@ -2,7 +2,7 @@
 slug: basta-menugoreche
 nom: Basta MenuGoReche
 cree: '2026-07-20'
-dernier_repere: '2026-07-20'
+dernier_repere: '2026-07-27'
 score_cumule: 4
 sources_vues:
 - source: basta
