@@ -2,7 +2,7 @@
 slug: transmettre-terre-liens
 nom: Transmettre Terre Liens
 cree: '2026-05-27'
-dernier_repere: '2026-07-27'
+dernier_repere: '2026-08-03'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
