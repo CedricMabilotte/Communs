@@ -2,7 +2,7 @@
 slug: ferme-coccinelle
 nom: Ferme de la Coccinelle
 cree: '2026-05-27'
-dernier_repere: '2026-08-03'
+dernier_repere: '2026-08-10'
 score_cumule: 14
 sources_vues:
 - source: terre-de-liens

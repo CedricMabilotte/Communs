@@ -2,7 +2,7 @@
 slug: associations-labo
 nom: Associations Labo
 cree: '2026-07-06'
-dernier_repere: '2026-08-03'
+dernier_repere: '2026-08-10'
 score_cumule: 3
 sources_vues:
 - source: labo-ess
