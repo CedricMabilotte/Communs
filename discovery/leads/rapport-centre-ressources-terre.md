@@ -2,7 +2,7 @@
 slug: rapport-centre-ressources-terre
 nom: Rapport Centre Ressources Terre
 cree: '2026-06-05'
-dernier_repere: '2026-08-10'
+dernier_repere: '2026-08-17'
 score_cumule: 4
 sources_vues:
 - source: terre-de-liens

@@ -4,7 +4,7 @@ nom: Pour protéger ses habitants des pesticides, une commune de Charente-Mariti
   rachète des terres agricoles - Basta! MenuGoRechercheGoMe connecterPartager l'articleSepaCBApple
   PayGoogle PayPayPalFermer
 cree: '2026-08-03'
-dernier_repere: '2026-08-10'
+dernier_repere: '2026-08-17'
 score_cumule: 3
 sources_vues:
 - source: basta

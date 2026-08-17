@@ -2,7 +2,7 @@
 slug: rejoindre-ami-politis
 nom: Rejoindre Ami Politis
 cree: '2026-05-28'
-dernier_repere: '2026-08-10'
+dernier_repere: '2026-08-17'
 score_cumule: 8
 sources_vues:
 - source: politis

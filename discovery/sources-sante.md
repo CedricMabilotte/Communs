@@ -1,4 +1,4 @@
-# Santé des sources — 2026-08-10
+# Santé des sources — 2026-08-17
 
 Par source : état du dernier scan et nombre de liens retenus pour approfondissement.
 
@@ -16,7 +16,7 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - labo-ess — ok — 8 lien·s pré-retenu·s
 - reseau-ecolieux — échec ⚠ — 0 lien·s pré-retenu·s
 - fonciere-chenelet — ok — 0 lien·s pré-retenu·s
-- terres-de-sources — échec ⚠ — 0 lien·s pré-retenu·s
+- terres-de-sources — ok — 8 lien·s pré-retenu·s
 - reporterre — échec ⚠ — 0 lien·s pré-retenu·s
 - lundi-matin — ok — 4 lien·s pré-retenu·s
 - basta — ok — 8 lien·s pré-retenu·s
@@ -24,5 +24,5 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - le-postillon — ok — 0 lien·s pré-retenu·s
 - la-brique — ok — 0 lien·s pré-retenu·s
 - lutopiks — échec ⚠ — 0 lien·s pré-retenu·s
-- mr-mondialisation — ok — 0 lien·s pré-retenu·s
+- mr-mondialisation — ok — 1 lien·s pré-retenu·s
 - le-vent-se-leve — ok — 0 lien·s pré-retenu·s
