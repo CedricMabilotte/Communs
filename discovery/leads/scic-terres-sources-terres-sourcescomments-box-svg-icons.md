@@ -2,7 +2,7 @@
 slug: scic-terres-sources-terres-sourcescomments-box-svg-icons
 nom: La SCIC Terres de Sources - Terres de SourcesComments Box SVG icons
 cree: '2026-05-28'
-dernier_repere: '2026-08-17'
+dernier_repere: '2026-08-24'
 score_cumule: 6
 sources_vues:
 - source: terres-de-sources

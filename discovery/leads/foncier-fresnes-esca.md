@@ -2,7 +2,7 @@
 slug: foncier-fresnes-esca
 nom: Foncier Fresnes-sur-Esca
 cree: '2026-05-27'
-dernier_repere: '2026-08-17'
+dernier_repere: '2026-08-24'
 score_cumule: 3
 sources_vues:
 - source: terre-de-liens

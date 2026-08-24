@@ -1,4 +1,4 @@
-# Santé des sources — 2026-08-17
+# Santé des sources — 2026-08-24
 
 Par source : état du dernier scan et nombre de liens retenus pour approfondissement.
 
@@ -18,7 +18,7 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - fonciere-chenelet — ok — 0 lien·s pré-retenu·s
 - terres-de-sources — ok — 8 lien·s pré-retenu·s
 - reporterre — échec ⚠ — 0 lien·s pré-retenu·s
-- lundi-matin — ok — 4 lien·s pré-retenu·s
+- lundi-matin — ok — 5 lien·s pré-retenu·s
 - basta — ok — 8 lien·s pré-retenu·s
 - politis — ok — 2 lien·s pré-retenu·s
 - le-postillon — ok — 0 lien·s pré-retenu·s
