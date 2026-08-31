@@ -2,7 +2,7 @@
 slug: terre-liens-terre-liens
 nom: Terre Liens Terre Liens
 cree: '2026-05-27'
-dernier_repere: '2026-08-24'
+dernier_repere: '2026-08-31'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens

@@ -2,7 +2,7 @@
 slug: ferme-cosquerou
 nom: Ferme de Cosquerou
 cree: '2026-08-03'
-dernier_repere: '2026-08-24'
+dernier_repere: '2026-08-31'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
