@@ -2,7 +2,7 @@
 slug: sarlieve-terre-liens
 nom: Sarliève Terre Liens
 cree: '2026-08-24'
-dernier_repere: '2026-08-31'
+dernier_repere: '2026-09-07'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
