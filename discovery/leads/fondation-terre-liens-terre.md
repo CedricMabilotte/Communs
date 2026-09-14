@@ -2,7 +2,7 @@
 slug: fondation-terre-liens-terre
 nom: Fondation Terre Liens Terre
 cree: '2026-05-27'
-dernier_repere: '2026-09-07'
+dernier_repere: '2026-09-14'
 score_cumule: 22
 sources_vues:
 - source: terre-de-liens

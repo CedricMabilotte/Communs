@@ -1,4 +1,4 @@
-# Angles morts du corpus — 2026-09-07
+# Angles morts du corpus — 2026-09-14
 
 Régions et types de montage absents ou faiblement couverts (≤ 1 fiche). Les candidats touchant ces dimensions sont bonifiés au scoring de veille.
 
