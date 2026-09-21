@@ -37,7 +37,7 @@
   },
   "cooperative-oasis.org/nos-offres/fonciere-oasis": {
     "dernier_score": 9,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -61,19 +61,19 @@
   },
   "fermes.terredeliens.org/alsace/fermes-de-la-r%C3%A9gion-alsace/ferme-de-la-coccinelle": {
     "dernier_score": 14,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/aquitaine/fermes-de-la-r%C3%A9gion-aquitaine/la-voulperie": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/auvergne/fermes-de-la-r%C3%A9gion-auvergne/sarli%C3%A8ve": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-08-24",
     "statut": "nouveau"
   },
@@ -85,7 +85,7 @@
   },
   "fermes.terredeliens.org/bourgogne-franche-comt%C3%A9/fermes-de-la-r%C3%A9gion-bourgogne-franche-comt%C3%A9/domaine-de-saint-laurent": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -97,7 +97,7 @@
   },
   "fermes.terredeliens.org/bretagne/fermes-de-la-r%C3%A9gion-bretagne/ferme-de-cosquerou": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-08-03",
     "statut": "nouveau"
   },
@@ -109,13 +109,13 @@
   },
   "fermes.terredeliens.org/centre/fermes-de-la-r%C3%A9gion-centre/le-grand-bray": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "fermes.terredeliens.org/national/hub-ferme": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -235,19 +235,19 @@
   },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa": {
     "dernier_score": 11,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl": {
     "dernier_score": 14,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "larzac.org/accueil/un-territoire-organise/la-gestion-fonciere": {
     "dernier_score": 11,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -355,13 +355,13 @@
   },
   "politis.fr/association-amis-politis": {
     "dernier_score": 4,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
   "politis.fr/politis-fr-devenir-societaire": {
     "dernier_score": 4,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
@@ -385,8 +385,14 @@
   },
   "ressources.terredeliens.org/les-ressources/le-portage-foncier-agricole-rapport-3": {
     "dernier_score": 4,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
+    "statut": "nouveau"
+  },
+  "rtes.fr/communs-fonciers-ruraux-et-defis-socio-ecologiques-role-et-place-de-la-recherche-participative": {
+    "dernier_score": 7,
+    "derniere_detection": "2026-09-21",
+    "premiere_detection": "2026-09-21",
     "statut": "nouveau"
   },
   "terredeliens.org/national/actu/-on-a-perdu-80-de-nos-r%C3%A9coltes-lurgence-daccompagner-les-fermes-face-au-changement-climatique-01-09-2026": {
@@ -425,45 +431,51 @@
     "premiere_detection": "2026-07-20",
     "statut": "nouveau"
   },
+  "terredeliens.org/national/actu/un-%C3%A9t%C3%A9-mortel-les-fermes-fran%C3%A7aises-pourront-elles-se-relever-de-lann%C3%A9e-2026-10-09-2026": {
+    "dernier_score": 13,
+    "derniere_detection": "2026-09-21",
+    "premiere_detection": "2026-09-21",
+    "statut": "nouveau"
+  },
   "terredeliens.org/national/fonciere-terre-de-liens/la-fonciere-terre-de-liens-premiere-structure-dinvestissement-solidaire-agricole": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/hub-ferme": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/la-fondation-terre-de-liens": {
     "dernier_score": 22,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/les-associations-territoriales-terre-de-liens": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/minstaller-avec-terre-de-liens": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/transmettre-des-terres": {
     "dernier_score": 13,
-    "derniere_detection": "2026-09-14",
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terresdesources.fr/la-scic-terres-de-sources": {
-    "dernier_score": 3,
-    "derniere_detection": "2026-09-14",
+    "dernier_score": 6,
+    "derniere_detection": "2026-09-21",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
