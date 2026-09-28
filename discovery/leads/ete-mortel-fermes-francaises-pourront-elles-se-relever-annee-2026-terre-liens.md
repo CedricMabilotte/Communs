@@ -3,7 +3,7 @@ slug: ete-mortel-fermes-francaises-pourront-elles-se-relever-annee-2026-terre-li
 nom: 'Un été mortel : les fermes françaises pourront-elles se relever de l''année
   2026 ? — Terre de Liens'
 cree: '2026-09-21'
-dernier_repere: '2026-09-21'
+dernier_repere: '2026-09-28'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
