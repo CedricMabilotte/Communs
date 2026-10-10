@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 556" role="img" aria-labelledby="t d">
+  <title id="t">Cinq portes étroites pour habiter en zone agricole</title>
+  <desc id="d">En zone agricole ou naturelle d'un plan local d'urbanisme, on ne peut habiter légalement que par cinq portes : le logement de l'exploitant·e s'il est nécessaire à la ferme, l'extension d'une maison existante, le changement de destination d'un bâtiment repéré, un secteur de taille et de capacité d'accueil limitées délimité à titre exceptionnel, ou une résidence démontable, admise seulement en zone constructible ou en STECAL. Chaque porte passe par un avis de la commission départementale ou par un examen au cas par cas ; hors de ces portes, c'est le refus de permis ou l'installation irrégulière, sanctionnable par une astreinte.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <rect class="s-acc" x="140" y="10" width="440" height="56" rx="8"/>
+  <text class="s-txt" x="360" y="34" font-size="15" text-anchor="middle">Habiter là où l'on cultive :</text>
+  <text class="s-txt" x="360" y="55" font-size="15" text-anchor="middle">zone A ou N, inconstructible</text>
+
+  <text class="s-mut" x="20" y="92" font-size="13">La porte (texte)</text>
+  <text class="s-mut" x="380" y="92" font-size="13">La condition</text>
+
+  <!-- 1 -->
+  <rect class="s-blue" x="20" y="100" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="170" y="126" font-size="14" text-anchor="middle">1. Logement agricole</text>
+  <text class="s-mut" x="170" y="147" font-size="13" text-anchor="middle">de l'exploitant·e (R.151-23)</text>
+  <line class="s-arrow" x1="322" y1="131" x2="376" y2="131" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="100" width="320" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="126" font-size="14" text-anchor="middle">Présence permanente et</text>
+  <text class="s-txt" x="540" y="147" font-size="14" text-anchor="middle">rapprochée ; plafond du PLU</text>
+
+  <!-- 2 -->
+  <rect class="s-blue" x="20" y="176" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="170" y="202" font-size="14" text-anchor="middle">2. Extension ou annexe</text>
+  <text class="s-mut" x="170" y="223" font-size="13" text-anchor="middle">d'une maison (L.151-12)</text>
+  <line class="s-arrow" x1="322" y1="207" x2="376" y2="207" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="176" width="320" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="202" font-size="14" text-anchor="middle">Aucun logement nouveau ;</text>
+  <text class="s-txt" x="540" y="223" font-size="14" text-anchor="middle">avis de la CDPENAF</text>
+
+  <!-- 3 -->
+  <rect class="s-blue" x="20" y="252" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="170" y="278" font-size="14" text-anchor="middle">3. Changement de destination</text>
+  <text class="s-mut" x="170" y="299" font-size="13" text-anchor="middle">d'un bâtiment (L.151-11)</text>
+  <line class="s-arrow" x1="322" y1="283" x2="376" y2="283" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="252" width="320" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="278" font-size="14" text-anchor="middle">Bâtiment repéré au PLU ;</text>
+  <text class="s-txt" x="540" y="299" font-size="14" text-anchor="middle">avis conforme CDPENAF</text>
+
+  <!-- 4 -->
+  <rect class="s-ok" x="20" y="328" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="170" y="354" font-size="14" text-anchor="middle">4. STECAL (L.151-13)</text>
+  <text class="s-mut" x="170" y="375" font-size="13" text-anchor="middle">« à titre exceptionnel »</text>
+  <line class="s-arrow" x1="322" y1="359" x2="376" y2="359" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="328" width="320" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="354" font-size="14" text-anchor="middle">Modifier le PLU d'abord ;</text>
+  <text class="s-txt" x="540" y="375" font-size="14" text-anchor="middle">avis de la CDPENAF</text>
+
+  <!-- 5 -->
+  <rect class="s-ok" x="20" y="404" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="170" y="430" font-size="14" text-anchor="middle">5. Résidence démontable</text>
+  <text class="s-mut" x="170" y="451" font-size="13" text-anchor="middle">(L.444-1 et R.111-51)</text>
+  <line class="s-arrow" x1="322" y1="435" x2="376" y2="435" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="404" width="320" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="430" font-size="14" text-anchor="middle">Zone U, AU ou STECAL ;</text>
+  <text class="s-txt" x="540" y="451" font-size="14" text-anchor="middle">8 mois par an, démontable</text>
+
+  <line class="s-arrow" x1="360" y1="470" x2="360" y2="490" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="110" y="494" width="500" height="54" rx="8"/>
+  <text class="s-txt" x="360" y="516" font-size="14" text-anchor="middle">Sinon : refus de permis</text>
+  <text class="s-txt" x="360" y="537" font-size="14" text-anchor="middle">ou installation sanctionnée</text>
+</svg>

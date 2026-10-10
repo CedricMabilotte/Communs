@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="t d">
+<title id="t">Qui décide du sol, où il bascule, ce qui peut le tenir</title>
+<desc id="d">Le propriétaire possède le sol mais décide peu des pratiques ; l'exploitant·e les choisit sous la pression de l'aval. Le sol perd son carbone et sa structure lentement, et bascule à trois moments : le retournement d'une prairie, le changement d'exploitant, la vente de crédits carbone. Bail rural environnemental, obligation réelle environnementale et porteur non spéculatif peuvent attacher des pratiques au sol à ces moments-là.</desc>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="s-arrowhead"/></marker>
+</defs>
+<rect x="20" y="16" width="220" height="74" rx="6" class="s-box"/>
+<text x="130" y="38" text-anchor="middle" class="s-txt" font-size="15" font-weight="700">Propriétaire</text>
+<text x="130" y="57" text-anchor="middle" class="s-mut" font-size="13">possède le sol,</text>
+<text x="130" y="74" text-anchor="middle" class="s-mut" font-size="13">décide peu des pratiques</text>
+<rect x="250" y="16" width="220" height="74" rx="6" class="s-box"/>
+<text x="360" y="38" text-anchor="middle" class="s-txt" font-size="15" font-weight="700">Exploitant·e</text>
+<text x="360" y="57" text-anchor="middle" class="s-mut" font-size="13">choisit les pratiques,</text>
+<text x="360" y="74" text-anchor="middle" class="s-mut" font-size="13">vit du revenu de l'année</text>
+<rect x="480" y="16" width="220" height="74" rx="6" class="s-blue"/>
+<text x="590" y="38" text-anchor="middle" class="s-txt" font-size="15" font-weight="700">Aval et règle</text>
+<text x="590" y="57" text-anchor="middle" class="s-mut" font-size="13">négoces, coopératives,</text>
+<text x="590" y="74" text-anchor="middle" class="s-mut" font-size="13">PAC, homologation</text>
+<line x1="130" y1="90" x2="250" y2="124" class="s-arrow" marker-end="url(#ah)"/>
+<line x1="360" y1="90" x2="360" y2="124" class="s-arrow" marker-end="url(#ah)"/>
+<line x1="590" y1="90" x2="470" y2="124" class="s-arrow" marker-end="url(#ah)"/>
+<rect x="135" y="126" width="450" height="72" rx="6" class="s-acc"/>
+<text x="360" y="148" text-anchor="middle" class="s-txt" font-size="15" font-weight="700">Pratiques sur la parcelle</text>
+<text x="360" y="168" text-anchor="middle" class="s-mut" font-size="13">assolement, labour,</text>
+<text x="360" y="186" text-anchor="middle" class="s-mut" font-size="13">intrants, haies</text>
+<line x1="360" y1="198" x2="360" y2="232" class="s-arrow" marker-end="url(#ah)"/>
+<rect x="135" y="234" width="450" height="72" rx="6" class="s-box"/>
+<text x="360" y="256" text-anchor="middle" class="s-txt" font-size="15" font-weight="700">Le sol</text>
+<text x="360" y="276" text-anchor="middle" class="s-mut" font-size="13">carbone, structure, vie</text>
+<text x="360" y="294" text-anchor="middle" class="s-mut" font-size="13">pertes lentes et durables</text>
+<line x1="250" y1="306" x2="130" y2="338" class="s-arrow" marker-end="url(#ah)"/>
+<line x1="360" y1="306" x2="360" y2="338" class="s-arrow" marker-end="url(#ah)"/>
+<line x1="470" y1="306" x2="590" y2="338" class="s-arrow" marker-end="url(#ah)"/>
+<rect x="20" y="340" width="220" height="62" rx="6" class="s-acc"/>
+<text x="130" y="363" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">Bascule 1</text>
+<text x="130" y="385" text-anchor="middle" class="s-mut" font-size="13">une prairie retournée</text>
+<line x1="130" y1="402" x2="130" y2="442" class="s-arrow" marker-end="url(#ah)"/>
+<rect x="250" y="340" width="220" height="62" rx="6" class="s-acc"/>
+<text x="360" y="363" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">Bascule 2</text>
+<text x="360" y="385" text-anchor="middle" class="s-mut" font-size="13">un nouvel exploitant</text>
+<line x1="360" y1="402" x2="360" y2="442" class="s-arrow" marker-end="url(#ah)"/>
+<rect x="480" y="340" width="220" height="62" rx="6" class="s-acc"/>
+<text x="590" y="363" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">Bascule 3</text>
+<text x="590" y="385" text-anchor="middle" class="s-mut" font-size="13">un crédit carbone vendu</text>
+<line x1="590" y1="402" x2="590" y2="442" class="s-arrow" marker-end="url(#ah)"/>
+<rect x="20" y="444" width="220" height="80" rx="6" class="s-ok"/>
+<text x="130" y="470" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">Bail rural</text>
+<text x="130" y="489" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">environnemental</text>
+<text x="130" y="510" text-anchor="middle" class="s-mut" font-size="13">pratiques au contrat</text>
+<rect x="250" y="444" width="220" height="80" rx="6" class="s-ok"/>
+<text x="360" y="470" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">Obligation réelle</text>
+<text x="360" y="489" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">environnementale</text>
+<text x="360" y="510" text-anchor="middle" class="s-mut" font-size="13">attachée au terrain</text>
+<rect x="480" y="444" width="220" height="80" rx="6" class="s-ok"/>
+<text x="590" y="470" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">Porteur</text>
+<text x="590" y="489" text-anchor="middle" class="s-txt" font-size="14" font-weight="700">non spéculatif</text>
+<text x="590" y="510" text-anchor="middle" class="s-mut" font-size="13">le sol hors du marché</text>
+</svg>

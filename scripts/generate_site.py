@@ -618,7 +618,7 @@ def _link_text_chunk(text, up, done):
 # Gabarit de page
 # ─────────────────────────────────────────────────────────────────────────────
 
-# NAV principal — 6 entrées de parcours (faire / comprendre). Les pages de
+# NAV principal — 6 entrées (session #12 : + Enjeux). Les pages de
 # référence documentaire (Trois régimes, Grilles, Modèles voisins, Glossaire)
 # restent en accès secondaire : footer + renvois depuis Méthode et les pages
 # concernées (cf. cycle B — audit UX, I1/I2).
@@ -629,6 +629,7 @@ NAV = [
     ("index.html", "Accueil"),
     ("carte.html", "Carte"),
     ("dossiers/index.html", "Dossiers"),
+    ("enjeux/index.html", "Enjeux"),
     ("classement.html", "Classement"),
     ("methode.html", "Méthode"),
 ]
@@ -733,6 +734,7 @@ def page(title, body, active, depth=0, project=None, description="",
     label</a>.</p>
     <p class="foot-links"><strong>Découvrir</strong> ·
     <a href="{up}dossiers/index.html">Dossiers</a> ·
+    <a href="{up}enjeux/index.html">Enjeux</a> ·
     <a href="{up}revues/index.html">Revues</a> ·
     <a href="{up}regimes.html">Régimes et pôles</a> ·
     <a href="{up}glossaire.html">Glossaire</a> ·
@@ -2038,7 +2040,8 @@ la même chose : un Indice élevé peut rester « solide » sans être « abouti
         _group_extra = _ctx + (_member_lieux(fiche, by_uid, _h, _l) if cat != "usufruitier" else "")
     body = (defs + head + dossier_lien + score_block + verdict_cle + lecture + _group_extra + resume
             + montage_html + analyse_html + reponse_html + liens_html + grille_html
-            + dossier_html + fiab + sources_html + backlink)
+            + dossier_html + enjeux_fiche_section(fiche, cfg) + fiab
+            + sources_html + backlink)
 
     # données structurées : fil d'Ariane + entité principale
     fpath = f"{CAT_SLUG[cat]}/{fiche['uid']}.html"
@@ -3248,10 +3251,38 @@ def render_glossaire(cfg):
         f'<div class="gloss-item" id="g-{slugify(term)}">'
         f'<dt>{e(term)}</dt><dd>{e(defn)}</dd></div>'
         for term, defn in GLOSSAIRE)
+    # session #12 — les mots des Enjeux : source unique `glossaire:` de
+    # config/concepts.yml (premier pas vers la migration du glossaire codé en
+    # dur ; mêmes termes versés au glossaire commun de l'agora).
+    _enj_terms = [g for g in (cfg["concepts"].get("glossaire") or [])
+                  if isinstance(g, dict) and g.get("terme")]
+    _deja = {slugify(t) for t, _ in GLOSSAIRE}
+    _enj_terms = [g for g in _enj_terms if slugify(g["terme"]) not in _deja]
+    _enj_by_url = {x["url"]: x for x in load_enjeux()}
+    def _enj_refs(g):
+        out = []
+        for u in g.get("etudes") or []:
+            x = _enj_by_url.get(str(u))
+            if x:
+                out.append(f'<a class="enj-num" href="enjeux/{e(u)}/index.html">'
+                           f'E{int(x["meta"].get("numero") or 0):02d}</a>')
+        return (' <span class="enj-src-refs">' + " ".join(out) + "</span>") if out else ""
+    enj_items = "".join(
+        f'<div class="gloss-item" id="g-{slugify(g["terme"])}">'
+        + "".join(f'<span id="g-{slugify(a)}"></span>' for a in (g.get("alias") or []))
+        + f'<dt>{e(clean(g["terme"]))}</dt><dd>{e(clean(g.get("definition", "")))}'
+        f'{_enj_refs(g)}</dd></div>'
+        for g in sorted(_enj_terms, key=lambda g: slugify(g["terme"])))
+    enj_gloss = (f'<h2 class="sec" id="enjeux">Les mots des Enjeux</h2>'
+                 f'<p class="lead">Les termes du foncier agricole, du droit rural et de '
+                 f'l\'agronomie mobilisés par les <a href="enjeux/index.html">analyses '
+                 f'stratégiques</a>, avec les études qui les emploient.</p>'
+                 f'<dl class="glossaire">{enj_items}</dl>') if enj_items else ""
     body = f"""<h1>Glossaire</h1>
 <p class="lead">Définitions simples des termes pivots employés dans l'annuaire.
 Pour le détail du calcul de la note, voir la <a href="methode.html">Méthode</a>.</p>
 <dl class="glossaire">{items}</dl>
+{enj_gloss}
 <p class="linkrow"><a href="methode.html">La méthode et le calcul de la note →</a> ·
 <a href="regimes.html">Régimes et pôles du sol →</a> ·
 <a href="grilles.html">Grilles d'analyse →</a></p>
@@ -3265,6 +3296,11 @@ Pour le détail du calcul de la note, voir la <a href="methode.html">Méthode</a
             {"@type": "DefinedTerm", "name": term, "description": defn,
              "url": canonical_url("glossaire.html") + f"#g-{slugify(term)}"}
             for term, defn in GLOSSAIRE
+        ] + [
+            {"@type": "DefinedTerm", "name": clean(g["terme"]),
+             "description": clean(g.get("definition", "")),
+             "url": canonical_url("glossaire.html") + f"#g-{slugify(g['terme'])}"}
+            for g in _enj_terms
         ],
     }
     return page("Glossaire", body, "glossaire.html", project=project,
@@ -3446,6 +3482,9 @@ def render_index(all_sc, cfg, n_by_cat):
                    "Parcourir les lieux recensés, sur la carte ou dans le catalogue.",
                    [("La carte", "carte.html"), ("Les lieux", "lieux.html"),
                     ("Le classement", "classement.html")]),
+        _intention("Je veux comprendre les enjeux",
+                   "Pourquoi la terre doit être libérée : les mécanismes, chiffrés et sourcés.",
+                   [("Les études", "enjeux/index.html"), ("La matrice", "enjeux/index.html#matrice")]),
         _intention("Je veux la méthode",
                    "Comment chaque montage est lu, noté et situé — la grille de lecture.",
                    [("La méthode", "methode.html"), ("Les grilles", "grilles.html")]),
@@ -3478,6 +3517,24 @@ def render_index(all_sc, cfg, n_by_cat):
         '<div class="dossier-vignettes">' + "".join(_dcards) + '</div>'
         '<p class="linkrow"><a href="dossiers/index.html">Tous les dossiers →</a></p>'
         '</section>') if _dcards else ""
+    # bandeau « Enjeux » (session #12) — le pourquoi de l'annuaire, en bref
+    _enj = load_enjeux()
+    _ecards = []
+    for _x in [x for x in _enj if int(x["meta"].get("numero") or 0) in (1, 4, 9, 13)][:4]:
+        _m = _x["meta"]
+        _ecards.append(
+            f'<a href="enjeux/{e(_x["url"])}/index.html"><span class="enj-num">'
+            f'E{int(_m.get("numero") or 0):02d}</span><strong>{e(clean(_m.get("titre","")))}'
+            f'</strong><span class="enj-small">{e(clean(_m.get("sous_titre","")))}</span></a>')
+    enjeux_section = (
+        '<section class="accueil-enjeux"><h2 class="sec">Enjeux — pourquoi libérer '
+        'la terre</h2><p class="lead">' + str(len(_enj)) + ' analyses stratégiques, '
+        'sourcées et chiffrées : transmission des fermes, financiarisation, prix, '
+        'béton, rente du soleil, eau, sols, forêt, outre-mer — et ce que la '
+        'libération y change.</p><div class="enj-teaser">' + "".join(_ecards)
+        + '</div><p class="linkrow"><a href="enjeux/index.html">Toutes les études et '
+        'la matrice →</a></p></section>') if _enj else ""
+
     # aperçu de carte vivant — la carte est le réflexe n°1 d'un annuaire
     # géographique : on la MONTRE (points réels colorés par verdict) plutôt que de
     # la promettre. Carte non interactive (pointer-events désactivés en CSS) : un
@@ -3586,6 +3643,8 @@ def render_index(all_sc, cfg, n_by_cat):
 {carte_teaser}
 
 {doss_section}
+
+{enjeux_section}
 
 {best_section}
 
@@ -6329,6 +6388,1194 @@ rapidement après vérification (légalité uniquement, pas le fond).</p>
                                  description=desc, path=fname)))
     return out
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Enjeux — analyses stratégiques (COD13.012, session #12, 10 octobre 2026)
+# ─────────────────────────────────────────────────────────────────────────────
+# Troisième instance du schéma éditorial Revues / Dossiers (cf. collège
+# MARS-strat, audit/enjeux-12/) : le *pourquoi* de l'annuaire. Chaque étude vit
+# dans `enjeux/etudes/NN-slug.md` (front-matter de type Revues étendu, voir
+# audit/enjeux-12/04-gabarit-redaction.md), ses données dans `enjeux/donnees/`
+# (CSV → graphiques SVG rendus ici, sans bibliothèque) et ses schémas dans
+# `enjeux/schemas/` (SVG fabriqués, colorés par classes `s-*`).
+# Le lien au corpus est déclaré une seule fois, dans l'étude (`corpus:`) ; le
+# renvoi inverse (bloc « Enjeux » des fiches) est calculé (enjeux_map).
+#
+#   /enjeux/                    index : thèse, matrice, études par famille
+#   /enjeux/NN-slug/            une étude
+#   /enjeux/sources.html        sources et auteurs (agrégés des études)
+#   /enjeux/donnees/*.csv       données des graphiques (téléchargeables)
+
+ENJEUX_DIR = ROOT / "enjeux"
+
+ENJ_FAMILLES = [
+    ("transmettre", "I", "Transmettre"),
+    ("posseder", "II", "Posséder et accumuler"),
+    ("regle", "III", "La règle"),
+    ("usages", "IV", "Usages concurrents"),
+    ("vivant", "V", "Ressources et vivant"),
+    ("territoires", "VI", "Territoires"),
+    ("repondre", "VII", "Défendre et répondre"),
+]
+ENJ_FAM = {k: (num, lab) for k, num, lab in ENJ_FAMILLES}
+
+# Dimensions de la matrice logique (audit/enjeux-12/03-demarche-et-matrice.md §5)
+ENJ_DIMENSIONS = [
+    ("D1", "Rapport de propriété", "Qui possède, exploite, décide, travaille"),
+    ("D2", "Mécanisme et bascule", "L'acte, l'acteur, la date, le moment où tout bascule"),
+    ("D3", "Ampleur", "Stock et flux, série longue, échelle territoriale"),
+    ("D4", "Droit", "Régime en vigueur, interstices, angles morts"),
+    ("D5", "Argent", "Rente, prix et revenu, dette, aides, coût de la libération"),
+    ("D6", "Vivant", "Sols, eau, biodiversité, habitat"),
+    ("D7", "Histoire", "Précédents et luttes comparables"),
+    ("D8", "Non-mesuré", "Ce que les chiffres officiels ne voient pas"),
+    ("D9", "Réversibilité", "Un hectare perdu se rattrape-t-il ?"),
+    ("D10", "Réponse", "Outils de libération, montages du corpus et leurs limites"),
+    ("D11", "Leviers", "Collectifs, élu·es, citoyen·nes, cédant·es"),
+    ("D12", "Efficacité de la règle", "Ce que la régulation réussit, ce qu'elle laisse fuir"),
+]
+
+# Outils de libération — colonnes de réponse de la matrice
+ENJ_OUTILS = [
+    ("fondation_fonds", "Fondation, fonds de dotation",
+     "Un porteur d'intérêt général, inaliénable, détient la terre."),
+    ("fonciere_solidaire", "Foncière et épargne solidaire",
+     "Des épargnant·es achètent ensemble ; la société loue aux paysan·nes."),
+    ("gfa_citoyen", "GFA mutuel ou citoyen",
+     "Un groupement foncier agricole porté par des citoyen·nes."),
+    ("propriete_publique", "Propriété publique",
+     "Collectivité, État, conservatoire ; préemption publique."),
+    ("bail_long", "Bail long et protecteur",
+     "Bail emphytéotique, bail cessible, bail rural environnemental."),
+    ("ore", "Obligation réelle environnementale",
+     "Une obligation attachée au terrain, qui suit les ventes."),
+    ("cooperative_usage", "Coopérative ou association d'usage",
+     "SCIC, coopérative, association qui organise l'usage."),
+    ("regulation", "Régulation publique",
+     "SAFER, contrôle des structures, statut du fermage."),
+    ("portage", "Portage foncier et espace-test",
+     "Une structure achète et attend le bon repreneur."),
+    ("communs_historiques", "Communs historiques",
+     "Sections de commune, biens communaux, pâturages collectifs, terres coutumières."),
+]
+ENJ_OUTIL = {k: (lab, desc) for k, lab, desc in ENJ_OUTILS}
+
+ENJ_SOURCE_TYPES = [
+    ("officielle", "Sources officielles et statistique publique"),
+    ("droit", "Textes juridiques et décisions"),
+    ("recherche", "Centres de recherche et expertises"),
+    ("academique", "Publications académiques"),
+    ("europe", "Sources européennes et internationales"),
+    ("operateur", "Opérateurs du système (données signalées comme telles)"),
+    ("presse", "Presse d'enquête"),
+]
+ENJ_SRC_LABEL = dict(ENJ_SOURCE_TYPES)
+
+# Domaines exclus comme sources (arbitrage de Ced, 10/10/2026 — ONG françaises
+# citables comme acteurs, jamais comme source ; Wikipédia exclue).
+ENJ_DOMAINES_EXCLUS = (
+    "terredeliens.org", "terre-de-liens.org", "confederationpaysanne.fr",
+    "fnh.org", "fondation-nature-homme.org", "agter.org", "agter.asso.fr",
+    "generations-futures.fr", "fne.asso.fr", "amisdelaterre.org",
+    "greenpeace.fr", "attac.org", "foodwatch.org", "wikipedia.org",
+)
+
+ENJ_LEVIERS_ACTEURS = ("collectifs", "élu", "citoyen", "cédant")
+
+# Palette des graphiques — reprise des jetons du site (style.css :root).
+ENJ_SERIES = ["#4a7a3a", "#bc5d3a", "#36748a", "#b0843a", "#5f5849"]
+
+
+def _enj_slug(meta, path):
+    """Partie d'URL d'une étude : NN-slug (numéro sur deux chiffres)."""
+    n = int(meta.get("numero") or 0)
+    slug = meta.get("slug") or re.sub(r"^\d+-", "", path.stem)
+    return f"{n:02d}-{slug}"
+
+
+def load_enjeux():
+    """Charge `enjeux/etudes/*.md` → liste triée par numéro de
+    {meta, body_md, url, _file}. Ignore les fichiers en `statut: brouillon`."""
+    d = ENJEUX_DIR / "etudes"
+    if not d.exists():
+        return []
+    out = []
+    for p in sorted(d.glob("*.md")):
+        if p.name.startswith((".", "_")):
+            continue
+        try:
+            meta, body = _parse_md_frontmatter(p.read_text(encoding="utf-8"))
+        except yaml.YAMLError as exc:
+            print(f"  Enjeux — front-matter illisible, étude ignorée : {p.name} ({exc})")
+            continue
+        if not isinstance(meta, dict) or not meta.get("numero"):
+            print(f"  Enjeux — étude ignorée (pas de numéro) : {p.name}")
+            continue
+        if str(meta.get("statut", "")).lower() == "brouillon":
+            continue
+        out.append({"meta": meta, "body_md": body, "url": _enj_slug(meta, p),
+                    "_file": p.name})
+    out.sort(key=lambda x: int(x["meta"].get("numero") or 0))
+    return out
+
+
+def enjeux_map(etudes):
+    """uid de fiche → [(numéro, url, titre)] : renvoi inverse calculé
+    depuis le bloc `corpus:` des études (le lien n'est écrit qu'une fois)."""
+    m = {}
+    for et in etudes:
+        cm = et["meta"].get("corpus") or {}
+        for key in ("lieux", "porteurs", "usufruitiers", "modeles", "reseaux"):
+            for uid in cm.get(key) or []:
+                m.setdefault(str(uid), []).append(
+                    (int(et["meta"].get("numero") or 0), et["url"],
+                     clean(et["meta"].get("titre", ""))))
+    return m
+
+
+def enjeux_fiche_section(fiche, cfg):
+    """Bloc « Ce que ce lieu éclaire dans les Enjeux » d'une fiche (profondeur 1)."""
+    refs = (cfg.get("_enjeux_for") or {}).get(fiche.get("uid"))
+    if not refs:
+        return ""
+    items = "".join(
+        f'<li><a href="../enjeux/{e(url)}/index.html"><span class="enj-num">'
+        f'E{n:02d}</span> {e(t)}</a></li>'
+        for n, url, t in sorted(refs))
+    return ('<section class="fiche-enjeux"><h2 class="sec">Dans les Enjeux</h2>'
+            '<p class="prose">Cette entrée est mobilisée par les analyses '
+            'stratégiques suivantes :</p>'
+            f'<ul class="enj-refs">{items}</ul></section>')
+
+
+# ── nombres et graduations ───────────────────────────────────────────────────
+
+def _enj_num(v):
+    try:
+        if v is None or str(v).strip() == "":
+            return None
+        return float(str(v).strip().replace(" ", "").replace(",", "."))
+    except ValueError:
+        return None
+
+
+def _enj_fmt(v, dec=None):
+    """Nombre au format français : espace fine insécable pour les milliers,
+    virgule décimale."""
+    if v is None:
+        return "—"
+    if dec is None:
+        a = abs(v)
+        dec = 0 if (a >= 100 or float(v).is_integer()) else (1 if a >= 10 else 2)
+    s = f"{v:,.{dec}f}".replace(",", " ").replace(".", ",")
+    if "," in s and dec > 0:
+        s = s.rstrip("0").rstrip(",")
+    return s
+
+
+def _enj_ticks(lo, hi, n=5):
+    """Graduations « rondes » couvrant [lo, hi]."""
+    if hi == lo:
+        hi = lo + 1
+    span = hi - lo
+    raw = span / max(n, 1)
+    mag = 10 ** math.floor(math.log10(raw))
+    for m in (1, 2, 2.5, 5, 10):
+        step = m * mag
+        if span / step <= n:
+            break
+    start = math.floor(lo / step) * step
+    end = math.ceil(hi / step) * step
+    ticks = []
+    t = start
+    while t <= end + step * 1e-9:
+        ticks.append(round(t, 10))
+        t += step
+    return ticks
+
+
+def _enj_read_csv(path):
+    import csv
+    with open(path, encoding="utf-8-sig", newline="") as fh:
+        rows = [r for r in csv.reader(fh) if any(c.strip() for c in r)]
+    if not rows:
+        return [], []
+    return rows[0], rows[1:]
+
+
+def _enj_wrap(label, width=26, maxl=2):
+    """Coupe un libellé en lignes courtes (au plus `maxl`) pour un axe."""
+    words = str(label).split()
+    lines, cur = [], ""
+    for w in words:
+        if len(cur) + len(w) + 1 > width and cur:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = (cur + " " + w).strip()
+    if cur:
+        lines.append(cur)
+    if len(lines) > maxl:
+        lines = lines[:maxl - 1] + [" ".join(lines[maxl - 1:])[:width - 1] + "…"]
+    return lines
+
+
+# ── graphiques SVG (sans bibliothèque) ───────────────────────────────────────
+
+def _enj_legend(series, x0, y0, width):
+    out, x, y = [], x0, y0
+    for i, s in enumerate(series):
+        w = 22 + len(s) * 7.2
+        if x + w > x0 + width and x > x0:
+            x, y = x0, y + 20
+        col = ENJ_SERIES[i % len(ENJ_SERIES)]
+        out.append(f'<rect x="{x:.1f}" y="{y - 9:.1f}" width="12" height="12" '
+                   f'rx="2" fill="{col}"/><text x="{x + 17:.1f}" y="{y + 1:.1f}" '
+                   f'class="ch-leg">{e(s)}</text>')
+        x += w + 14
+    return "".join(out), y + 18
+
+
+def enj_chart_svg(fig, header, rows, fid):
+    """Graphique SVG accessible depuis une table CSV. Types : ligne, barres,
+    barres_h, empilees, empilees_h. Renvoie (svg, table_html)."""
+    typ = fig.get("type", "barres")
+    unite = clean(fig.get("unite", ""))
+    series = header[1:]
+    cats = [r[0] for r in rows]
+    vals = [[_enj_num(r[i + 1]) if i + 1 < len(r) else None
+             for i in range(len(series))] for r in rows]
+    W = 720
+    title_id, desc_id = f"{fid}-t", f"{fid}-d"
+    a11y = (f'<title id="{title_id}">{e(clean(fig.get("titre", "")))}</title>'
+            f'<desc id="{desc_id}">{e(clean(fig.get("alt", "")))}</desc>')
+    leg_svg, top = ("", 18)
+    if len(series) > 1:
+        leg_svg, top = _enj_legend(series, 60, 20, W - 80)
+    parts = []
+    horiz = typ in ("barres_h", "empilees_h")
+    stacked = typ in ("empilees", "empilees_h")
+
+    allv = [v for row in vals for v in row if v is not None]
+    if stacked:
+        sums = [sum(v for v in row if v is not None) for row in vals]
+        lo, hi = 0, max(sums or [1])
+    else:
+        lo, hi = min(allv or [0]), max(allv or [1])
+        if typ == "ligne" and lo > 0 and lo > 0.45 * hi:
+            pass  # base non nulle autorisée pour une ligne (signalée par l'axe)
+        else:
+            lo = min(0, lo)
+    ticks = _enj_ticks(lo, hi)
+    lo, hi = ticks[0], ticks[-1]
+    span = (hi - lo) or 1
+
+    if horiz:
+        lab_w = 210
+        x0, x1 = lab_w + 10, W - 58
+        bar_h, gap = (20 if not stacked and len(series) > 1 else 22), 10
+        group_h = (bar_h * (1 if stacked else len(series))) + gap
+        y0 = top + 6
+        H = int(y0 + group_h * len(cats) + 40)
+        sx = lambda v: x0 + (v - lo) / span * (x1 - x0)
+        for t in ticks:
+            parts.append(f'<line x1="{sx(t):.1f}" x2="{sx(t):.1f}" y1="{y0 - 4}" '
+                         f'y2="{H - 34}" class="ch-grid"/>'
+                         f'<text x="{sx(t):.1f}" y="{H - 18}" class="ch-tick" '
+                         f'text-anchor="middle">{e(_enj_fmt(t))}</text>')
+        for ci, cat in enumerate(cats):
+            gy = y0 + ci * group_h
+            lines = _enj_wrap(cat, 30)
+            for li, ln in enumerate(lines):
+                yy = gy + (group_h - gap) / 2 + 4 + (li - (len(lines) - 1) / 2) * 13
+                parts.append(f'<text x="{lab_w}" y="{yy:.1f}" class="ch-cat" '
+                             f'text-anchor="end">{e(ln)}</text>')
+            acc = 0
+            for si, v in enumerate(vals[ci]):
+                if v is None:
+                    continue
+                col = ENJ_SERIES[si % len(ENJ_SERIES)]
+                if stacked:
+                    xa, xb, yy = sx(acc), sx(acc + v), gy
+                    acc += v
+                else:
+                    xa, xb, yy = sx(max(lo, 0) if lo <= 0 else lo), sx(v), gy + si * bar_h
+                    if v < 0:
+                        xa, xb = xb, xa
+                parts.append(f'<rect x="{min(xa, xb):.1f}" y="{yy:.1f}" '
+                             f'width="{max(abs(xb - xa), 1):.1f}" height="{bar_h - 3}" '
+                             f'rx="2" fill="{col}"><title>{e(cat)} — {e(series[si])} : '
+                             f'{e(_enj_fmt(v))} {e(unite)}</title></rect>')
+                if not stacked and len(series) <= 2:
+                    parts.append(f'<text x="{max(xa, xb) + 5:.1f}" y="{yy + bar_h / 2 + 2:.1f}" '
+                                 f'class="ch-val">{e(_enj_fmt(v))}</text>')
+        if unite:
+            parts.append(f'<text x="{x1}" y="{H - 2}" class="ch-unit" '
+                         f'text-anchor="end">{e(unite)}</text>')
+    else:
+        x0, x1 = 64, W - 24
+        y0 = top + 10
+        H = 380 + (top - 18)
+        rot = (typ != "ligne") and len(cats) > 9
+        _bw_chars = max(8, int((x1 - x0) / max(len(cats), 1) / 7.2))
+        _nl = 1 if (typ == "ligne" or rot) else max(
+            len(_enj_wrap(c, _bw_chars, 3)) for c in cats)
+        y1 = H - (78 if rot else 28 + 13 * _nl)
+        sy = lambda v: y1 - (v - lo) / span * (y1 - y0)
+        for t in ticks:
+            parts.append(f'<line x1="{x0}" x2="{x1}" y1="{sy(t):.1f}" y2="{sy(t):.1f}" '
+                         f'class="ch-grid"/><text x="{x0 - 8}" y="{sy(t) + 4:.1f}" '
+                         f'class="ch-tick" text-anchor="end">{e(_enj_fmt(t))}</text>')
+        if unite:
+            parts.append(f'<text x="{x0 - 8}" y="{y0 - 10:.1f}" class="ch-unit" '
+                         f'text-anchor="start">{e(unite)}</text>')
+        if typ == "ligne":
+            xs = [_enj_num(c) for c in cats]
+            numeric = all(v is not None for v in xs) and len(xs) > 1
+            if numeric:
+                xlo, xhi = min(xs), max(xs)
+                px = lambda i: x0 + 10 + (xs[i] - xlo) / ((xhi - xlo) or 1) * (x1 - x0 - 20)
+            else:
+                px = lambda i: x0 + 10 + i / max(len(cats) - 1, 1) * (x1 - x0 - 20)
+            # graduations d'abscisse : au plus ~10 étiquettes
+            # étiquettes d'abscisse sans chevauchement : la dernière est
+            # toujours affichée, les voisines trop proches sont omises
+            shown = []
+            for i in range(len(cats)):
+                if shown and px(i) - px(shown[-1]) < 38:
+                    continue
+                shown.append(i)
+            last = len(cats) - 1
+            if shown and shown[-1] != last:
+                while shown and px(last) - px(shown[-1]) < 38:
+                    shown.pop()
+                shown.append(last)
+            for i in shown:
+                parts.append(f'<text x="{px(i):.1f}" y="{y1 + 20}" class="ch-tick" '
+                             f'text-anchor="middle">{e(cats[i])}</text>')
+            for si, s in enumerate(series):
+                col = ENJ_SERIES[si % len(ENJ_SERIES)]
+                seg, segs = [], []
+                for i in range(len(cats)):
+                    v = vals[i][si]
+                    if v is None:
+                        if seg:
+                            segs.append(seg)
+                        seg = []
+                        continue
+                    seg.append((px(i), sy(v), cats[i], v))
+                if seg:
+                    segs.append(seg)
+                for sg in segs:
+                    d = " ".join(f"{'M' if k == 0 else 'L'}{x:.1f},{y:.1f}"
+                                 for k, (x, y, _, _) in enumerate(sg))
+                    parts.append(f'<path d="{d}" fill="none" stroke="{col}" '
+                                 f'stroke-width="2.4" stroke-linejoin="round"/>')
+                    for x, y, c, v in sg:
+                        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" '
+                                     f'fill="{col}"><title>{e(c)} — {e(s)} : '
+                                     f'{e(_enj_fmt(v))} {e(unite)}</title></circle>')
+                # étiquette de fin de série
+                last = [p for sg in segs for p in sg]
+                if last:
+                    x, y, c, v = last[-1]
+                    parts.append(f'<text x="{min(x + 6, x1 - 4):.1f}" y="{y - 7:.1f}" '
+                                 f'class="ch-val" text-anchor="end">{e(_enj_fmt(v))}</text>')
+        else:
+            n = len(cats)
+            band = (x1 - x0) / max(n, 1)
+            inner = band * 0.72
+            for ci, c in enumerate(cats):
+                bx = x0 + ci * band + (band - inner) / 2
+                cx = x0 + ci * band + band / 2
+                if rot:
+                    parts.append(f'<text x="{cx:.1f}" y="{y1 + 14}" class="ch-cat" '
+                                 f'text-anchor="end" transform="rotate(-40 {cx:.1f} '
+                                 f'{y1 + 14})">{e(str(c)[:28])}</text>')
+                else:
+                    for li, ln in enumerate(_enj_wrap(c, _bw_chars, 3)):
+                        parts.append(f'<text x="{cx:.1f}" y="{y1 + 18 + li * 13}" '
+                                     f'class="ch-cat" text-anchor="middle">{e(ln)}</text>')
+                acc = 0
+                bw = inner if stacked else inner / max(len(series), 1)
+                for si, v in enumerate(vals[ci]):
+                    if v is None:
+                        continue
+                    col = ENJ_SERIES[si % len(ENJ_SERIES)]
+                    if stacked:
+                        ya, yb = sy(acc), sy(acc + v)
+                        acc += v
+                        xx = bx
+                    else:
+                        base = 0 if lo <= 0 else lo
+                        ya, yb = sy(base), sy(v)
+                        xx = bx + si * bw
+                    parts.append(f'<rect x="{xx:.1f}" y="{min(ya, yb):.1f}" '
+                                 f'width="{max(bw - 2, 1):.1f}" height="{max(abs(ya - yb), 1):.1f}" '
+                                 f'rx="2" fill="{col}"><title>{e(c)} — {e(series[si])} : '
+                                 f'{e(_enj_fmt(v))} {e(unite)}</title></rect>')
+                    if not stacked and len(series) == 1 and n <= 16:
+                        parts.append(f'<text x="{xx + bw / 2 - 1:.1f}" y="{min(ya, yb) - 5:.1f}" '
+                                     f'class="ch-val" text-anchor="middle">{e(_enj_fmt(v))}</text>')
+        parts.append(f'<line x1="{x0}" x2="{x1}" y1="{sy(max(lo, 0) if lo <= 0 else lo):.1f}" '
+                     f'y2="{sy(max(lo, 0) if lo <= 0 else lo):.1f}" class="ch-axis"/>')
+    svg = (f'<svg class="enj-chart" viewBox="0 0 {W} {H}" role="img" '
+           f'aria-labelledby="{title_id} {desc_id}" xmlns="http://www.w3.org/2000/svg">'
+           f'{a11y}{leg_svg}{"".join(parts)}</svg>')
+    # table de données (alternative accessible)
+    th = "".join(f'<th scope="col">{e(h)}</th>' for h in header)
+    trs = "".join(
+        "<tr>" + f'<th scope="row">{e(r[0])}</th>'
+        + "".join(f"<td>{e(_enj_fmt(_enj_num(r[i])) if _enj_num(r[i]) is not None else (r[i] if i < len(r) else ''))}</td>"
+                  for i in range(1, len(header)) if True)
+        + "</tr>" for r in rows)
+    table = (f'<div class="table-scroll" tabindex="0" role="region" aria-label="Données '
+             f'de la figure"><table class="enj-data"><thead><tr>{th}</tr></thead>'
+             f'<tbody>{trs}</tbody></table></div>')
+    return svg, table
+
+
+def _enj_schema_svg(path, fid):
+    """SVG fabriqué inséré en ligne : identifiants préfixés (unicité dans la
+    page), déclaration XML retirée, scripts interdits."""
+    raw = path.read_text(encoding="utf-8")
+    raw = re.sub(r"<\?xml[^>]*\?>", "", raw)
+    raw = re.sub(r"<!DOCTYPE[^>]*>", "", raw)
+    raw = re.sub(r"<script\b.*?</script>", "", raw, flags=re.S | re.I)
+    ids = set(re.findall(r'\bid="([^"]+)"', raw))
+    for i in sorted(ids, key=len, reverse=True):
+        raw = re.sub(rf'\bid="{re.escape(i)}"', f'id="{fid}-{i}"', raw)
+        raw = raw.replace(f"url(#{i})", f"url(#{fid}-{i})")
+        raw = raw.replace(f'href="#{i}"', f'href="#{fid}-{i}"')
+        raw = re.sub(rf'(aria-labelledby="[^"]*)\b{re.escape(i)}\b',
+                     lambda m: m.group(1) + f"{fid}-{i}", raw)
+    raw = re.sub(r"<svg\b", '<svg class="enj-schema"', raw, count=1)
+    return raw.strip()
+
+
+def enj_figure_html(et, fig, num, depth=2):
+    """<figure> complète : titre-constat, rendu, données, source."""
+    fid = f"fig-{et['meta'].get('numero', 0):02d}-{slugify(str(fig.get('id', num)))}"
+    up = "../" * depth
+    fichier = str(fig.get("fichier", ""))
+    path = ENJEUX_DIR / fichier
+    if not path.exists():
+        print(f"  Enjeux — figure introuvable : {fichier} ({et['_file']})")
+        return ""
+    data_html, dl = "", ""
+    if fig.get("type") == "schema" or fichier.endswith(".svg"):
+        visual = _enj_schema_svg(path, fid)
+    else:
+        header, rows = _enj_read_csv(path)
+        if not header or not rows:
+            return ""
+        visual, table = enj_chart_svg(fig, header, rows, fid)
+        data_html = (f'<details class="enj-fig-data"><summary>Voir les données'
+                     f'</summary>{table}</details>')
+        dl = (f' · <a href="{up}enjeux/{e(fichier)}" download>données (CSV)</a>')
+    src = clean(fig.get("source", ""))
+    surl = fig.get("source_url")
+    src_html = (f'<a href="{e(surl)}" rel="noopener">{e(src)}</a>' if surl
+                else e(src))
+    note = clean(fig.get("note", ""))
+    return f"""<figure class="enj-fig" id="{fid}">
+  <figcaption class="enj-fig-cap"><span class="enj-fig-num">Figure {num}</span>
+  <span class="enj-fig-titre">{e(clean(fig.get("titre", "")))}</span></figcaption>
+  <div class="enj-fig-visual">{visual}</div>
+  {data_html}
+  <p class="enj-fig-source">Source : {src_html}{dl}{(' · ' + e(note)) if note else ''}</p>
+</figure>"""
+
+
+def _enj_postprocess(html, et):
+    """Corps d'étude : figures insérées, bloc Leviers mis en cartes,
+    sous-sections « sait / discute / tort » marquées, liens externes en rel."""
+    figs = {str(f.get("id")): f for f in (et["meta"].get("figures") or [])}
+    counter = {"n": 0}
+
+    def _fig(m):
+        f = figs.get(m.group(1).strip())
+        if not f:
+            print(f"  Enjeux — marqueur de figure inconnu : {m.group(1)} ({et['_file']})")
+            return ""
+        counter["n"] += 1
+        return enj_figure_html(et, f, counter["n"])
+
+    html = re.sub(r"<p>\s*\[\[figure:([^\]]+)\]\]\s*</p>", _fig, html)
+    html = re.sub(r"\[\[figure:([^\]]+)\]\]", _fig, html)
+    # liens externes
+    html = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" rel="noopener"', html)
+    # Leviers : chaque h3 de la section devient une carte
+    m = re.search(r'(<h2 id="leviers">.*?</h2>)(.*?)(?=<h2 |\Z)', html, flags=re.S)
+    if m:
+        inner = m.group(2)
+        chunks = re.split(r"(?=<h3)", inner)
+        lead = chunks[0] if chunks and not chunks[0].lstrip().startswith("<h3") else ""
+        cards = [c for c in chunks if c.lstrip().startswith("<h3")]
+        new = (m.group(1) + lead + '<div class="enj-leviers">'
+               + "".join(f'<div class="enj-levier">{c}</div>' for c in cards)
+               + "</div>")
+        html = html[:m.start()] + new + html[m.end():]
+    # « Ce qui nous donnerait tort » — encadré
+    html = re.sub(r'(<h3 id="ce-qui-nous-donnerait-tort">.*?</h3>.*?)(?=<h2 |<h3 |\Z)',
+                  r'<div class="enj-tort">\1</div>', html, count=1, flags=re.S)
+    return html, counter["n"]
+
+
+def _enj_md(md_text):
+    import markdown as _md
+    return _md.markdown(md_text or "",
+                        extensions=["extra", "sane_lists", "smarty", "toc"],
+                        extension_configs={"toc": {"slugify": lambda v, s: slugify(v)}},
+                        output_format="html5")
+
+
+def _enj_corpus_html(et, by_uid, depth=2):
+    up = "../" * depth
+    cm = et["meta"].get("corpus") or {}
+    groups = [("lieux", "Lieux", "l"), ("porteurs", "Porteurs", "p"),
+              ("usufruitiers", "Usufruitiers", "u"), ("modeles", "Modèles voisins", "m"),
+              ("reseaux", "Réseaux", "r")]
+    blocks = []
+    for key, lab, pre in groups:
+        items = []
+        for uid in cm.get(key) or []:
+            f = by_uid.get(str(uid))
+            if not f:
+                print(f"  Enjeux — uid inconnu « {uid} » ({et['_file']})")
+                continue
+            chip = band_chip(f, by_uid) if f.get("categorie") != "modele" else ""
+            items.append(f'<li><a href="{up}{pre}/{e(uid)}.html">{e(clean(f.get("nom", uid)))}'
+                         f'</a> {chip}</li>')
+        if items:
+            blocks.append(f'<div class="enj-corpus-grp"><h3>{lab}</h3><ul>{"".join(items)}</ul></div>')
+    extra = []
+    for slug in cm.get("dossiers") or []:
+        dp = DOSSIERS_DIR / f"{slug}.md"
+        if dp.exists():
+            dm, _ = _parse_md_frontmatter(dp.read_text(encoding="utf-8"))
+            extra.append(f'<li><a href="{up}dossiers/{e(slug)}.html">Dossier — '
+                         f'{e(clean(dm.get("titre", slug)))}</a></li>')
+    for slug in cm.get("revues") or []:
+        rp = REVUES_DIR / slug / "index.md"
+        if rp.exists():
+            rm, _ = _parse_md_frontmatter(rp.read_text(encoding="utf-8"))
+            extra.append(f'<li><a href="{up}revues/{e(slug)}/index.html">'
+                         f'{e(clean(rm.get("titre", slug)))}</a></li>')
+    if extra:
+        blocks.append(f'<div class="enj-corpus-grp"><h3>À lire aussi</h3><ul>{"".join(extra)}</ul></div>')
+    if not blocks:
+        return ""
+    return ('<section class="enj-corpus"><h2>Dans l\'annuaire</h2>'
+            '<p class="enj-small">Les montages et les lieux du corpus mobilisés par '
+            'cette étude, avec leur palier de libération.</p>'
+            f'<div class="enj-corpus-grid">{"".join(blocks)}</div></section>')
+
+
+def _enj_sources_html(et):
+    srcs = et["meta"].get("sources") or []
+    by_t = {}
+    for s in srcs:
+        if not isinstance(s, dict):
+            continue
+        by_t.setdefault(s.get("type", "officielle"), []).append(s)
+    blocks = []
+    for t, lab in ENJ_SOURCE_TYPES:
+        lst = by_t.get(t)
+        if not lst:
+            continue
+        lis = []
+        for s in lst:
+            aut = clean(s.get("auteur", ""))
+            tit = clean(s.get("titre", ""))
+            an = s.get("annee", "")
+            url = s.get("url")
+            t_html = (f'<a href="{e(url)}" rel="noopener">{e(tit)}</a>' if url else e(tit))
+            lis.append(f'<li>{e(aut)}{", " if aut else ""}{t_html}'
+                       f'{(" (" + e(an) + ")") if an else ""}</li>')
+        blocks.append(f'<h3>{e(lab)}</h3><ul class="enj-src-list">{"".join(lis)}</ul>')
+    ouv = et["meta"].get("ouvrages") or []
+    if ouv:
+        lis = "".join(
+            f'<li>{e(clean(o.get("auteur", "")))}, <cite>{e(clean(o.get("titre", "")))}</cite>'
+            f'{(", " + e(clean(o.get("editeur", "")))) if o.get("editeur") else ""}'
+            f'{(", " + e(o.get("annee"))) if o.get("annee") else ""}'
+            f'{(" — " + e(clean(o.get("note", "")))) if o.get("note") else ""}</li>'
+            for o in ouv if isinstance(o, dict))
+        blocks.append(f'<h3>Pour aller plus loin</h3><ul class="enj-src-list">{lis}</ul>')
+    if not blocks:
+        return ""
+    return ('<section class="enj-sources" id="sources"><h2>Sources</h2>'
+            '<p class="enj-small">Toutes les sources citées dans le texte, '
+            'consultées au 10 octobre 2026. Les associations et ONG françaises '
+            'sont citées comme acteurs, jamais comme sources '
+            '(<a href="../index.html#methode">méthode de la section</a>).</p>'
+            + "".join(blocks) + "</section>")
+
+
+def render_enjeu(et, etudes, cfg, by_uid):
+    project = cfg["concepts"]["project"]
+    m = et["meta"]
+    n = int(m.get("numero") or 0)
+    fam_num, fam_lab = ENJ_FAM.get(m.get("famille"), ("", ""))
+    titre = clean(m.get("titre", ""))
+    sous = clean(m.get("sous_titre", ""))
+    chap = clean(m.get("chapeau", ""))
+    body_html, nfig = _enj_postprocess(_enj_md(et["body_md"]), et)
+
+    # sommaire depuis les h2
+    h2s = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', body_html)
+    toc = "".join(f'<li><a href="#{i}">{t}</a></li>' for i, t in h2s)
+
+    en_bref = "".join(f"<li>{e(clean(x))}</li>" for x in (m.get("en_bref") or []))
+    cles = []
+    for c in m.get("chiffres_cles") or []:
+        if not isinstance(c, dict):
+            continue
+        src = clean(c.get("source", ""))
+        src_html = (f'<a href="{e(c["url"])}" rel="noopener">{e(src)}</a>'
+                    if c.get("url") else e(src))
+        cles.append(f'<div class="enj-cle"><span class="enj-cle-v">{e(clean(str(c.get("valeur", ""))))}</span>'
+                    f'<span class="enj-cle-l">{e(clean(c.get("libelle", "")))}</span>'
+                    f'<span class="enj-cle-s">{src_html}</span></div>')
+
+    concepts = m.get("concepts") or []
+    concepts_html = ""
+    if concepts:
+        lis = "".join(
+            f'<li><a href="../../glossaire.html#g-{slugify(c.get("terme", ""))}">'
+            f'{e(clean(c.get("terme", "")))}</a></li>'
+            for c in concepts if isinstance(c, dict) and c.get("terme"))
+        concepts_html = (f'<div class="article-relations"><h4>Les mots de cette étude'
+                         f'</h4><ul>{lis}</ul></div>')
+
+    liees = []
+    by_url = {x["url"]: x for x in etudes}
+    for u in m.get("liees") or []:
+        x = by_url.get(str(u))
+        if x:
+            liees.append(f'<li><a href="../{e(x["url"])}/index.html"><span class="enj-num">'
+                         f'E{int(x["meta"].get("numero") or 0):02d}</span> '
+                         f'{e(clean(x["meta"].get("titre", "")))}</a></li>')
+    liees_html = (f'<div class="article-relations"><h4>Études liées</h4>'
+                  f'<ul>{"".join(liees)}</ul></div>' if liees else "")
+
+    outils = "".join(
+        f'<li title="{e(ENJ_OUTIL[o][1])}">{e(ENJ_OUTIL[o][0])}</li>'
+        for o in (m.get("outils") or []) if o in ENJ_OUTIL)
+    outils_html = (f'<div class="article-relations enj-outils-rel"><h4>Outils de libération '
+                   f'qui répondent</h4><ul>{outils}</ul></div>' if outils else "")
+
+    retours = m.get("retours_terrain") or []
+    if retours:
+        rt = "".join(f"<li>{e(clean(str(r.get('date', ''))))} — {e(clean(r.get('note', '')))}</li>"
+                     if isinstance(r, dict) else f"<li>{e(clean(str(r)))}</li>" for r in retours)
+        retours_html = f"<ul>{rt}</ul>"
+    else:
+        retours_html = ("<p>Aucun retour de terrain n'est encore intégré : cette étude "
+                        "est une analyse documentaire. Vous agissez sur ce terrain — "
+                        "collectif, cédant·e, élu·e, chercheur·e — et vous la "
+                        "contredisez ou la complétez ? <a href=\"../../suggerer.html\">"
+                        "Écrivez-nous</a> : chaque retour intégré est daté ici.</p>")
+
+    cl = []
+    for entry in m.get("changelog") or []:
+        if isinstance(entry, dict):
+            cl.append(f'<li><span class="ch-date">{e(_date_fr(entry.get("date")))}</span>'
+                      f'<span class="ch-version">v{e(entry.get("version", ""))}</span>'
+                      f'<span>{e(clean(entry.get("note", "")))}</span></li>')
+
+    # précédente / suivante
+    idx = next((i for i, x in enumerate(etudes) if x is et), 0)
+    prev_ = etudes[idx - 1] if idx > 0 else None
+    next_ = etudes[idx + 1] if idx + 1 < len(etudes) else None
+    pn = []
+    if prev_:
+        pn.append(f'<a class="enj-prev" href="../{e(prev_["url"])}/index.html">← '
+                  f'E{int(prev_["meta"]["numero"]):02d} {e(clean(prev_["meta"].get("titre", "")))}</a>')
+    if next_:
+        pn.append(f'<a class="enj-next" href="../{e(next_["url"])}/index.html">'
+                  f'E{int(next_["meta"]["numero"]):02d} {e(clean(next_["meta"].get("titre", "")))} →</a>')
+
+    au = _date_fr(m.get("au"))
+    version = m.get("version", 1)
+    meta_line = ('<span class="sep">·</span>'.join([
+        'par <strong>actitude.org</strong>',
+        f'données au <strong>{e(au)}</strong>' if au else "",
+        _statut_chip(m.get("statut", "vivant")),
+        f'version <strong>{e(version)}</strong>',
+        'analyse documentaire',
+    ]).replace('<span class="sep">·</span><span class="sep">·</span>', '<span class="sep">·</span>'))
+
+    body = f"""<article class="enj-etude">
+<header class="article-head enj-head">
+  <p class="article-kicker"><a href="../index.html">Enjeux</a> · {e(fam_num)}. {e(fam_lab)} · <span class="enj-num">E{n:02d}</span></p>
+  <h1>{e(titre)}</h1>
+  {f'<p class="article-soustitre">{e(sous)}</p>' if sous else ""}
+  <p class="article-meta">{meta_line}</p>
+</header>
+
+{f'<p class="enj-chapeau">{e(chap)}</p>' if chap else ""}
+
+<div class="enj-intro">
+  {f'<aside class="enj-bref" aria-label="En bref"><h2>En bref</h2><ul>{en_bref}</ul></aside>' if en_bref else ""}
+  {f'<div class="enj-cles" role="list" aria-label="Chiffres clés">{"".join(cles)}</div>' if cles else ""}
+</div>
+
+{f'<nav class="enj-toc" aria-label="Sommaire"><h2>Sommaire</h2><ol>{toc}<li><a href="#sources">Sources</a></li></ol></nav>' if toc else ""}
+
+<div class="article-prose enj-prose">
+{body_html}
+</div>
+
+{_enj_corpus_html(et, by_uid)}
+{outils_html}
+{liees_html}
+{concepts_html}
+{_enj_sources_html(et)}
+
+<section class="enj-retours"><h2>Retours de terrain</h2>{retours_html}</section>
+
+<section class="article-changelog"><h2>Journal des modifications</h2><ol>{"".join(cl)}</ol></section>
+
+<p class="enj-mention">Information juridique générale, pas un conseil : tout montage
+réel se construit avec un·e notaire et un·e avocat·e. actitude.org n'a aucun lien
+financier avec les entités notées dans l'annuaire. Texte sous licence Peer Production
+License, comme le reste du site.</p>
+
+<nav class="enj-pn" aria-label="Études précédente et suivante">{"".join(pn)}</nav>
+</article>"""
+
+    ld = {
+        "@context": "https://schema.org", "@type": "Report",
+        "headline": titre, "alternativeHeadline": sous,
+        "author": {"@type": "Organization", "name": "actitude.org"},
+        "datePublished": str(m.get("created", "")),
+        "dateModified": str(m.get("updated", "")),
+        "inLanguage": "fr", "isPartOf": canonical_url("enjeux/index.html"),
+        "url": canonical_url(f"enjeux/{et['url']}/index.html"),
+        "citation": [s.get("url") for s in (m.get("sources") or [])
+                     if isinstance(s, dict) and s.get("url")][:60],
+    }
+    return page(f"E{n:02d} — {titre}", body, "enjeux/index.html", depth=2,
+                project=project, description=meta_desc(chap or sous or titre),
+                path=f"enjeux/{et['url']}/index.html", jsonld=[ld],
+                og_type="article", extra_css=["style-revue.css"])
+
+
+def render_enjeux_index(etudes, cfg):
+    project = cfg["concepts"]["project"]
+    man_meta, man_md = {}, ""
+    mpath = ENJEUX_DIR / "index.md"
+    if mpath.exists():
+        man_meta, man_md = _parse_md_frontmatter(mpath.read_text(encoding="utf-8"))
+    intro_html = _enj_md(man_md)
+    intro_html = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" rel="noopener"', intro_html)
+
+    # matrice : études × outils
+    head = "".join(f'<th scope="col" class="enj-mx-o"><span title="{e(d)}">{e(l)}</span></th>'
+                   for _, l, d in ENJ_OUTILS)
+    rows = []
+    for fam, fnum, flab in ENJ_FAMILLES:
+        lot = [x for x in etudes if x["meta"].get("famille") == fam]
+        if not lot:
+            continue
+        rows.append(f'<tr class="enj-mx-fam"><th scope="rowgroup" colspan="{len(ENJ_OUTILS) + 1}">'
+                    f'{e(fnum)}. {e(flab)}</th></tr>')
+        for x in lot:
+            o = set(x["meta"].get("outils") or [])
+            n = int(x["meta"].get("numero") or 0)
+            cells = "".join(
+                f'<td class="{"on" if k in o else ""}">'
+                f'{"<span aria-label=\"oui\">●</span>" if k in o else ""}</td>'
+                for k, _, _ in ENJ_OUTILS)
+            rows.append(f'<tr><th scope="row"><a href="{e(x["url"])}/index.html">'
+                        f'<span class="enj-num">E{n:02d}</span> '
+                        f'{e(clean(x["meta"].get("titre", "")))}</a></th>{cells}</tr>')
+    matrice = (f'<div class="table-scroll enj-mx-wrap" tabindex="0" role="region" '
+               f'aria-label="Matrice : études et outils de libération">'
+               f'<table class="enj-mx"><thead><tr><th scope="col">Étude</th>{head}</tr>'
+               f'</thead><tbody>{"".join(rows)}</tbody></table></div>')
+
+    # matrice des dimensions (repliée)
+    dh = "".join(f'<th scope="col" title="{e(d)}">{e(i)}</th>' for i, _, d in ENJ_DIMENSIONS)
+    drows = []
+    for x in etudes:
+        dec = set((x["meta"].get("dimensions") or {}).get("decisives") or [])
+        n = int(x["meta"].get("numero") or 0)
+        drows.append(f'<tr><th scope="row"><a href="{e(x["url"])}/index.html">E{n:02d}</a></th>'
+                     + "".join(f'<td class="{"on" if i in dec else ""}">{"●" if i in dec else "○"}</td>'
+                               for i, _, _ in ENJ_DIMENSIONS) + "</tr>")
+    dleg = "".join(f"<li><strong>{e(i)}</strong> {e(l)} — {e(d)}</li>" for i, l, d in ENJ_DIMENSIONS)
+    dims = (f'<details class="enj-dims"><summary>La matrice des dimensions : ce que '
+            f'chaque étude traite (● décisif, ○ présent)</summary>'
+            f'<ul class="enj-dims-leg">{dleg}</ul>'
+            f'<div class="table-scroll" tabindex="0" role="region" aria-label="Matrice des '
+            f'dimensions"><table class="enj-mx enj-mx-d"><thead><tr><th scope="col">Étude</th>{dh}</tr>'
+            f'</thead><tbody>{"".join(drows)}</tbody></table></div></details>')
+
+    # cartes par famille
+    fams = []
+    for fam, fnum, flab in ENJ_FAMILLES:
+        lot = [x for x in etudes if x["meta"].get("famille") == fam]
+        if not lot:
+            continue
+        cards = []
+        for x in lot:
+            mm = x["meta"]
+            n = int(mm.get("numero") or 0)
+            c0 = (mm.get("chiffres_cles") or [{}])[0] if mm.get("chiffres_cles") else {}
+            cle = (f'<p class="enj-card-cle"><strong>{e(clean(str(c0.get("valeur", ""))))}</strong> '
+                   f'{e(clean(c0.get("libelle", "")))}</p>' if c0 else "")
+            cards.append(f"""<a class="revue-card enj-card" href="{e(x['url'])}/index.html">
+  <span class="enj-num">E{n:02d}</span>
+  <h3>{e(clean(mm.get("titre", "")))}</h3>
+  <p class="revue-card-sous">{e(clean(mm.get("sous_titre", "")))}</p>
+  {cle}
+</a>""")
+        fams.append(f'<section class="enj-fam" id="famille-{e(fam)}"><h2 class="sec">'
+                    f'{e(fnum)}. {e(flab)}</h2><div class="revues-grid enj-grid">'
+                    f'{"".join(cards)}</div></section>')
+
+    n_src = len({s.get("url") for x in etudes for s in (x["meta"].get("sources") or [])
+                 if isinstance(s, dict) and s.get("url")})
+    n_fig = sum(len(x["meta"].get("figures") or []) for x in etudes)
+    body = f"""<div class="enjeux-index">
+<section class="revue-hero enj-hero">
+  <p class="hero-kicker">Analyses stratégiques · par actitude.org</p>
+  <h1>Enjeux</h1>
+  <p class="revue-soustitre">Pourquoi libérer la terre ? {len(etudes)} mécanismes qui
+  la retirent à celles et ceux qui la travaillent et au vivant — sourcés, chiffrés,
+  et rapportés aux montages qui y répondent.</p>
+  <p class="revue-meta">{len(etudes)} études · {n_fig} figures · {n_src} sources ·
+  données au <strong>10 octobre 2026</strong> · {_statut_chip("vivant")}</p>
+</section>
+
+<div class="revue-prose enj-manifeste">{intro_html}</div>
+
+<section id="matrice">
+  <h2 class="sec">La matrice : chaque mécanisme, ses réponses</h2>
+  <p class="lead">En ligne, les {len(etudes)} études ; en colonne, les outils de
+  libération que chacune mobilise. Une colonne pleine dit un outil polyvalent ; une
+  ligne vide dirait un mécanisme sans réponse.</p>
+  {matrice}
+  {dims}
+</section>
+
+{"".join(fams)}
+
+<section class="enj-pied">
+  <h2 class="sec">Sources, auteurs et ouvrages</h2>
+  <p class="prose">Les {n_src} sources citées par les études, classées par nature,
+  et les ouvrages de fond : <a href="sources.html">la bibliographie de la section →</a></p>
+  <p class="enj-mention">actitude.org n'a aucun lien financier avec les entités notées
+  dans l'annuaire. Les études sont de l'information générale, pas un conseil juridique,
+  fiscal ou financier ; elles ne renvoient jamais vers une page de souscription.</p>
+</section>
+</div>"""
+    return page("Enjeux — analyses stratégiques", body, "enjeux/index.html", depth=1,
+                project=project,
+                description=("Pourquoi libérer la terre ? Analyses stratégiques "
+                             "sourcées : transmission des fermes, financiarisation, "
+                             "prix, artificialisation, énergie, eau, sols, forêt, "
+                             "outre-mer — et les montages qui y répondent."),
+                path="enjeux/index.html", extra_css=["style-revue.css"])
+
+
+def render_enjeux_sources(etudes, cfg):
+    """Bibliographie de la section — agrégée depuis le front-matter des études
+    (source unique), avec rétro-liens vers les études qui citent."""
+    project = cfg["concepts"]["project"]
+    agg = {}
+    for x in etudes:
+        n = int(x["meta"].get("numero") or 0)
+        for s in x["meta"].get("sources") or []:
+            if not isinstance(s, dict):
+                continue
+            key = (s.get("url") or clean(s.get("titre", ""))).strip()
+            if not key:
+                continue
+            ent = agg.setdefault(key, {"s": s, "et": []})
+            if (n, x["url"]) not in ent["et"]:
+                ent["et"].append((n, x["url"]))
+    by_t = {}
+    for ent in agg.values():
+        by_t.setdefault(ent["s"].get("type", "officielle"), []).append(ent)
+    blocks = []
+    for t, lab in ENJ_SOURCE_TYPES:
+        lst = sorted(by_t.get(t, []), key=lambda en: (clean(en["s"].get("auteur", "")).lower(),
+                                                      clean(en["s"].get("titre", "")).lower()))
+        if not lst:
+            continue
+        lis = []
+        for en in lst:
+            s = en["s"]
+            url = s.get("url")
+            tit = clean(s.get("titre", ""))
+            t_html = f'<a href="{e(url)}" rel="noopener">{e(tit)}</a>' if url else e(tit)
+            refs = " ".join(f'<a class="enj-num" href="{e(u)}/index.html">E{n:02d}</a>'
+                            for n, u in sorted(en["et"]))
+            aut = clean(s.get("auteur", ""))
+            lis.append(f'<li>{e(aut)}{", " if aut else ""}{t_html}'
+                       f'{(" (" + e(s.get("annee")) + ")") if s.get("annee") else ""} '
+                       f'<span class="enj-src-refs">{refs}</span></li>')
+        blocks.append(f'<h2 class="sec" id="t-{e(t)}">{e(lab)} <span class="enj-count">'
+                      f'{len(lst)}</span></h2><ul class="enj-src-list">{"".join(lis)}</ul>')
+    # ouvrages
+    ouv = {}
+    for x in etudes:
+        n = int(x["meta"].get("numero") or 0)
+        for o in x["meta"].get("ouvrages") or []:
+            if not isinstance(o, dict):
+                continue
+            k = (clean(o.get("auteur", "")).lower(), clean(o.get("titre", "")).lower())
+            ent = ouv.setdefault(k, {"o": o, "et": []})
+            if (n, x["url"]) not in ent["et"]:
+                ent["et"].append((n, x["url"]))
+    if ouv:
+        lis = []
+        for k in sorted(ouv):
+            o, ets = ouv[k]["o"], ouv[k]["et"]
+            refs = " ".join(f'<a class="enj-num" href="{e(u)}/index.html">E{n:02d}</a>'
+                            for n, u in sorted(ets))
+            lis.append(f'<li>{e(clean(o.get("auteur", "")))}, <cite>{e(clean(o.get("titre", "")))}</cite>'
+                       f'{(", " + e(clean(o.get("editeur", "")))) if o.get("editeur") else ""}'
+                       f'{(", " + e(o.get("annee"))) if o.get("annee") else ""} '
+                       f'<span class="enj-src-refs">{refs}</span></li>')
+        blocks.insert(0, f'<h2 class="sec" id="ouvrages">Ouvrages de fond <span class="enj-count">'
+                         f'{len(ouv)}</span></h2><ul class="enj-src-list">{"".join(lis)}</ul>')
+    toc = " · ".join(f'<a href="#t-{e(t)}">{e(lab.split(" (")[0])}</a>'
+                     for t, lab in ENJ_SOURCE_TYPES if by_t.get(t))
+    body = f"""<section class="revue-hero">
+  <p class="hero-kicker"><a href="index.html">Enjeux</a></p>
+  <h1>Sources et auteurs</h1>
+  <p class="revue-soustitre">Ce sur quoi reposent les études : {len(agg)} sources
+  et {len(ouv)} ouvrages, consultés au 10 octobre 2026.</p>
+</section>
+<div class="revue-prose">
+<p>Les études ne reposent que sur des sources officielles, des centres de
+recherche, des publications académiques et la presse d'enquête. Les opérateurs du
+système (SAFER, chambres d'agriculture) sont cités pour leurs données, signalées
+comme telles. Les associations et ONG françaises sont nommées comme actrices, pas
+comme sources. Chaque entrée renvoie aux études qui la citent.</p>
+<p class="enj-small"><a href="#ouvrages">Ouvrages</a> · {toc}</p>
+{"".join(blocks)}
+</div>"""
+    return page("Sources et auteurs — Enjeux", body, "enjeux/index.html", depth=1,
+                project=project,
+                description="Bibliographie des analyses stratégiques Enjeux : "
+                            "sources officielles, recherche, ouvrages de fond.",
+                path="enjeux/sources.html", extra_css=["style-revue.css"])
+
+
+def verifier_enjeux(etudes, by_uid):
+    """Garde-fou de la section Enjeux — avertit sans bloquer : date `au`,
+    uids du corpus, figures déclarées / insérées / présentes, domaines exclus,
+    mentions « à vérifier » résiduelles, sections obligatoires."""
+    avert = []
+    obligatoires = ["Le constat", "Le mécanisme", "Ce que dit le droit",
+                    "L'histoire longue", "Ce qu'on sait, ce qu'on estime, ce qui se discute",
+                    "Ce que la libération change", "Leviers", "Question ouverte"]
+    for x in etudes:
+        m, f = x["meta"], x["_file"]
+        if not m.get("au"):
+            avert.append(f"{f} : date `au` absente")
+        for key in ("lieux", "porteurs", "usufruitiers", "modeles", "reseaux"):
+            for uid in (m.get("corpus") or {}).get(key) or []:
+                if str(uid) not in by_uid:
+                    avert.append(f"{f} : uid inconnu « {uid} » ({key})")
+        declared = {str(fg.get("id")) for fg in m.get("figures") or []}
+        used = set(re.findall(r"\[\[figure:([^\]]+)\]\]", x["body_md"]))
+        for i in declared - used:
+            avert.append(f"{f} : figure déclarée non insérée « {i} »")
+        for i in used - declared:
+            avert.append(f"{f} : marqueur sans figure « {i} »")
+        for fg in m.get("figures") or []:
+            if not (ENJEUX_DIR / str(fg.get("fichier", ""))).exists():
+                avert.append(f"{f} : fichier de figure absent {fg.get('fichier')}")
+            if not fg.get("source") and fg.get("type") != "schema":
+                avert.append(f"{f} : figure sans source « {fg.get('id')} »")
+        urls = re.findall(r"\((https?://[^)\s]+)\)", x["body_md"])
+        urls += [s.get("url", "") for s in m.get("sources") or [] if isinstance(s, dict)]
+        for u in urls:
+            if any(d in (u or "") for d in ENJ_DOMAINES_EXCLUS):
+                avert.append(f"{f} : domaine exclu cité {u}")
+        if re.search(r"à vérifier", x["body_md"], flags=re.I):
+            avert.append(f"{f} : mention « à vérifier » résiduelle")
+        heads = re.findall(r"^## (.+?)\s*$", x["body_md"], flags=re.M)
+        for h in obligatoires:
+            if h not in heads:
+                avert.append(f"{f} : section manquante « {h} »")
+        body_urls = set(re.findall(r"\]\((https?://[^)\s]+)\)", x["body_md"]))
+        src_urls = {s.get("url") for s in m.get("sources") or [] if isinstance(s, dict)}
+        for u in sorted(body_urls - src_urls):
+            avert.append(f"{f} : URL du texte absente de `sources:` {u}")
+    if avert:
+        print(f"Contrôle des enjeux : {len(avert)} signalement·s —")
+        for a in avert:
+            print(f"  {a}")
+    else:
+        print(f"Contrôle des enjeux : {len(etudes)} étude(s), aucune anomalie.")
+    return avert
+
+
+def build_enjeux(etudes, cfg, by_uid):
+    """Écrit la section Enjeux ; renvoie les chemins pour le sitemap."""
+    paths = []
+    if not etudes:
+        return paths
+    write(SITE / "enjeux" / "index.html", render_enjeux_index(etudes, cfg))
+    paths.append(("enjeux/index.html", "0.8"))
+    for et in etudes:
+        write(SITE / "enjeux" / et["url"] / "index.html",
+              render_enjeu(et, etudes, cfg, by_uid))
+        paths.append((f"enjeux/{et['url']}/index.html", "0.7"))
+    write(SITE / "enjeux" / "sources.html", render_enjeux_sources(etudes, cfg))
+    paths.append(("enjeux/sources.html", "0.5"))
+    dd = ENJEUX_DIR / "donnees"
+    if dd.exists():
+        for p in dd.glob("*.csv"):
+            (SITE / "enjeux" / "donnees").mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(p, SITE / "enjeux" / "donnees" / p.name)
+    print(f"Enjeux : {len(etudes)} étude(s) générée(s).")
+    return paths
+
+
+CSS_ENJEUX = """
+/* ── Enjeux — analyses stratégiques (session #12) ── */
+main.wrap:has(.enj-etude){max-width:48rem;}
+main.wrap:has(.enjeux-index){max-width:1080px;}
+.enjeux-index .revue-hero .revue-soustitre{max-width:60ch;}
+.enjeux-index .enj-manifeste,.enjeux-index .revue-prose{max-width:46rem;}
+.enjeux-index .revue-hero h1{max-width:none;}
+.enj-num{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;font-size:.78em;
+ font-weight:700;letter-spacing:.04em;color:var(--terra-dk);}
+a .enj-num{text-decoration:none;}
+.enj-small{font-family:-apple-system,system-ui,sans-serif;font-size:.86rem;color:var(--faint);}
+.enj-chapeau{font-size:1.22rem;line-height:1.55;border-left:3px solid var(--terra-dk);
+ padding-left:1rem;margin:1.2rem 0;font-weight:500;}
+.enj-intro{display:grid;gap:1rem;margin:1.4rem 0;}
+.enj-bref{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+ padding:.9rem 1.2rem;}
+.enj-bref h2{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;
+ text-transform:uppercase;letter-spacing:.1em;color:var(--terra-dk);margin:0 0 .4rem;}
+.enj-bref ul{margin:0;padding-left:1.2rem;}
+.enj-bref li{margin:.3rem 0;line-height:1.5;}
+.enj-cles{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));}
+.enj-cle{background:var(--beige);border-radius:var(--radius);padding:.75rem .9rem;
+ display:flex;flex-direction:column;gap:.2rem;}
+.enj-cle-v{font-size:1.7rem;font-weight:700;line-height:1.1;color:var(--ink);}
+.enj-cle-l{font-size:.95rem;line-height:1.35;color:var(--ink);}
+.enj-cle-s{font-family:-apple-system,system-ui,sans-serif;font-size:.74rem;color:var(--faint);}
+.enj-cle-s a{color:var(--faint);}
+.enj-toc{font-family:-apple-system,system-ui,sans-serif;font-size:.9rem;margin:1.2rem 0 .4rem;
+ padding:.7rem 1rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.enj-toc h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin:0 0 .3rem;}
+.enj-toc ol{margin:0;padding-left:1.2rem;columns:2;column-gap:2rem;}
+.enj-toc li{margin:.15rem 0;break-inside:avoid;}
+.enj-prose h2{scroll-margin-top:1rem;}
+.enj-fig{margin:1.8rem 0;padding:0;}
+.enj-fig-cap{display:flex;flex-direction:column;gap:.15rem;margin-bottom:.5rem;}
+.enj-fig-num{font-family:-apple-system,system-ui,sans-serif;font-size:.74rem;
+ text-transform:uppercase;letter-spacing:.1em;color:var(--terra-dk);font-weight:700;}
+.enj-fig-titre{font-size:1.08rem;font-weight:600;line-height:1.35;}
+.enj-fig-visual{overflow-x:auto;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius);padding:.4rem;}
+.enj-fig-visual svg{display:block;width:100%;min-width:520px;height:auto;}
+.enj-fig-source{font-family:-apple-system,system-ui,sans-serif;font-size:.78rem;
+ color:var(--faint);margin:.4rem 0 0!important;}
+.enj-fig-source a{color:var(--faint);}
+.enj-fig-data{font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;margin:.4rem 0;}
+.enj-fig-data summary{cursor:pointer;color:var(--muted);}
+.enj-data{border-collapse:collapse;margin:.4rem 0;font-size:.82rem;}
+.enj-data th,.enj-data td{border-bottom:1px solid var(--line);padding:.2rem .6rem;text-align:right;}
+.enj-data th[scope=row],.enj-data thead th:first-child{text-align:left;}
+.enj-chart text{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;}
+.enj-chart .ch-grid{stroke:var(--line);stroke-width:1;}
+.enj-chart .ch-axis{stroke:var(--muted);stroke-width:1.2;}
+.enj-chart .ch-tick{fill:var(--faint);font-size:12px;}
+.enj-chart .ch-cat{fill:var(--ink);font-size:12.5px;}
+.enj-chart .ch-val{fill:var(--muted);font-size:11.5px;font-weight:600;}
+.enj-chart .ch-leg{fill:var(--ink);font-size:12.5px;}
+.enj-chart .ch-unit{fill:var(--faint);font-size:11.5px;font-style:italic;}
+.enj-schema text{font-family:-apple-system,system-ui,"Segoe UI",sans-serif;}
+.enj-schema .s-box{fill:var(--card);stroke:var(--muted);stroke-width:1.3;}
+.enj-schema .s-acc{fill:#f6e3d9;stroke:var(--terra-dk);stroke-width:1.5;}
+.enj-schema .s-ok{fill:#e7f0dc;stroke:var(--green-dk);stroke-width:1.5;}
+.enj-schema .s-blue{fill:#dfe9ee;stroke:var(--blue-dk);stroke-width:1.5;}
+.enj-schema .s-txt{fill:var(--ink);font-size:13.5px;}
+.enj-schema .s-mut{fill:var(--muted);font-size:12.5px;}
+.enj-schema .s-line{stroke:var(--muted);stroke-width:1.4;fill:none;}
+.enj-schema .s-arrow{stroke:var(--ink);stroke-width:1.6;fill:none;}
+.enj-schema .s-arrowhead{fill:var(--ink);stroke:none;}
+.enj-tort{background:#eef3f6;border-left:3px solid var(--blue);padding:.2rem 1rem .4rem;
+ border-radius:0 var(--radius) var(--radius) 0;margin:1.2rem 0;}
+.enj-leviers{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:1rem 0;}
+.enj-levier{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--green);
+ border-radius:var(--radius);padding:.2rem 1rem .6rem;font-size:.98rem;}
+.enj-levier h3{font-size:1.02rem!important;margin:.7rem 0 .3rem!important;color:var(--green-dk)!important;}
+.enj-levier ul{padding-left:1.1rem;}
+.enj-corpus{margin:2.2rem 0 1rem;border-top:1px solid var(--line);padding-top:1rem;}
+.enj-corpus h2,.enj-sources h2,.enj-retours h2{font-size:1.35rem;margin:.4rem 0 .4rem;}
+.enj-corpus-grid{display:grid;gap:.6rem 1.4rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.enj-corpus-grp h3{font-family:-apple-system,system-ui,sans-serif;font-size:.78rem;
+ text-transform:uppercase;letter-spacing:.08em;color:var(--blue-dk);margin:.6rem 0 .3rem;}
+.enj-corpus-grp ul{list-style:none;padding:0;margin:0;font-size:.95rem;}
+.enj-corpus-grp li{margin:.25rem 0;}
+.enj-outils-rel{border-left-color:var(--green);}
+.enj-outils-rel h4{color:var(--green-dk)!important;}
+.enj-sources{margin:2rem 0 1rem;}
+.enj-sources h3{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;
+ text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:1rem 0 .3rem;}
+.enj-src-list{font-size:.88rem;line-height:1.5;padding-left:1.1rem;}
+.enj-src-list li{margin:.25rem 0;}
+.enj-src-refs .enj-num{margin-left:.25rem;font-size:.72rem;}
+.enj-count{font-size:.8rem;color:var(--faint);font-weight:400;}
+.enj-retours{margin:1.6rem 0;padding:.6rem 1.1rem;background:var(--beige);border-radius:var(--radius);}
+.enj-retours h2{font-size:1.05rem!important;}
+.enj-mention{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;color:var(--faint);
+ margin:1.4rem 0;line-height:1.5;}
+.enj-pn{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:1.6rem 0 2rem;
+ font-family:-apple-system,system-ui,sans-serif;font-size:.88rem;}
+.enj-pn .enj-next{margin-left:auto;text-align:right;}
+.enj-manifeste{max-width:46rem;}
+.enj-mx-wrap{margin:1rem 0;}
+.enj-mx{border-collapse:collapse;font-family:-apple-system,system-ui,sans-serif;font-size:.82rem;min-width:860px;}
+.enj-mx th,.enj-mx td{border-bottom:1px solid var(--line);padding:.35rem .4rem;}
+.enj-mx thead th{vertical-align:bottom;text-align:center;font-weight:600;color:var(--muted);}
+.enj-mx thead th.enj-mx-o span{display:inline-block;max-width:7.5rem;line-height:1.2;}
+.enj-mx tbody th[scope=row]{text-align:left;font-weight:500;min-width:15rem;
+ text-transform:none;letter-spacing:0;font-size:.86rem;}
+.enj-mx thead th{text-transform:none;letter-spacing:0;font-size:.74rem;}
+.enj-mx tbody th a{color:var(--ink);text-decoration:none;}
+.enj-mx tbody th a:hover{color:var(--green-dk);text-decoration:underline;}
+.enj-mx td{text-align:center;color:var(--line);}
+.enj-mx td.on{color:var(--green-dk);background:#eef4e6;font-size:1rem;}
+.enj-mx-fam th{background:var(--beige);text-align:left!important;font-size:.76rem;
+ text-transform:uppercase;letter-spacing:.08em;color:var(--terra-dk)!important;}
+.enj-mx-d{min-width:640px;}
+.enj-mx-d td.on{color:var(--terra-dk);background:#f8ece5;}
+.enj-dims{margin:1rem 0;font-family:-apple-system,system-ui,sans-serif;font-size:.88rem;}
+.enj-dims summary{cursor:pointer;color:var(--muted);font-weight:600;}
+.enj-dims-leg{columns:2;column-gap:2rem;font-size:.82rem;color:var(--muted);padding-left:1rem;}
+.enj-card .enj-num{font-size:.8rem;}
+.enj-card-cle{font-size:.92rem;line-height:1.4;margin:.2rem 0 0;color:var(--muted);}
+.enj-card-cle strong{color:var(--terra-dk);font-size:1.05rem;}
+.enj-fam{margin:2rem 0;}
+.fiche-enjeux .enj-refs{list-style:none;padding:0;margin:.4rem 0;}
+.fiche-enjeux .enj-refs li{margin:.25rem 0;}
+.accueil-enjeux .enj-teaser{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:.8rem 0;}
+.accueil-enjeux .enj-teaser a{display:block;background:var(--card);border:1px solid var(--line);
+ border-radius:var(--radius);padding:.8rem 1rem;color:var(--ink);text-decoration:none;}
+.accueil-enjeux .enj-teaser a:hover{border-color:var(--green);}
+.accueil-enjeux .enj-teaser strong{display:block;font-size:1.05rem;line-height:1.3;margin:.15rem 0;}
+@media (max-width:640px){
+ .enj-toc ol{columns:1;}
+ .enj-dims-leg{columns:1;}
+ .enj-cle-v{font-size:1.45rem;}
+}
+"""
+
+
 def main():
     global BASE_URL
     cfg = load_config()
@@ -6409,7 +7656,7 @@ def main():
                 child.unlink()
     SITE.mkdir(exist_ok=True)
     ASSETS.mkdir(exist_ok=True)
-    write(ASSETS / "style.css", CSS)
+    write(ASSETS / "style.css", CSS + CSS_ENJEUX)
     write(ASSETS / "list.js", LIST_JS)
     # compare.js : on injecte les cinq axes (id, libellé, couleur) lus depuis
     # ranking.yml — aucun axe codé en dur dans le JavaScript.
@@ -6427,6 +7674,9 @@ def main():
     # Dossiers (magazine) — chargés avant les fiches pour le lien retour fiche↔dossier
     dossiers = load_dossiers()
     cfg["_dossier_for"] = dossier_map(dossiers)
+    # Enjeux (session #12) — chargés avant les fiches pour le renvoi inverse
+    etudes = load_enjeux()
+    cfg["_enjeux_for"] = enjeux_map(etudes)
 
     # fiches individuelles
     for f, sc in all_sc:
@@ -6490,6 +7740,10 @@ def main():
                   render_dossier(d, cfg, by_uid, sc_by_uid))
         print(f"Dossiers : {len(dossiers)} dossier(s) généré(s).")
 
+    # Enjeux — analyses stratégiques (session #12)
+    verifier_enjeux(etudes, by_uid)
+    enjeux_paths = build_enjeux(etudes, cfg, by_uid)
+
     # CNAME — domaine personnalisé GitHub Pages
     write(SITE / "CNAME", BASE_URL.split("//")[-1] + "\n")
 
@@ -6518,6 +7772,7 @@ def main():
                 art_slug = _article_url_part(art)
                 sitemap_paths.append(
                     (f"revues/{rslug}/{art_slug}/index.html", "0.5"))
+    sitemap_paths.extend(enjeux_paths)
     write(SITE / "robots.txt", build_robots())
     write(SITE / "sitemap.xml", build_sitemap(sitemap_paths))
 

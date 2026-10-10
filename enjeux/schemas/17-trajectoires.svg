@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="t d">
+  <title id="t">Trois trajectoires : de la lutte au titre juridique</title>
+  <desc id="d">Au Larzac et à Notre-Dame-des-Landes, les recours n'ont pas arrêté les projets : l'abandon est venu d'une décision politique, puis la terre restée publique a reçu un titre d'usage long (bail emphytéotique au Larzac, baux ruraux à clauses environnementales à Notre-Dame-des-Landes). Sur les réserves d'eau des Deux-Sèvres, c'est le juge qui a réduit puis suspendu en partie le projet, mais aucun titre foncier n'en est sorti.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="24" font-size="13">Projet</text>
+  <text class="s-mut" x="198" y="24" font-size="13">Recours, lutte</text>
+  <text class="s-mut" x="376" y="24" font-size="13">Bascule</text>
+  <text class="s-mut" x="554" y="24" font-size="13">Titre obtenu</text>
+
+  <!-- Larzac -->
+  <text class="s-txt" x="20" y="54" font-size="15" font-weight="bold">Larzac</text>
+  <rect class="s-box" x="20" y="64" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="95" y="92" font-size="13" text-anchor="middle">1971 : extension</text>
+  <text class="s-txt" x="95" y="112" font-size="13" text-anchor="middle">du camp militaire</text>
+  <text class="s-mut" x="95" y="140" font-size="13" text-anchor="middle">expropriations</text>
+  <text class="s-mut" x="95" y="158" font-size="13" text-anchor="middle">par l'État</text>
+  <rect class="s-acc" x="198" y="64" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="273" y="92" font-size="13" text-anchor="middle">1971-1981 :</text>
+  <text class="s-txt" x="273" y="112" font-size="13" text-anchor="middle">dix ans de lutte</text>
+  <text class="s-mut" x="273" y="140" font-size="13" text-anchor="middle">cessibilité</text>
+  <text class="s-mut" x="273" y="158" font-size="13" text-anchor="middle">(Sénat, janv. 1979)</text>
+  <rect class="s-blue" x="376" y="64" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="451" y="92" font-size="13" text-anchor="middle">1981 : abandon</text>
+  <text class="s-txt" x="451" y="112" font-size="13" text-anchor="middle">décision politique</text>
+  <text class="s-mut" x="451" y="140" font-size="13" text-anchor="middle">les terres restent</text>
+  <text class="s-mut" x="451" y="158" font-size="13" text-anchor="middle">à l'État</text>
+  <rect class="s-ok" x="554" y="64" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="629" y="92" font-size="13" text-anchor="middle">1985 : SCTL,</text>
+  <text class="s-txt" x="629" y="112" font-size="13" text-anchor="middle">bail emphytéotique</text>
+  <text class="s-mut" x="629" y="140" font-size="13" text-anchor="middle">prolongé en 2013</text>
+  <text class="s-mut" x="629" y="158" font-size="13" text-anchor="middle">jusqu'en 2083</text>
+  <line class="s-arrow" x1="171" y1="116" x2="196" y2="116" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="349" y1="116" x2="374" y2="116" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="527" y1="116" x2="552" y2="116" marker-end="url(#ah)"/>
+
+  <!-- NDDL -->
+  <text class="s-txt" x="20" y="218" font-size="15" font-weight="bold">Notre-Dame-des-Landes</text>
+  <rect class="s-box" x="20" y="228" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="95" y="256" font-size="13" text-anchor="middle">2008 : utilité</text>
+  <text class="s-txt" x="95" y="276" font-size="13" text-anchor="middle">publique déclarée</text>
+  <text class="s-mut" x="95" y="304" font-size="13" text-anchor="middle">site de</text>
+  <text class="s-mut" x="95" y="322" font-size="13" text-anchor="middle">1 425 hectares</text>
+  <rect class="s-acc" x="198" y="228" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="273" y="256" font-size="13" text-anchor="middle">2012-2016 :</text>
+  <text class="s-txt" x="273" y="276" font-size="13" text-anchor="middle">recours rejetés</text>
+  <text class="s-mut" x="273" y="304" font-size="13" text-anchor="middle">Conseil d'État,</text>
+  <text class="s-mut" x="273" y="322" font-size="13" text-anchor="middle">cour de Nantes</text>
+  <rect class="s-blue" x="376" y="228" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="451" y="256" font-size="13" text-anchor="middle">17 janvier 2018 :</text>
+  <text class="s-txt" x="451" y="276" font-size="13" text-anchor="middle">abandon</text>
+  <text class="s-mut" x="451" y="304" font-size="13" text-anchor="middle">après une</text>
+  <text class="s-mut" x="451" y="322" font-size="13" text-anchor="middle">médiation</text>
+  <rect class="s-ok" x="554" y="228" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="629" y="256" font-size="13" text-anchor="middle">2019 : 895 ha</text>
+  <text class="s-txt" x="629" y="276" font-size="13" text-anchor="middle">au Département</text>
+  <text class="s-mut" x="629" y="304" font-size="13" text-anchor="middle">24 baux ruraux,</text>
+  <text class="s-mut" x="629" y="322" font-size="13" text-anchor="middle">fonds de dotation</text>
+  <line class="s-arrow" x1="171" y1="280" x2="196" y2="280" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="349" y1="280" x2="374" y2="280" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="527" y1="280" x2="552" y2="280" marker-end="url(#ah)"/>
+
+  <!-- Eau -->
+  <text class="s-txt" x="20" y="382" font-size="15" font-weight="bold">Réserves d'eau des Deux-Sèvres</text>
+  <rect class="s-box" x="20" y="392" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="95" y="420" font-size="13" text-anchor="middle">2017 : arrêté</text>
+  <text class="s-txt" x="95" y="440" font-size="13" text-anchor="middle">19 réserves</text>
+  <text class="s-mut" x="95" y="468" font-size="13" text-anchor="middle">8,6 millions</text>
+  <text class="s-mut" x="95" y="486" font-size="13" text-anchor="middle">de m³</text>
+  <rect class="s-acc" x="198" y="392" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="273" y="420" font-size="13" text-anchor="middle">2021-2024 :</text>
+  <text class="s-txt" x="273" y="440" font-size="13" text-anchor="middle">tribunal, cour</text>
+  <text class="s-mut" x="273" y="468" font-size="13" text-anchor="middle">Sainte-Soline,</text>
+  <text class="s-mut" x="273" y="486" font-size="13" text-anchor="middle">25-26 mars 2023</text>
+  <rect class="s-blue" x="376" y="392" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="451" y="420" font-size="13" text-anchor="middle">Décembre 2024 :</text>
+  <text class="s-txt" x="451" y="440" font-size="13" text-anchor="middle">4 réserves illégales</text>
+  <text class="s-mut" x="451" y="468" font-size="13" text-anchor="middle">volume ramené</text>
+  <text class="s-mut" x="451" y="486" font-size="13" text-anchor="middle">à 6,2 millions de m³</text>
+  <rect class="s-box" x="554" y="392" width="150" height="104" rx="8"/>
+  <text class="s-txt" x="629" y="420" font-size="13" text-anchor="middle">Aucun titre</text>
+  <text class="s-txt" x="629" y="440" font-size="13" text-anchor="middle">foncier</text>
+  <text class="s-mut" x="629" y="468" font-size="13" text-anchor="middle">l'enjeu reste</text>
+  <text class="s-mut" x="629" y="486" font-size="13" text-anchor="middle">l'autorisation</text>
+  <line class="s-arrow" x1="171" y1="444" x2="196" y2="444" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="349" y1="444" x2="374" y2="444" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="527" y1="444" x2="552" y2="444" marker-end="url(#ah)"/>
+
+  <text class="s-mut" x="20" y="528" font-size="13">Cadre bleu : la bascule ; cadre vert : un titre d'usage long.</text>
+</svg>

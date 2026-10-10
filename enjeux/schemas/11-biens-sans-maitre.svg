@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 556" role="img" aria-labelledby="t d">
+  <title id="t">Les deux voies par lesquelles un bien sans maître devient communal</title>
+  <desc id="d">Un immeuble devient bien sans maître par deux voies. Une succession ouverte depuis plus de trente ans, ou dix ans dans certains périmètres, sans héritier qui se présente, revient de plein droit à la commune. Un immeuble sans propriétaire connu dont la taxe foncière n'est plus payée depuis plus de trois ans suit une procédure : avis de la commission communale des impôts directs, arrêté du maire, publicité et notification, puis six mois d'attente avant la délibération d'incorporation. Si la commune renonce, le bien va au Conservatoire du littoral, à un conservatoire d'espaces naturels ou à l'État. Le propriétaire qui se manifeste ensuite obtient la restitution, ou seulement une indemnité si le bien a été vendu ou affecté d'une manière qui l'empêche.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="20" font-size="13">Voie 1 : la succession</text>
+  <text class="s-mut" x="380" y="20" font-size="13">Voie 2 : le bien présumé</text>
+
+  <rect class="s-box" x="20" y="30" width="320" height="104" rx="8"/>
+  <text class="s-txt" x="180" y="56" font-size="14" text-anchor="middle">Succession ouverte depuis</text>
+  <text class="s-txt" x="180" y="78" font-size="14" text-anchor="middle">plus de 30 ans (10 ans dans</text>
+  <text class="s-txt" x="180" y="100" font-size="14" text-anchor="middle">certains périmètres),</text>
+  <text class="s-txt" x="180" y="122" font-size="14" text-anchor="middle">aucun héritier présent</text>
+
+  <rect class="s-box" x="380" y="30" width="320" height="104" rx="8"/>
+  <text class="s-txt" x="540" y="56" font-size="14" text-anchor="middle">Immeuble sans</text>
+  <text class="s-txt" x="540" y="78" font-size="14" text-anchor="middle">propriétaire connu,</text>
+  <text class="s-txt" x="540" y="100" font-size="14" text-anchor="middle">taxe foncière impayée</text>
+  <text class="s-txt" x="540" y="122" font-size="14" text-anchor="middle">depuis plus de 3 ans</text>
+
+  <line class="s-arrow" x1="540" y1="136" x2="540" y2="162" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="164" width="320" height="60" rx="8"/>
+  <text class="s-txt" x="540" y="189" font-size="14" text-anchor="middle">Avis de la commission</text>
+  <text class="s-txt" x="540" y="211" font-size="13" text-anchor="middle">communale des impôts directs</text>
+
+  <line class="s-arrow" x1="540" y1="226" x2="540" y2="254" marker-end="url(#ah)"/>
+  <rect class="s-box" x="380" y="256" width="320" height="60" rx="8"/>
+  <text class="s-txt" x="540" y="281" font-size="14" text-anchor="middle">Arrêté du maire, affichage,</text>
+  <text class="s-txt" x="540" y="303" font-size="14" text-anchor="middle">notifications</text>
+
+  <line class="s-arrow" x1="540" y1="318" x2="540" y2="346" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="380" y="348" width="320" height="60" rx="8"/>
+  <text class="s-txt" x="540" y="373" font-size="14" text-anchor="middle">Six mois sans réponse :</text>
+  <text class="s-txt" x="540" y="395" font-size="13" text-anchor="middle">délibération d'incorporation</text>
+
+  <line class="s-arrow" x1="180" y1="136" x2="180" y2="254" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="20" y="256" width="320" height="60" rx="8"/>
+  <text class="s-txt" x="180" y="281" font-size="14" text-anchor="middle">Propriété de plein droit</text>
+  <text class="s-mut" x="180" y="303" font-size="13" text-anchor="middle">délibération conseillée</text>
+
+  <rect class="s-blue" x="128" y="334" width="212" height="84" rx="8"/>
+  <text class="s-txt" x="234" y="356" font-size="13" text-anchor="middle">Si la commune renonce :</text>
+  <text class="s-txt" x="234" y="378" font-size="13" text-anchor="middle">Conservatoire du littoral,</text>
+  <text class="s-txt" x="234" y="400" font-size="13" text-anchor="middle">CEN ou État</text>
+
+  <line class="s-arrow" x1="70" y1="318" x2="70" y2="440" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="540" y1="410" x2="540" y2="440" marker-end="url(#ah)"/>
+
+  <rect class="s-ok" x="20" y="442" width="680" height="62" rx="8"/>
+  <text class="s-txt" x="360" y="468" font-size="15" text-anchor="middle">Propriété de la commune</text>
+  <text class="s-mut" x="360" y="490" font-size="13" text-anchor="middle">ou de l'intercommunalité</text>
+
+  <text class="s-mut" x="360" y="526" font-size="13" text-anchor="middle">Si le propriétaire revient :</text>
+  <text class="s-mut" x="360" y="544" font-size="13" text-anchor="middle">restitution ou indemnité</text>
+</svg>

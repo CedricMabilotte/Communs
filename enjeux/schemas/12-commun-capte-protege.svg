@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="t d">
+  <title id="t">L'eau comme commun capté, l'eau comme commun protégé</title>
+  <desc id="d">À gauche, l'eau captée : une nappe ou une rivière est pompée en hiver vers une réserve, sur autorisation préfectorale, puis consommée en été par les exploitations raccordées ; la décision passe par le préfet et, de plus en plus, par le juge administratif. À droite, l'eau protégée : une collectivité de l'eau achète la terre de l'aire d'alimentation du captage, à l'amiable ou par préemption, la loue par bail rural à clauses environnementales, et l'eau reste potable pour tous les abonnés. Dans le premier cas, le droit porte sur un volume d'eau ; dans le second, il porte sur la terre.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-txt" x="180" y="26" font-size="15" text-anchor="middle">L'eau captée</text>
+  <text class="s-mut" x="180" y="46" font-size="13" text-anchor="middle">le droit porte sur un volume</text>
+  <text class="s-txt" x="540" y="26" font-size="15" text-anchor="middle">L'eau protégée</text>
+  <text class="s-mut" x="540" y="46" font-size="13" text-anchor="middle">le droit porte sur la terre</text>
+
+  <rect class="s-box" x="30" y="62" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="180" y="88" font-size="14" text-anchor="middle">Nappe ou rivière</text>
+  <text class="s-mut" x="180" y="108" font-size="13" text-anchor="middle">sans propriétaire</text>
+
+  <line class="s-arrow" x1="180" y1="126" x2="180" y2="166" marker-end="url(#ah)"/>
+  <text class="s-mut" x="192" y="152" font-size="13">pompage d'hiver</text>
+
+  <rect class="s-acc" x="30" y="170" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="180" y="196" font-size="14" text-anchor="middle">Réserve de substitution</text>
+  <text class="s-mut" x="180" y="216" font-size="13" text-anchor="middle">autorisation préfectorale</text>
+
+  <line class="s-arrow" x1="180" y1="234" x2="180" y2="274" marker-end="url(#ah)"/>
+  <text class="s-mut" x="192" y="260" font-size="13">irrigation d'été</text>
+
+  <rect class="s-acc" x="30" y="278" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="180" y="304" font-size="14" text-anchor="middle">Exploitations raccordées</text>
+  <text class="s-mut" x="180" y="324" font-size="13" text-anchor="middle">eau évaporée ou consommée</text>
+
+  <rect class="s-box" x="390" y="62" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="88" font-size="14" text-anchor="middle">Aire d'alimentation</text>
+  <text class="s-mut" x="540" y="108" font-size="13" text-anchor="middle">du captage d'eau potable</text>
+
+  <line class="s-arrow" x1="540" y1="126" x2="540" y2="166" marker-end="url(#ah)"/>
+  <text class="s-mut" x="552" y="152" font-size="13">achat ou préemption</text>
+
+  <rect class="s-ok" x="390" y="170" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="196" font-size="14" text-anchor="middle">Collectivité de l'eau</text>
+  <text class="s-mut" x="540" y="216" font-size="13" text-anchor="middle">propriétaire du sol</text>
+
+  <line class="s-arrow" x1="540" y1="234" x2="540" y2="274" marker-end="url(#ah)"/>
+  <text class="s-mut" x="552" y="260" font-size="13">bail à clauses</text>
+
+  <rect class="s-ok" x="390" y="278" width="300" height="62" rx="8"/>
+  <text class="s-txt" x="540" y="304" font-size="14" text-anchor="middle">Paysan·nes preneur·ses</text>
+  <text class="s-mut" x="540" y="324" font-size="13" text-anchor="middle">eau potable pour tous</text>
+
+  <rect class="s-blue" x="30" y="380" width="660" height="78" rx="8"/>
+  <text class="s-txt" x="360" y="408" font-size="14" text-anchor="middle">Régulation publique</text>
+  <text class="s-mut" x="360" y="428" font-size="13" text-anchor="middle">volumes · arrêtés sécheresse</text>
+  <text class="s-mut" x="360" y="446" font-size="13" text-anchor="middle">juge administratif</text>
+
+  <line class="s-line" x1="180" y1="342" x2="180" y2="378"/>
+  <line class="s-line" x1="540" y1="342" x2="540" y2="378"/>
+
+  <text class="s-mut" x="180" y="488" font-size="13" text-anchor="middle">Point de bascule :</text>
+  <text class="s-mut" x="180" y="508" font-size="13" text-anchor="middle">l'arrêté des volumes</text>
+  <text class="s-mut" x="540" y="488" font-size="13" text-anchor="middle">Point de bascule :</text>
+  <text class="s-mut" x="540" y="508" font-size="13" text-anchor="middle">la vente d'une parcelle</text>
+</svg>

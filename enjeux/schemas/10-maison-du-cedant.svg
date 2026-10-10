@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="t d">
+  <title id="t">Quand la maison du cédant occupe le droit de construire</title>
+  <desc id="d">Une maison autorisée autrefois comme nécessaire à la ferme reste comptée comme logement de l'exploitation, même quand ses occupants ont pris leur retraite ; si le plan local d'urbanisme plafonne le nombre de logements par exploitation, le repreneur ou l'associé ne peut plus construire sur place. Trois issues restent : se loger loin de la ferme, obtenir un secteur constructible exceptionnel, ou faire entrer la maison dans la transmission, ce que permet un porteur qui achète la ferme entière.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="26" font-size="13">Hier</text>
+  <rect class="s-box" x="180" y="12" width="360" height="62" rx="8"/>
+  <text class="s-txt" x="360" y="38" font-size="15" text-anchor="middle">Maison autorisée comme</text>
+  <text class="s-txt" x="360" y="60" font-size="15" text-anchor="middle">nécessaire à la ferme</text>
+  <line class="s-arrow" x1="360" y1="76" x2="360" y2="100" marker-end="url(#ah)"/>
+
+  <text class="s-mut" x="20" y="118" font-size="13">Départ en retraite</text>
+  <rect class="s-box" x="180" y="104" width="360" height="62" rx="8"/>
+  <text class="s-txt" x="360" y="130" font-size="15" text-anchor="middle">Les anciens exploitants</text>
+  <text class="s-txt" x="360" y="152" font-size="15" text-anchor="middle">y restent, chez eux</text>
+  <line class="s-arrow" x1="360" y1="168" x2="360" y2="192" marker-end="url(#ah)"/>
+
+  <text class="s-mut" x="20" y="210" font-size="13">Le point de bascule</text>
+  <rect class="s-acc" x="180" y="196" width="360" height="84" rx="8"/>
+  <text class="s-txt" x="360" y="222" font-size="15" text-anchor="middle">La maison compte toujours</text>
+  <text class="s-txt" x="360" y="244" font-size="15" text-anchor="middle">dans le plafond du PLU</text>
+  <text class="s-mut" x="360" y="266" font-size="13" text-anchor="middle">(CE, 13 février 2024)</text>
+  <line class="s-arrow" x1="360" y1="282" x2="360" y2="306" marker-end="url(#ah)"/>
+
+  <rect class="s-acc" x="180" y="310" width="360" height="62" rx="8"/>
+  <text class="s-txt" x="360" y="336" font-size="15" text-anchor="middle">Pas de nouveau logement</text>
+  <text class="s-txt" x="360" y="358" font-size="15" text-anchor="middle">pour qui reprend la ferme</text>
+
+  <line class="s-arrow" x1="300" y1="374" x2="130" y2="420" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="360" y1="374" x2="360" y2="420" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="420" y1="374" x2="590" y2="420" marker-end="url(#ah)"/>
+
+  <rect class="s-box" x="20" y="424" width="220" height="84" rx="8"/>
+  <text class="s-txt" x="130" y="450" font-size="14" text-anchor="middle">Se loger au bourg,</text>
+  <text class="s-txt" x="130" y="471" font-size="14" text-anchor="middle">loin des bêtes</text>
+  <text class="s-mut" x="130" y="492" font-size="13" text-anchor="middle">si un logement existe</text>
+
+  <rect class="s-blue" x="250" y="424" width="220" height="84" rx="8"/>
+  <text class="s-txt" x="360" y="450" font-size="14" text-anchor="middle">Demander un STECAL</text>
+  <text class="s-txt" x="360" y="471" font-size="14" text-anchor="middle">à la commune</text>
+  <text class="s-mut" x="360" y="492" font-size="13" text-anchor="middle">exceptionnel, lent</text>
+
+  <rect class="s-ok" x="480" y="424" width="220" height="84" rx="8"/>
+  <text class="s-txt" x="590" y="450" font-size="14" text-anchor="middle">Transmettre la maison</text>
+  <text class="s-txt" x="590" y="471" font-size="14" text-anchor="middle">avec la ferme</text>
+  <text class="s-mut" x="590" y="492" font-size="13" text-anchor="middle">porteur hors marché</text>
+</svg>

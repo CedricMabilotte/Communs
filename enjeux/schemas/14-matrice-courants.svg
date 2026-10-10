@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="t d">
+  <title id="t">Les courants de l'agriculture du vivant, situés sur deux axes</title>
+  <desc id="d">Les courants se distinguent par deux questions : admettent-ils les intrants de synthèse, et laissent-ils le sol couvert et peu travaillé ? L'agriculture intensive admet les intrants et laboure. L'agriculture de conservation couvre le sol mais admet le glyphosate. L'agriculture régénératrice n'a pas de définition légale et peut se placer partout. L'agriculture biologique, seule définie par un règlement public, exclut les intrants de synthèse mais travaille souvent le sol. Biodynamie, agroécologie paysanne, permaculture et agriculture naturelle excluent ou réduisent les intrants et couvrent davantage le sol ; l'agroforesterie, qui associe arbres et cultures, peut se combiner avec toutes.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <!-- Axes -->
+  <line class="s-arrow" x1="60" y1="470" x2="60" y2="30" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="60" y1="470" x2="700" y2="470" marker-end="url(#ah)"/>
+  <text class="s-mut" x="72" y="24" font-size="13">Sol couvert, peu travaillé</text>
+  <text class="s-mut" x="72" y="462" font-size="13">Sol souvent nu, labouré</text>
+  <text class="s-mut" x="66" y="492" font-size="13">Intrants de synthèse admis</text>
+  <text class="s-mut" x="694" y="492" font-size="13" text-anchor="end">Intrants de synthèse exclus</text>
+
+  <!-- Rangée 1 -->
+  <rect class="s-box" x="80" y="40" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="175" y="64" font-size="14" text-anchor="middle">Conservation des sols</text>
+  <text class="s-mut" x="175" y="84" font-size="13" text-anchor="middle">couverts, glyphosate admis</text>
+
+  <rect class="s-box" x="290" y="40" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="385" y="64" font-size="14" text-anchor="middle">Agroforesterie</text>
+  <text class="s-mut" x="385" y="84" font-size="13" text-anchor="middle">arbres dans la parcelle</text>
+
+  <rect class="s-box" x="500" y="40" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="595" y="64" font-size="14" text-anchor="middle">Agriculture naturelle</text>
+  <text class="s-mut" x="595" y="84" font-size="13" text-anchor="middle">ni labour ni intrant</text>
+
+  <!-- Rangée 2 -->
+  <rect class="s-box" x="80" y="130" width="190" height="56" rx="8" stroke-dasharray="6 4"/>
+  <text class="s-txt" x="175" y="154" font-size="14" text-anchor="middle">Régénératrice</text>
+  <text class="s-mut" x="175" y="174" font-size="13" text-anchor="middle">sans définition légale</text>
+
+  <rect class="s-box" x="500" y="130" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="595" y="154" font-size="14" text-anchor="middle">Permaculture</text>
+  <text class="s-mut" x="595" y="174" font-size="13" text-anchor="middle">conception du lieu</text>
+
+  <!-- Rangée 3 -->
+  <rect class="s-ok" x="290" y="220" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="385" y="244" font-size="14" text-anchor="middle">Agroécologie paysanne</text>
+  <text class="s-mut" x="385" y="264" font-size="13" text-anchor="middle">autonomie, terre, aval</text>
+
+  <rect class="s-box" x="500" y="220" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="595" y="244" font-size="14" text-anchor="middle">Biodynamie</text>
+  <text class="s-mut" x="595" y="264" font-size="13" text-anchor="middle">bio et label privé</text>
+
+  <!-- Rangée 4 -->
+  <rect class="s-blue" x="500" y="310" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="595" y="334" font-size="14" text-anchor="middle">Agriculture biologique</text>
+  <text class="s-mut" x="595" y="354" font-size="13" text-anchor="middle">règlement (UE) 2018/848</text>
+
+  <!-- Rangée 5 -->
+  <rect class="s-acc" x="80" y="390" width="190" height="56" rx="8"/>
+  <text class="s-txt" x="175" y="414" font-size="14" text-anchor="middle">Agriculture intensive</text>
+  <text class="s-mut" x="175" y="434" font-size="13" text-anchor="middle">engrais, pesticides, labour</text>
+
+  <!-- Légende -->
+  <rect class="s-blue" x="60" y="512" width="18" height="14" rx="3"/>
+  <text class="s-mut" x="84" y="524" font-size="13">défini par le droit public</text>
+  <rect class="s-ok" x="260" y="512" width="18" height="14" rx="3"/>
+  <text class="s-mut" x="284" y="524" font-size="13">mouvement social</text>
+  <rect class="s-box" x="420" y="512" width="18" height="14" rx="3"/>
+  <text class="s-mut" x="444" y="524" font-size="13">label privé ou aucun cadre</text>
+</svg>

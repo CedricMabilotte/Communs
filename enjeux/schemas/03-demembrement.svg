@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="t d">
+  <title id="t">Comment une ferme se démembre entre voisins</title>
+  <desc id="d">Quand le cédant part sans repreneur pour l'ensemble, la ferme se défait pièce par pièce : ses terres en propriété sont vendues par lots, ses terres louées sont reprises par d'autres preneurs, sa maison est gardée ou vendue à part, ses bâtiments perdent leur usage. Les ventes passent devant la SAFER et les reprises devant le contrôle des structures, mais les terres vont le plus souvent aux voisins qui s'agrandissent. Deux autres issues existent dès le départ : la délégation intégrale des travaux à une entreprise, qui garde la ferme sur le papier alors que l'exploitant ne la conduit plus, et la reprise d'un seul bloc par un porteur hors marché, qui permet une installation.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <!-- Départ -->
+  <rect class="s-acc" x="200" y="16" width="320" height="68" rx="8"/>
+  <text class="s-txt" x="360" y="44" font-size="15" text-anchor="middle">Le cédant part</text>
+  <text class="s-txt" x="360" y="66" font-size="15" text-anchor="middle">sans repreneur pour le tout</text>
+
+  <!-- Flèches vers les pièces -->
+  <line class="s-arrow" x1="250" y1="86" x2="100" y2="126" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="320" y1="86" x2="273" y2="126" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="400" y1="86" x2="446" y2="126" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="470" y1="86" x2="619" y2="126" marker-end="url(#ah)"/>
+
+  <!-- Pièces de la ferme -->
+  <rect class="s-box" x="20" y="130" width="160" height="72" rx="8"/>
+  <text class="s-txt" x="100" y="158" font-size="14" text-anchor="middle">Terres en propriété</text>
+  <text class="s-mut" x="100" y="180" font-size="13" text-anchor="middle">vendues par lots</text>
+
+  <rect class="s-box" x="193" y="130" width="160" height="72" rx="8"/>
+  <text class="s-txt" x="273" y="158" font-size="14" text-anchor="middle">Terres louées</text>
+  <text class="s-mut" x="273" y="180" font-size="13" text-anchor="middle">nouveaux preneurs</text>
+
+  <rect class="s-box" x="366" y="130" width="160" height="72" rx="8"/>
+  <text class="s-txt" x="446" y="158" font-size="14" text-anchor="middle">Maison</text>
+  <text class="s-mut" x="446" y="180" font-size="13" text-anchor="middle">gardée ou vendue à part</text>
+
+  <rect class="s-box" x="539" y="130" width="160" height="72" rx="8"/>
+  <text class="s-txt" x="619" y="158" font-size="14" text-anchor="middle">Bâtiments</text>
+  <text class="s-mut" x="619" y="180" font-size="13" text-anchor="middle">souvent sans usage</text>
+
+  <!-- Filtres publics -->
+  <line class="s-arrow" x1="100" y1="204" x2="100" y2="236" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="273" y1="204" x2="273" y2="236" marker-end="url(#ah)"/>
+  <rect class="s-blue" x="20" y="240" width="333" height="62" rx="8"/>
+  <text class="s-txt" x="186" y="266" font-size="14" text-anchor="middle">Filtres publics : SAFER</text>
+  <text class="s-txt" x="186" y="288" font-size="14" text-anchor="middle">et autorisation d'exploiter</text>
+
+  <line class="s-arrow" x1="186" y1="304" x2="186" y2="332" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="532" y1="204" x2="532" y2="332" marker-end="url(#ah)"/>
+
+  <!-- Issues -->
+  <rect class="s-acc" x="20" y="336" width="333" height="66" rx="8"/>
+  <text class="s-txt" x="186" y="362" font-size="15" text-anchor="middle">Les voisins s'agrandissent</text>
+  <text class="s-mut" x="186" y="384" font-size="13" text-anchor="middle">la terre reste agricole</text>
+
+  <rect class="s-box" x="366" y="336" width="333" height="66" rx="8"/>
+  <text class="s-txt" x="532" y="362" font-size="15" text-anchor="middle">Un siège sans ferme</text>
+  <text class="s-mut" x="532" y="384" font-size="13" text-anchor="middle">la ferme n'existe plus</text>
+
+  <!-- Autres issues au départ -->
+  <text class="s-mut" x="360" y="428" font-size="13" text-anchor="middle">Autres issues au départ</text>
+  <polyline class="s-line" fill="none" points="200,50 10,50 10,484"/>
+  <line class="s-arrow" x1="10" y1="484" x2="18" y2="484" marker-end="url(#ah)"/>
+  <polyline class="s-line" fill="none" points="520,50 710,50 710,484"/>
+  <line class="s-arrow" x1="710" y1="484" x2="702" y2="484" marker-end="url(#ah)"/>
+
+  <rect class="s-box" x="22" y="440" width="331" height="88" rx="8"/>
+  <text class="s-txt" x="188" y="466" font-size="14" text-anchor="middle">Délégation intégrale</text>
+  <text class="s-mut" x="188" y="488" font-size="13" text-anchor="middle">à une ETA : l'exploitant</text>
+  <text class="s-mut" x="188" y="508" font-size="13" text-anchor="middle">ne conduit plus la ferme</text>
+
+  <rect class="s-ok" x="366" y="440" width="332" height="88" rx="8"/>
+  <text class="s-txt" x="532" y="466" font-size="14" text-anchor="middle">Reprise d'un seul bloc</text>
+  <text class="s-mut" x="532" y="488" font-size="13" text-anchor="middle">par un porteur hors marché,</text>
+  <text class="s-mut" x="532" y="508" font-size="13" text-anchor="middle">puis une installation</text>
+</svg>

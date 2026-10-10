@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" role="img" aria-labelledby="t d">
+  <title id="t">De la terre agricole au chantier : la bascule se joue au classement</title>
+  <desc id="d">Une terre agricole devient terrain à bâtir en quatre temps : elle est exploitée, puis classée constructible par le document d'urbanisme, vendue au prix du constructible, et enfin mise en chantier, seul moment que la mesure nationale enregistre. La règle oppose à chaque étape un avis, une enveloppe, une taxe ou une compensation, sans interdire. Une parcelle détenue hors marché par une personne publique, un fonds ou grevée d'une obligation réelle environnementale échappe à la vente au prix du constructible : la bascule n'a pas lieu.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="24" font-size="13">1. La chaîne de la bascule</text>
+
+  <rect class="s-box" x="20" y="36" width="156" height="96" rx="8"/>
+  <text class="s-txt" x="98" y="60" font-size="14" text-anchor="middle">Terre agricole</text>
+  <text class="s-txt" x="98" y="80" font-size="14" text-anchor="middle">exploitée,</text>
+  <text class="s-txt" x="98" y="100" font-size="14" text-anchor="middle">souvent louée</text>
+  <text class="s-mut" x="98" y="121" font-size="13" text-anchor="middle">0,64 €/m² (2024)</text>
+
+  <rect class="s-acc" x="196" y="36" width="156" height="96" rx="8"/>
+  <text class="s-txt" x="274" y="60" font-size="14" text-anchor="middle">Classement en</text>
+  <text class="s-txt" x="274" y="80" font-size="14" text-anchor="middle">zone constructible</text>
+  <text class="s-txt" x="274" y="100" font-size="14" text-anchor="middle">par le PLU</text>
+  <text class="s-mut" x="274" y="121" font-size="13" text-anchor="middle">moment de bascule</text>
+
+  <rect class="s-box" x="372" y="36" width="156" height="96" rx="8"/>
+  <text class="s-txt" x="450" y="60" font-size="14" text-anchor="middle">Vente du terrain</text>
+  <text class="s-txt" x="450" y="80" font-size="14" text-anchor="middle">au prix du</text>
+  <text class="s-txt" x="450" y="100" font-size="14" text-anchor="middle">constructible</text>
+  <text class="s-mut" x="450" y="121" font-size="13" text-anchor="middle">rente de classement</text>
+
+  <rect class="s-box" x="548" y="36" width="156" height="96" rx="8"/>
+  <text class="s-txt" x="626" y="60" font-size="14" text-anchor="middle">Mise en chantier</text>
+  <text class="s-txt" x="626" y="80" font-size="14" text-anchor="middle">changement de</text>
+  <text class="s-txt" x="626" y="100" font-size="14" text-anchor="middle">nature fiscale</text>
+  <text class="s-mut" x="626" y="121" font-size="13" text-anchor="middle">compté par le Cerema</text>
+
+  <line class="s-arrow" x1="177" y1="84" x2="194" y2="84" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="353" y1="84" x2="370" y2="84" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="529" y1="84" x2="546" y2="84" marker-end="url(#ah)"/>
+
+  <text class="s-mut" x="20" y="164" font-size="13">2. Ce que la règle oppose</text>
+
+  <line class="s-line" x1="98" y1="134" x2="98" y2="174"/>
+  <line class="s-line" x1="274" y1="134" x2="274" y2="174"/>
+  <line class="s-line" x1="450" y1="134" x2="450" y2="174"/>
+  <line class="s-line" x1="626" y1="134" x2="626" y2="174"/>
+
+  <rect class="s-blue" x="20" y="176" width="156" height="86" rx="8"/>
+  <text class="s-txt" x="98" y="200" font-size="14" text-anchor="middle">CDPENAF :</text>
+  <text class="s-txt" x="98" y="220" font-size="14" text-anchor="middle">avis simple,</text>
+  <text class="s-txt" x="98" y="240" font-size="14" text-anchor="middle">conforme en AOP</text>
+
+  <rect class="s-blue" x="196" y="176" width="156" height="86" rx="8"/>
+  <text class="s-txt" x="274" y="200" font-size="14" text-anchor="middle">Enveloppe ZAN :</text>
+  <text class="s-txt" x="274" y="220" font-size="14" text-anchor="middle">Sraddet, SCoT, PLU</text>
+  <text class="s-txt" x="274" y="240" font-size="14" text-anchor="middle">garantie de 1 ha</text>
+
+  <rect class="s-blue" x="372" y="176" width="156" height="86" rx="8"/>
+  <text class="s-txt" x="450" y="200" font-size="14" text-anchor="middle">Taxes sur la</text>
+  <text class="s-txt" x="450" y="220" font-size="14" text-anchor="middle">plus-value (CGI,</text>
+  <text class="s-txt" x="450" y="240" font-size="14" text-anchor="middle">1529, 1605 nonies)</text>
+
+  <rect class="s-blue" x="548" y="176" width="156" height="86" rx="8"/>
+  <text class="s-txt" x="626" y="200" font-size="14" text-anchor="middle">Étude préalable,</text>
+  <text class="s-txt" x="626" y="220" font-size="14" text-anchor="middle">compensation</text>
+  <text class="s-txt" x="626" y="240" font-size="14" text-anchor="middle">collective (≥ 5 ha)</text>
+
+  <text class="s-mut" x="20" y="296" font-size="13">3. Sortir la terre du marché</text>
+
+  <rect class="s-ok" x="20" y="308" width="216" height="86" rx="8"/>
+  <text class="s-txt" x="128" y="332" font-size="14" text-anchor="middle">Propriété publique</text>
+  <text class="s-txt" x="128" y="352" font-size="14" text-anchor="middle">Conservatoire du littoral,</text>
+  <text class="s-txt" x="128" y="372" font-size="14" text-anchor="middle">collectivité de l'eau</text>
+
+  <rect class="s-ok" x="252" y="308" width="216" height="86" rx="8"/>
+  <text class="s-txt" x="360" y="332" font-size="14" text-anchor="middle">Fonds de dotation,</text>
+  <text class="s-txt" x="360" y="352" font-size="14" text-anchor="middle">fondation, foncière</text>
+  <text class="s-txt" x="360" y="372" font-size="14" text-anchor="middle">qui rachètent</text>
+
+  <rect class="s-ok" x="484" y="308" width="216" height="86" rx="8"/>
+  <text class="s-txt" x="592" y="332" font-size="14" text-anchor="middle">Obligation réelle</text>
+  <text class="s-txt" x="592" y="352" font-size="14" text-anchor="middle">environnementale</text>
+  <text class="s-txt" x="592" y="372" font-size="14" text-anchor="middle">jusqu'à 99 ans</text>
+
+  <line class="s-arrow" x1="360" y1="404" x2="360" y2="432" marker-end="url(#ah)"/>
+  <text class="s-txt" x="360" y="452" font-size="14" text-anchor="middle">Hors marché : pas de vente</text>
+  <text class="s-txt" x="360" y="472" font-size="14" text-anchor="middle">au prix du constructible,</text>
+  <text class="s-txt" x="360" y="492" font-size="14" text-anchor="middle">donc pas de bascule</text>
+</svg>

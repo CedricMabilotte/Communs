@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 548" role="img" aria-labelledby="t d">
+  <title id="t">Vendre la terre ou vendre la société : trois chemins, trois contrôles</title>
+  <desc id="d">Quand une terre est vendue, le notaire notifie la vente à la SAFER, qui peut préempter. Quand ce sont les parts de la société qui exploite ou possède la terre qui sont cédées, la SAFER ne pouvait préempter avant 2023 que les cessions totales : céder 99 % des parts suffisait à échapper à tout contrôle. Depuis 2023, la loi Sempastous impose de déclarer toutes les opérations et soumet à autorisation du préfet les prises de contrôle qui dépassent un seuil d'agrandissement. Restent hors autorisation les transmissions familiales, les dons, les cessions entre associés de longue date, les prises minoritaires et les opérations sous le seuil : en Grand Est, 48 déclarations sur 1 250 ont été soumises à autorisation en 2025.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="128" y="24" font-size="13" text-anchor="middle">1. Vendre la terre</text>
+  <text class="s-mut" x="360" y="24" font-size="13" text-anchor="middle">2. Parts, avant 2023</text>
+  <text class="s-mut" x="592" y="24" font-size="13" text-anchor="middle">3. Parts, depuis 2023</text>
+
+  <rect class="s-box" x="20" y="36" width="216" height="88" rx="8"/>
+  <text class="s-txt" x="128" y="62" font-size="14" text-anchor="middle">Vente d'une parcelle</text>
+  <text class="s-txt" x="128" y="83" font-size="14" text-anchor="middle">ou d'une ferme</text>
+  <text class="s-mut" x="128" y="106" font-size="13" text-anchor="middle">acte notarié</text>
+
+  <rect class="s-acc" x="252" y="36" width="216" height="88" rx="8"/>
+  <text class="s-txt" x="360" y="62" font-size="14" text-anchor="middle">Cession de 99 % des parts</text>
+  <text class="s-txt" x="360" y="83" font-size="14" text-anchor="middle">d'une société agricole</text>
+  <text class="s-mut" x="360" y="106" font-size="13" text-anchor="middle">bail et terres suivent</text>
+
+  <rect class="s-acc" x="484" y="36" width="216" height="88" rx="8"/>
+  <text class="s-txt" x="592" y="62" font-size="14" text-anchor="middle">Prise de contrôle</text>
+  <text class="s-txt" x="592" y="83" font-size="14" text-anchor="middle">d'une société agricole</text>
+  <text class="s-mut" x="592" y="106" font-size="13" text-anchor="middle">plus de 40 % des voix</text>
+
+  <line class="s-arrow" x1="128" y1="126" x2="128" y2="156" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="360" y1="126" x2="360" y2="156" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="592" y1="126" x2="592" y2="156" marker-end="url(#ah)"/>
+
+  <rect class="s-blue" x="20" y="160" width="216" height="110" rx="8"/>
+  <text class="s-txt" x="128" y="186" font-size="14" text-anchor="middle">Notification à la SAFER</text>
+  <text class="s-txt" x="128" y="207" font-size="14" text-anchor="middle">droit de préemption</text>
+  <text class="s-mut" x="128" y="230" font-size="13" text-anchor="middle">puis rétrocession</text>
+  <text class="s-mut" x="128" y="250" font-size="13" text-anchor="middle">par appel à candidatures</text>
+
+  <rect class="s-blue" x="252" y="160" width="216" height="110" rx="8"/>
+  <text class="s-txt" x="360" y="186" font-size="14" text-anchor="middle">Préemption SAFER</text>
+  <text class="s-txt" x="360" y="207" font-size="14" text-anchor="middle">sur cession totale seule</text>
+  <text class="s-mut" x="360" y="230" font-size="13" text-anchor="middle">loi de 2014 ; partiel</text>
+  <text class="s-mut" x="360" y="250" font-size="13" text-anchor="middle">censuré en 2017</text>
+
+  <rect class="s-blue" x="484" y="160" width="216" height="110" rx="8"/>
+  <text class="s-txt" x="592" y="186" font-size="14" text-anchor="middle">Déclaration à la SAFER</text>
+  <text class="s-txt" x="592" y="207" font-size="14" text-anchor="middle">autorisation du préfet</text>
+  <text class="s-mut" x="592" y="230" font-size="13" text-anchor="middle">si seuil dépassé :</text>
+  <text class="s-mut" x="592" y="250" font-size="13" text-anchor="middle">1,5 à 3 fois la SAURM</text>
+
+  <line class="s-arrow" x1="128" y1="272" x2="128" y2="302" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="360" y1="272" x2="360" y2="302" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="592" y1="272" x2="592" y2="302" marker-end="url(#ah)"/>
+
+  <rect class="s-ok" x="20" y="306" width="216" height="92" rx="8"/>
+  <text class="s-txt" x="128" y="332" font-size="14" text-anchor="middle">Terre orientable</text>
+  <text class="s-txt" x="128" y="353" font-size="14" text-anchor="middle">vers l'installation</text>
+  <text class="s-mut" x="128" y="378" font-size="13" text-anchor="middle">si la SAFER préempte</text>
+
+  <rect class="s-acc" x="252" y="306" width="216" height="92" rx="8"/>
+  <text class="s-txt" x="360" y="332" font-size="14" text-anchor="middle">Aucun contrôle</text>
+  <text class="s-txt" x="360" y="353" font-size="14" text-anchor="middle">le capital change de main</text>
+  <text class="s-mut" x="360" y="378" font-size="13" text-anchor="middle">cas de l'Indre, 2016</text>
+
+  <rect class="s-ok" x="484" y="306" width="216" height="92" rx="8"/>
+  <text class="s-txt" x="592" y="332" font-size="14" text-anchor="middle">Refus, conditions</text>
+  <text class="s-txt" x="592" y="353" font-size="14" text-anchor="middle">(céder ou louer) ou accord</text>
+  <text class="s-mut" x="592" y="378" font-size="13" text-anchor="middle">silence vaut accord</text>
+
+  <line class="s-arrow" x1="592" y1="400" x2="592" y2="430" marker-end="url(#ah)"/>
+
+  <rect class="s-box" x="20" y="434" width="680" height="104" rx="8"/>
+  <text class="s-txt" x="36" y="458" font-size="14">Hors autorisation :</text>
+  <text class="s-mut" x="36" y="482" font-size="13">transmissions familiales</text>
+  <text class="s-mut" x="36" y="500" font-size="13">(jusqu'au 4e degré), dons</text>
+  <text class="s-mut" x="36" y="518" font-size="13">et successions</text>
+  <text class="s-mut" x="262" y="482" font-size="13">associés depuis 9 ans,</text>
+  <text class="s-mut" x="262" y="500" font-size="13">prises minoritaires,</text>
+  <text class="s-mut" x="262" y="518" font-size="13">opérations sous le seuil</text>
+  <text class="s-mut" x="488" y="482" font-size="13">Grand Est, 2025 :</text>
+  <text class="s-mut" x="488" y="500" font-size="13">48 dossiers soumis</text>
+  <text class="s-mut" x="488" y="518" font-size="13">sur 1 250 déclarations</text>
+</svg>

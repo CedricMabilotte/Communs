@@ -713,3 +713,854 @@ editorial:
     - "Le classement est une évaluation au regard d'un cadre explicite et contestable, non un label."
     - "Citer les sources ; respecter le droit d'auteur (reformuler)."
     - "Écrire à deux voix : tout concept porte sa définition exacte et son `en_clair:`."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Glossaire des Enjeux (session #12, 10 octobre 2026) — source unique des termes
+# introduits par les analyses stratégiques (enjeux/etudes/*.md, champ concepts:),
+# consolidés ici. Lu par generate_site.py (page glossaire, section « Les mots des
+# Enjeux ») et exporté vers le glossaire commun de l'agora
+# (scripts/export_enjeux_transverse.py). Premier pas vers la migration du
+# glossaire codé en dur (GLOSSAIRE) dans ce fichier.
+# ─────────────────────────────────────────────────────────────────────────────
+glossaire:
+- terme: Agriculture biologique
+  definition: 'Mode de production défini par le règlement (UE) 2018/848 : interdiction des engrais minéraux
+    azotés, des pesticides de synthèse et des OGM, rotation pluriannuelle avec légumineuses, culture dans
+    le sol vivant, contrôle et certification par un organisme tiers. C''est le seul courant doté d''une
+    définition publique opposable.'
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agriculture de conservation des sols
+  definition: 'Système qui associe couverture permanente du sol, travail du sol réduit ou supprimé (semis
+    direct) et diversification des cultures. Il n''exclut pas les pesticides : en grandes cultures, il
+    repose le plus souvent sur le glyphosate pour détruire les couverts (INRA, 2017).'
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agriculture de firme
+  definition: Terme des sociologues François Purseigle, Geneviève Nguyen et Pierre Blanc pour désigner
+    des entreprises agricoles orientées vers la concentration productive, dont le capital et le travail
+    ne sont plus familiaux et qui reposent sur le salariat ou la délégation.
+  registre: économique
+  etudes:
+  - 03-moins-de-fermes-plus-grandes
+- terme: Agriculture intensive
+  definition: Système qui maximise le rendement par unité de surface grâce aux intrants achetés (engrais
+    et pesticides de synthèse, semences sélectionnées, énergie), à la spécialisation et souvent à la monoculture
+    et au travail profond du sol ; il rend la ferme dépendante de ses fournisseurs et de ses acheteurs.
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agriculture naturelle
+  definition: 'Méthode formulée par l''agronome japonais Masanobu Fukuoka : ni labour, ni engrais préparés,
+    ni désherbage, ni pesticides ; on sème dans un couvert vivant et on laisse faire les cycles naturels.'
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agriculture régénératrice
+  definition: Terme sans définition légale ni réglementaire, défini selon les auteurs par des pratiques
+    (couverts, pâturage, non-labour) ou par des résultats (carbone du sol, biodiversité) (Newton et al.,
+    2020). Il est repris par des groupes agroalimentaires dans leurs programmes d'approvisionnement (Nestlé,
+    selon son propre document).
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agrivoltaïsme
+  definition: Au sens de l'article L. 314-36 du code de l'énergie (loi APER, 2023), installation photovoltaïque
+    placée sur une parcelle agricole, qui rend au moins un service direct à la production (potentiel agronomique,
+    adaptation au changement climatique, protection contre les aléas, bien-être animal) en garantissant
+    une production agricole significative et un revenu durable (instruction DGPE/SDPE/2025-93).
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil
+- terme: Agroécologie
+  definition: À la fois une science (l'écologie appliquée aux agroécosystèmes), une pratique et un mouvement
+    social (Wezel et al., 2009). En France, le mot désigne surtout des pratiques ; il n'a ni cahier des
+    charges ni certification.
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agroécologie paysanne
+  definition: 'Version de l''agroécologie portée par les mouvements paysans : pratiques économes en intrants,
+    autonomie de la ferme, vente de proximité, et revendication d''accès à la terre et de souveraineté
+    alimentaire. Ce n''est pas un label mais une position politique.'
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agroforesterie
+  definition: Association, sur une même parcelle, d'arbres et de cultures ou d'élevage (haies, alignements
+    intraparcellaires, vergers pâturés). C'est une pratique, compatible avec tous les autres courants,
+    pas un système défini.
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Agrostockage de carbone
+  definition: Activité agricole ou forestière qui augmente le carbone stocké dans les sols ou la biomasse,
+    certifiable en unités temporaires au titre du règlement (UE) 2024/3012 ; l'unité expire à la fin de
+    la période de surveillance.
+  registre: agronomique
+  etudes:
+  - 13-des-sols-qu-on-epuise
+- terme: Aire d'alimentation de captage
+  definition: Territoire sur lequel l'eau qui s'infiltre ou ruisselle alimente un captage d'eau potable.
+    C'est sur ce territoire que la loi du 27 décembre 2019 permet d'instituer un droit de préemption des
+    surfaces agricoles.
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+- terme: Arrêté de cessibilité
+  definition: Acte préfectoral qui désigne, parcelle par parcelle, les terrains à exproprier après la
+    déclaration d'utilité publique. À Notre-Dame-des-Landes, ceux du 13 septembre 2011 sont devenus définitifs
+    en 2014.
+  registre: juridique
+  etudes:
+  - 17-defendre-la-terre
+- terme: Artificialisation des sols
+  definition: « L'altération durable de tout ou partie des fonctions écologiques d'un sol » (article L.
+    101-2-1 du code de l'urbanisme, issu de la loi de 2021). Plus large que la consommation d'espaces,
+    elle se mesure par l'occupation du sol à grande échelle (OCS GE) de l'IGN.
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Association foncière pastorale
+  definition: Association de propriétaires, libre ou autorisée, qui regroupe des parcelles pastorales
+    morcelées pour en organiser la mise en valeur par le pâturage. Dans les Alpes, elle concerne 18 %
+    des alpages en 2012-2014.
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+- terme: Associé coopérateur
+  definition: Agriculteur·rice membre d'une coopérative agricole, qui en détient des parts sociales et
+    s'engage à lui livrer tout ou partie de sa production pour une durée fixée par les statuts. L'ordonnance
+    du 24 avril 2019 et les nouveaux modèles de statuts qui en découlent ont renforcé son information
+    et facilité son départ dans certains cas (HCCA).
+  registre: économique
+  etudes:
+  - 06-la-dette-qui-fait-vendre
+- terme: Bail cessible hors cadre familial
+  definition: Bail rural notarié d'au moins dix-huit ans que le preneur peut céder à la personne de son
+    choix, y compris hors de sa famille (art. L. 418-1 et suivants du Code rural, créés en 2006).
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Bail emphytéotique
+  definition: Location de 18 à 99 ans, à loyer modique, qui confère au preneur un droit réel cessible
+    et n'est pas soumise au statut du fermage (article L. 451-1 du code rural). Outil usuel des développeurs
+    solaires, il est aussi celui de plusieurs montages de libération.
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil
+  - 17-defendre-la-terre
+- terme: Bail rural environnemental
+  alias:
+  - Bail rural à clauses environnementales
+  definition: Bail rural ordinaire assorti de clauses de pratiques protectrices (couverts, limitation
+    des intrants), que certains bailleurs, notamment publics, peuvent inscrire au contrat. Eau du Bassin
+    Rennais l'utilise sur les terres de ses captages.
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+  - 13-des-sols-qu-on-epuise
+- terme: Bien sans maître
+  definition: Immeuble qui fait partie d'une succession ouverte depuis plus de trente ans (dix ans dans
+    certains périmètres) sans successible, ou immeuble sans propriétaire connu dont les taxes foncières
+    ne sont plus payées depuis plus de trois ans. Il revient à la commune, ou à défaut à l'intercommunalité,
+    au Conservatoire du littoral, à un conservatoire d'espaces naturels ou à l'État (art. 713 du code
+    civil, L. 1123-1 du code général de la propriété des personnes publiques).
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+- terme: Bilan des flux de bois
+  definition: Production biologique des arbres, diminuée de la mortalité et des prélèvements. Positif,
+    il signale une forêt qui accumule du bois et du carbone ; il est de +19,5 millions de m³ par an sur
+    2014-2022, contre +41,7 sur 2005-2013 (IGN, mémento 2024).
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Biodynamie
+  definition: Courant né en 1924 des conférences de Rudolf Steiner, qui ajoute à l'agriculture biologique
+    des préparations et un calendrier propres. Le règlement européen autorise les préparations biodynamiques
+    ; la mention « biodynamie » relève de labels privés.
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Capitalisation des aides
+  definition: 'Part d''une aide agricole qui, au lieu de rester dans le revenu de l''exploitant, se retrouve
+    dans le loyer ou le prix de la terre. Elle s''exprime en pourcentage de l''aide : le Centre commun
+    de recherche de la Commission l''estime entre 9 et 46 % à court terme pour les loyers dans l''Union
+    (2021).'
+  registre: économique
+  etudes:
+  - 05-une-terre-bon-marche-inaccessible
+- terme: Carbone organique du sol
+  definition: Carbone contenu dans les matières organiques du sol (résidus végétaux, organismes, humus).
+    En France métropolitaine, le stock des 30 premiers centimètres est estimé à 3,58 milliards de tonnes
+    hors surfaces artificialisées (INRAE, 2020, d'après le RMQS).
+  registre: agronomique
+  etudes:
+  - 13-des-sols-qu-on-epuise
+- terme: CDPENAF
+  definition: Commission départementale de la préservation des espaces naturels, agricoles et forestiers,
+    prévue à l'article L. 112-1-1 du Code rural. Elle rend un avis sur les STECAL et les extensions de
+    maisons en zone agricole, et un avis conforme sur les changements de destination en zone A.
+  registre: juridique
+  etudes:
+  - 10-le-droit-d-habiter-la-terre
+- terme: Cession partielle de parts
+  definition: 'Vente d''une fraction seulement du capital d''une société. Avant 2023, la SAFER ne pouvait
+    préempter que la cession de la totalité des parts : céder 99 % suffisait à échapper à son droit de
+    préemption (Assemblée nationale, rapport n° 1460, 2018).'
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: Changement de destination
+  definition: Transformation d'un bâtiment existant, par exemple une grange, en logement. En zone agricole,
+    il n'est possible que pour les bâtiments désignés par le règlement du PLU et après avis conforme de
+    la CDPENAF (art. L. 151-11 du Code de l'urbanisme).
+  registre: juridique
+  etudes:
+  - 10-le-droit-d-habiter-la-terre
+- terme: Charge de la dette
+  definition: 'Somme des remboursements d''emprunts à moyen et long terme et des frais financiers, rapportée
+    à l''excédent brut d''exploitation. Agreste l''appelle « poids de l''endettement dans l''EBE » : 46
+    % en 2024.'
+  registre: économique
+  etudes:
+  - 06-la-dette-qui-fait-vendre
+- terme: CIVE
+  definition: 'Culture intermédiaire à vocation énergétique : culture semée entre deux cultures principales
+    et récoltée pour alimenter un méthaniseur. Les cultures principales sont plafonnées à 15 % du tonnage
+    des intrants des méthaniseurs (ministère de la Transition écologique).'
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil
+- terme: Coefficient de Gini
+  definition: Indicateur d'inégalité compris entre 0 (répartition égale) et 1 (tout chez un seul). Appliqué
+    à la surface des exploitations françaises, il vaut 0,60 en 2020 (Centre d'études et de prospective,
+    2024).
+  registre: économique
+  etudes:
+  - 03-moins-de-fermes-plus-grandes
+- terme: Compensation agricole collective
+  definition: Obligation, pour le maître d'ouvrage d'un grand projet prélevant des terres agricoles, de
+    réaliser une étude préalable et de financer des mesures qui consolident l'économie agricole du territoire
+    (article L. 112-1-3 du code rural). Elle compense une perte économique, pas les hectares.
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Consommation d'espaces naturels, agricoles et forestiers (ENAF)
+  definition: « La création ou l'extension effective d'espaces urbanisés sur le territoire concerné »
+    (loi Climat et résilience, 2021). Elle est mesurée chaque année par le Cerema à partir des fichiers
+    fonciers, au changement de nature fiscale d'une parcelle, et sert d'indicateur légal pour la période
+    2021-2031.
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Contrat d'intégration
+  definition: Contrat par lequel une entreprise d'amont ou d'aval fournit à l'éleveur une partie des moyens
+    de production (aliment, jeunes animaux), planifie la production et reprend les animaux. L'éleveur
+    possède souvent les bâtiments. Plus de 90 % des volumes de volailles de chair sont produits sous de
+    tels contrats (OFPM, 2026).
+  registre: économique
+  etudes:
+  - 06-la-dette-qui-fait-vendre
+- terme: Contrôle des structures
+  definition: Régime d'autorisation administrative préalable du droit d'exploiter (art. L. 331-1 et suivants
+    du code rural), délivrée par le préfet de région selon un schéma directeur régional (SDREA). Il vise
+    d'abord l'installation et limite les agrandissements et concentrations jugés excessifs.
+  registre: juridique
+  etudes:
+  - 07-une-regulation-a-trois-etages
+- terme: Coût de la libération
+  definition: 'Somme que quelqu''un accepte de payer, ou de ne pas récupérer, pour qu''une terre cesse
+    d''être un actif revendable : prix d''achat, frais, part de l''épargne immobilisée sans rendement,
+    part remboursée par l''impôt.'
+  registre: communs
+  etudes:
+  - 18-ce-que-la-liberation-change
+- terme: Débit d'étiage (QMNA)
+  definition: Débit mensuel le plus bas de l'année d'un cours d'eau. C'est l'indicateur le plus directement
+    lié aux restrictions d'irrigation.
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+- terme: Déclaration d'utilité publique
+  definition: Acte (décret ou arrêté) qui autorise l'expropriation des terrains nécessaires à un projet
+    public. Celle de l'aéroport de Notre-Dame-des-Landes date du 9 février 2008.
+  registre: juridique
+  etudes:
+  - 17-defendre-la-terre
+- terme: Délégation intégrale
+  definition: Situation où un exploitant confie la totalité des travaux de son exploitation à une entreprise
+    de travaux agricoles, tout en gardant son statut d'exploitant, ses terres ou ses baux et ses aides.
+    Elle permet d'éviter le bail rural et, dans certains cas, le contrôle des structures (rapport d'information
+    de l'Assemblée nationale n° 1460, 2018).
+  registre: économique
+  etudes:
+  - 03-moins-de-fermes-plus-grandes
+  - 07-une-regulation-a-trois-etages
+- terme: Démantèlement d'exploitation
+  definition: Issue d'une cessation où les terres d'une ferme sont réparties entre plusieurs exploitations
+    voisines au lieu d'être reprises ensemble. La terre reste agricole, l'exploitation disparaît comme
+    unité.
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Document-cadre départemental
+  definition: Liste des surfaces agricoles, naturelles ou forestières ouvertes aux centrales photovoltaïques
+    compatibles, proposée par la chambre d'agriculture et arrêtée par le préfet, révisée au moins tous
+    les cinq ans (article R. 111-61-1 du code de l'urbanisme ; Conseil d'État, 16 mars 2026, n° 495025).
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil
+- terme: Droit à paiement de base (DPB)
+  definition: Droit attaché à l'exploitant qui ouvre l'aide découplée de la PAC sur un hectare admissible.
+    Créé en 2015 à la suite des droits à paiement unique de 2006, il est devenu en 2023 l'aide de base
+    au revenu pour un développement durable (ABRSD). Il peut être cédé ou loué, avec ou sans terre (Cour
+    des comptes, 2023).
+  registre: économique
+  etudes:
+  - 05-une-terre-bon-marche-inaccessible
+- terme: Droit de préemption de la SAFER
+  definition: Droit, créé par la loi du 8 août 1962, d'acheter par priorité un bien agricole mis en vente,
+    à la place de l'acquéreur choisi par le vendeur, pour l'un des objectifs de l'article L. 143-2 du
+    code rural. Il peut s'accompagner d'une offre de prix inférieure (révision de prix), que le vendeur
+    peut refuser en retirant son bien.
+  registre: juridique
+  etudes:
+  - 07-une-regulation-a-trois-etages
+- terme: Droit de préférence forestier
+  definition: Droit des propriétaires de parcelles boisées contiguës, et de la commune, à être informés
+    et à se porter acquéreurs, au prix notifié, lors de la vente d'une propriété classée en nature de
+    bois de moins de 4 hectares (code forestier, art. L. 331-19 et suivants, présentés par le CNPF).
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Droit de rétrocession
+  definition: Droit des anciens propriétaires expropriés de récupérer leurs biens lorsque ceux-ci ne reçoivent
+    pas la destination prévue. Au Larzac, ce droit a pesé sur la recherche d'un montage après 1981 (Crisenoy
+    et Boscheron, INRA, 1986).
+  registre: juridique
+  etudes:
+  - 17-defendre-la-terre
+- terme: Entreprise de travaux agricoles (ETA)
+  definition: Société commerciale qui réalise pour le compte d'exploitations des travaux de culture ou
+    d'élevage (semis, traitements, récolte…). Elle se distingue de la coopérative d'utilisation de matériel
+    agricole (Cuma), propriété collective d'agriculteur·rices.
+  registre: économique
+  etudes:
+  - 03-moins-de-fermes-plus-grandes
+- terme: Faire-valoir direct, faire-valoir indirect
+  definition: 'Le faire-valoir est le titre par lequel un exploitant cultive une terre : en propriété
+    (direct) ou par location, métayage ou mise à disposition (indirect). En 2020, le faire-valoir direct
+    ne couvre qu''environ 20 % de la surface agricole métropolitaine (Insee, 2024).'
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Fichiers fonciers
+  definition: Base de données issue des fichiers fiscaux MAJIC de la DGFiP, enrichie par le Cerema, qui
+    décrit les parcelles et leurs propriétaires. Elle n'est accessible qu'à des ayants droit (État, collectivités,
+    SAFER, recherche), et anonymisée pour les personnes physiques.
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Financiarisation de la terre
+  definition: 'Processus par lequel la terre agricole est détenue, valorisée et échangée comme un actif
+    financier : par des titres de sociétés plutôt que par des parcelles, avec une logique de rendement
+    du capital. On distingue une financiarisation exogène (investisseurs extérieurs) et endogène (sociétés
+    et holdings d''agriculteurs).'
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: Fonds de dotation
+  definition: Personne morale à but non lucratif créée par la loi du 4 août 2008, qui reçoit des biens
+    de façon irrévocable. Les dons et legs qui lui sont faits sont exonérés de droits de mutation s'il
+    est d'intérêt général ; il n'ouvre pas droit à la réduction d'IFI, réservée notamment aux fondations
+    reconnues d'utilité publique.
+  registre: communs
+  etudes:
+  - 18-ce-que-la-liberation-change
+- terme: Forme sociétaire
+  definition: 'Exploitation tenue par une société plutôt que par une personne : EARL (exploitation agricole
+    à responsabilité limitée), GAEC (groupement agricole d''exploitation en commun, réservé aux associé·es
+    qui y travaillent), SCEA (société civile d''exploitation agricole, ouverte à des associé·es non exploitant·es).'
+  registre: économique
+  etudes:
+  - 03-moins-de-fermes-plus-grandes
+- terme: Garantie communale
+  definition: Surface minimale de développement d'un hectare garantie aux communes pour la période 2021-2031,
+    sans condition de densité, quelle que soit la trajectoire régionale (loi n° 2023-630 du 20 juillet
+    2023).
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Groupement de droit particulier local (GDPL)
+  definition: Personne morale de droit coutumier calédonien, créée notamment pour recevoir des terres
+    attribuées dans le cadre de la réforme foncière ; ses membres peuvent y habiter, les cultiver ou les
+    mettre à disposition de porteurs de projet extérieurs (ISEE).
+  registre: foncier
+  etudes:
+  - 16-outre-mer-la-terre-apres-la-plantation
+- terme: Groupement de fait
+  definition: Collectif sans statut juridique, identifiable par son nom et ses publications, qui peut
+    être dissous par décret au titre de l'article L. 212-1 du code de la sécurité intérieure. Le Conseil
+    d'État a qualifié ainsi les Soulèvements de la Terre (2023).
+  registre: juridique
+  etudes:
+  - 17-defendre-la-terre
+- terme: Groupement foncier agricole d'investissement (GFAI)
+  definition: Société de portage foncier ouverte aux épargnants et aux fonds d'investissement, prévue
+    par le projet de loi d'orientation agricole de 2024, retirée par les député·es en commission et absente
+    de la loi n° 2025-268 du 24 mars 2025.
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: Groupement forestier
+  definition: Société civile qui détient des bois et forêts et dont les parts bénéficient, sous engagement
+    de gestion durable, des allègements fiscaux applicables à la forêt (droits de mutation, IFI, crédit
+    d'impôt à l'acquisition) (CNPF).
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Groupement pastoral
+  definition: Groupement d'éleveurs agréé qui gère collectivement une estive ou un alpage, souvent sur
+    des terrains communaux ou d'une association foncière pastorale, sous convention pluriannuelle de pâturage.
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+- terme: Habitation légère de loisirs (HLL)
+  definition: 'Construction démontable ou transportable destinée à une occupation temporaire ou saisonnière
+    de loisirs (art. R. 111-37 du Code de l''urbanisme), dont l''implantation est prévue sur des terrains
+    spécialement aménagés : parcs résidentiels de loisirs, villages de vacances, campings (art. R. 111-38).
+    À ne pas confondre avec la résidence démontable, qui est un habitat permanent.'
+  registre: juridique
+  etudes:
+  - 10-le-droit-d-habiter-la-terre
+- terme: Holding agricole
+  definition: Société dont l'objet est de détenir des parts d'autres sociétés, ici des sociétés qui exploitent
+    ou possèdent des terres. Elle ne déclare pas de surface en propre ; le Groupe Safer en a recensé 100
+    déclarations en 2025, pour 613 millions d'euros.
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: HRI1 (indicateur de risque harmonisé 1)
+  definition: Indicateur européen qui somme les quantités de substances vendues en les pondérant selon
+    quatre groupes de danger. Il est devenu en 2024 l'indicateur principal de la stratégie Écophyto 2030,
+    à la place du NODU.
+  registre: agronomique
+  etudes:
+  - 13-des-sols-qu-on-epuise
+- terme: Indice national des fermages
+  definition: Indice fixé chaque année par arrêté du ministre de l'Agriculture, qui sert à actualiser
+    les loyers des baux ruraux. Il combine pour 60 % le revenu brut d'entreprise agricole à l'hectare
+    (moyenne sur cinq ans) et pour 40 % l'indice de prix du PIB.
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Indivision successorale
+  definition: Situation où plusieurs héritier·es détiennent ensemble un bien sans que leurs parts soient
+    matérialisées. Le droit commun exige l'unanimité pour vendre ou partager ; dans les outre-mer, la
+    loi n° 2018-1244 dite Letchimy permet, pour les successions ouvertes depuis plus de dix ans, de vendre
+    ou partager à la majorité des droits indivis.
+  registre: foncier
+  etudes:
+  - 16-outre-mer-la-terre-apres-la-plantation
+- terme: Installation hors cadre familial
+  definition: Installation d'un·e agriculteur·rice sur une exploitation qui n'appartenait pas à sa famille.
+    En 2020, 39 % des chef·fes installé·es après 2010 étaient dans ce cas (Insee, d'après le recensement
+    agricole).
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Installation photovoltaïque compatible
+  definition: Centrale au sol autorisable hors agrivoltaïsme, seulement sur des terrains réputés incultes
+    ou non exploités et identifiés dans un document-cadre départemental (article L. 111-29 du code de
+    l'urbanisme).
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil
+- terme: Label bas-carbone
+  definition: Cadre de certification volontaire de l'État qui reconnaît des réductions d'émissions ou
+    des absorptions de carbone (boisement, reconstitution de forêts dégradées, pratiques agricoles…) et
+    permet à des financeurs d'acheter les crédits correspondants.
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Lien de nécessité agricole
+  definition: 'Condition posée par la jurisprudence administrative pour admettre une construction en zone
+    agricole : elle doit être nécessaire à l''exploitation. Pour un logement, le juge exige que l''activité
+    impose la présence permanente et rapprochée de l''exploitant·e (CE, 14 mai 1986, Loberot).'
+  registre: juridique
+  etudes:
+  - 10-le-droit-d-habiter-la-terre
+- terme: Marché sociétaire
+  definition: 'Ensemble des opérations sur les sociétés qui possèdent ou exploitent des terres agricoles
+    : cessions de parts ou d''actions, augmentations ou réductions de capital, modifications des droits
+    de vote. Le Groupe Safer l''observe depuis 2016 et, dans un cadre élargi, depuis 2023.'
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: Niveaux de restriction sécheresse
+  definition: 'Vigilance, alerte, alerte renforcée, crise : quatre niveaux fixés par arrêté préfectoral,
+    qui limitent ou interdisent progressivement les usages de l''eau. Au niveau crise, seuls les usages
+    prioritaires (santé, sécurité, eau potable) sont maintenus.'
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+- terme: NODU (nombre de doses unités)
+  definition: 'Indicateur d''intensité d''usage des pesticides : surface qui serait traitée une année,
+    à la dose maximale homologuée, avec les produits vendus. Il neutralise le remplacement d''une substance
+    par une autre efficace à plus faible dose.'
+  registre: agronomique
+  etudes:
+  - 13-des-sols-qu-on-epuise
+- terme: Obligation réelle environnementale (ORE)
+  definition: Contrat notarié par lequel un propriétaire attache à son terrain, pour lui et ses successeurs,
+    des obligations de protection de la biodiversité ou des fonctions écologiques, pour 99 ans au plus
+    (article L. 132-3 du code de l'environnement).
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Organisme unique de gestion collective (OUGC)
+  definition: Structure qui détient, pour tout un bassin, l'autorisation de prélèvement d'eau pour l'irrigation
+    et répartit le volume entre irrigant·es. Dans le Marais poitevin, c'est l'Établissement public du
+    Marais poitevin.
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+- terme: Pas-de-porte
+  definition: Somme versée, en dehors du loyer, pour obtenir la reprise d'un bail rural, souvent dissimulée
+    dans une surévaluation du matériel ou des bâtiments. La pratique est pénalement réprimée par le code
+    rural (rapport d'information de l'Assemblée nationale n° 1460, 2018).
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Permaculture
+  definition: Méthode de conception de lieux de vie et de production qui imite les relations observées
+    dans la nature, fondée dans les années 1970 par Bill Mollison et David Holmgren ; à la fois conception,
+    pratiques, vision du monde et mouvement, restée largement à l'écart de la recherche scientifique (Ferguson
+    et Lovell, 2014).
+  registre: agronomique
+  etudes:
+  - 14-vers-une-agriculture-du-vivant
+- terme: Personne non issue du milieu agricole (NIMA)
+  definition: Personne qui s'installe sans avoir grandi dans une famille d'agriculteurs. Catégorie d'usage
+    des réseaux d'accompagnement, sans définition statistique officielle stable ; elle recoupe en partie
+    l'installation hors cadre familial.
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Plan simple de gestion (PSG)
+  definition: Document de gestion durable d'une forêt privée, agréé par le Centre national de la propriété
+    forestière, qui programme coupes et travaux. Il couvre 3,1 millions d'hectares, soit 18 % de la forêt
+    française (IGN, 2024).
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Point d'accueil départemental unique
+  definition: Porte d'entrée, dans chaque département, du réseau France services agriculture créé par
+    la loi du 24 mars 2025 ; il propose aux exploitant·es, cinq ans avant l'âge légal de la retraite,
+    de recenser leur ferme et leur projet de cession.
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Point de capture
+  definition: 'Maillon d''un montage par lequel la valeur ou le pouvoir sur une terre libérée peut être
+    repris : parts cessibles, option d''achat, terme d''un titre, gouvernance fermée ou porteur devenu
+    bailleur ordinaire.'
+  registre: communs
+  etudes:
+  - 18-ce-que-la-liberation-change
+- terme: Portage foncier
+  definition: Acquisition et détention temporaire ou durable d'une terre par un tiers (SAFER, collectivité,
+    foncière, fondation) qui la loue à l'exploitant·e, lequel peut parfois la racheter plus tard. Le CGAAER
+    distingue un portage court (jusqu'à 2 ans), moyen (2 à 12 ans) et long (10 à 30 ans).
+  registre: économique
+  etudes:
+  - 06-la-dette-qui-fait-vendre
+- terme: Principes de conception (Ostrom)
+  definition: 'Régularités observées par Elinor Ostrom dans les institutions de communs qui durent : limites
+    claires des usagers et de la ressource, règles adaptées au lieu, décision collective, surveillance,
+    sanctions graduées, règlement local des conflits, reconnaissance externe, emboîtement des niveaux.'
+  registre: communs
+  etudes:
+  - 18-ce-que-la-liberation-change
+- terme: Prise de contrôle
+  definition: Au sens du code de commerce auquel renvoie la loi Sempastous, situation d'un associé qui
+    détient, directement ou indirectement, plus de 40 % des droits de vote sans qu'un autre en détienne
+    davantage, ou la majorité.
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: Production brute standard (PBS)
+  definition: Valeur potentielle de la production d'une exploitation, calculée à partir de coefficients
+    par hectare et par animal. Elle classe les fermes en micro (moins de 25 000 euros), petites, moyennes
+    et grandes (250 000 euros ou plus).
+  registre: économique
+  etudes:
+  - 03-moins-de-fermes-plus-grandes
+- terme: Projet d'envergure nationale ou européenne
+  definition: Grand projet (infrastructure, industrie, énergie) dont la consommation d'espaces est décomptée
+    dans un forfait national mutualisé plutôt que dans l'enveloppe de la région qui l'accueille (loi de
+    2023). Le Cerema évoque 12 500 hectares réservés à ce titre.
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Projet de territoire pour la gestion de l'eau (PTGE)
+  definition: Démarche de concertation entre usagers d'un bassin pour adapter les prélèvements à la ressource
+    disponible, encadrée par une instruction du Gouvernement du 7 mai 2019. L'objectif affiché était d'au
+    moins 50 projets en 2022 et 100 en 2027.
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+- terme: Propriétaire-bailleur
+  definition: Personne ou société qui possède une terre agricole et la loue à un exploitant sous le statut
+    du fermage. Le CGAAER en estime le nombre à plus de deux millions (2023).
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Raison impérative d'intérêt public majeur
+  definition: 'Condition à laquelle un projet peut déroger à l''interdiction de détruire des espèces protégées
+    ou leurs habitats. Elle a été au cœur du contentieux de l''A69 : refusée par le tribunal de Toulouse
+    (2025), admise par la cour d''appel (2025).'
+  registre: juridique
+  etudes:
+  - 17-defendre-la-terre
+- terme: Réforme foncière guadeloupéenne
+  definition: Programme engagé en 1981 par lequel la SAFER de Guadeloupe a acquis environ 10 500 hectares
+    d'anciens domaines sucriers et installé environ 700 agriculteurs regroupés en 38 groupements fonciers
+    agricoles (Sénat, 2023).
+  registre: foncier
+  etudes:
+  - 16-outre-mer-la-terre-apres-la-plantation
+- terme: Régime forestier
+  definition: Ensemble de règles de gestion et de conservation qui s'applique aux forêts de l'État et
+    des collectivités ; l'Office national des forêts en est le gestionnaire unique et élabore, avec la
+    commune, l'aménagement forestier qui programme coupes et travaux (ONF).
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Régime Monichon
+  definition: 'Allègement des droits de succession et de donation sur les bois et forêts et les parts
+    de groupements forestiers : seul un quart de la valeur est taxé, contre un engagement de gestion durable
+    pendant trente ans (CNPF, d''après l''article 793 du code général des impôts).'
+  registre: foncier
+  etudes:
+  - 15-la-foret-nouvel-actif
+- terme: Rendement locatif brut
+  definition: Rapport entre le loyer annuel d'un hectare loué et son prix d'achat, avant impôts. Il s'établit
+    à 2,88 % en 2025 selon le Groupe Safer.
+  registre: économique
+  etudes:
+  - 05-une-terre-bon-marche-inaccessible
+- terme: Répertoire départ-installation (RDI)
+  definition: Fichier, tenu par les chambres d'agriculture, qui met en relation cédant·es sans successeur
+    et candidat·es à l'installation. La Cour des comptes a recommandé en 2023 d'en faire le bilan et de
+    le mettre en réseau national.
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Réserve de substitution
+  definition: Retenue remplie en hiver par pompage dans une nappe ou une rivière, pour irriguer l'été
+    à la place de prélèvements estivaux. La substitution suppose que le prélèvement d'été diminue d'autant
+    ; le tribunal administratif de Poitiers a annulé en 2023 des projets qui augmentaient au contraire
+    le prélèvement annuel.
+  registre: écologique
+  etudes:
+  - 12-l-eau-condition-de-la-terre
+  - 17-defendre-la-terre
+- terme: Résidence démontable constituant l'habitat permanent
+  definition: Installation sans fondation, pouvant être autonome vis-à-vis des réseaux publics, occupée
+    comme résidence principale au moins huit mois par an et facilement et rapidement démontable à tout
+    moment (art. R. 111-51 du Code de l'urbanisme, issu du décret n° 2015-482 du 27 avril 2015).
+  registre: juridique
+  etudes:
+  - 10-le-droit-d-habiter-la-terre
+- terme: Rétention foncière
+  definition: Fait, pour un propriétaire, de ne pas louer ni vendre une terre agricole, souvent dans l'attente
+    d'un classement constructible ou par défiance envers le bail rural. La mission parlementaire de 2018
+    la juge peu documentée.
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+- terme: Revenu d'entreprise agricole
+  definition: Solde des comptes économiques de l'agriculture qui rémunère le travail non salarié et les
+    capitaux propres des exploitants, après salaires, fermages et intérêts. Il inclut les subventions
+    d'exploitation (Eurostat, aact_eaa01).
+  registre: économique
+  etudes:
+  - 05-une-terre-bon-marche-inaccessible
+- terme: Révision de prix
+  definition: Préemption assortie d'une offre d'achat à un prix inférieur à celui notifié, quand la SAFER
+    juge ce dernier exagéré. Le vendeur peut accepter, retirer son bien de la vente ou demander au juge
+    de fixer le prix.
+  registre: juridique
+  etudes:
+  - 07-une-regulation-a-trois-etages
+- terme: RMQS (Réseau de mesures de la qualité des sols)
+  definition: 'Réseau national du Gis Sol : 2 240 sites sur une grille de 16 km, échantillonnés tous les
+    quinze ans. La première campagne métropolitaine date de 2000-2009, la seconde court de 2016 à 2027.'
+  registre: agronomique
+  etudes:
+  - 13-des-sols-qu-on-epuise
+- terme: SAFER
+  definition: 'Société d''aménagement foncier et d''établissement rural : société anonyme sans but lucratif,
+    créée par la loi d''orientation du 5 août 1960, chargée d''une mission de service public d''aménagement
+    rural sous la tutelle des ministères de l''Agriculture et des Finances. Elle achète des biens ruraux
+    pour les revendre ou les louer à des attributaires choisis selon des objectifs fixés par la loi.'
+  registre: juridique
+  etudes:
+  - 07-une-regulation-a-trois-etages
+- terme: Secteur de taille et de capacité d'accueil limitées (STECAL)
+  definition: Secteur que le règlement d'un plan local d'urbanisme peut délimiter « à titre exceptionnel
+    » dans une zone agricole, naturelle ou forestière pour y autoriser des constructions, des terrains
+    destinés aux gens du voyage ou des résidences démontables, après avis de la CDPENAF (art. L. 151-13
+    du Code de l'urbanisme).
+  registre: juridique
+  etudes:
+  - 10-le-droit-d-habiter-la-terre
+- terme: Section de commune
+  definition: Partie d'une commune qui possède à titre permanent et exclusif des biens ou des droits distincts
+    de ceux de la commune. C'est une personne morale de droit public ; ses membres, les habitant·es domicilié·es
+    sur son territoire, ont la jouissance des biens mais pas leur propriété (art. L. 2411-1 du CGCT, Conseil
+    constitutionnel, 2011).
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+- terme: Seuil d'agrandissement significatif
+  definition: Surface, fixée par le préfet de région entre 1,5 et 3 fois la surface agricole utile régionale
+    moyenne, au-delà de laquelle une prise de contrôle de société agricole est soumise à autorisation
+    (article L. 333-2 du code rural, issu de la loi n° 2021-1756).
+  registre: juridique
+  etudes:
+  - 04-quand-la-terre-devient-un-actif
+- terme: Société foncière solidaire
+  definition: Entreprise agréée ESUS dont l'activité principale est, notamment, l'installation d'agriculteurs
+    en systèmes agroécologiques ; une souscription à son capital ouvre droit à une réduction d'impôt sur
+    le revenu (art. 199 terdecies-0 AB du CGI), de 25 % pour les versements de 2026 et 2027.
+  registre: communs
+  etudes:
+  - 18-ce-que-la-liberation-change
+- terme: Solde disponible
+  definition: Ce qui reste à l'exploitant·e une fois déduits de l'excédent brut d'exploitation les annuités
+    d'emprunts, les frais financiers et ses cotisations sociales. Il sert à vivre et à autofinancer (Agreste,
+    Rica).
+  registre: économique
+  etudes:
+  - 06-la-dette-qui-fait-vendre
+- terme: Substitution
+  definition: 'Opération par laquelle la SAFER désigne l''acquéreur d''un bien sans l''acheter elle-même
+    : la vente est conclue directement entre le vendeur et l''attributaire qu''elle a retenu. La Cour
+    des comptes (2014) a relevé qu''elle était devenue un mode d''intervention dominant.'
+  registre: juridique
+  etudes:
+  - 07-une-regulation-a-trois-etages
+- terme: Taux d'endettement
+  definition: Rapport entre l'ensemble des dettes d'une exploitation et le total de son actif, tel que
+    le calcule le Rica. Il s'établit à 42,1 % en moyenne en 2024 (Agreste).
+  registre: économique
+  etudes:
+  - 06-la-dette-qui-fait-vendre
+- terme: Taux de couverture
+  definition: Rapport entre la surface projetée au sol des modules et celle de la parcelle. Plafonné à
+    40 % pour les installations agrivoltaïques de plus de 10 MWc hors technologies éprouvées ; des chercheur·es
+    de l'INRAE recommandaient 25 % (rapport AN n° 2200, 2024).
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil
+- terme: Taux de remplacement des départs
+  definition: Rapport, calculé par la MSA, entre les entrées et les sorties de chef·fes d'exploitation
+    dans le régime des non-salariés agricoles une année donnée. En dessous de 100 %, la population des
+    chef·fes diminue.
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Tenure inversée
+  definition: Situation où de petits propriétaires louent leurs terres à des exploitants plus grands et
+    mieux dotés qu'eux. L'expression est de Jean-Philippe Colin (Études rurales, 2014), reprise par la
+    mission d'information de l'Assemblée nationale sur le foncier agricole (2018).
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Terres communes
+  definition: 'Catégorie de l''enquête européenne sur la structure des exploitations (« common land »)
+    : terres qui n''appartiennent directement à aucune exploitation mais sur lesquelles s''exercent des
+    droits d''usage collectifs, comme les estives et pâturages communaux.'
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+- terme: Terres coutumières
+  definition: 'En Nouvelle-Calédonie, terres régies par la coutume kanak : réserves, terres attribuées
+    aux groupements de droit particulier local et terres attribuées au titre du lien à la terre. L''article
+    18 de la loi organique du 19 mars 1999 les déclare inaliénables, incessibles, incommutables et insaisissables
+    (ISEE).'
+  registre: foncier
+  etudes:
+  - 16-outre-mer-la-terre-apres-la-plantation
+  - 18-ce-que-la-liberation-change
+- terme: Terres incultes ou manifestement sous-exploitées
+  alias:
+  - Procédure des terres incultes
+  definition: Procédure du code rural (art. L. 125-1 et suivants) qui permet d'imposer à un propriétaire
+    la remise en valeur d'une parcelle abandonnée, par lui-même ou par un exploitant à qui elle est louée,
+    au besoin d'office. Selon le ministère, elle dure trois ans en moyenne et reste peu utilisée (2021).
+  registre: juridique
+  etudes:
+  - 11-terres-oubliees-communs-effaces
+  - 16-outre-mer-la-terre-apres-la-plantation
+- terme: Terres libres, terres louées
+  definition: 'Une terre est vendue libre quand aucun bail rural ne la grève au moment de la vente ; louée
+    quand un fermier en place la cultive. La terre louée se vend moins cher : 17 % de moins en 2025 selon
+    le Groupe Safer, écart qui mesure en partie la valeur du droit du fermier.'
+  registre: économique
+  etudes:
+  - 05-une-terre-bon-marche-inaccessible
+- terme: Titrement
+  definition: Opération qui donne à un occupant de longue date un titre de propriété opposable, par exemple
+    un acte de notoriété acquisitive établi par un·e notaire. Dans plusieurs outre-mer, une part importante
+    des terres est occupée sans titre ou sous des titres anciens non mis à jour (Sénat, 2023).
+  registre: foncier
+  etudes:
+  - 16-outre-mer-la-terre-apres-la-plantation
+- terme: Transfert entre époux
+  definition: Reprise de l'exploitation par le conjoint quand l'exploitant·e prend sa retraite. La MSA
+    l'isole dans ses statistiques d'installation ; en 2025, 88,7 % de ces transferts se font de l'homme
+    vers la femme.
+  registre: foncier
+  etudes:
+  - 01-a-qui-va-la-ferme
+- terme: Trois couches de la terre
+  definition: Distinction entre l'exploitation (qui cultive), la propriété (qui possède le sol) et le
+    capital (qui détient les parts des sociétés qui exploitent ou possèdent). La statistique publique
+    mesure bien la première, mal les deux autres.
+  registre: foncier
+  etudes:
+  - 02-qui-possede-la-terre
+- terme: Valeur de reprise
+  definition: Prix payé par qui reprend une exploitation pour ses bâtiments, son matériel, son cheptel,
+    ses droits et parfois l'accès aux baux. La Cour des comptes (2023) relève qu'aucune série statistique
+    ne la suit dans le temps.
+  registre: économique
+  etudes:
+  - 05-une-terre-bon-marche-inaccessible
+- terme: Zéro artificialisation nette (ZAN)
+  definition: 'Objectif fixé pour 2050 par la loi Climat et résilience : toute surface nouvellement artificialisée
+    devra être compensée par une surface équivalente rendue à la nature ou à l''agriculture. L''étape
+    intermédiaire est une division par deux de la consommation d''espaces entre 2021 et 2031.'
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Zone détendue (zone C)
+  definition: Communes où l'offre de logements excède ou équilibre la demande selon le zonage ABC du code
+    de la construction et de l'habitation. Le Cerema y situe la majorité de la consommation d'espaces.
+  registre: juridique
+  etudes:
+  - 08-le-beton-avance-moins
+- terme: Zone témoin
+  definition: Parcelle sans panneaux, d'au moins 5 % de la parcelle équipée et d'un hectare au plus, qui
+    sert de référence pour vérifier que le rendement sous panneaux reste supérieur à 90 % (article R.
+    314-114 du code de l'énergie).
+  registre: juridique
+  etudes:
+  - 09-la-rente-du-soleil

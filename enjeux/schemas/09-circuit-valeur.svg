@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="t d">
+  <title id="t">Le circuit de la valeur d'une centrale solaire sur terre agricole louée</title>
+  <desc id="d">Les recettes de la vente d'électricité vont au développeur, qui tient le sol par bail emphytéotique pour quarante ans et plus. Il verse au propriétaire un loyer de l'ordre de 4 euros par kilowatt-crête et par an, soit environ 2 800 à 5 200 euros par hectare, quand le fermage moyen est de 171 euros. L'exploitant agricole reçoit un soutien ou une prestation dont le montant dépend du montage, et perd souvent la protection du bail rural. La régulation publique contrôle l'autorisation, pas le contrat ; le coût résiduel du démantèlement retombe sur le propriétaire.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <rect class="s-box" x="250" y="16" width="220" height="70" rx="8"/>
+  <text class="s-txt" x="360" y="44" font-size="14" text-anchor="middle">Réseau et acheteurs</text>
+  <text class="s-mut" x="360" y="66" font-size="13" text-anchor="middle">électricité vendue</text>
+
+  <line class="s-arrow" x1="360" y1="88" x2="360" y2="134" marker-end="url(#ah)"/>
+  <text class="s-mut" x="372" y="116" font-size="13">recettes de la vente</text>
+
+  <rect class="s-acc" x="230" y="138" width="260" height="84" rx="8"/>
+  <text class="s-txt" x="360" y="164" font-size="15" text-anchor="middle">Développeur (emphytéote)</text>
+  <text class="s-txt" x="360" y="186" font-size="14" text-anchor="middle">tient le sol 40 ans + 10</text>
+  <text class="s-mut" x="360" y="208" font-size="13" text-anchor="middle">bail de 18 à 99 ans</text>
+
+  <line class="s-arrow" x1="236" y1="214" x2="140" y2="288" marker-end="url(#ah)"/>
+  <text class="s-mut" x="20" y="232" font-size="13">loyer ≈ 4 €/kWc/an</text>
+  <text class="s-mut" x="20" y="250" font-size="13">≈ 2 800 à 5 200 €/ha</text>
+
+  <line class="s-arrow" x1="484" y1="214" x2="580" y2="288" marker-end="url(#ah)"/>
+  <text class="s-mut" x="700" y="232" font-size="13" text-anchor="end">soutien ou prestation</text>
+  <text class="s-mut" x="700" y="250" font-size="13" text-anchor="end">selon le montage</text>
+
+  <rect class="s-box" x="20" y="292" width="220" height="86" rx="8"/>
+  <text class="s-txt" x="130" y="318" font-size="14" text-anchor="middle">Propriétaire du sol</text>
+  <text class="s-txt" x="130" y="340" font-size="14" text-anchor="middle">signe la promesse</text>
+  <text class="s-mut" x="130" y="362" font-size="13" text-anchor="middle">moment de bascule</text>
+
+  <rect class="s-box" x="480" y="292" width="220" height="86" rx="8"/>
+  <text class="s-txt" x="590" y="318" font-size="14" text-anchor="middle">Exploitant·e agricole</text>
+  <text class="s-txt" x="590" y="340" font-size="14" text-anchor="middle">commodat, convention</text>
+  <text class="s-mut" x="590" y="362" font-size="13" text-anchor="middle">ou bail rural maintenu</text>
+
+  <line class="s-arrow" x1="478" y1="336" x2="244" y2="336" marker-end="url(#ah)"/>
+  <text class="s-mut" x="360" y="324" font-size="13" text-anchor="middle">fermage ≈ 171 €/ha</text>
+  <text class="s-mut" x="360" y="356" font-size="13" text-anchor="middle">si le bail rural reste</text>
+
+  <rect class="s-blue" x="20" y="404" width="680" height="66" rx="8"/>
+  <text class="s-txt" x="190" y="430" font-size="14" text-anchor="middle">Préfet et CDPENAF</text>
+  <text class="s-mut" x="190" y="452" font-size="13" text-anchor="middle">contrôlent l'autorisation</text>
+  <text class="s-txt" x="530" y="430" font-size="14" text-anchor="middle">Démantèlement résiduel</text>
+  <text class="s-mut" x="530" y="452" font-size="13" text-anchor="middle">à la charge du propriétaire</text>
+
+  <rect class="s-ok" x="20" y="486" width="680" height="66" rx="8"/>
+  <text class="s-txt" x="190" y="512" font-size="14" text-anchor="middle">Propriété hors marché</text>
+  <text class="s-mut" x="190" y="534" font-size="13" text-anchor="middle">aucune part ne capte la rente</text>
+  <text class="s-txt" x="530" y="512" font-size="14" text-anchor="middle">Bail long à clauses</text>
+  <text class="s-mut" x="530" y="534" font-size="13" text-anchor="middle">l'usage reste agricole</text>
+</svg>

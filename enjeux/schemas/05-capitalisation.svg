@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 548" role="img" aria-labelledby="t d">
+  <title id="t">Comment une aide à l'hectare passe dans le prix d'accès à la terre</title>
+  <desc id="d">L'aide de base de la PAC est versée à qui exploite l'hectare. Elle renforce la concurrence pour la surface. Sa valeur peut fuir par trois portes : le loyer, que le statut du fermage plafonne ; la reprise du bail, où un pas-de-porte illégal et mal mesuré peut la capter ; le prix de vente, où la capitalisation n'est que partielle. La régulation publique ferme surtout la première porte. C'est l'entrant qui paie ce qui fuit ; la libération consiste à retirer la terre de la vente et de la reprise.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <rect class="s-acc" x="200" y="16" width="320" height="76" rx="8"/>
+  <text class="s-txt" x="360" y="42" font-size="15" text-anchor="middle">Aide de base à l'hectare</text>
+  <text class="s-txt" x="360" y="62" font-size="14" text-anchor="middle">DPB, puis ABRSD (2023)</text>
+  <text class="s-mut" x="360" y="82" font-size="13" text-anchor="middle">114 €/ha en moyenne (2021)</text>
+
+  <line class="s-arrow" x1="360" y1="94" x2="360" y2="124" marker-end="url(#ah)"/>
+
+  <rect class="s-box" x="160" y="128" width="400" height="58" rx="8"/>
+  <text class="s-txt" x="360" y="152" font-size="14" text-anchor="middle">Versée à qui exploite</text>
+  <text class="s-mut" x="360" y="172" font-size="13" text-anchor="middle">concurrence pour la surface</text>
+
+  <line class="s-arrow" x1="240" y1="188" x2="128" y2="226" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="360" y1="188" x2="360" y2="226" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="480" y1="188" x2="592" y2="226" marker-end="url(#ah)"/>
+
+  <text class="s-mut" x="20" y="222" font-size="13">Trois portes de fuite</text>
+
+  <rect class="s-box" x="20" y="230" width="216" height="96" rx="8"/>
+  <text class="s-txt" x="128" y="256" font-size="14" text-anchor="middle">1. Le loyer</text>
+  <text class="s-mut" x="128" y="278" font-size="13" text-anchor="middle">plafonné par le fermage</text>
+  <text class="s-mut" x="128" y="298" font-size="13" text-anchor="middle">171 €/ha/an (2024)</text>
+  <text class="s-mut" x="128" y="316" font-size="13" text-anchor="middle">porte surtout fermée</text>
+
+  <rect class="s-acc" x="252" y="230" width="216" height="96" rx="8"/>
+  <text class="s-txt" x="360" y="256" font-size="14" text-anchor="middle">2. La reprise du bail</text>
+  <text class="s-mut" x="360" y="278" font-size="13" text-anchor="middle">pas-de-porte, matériel</text>
+  <text class="s-mut" x="360" y="298" font-size="13" text-anchor="middle">surévalué : illégal,</text>
+  <text class="s-mut" x="360" y="316" font-size="13" text-anchor="middle">non mesuré</text>
+
+  <rect class="s-box" x="484" y="230" width="216" height="96" rx="8"/>
+  <text class="s-txt" x="592" y="256" font-size="14" text-anchor="middle">3. Le prix de vente</text>
+  <text class="s-mut" x="592" y="278" font-size="13" text-anchor="middle">6 460 €/ha libre (2025)</text>
+  <text class="s-mut" x="592" y="298" font-size="13" text-anchor="middle">capitalisation partielle,</text>
+  <text class="s-mut" x="592" y="316" font-size="13" text-anchor="middle">mal estimée en France</text>
+
+  <rect class="s-blue" x="20" y="344" width="680" height="62" rx="8"/>
+  <text class="s-txt" x="360" y="370" font-size="14" text-anchor="middle">Régulation publique</text>
+  <text class="s-mut" x="360" y="392" font-size="13" text-anchor="middle">fermage · SAFER · structures</text>
+
+  <line class="s-arrow" x1="240" y1="408" x2="190" y2="442" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="480" y1="408" x2="530" y2="442" marker-end="url(#ah)"/>
+
+  <rect class="s-acc" x="20" y="446" width="330" height="86" rx="8"/>
+  <text class="s-txt" x="185" y="474" font-size="14" text-anchor="middle">Qui paie : l'entrant·e</text>
+  <text class="s-mut" x="185" y="496" font-size="13" text-anchor="middle">achat, reprise, pas-de-porte</text>
+  <text class="s-mut" x="185" y="516" font-size="13" text-anchor="middle">sur fonds propres ou crédit</text>
+
+  <rect class="s-ok" x="370" y="446" width="330" height="86" rx="8"/>
+  <text class="s-txt" x="535" y="474" font-size="14" text-anchor="middle">Libération</text>
+  <text class="s-mut" x="535" y="496" font-size="13" text-anchor="middle">retirer la terre de la vente</text>
+  <text class="s-mut" x="535" y="516" font-size="13" text-anchor="middle">et de la reprise payante</text>
+</svg>

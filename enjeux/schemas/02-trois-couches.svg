@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 556" role="img" aria-labelledby="t d">
+  <title id="t">Trois couches : la propriété du sol, l'exploitation, le capital et le travail</title>
+  <desc id="d">Le sol appartient surtout à des personnes qui ne l'exploitent pas : plus de deux millions de propriétaires-bailleurs, des associés qui louent à leur propre société, et des exploitants propriétaires qui ne tiennent plus qu'un cinquième de la surface. L'exploitation, de plus en plus souvent une société, tient l'usage par bail ou mise à disposition. Le capital de la société circule par cessions de parts, hors du statut du fermage. La régulation publique encadre surtout la première couche.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="28" font-size="13">1. Qui possède le sol</text>
+
+  <rect class="s-box" x="20" y="40" width="216" height="86" rx="8"/>
+  <text class="s-txt" x="128" y="66" font-size="14" text-anchor="middle">Propriétaires-bailleurs</text>
+  <text class="s-txt" x="128" y="88" font-size="14" text-anchor="middle">plus de 2 millions</text>
+  <text class="s-mut" x="128" y="110" font-size="13" text-anchor="middle">estimation CGAAER, 2023</text>
+
+  <rect class="s-box" x="252" y="40" width="216" height="86" rx="8"/>
+  <text class="s-txt" x="360" y="66" font-size="14" text-anchor="middle">Associé·es qui louent</text>
+  <text class="s-txt" x="360" y="88" font-size="14" text-anchor="middle">à leur propre société</text>
+  <text class="s-mut" x="360" y="110" font-size="13" text-anchor="middle">27 % de la SAU en 2020</text>
+
+  <rect class="s-box" x="484" y="40" width="216" height="86" rx="8"/>
+  <text class="s-txt" x="592" y="66" font-size="14" text-anchor="middle">Exploitant·es</text>
+  <text class="s-txt" x="592" y="88" font-size="14" text-anchor="middle">propriétaires</text>
+  <text class="s-mut" x="592" y="110" font-size="13" text-anchor="middle">20 % de la SAU en 2020</text>
+
+  <line class="s-arrow" x1="128" y1="128" x2="128" y2="212" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="360" y1="128" x2="360" y2="212" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="592" y1="128" x2="592" y2="212" marker-end="url(#ah)"/>
+  <text class="s-mut" x="138" y="166" font-size="13">bail rural, 9 ans</text>
+  <text class="s-mut" x="138" y="184" font-size="13">51 % de la SAU</text>
+  <text class="s-mut" x="370" y="166" font-size="13">mise à disposition</text>
+  <text class="s-mut" x="582" y="166" font-size="13" text-anchor="end">faire-valoir</text>
+  <text class="s-mut" x="582" y="184" font-size="13" text-anchor="end">direct</text>
+
+  <text class="s-mut" x="20" y="208" font-size="13">2. Qui exploite</text>
+  <rect class="s-box" x="20" y="216" width="680" height="76" rx="8"/>
+  <text class="s-txt" x="360" y="246" font-size="15" text-anchor="middle">L'exploitation : 390 000 en 2020</text>
+  <text class="s-mut" x="360" y="270" font-size="13" text-anchor="middle">42 % sous forme de société</text>
+
+  <line class="s-arrow" x1="180" y1="370" x2="180" y2="296" marker-end="url(#ah)"/>
+  <text class="s-mut" x="190" y="330" font-size="13">contrôle par les parts</text>
+  <line class="s-arrow" x1="540" y1="294" x2="540" y2="368" marker-end="url(#ah)"/>
+  <text class="s-mut" x="530" y="330" font-size="13" text-anchor="end">qui y travaille ?</text>
+
+  <text class="s-mut" x="20" y="364" font-size="13">3. Capital et travail</text>
+  <rect class="s-acc" x="20" y="372" width="320" height="84" rx="8"/>
+  <text class="s-txt" x="180" y="398" font-size="14" text-anchor="middle">Capital : parts sociales</text>
+  <text class="s-txt" x="180" y="420" font-size="14" text-anchor="middle">cessibles, hors fermage</text>
+  <text class="s-mut" x="180" y="442" font-size="13" text-anchor="middle">voir l'étude E04</text>
+
+  <rect class="s-box" x="380" y="372" width="320" height="84" rx="8"/>
+  <text class="s-txt" x="540" y="398" font-size="14" text-anchor="middle">Chef·fes, coexploitant·es :</text>
+  <text class="s-txt" x="540" y="420" font-size="14" text-anchor="middle">près de 60 % des ETP</text>
+  <text class="s-mut" x="540" y="442" font-size="13" text-anchor="middle">saisonnier·es : 11 % (2020)</text>
+
+  <rect class="s-blue" x="20" y="474" width="680" height="66" rx="8"/>
+  <text class="s-txt" x="360" y="500" font-size="14" text-anchor="middle">Régulation publique (E07)</text>
+  <text class="s-mut" x="360" y="524" font-size="13" text-anchor="middle">fermage · SAFER · structures</text>
+</svg>

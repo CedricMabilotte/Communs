@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 516" role="img" aria-labelledby="t d">
+  <title id="t">La chaîne de la libération et ses quatre points de capture</title>
+  <desc id="d">Une terre sort du marché quand quelqu'un paie son achat, qu'un porteur la tient, qu'un titre en confie l'usage à un collectif et que des paysan·nes ou des habitant·es l'exercent. À chaque maillon, la libération peut être reprise : par ceux qui financent et décident, par des parts cessibles ou une option d'achat, par le terme du titre, ou par un porteur qui redevient un bailleur ordinaire.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="60" y="22" font-size="13">La chaîne</text>
+  <text class="s-mut" x="470" y="22" font-size="13">Où la libération se reprend</text>
+
+  <rect class="s-box" x="60" y="34" width="370" height="84" rx="8"/>
+  <text class="s-txt" x="245" y="60" font-size="14" text-anchor="middle">1. Qui paie l'achat</text>
+  <text class="s-mut" x="245" y="82" font-size="13" text-anchor="middle">épargne, dons, impôt,</text>
+  <text class="s-mut" x="245" y="102" font-size="13" text-anchor="middle">prêts des membres</text>
+
+  <line class="s-arrow" x1="245" y1="120" x2="245" y2="152" marker-end="url(#ah)"/>
+
+  <rect class="s-ok" x="60" y="156" width="370" height="84" rx="8"/>
+  <text class="s-txt" x="245" y="182" font-size="14" text-anchor="middle">2. Le porteur tient le sol</text>
+  <text class="s-mut" x="245" y="204" font-size="13" text-anchor="middle">État, commune, fondation,</text>
+  <text class="s-mut" x="245" y="224" font-size="13" text-anchor="middle">fonds, foncière, association</text>
+
+  <line class="s-arrow" x1="245" y1="242" x2="245" y2="292" marker-end="url(#ah)"/>
+  <text class="s-mut" x="256" y="264" font-size="13">titre : bail, emphytéose,</text>
+  <text class="s-mut" x="256" y="282" font-size="13">usufruit, convention</text>
+
+  <rect class="s-ok" x="60" y="296" width="370" height="84" rx="8"/>
+  <text class="s-txt" x="245" y="322" font-size="14" text-anchor="middle">3. Le collectif d'usage</text>
+  <text class="s-mut" x="245" y="344" font-size="13" text-anchor="middle">association, SCIC,</text>
+  <text class="s-mut" x="245" y="364" font-size="13" text-anchor="middle">société civile</text>
+
+  <line class="s-arrow" x1="245" y1="382" x2="245" y2="414" marker-end="url(#ah)"/>
+
+  <rect class="s-box" x="60" y="418" width="370" height="84" rx="8"/>
+  <text class="s-txt" x="245" y="444" font-size="14" text-anchor="middle">4. Paysan·nes, habitant·es</text>
+  <text class="s-mut" x="245" y="466" font-size="13" text-anchor="middle">travail ; fermage ou</text>
+  <text class="s-mut" x="245" y="486" font-size="13" text-anchor="middle">redevance au porteur</text>
+
+  <line class="s-arrow" x1="40" y1="460" x2="40" y2="200" marker-end="url(#ah)"/>
+  <line class="s-line" x1="40" y1="460" x2="58" y2="460"/>
+  <line class="s-line" x1="40" y1="200" x2="58" y2="200"/>
+
+  <rect class="s-acc" x="470" y="34" width="230" height="84" rx="8"/>
+  <text class="s-txt" x="585" y="60" font-size="13" text-anchor="middle">Qui finance décide :</text>
+  <text class="s-txt" x="585" y="80" font-size="13" text-anchor="middle">les usager·es sont souvent</text>
+  <text class="s-txt" x="585" y="100" font-size="13" text-anchor="middle">sans voix</text>
+
+  <rect class="s-acc" x="470" y="156" width="230" height="84" rx="8"/>
+  <text class="s-txt" x="585" y="182" font-size="13" text-anchor="middle">Parts cessibles, option</text>
+  <text class="s-txt" x="585" y="202" font-size="13" text-anchor="middle">d'achat, dévolution</text>
+  <text class="s-txt" x="585" y="222" font-size="13" text-anchor="middle">non écrite</text>
+
+  <rect class="s-acc" x="470" y="296" width="230" height="84" rx="8"/>
+  <text class="s-txt" x="585" y="322" font-size="13" text-anchor="middle">Le titre a un terme :</text>
+  <text class="s-txt" x="585" y="342" font-size="13" text-anchor="middle">30 ans pour un usufruit,</text>
+  <text class="s-txt" x="585" y="362" font-size="13" text-anchor="middle">2083 au Larzac</text>
+
+  <rect class="s-acc" x="470" y="418" width="230" height="84" rx="8"/>
+  <text class="s-txt" x="585" y="444" font-size="13" text-anchor="middle">Le porteur redevient</text>
+  <text class="s-txt" x="585" y="464" font-size="13" text-anchor="middle">un bailleur ordinaire ;</text>
+  <text class="s-txt" x="585" y="484" font-size="13" text-anchor="middle">le cercle se ferme</text>
+
+  <line class="s-line" x1="432" y1="76" x2="468" y2="76" stroke-dasharray="4 4"/>
+  <line class="s-line" x1="432" y1="198" x2="468" y2="198" stroke-dasharray="4 4"/>
+  <line class="s-line" x1="432" y1="338" x2="468" y2="338" stroke-dasharray="4 4"/>
+  <line class="s-line" x1="432" y1="460" x2="468" y2="460" stroke-dasharray="4 4"/>
+
+</svg>

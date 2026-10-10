@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="t d">
+  <title id="t">Comment une forêt morcelée devient un actif</title>
+  <desc id="d">La forêt privée appartient à des millions de petits propriétaires. Elle change de mains à trois moments : la succession, la vente, la coupe. À ces moments, les voisins, la commune et l'État disposent de droits de priorité limités aux petites ventes, tandis que les groupements forestiers et les projets carbone bénéficient d'avantages fiscaux et de crédits. Ce qui retient la forêt hors du marché se place au même moment : forêt communale sous régime forestier, fondation, conservatoire, obligation réelle environnementale.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="30" font-size="13" font-weight="bold">QUI POSSÈDE</text>
+  <text class="s-mut" x="260" y="30" font-size="13" font-weight="bold">MOMENT DE BASCULE</text>
+  <text class="s-mut" x="500" y="30" font-size="13" font-weight="bold">QUI REPREND, ET COMMENT</text>
+
+  <rect class="s-box" x="20" y="50" width="200" height="110" rx="6"/>
+  <text class="s-txt" x="32" y="76" font-size="14">3,3 millions de</text>
+  <text class="s-txt" x="32" y="96" font-size="14">propriétaires privés</text>
+  <text class="s-txt" x="32" y="120" font-size="14">deux sur trois ont</text>
+  <text class="s-txt" x="32" y="140" font-size="14">moins de 1 hectare</text>
+
+  <rect class="s-box" x="20" y="190" width="200" height="90" rx="6"/>
+  <text class="s-txt" x="32" y="216" font-size="14">57 % de la forêt :</text>
+  <text class="s-txt" x="32" y="236" font-size="14">privée, sans plan</text>
+  <text class="s-txt" x="32" y="256" font-size="14">simple de gestion</text>
+
+  <rect class="s-acc" x="260" y="50" width="200" height="80" rx="6"/>
+  <text class="s-txt" x="272" y="80" font-size="14">Succession :</text>
+  <text class="s-txt" x="272" y="100" font-size="14">indivision, partage</text>
+
+  <rect class="s-acc" x="260" y="150" width="200" height="80" rx="6"/>
+  <text class="s-txt" x="272" y="180" font-size="14">Vente : à peine plus</text>
+  <text class="s-txt" x="272" y="200" font-size="14">de 1 % de la surface</text>
+  <text class="s-txt" x="272" y="220" font-size="14">privée chaque année</text>
+
+  <rect class="s-acc" x="260" y="250" width="200" height="80" rx="6"/>
+  <text class="s-txt" x="272" y="280" font-size="14">Coupe forte :</text>
+  <text class="s-txt" x="272" y="300" font-size="14">85 000 ha par an</text>
+  <text class="s-txt" x="272" y="320" font-size="14">(&gt; 50 % du couvert)</text>
+
+  <rect class="s-blue" x="500" y="50" width="200" height="66" rx="6"/>
+  <text class="s-txt" x="512" y="78" font-size="14">Voisin : droit de</text>
+  <text class="s-txt" x="512" y="98" font-size="14">préférence (&lt; 4 ha)</text>
+
+  <rect class="s-blue" x="500" y="128" width="200" height="66" rx="6"/>
+  <text class="s-txt" x="512" y="156" font-size="14">Commune, État :</text>
+  <text class="s-txt" x="512" y="176" font-size="14">préemption si contiguë</text>
+
+  <rect class="s-acc" x="500" y="206" width="200" height="66" rx="6"/>
+  <text class="s-txt" x="512" y="234" font-size="14">Groupement forestier :</text>
+  <text class="s-txt" x="512" y="254" font-size="14">¾ hors droits et hors IFI</text>
+
+  <rect class="s-acc" x="500" y="284" width="200" height="66" rx="6"/>
+  <text class="s-txt" x="512" y="312" font-size="14">Projet carbone :</text>
+  <text class="s-txt" x="512" y="332" font-size="14">Label bas-carbone</text>
+
+  <line class="s-line s-arrow" x1="220" y1="105" x2="256" y2="90" marker-end="url(#ah)"/>
+  <line class="s-line s-arrow" x1="220" y1="120" x2="256" y2="185" marker-end="url(#ah)"/>
+  <line class="s-line s-arrow" x1="220" y1="240" x2="256" y2="285" marker-end="url(#ah)"/>
+
+  <line class="s-line s-arrow" x1="460" y1="190" x2="496" y2="85" marker-end="url(#ah)"/>
+  <line class="s-line s-arrow" x1="460" y1="190" x2="496" y2="160" marker-end="url(#ah)"/>
+  <line class="s-line s-arrow" x1="460" y1="190" x2="496" y2="238" marker-end="url(#ah)"/>
+  <line class="s-line s-arrow" x1="460" y1="290" x2="496" y2="315" marker-end="url(#ah)"/>
+
+  <rect class="s-ok" x="20" y="400" width="330" height="100" rx="6"/>
+  <text class="s-txt" x="34" y="428" font-size="14" font-weight="bold">Ce qui retient la forêt</text>
+  <text class="s-txt" x="34" y="450" font-size="14">forêt communale sous régime</text>
+  <text class="s-txt" x="34" y="470" font-size="14">forestier, fondation,</text>
+  <text class="s-txt" x="34" y="490" font-size="14">conservatoire, ORE</text>
+
+  <rect class="s-acc" x="370" y="400" width="330" height="100" rx="6"/>
+  <text class="s-txt" x="384" y="428" font-size="14" font-weight="bold">Ce qui se capte</text>
+  <text class="s-txt" x="384" y="450" font-size="14">le bois, l'avantage fiscal,</text>
+  <text class="s-txt" x="384" y="470" font-size="14">les crédits carbone</text>
+
+  <line class="s-line s-arrow" x1="360" y1="330" x2="200" y2="396" marker-end="url(#ah)"/>
+  <line class="s-line s-arrow" x1="600" y1="350" x2="560" y2="396" marker-end="url(#ah)"/>
+  <text class="s-mut" x="40" y="372" font-size="13">au même moment</text>
+</svg>

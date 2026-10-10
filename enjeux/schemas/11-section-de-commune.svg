@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 512" role="img" aria-labelledby="t d">
+  <title id="t">La section de commune : un propriétaire public, des usager·es sans titre, trois voies vers la commune</title>
+  <desc id="d">La section de commune est une personne morale de droit public propriétaire des biens. Ses membres, les habitant·es domicilié·es sur la section, en ont la jouissance mais pas la propriété ; les terres agricoles sont louées en priorité aux exploitant·es installé·es sur la section. Depuis la loi du 27 mai 2013, aucune section nouvelle ne peut naître, et trois voies conduisent les biens à la commune : la demande conjointe de la commune et de la section, le constat de dépérissement de la section, ou le libre choix de la commune motivé par l'intérêt général. Le transfert se fait à titre gratuit ; les membres ne sont indemnisés de la perte de jouissance qu'en cas de demande conjointe ou de transfert d'intérêt général.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="20" y="20" font-size="13">Posséder, jouir, exploiter</text>
+
+  <rect class="s-box" x="20" y="30" width="216" height="104" rx="8"/>
+  <text class="s-txt" x="128" y="56" font-size="14" text-anchor="middle">Section de commune</text>
+  <text class="s-txt" x="128" y="78" font-size="13" text-anchor="middle">personne publique,</text>
+  <text class="s-txt" x="128" y="100" font-size="13" text-anchor="middle">propriétaire des biens</text>
+  <text class="s-mut" x="128" y="122" font-size="13" text-anchor="middle">bois, pâturages, terres</text>
+
+  <line class="s-arrow" x1="238" y1="82" x2="250" y2="82" marker-end="url(#ah)"/>
+  <rect class="s-box" x="252" y="30" width="216" height="104" rx="8"/>
+  <text class="s-txt" x="360" y="56" font-size="14" text-anchor="middle">Membres : habitant·es</text>
+  <text class="s-txt" x="360" y="78" font-size="13" text-anchor="middle">domicilié·es sur la section</text>
+  <text class="s-txt" x="360" y="100" font-size="13" text-anchor="middle">jouissance des fruits</text>
+  <text class="s-mut" x="360" y="122" font-size="13" text-anchor="middle">pas de propriété</text>
+
+  <line class="s-arrow" x1="470" y1="82" x2="482" y2="82" marker-end="url(#ah)"/>
+  <rect class="s-box" x="484" y="30" width="216" height="104" rx="8"/>
+  <text class="s-txt" x="592" y="56" font-size="14" text-anchor="middle">Terres agricoles</text>
+  <text class="s-txt" x="592" y="78" font-size="13" text-anchor="middle">bail rural ou convention</text>
+  <text class="s-txt" x="592" y="100" font-size="13" text-anchor="middle">pluriannuelle de pâturage</text>
+  <text class="s-mut" x="592" y="122" font-size="13" text-anchor="middle">priorité aux locaux</text>
+
+  <line class="s-arrow" x1="128" y1="136" x2="128" y2="196" marker-end="url(#ah)"/>
+  <text class="s-mut" x="140" y="172" font-size="13">trois voies vers la commune</text>
+
+  <rect class="s-acc" x="20" y="198" width="216" height="110" rx="8"/>
+  <text class="s-txt" x="128" y="224" font-size="14" text-anchor="middle">Demande conjointe</text>
+  <text class="s-txt" x="128" y="246" font-size="13" text-anchor="middle">commune et commission</text>
+  <text class="s-txt" x="128" y="268" font-size="13" text-anchor="middle">ou moitié des membres</text>
+  <text class="s-mut" x="128" y="290" font-size="13" text-anchor="middle">art. L. 2411-11</text>
+
+  <rect class="s-acc" x="252" y="198" width="216" height="110" rx="8"/>
+  <text class="s-txt" x="360" y="224" font-size="14" text-anchor="middle">Section délaissée</text>
+  <text class="s-txt" x="360" y="246" font-size="13" text-anchor="middle">impôts payés 3 ans</text>
+  <text class="s-txt" x="360" y="268" font-size="13" text-anchor="middle">par la commune, abstention</text>
+  <text class="s-mut" x="360" y="290" font-size="13" text-anchor="middle">art. L. 2411-12-1</text>
+
+  <rect class="s-acc" x="484" y="198" width="216" height="110" rx="8"/>
+  <text class="s-txt" x="592" y="224" font-size="14" text-anchor="middle">Choix de la commune</text>
+  <text class="s-txt" x="592" y="246" font-size="13" text-anchor="middle">motif d'intérêt général,</text>
+  <text class="s-txt" x="592" y="268" font-size="13" text-anchor="middle">avis de la chambre</text>
+  <text class="s-mut" x="592" y="290" font-size="13" text-anchor="middle">art. L. 2411-12-2</text>
+
+  <line class="s-arrow" x1="128" y1="310" x2="128" y2="364" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="360" y1="310" x2="360" y2="364" marker-end="url(#ah)"/>
+  <line class="s-arrow" x1="592" y1="310" x2="592" y2="364" marker-end="url(#ah)"/>
+
+  <rect class="s-blue" x="20" y="366" width="680" height="66" rx="8"/>
+  <text class="s-txt" x="360" y="393" font-size="15" text-anchor="middle">Bien communal</text>
+  <text class="s-mut" x="360" y="416" font-size="13" text-anchor="middle">transfert à titre gratuit</text>
+
+  <text class="s-mut" x="360" y="470" font-size="13" text-anchor="middle">Depuis la loi de 2013 :</text>
+  <text class="s-mut" x="360" y="490" font-size="13" text-anchor="middle">aucune section nouvelle</text>
+</svg>

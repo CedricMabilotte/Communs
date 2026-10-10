@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 548" role="img" aria-labelledby="t d">
+  <title id="t">Trois étages de régulation et leurs fuites</title>
+  <desc id="d">La régulation foncière française tient à trois étages : la SAFER contrôle qui achète la terre, le contrôle des structures qui a le droit de l'exploiter, le statut du fermage à quelles conditions on la loue. Chacun tient une part réelle du marché, et chacun laisse passer des opérations : cessions partielles de parts, ventes au fermier ou à la famille, nue-propriété, délégation intégrale du travail, associés non exploitants, prêts à usage, pas-de-porte. Le capital des sociétés passe entre les trois étages ; il n'est contrôlé que depuis 2022, par un régime distinct.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="s-arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <text class="s-mut" x="110" y="26" font-size="13" text-anchor="middle">L'étage</text>
+  <text class="s-mut" x="329" y="26" font-size="13" text-anchor="middle">Ce qu'il tient</text>
+  <text class="s-mut" x="579" y="26" font-size="13" text-anchor="middle">Ce qui fuit</text>
+
+  <!-- Étage 1 : SAFER -->
+  <rect class="s-blue" x="20" y="38" width="180" height="104" rx="8"/>
+  <text class="s-txt" x="110" y="68" font-size="15" text-anchor="middle">1. SAFER</text>
+  <text class="s-txt" x="110" y="92" font-size="13" text-anchor="middle">qui achète la terre</text>
+  <text class="s-mut" x="110" y="116" font-size="13" text-anchor="middle">L. 141-1 et L. 143-1</text>
+
+  <line class="s-arrow" x1="202" y1="90" x2="212" y2="90" marker-end="url(#ah)"/>
+  <rect class="s-box" x="214" y="38" width="230" height="104" rx="8"/>
+  <text class="s-txt" x="329" y="64" font-size="13" text-anchor="middle">381 000 ventes notifiées</text>
+  <text class="s-txt" x="329" y="86" font-size="13" text-anchor="middle">préemption : moins de 1 %</text>
+  <text class="s-txt" x="329" y="108" font-size="13" text-anchor="middle">mais une menace qui pèse</text>
+  <text class="s-mut" x="329" y="130" font-size="13" text-anchor="middle">FNSafer, 2024</text>
+
+  <line class="s-arrow" x1="446" y1="90" x2="456" y2="90" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="458" y="38" width="242" height="104" rx="8"/>
+  <text class="s-txt" x="579" y="64" font-size="13" text-anchor="middle">Cession partielle de parts</text>
+  <text class="s-txt" x="579" y="86" font-size="13" text-anchor="middle">Vente au fermier en place,</text>
+  <text class="s-txt" x="579" y="108" font-size="13" text-anchor="middle">à la famille</text>
+  <text class="s-txt" x="579" y="130" font-size="13" text-anchor="middle">Nue-propriété démembrée</text>
+
+  <!-- Étage 2 : contrôle des structures -->
+  <rect class="s-blue" x="20" y="164" width="180" height="104" rx="8"/>
+  <text class="s-txt" x="110" y="192" font-size="15" text-anchor="middle">2. Contrôle</text>
+  <text class="s-txt" x="110" y="212" font-size="15" text-anchor="middle">des structures</text>
+  <text class="s-txt" x="110" y="236" font-size="13" text-anchor="middle">qui a le droit d'exploiter</text>
+  <text class="s-mut" x="110" y="258" font-size="13" text-anchor="middle">L. 331-1, SDREA</text>
+
+  <line class="s-arrow" x1="202" y1="216" x2="212" y2="216" marker-end="url(#ah)"/>
+  <rect class="s-box" x="214" y="164" width="230" height="104" rx="8"/>
+  <text class="s-txt" x="329" y="192" font-size="13" text-anchor="middle">Agrandir, s'installer,</text>
+  <text class="s-txt" x="329" y="214" font-size="13" text-anchor="middle">s'associer : autorisation</text>
+  <text class="s-txt" x="329" y="236" font-size="13" text-anchor="middle">environ 1 refus sur 10</text>
+  <text class="s-mut" x="329" y="258" font-size="13" text-anchor="middle">étude d'impact (AN, 2018)</text>
+
+  <line class="s-arrow" x1="446" y1="216" x2="456" y2="216" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="458" y="164" width="242" height="104" rx="8"/>
+  <text class="s-txt" x="579" y="192" font-size="13" text-anchor="middle">Délégation intégrale,</text>
+  <text class="s-txt" x="579" y="214" font-size="13" text-anchor="middle">travail à façon</text>
+  <text class="s-txt" x="579" y="236" font-size="13" text-anchor="middle">Associé non exploitant</text>
+  <text class="s-txt" x="579" y="258" font-size="13" text-anchor="middle">Biens rétrocédés par SAFER</text>
+
+  <!-- Étage 3 : statut du fermage -->
+  <rect class="s-blue" x="20" y="290" width="180" height="104" rx="8"/>
+  <text class="s-txt" x="110" y="318" font-size="15" text-anchor="middle">3. Statut</text>
+  <text class="s-txt" x="110" y="338" font-size="15" text-anchor="middle">du fermage</text>
+  <text class="s-txt" x="110" y="362" font-size="13" text-anchor="middle">à quelles conditions</text>
+  <text class="s-mut" x="110" y="384" font-size="13" text-anchor="middle">on loue · L. 411-1</text>
+
+  <line class="s-arrow" x1="202" y1="342" x2="212" y2="342" marker-end="url(#ah)"/>
+  <rect class="s-box" x="214" y="290" width="230" height="104" rx="8"/>
+  <text class="s-txt" x="329" y="318" font-size="13" text-anchor="middle">Bail de 9 ans renouvelé</text>
+  <text class="s-txt" x="329" y="340" font-size="13" text-anchor="middle">de droit, loyer encadré</text>
+  <text class="s-txt" x="329" y="362" font-size="13" text-anchor="middle">bail incessible</text>
+  <text class="s-mut" x="329" y="384" font-size="13" text-anchor="middle">ordonnance de 1945</text>
+
+  <line class="s-arrow" x1="446" y1="342" x2="456" y2="342" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="458" y="290" width="242" height="104" rx="8"/>
+  <text class="s-txt" x="579" y="318" font-size="13" text-anchor="middle">Prêt à usage, vente d'herbe</text>
+  <text class="s-txt" x="579" y="340" font-size="13" text-anchor="middle">Pas-de-porte occulte</text>
+  <text class="s-txt" x="579" y="362" font-size="13" text-anchor="middle">Bail verbal</text>
+  <text class="s-txt" x="579" y="384" font-size="13" text-anchor="middle">Contrats hors statut</text>
+
+  <!-- Le capital, entre les étages -->
+  <line class="s-arrow" x1="579" y1="396" x2="579" y2="434" marker-end="url(#ah)"/>
+  <rect class="s-acc" x="380" y="438" width="320" height="94" rx="8"/>
+  <text class="s-txt" x="540" y="464" font-size="14" text-anchor="middle">Le capital des sociétés</text>
+  <text class="s-txt" x="540" y="486" font-size="13" text-anchor="middle">passe entre les étages</text>
+  <text class="s-mut" x="540" y="508" font-size="13" text-anchor="middle">contrôlé depuis 2022 : E04</text>
+
+  <rect class="s-ok" x="20" y="438" width="340" height="94" rx="8"/>
+  <text class="s-txt" x="190" y="464" font-size="14" text-anchor="middle">Montages de libération</text>
+  <text class="s-txt" x="190" y="486" font-size="13" text-anchor="middle">bail long, emphytéose,</text>
+  <text class="s-txt" x="190" y="508" font-size="13" text-anchor="middle">propriété hors marché</text>
+</svg>

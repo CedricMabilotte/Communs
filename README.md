@@ -32,6 +32,9 @@ sur GitHub Pages, veille via GitHub Actions.
 4. **Surveille** des sources web pour repérer de nouveaux lieux et montages
    (`scripts/watch.py`, `config/sources.yml`).
 5. **Publie** un site statique consultable (`scripts/generate_site.py`).
+6. **Analyse les enjeux** — 18 études stratégiques sourcées (transmission,
+   financiarisation, prix, régulation, artificialisation, énergie, eau, sols,
+   forêt, outre-mer…) rapportées aux montages du corpus (`enjeux/`).
 
 ## Structure du dépôt
 
@@ -49,6 +52,8 @@ scripts/
   watch.py          ← veille : interroge les sources, écrit des candidats
   generate_site.py  ← génère le site statique dans site/
 recherche/          ← rapports de recherche fondateurs (sourcés)
+enjeux/             ← analyses stratégiques « Enjeux » (études .md, données CSV,
+                      schémas SVG) — le pourquoi de l'annuaire
 audit/              ← rapports des cycles d'amélioration et de vérification
 discovery/          ← candidats issus de la veille (à promouvoir manuellement)
 site/               ← site statique publié (généré ; ne pas éditer à la main)
