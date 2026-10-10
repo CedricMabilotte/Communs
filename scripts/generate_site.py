@@ -6922,7 +6922,10 @@ def _enj_postprocess(html, et):
 
 
 def _enj_md(md_text):
-    import markdown as _md
+    try:
+        import markdown as _md
+    except ImportError:          # repli : rendu minimal (CI sans markdown)
+        return _md_to_html(md_text)
     return _md.markdown(md_text or "",
                         extensions=["extra", "sane_lists", "smarty", "toc"],
                         extension_configs={"toc": {"slugify": lambda v, s: slugify(v)}},

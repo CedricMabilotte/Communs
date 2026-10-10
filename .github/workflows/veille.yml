@@ -15,6 +15,9 @@ on:
       - "modeles/**"
       - "config/**"
       - "scripts/generate_site.py"
+      - "enjeux/**"
+      - "revues/**"
+      - "dossiers/**"
 
 permissions:
   contents: write                 # pour committer les candidats de veille
@@ -38,7 +41,7 @@ jobs:
           python-version: "3.12"
 
       - name: Installer les dépendances
-        run: pip install pyyaml
+        run: pip install pyyaml markdown
 
       - name: Veille des sources
         # la veille ne doit jamais bloquer la publication si une source tombe
