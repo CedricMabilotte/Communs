@@ -2687,8 +2687,8 @@ def render_regimes(cfg):
     # tableau comparatif — structure stable, en dur
     tbl_rows = [
         ("Outil juridique type",
-         "Démembrement, fondation, fonds de dotation, bail long, association, SCIC",
-         "Société commerciale, parts ou actions cessibles",
+         "Démembrement, fondation, fonds de dotation, bail long, association, société civile, GFA",
+         "Société commerciale (SA, SAS, SARL — y compris coopératives SCIC, SCOP), parts ou actions cessibles",
          "Pleine propriété individuelle (art. 544 C. civ.)"),
         ("Finalité",
          "Usage collectif d'intérêt général",
@@ -6449,7 +6449,7 @@ ENJ_OUTILS = [
     ("ore", "Obligation réelle environnementale",
      "Une obligation attachée au terrain, qui suit les ventes."),
     ("cooperative_usage", "Coopérative ou association d'usage",
-     "SCIC, coopérative, association qui organise l'usage."),
+     "Association, société civile ou coopérative (SCIC, société commerciale à lucrativité encadrée) qui organise l'usage."),
     ("regulation", "Régulation publique",
      "SAFER, contrôle des structures, statut du fermage."),
     ("portage", "Portage foncier et espace-test",

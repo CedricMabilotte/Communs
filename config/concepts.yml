@@ -176,14 +176,15 @@ categories:
     label_pluriel: "Organismes usufruitiers"
     slug_dir: "u"
     definition: >
-      Personne morale de droit civil à but non lucratif, titulaire de l'usage du
-      foncier, qui organise sa gestion au quotidien : occupation, exploitation,
-      animation, gouvernance des usagers. Typiquement : association loi 1901,
-      société civile, coopérative (SCIC), groupement foncier agricole.
+      Personne morale titulaire de l'usage du foncier, qui organise sa gestion
+      au quotidien : occupation, exploitation, animation, gouvernance des
+      usagers. Typiquement une structure de droit civil — association loi 1901,
+      société civile, groupement foncier agricole — ou une coopérative (SCIC),
+      société commerciale à lucrativité encadrée.
     formes_attendues:
       - association loi 1901
       - société civile (SCI, SCTL, société civile d'exploitation)
-      - société coopérative d'intérêt collectif (SCIC)
+      - société coopérative d'intérêt collectif (SCIC — société commerciale : SA, SAS ou SARL à capital variable)
       - groupement foncier agricole (GFA mutuel / solidaire)
       - collectif d'habitant·es / d'usager·es
   - id: "lieu"
@@ -546,7 +547,8 @@ regimes:
       label: "Droit civil au service de l'intérêt général et des communs"
       outils: >
         Démembrement (articles 544 et 578 du Code civil), fondation, fonds de
-        dotation, bail rural ou emphytéotique, association, SCIC.
+        dotation, bail rural ou emphytéotique, association loi 1901, société
+        civile, groupement foncier agricole.
       but: >
         Placer le foncier au service d'un usage collectif d'intérêt général et
         l'y maintenir durablement.
@@ -554,8 +556,10 @@ regimes:
     - id: commercial
       label: "Droit commercial : sociétés, lucrativité, spéculation"
       outils: >
-        Société commerciale, parts ou actions librement cessibles, recherche
-        de plus-value et de dividende.
+        Société commerciale (SA, SAS, SARL), parts ou actions librement
+        cessibles, recherche de plus-value et de dividende. Les coopératives
+        (SCIC, SCOP) relèvent aussi du droit commercial : leur lucrativité est
+        encadrée (réserves impartageables, intérêts plafonnés), non supprimée.
       but: "Valoriser un capital ; le foncier y est un actif."
       role: "Régime repoussoir — parfois neutralisé par les statuts."
     - id: propriete_privee
