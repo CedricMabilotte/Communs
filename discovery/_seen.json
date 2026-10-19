@@ -37,19 +37,19 @@
   },
   "cooperative-oasis.org/annonces": {
     "dernier_score": 3,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-09-28",
     "statut": "nouveau"
   },
   "cooperative-oasis.org/nos-offres/fonciere-oasis": {
     "dernier_score": 9,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "cooperative-oasis.org/nos-offres/proteger-la-biodiversite-ore": {
     "dernier_score": 3,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -121,7 +121,7 @@
   },
   "fermes.terredeliens.org/national/hub-ferme": {
     "dernier_score": 13,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -187,7 +187,7 @@
   },
   "foncier-solidaire.fr/principles-of-solidarity-land": {
     "dernier_score": 11,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -241,19 +241,19 @@
   },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sc-gfa": {
     "dernier_score": 11,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "larzac.org/accueil/un-territoire-organise/gestion-fonciere/sctl": {
     "dernier_score": 14,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "larzac.org/accueil/un-territoire-organise/la-gestion-fonciere": {
     "dernier_score": 11,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -361,13 +361,13 @@
   },
   "politis.fr/association-amis-politis": {
     "dernier_score": 4,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
   "politis.fr/politis-fr-devenir-societaire": {
     "dernier_score": 4,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
@@ -383,6 +383,12 @@
     "premiere_detection": "2026-05-27",
     "statut": "nouveau"
   },
+  "reseau-cen.org/faune-flore-habitat/la-foret-et-les-conservatoires-despaces-naturels": {
+    "dernier_score": 4,
+    "derniere_detection": "2026-10-19",
+    "premiere_detection": "2026-10-19",
+    "statut": "nouveau"
+  },
   "reseau-cen.org/la-foret-et-les-conservatoires-despaces-naturels": {
     "dernier_score": 4,
     "derniere_detection": "2026-06-29",
@@ -391,7 +397,7 @@
   },
   "ressources.terredeliens.org/les-ressources/le-portage-foncier-agricole-rapport-3": {
     "dernier_score": 4,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
@@ -445,43 +451,43 @@
   },
   "terredeliens.org/national/fonciere-terre-de-liens/la-fonciere-terre-de-liens-premiere-structure-dinvestissement-solidaire-agricole": {
     "dernier_score": 13,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/hub-ferme": {
     "dernier_score": 13,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/la-fondation-terre-de-liens": {
     "dernier_score": 22,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/les-associations-territoriales-terre-de-liens": {
     "dernier_score": 13,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/minstaller-avec-terre-de-liens": {
     "dernier_score": 13,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terredeliens.org/national/transmettre-des-terres": {
     "dernier_score": 13,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },
   "terresdesources.fr/la-scic-terres-de-sources": {
     "dernier_score": 3,
-    "derniere_detection": "2026-10-12",
+    "derniere_detection": "2026-10-19",
     "premiere_detection": "2026-05-23",
     "statut": "nouveau"
   },

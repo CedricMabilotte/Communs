@@ -2,7 +2,7 @@
 slug: annonces-cooperative-oasis
 nom: Annonces Coopérative Oasis
 cree: '2026-09-28'
-dernier_repere: '2026-10-12'
+dernier_repere: '2026-10-19'
 score_cumule: 3
 sources_vues:
 - source: cooperative-oasis

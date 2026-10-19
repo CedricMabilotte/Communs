@@ -2,12 +2,18 @@
 slug: conservatoires-federation
 nom: Conservatoires Fédération
 cree: '2026-06-29'
-dernier_repere: '2026-06-29'
-score_cumule: 4
+dernier_repere: '2026-10-19'
+score_cumule: 8
 sources_vues:
 - source: reseau-cen
   date: '2026-06-29'
   url: https://reseau-cen.org/la-foret-et-les-conservatoires-despaces-naturels/
+  titre: La forêt et les Conservatoires d'espaces naturels - Fédération des conservatoires
+    d'espaces naturels
+  score: 4
+- source: reseau-cen
+  date: '2026-10-19'
+  url: https://reseau-cen.org/faune-flore-habitat/la-foret-et-les-conservatoires-despaces-naturels/
   titre: La forêt et les Conservatoires d'espaces naturels - Fédération des conservatoires
     d'espaces naturels
   score: 4
