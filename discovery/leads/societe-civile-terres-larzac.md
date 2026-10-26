@@ -2,7 +2,7 @@
 slug: societe-civile-terres-larzac
 nom: Société Civile Terres Larzac
 cree: '2026-05-27'
-dernier_repere: '2026-10-19'
+dernier_repere: '2026-10-26'
 score_cumule: 14
 sources_vues:
 - source: larzac

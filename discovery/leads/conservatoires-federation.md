@@ -2,7 +2,7 @@
 slug: conservatoires-federation
 nom: Conservatoires Fédération
 cree: '2026-06-29'
-dernier_repere: '2026-10-19'
+dernier_repere: '2026-10-26'
 score_cumule: 8
 sources_vues:
 - source: reseau-cen
