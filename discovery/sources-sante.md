@@ -1,4 +1,4 @@
-# Santé des sources — 2026-10-26
+# Santé des sources — 2026-11-02
 
 Par source : état du dernier scan et nombre de liens retenus pour approfondissement.
 
@@ -11,14 +11,14 @@ Par source : état du dernier scan et nombre de liens retenus pour approfondisse
 - reseau-cen — ok — 7 lien·s pré-retenu·s
 - foncier-solidaire — ok — 11 lien·s pré-retenu·s
 - rtes — ok — 2 lien·s pré-retenu·s
-- habitat-participatif — ok — 8 lien·s pré-retenu·s
+- habitat-participatif — ok — 7 lien·s pré-retenu·s
 - habicoop — ok — 6 lien·s pré-retenu·s
 - labo-ess — ok — 9 lien·s pré-retenu·s
 - reseau-ecolieux — échec ⚠ — 0 lien·s pré-retenu·s
 - fonciere-chenelet — ok — 0 lien·s pré-retenu·s
-- terres-de-sources — ok — 3 lien·s pré-retenu·s
+- terres-de-sources — ok — 5 lien·s pré-retenu·s
 - reporterre — échec ⚠ — 0 lien·s pré-retenu·s
-- lundi-matin — ok — 4 lien·s pré-retenu·s
+- lundi-matin — ok — 7 lien·s pré-retenu·s
 - basta — ok — 4 lien·s pré-retenu·s
 - politis — ok — 2 lien·s pré-retenu·s
 - le-postillon — ok — 0 lien·s pré-retenu·s
