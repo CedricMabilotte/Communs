@@ -67,8 +67,12 @@ seulement pour un fetch automatisé), ou une demande directe au Département.
 
 ## Méthode de relecture de cette liste
 
-Retester chaque entrée de temps en temps (pas de cadence fixe — au fil des sessions de
-veille manuelle, ou quand une source listée ici redevient pertinente pour un lead
-précis) : un simple `WebFetch` sur l'URL suffit à vérifier si le blocage persiste. Si une
+Périodicité : **tous les mois** (décision Ced, 08/11/2026). À chaque relecture, un
+simple `WebFetch` sur l'URL de chaque entrée suffit à vérifier si le blocage persiste.
+Entre deux relectures mensuelles, retester aussi dès qu'une source listée ici redevient
+pertinente pour un lead précis — pas la peine d'attendre l'échéance dans ce cas. Si une
 source se débloque, documenter le correctif comme pour Reporterre ci-dessus plutôt que de
 simplement supprimer l'entrée — la méthode de déblocage peut servir à d'autres sources.
+
+**Dernière relecture : 2026-11-08** (création de la liste — toutes les entrées encore
+bloquées à cette date). **Prochaine échéance : 2026-12-08.**
