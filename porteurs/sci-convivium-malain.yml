@@ -1,0 +1,133 @@
+uid: sci-convivium-malain
+categorie: porteur
+nom: "SCI Le Convivium de Mâlain"
+sous_titre: "Société civile immobilière créée par les futurs habitant·es pour acquérir le bâti du tiers-lieu"
+statut_fiche: publie
+forme_juridique: "Société civile immobilière"
+nature_interet: inconnu
+localisation:
+  commune: "Mâlain"
+  departement: "Côte-d'Or (21)"
+  region: "Bourgogne-Franche-Comté"
+annee: 2015
+url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+dossier:
+  identite:
+    siren: inconnu
+  echelle:
+    surface_m2: 800
+  pieces:
+    - type: statuts
+      statut: non_public
+    - type: acte_montage
+      statut: inconnu
+resume: >
+  Société civile immobilière créée en 2015 par les futurs habitant·es du
+  tiers-lieu de Mâlain (Côte-d'Or) pour acquérir un bâtiment d'environ 800 m²
+  habitables face à la gare du village, aujourd'hui occupé par l'association
+  Risomes (café associatif, brasserie, activités). L'existence et la date de
+  création de cette société sont documentées par un reportage de Reporterre ;
+  **elle n'a pas été identifiée dans le répertoire national des entreprises
+  sous ce nom** lors d'une recherche conduite le 2026-11-08 (possible
+  changement de dénomination, dissolution, ou appellation informelle dans
+  l'article) — SIREN non confirmé, statuts non publiés.
+montage:
+  type: demembrement
+  description: >
+    La SCI détient la nue-propriété du bâtiment et en confie l'usage, par un
+    titre non documenté par les sources consultées, à l'association Risomes,
+    qui y développe un café associatif, une brasserie artisanale et des
+    activités d'éducation populaire. Le régime des parts de la SCI (associés,
+    cessibilité, valeur) n'est pas documenté.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Société civile créée par les futurs usager·es du lieu — proche dans son
+    intention d'un commun citoyen — mais sans statuts publiés ni identification
+    au registre confirmée par cette passe : l'appréciation reste provisoire.
+grille:
+  - critere: inalienabilite
+    valeur: inconnu
+    note: "Aucune clause documentée."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "Régime des parts de la SCI non documenté."
+  - critere: nature_protectrice
+    valeur: inconnu
+    note: "Non documenté, statuts non publiés."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: forme_non_lucrative
+    valeur: non
+    note: "Une société civile immobilière est une société à capital, structurellement distincte d'une forme non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: independance_rendement
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: ca_collegial
+    valeur: inconnu
+    note: "La gouvernance de la SCI (gérance, associé·es) n'est pas documentée par les sources consultées."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Créée par les futurs habitant·es eux-mêmes selon Reporterre, mais la composition exacte des associé·es n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: transparence
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "L'objet (porter le bâti d'un projet collectif) va dans ce sens, mais sans verrou statutaire documenté."
+  - critere: agrement_ig
+    valeur: non
+    note: "Une SCI n'a pas d'agrément d'intérêt général ; rien n'indique une reconnaissance de ce type."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: redevabilite_publique
+    valeur: non
+    note: "Une SCI n'est pas soumise à des obligations de reddition de comptes au public."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Aucune finalité de préservation de la biodiversité n'est affichée pour cette société immobilière."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "Le titre et la redevance éventuelle liant la SCI à Risomes ne sont pas documentés."
+  - critere: securite_usage_offerte
+    valeur: inconnu
+    note: "Non documenté."
+analyse:
+  forces:
+    - "Initiative portée par les futurs usager·es eux-mêmes plutôt que par un tiers extérieur."
+    - "Permet la stabilisation d'un lieu bâti pour un projet collectif durable (Risomes, Le Chauffe-Savates, La Milpa)."
+  fragilites:
+    - "Non identifiée au répertoire national des entreprises sous ce nom lors de la recherche du 2026-11-08 : identité juridique exacte incertaine."
+    - "Aucun statut, aucune clause d'inaliénabilité ou de non-cessibilité des parts documentée."
+    - "Titre liant la SCI à l'association Risomes (bail, convention) non documenté."
+  leviers:
+    - "Confirmer la dénomination exacte et le SIREN auprès du registre du commerce ou directement avec le collectif."
+    - "Publier les statuts et le titre d'usage liant la SCI à Risomes."
+  synthese: >
+    Le pendant immobilier du GFA Citoyen Champs Libres à Mâlain : une société
+    civile fondée par les habitant·es pour porter le bâti. Fiche volontairement
+    minimale, faute d'identification au registre et de statuts publiés — à
+    enrichir si Ced ou le collectif peuvent fournir une source primaire.
+fiabilite: >
+  Faits vérifiés (source Reporterre, consultée le 2026-11-08) : création en
+  2015 par les futurs habitant·es, acquisition d'un bâtiment d'environ 800 m²
+  habitables à Mâlain. Non confirmé : SIREN, statuts, régime des parts, titre
+  liant la SCI à l'association Risomes. Recherche menée le 2026-11-08 sur
+  recherche-entreprises.api.gouv.fr (requête « Convivium », code postal 21410)
+  sans résultat correspondant — à retenter ou à vérifier directement auprès du
+  collectif.
+voir_aussi: [gfa-citoyen-champs-libres, association-risomes]
+sources:
+  - titre: "Reporterre — Une association « agriculturelle » dynamise un village en Côte-d'Or"
+    url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"

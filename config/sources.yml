@@ -147,8 +147,14 @@ sources:
   # montages juridiques racontés depuis l'intérieur des luttes.
   - id: reporterre
     nom: "Reporterre — quotidien indépendant de l'écologie"
-    url: "https://reporterre.net/"
-    parser: deep_html
+    # bascule RSS (session #13, 08/11/2026) : le scraping deep_html de la page
+    # d'accueil échouait systématiquement (blocage anti-robot probable, même
+    # échec depuis un conteneur distant qu'un poste utilisateur — cf.
+    # discovery/sources-bloquees.md). Le flux RSS spip (page=backend) reste
+    # accessible et vérifié [VÉRIFIÉ 2026-11-08, fetch direct + rss_links()] :
+    # 60 items, décodage d'entités OK. Parser dédié : rss_links() dans watch.py.
+    url: "https://reporterre.net/spip.php?page=backend"
+    parser: rss
     type: actualites
     categorie_probable: [lieu, porteur]
     mots_cles: [foncier, terres, ZAD, occupation, ferme, bail, fondation, commun, propriété collective]
@@ -162,6 +168,19 @@ sources:
     categorie_probable: [lieu, porteur]
     mots_cles: [terres, communs, foncier, propriété, démembrement, libération des terres, usufruit]
     frequence: mensuelle
+  - id: socialter
+    nom: "Socialter — magazine indépendant d'écologie et d'alternatives"
+    # ajouté session #13 (08/11/2026), arbitrage question 3 du dépouillement
+    # presse (discovery/depouillement-presse-2026-11-08.md) : contenu riche
+    # et bien sourcé (dossier HS15 "Ces terres qui se défendent" a donné
+    # 16 leads), mais rythme de publication lent et moitié du contenu payant
+    # → fréquence basse, parser léger (pas de deep_html pour épargner le site).
+    url: "https://www.socialter.fr/"
+    parser: html_static
+    type: actualites
+    categorie_probable: [lieu, porteur]
+    mots_cles: [foncier, terres, GFA, SCI citoyenne, fonds de dotation, bail emphytéotique, propriété collective, groupement forestier, démembrement, usufruit]
+    frequence: trimestrielle
 
   - id: lundi-matin
     nom: "Lundi Matin — hebdo militant et théorique"

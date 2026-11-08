@@ -48,7 +48,7 @@
     <option value="nom">Par nom (A→Z)</option>
     <option value="ax1">Par axe 1 — Soustraction à l&#x27;exploitation abusive</option><option value="ax2">Par axe 2 — Nature civile et non lucrative</option><option value="ax3">Par axe 3 — Gouvernance citoyenne</option><option value="ax4">Par axe 4 — Intérêt général et du vivant</option><option value="ax5">Par axe 5 — Usage non marchand et hospitalier</option>
   </select>
-  <span class="count" id="cnt" aria-live="polite"><b id="cntn">5</b><span id="cntl"> entrées affichées</span></span>
+  <span class="count" id="cnt" aria-live="polite"><b id="cntn">6</b><span id="cntl"> entrées affichées</span></span>
 </div>
 <p id="sort-status" role="status" class="visually-hidden"></p>
 <details class="filter-details">
@@ -57,12 +57,21 @@
     <div class="filter-row" role="group" aria-label="Filtrer par palier"><span class="filter-lab">Palier</span>
       <button class="fbtn active" data-fk="palier" data-fv="all" aria-pressed="true">Tous</button>
       </div>
-    <div class="filter-row" role="group" aria-label="Filtrer par montage"><span class="filter-lab">Montage</span><button class="fbtn active" data-fk="montage" data-fv="all" aria-pressed="true">Tous</button><button class="fbtn" data-fk="montage" data-fv="propriete_collective" aria-pressed="false">Propriété collective</button><button class="fbtn" data-fk="montage" data-fv="propriete_protegee" aria-pressed="false">Propriété conservée + bail de long terme</button></div>
+    <div class="filter-row" role="group" aria-label="Filtrer par montage"><span class="filter-lab">Montage</span><button class="fbtn active" data-fk="montage" data-fv="all" aria-pressed="true">Tous</button><button class="fbtn" data-fk="montage" data-fv="propriete_simple" aria-pressed="false">propriete_simple</button><button class="fbtn" data-fk="montage" data-fv="propriete_collective" aria-pressed="false">Propriété collective</button><button class="fbtn" data-fk="montage" data-fv="propriete_protegee" aria-pressed="false">Propriété conservée + bail de long terme</button></div>
     
   </div>
 </details>
 <p class="paliers-legend cat-legend"><span class="pal-chip" style="--pal:#9a9a9a">marchand</span><span class="pal-chip" style="--pal:#a86a4a">transition</span><span class="pal-chip" style="--pal:#b08a3e">sorti du marché</span><span class="pal-chip" style="--pal:#3d7a4e">autogéré</span><span class="pal-chip" style="--pal:#2f6e8f">usage libéré</span><span class="pal-chip" style="--pal:#224477">commun vivant</span></p>
-<ul class="cards" id="resultats"><li class="card" data-idl="0" data-nom="Community Land Trust de Bruxelles" data-palier="" data-region="" data-montage="propriete_collective" data-ax1="90" data-ax2="90" data-ax3="90" data-ax4="90" data-ax5="75">
+<ul class="cards" id="resultats"><li class="card" data-idl="0" data-nom="ASPAS — Réserves de Vie Sauvage®" data-palier="" data-region="" data-montage="propriete_simple" data-ax1="35" data-ax2="45" data-ax3="25" data-ax4="95" data-ax5="80">
+  <div class="card-head">
+    <span class="tag tag-modele">Modèle voisin</span>
+    <span class="idl-badge idl-na">n.r.<span class="visually-hidden">Note non renseignée</span></span>
+  </div>
+  <h3><a class="card-link" href="m/aspas-reserve-vie-sauvage.html">ASPAS — Réserves de Vie Sauvage®</a></h3>
+  <p class="card-sub">Sanctuaire associatif sans dissociation propriété/usage — modèle voisin, mention spéciale</p>
+  <p class="card-meta">Association loi 1901 · propriete_simple</p>
+  
+</li><li class="card" data-idl="0" data-nom="Community Land Trust de Bruxelles" data-palier="" data-region="" data-montage="propriete_collective" data-ax1="90" data-ax2="90" data-ax3="90" data-ax4="90" data-ax5="75">
   <div class="card-head">
     <span class="tag tag-modele">Modèle voisin</span>
     <span class="idl-badge idl-na">n.r.<span class="visually-hidden">Note non renseignée</span></span>
@@ -146,7 +155,7 @@
     <a href="changelog.html">Journal des versions</a> ·
     <a href="suggerer.html">Proposer un lieu</a></p>
     <p>Terres Libérées · v3.1 · juin 2026</p>
-    <p>Site statique, généré automatiquement le 2 novembre 2026.</p>
+    <p>Site statique, généré automatiquement le 8 novembre 2026.</p>
   </div>
 </footer>
 </body>

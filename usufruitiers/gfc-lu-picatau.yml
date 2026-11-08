@@ -1,0 +1,142 @@
+uid: gfc-lu-picatau
+categorie: usufruitier
+nom: "Groupement forestier citoyen Lu Picatau"
+sous_titre: "Forêt citoyenne du Périgord vert, partiellement laissée en libre évolution"
+statut_fiche: publie
+forme_juridique: "Groupement forestier (société civile), associatif dans sa présentation"
+nature_interet: inconnu
+localisation:
+  commune: "Abjat-sur-Bandiat"
+  departement: "Dordogne (24)"
+  region: "Nouvelle-Aquitaine"
+annee: 2020
+url: "https://www.gfclupicatau.fr/"
+dossier:
+  identite:
+    siren: inconnu
+  echelle:
+    surface_ha: 80
+    personnes: 200
+  pieces:
+    - type: statuts
+      statut: non_public
+    - type: acte_montage
+      statut: inconnu
+resume: >
+  Groupement forestier citoyen fondé en 2020 au lieu-dit Grande Borne, commune
+  d'Abjat-sur-Bandiat (Périgord vert, Dordogne), face à la multiplication des
+  coupes rases dans la région. Il réunit environ 200 associé·es qui ont
+  souscrit du capital pour acquérir des parcelles forestières, dont une à
+  Saint-Pardoux-la-Rivière acquise par droit de préférence sur une parcelle
+  voisine. La surface totale est donnée à 80 ou 81 hectares selon les pages du
+  site officiel (divergence non résolue). L'objectif affiché : soustraire les
+  parcelles à l'exploitation intensive, ne prélever que pour des besoins
+  directs et locaux, restaurer la diversité des essences et des classes d'âge,
+  et laisser une partie du massif en libre évolution. Lié au Réseau pour les
+  alternatives forestières (RAF), comme « Forêts en vie ».
+montage:
+  type: propriete_collective
+  description: >
+    Le groupement forestier est à la fois porteur du foncier et gestionnaire
+    de la forêt : aucune dissociation entre une entité propriétaire et une
+    entité usufruitière distincte n'est documentée — les associé·es, en
+    souscrivant du capital, sont à la fois propriétaires collectifs et
+    décisionnaires de la gestion. Le régime des parts (valeur, cessibilité,
+    plus-value éventuelle à la sortie) n'est pas documenté par les sources
+    consultées ; la page de souscription en capital du site officiel n'a pas
+    pu être récupérée pour cette passe.
+integrite_montage:
+  niveau: economie_marchande
+  commentaire: >
+    Groupement forestier citoyen à capital ouvert (société civile dans sa
+    forme probable, présentation associative dans la communication) ; faute
+    de statuts publiés et de confirmation du régime des parts, la nature de
+    l'intérêt reste `inconnu` et le verdict du lieu associé ne peut pas être
+    établi en l'état. Le pôle affiché est délibérément prudent.
+grille:
+  - critere: non_appropriation
+    valeur: inconnu
+    note: "Le régime des parts (cessibilité, droit sur la valeur du foncier à la sortie) n'est pas documenté."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Un groupement forestier est une société civile, personne morale de droit civil."
+  - critere: non_lucrativite_effective
+    valeur: inconnu
+    note: "La communication est associative (« associé·es », pas d'actionnaires), mais la nature civile à capital du groupement forestier ne garantit pas, par elle-même, l'absence de plus-value à la sortie."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Non documenté — un groupement forestier vote en principe au nombre de parts, sauf clause statutaire contraire non confirmée ici."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les 200 associé·es sont à la fois propriétaires et décisionnaires de la gestion forestière, sans tiers exploitant distinct documenté."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "La page officielle invite explicitement à devenir associé·e et à proposer une parcelle à intégrer au groupement."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: objet_ig
+    valeur: oui
+    note: "Objet explicite de protection forestière (coupes rases, diversité des essences, sols vivants) dépassant l'intérêt propre des associé·es."
+  - critere: public_non_restreint
+    valeur: inconnu
+    note: "Non documenté — accès du public à la forêt non précisé par les sources consultées."
+  - critere: duree_usage
+    valeur: oui
+    note: "Montage intégré : les associé·es sont directement propriétaires, sans titre d'usage à durée limitée venant d'un tiers."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: articulation_porteur
+    valeur: oui
+    note: "Montage intégré par construction — pas de porteur distinct à articuler."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Prélèvement limité aux besoins directs et locaux selon la communication officielle ; l'existence d'une commercialisation de bois n'est pas précisée."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Non applicable en l'état documenté (pas de loyer identifié, montage intégré)."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Une partie du massif est explicitement laissée en libre évolution, et la restauration de la diversité des essences et des classes d'âge est un objectif affiché."
+analyse:
+  forces:
+    - "Objectif écologique explicite : coupes rases évitées, part du massif en libre évolution, diversité des essences visée."
+    - "Gouvernance intégrée : 200 associé·es à la fois propriétaires et décisionnaires, sans exploitant tiers."
+    - "Usage du droit de préférence pour agrandir le massif par les parcelles voisines (Saint-Pardoux-la-Rivière)."
+  fragilites:
+    - "Régime des parts (valeur, cessibilité, plus-value) non documenté : le verrou anti-spéculatif n'est pas confirmé."
+    - "Statuts non publiés ; forme juridique précise (société civile classique ou groupement forestier citoyen à clauses particulières) non confirmée."
+    - "Divergence de surface (80 ou 81 ha) entre deux pages du même site officiel, non résolue."
+  leviers:
+    - "Publier les statuts et le régime de cession des parts."
+    - "Documenter l'accès du public à la forêt et le mode de décision (une part = une voix, ou un·e associé·e = une voix)."
+    - "Clarifier la surface exacte du massif."
+  synthese: >
+    Lu Picatau est un groupement forestier citoyen à la finalité écologique
+    claire et à la gouvernance intégrée — propriétaires et gestionnaires sont
+    les mêmes personnes — mais dont le verrou anti-spéculatif (régime des
+    parts) n'est pas publiquement documenté. Comme le GFA de Mâlain, il
+    illustre la famille des montages citoyens à société civile, dont la
+    rigueur dépend de statuts non vérifiés par cette passe.
+fiabilite: >
+  Faits vérifiés (sources Réseau pour les alternatives forestières et site
+  officiel gfclupicatau.fr, consultées le 2026-11-08) : création en 2020 au
+  lieu-dit Grande Borne, Abjat-sur-Bandiat (Dordogne), 200 associé·es, surface
+  de 80 ou 81 hectares selon la page consultée, acquisition par droit de
+  préférence à Saint-Pardoux-la-Rivière, objectifs de protection forestière et
+  de libre évolution partielle. Non confirmé : statuts, régime des parts,
+  surface exacte, accès du public, mode de décision précis.
+sources:
+  - titre: "Réseau pour les alternatives forestières — Groupement forestier Lu Picatau"
+    url: "https://www.alternativesforestieres.org/Groupement-forestier-Lu-Picatau"
+  - titre: "GFC Lu Picatau — site officiel"
+    url: "https://www.gfclupicatau.fr/"
+  - titre: "Socialter HS15 — Propriété commune : 4 pistes pour dépasser la propriété privée"
+    url: "https://www.socialter.fr/article/propriete-commune-alternatives-propriete-privee"

@@ -1,0 +1,139 @@
+uid: association-risomes
+categorie: usufruitier
+nom: "Risomes"
+sous_titre: "Association animant le tiers-lieu de Mâlain (café, brasserie, éducation populaire)"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+nature_interet: non_lucrative
+localisation:
+  commune: "Mâlain"
+  departement: "Côte-d'Or (21)"
+  region: "Bourgogne-Franche-Comté"
+annee: 2016
+url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+dossier:
+  identite:
+    siren: "820566511"
+  pieces:
+    - type: statuts
+      statut: non_public
+    - type: bail
+      statut: non_public
+      note: "Titre liant Risomes à la SCI Le Convivium de Mâlain non documenté par les sources consultées."
+resume: >
+  Association loi 1901 (« Réseau d'initiatives solidaires mutuelles et
+  écologiques », sigle Risomes) créée en 2016 pour animer le tiers-lieu de
+  Mâlain, dans le bâtiment acquis par la SCI Le Convivium de Mâlain. Elle
+  réunit huit « groupes action » et porte plusieurs activités : un café
+  associatif (Le Chauffe-Savates, ouvert en 2019, aménagé par chantiers
+  collectifs et financement participatif), une microbrasserie artisanale bio
+  (La Roche-Aiguë, depuis 2017), l'association La Milpa (troc de graines,
+  permaculture) et un festival biennal (Atout bout d'champ, environ 1 300
+  entrées à sa première édition en 2017). SIREN confirmé au répertoire
+  national des entreprises.
+montage:
+  type: demembrement
+  nu_proprietaire: "SCI Le Convivium de Mâlain"
+  usufruitier: "Risomes (association loi 1901)"
+  description: >
+    Risomes occupe et anime le bâtiment porté par la SCI Le Convivium de
+    Mâlain. Le titre précis (bail, convention d'occupation, mise à
+    disposition) liant les deux entités n'est pas documenté par les sources
+    consultées. L'association anime par ailleurs des activités agricoles et
+    de maraîchage sur des parcelles du GFA Citoyen Champs Libres et de la SCI,
+    sans que le lien institutionnel entre Risomes et le GFA soit détaillé par
+    les sources.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Association loi 1901 à gouvernance par « groupes action », animant un
+    lieu collectif ouvert (café, brasserie, festival) ; le titre d'usage
+    précis liant l'association au bâti n'est pas documenté.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "L'association ne détient pas le foncier (porté par la SCI), mais le titre d'usage précis — qui déterminerait la sécurité de cette non-appropriation — n'est pas documenté."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association loi 1901 sans capital ni parts sociales : aucun titre cessible."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Le sort de l'actif de l'association en cas de dissolution n'est pas documenté."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association loi 1901, personne morale de droit civil non lucrative."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "L'association porte des activités commerciales (café, brasserie) dont le régime de réinvestissement des excédents n'est pas documenté."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Le mode de décision entre les huit « groupes action » n'est pas détaillé par les sources."
+  - critere: usagers_decident
+    valeur: partiel
+    note: "L'organisation en huit « groupes action » suggère une gouvernance distribuée, sans détail sur les modalités de décision."
+  - critere: ouverture_entrants
+    valeur: oui
+    note: "Le lieu accueille de nouvelles activités et de nouveaux porteurs de projet au fil des années (café en 2019, maraîchage en 2019, vignes reprises en 2015)."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: objet_ig
+    valeur: oui
+    note: "Objet d'éducation populaire, d'animation locale et de relocalisation de l'alimentation (troc de graines, permaculture, boulangerie, maraîchage)."
+  - critere: public_non_restreint
+    valeur: oui
+    note: "Le café, la brasserie et le festival biennal (environ 1 300 entrées à sa première édition) sont ouverts au public, pas seulement aux membres."
+  - critere: duree_usage
+    valeur: inconnu
+    note: "La durée du titre liant Risomes à la SCI n'est pas documentée."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Le lien avec la SCI Le Convivium de Mâlain est connu dans son principe (occupation du bâtiment qu'elle porte), mais le titre précis n'est pas documenté."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Le lieu mêle activités non marchandes (éducation populaire, troc de graines) et activités commerciales tarifées (café, brasserie, boulangerie) : régime mixte."
+  - critere: loyer_soutenable
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'objet documenté est social et culturel (éducation populaire, animation locale) ; aucune finalité de préservation de la biodiversité n'est affichée par les sources consultées."
+analyse:
+  forces:
+    - "Dynamique collective réelle et documentée depuis 2016 : café, brasserie, festival, maraîchage, boulangerie paysanne."
+    - "Ouverture effective au public au-delà du cercle des membres (festival ~1 300 entrées, café ouvert)."
+    - "SIREN confirmé, existence juridique claire de l'association elle-même."
+  fragilites:
+    - "Titre d'usage précis liant Risomes au bâti (SCI) non documenté."
+    - "Mélange d'activités non marchandes et commerciales (café, brasserie) sans détail sur le réinvestissement des excédents."
+    - "Nue-propriété du bâtiment portée par une société (SCI) dont l'identification au registre n'est pas confirmée — voir porteurs/sci-convivium-malain.yml."
+  leviers:
+    - "Publier le titre d'usage (bail ou convention) liant l'association à la SCI."
+    - "Documenter le mode de décision entre les huit « groupes action »."
+    - "Clarifier le régime de réinvestissement des excédents des activités commerciales (café, brasserie)."
+  synthese: >
+    Risomes est une association d'animation locale solide et visible, mais le
+    lien formel qui la rattache au foncier — tant pour le bâti (SCI) que pour
+    les terres agricoles (GFA) — reste peu documenté par les sources
+    publiques. Le lieu de Mâlain illustre un montage réel et ancien (2015) de
+    « libération » citoyenne, dont la rigueur statutaire n'a pas pu être
+    pleinement vérifiée dans cette passe.
+fiabilite: >
+  Faits vérifiés (source Reporterre, consultée le 2026-11-08, et recherche-
+  entreprises.api.gouv.fr pour le SIREN) : association créée en 2016, SIREN
+  820566511 confirmé (RESEAU D'INITIATIVES SOLIDAIRES MUTUELLES ET
+  ECOLOGIQUES, 28-30 Rue de la Gare, 21410 Malain), huit « groupes action »,
+  café associatif Le Chauffe-Savates ouvert début 2019, microbrasserie La
+  Roche-Aiguë active depuis 2017, association La Milpa, festival biennal
+  Atout bout d'champ (~1 300 entrées en 2017). Non confirmé : statuts, titre
+  d'usage liant l'association à la SCI, mode de décision interne, régime de
+  réinvestissement des excédents commerciaux.
+voir_aussi: [sci-convivium-malain, gfa-citoyen-champs-libres]
+sources:
+  - titre: "Reporterre — Une association « agriculturelle » dynamise un village en Côte-d'Or"
+    url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+  - titre: "Recherche d'entreprises (API) — RISOMES"
+    url: "https://recherche-entreprises.api.gouv.fr/search?q=Risomes&departement=21"

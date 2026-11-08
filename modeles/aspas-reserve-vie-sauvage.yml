@@ -1,0 +1,90 @@
+uid: aspas-reserve-vie-sauvage
+categorie: modele
+nom: "ASPAS — Réserves de Vie Sauvage®"
+sous_titre: "Sanctuaire associatif sans dissociation propriété/usage — modèle voisin, mention spéciale"
+statut_fiche: publie
+forme_juridique: "Association loi 1901"
+pays: "France"
+annee: 2013
+url: "https://www.aspas-nature.org/"
+resume: >
+  L'Association pour la protection des animaux sauvages (ASPAS) achète des
+  terrains et les laisse en libre évolution sous le label qu'elle a déposé à
+  l'INPI, « Réserve de Vie Sauvage® » (classification UICN niveau 1b, le plus
+  strict). La réserve du Grand Barry, à Véronne (Drôme), illustre le modèle :
+  105 à 110 hectares acquis depuis 2013-2014 (sources divergentes), chasse et
+  exploitation forestière interdites, aucune intervention humaine. L'ASPAS
+  possédait plus de 1 200 hectares de réserves fin 2023. C'est le cas le plus
+  pur du corpus pour l'habitat du vivant — et, pour la même raison, le plus
+  éloigné de la définition structurelle de « Terres Libérées ».
+montage:
+  type: propriete_simple
+  description: >
+    L'ASPAS est à la fois propriétaire et seule « usagère » du foncier : il n'y
+    a pas de dissociation entre une entité porteuse de la nue-propriété et une
+    personne morale distincte titulaire de l'usage, à la différence du schéma
+    de référence du corpus (porteur + usufruitier + titre d'usage). Le « vivant »
+    n'est pas un usufruitier au sens juridique : c'est la finalité du montage,
+    pas une partie à un acte.
+integrite_montage:
+  niveau: ig_associatif_non_verrouille
+  commentaire: >
+    Association non lucrative, mais sans verrou statutaire sur le foncier. Les
+    statuts de l'ASPAS (version 2026, consultés le 2026-11-08) donnent au conseil
+    d'administration le pouvoir de décider seul des acquisitions, échanges et
+    aliénations d'immeubles (art. 8) ; l'assemblée générale n'intervient qu'au-
+    delà de 250 000 € de valeur nette comptable (règlement intérieur, art. 2.7).
+    En cas de dissolution, l'actif est dévolu à un organisme de finalité
+    analogue ou à une collectivité (art. 22) — protection standard d'une
+    association loi 1901, pas un dispositif propre au foncier. Le label
+    « Réserve de Vie Sauvage® » est une marque déposée avec un cahier des
+    charges, non une servitude opposable aux tiers (ni ORE, ni inaliénabilité
+    statutaire) : la soustraction au marché tient à la politique de
+    l'association, pas à un acte qui lui survivrait.
+axes_estimes:
+  1: 35
+  2: 45
+  3: 25
+  4: 95
+  5: 80
+analyse:
+  forces:
+    - "Finalité du vivant la plus pure du paysage observé : non-intervention totale, aucune activité économique sur le foncier."
+    - "Plus de 1 200 hectares soustraits au marché et à l'exploitation (chasse, sylviculture) fin 2023."
+    - "Label déposé, cahier des charges public, classification UICN la plus stricte (niveau 1b)."
+  fragilites:
+    - "Aucune dissociation propriété/usage : l'ASPAS est à la fois porteuse et seule décisionnaire, sans tiers de confiance ni gouvernance usagère distincte."
+    - "Aucun verrou statutaire anti-aliénation : le conseil d'administration peut, en droit, décider seul de céder un terrain."
+    - "Le label « Réserve de Vie Sauvage® » protège par engagement associatif, pas par un acte opposable aux tiers (pas d'ORE, pas de servitude)."
+    - "Pas de gouvernance partagée avec un usager humain distinct : le modèle ne traite pas la question de l'habitat humain, centrale au corpus « Terres Libérées »."
+  leviers:
+    - "Adosser une ORE (obligation réelle environnementale) aux parcelles les plus sensibles, pour un verrou opposable aux tiers au-delà de la politique associative."
+    - "Documenter une clause interne de non-aliénation, même non opposable, pour clarifier l'intention au-delà du droit commun des associations."
+    - "Articuler le modèle avec un porteur dissocié si une dimension d'habitat humain devait s'y greffer un jour (accueil, veille, étude)."
+  synthese: >
+    L'ASPAS illustre, par contraste, ce que le corpus « Terres Libérées »
+    exige en plus d'une simple bonne volonté associative : une dissociation
+    propriété/usage formalisée par un acte qui survit à la politique du
+    moment. Le modèle est retenu ici **en mention spéciale** — comme borne
+    du spectre « finalité du vivant » — et non comme `lieu` du corpus, faute
+    de cette dissociation et de tout habitat humain partagé.
+fiabilite: >
+  Faits vérifiés : association loi 1901, label « Réserve de Vie Sauvage® »
+  déposé à l'INPI, classification UICN 1b, plus de 1 200 ha de réserves fin
+  2023 (sources ASPAS et European Rewilding Network, consultées le
+  2026-11-08). Statuts de l'ASPAS lus intégralement pour les articles 2, 6, 8,
+  21 à 23 (pas de clause d'inaliénabilité). Non confirmé : la surface exacte de
+  la réserve du Grand Barry (105 ha selon Reporterre/Socialter, 110 ha selon
+  European Rewilding Network) et l'année exacte d'acquisition (2013 ou 2014) —
+  divergence non résolue par cette passe, à recouper sur un acte si besoin.
+sources:
+  - titre: "ASPAS — site officiel"
+    url: "https://www.aspas-nature.org/"
+  - titre: "ASPAS — Nouveaux statuts et règlement intérieur (2026)"
+    url: "https://www.aspas-nature.org/wp-content/uploads/2026/03/Nouveaux-statuts-et-RI-signes.pdf"
+  - titre: "European Rewilding Network — Grand Barry Wildlife Reserve"
+    url: "https://rewildingeurope.com/rew-project/grand-barry-wildlife-reserve/"
+  - titre: "Reporterre — Dans la Drôme, un havre réservé à la vie sauvage"
+    url: "https://reporterre.net/dans-la-drome-un-havre-reserve-a-la-vie-sauvage"
+  - titre: "Socialter HS15 — Propriété commune : 4 pistes pour dépasser la propriété privée"
+    url: "https://www.socialter.fr/article/propriete-commune-alternatives-propriete-privee"

@@ -1,0 +1,144 @@
+uid: foret-lu-picatau
+categorie: lieu
+nom: "Forêt Lu Picatau"
+sous_titre: "Massif forestier citoyen du Périgord vert, géré par ses 200 associé·es"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Abjat-sur-Bandiat"
+  departement: "Dordogne (24)"
+  region: "Nouvelle-Aquitaine"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=0.8647,45.5161&z=15"
+annee: 2020
+url: "https://www.gfclupicatau.fr/"
+resume: >
+  Massif forestier d'environ 80 hectares au lieu-dit Grande Borne, commune
+  d'Abjat-sur-Bandiat, en Périgord vert (Dordogne). Face à la multiplication
+  des coupes rases dans la région, environ 200 citoyen·nes se sont réuni·es
+  en 2020 au sein du groupement forestier Lu Picatau pour acquérir et gérer
+  collectivement des parcelles, dont une obtenue par droit de préférence sur
+  une parcelle voisine à Saint-Pardoux-la-Rivière. Les coupes rases y sont
+  exclues ; le prélèvement de bois se limite aux besoins directs et locaux,
+  et une partie du massif est explicitement laissée en libre évolution.
+montage:
+  type: propriete_collective
+  articulations:
+    - usufruitier: gfc-lu-picatau
+      titre: integre
+      note: "Montage intégré : les 200 associé·es du groupement forestier sont à la fois propriétaires du foncier et décisionnaires de sa gestion, sans structure foncière distincte documentée."
+  description: >
+    Le groupement forestier citoyen Lu Picatau détient et gère directement le
+    massif : il n'y a pas de dissociation documentée entre une entité
+    porteuse de la nue-propriété et une entité usufruitière distincte. Le
+    régime des parts (valeur, cessibilité) des 200 associé·es n'est pas
+    publié par les sources consultées.
+integrite_montage:
+  niveau: economie_marchande
+  commentaire: >
+    Montage intégré, à finalité écologique explicite (libre évolution
+    partielle, exclusion des coupes rases), mais dont le verrou anti-
+    spéculatif (régime des parts du groupement forestier) n'est pas
+    documenté : la nature de l'intérêt du maillon reste `inconnu` et le
+    verdict du lieu ne peut pas être établi en l'état. Le pôle affiché est
+    délibérément prudent plutôt qu'aspirationnel.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est détenu par un groupement forestier citoyen à capital ouvert plutôt que par un propriétaire privé classique, mais sans clause d'inaliénabilité documentée."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le principe (groupement forestier citoyen, 200 associé·es, droit de préférence) est public ; les statuts et le régime des parts ne sont pas publiés."
+  - critere: irreversibilite
+    valeur: inconnu
+    note: "Non documenté — dépend du régime statutaire des parts, non publié."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "L'acquisition répond explicitement à une logique de protection face aux coupes rases, financée par une souscription citoyenne en capital."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Une partie du massif est explicitement laissée en libre évolution ; aucun dispositif opposable (ORE, classement) n'est documenté pour formaliser cette protection au-delà de la politique du groupement."
+  - critere: non_lucratif_global
+    valeur: inconnu
+    note: "Non documenté — régime des parts non publié."
+  - critere: montage_non_commercial
+    valeur: partiel
+    note: "Un groupement forestier est une société civile, de nature non commerciale au sens du droit des sociétés, mais structuré en capital plutôt qu'en forme associative ou fondative."
+  - critere: gouvernance_collective
+    valeur: oui
+    note: "Les 200 associé·es sont à la fois propriétaires et décisionnaires, sans exploitant ou gestionnaire tiers documenté."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "Non documenté — association du voisinage ou des pouvoirs publics à la gouvernance non précisée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Non documenté."
+  - critere: travail_non_marchandise
+    valeur: inconnu
+    note: "Le mode de gestion forestière (bénévole, salarié, prestataire) n'est pas documenté."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Protection forestière face aux coupes rases, restauration de la diversité des essences : finalité dépassant l'intérêt propre des associé·es."
+  - critere: ancrage_territorial
+    valeur: partiel
+    note: "Le groupement s'inscrit dans le Périgord vert et agrandit le massif par des acquisitions de parcelles voisines ; son ouverture au public local n'est pas documentée."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Diversité des essences et des classes d'âge, sols vivants, libre évolution partielle : finalité du vivant explicitement affichée."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Le prélèvement est présenté comme limité aux besoins directs et locaux ; une éventuelle commercialisation de bois n'est pas précisée."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Non applicable en l'état documenté : montage intégré, pas de loyer identifié."
+  - critere: securite_jouissance
+    valeur: oui
+    note: "Montage intégré : les associé·es sont directement propriétaires, sans dépendre d'un titre d'usage à durée limitée accordé par un tiers."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Exclusion explicite des coupes rases, prélèvement limité aux besoins directs et locaux."
+  - critere: place_au_vivant
+    valeur: oui
+    note: "Une partie du massif est explicitement laissée en libre évolution, sans aucune intervention."
+analyse:
+  forces:
+    - "Finalité écologique claire et vérifiable : exclusion des coupes rases, libre évolution partielle, diversité des essences visée."
+    - "Gouvernance intégrée et nombreuse (200 associé·es), sans exploitant tiers."
+    - "Usage effectif du droit de préférence pour agrandir le massif de façon cohérente (parcelles voisines)."
+  fragilites:
+    - "Régime des parts du groupement forestier (valeur, cessibilité, plus-value) non documenté : le verrou anti-spéculatif n'est pas confirmé."
+    - "Aucun dispositif opposable (ORE, classement) ne vient sécuriser la libre évolution au-delà de la politique du groupement."
+    - "Statuts non publiés, surface exacte incertaine (80 ou 81 ha selon la source)."
+  leviers:
+    - "Publier les statuts et le régime de cession des parts du groupement forestier."
+    - "Adosser une ORE aux parcelles laissées en libre évolution, pour un verrou opposable aux tiers."
+    - "Documenter l'accès du public et le mode de décision interne."
+  synthese: >
+    La forêt Lu Picatau illustre, dans la famille forestière, le même schéma
+    que le GFA de Mâlain dans la famille agricole : une collecte citoyenne
+    réelle, une finalité écologique affichée et vérifiable, mais un montage
+    en société civile à capital dont les verrous statutaires ne sont pas
+    publiquement documentés. Comme pour la réserve ASPAS du Grand Barry, la
+    finalité du vivant est forte ; contrairement à l'ASPAS, il y a ici une
+    dimension de gouvernance partagée par de nombreux associé·es.
+fiabilite: >
+  Faits vérifiés (sources Réseau pour les alternatives forestières et
+  gfclupicatau.fr, consultées le 2026-11-08) : création en 2020, lieu-dit
+  Grande Borne, Abjat-sur-Bandiat (Dordogne), environ 200 associé·es, surface
+  de 80 ou 81 hectares selon la page consultée, acquisition par droit de
+  préférence à Saint-Pardoux-la-Rivière, exclusion des coupes rases,
+  prélèvement limité aux besoins directs et locaux, libre évolution partielle
+  du massif. Non confirmé : statuts, régime des parts, surface exacte, accès
+  du public.
+chaine:
+  porteurs: [gfc-lu-picatau]
+  usufruitiers: [gfc-lu-picatau]
+sources:
+  - titre: "Réseau pour les alternatives forestières — Groupement forestier Lu Picatau"
+    url: "https://www.alternativesforestieres.org/Groupement-forestier-Lu-Picatau"
+  - titre: "GFC Lu Picatau — site officiel"
+    url: "https://www.gfclupicatau.fr/"
+  - titre: "Socialter HS15 — Propriété commune : 4 pistes pour dépasser la propriété privée"
+    url: "https://www.socialter.fr/article/propriete-commune-alternatives-propriete-privee"

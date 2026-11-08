@@ -1,0 +1,149 @@
+uid: gfa-citoyen-champs-libres
+categorie: porteur
+nom: "GFA Citoyen Champs Libres"
+sous_titre: "Groupement foncier agricole citoyen, propriétaire de 3 hectares à Mâlain (Côte-d'Or)"
+statut_fiche: publie
+forme_juridique: "Groupement foncier agricole (société civile)"
+nature_interet: inconnu
+localisation:
+  commune: "Mâlain"
+  departement: "Côte-d'Or (21)"
+  region: "Bourgogne-Franche-Comté"
+annee: 2015
+url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+dossier:
+  identite:
+    siren: "812835882"
+  echelle:
+    surface_ha: 3
+  pieces:
+    - type: statuts
+      statut: non_public
+      note: "Statuts du GFA non localisés en ligne ; cinq cogérant·es élu·es selon la source presse (Reporterre)."
+    - type: acte_montage
+      statut: inconnu
+    - type: bail
+      statut: non_public
+      note: "Bail rural non publié ; Reporterre mentionne une location de 2 ha au paysan-boulanger du village."
+resume: >
+  Groupement foncier agricole créé en juillet 2015 par les futurs habitant·es du
+  tiers-lieu de Mâlain (Côte-d'Or), pour acquérir 3 hectares de terres agricoles
+  face à la gare du village. La collecte citoyenne a réuni 36 000 euros auprès de
+  103 personnes ; cinq cogérant·es sont élu·es pour administrer le groupement.
+  Le GFA loue une partie de ses terres — environ 2 hectares — à un paysan-
+  boulanger installé depuis 2016, et met à disposition d'autres parcelles pour du
+  maraîchage. C'est un GFA bailleur de type citoyen/mutuel : capital ouvert à des
+  personnes physiques, sans vocation spéculative affichée, mais sans clause de
+  verrouillage statutaire documentée par les sources consultées.
+montage:
+  type: demembrement
+  description: >
+    Le GFA, société civile, détient la nue-propriété des 3 hectares et les loue
+    par bail rural aux exploitant·es en place (paysan-boulanger, maraîcher·e).
+    La collecte citoyenne de 2015 (103 souscripteur·ices, 36 000 euros) et
+    l'élection de cinq cogérant·es indiquent une gouvernance ouverte aux
+    personnes ayant apporté des parts ; le régime exact des parts (valeur
+    nominale, cessibilité, plafond par souscripteur·ice) n'est pas documenté par
+    les sources consultées.
+integrite_montage:
+  niveau: commun_citoyen
+  commentaire: >
+    Société civile à capital citoyen ouvert, gouvernance par cogérant·es
+    élu·es ; la solidité du verrou foncier dépend de clauses statutaires
+    (valeur des parts, inaliénabilité) non documentées par les sources
+    publiques consultées pour cette passe.
+grille:
+  - critere: inalienabilite
+    valeur: inconnu
+    note: "Aucune clause d'inaliénabilité ou de dotation non consomptible n'est documentée par les sources consultées."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "Le régime de cessibilité des parts du GFA (valeur nominale ou de marché, plafond, agrément des cessions) n'est pas documenté."
+  - critere: nature_protectrice
+    valeur: inconnu
+    note: "Le niveau de protection du GFA face à une cession ou une dissolution n'est pas documenté par les statuts, non localisés en ligne."
+  - critere: clause_devolution
+    valeur: inconnu
+    note: "Le sort du foncier en cas de dissolution du GFA n'est pas documenté."
+  - critere: forme_non_lucrative
+    valeur: non
+    note: "Le groupement foncier agricole est une société civile à capital social, structurellement distincte d'une forme non lucrative (association, fonds de dotation, fondation)."
+  - critere: non_lucrativite_effective
+    valeur: inconnu
+    note: "L'existence d'une distribution de bénéfices ou de plus-value aux associé·es n'est pas documentée ; la collecte est présentée comme un financement d'accès à la terre, sans précision statutaire."
+  - critere: gestion_desinteressee
+    valeur: inconnu
+    note: "La gestion est confiée à cinq cogérant·es élu·es ; leur rémunération éventuelle n'est pas documentée."
+  - critere: independance_rendement
+    valeur: partiel
+    note: "La collecte de 2015 est présentée comme un financement citoyen d'accès à la terre plutôt qu'un placement ; l'absence de toute attente de rendement n'est cependant pas confirmée par des statuts publiés."
+  - critere: ca_collegial
+    valeur: oui
+    note: "Cinq cogérant·es sont élu·es pour administrer le groupement, selon la source presse consultée."
+  - critere: parties_prenantes
+    valeur: oui
+    note: "Le GFA a réuni 103 personnes physiques lors de sa collecte fondatrice en 2015."
+  - critere: autogestion_usagers
+    valeur: inconnu
+    note: "Le lien entre les exploitant·es preneurs des baux (paysan-boulanger, maraîcher·e) et la gouvernance du GFA n'est pas documenté : rien n'indique qu'ils·elles siègent parmi les cogérant·es ou les associé·es."
+  - critere: transparence
+    valeur: inconnu
+    note: "La publication des comptes ou des décisions du GFA n'est pas documentée."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "L'objet du GFA est explicitement l'acquisition citoyenne de terres agricoles pour en assurer un usage paysan pérenne, face à la gare du village."
+  - critere: agrement_ig
+    valeur: non
+    note: "Un groupement foncier agricole est une société civile sans agrément d'intérêt général ; rien n'indique une reconnaissance de ce type."
+  - critere: risque_requalification
+    valeur: inconnu
+    note: "Le risque qu'une cession de parts s'apparente à une opération spéculative n'est pas documenté, faute de statuts publiés."
+  - critere: redevabilite_publique
+    valeur: non
+    note: "Un GFA n'est pas soumis à des obligations de reddition de comptes au public comparables à celles d'un fonds de dotation ou d'une fondation reconnue d'utilité publique."
+  - critere: vivant_finalite
+    valeur: non
+    note: "L'objet documenté du GFA est l'accès paysan à la terre ; aucune finalité de préservation de la biodiversité n'est affichée par les sources consultées."
+  - critere: regime_usage_offert
+    valeur: inconnu
+    note: "Le montant du loyer versé par les preneurs des baux ruraux n'est pas documenté."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Le bail rural confère un titre d'usage protégé par le statut d'ordre public du fermage (renouvellement, droit de préemption) ; sa durée précise et ses clauses pour ce GFA ne sont pas publiées."
+analyse:
+  forces:
+    - "Acquisition citoyenne réussie : 103 souscripteur·ices, 36 000 euros collectés en 2015 pour 3 hectares."
+    - "Gouvernance par cinq cogérant·es élu·es plutôt qu'un gérant unique."
+    - "Terres effectivement louées à un paysan-boulanger et mises à disposition pour du maraîchage : usage agricole réel, pas une réserve dormante."
+  fragilites:
+    - "Aucune clause d'inaliénabilité ou de non-cessibilité des parts documentée : le verrou foncier dépend de statuts non publiés."
+    - "Société civile à capital, donc structurellement distincte d'une forme non lucrative — contrairement aux fonds de dotation ou fondations du corpus."
+    - "Aucune transparence comptable ni publication des statuts identifiée."
+  leviers:
+    - "Publier les statuts du GFA, en particulier le régime des parts (valeur nominale, cessibilité, plafond)."
+    - "Documenter une éventuelle clause de non-spéculation ou de dévolution en cas de dissolution."
+    - "Clarifier l'articulation entre associé·es souscripteur·ices et exploitant·es preneurs des baux."
+  synthese: >
+    Le GFA Citoyen Champs Libres illustre un cas fréquent de la famille des
+    GFA mutuels : une collecte citoyenne réussie, une gouvernance collégiale,
+    et un usage agricole réel — mais sans les verrous statutaires (parts non
+    cessibles, inaliénabilité, dévolution encadrée) qui distingueraient
+    structurellement ce montage d'une société civile ordinaire. La revue
+    mémoire du projet (discovery/memoire-liste-attente.md) a déjà identifié ce
+    type de fragilité pour les formules à parts.
+fiabilite: >
+  Faits vérifiés (source Reporterre, consultée le 2026-11-08, et recherche-
+  entreprises.api.gouv.fr pour le SIREN) : GFA créé en juillet 2015, 36 000
+  euros collectés auprès de 103 personnes, cinq cogérant·es élu·es, 3 hectares
+  de terres agricoles à Mâlain (Côte-d'Or), location d'environ 2 hectares à un
+  paysan-boulanger installé en 2016, mise à disposition de parcelles
+  supplémentaires pour du maraîchage à partir de 2019. SIREN 812835882 confirmé
+  (GFA CITOYEN CHAMPS LIBRES, 30 Rue de la Gare, 21410 Malain). Non confirmé :
+  statuts, régime des parts, clause de dévolution, montant des loyers,
+  comptes publiés.
+voir_aussi: [sci-convivium-malain]
+sources:
+  - titre: "Reporterre — Une association « agriculturelle » dynamise un village en Côte-d'Or"
+    url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+  - titre: "Recherche d'entreprises (API) — GFA CITOYEN CHAMPS LIBRES"
+    url: "https://recherche-entreprises.api.gouv.fr/search?q=Champs+libres&code_postal=21410"

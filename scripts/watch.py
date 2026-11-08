@@ -43,6 +43,7 @@ import time
 import urllib.request
 import urllib.error
 from collections import Counter
+import html as html_entities
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode
@@ -186,6 +187,25 @@ def fetch(url: str) -> str | None:
             ConnectionError, ValueError) as exc:
         print(f"  ! échec {url} : {exc}", file=sys.stderr)
         return None
+
+
+def rss_links(xml_text: str) -> list[tuple[str, str]]:
+    """Extrait (lien, titre) de chaque <item> d'un flux RSS 2.0, sans
+    dépendance XML lourde (regex best-effort, cf. philosophie du module).
+    Utilisé pour les sources en échec de scraping deep_html mais dont le
+    flux RSS reste accessible (cas Reporterre, session #13)."""
+    items = re.findall(r"<item\b[^>]*>(.*?)</item>", xml_text, re.S | re.I)
+    out: list[tuple[str, str]] = []
+    for item in items:
+        m_link = re.search(r"<link>(.*?)</link>", item, re.S | re.I)
+        m_title = re.search(r"<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", item, re.S | re.I)
+        if not m_link:
+            continue
+        link = m_link.group(1).strip()
+        title = html_entities.unescape(re.sub(r"\s+", " ", (m_title.group(1) if m_title else "")).strip())
+        if link:
+            out.append((link, title or link))
+    return out
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -563,7 +583,7 @@ def main():
             marquer_scan(sid, freq_log, today_d, status="ok")
             continue
 
-        print(f"· {sid} — {url}  [{src.get('_frequence_resolue')}]")
+        print(f"· {sid} — {url}  [{src.get('_frequence_resolue')}]" + (" (parser: rss)" if parser_type == "rss" else ""))
         html_doc = fetch(url)
         time.sleep(POLITE_DELAY)
         n_src = 0
@@ -571,17 +591,29 @@ def main():
             sources_sante.append((src.get("id"), "échec", 0))
             marquer_scan(src.get("id"), freq_log, today_d, status="échec")
             continue
-        harvester = LinkHarvester()
-        try:
-            harvester.feed(html_doc)
-        except Exception as exc:  # parsing best-effort
-            print(f"  ! parsing {url} : {exc}", file=sys.stderr)
-            sources_sante.append((src.get("id"), "parsing KO", 0))
-            marquer_scan(src.get("id"), freq_log, today_d, status="parsing KO")
-            continue
+        if parser_type == "rss":
+            # Flux RSS (voie de contournement anti-robot, session #13) :
+            # pas de <a href> à moissonner, juste <item><link>/<title>.
+            try:
+                raw_links = rss_links(html_doc)
+            except Exception as exc:  # parsing best-effort
+                print(f"  ! parsing rss {url} : {exc}", file=sys.stderr)
+                sources_sante.append((src.get("id"), "parsing KO", 0))
+                marquer_scan(src.get("id"), freq_log, today_d, status="parsing KO")
+                continue
+        else:
+            harvester = LinkHarvester()
+            try:
+                harvester.feed(html_doc)
+            except Exception as exc:  # parsing best-effort
+                print(f"  ! parsing {url} : {exc}", file=sys.stderr)
+                sources_sante.append((src.get("id"), "parsing KO", 0))
+                marquer_scan(src.get("id"), freq_log, today_d, status="parsing KO")
+                continue
+            raw_links = harvester.links
         src_kw = src.get("mots_cles", [])
         src_raw: list[dict] = []
-        for href, text in harvester.links:
+        for href, text in raw_links:
             link = urljoin(url, href)
             if not link.startswith(("http://", "https://")):
                 continue

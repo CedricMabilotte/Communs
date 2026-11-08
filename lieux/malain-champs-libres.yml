@@ -1,0 +1,159 @@
+uid: malain-champs-libres
+categorie: lieu
+nom: "Mâlain — Champs libres"
+sous_titre: "Tiers-lieu rural porté par un GFA citoyen et une SCI, animé par l'association Risomes"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Mâlain"
+  departement: "Côte-d'Or (21)"
+  region: "Bourgogne-Franche-Comté"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.7936,47.3283&z=16"
+annee: 2015
+url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+resume: >
+  À Mâlain, village de 740 habitant·es à 20 km à l'ouest de Dijon, la mairie a
+  permis l'accès à un bâtiment d'environ 800 m² habitables et à 3 hectares de
+  terres agricoles, face à la gare. Les futurs habitant·es créent en 2015 deux
+  sociétés civiles distinctes — le GFA Citoyen Champs Libres pour les terres
+  (36 000 euros collectés auprès de 103 personnes) et la SCI Le Convivium de
+  Mâlain pour le bâtiment — puis l'association Risomes en 2016 pour animer le
+  lieu. S'y développent un café associatif (Le Chauffe-Savates, 2019), une
+  microbrasserie bio (La Roche-Aiguë, 2017), une boulangerie paysanne (2016),
+  du maraîchage, un élevage de poules et un festival biennal réunissant environ
+  1 300 personnes à sa première édition (2017). Montage réel et documenté,
+  mais aux verrous statutaires incertains : deux sociétés civiles (GFA, SCI)
+  dont le régime des parts n'est pas publié, et une SCI non identifiée au
+  registre sous ce nom lors de la vérification du 2026-11-08.
+montage:
+  type: propriete_collective
+  articulations:
+    - usufruitier: association-risomes
+      titre: convention
+      note: "Titre précis non documenté : la nature et la durée du titre liant Risomes à la SCI Le Convivium de Mâlain ne sont pas publiées."
+  description: >
+    Le foncier de Mâlain est porté par deux sociétés civiles distinctes créées
+    par les futurs usager·es en 2015 : le GFA Citoyen Champs Libres pour les 3
+    hectares de terres agricoles, et la SCI Le Convivium de Mâlain pour le
+    bâtiment. L'association Risomes, créée en 2016, anime le bâtiment et une
+    partie des terres. Les terres agricoles sont par ailleurs louées
+    directement, par bail rural, à des exploitant·es individuel·les — un
+    paysan-boulanger depuis 2016, un·e maraîcher·e depuis 2019, un·e
+    éleveuse de poules depuis 2017 — dont les sources consultées ne donnent
+    que le prénom : ces preneurs ne sont pas modélisés en personne morale
+    distincte dans ce corpus (règle #11 — empreinte publique insuffisante
+    pour une fiche nommée), mais leur activité réelle est mentionnée ici pour
+    la complétude du tableau.
+integrite_montage:
+  niveau: economie_marchande
+  commentaire: >
+    Montage ancien (2015-2016) et documenté dans son principe — deux sociétés
+    civiles citoyennes et une association d'animation — mais dont la nature
+    de l'intérêt (`nature_interet`) des deux porteurs reste `inconnu`, faute
+    de statuts publiés : le verdict calculé du lieu ne peut donc pas être
+    établi en l'état (chaîne non entièrement qualifiée), et le pôle affiché
+    ici est délibérément prudent plutôt qu'aspirationnel. Proche dans
+    l'esprit du commun citoyen (collecte de 103 personnes, gouvernance par
+    cogérant·es élu·es), sans les garanties structurelles — ni la
+    vérification — des montages à fonds de dotation ou fondation du corpus.
+grille:
+  - critere: foncier_hors_marche
+    valeur: partiel
+    note: "Le foncier est détenu par deux sociétés civiles à capital citoyen (GFA, SCI) plutôt que par le marché privé ordinaire, mais aucune clause d'inaliénabilité ni de non-cessibilité des parts n'est documentée."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Le montage (deux sociétés civiles + une association) est public par voie de presse (Reporterre) ; les statuts des trois entités ne sont pas publiés."
+  - critere: irreversibilite
+    valeur: non
+    note: "Aucun dispositif d'inaliénabilité, de droit de veto ou de clause anti-spéculative n'est documenté pour le GFA ou la SCI."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Le foncier a été acquis par une collecte citoyenne (103 personnes, 36 000 euros pour le GFA) dans une logique déclarée d'accès à la terre, non de placement."
+  - critere: parts_non_cessibles
+    valeur: inconnu
+    note: "Le régime de cessibilité des parts du GFA et de la SCI n'est pas documenté par les sources consultées."
+  - critere: milieu_protege
+    valeur: non
+    note: "Aucun dispositif opposable de protection du milieu (ORE, espace protégé, clause environnementale) n'est documenté."
+  - critere: non_lucratif_global
+    valeur: partiel
+    note: "L'association Risomes est non lucrative, mais le GFA et la SCI sont des sociétés civiles à capital dont le régime de lucrativité effective n'est pas documenté."
+  - critere: montage_non_commercial
+    valeur: non
+    note: "La chaîne comporte deux sociétés civiles à capital (GFA, SCI), bien que de nature civile et non commerciale au sens strict du droit des sociétés — à distinguer d'une SAS ou SCIC commerciale."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "Le GFA est administré par cinq cogérant·es élu·es et Risomes s'organise en huit « groupes action » ; l'articulation entre souscripteur·ices du GFA/SCI et usager·es de Risomes n'est pas détaillée."
+  - critere: tripartisme
+    valeur: partiel
+    note: "La mairie de Mâlain a facilité l'accès initial au bâtiment et aux terres ; son association continue à la gouvernance du lieu n'est pas documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Les dispositifs de transmission et de renouvellement des cogérances et des groupes action ne sont pas documentés."
+  - critere: travail_non_marchandise
+    valeur: partiel
+    note: "Le lieu mêle travail bénévole associatif (Risomes, La Milpa) et activités salariées ou indépendantes tarifées (café, brasserie, boulangerie paysanne)."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Éducation populaire, animation locale, relocalisation alimentaire (boulangerie, maraîchage, troc de graines) : vocation d'intérêt général social et culturel."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Le lieu est ouvert au village (740 habitant·es) et au-delà : café, festival biennal (~1 300 entrées en 2017), activités agricoles vendues localement."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Aucune finalité de préservation de la biodiversité n'est affichée ; le projet est centré sur l'agriculture paysanne et l'animation sociale et culturelle."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Les activités d'éducation populaire et de troc relèvent du non-marchand ; le café, la brasserie et la boulangerie sont des activités commerciales tarifées."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Les montants des loyers versés par les preneurs de baux ruraux ne sont pas documentés."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Les baux ruraux bénéficient du statut protecteur du fermage (ordre public) ; le titre liant Risomes à la SCI n'est pas documenté."
+  - critere: usage_non_degradant
+    valeur: inconnu
+    note: "Les pratiques agricoles précises (conduite en bio ou non pour l'ensemble des activités) ne sont pas détaillées par les sources consultées."
+  - critere: place_au_vivant
+    valeur: non
+    note: "Le projet est centré sur l'activité humaine (agriculture vivrière, animation) ; les sources ne documentent pas d'espace dédié ou laissé au vivant non-humain."
+analyse:
+  forces:
+    - "Montage citoyen ancien (2015) et toujours actif dix ans plus tard, avec une diversité d'activités réelles."
+    - "Collecte citoyenne réussie (103 personnes, 36 000 euros) pour l'acquisition des terres."
+    - "Facilitation initiale par la commune, qui a permis l'accès au bâtiment et aux terres."
+  fragilites:
+    - "Deux sociétés civiles à capital (GFA, SCI) sans clause d'inaliénabilité ni de non-cessibilité des parts documentée."
+    - "SCI Le Convivium de Mâlain non identifiée au registre national des entreprises sous ce nom (vérification du 2026-11-08)."
+    - "Aucune dimension de protection du vivant non-humain, à la différence d'autres lieux du corpus."
+  leviers:
+    - "Publier les statuts du GFA et de la SCI, en particulier le régime des parts."
+    - "Documenter le titre d'usage liant Risomes à la SCI et au GFA."
+    - "Clarifier l'identité juridique exacte de la SCI (dénomination, SIREN)."
+  synthese: >
+    Mâlain est un cas réel et documenté de « champs libres » citoyens — un
+    village qui s'est doté, par souscription, d'un GFA et d'une SCI pour
+    sécuriser un tiers-lieu rural actif depuis dix ans. Mais le montage
+    emprunte aux sociétés civiles à capital plutôt qu'aux formes non
+    lucratives verrouillées du cœur du corpus (fonds de dotation, fondation,
+    propriété publique inaliénable) : son inclusion illustre, par comparaison,
+    la fragilité structurelle des formules à parts déjà identifiée par la
+    revue mémoire du projet.
+fiabilite: >
+  Faits vérifiés (source Reporterre, consultée le 2026-11-08, et recherche-
+  entreprises.api.gouv.fr) : village de 740 habitant·es, accès facilité par la
+  mairie à un bâtiment de ~800 m² et 3 ha de terres, création du GFA Citoyen
+  Champs Libres (SIREN 812835882) et de la SCI Le Convivium de Mâlain en 2015,
+  association Risomes (SIREN 820566511) créée en 2016, café Le Chauffe-Savates
+  ouvert début 2019, microbrasserie La Roche-Aiguë depuis 2017, boulangerie
+  paysanne depuis 2016, maraîchage depuis 2019, élevage de poules depuis 2017,
+  festival Atout bout d'champ (~1 300 entrées en 2017). Non confirmé : statuts
+  des trois entités, SIREN de la SCI, titres d'usage précis, régime des parts.
+chaine:
+  porteurs: [gfa-citoyen-champs-libres, sci-convivium-malain]
+  usufruitiers: [association-risomes]
+sources:
+  - titre: "Reporterre — Une association « agriculturelle » dynamise un village en Côte-d'Or"
+    url: "https://reporterre.net/Une-association-agriculturelle-dynamise-un-village-en-Cote-d-Or"
+  - titre: "Socialter HS15 — Défendre nos terres agricoles : tactiques pour une stratégie foncière"
+    url: "https://www.socialter.fr/article/tactiques-pour-une-strategie-fonciere"
