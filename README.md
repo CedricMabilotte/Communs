@@ -101,3 +101,12 @@ du site détaille le calcul et ses limites.
 
 Distribué sous **Peer Production License (PPL)**, licence à réciprocité
 « copyfarleft ». Titulaire : actitude.org.
+
+## Réutiliser
+
+- **Fiches** : `lieux/<slug>.yml` (une fiche par lieu), dossiers d'analyse dans `dossiers/`. Adresse stable sur le site : https://communs.actitude.org/l/<slug>.html.
+- **Téléchargement** : https://communs.actitude.org/data.json (toutes les fiches, régénéré au build).
+- **Licences** (`LICENSE`) : textes CC BY-NC-SA 4.0 ; données ODbL 1.0 ; code AGPL-3.0-or-later ; sources tierces à leur licence.
+- **Citer** : `CITATION.cff` (GitHub : « Cite this repository »). Archive pérenne : Software Heritage,
+  https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/CedricMabilotte/Communs
+- **Corriger** : `CONTRIBUTING.md` — une issue ou une PR par fiche, source citée, réponse sous un mois.
