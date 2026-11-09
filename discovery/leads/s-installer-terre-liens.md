@@ -2,7 +2,7 @@
 slug: s-installer-terre-liens
 nom: S'installer Terre Liens
 cree: '2026-11-02'
-dernier_repere: '2026-11-02'
+dernier_repere: '2026-11-09'
 score_cumule: 13
 sources_vues:
 - source: terre-de-liens
