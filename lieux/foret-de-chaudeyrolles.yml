@@ -1,0 +1,176 @@
+uid: foret-de-chaudeyrolles
+categorie: lieu
+nom: "Forêt de Chaudeyrolles"
+sous_titre: "Parcelle boisée du Mézenc portée par le fonds de dotation Forêts en Vie et gérée par l'association Sous Lou Boès"
+statut_fiche: publie
+forme_juridique: null
+localisation:
+  commune: "Chaudeyrolles"
+  departement: "Haute-Loire (43)"
+  region: "Auvergne-Rhône-Alpes"
+  geoportail: "https://www.geoportail.gouv.fr/carte?c=4.1954,44.9449&z=14"
+annee: 2022
+url: "https://www.foretsenvie.org/Decouvrez-les-sept-forets-ou-nous-sommes-present-es-et-les-activites-qui-y-sont"
+resume: >
+  Parcelle forestière de 3,6 hectares sur la commune de Chaudeyrolles
+  (129 habitant·es), dans le massif du Mézenc en Haute-Loire. Acquise en 2022
+  par le fonds de dotation Forêts en Vie, fonds de dotation dédié à la forêt
+  créé en 2017 par le Réseau pour les alternatives forestières, elle est
+  confiée par bail forestier à clauses
+  environnementales et sociales à l'association Sous Lou Boès, créée en
+  octobre 2022 par des habitant·es de Boussoulet et des environs. La forêt
+  devient un espace de gestion douce et de transmission : bois de chauffage et
+  de construction récoltés à plusieurs, sans abatteuse, débardage à cheval,
+  chantiers collectifs, vieux arbres conservés, protection des habitats de
+  rapaces nocturnes et de blaireaux, suivi vers une forêt mélangée en âges et
+  en essences. Pas d'habitat humain sur la parcelle : l'usage partagé passe par
+  les chantiers et l'accueil, non par la résidence — comme pour la forêt Lu
+  Picatau déjà au corpus. Le toponyme cadastral exact et l'acte d'acquisition
+  ne sont pas publiés ; la localisation géoportail pointe le centre de la
+  commune, non la parcelle.
+montage:
+  type: propriete_protegee
+  articulations:
+    - usufruitier: sous-lou-boes
+      titre: convention
+      note: "« Bail forestier » propre au fonds, à clauses environnementales et sociales ; sa durée pour Chaudeyrolles est introuvable (la durée « de 15 à 99 ans » publiée par le fonds vise le bail signé entre un·e propriétaire et Forêts en Vie, non le bail fonds → association) ; sa nature juridique exacte (emphytéotique ou bail civil long), sa durée pour Chaudeyrolles et son loyer ne sont pas publiés — le titre est donc codé prudemment « convention » et non « bail emphytéotique »."
+  description: >
+    Le fonds de dotation Forêts en Vie détient la pleine propriété de la
+    parcelle et en confie l'usage à l'association Sous Lou Boès par un bail
+    forestier à clauses. Le résumé des statuts du fonds indique que la mise à
+    disposition se fait « de préférence par bail emphytéotique » ; le fonds
+    publie un modèle de bail disponible sur demande, dont la durée annoncée
+    (15 à 99 ans) concerne le bail propriétaire → fonds ; la durée du bail de
+    Chaudeyrolles est introuvable. Le
+    non-respect des clauses ouvre une concertation puis une médiation, et à
+    défaut le transfert du bail. La chaîne est entièrement non lucrative :
+    fonds de dotation sans parts d'un côté, association déclarée de l'autre.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Porteur non lucratif par la loi (fonds de dotation, dévolution verrouillée)
+    et usufruitier associatif d'habitant·es : la chaîne est qualifiée et le
+    verdict peut se calculer. Le verrou foncier tient aux statuts du fonds et
+    à la longueur du bail, non à une clause d'inaliénabilité ni à une
+    obligation réelle environnementale publiées ; le titre d'usage n'est connu
+    que par sa vocation. Le pôle « intérêt général institué » décrit un
+    montage tenu par une institution non lucrative plutôt que par les
+    usager·es eux-mêmes, qui ne détiennent pas de voix statutaire documentée
+    sur le foncier.
+grille:
+  - critere: foncier_hors_marche
+    valeur: oui
+    note: "Le sol est détenu par un fonds de dotation sans capital ni parts, qui déclare que ses forêts ne peuvent être ni revendues ni héritées."
+  - critere: montage_documente
+    valeur: partiel
+    note: "Propriétaire, usager, nature du titre et pratiques sont publics (site du fonds, page RAF, registre) ; le bail lui-même, les statuts intégraux et l'acte d'acquisition ne le sont pas."
+  - critere: irreversibilite
+    valeur: partiel
+    note: "Dévolution de l'actif du fonds verrouillée vers un autre fonds ou une fondation reconnue d'utilité publique, dissolution au consensus à quorum de 90 % ; mais aucune clause d'inaliénabilité ni ORE publiées : la non-revente est une politique du fonds."
+  - critere: origine_non_speculative
+    valeur: oui
+    note: "Acquisition par un fonds de dotation financé par dons, dans le but déclaré de soustraire la forêt aux coupes rases et aux plantations."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Ni le fonds de dotation ni l'association n'ont de capital ou de parts : aucun titre appropriable sur la valeur foncière."
+  - critere: milieu_protege
+    valeur: partiel
+    note: "Clauses environnementales du bail et pratiques déclarées (vieux arbres, habitats protégés) ; aucun dispositif opposable aux tiers (ORE, classement) n'est documenté."
+  - critere: non_lucratif_global
+    valeur: oui
+    note: "Chaîne composée d'un fonds de dotation et d'une association déclarée, l'une et l'autre sans parts ni distribution possible."
+  - critere: montage_non_commercial
+    valeur: oui
+    note: "Aucune société, civile ou commerciale, dans la chaîne."
+  - critere: gouvernance_collective
+    valeur: partiel
+    note: "Gestion forestière collective par l'association ; la décision sur le foncier appartient au conseil d'administration collégial du fonds, où la présence de l'association n'est pas documentée."
+  - critere: tripartisme
+    valeur: inconnu
+    note: "Association du voisinage ou de la commune à la gouvernance non documentée."
+  - critere: perennite_gouvernance
+    valeur: inconnu
+    note: "Dispositifs de renouvellement et de transmission non documentés ; structure usagère créée en octobre 2022."
+  - critere: travail_non_marchandise
+    valeur: oui
+    note: "Chantiers collectifs et bénévoles, débardage à cheval, transmission de compétences : aucun salariat de marché documenté sur le travail-cœur."
+  - critere: usage_interet_general
+    valeur: oui
+    note: "Préservation d'une forêt face aux coupes rases, transmission de savoirs forestiers, suivi écologique à long terme."
+  - critere: ancrage_territorial
+    valeur: oui
+    note: "Association fondée par des habitant·es de Boussoulet et alentours ; bois destiné aux besoins directs et locaux ; chantiers et formations ouverts."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Finalité du vivant explicite chez le porteur comme chez l'usager : forêt vivante, mélangée, habitats de rapaces nocturnes et de blaireaux protégés."
+  - critere: usage_non_marchand
+    valeur: partiel
+    note: "Récolte collective pour les besoins directs et chantiers partagés ; l'existence d'un loyer et d'éventuelles ventes de bois n'est pas documentée."
+  - critere: loyer_non_rentier
+    valeur: inconnu
+    note: "Loyer ou redevance du bail non publiés."
+  - critere: securite_jouissance
+    valeur: partiel
+    note: "Durée du bail de Chaudeyrolles : introuvable (le « 15 à 99 ans » du site concerne le bail propriétaire → fonds) ; nature juridique du titre non publiée."
+  - critere: usage_non_degradant
+    valeur: oui
+    note: "Pas d'abatteuse, débardage à cheval, prélèvement limité aux besoins directs, vieux arbres conservés."
+  - critere: place_au_vivant
+    valeur: partiel
+    note: "Vieux arbres laissés sur pied et habitats protégés ; une zone explicitement laissée en libre évolution n'est pas documentée pour cette parcelle (le fonds pratique la libre évolution partielle sur d'autres forêts)."
+analyse:
+  forces:
+    - "Chaîne entièrement non lucrative et sans parts : fonds de dotation propriétaire, association usagère."
+    - "Bail long à clauses environnementales et sociales, avec procédure statutaire de concertation et de transfert en cas de manquement."
+    - "Pratiques forestières douces et finalité du vivant explicites des deux côtés de la chaîne."
+  fragilites:
+    - "Verrou foncier non opposable aux tiers : ni inaliénabilité statutaire ni ORE publiées."
+    - "Titre d'usage connu seulement par sa vocation : nature, durée et loyer non publiés."
+    - "Petite parcelle (3,6 ha) et structures jeunes ; pas de voix statutaire documentée des usager·es sur le foncier."
+  leviers:
+    - "Publier le bail de Chaudeyrolles ou ses clauses principales, et les statuts intégraux du fonds."
+    - "Adosser une obligation réelle environnementale à la parcelle."
+    - "Documenter la place de l'association dans la gouvernance du fonds."
+  synthese: >
+    Chaudeyrolles est, dans la famille forestière, le cas le plus proche du
+    schéma de référence du corpus : un porteur non lucratif sans parts tient le
+    sol, une association d'habitant·es en fait vivre l'usage par un bail long à
+    clauses. Il se distingue des groupements forestiers à parts (Lu Picatau)
+    par l'absence de capital cessible, et des sanctuaires associatifs (ASPAS)
+    par la dissociation réelle entre propriété et usage. Sa limite est celle
+    du fonds de dotation : la non-revente est une politique, pas encore un acte
+    opposable.
+fiabilite: >
+  Faits vérifiés le 2026-11-20 : parcelle de 3,6 ha dans le massif du Mézenc,
+  acquise par Forêts en Vie en 2022, animée par Sous Lou Boès (page des sept
+  forêts du fonds) ; association locataire par bail forestier à clauses
+  environnementales et sociales, pratiques annoncées, fondateur·ices de
+  Boussoulet et alentours, texte d'octobre 2022 (page RAF) ; SIREN du fonds
+  879 934 834 et de l'association 923 082 002, créée le 26 octobre 2022
+  (recherche-entreprises.api.gouv.fr) ; modèle de bail sur demande, « d'une
+  durée de 15 à 99 ans », « signé entre le propriétaire et Forêts en Vie »
+  (page « Le Bail Forêts en Vie », 2026-11-20 — ne renseigne pas le bail de
+  Chaudeyrolles) ; statuts du fonds en résumé (PDF RAF) ;
+  centre de la commune de Chaudeyrolles 4.1954, 44.9449, population 129
+  (geo.api.gouv.fr). Non confirmé : toponyme et références cadastrales, acte
+  d'acquisition (achat ou donation), nature, durée et loyer du bail, zone de
+  libre évolution sur la parcelle.
+chaine:
+  porteurs: [forets-en-vie]
+  usufruitiers: [sous-lou-boes]
+sources:
+  - titre: "Forêts en Vie — Découvrez les sept forêts où nous sommes présent·es"
+    url: "https://www.foretsenvie.org/Decouvrez-les-sept-forets-ou-nous-sommes-present-es-et-les-activites-qui-y-sont"
+    consulte: "2026-11-20"
+  - titre: "RAF — Association Sous lou Boès (octobre 2022)"
+    url: "https://www.alternativesforestieres.org/Association-Sous-lou-Boes"
+    consulte: "2026-11-20"
+  - titre: "Forêts en Vie — Le Bail Forêts en Vie est disponible"
+    url: "https://www.foretsenvie.org/20-Le-Bail-Forets-en-Vie-est-disponible"
+    consulte: "2026-11-20"
+  - titre: "RAF — Fonds de dotation : résumé des statuts (PDF)"
+    url: "https://www.alternativesforestieres.org/IMG/pdf/fond_raf_fev-2.pdf"
+    consulte: "2026-11-20"
+  - titre: "geo.api.gouv.fr — commune de Chaudeyrolles (43066)"
+    url: "https://geo.api.gouv.fr/communes?nom=Chaudeyrolles&fields=nom,code,codeDepartement,codeRegion,centre,population&format=json"
+    consulte: "2026-11-20"

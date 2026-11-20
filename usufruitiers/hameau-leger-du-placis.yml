@@ -1,0 +1,171 @@
+uid: hameau-leger-du-placis
+categorie: usufruitier
+nom: "Association Hameau léger du Placis"
+sous_titre: "Association des habitant·es du premier hameau léger breton, sur un terrain communal loué par bail emphytéotique"
+statut_fiche: publie
+forme_juridique: "Association déclarée (loi 1901)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Saint-André-des-Eaux"
+  departement: "Côtes-d'Armor (22)"
+  region: "Bretagne"
+annee: 2021
+url: "https://hameaux-legers.org/projets/placis"
+dossier:
+  identite:
+    siren: "904835600"
+    adresse: "9 Le Placis, 22630 Saint-André-des-Eaux"
+  echelle:
+    personnes: 8
+    surface_ha: 0.47
+  pieces:
+    - type: statuts
+      statut: non_public
+    - type: bail
+      statut: non_public
+      note: "Bail emphytéotique de 80 ans consenti par la commune (voté en juillet 2022) ; les sources nomment le preneur « un groupe de personnes » ou « le collectif », sans désigner l'association : sa qualité de preneuse n'est pas confirmée sur pièce."
+    - type: charte
+      statut: inconnu
+    - type: reglement_interieur
+      statut: inconnu
+    - type: acte_montage
+      statut: inconnu
+    - type: rapport_financier
+      statut: inconnu
+resume: >
+  Association déclarée, immatriculée le 15 octobre 2021 au répertoire national
+  sous le nom « Hameau léger du Placis », siège au 9 Le Placis, à
+  Saint-André-des-Eaux (Côtes-d'Armor). Elle porte le nom et l'adresse du
+  premier hameau léger breton : huit foyers d'adultes de 25 à 30 ans,
+  rencontré·es au sein de l'association Hameaux Légers, qui décident de se
+  lancer en novembre 2020, obtiennent le soutien du conseil municipal le
+  29 juin 2021, occupent d'abord le terrain à titre temporaire puis y
+  installent huit habitats réversibles autoconstruits (emprise d'environ
+  20 m², coût de 12 000 à 15 000 euros) et une maison commune bioclimatique
+  (buanderie, chambre d'amis, salles communes). Chaque foyer est propriétaire
+  de son habitat, aucun du sol, loué à la commune pour environ 50 euros par
+  mois et par maison. Une partie du groupe a repris le café-épicerie du bourg,
+  L'Éprouvette, en société coopérative d'intérêt collectif (plus de cent
+  sociétaires en octobre 2022). Les sources publiques ne nomment pas
+  l'association comme preneuse du bail : l'identification repose sur le nom,
+  l'adresse et la date de création, concordants avec le projet.
+montage:
+  type: propriete_protegee
+  nu_proprietaire: "Commune de Saint-André-des-Eaux (propriétaire du terrain)"
+  usufruitier: "Collectif des habitant·es du Placis (association déclarée, preneuse présumée du bail)"
+  description: >
+    Le terrain reste communal ; il est loué par bail emphytéotique de 80 ans
+    pour 5 000 euros par an. Les habitant·es sont propriétaires de leurs
+    habitats réversibles et non du sol. Les sources décrivent le preneur comme
+    « un groupe de personnes » ou « le collectif » ; l'association « Hameau
+    léger du Placis », créée en octobre 2021 à l'adresse du hameau, en est le
+    support juridique le plus probable, non confirmé par la délibération ni par
+    le bail, non publiés.
+integrite_montage:
+  niveau: mutualisme
+  commentaire: >
+    Collectif d'habitant·es organisé en association, mutualisant terrain,
+    maison commune, véhicules et outils ; l'usage profite d'abord à ses huit
+    foyers, avec une ouverture au bourg par le café coopératif et les temps de
+    rencontre. Aucune règle de revente des habitats ni de sélection des
+    entrant·es n'est publiée.
+grille:
+  - critere: non_appropriation
+    valeur: partiel
+    note: "Le sol reste communal et aucun foyer n'en est propriétaire ; mais chaque foyer possède son habitat, dont le régime de revente (plafonnement, agrément du collectif) n'est pas documenté."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Association sans capital ni parts."
+  - critere: devolution_usufruitier
+    valeur: inconnu
+    note: "Statuts non publiés."
+  - critere: personne_morale_civile
+    valeur: oui
+    note: "Association déclarée (catégorie juridique 9220 au répertoire national)."
+  - critere: non_lucrativite_effective
+    valeur: partiel
+    note: "Association non lucrative, mais la propriété privée des habitats par chaque foyer laisse possible une plus-value individuelle à la revente, sauf clause non documentée."
+  - critere: une_voix
+    valeur: inconnu
+    note: "Mode de décision interne non documenté."
+  - critere: usagers_decident
+    valeur: oui
+    note: "Les habitant·es conçoivent leurs habitats, gèrent les communs et décident de la vie du hameau ; les conditions foncières relèvent du bail communal."
+  - critere: ouverture_entrants
+    valeur: inconnu
+    note: "Règles d'entrée et de remplacement d'un foyer non documentées."
+  - critere: transparence_interne
+    valeur: inconnu
+    note: "Aucune publication de comptes ou de décisions retrouvée."
+  - critere: objet_ig
+    valeur: partiel
+    note: "Habitat accessible et réversible en centre-bourg, reprise du dernier commerce : intérêt local réel, mais l'objet statutaire de l'association n'est pas publié."
+  - critere: public_non_restreint
+    valeur: partiel
+    note: "L'usage résidentiel profite aux huit foyers ; la maison commune accueille des temps de visite et de rencontre avec le voisinage, et le café coopératif est ouvert au village."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Finalité : habiter léger et accessible ; l'argument écologique porte sur la réversibilité et l'évitement de l'artificialisation, sans finalité de biodiversité ; un « espace naturel préservé » au nord-ouest est mentionné sans dispositif."
+  - critere: duree_usage
+    valeur: oui
+    note: "Bail emphytéotique de 80 ans : titre long."
+  - critere: clauses_usage
+    valeur: inconnu
+    note: "Clauses du bail (destination, réversibilité, revente, retour du terrain) non publiées."
+  - critere: articulation_porteur
+    valeur: partiel
+    note: "Lien clair et concerté avec la commune (vote de soutien, autorisation temporaire, bail) ; mais l'identité juridique du preneur n'est confirmée par aucune pièce publique."
+  - critere: regime_usage_non_marchand
+    valeur: partiel
+    note: "Loyer modéré (environ 50 euros par mois et par maison) et communs mutualisés ; régime locatif tout de même, et habitats en propriété privée."
+  - critere: loyer_soutenable
+    valeur: oui
+    note: "5 000 euros par an pour l'ensemble, soit environ 50 euros par mois et par foyer, présentés comme très inférieurs au marché."
+analyse:
+  forces:
+    - "Collectif d'habitant·es réel et installé (huit foyers), organisé en association."
+    - "Bail de 80 ans sur un sol qui reste public : aucun foyer ne possède la terre."
+    - "Communs concrets : maison commune, véhicules et outils partagés, café coopératif du bourg."
+  fragilites:
+    - "Qualité de preneuse du bail non confirmée par une pièce publique."
+    - "Habitats en propriété privée sans règle de revente publiée : plus-value individuelle possible."
+    - "Statuts, gouvernance et règles d'entrée non documentés."
+  leviers:
+    - "Publier les statuts et confirmer l'identité du preneur du bail."
+    - "Formaliser et publier une clause anti-spéculative sur la revente des habitats."
+    - "Documenter les règles de gouvernance et d'accueil de nouveaux foyers."
+  synthese: >
+    Le collectif du Placis est le maillon usager du premier hameau léger
+    breton : il habite un sol public qu'il ne possède pas et mutualise ses
+    communs. Le montage est solide côté sol ; il reste fragile côté bâti,
+    propriété de chacun·e sans verrou publié, et côté pièces, puisque ni le
+    bail ni l'identité exacte du preneur ne sont publics.
+fiabilite: >
+  Faits vérifiés le 2026-11-20 : association « HAMEAU LEGER DU PLACIS »,
+  SIREN 904 835 600, créée le 15 octobre 2021, état actif, catégorie 9220,
+  siège 9 Le Placis, 22630 Saint-André-des-Eaux (recherche-entreprises.api.gouv.fr) ;
+  huit habitats réversibles, terrain communal d'environ 4 700 m², bail
+  emphytéotique de 80 ans, 5 000 euros par an soit environ 50 euros par foyer
+  et par mois, décision du collectif en novembre 2020, vote municipal du
+  29 juin 2021, autorisation d'occupation temporaire, coopérative de plus de
+  cent sociétaires en octobre 2022, propriété du bâti dissociée du sol
+  (hameaux-legers.org, page du Placis) ; huit maisons, emprise d'environ 20 m²,
+  coût de 12 000 à 15 000 euros, loyer de 50 euros par mois et par maison,
+  « personne n'est propriétaire de son terrain » (L'Info durable, 20 mai 2023) ;
+  preneur décrit comme « un groupe de personnes », café repris en SCIC en avril
+  2022, épicerie de 130 adhérent·es (Banque des Territoires, 18 janvier 2023).
+  Non confirmé : qualité de preneuse du bail, statuts, objet, nombre de
+  membres, règles de revente des habitats, date d'emménagement.
+sources:
+  - titre: "Hameaux Légers — Hameau léger du Placis (page du projet)"
+    url: "https://hameaux-legers.org/projets/placis"
+    consulte: "2026-11-20"
+  - titre: "L'Info durable — Dans un village breton, une autre façon d'habiter, 20 mai 2023"
+    url: "https://www.linfodurable.fr/dans-un-village-breton-une-autre-facon-dhabiter-38528"
+    consulte: "2026-11-20"
+  - titre: "Banque des Territoires — La formule gagnante de Saint-André-des-Eaux (22), 18 janvier 2023"
+    url: "https://www.banquedesterritoires.fr/la-formule-gagnante-de-saint-andre-des-eaux-22"
+    consulte: "2026-11-20"
+  - titre: "Annuaire des entreprises (API recherche-entreprises) — HAMEAU LEGER DU PLACIS, SIREN 904835600"
+    url: "https://recherche-entreprises.api.gouv.fr/search?q=PLACIS%20SAINT-ANDRE-DES-EAUX"
+    consulte: "2026-11-20"

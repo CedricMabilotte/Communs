@@ -1,0 +1,195 @@
+uid: forets-en-vie
+categorie: porteur
+nom: "Fonds de dotation Forêts en Vie"
+sous_titre: "Fonds de dotation dédié à la forêt, fondé en 2017 par le Réseau pour les alternatives forestières"
+statut_fiche: publie
+forme_juridique: "Fonds de dotation (loi du 4 août 2008)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Cornil"
+  departement: "Corrèze (19)"
+  region: "Nouvelle-Aquitaine"
+annee: 2017
+url: "https://www.foretsenvie.org/"
+resume: >
+  Fonds de dotation créé en 2017 (immatriculé le 21 août 2017, statuts
+  d'octobre 2017) par le Réseau pour les alternatives forestières (RAF),
+  association loi 1901, pour acheter ou recevoir en donation des forêts et les
+  soustraire aux plantations et aux coupes rases. Le fonds en reste
+  propriétaire et les confie à des associations citoyennes locales par un
+  « bail forestier » propre, assorti de clauses environnementales ; la durée
+  de ces baux fonds → association n'est pas publiée (le site n'annonce une
+  durée de 15 à 99 ans que pour le bail propriétaire → fonds). Il publie sept forêts au 2026-11-20 : Roussilles
+  (Lot, 2,5 ha, donation 2022), Saint-Pierre-Bellevue (Creuse, 46 ha),
+  Chaudeyrolles (Haute-Loire, 3,6 ha, 2022), Nonards (Corrèze, 6 ha, depuis
+  2022), Benayes (Corrèze, 3,5 ha, donation 2024), Longuay (Haute-Marne et
+  Côte-d'Or, 14 ha, janvier 2025) et Bois du Pic (Puy-de-Dôme, 22 ha). Siège
+  à Cornil (Corrèze) depuis juin 2022, précédemment à Aubenas (Ardèche).
+montage:
+  type: propriete_protegee
+  description: >
+    Le fonds détient la pleine propriété des forêts acquises (achat ou
+    donation) et en confie l'usage à une association locale par un bail
+    forestier à clauses environnementales — « de préférence par bail
+    emphytéotique » selon le résumé des statuts publié par le RAF, qui prévoit
+    aussi l'apport avec droit de reprise et l'apport d'usufruit. Les dons ne
+    donnent aucune part de capital. En cas de non-respect des clauses, les
+    statuts prévoient une concertation puis une médiation, et à défaut le
+    transfert du bail ou la reprise du bien. Le fonds affirme que les forêts
+    acquises « ne peuvent être ni revendues ni transmises par héritage » ;
+    aucune clause d'inaliénabilité explicite ne figure toutefois dans le
+    résumé de statuts consulté.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Fonds de dotation non lucratif par la loi, sans capital ni parts, à
+    dévolution verrouillée (actif net transféré à un autre fonds de dotation ou
+    à une fondation reconnue d'utilité publique, art. 15) et à dissolution
+    difficile (consensus, quorum de 90 %). Le verrou foncier tient à ces
+    statuts et à la longueur des baux, pas à une clause d'inaliénabilité ni à
+    une obligation réelle environnementale publiées : l'affirmation de
+    non-revente est une politique du fonds, non un acte opposable aux tiers.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Le fonds affirme que les forêts « ne peuvent être ni revendues ni transmises par héritage » ; le résumé de statuts publié par le RAF ne contient aucune clause d'inaliénabilité, et le caractère consomptible ou non de la dotation (15 000 euros initiaux) n'est pas précisé."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Fonds de dotation sans capital social ni parts : les dons sont irrévocables et ne confèrent aucun titre appropriable."
+  - critere: nature_protectrice
+    valeur: partiel
+    note: "Fonds de dotation : degré intermédiaire de l'échelle de protection, entre la fondation reconnue d'utilité publique et la société civile."
+  - critere: clause_devolution
+    valeur: oui
+    note: "Art. 15 des statuts (résumé RAF) : à la liquidation, l'actif net est transféré à un autre fonds de dotation ou à une fondation reconnue d'utilité publique choisie par le conseil d'administration."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Fonds de dotation, personne morale de droit privé à but non lucratif instituée par l'article 140 de la loi du 4 août 2008."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Pas de capital, pas de parts, pas de distribution possible ; comptes 2020 certifiés par un commissaire aux comptes et publiés au Journal officiel des associations."
+  - critere: gestion_desinteressee
+    valeur: partiel
+    note: "Conseil d'administration collégial réunissant des représentant·es du CA du RAF et des citoyen·nes engagé·es ; la rémunération éventuelle des dirigeant·es et le détail de la gouvernance ne sont pas publiés."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Aucun investisseur n'attend de rendement : le fonds vit de dons et de donations de forêts."
+  - critere: ca_collegial
+    valeur: oui
+    note: "Le fonds se présente avec un conseil d'administration « collégial » (représentant·es du RAF et citoyen·nes) accompagné de groupes de travail thématiques ; présidente et coordinatrice nommées publiquement."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Les associations locales usagères sont liées par le bail et par une procédure de « connaissance mutuelle et droit de regard » ; leur présence statutaire au conseil d'administration n'est pas documentée."
+  - critere: autogestion_usagers
+    valeur: partiel
+    note: "La gestion forestière est confiée aux associations locales, qui décident des pratiques dans le cadre du bail ; la décision sur le foncier (acquisition, transfert du bail) reste au conseil d'administration du fonds."
+  - critere: transparence
+    valeur: partiel
+    note: "Comptes 2020 publiés au JOAFE avec rapport du commissaire aux comptes ; statuts complets et modèle de bail non publiés en ligne (bail « disponible sur demande »)."
+  - critere: objet_foncier_protecteur
+    valeur: oui
+    note: "Objet explicite : acquérir des forêts pour les soustraire aux plantations et aux coupes rases et les confier à une gestion douce ou à la libre évolution."
+  - critere: agrement_ig
+    valeur: partiel
+    note: "Le fonds se présente comme organisme à but non lucratif menant des missions d'intérêt général (régime du mécénat) ; cette qualité n'est jamais définitivement acquise pour un fonds de dotation et aucun rescrit n'est publié."
+  - critere: risque_requalification
+    valeur: partiel
+    note: "Fonds de dotation opérateur (il détient et gère lui-même les forêts, sans redistribution) : le risque de requalification est moindre que pour un fonds redistributeur, mais la qualité d'intérêt général reste révocable."
+  - critere: redevabilite_publique
+    valeur: partiel
+    note: "Publication légale des comptes au JOAFE (exercice 2020 consulté) ; rapports d'activité et comptes des exercices suivants non retrouvés en ligne."
+  - critere: vivant_finalite
+    valeur: oui
+    note: "Finalité centrale : forêts vivantes, mélangées en âges et en essences, libre évolution partielle, sylviculture douce ; la protection du vivant est la raison d'être du fonds."
+  - critere: regime_usage_offert
+    valeur: partiel
+    note: "Usage confié par bail forestier à clauses environnementales à des associations citoyennes ; le montant du loyer ou de la redevance n'est pas publié."
+  - critere: securite_usage_offerte
+    valeur: partiel
+    note: "Durée des baux consentis par le fonds aux associations : introuvable (la durée « de 15 à 99 ans » publiée par le fonds concerne le bail signé entre un·e propriétaire et Forêts en Vie, page « Le Bail Forêts en Vie », 2026-11-20) ; la nature juridique exacte du « bail Forêts en Vie » (emphytéotique ou bail civil long) et la durée retenue forêt par forêt ne sont pas publiées."
+analyse:
+  forces:
+    - "Forme non lucrative par la loi, sans parts : aucune captation privée possible de la valeur foncière."
+    - "Dévolution verrouillée vers un autre fonds ou une fondation reconnue d'utilité publique ; dissolution au consensus à quorum de 90 %."
+    - "Sept forêts réelles et nommées, chacune confiée à une association locale par bail long à clauses environnementales."
+  fragilites:
+    - "Aucune clause d'inaliénabilité ni obligation réelle environnementale publiée : la non-revente est une politique, non un acte opposable."
+    - "Statuts complets et modèle de bail non publiés en ligne ; nature juridique exacte du bail inconnue."
+    - "Petite structure (total de bilan de 44 253 euros fin 2020) : capacité d'acquisition dépendante des dons et donations."
+  leviers:
+    - "Publier les statuts intégraux et le modèle de bail forestier."
+    - "Adosser une obligation réelle environnementale aux parcelles en libre évolution, opposable aux propriétaires successifs."
+    - "Publier chaque année comptes et rapport d'activité, forêt par forêt."
+  synthese: >
+    Forêts en Vie transpose à la forêt le schéma de référence du corpus : un
+    porteur non lucratif sans parts (fonds de dotation) qui détient le sol et
+    en confie l'usage à une association locale par un bail long à clauses. Sa
+    solidité tient à la forme juridique et à la dévolution verrouillée ; sa
+    limite, à l'absence de verrou foncier opposable aux tiers (ni
+    inaliénabilité statutaire, ni ORE publiées) et à l'opacité relative des
+    actes (statuts, bail) disponibles seulement sur demande.
+fiabilite: >
+  Faits vérifiés le 2026-11-20 : SIREN 879 934 834, immatriculation le
+  21 août 2017, état actif, catégorie juridique 9300 (fonds de dotation),
+  code NAF 94.99Z, siège au Battement d'Ailes, 460 village de Lauconie, 19150
+  Cornil depuis le 21 juin 2022 (recherche-entreprises.api.gouv.fr) ; siège
+  antérieur 30 avenue de Zelzate, 07200 Aubenas et total de bilan 44 253 euros
+  au 31 décembre 2020 (comptes 2020 au JOAFE) ; fondation par le RAF, conseil
+  d'administration collégial, présidente Emmanuelle Rouff, coordinatrice
+  Nathalie Naulet, affirmation de non-revente (page « Qui sommes-nous ») ;
+  modèle de bail forestier à clauses environnementales « d'une durée de 15 à
+  99 ans », « signé entre le propriétaire et Forêts en Vie » (bail d'entrée du
+  foncier dans le fonds, non bail fonds → association), disponible sur
+  demande (page « Le Bail Forêts en Vie », 2026-11-20) ; dotation initiale 15 000 euros, durée
+  indéterminée (art. 5), dévolution (art. 15), dissolution au consensus à
+  quorum de 90 %, mise à disposition de préférence par bail emphytéotique
+  (résumé de statuts publié par le RAF) ; sept forêts, surfaces et dates
+  (page « Découvrez les sept forêts »). Non confirmé : statuts intégraux,
+  caractère consomptible de la dotation, nature juridique exacte du bail,
+  loyers, dirigeant·es au registre (liste vide dans l'API), comptes
+  postérieurs à 2020.
+dossier:
+  identite:
+    siren: "879934834"
+    adresse: "Le Battement d'Ailes, 460 village de Lauconie, 19150 Cornil"
+  echelle:
+    lieux: "Sept forêts publiées au 2026-11-20 (Lot, Creuse, Haute-Loire, Corrèze ×2, Haute-Marne/Côte-d'Or, Puy-de-Dôme), environ 97,6 ha au total d'après les surfaces annoncées"
+    surface_ha: 97.6
+  pieces:
+    - type: statuts
+      statut: partiel
+      note: "Résumé des statuts publié par le RAF (PDF non daté, fonds créé en octobre 2017) : dotation, durée, dévolution, dissolution, modes de mise à disposition ; texte intégral non publié."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+      note: "La charte du RAF est invoquée comme référence des pratiques ; son opposabilité par le bail n'est pas vérifiée sur pièce."
+    - type: acte_montage
+      statut: inconnu
+      note: "Actes d'acquisition ou de donation des sept forêts non publiés."
+    - type: rapport_financier
+      statut: public
+      lien: "https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_a/2020/3112/879934834_31122020_rectif1.pdf"
+      note: "Comptes annuels 2020 et rapport du commissaire aux comptes (JOAFE) ; exercices suivants non retrouvés."
+    - type: bail
+      statut: non_public
+      note: "Modèle de « bail Forêts en Vie » (clauses environnementales ; 15 à 99 ans pour le bail propriétaire → fonds décrit par la page) disponible sur demande, non publié ; durée des baux fonds → association : introuvable."
+sources:
+  - titre: "Forêts en Vie — Qui sommes-nous"
+    url: "https://www.foretsenvie.org/-Qui-sommes-nous-"
+    consulte: "2026-11-20"
+  - titre: "Forêts en Vie — Découvrez les sept forêts où nous sommes présent·es"
+    url: "https://www.foretsenvie.org/Decouvrez-les-sept-forets-ou-nous-sommes-present-es-et-les-activites-qui-y-sont"
+    consulte: "2026-11-20"
+  - titre: "Forêts en Vie — Le Bail Forêts en Vie est disponible"
+    url: "https://www.foretsenvie.org/20-Le-Bail-Forets-en-Vie-est-disponible"
+    consulte: "2026-11-20"
+  - titre: "RAF — Fonds de dotation : résumé des statuts (PDF)"
+    url: "https://www.alternativesforestieres.org/IMG/pdf/fond_raf_fev-2.pdf"
+    consulte: "2026-11-20"
+  - titre: "Annuaire des entreprises (API recherche-entreprises) — FORETS EN VIE, SIREN 879934834"
+    url: "https://recherche-entreprises.api.gouv.fr/search?q=879934834"
+    consulte: "2026-11-20"
+  - titre: "JOAFE — Comptes annuels 2020 du fonds de dotation Forêts en Vie"
+    url: "https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_a/2020/3112/879934834_31122020_rectif1.pdf"
+    consulte: "2026-11-20"

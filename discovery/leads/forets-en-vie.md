@@ -2,7 +2,7 @@
 slug: forets-en-vie
 nom: Forêts en vie (fonds de dotation du RAF) — forêt de Haute-Loire / Sous lou boès
 cree: '2026-11-08'
-dernier_repere: '2026-11-08'
+dernier_repere: '2026-11-20'
 score_cumule: 0
 sources_vues:
 - source: socialter
@@ -39,7 +39,7 @@ extracted:
     siren: []
     siret: []
   montage_type: null
-statut: actif
+statut: promu
 origine: 'graine manuelle — session #13 (2026-11-08), dépouillement presse Socialter HS15 / Reporterre'
 ---
 

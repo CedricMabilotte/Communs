@@ -1,0 +1,211 @@
+uid: hameaux-legers
+categorie: reseau
+nom: Hameaux Légers
+sous_titre: Association d'accompagnement des écohameaux réversibles sur foncier communal
+statut_fiche: publie
+forme_juridique: Association déclarée (loi 1901)
+localisation:
+  commune: Saint-André-des-Eaux
+  departement: Côtes-d'Armor (22)
+  region: Bretagne
+annee: 2017
+url: https://hameaux-legers.org/
+resume: 'Association loi 1901 à but non lucratif, se présentant comme reconnue d''intérêt général, qui
+  accompagne depuis 2017 collectivités, citoyen·nes et professionnel·les dans la création d''écohameaux
+  en habitat réversible — immatriculée au répertoire national le 13 novembre 2018, siège à Saint-André-des-Eaux
+  (Côtes-d''Armor). Cofondée par Xavier Gisserot, elle emploie une dizaine de salarié·es et dit accompagner
+  douze communes bretonnes en avril 2024. Son modèle type : une commune met un terrain à disposition par
+  bail emphytéotique de longue durée, les habitant·es sont propriétaires de leur habitat démontable et
+  non du sol. La page « Les projets accompagnés » du site liste, au 2026-11-20, vingt-huit projets dans
+  cinq régions (dix-sept en Bretagne) : six habités (Le Placis à Saint-André-des-Eaux, Pont Rialland à
+  Plessé, Guipel, Kerlisette à Plouigneau, Commana — hameau du Ti Dourig — et Trignac), quatre en chantier,
+  douze en conception, trois à l''étude, trois en recherche de collectif. La page n''affiche aucun total
+  ; la somme des foyers affichés sur vingt-sept cartes (Suze sans chiffre) est de 212, calcul de l''annuaire.
+  Le réseau n''est pas un lieu : il fournit méthode et accompagnement, sans détenir de foncier.
+
+  '
+montage:
+  type: propriete_protegee
+  description: 'Le montage est porté commune par commune : la collectivité, propriétaire du terrain, le
+    loue par bail emphytéotique long (80 ans au Placis) à un collectif d''habitant·es ; chaque foyer possède
+    son habitat réversible, non le sol. L''association accompagne la commune et le collectif (étude, conception,
+    recrutement du collectif, urbanisme) mais n''est partie ni au bail ni à la propriété. Ni charte type,
+    ni statuts, ni modèle de bail ne sont publiés sur son site ; aucune règle commune de revente des habitats
+    n''est documentée.
+
+    '
+integrite_montage:
+  niveau: ig_institue
+  commentaire: 'Association non lucrative d''accompagnement, sans foncier propre : le verrou de chaque
+    hameau tient au portage public du sol et au bail long, non à un mécanisme de garantie porté par le
+    réseau (à la différence de CLIP, co-membre de chaque association propriétaire). Le réseau situe, il
+    ne verrouille pas.
+
+    '
+grille:
+- critere: personne_morale_civile
+  valeur: oui
+  note: Association déclarée loi 1901 (recherche-entreprises.api.gouv.fr, SIREN 844 725 440, consulté
+    le 2026-11-20).
+- critere: objet_ig
+  valeur: oui
+  note: 'Objet affiché : accompagner la création d''écohameaux accessibles financièrement, habitat réversible,
+    non-artificialisation ; l''association se dit reconnue d''intérêt général (hameaux-legers.org/association,
+    2026-11-20).'
+- critere: non_lucrativite_effective
+  valeur: partiel
+  note: « Association loi 1901 à but non lucratif » (pied de page du site, 2026-11-20) ; comptes et modèle
+    économique de l'accompagnement non publiés — introuvable.
+- critere: public_non_restreint
+  valeur: oui
+  note: Vingt-huit projets dans cinq régions listés sur hameaux-legers.org/projets (2026-11-20), au-delà
+    d'un cercle restreint.
+- critere: vivant_finalite
+  valeur: non
+  note: Finalité centrée sur l'habitat humain ; le vivant n'apparaît que par l'évitement de l'artificialisation
+    (pages du site, 2026-11-20).
+- critere: duree_usage
+  valeur: partiel
+  note: Le réseau ne détient aucun titre d'usage ; le modèle promu est le bail emphytéotique long (80
+    ans au Placis, Reporterre 2024), mais la durée varie selon chaque commune — introuvable pour le réseau
+    lui-même.
+- critere: clauses_usage
+  valeur: inconnu
+  note: Aucun modèle de bail ni charte publié sur le site (2026-11-20) — introuvable.
+- critere: articulation_porteur
+  valeur: partiel
+  note: L'association accompagne les communes mais n'est partie ni au bail ni à la propriété ; pas de
+    convention type publiée.
+- critere: non_appropriation
+  valeur: partiel
+  note: Habitant·es propriétaires de leur habitat, non du sol (Reporterre, 2024) ; règles de revente des
+    habitats non publiées.
+- critere: parts_non_cessibles
+  valeur: oui
+  note: Association sans capital appropriable (forme au registre, 2026-11-20).
+- critere: une_voix
+  valeur: inconnu
+  note: « Gouvernance partagée » annoncée (hameaux-legers.org/association, 2026-11-20) ; statuts non publiés
+    — introuvable.
+- critere: usagers_decident
+  valeur: inconnu
+  note: Place des collectifs d'habitant·es dans les décisions du réseau non documentée — introuvable.
+- critere: ouverture_entrants
+  valeur: oui
+  note: Adhésion ouverte (page « Adhérer à l'association ») et projets « en recherche de collectif » publiés
+    (hameaux-legers.org/projets, 2026-11-20).
+- critere: transparence_interne
+  valeur: inconnu
+  note: Comptes et procès-verbaux non publiés — introuvable.
+- critere: devolution_usufruitier
+  valeur: inconnu
+  note: Statuts non publiés — introuvable.
+- critere: regime_usage_non_marchand
+  valeur: inconnu
+  note: Tarification de l'offre d'accompagnement aux collectivités non publiée — introuvable.
+- critere: loyer_soutenable
+  valeur: inconnu
+  note: Le réseau ne verse aucun loyer ; les redevances des hameaux relèvent de chaque commune (5 000
+    €/an au Placis, fiche du lieu) — sans objet pour le réseau, noté inconnu.
+analyse:
+  forces:
+  - 'Modèle reproductible et documenté : foncier communal, bail emphytéotique long, habitat réversible
+    en propriété dissociée du sol.'
+  - Équipe salariée, accompagnement d'une douzaine de communes bretonnes (Reporterre, 2024) ; vingt-huit
+    projets listés sur le site au 2026-11-20, dont six habités et quatre en chantier.
+  - Réponse concrète à la limitation de l'artificialisation (ZAN) en centre-bourg.
+  fragilites:
+  - 'Aucun mécanisme de garantie porté par le réseau : la solidité dépend de chaque commune et de chaque
+    bail.'
+  - Statuts, charte, modèle de bail et règles de revente des habitats non publiés.
+  - Finalité centrée sur l'habitat humain ; le vivant n'apparaît que par l'évitement de l'artificialisation.
+  leviers:
+  - Publier un modèle de bail et une charte commune (destination, revente, retour du terrain).
+  - Documenter chaque hameau avec sa délibération et son bail.
+  - Intégrer une dimension de protection du vivant dans le modèle (part du terrain laissée au vivant,
+    ORE).
+  synthese: 'Hameaux Légers est un réseau de méthode plutôt qu''un réseau de garantie : il a fait exister
+    un schéma — sol communal, bail long, habitat réversible — que le corpus admet déjà par ailleurs, et
+    l''essaime auprès des communes. Sa valeur pour l''annuaire tient à la lisibilité de ce schéma et à
+    la documentation de ses hameaux ; sa limite, à l''absence de verrou propre et de pièces publiées.
+
+    '
+fiabilite: 'Faits vérifiés le 2026-11-20 : association « HAMEAUX LEGERS », SIREN 844 725 440, créée le
+  13 novembre 2018, état actif, catégorie 9220, NAF 94.99Z, siège 3 Le Champ aux Moines, 22630 Saint-André-des-Eaux
+  (recherche-entreprises.api.gouv.fr) ; « Association loi 1901 à but non lucratif », action « depuis 2017
+  », reconnue d''intérêt général selon le site, gouvernance partagée (hameaux-legers.org, accueil et page
+  « L''association ») ; page « Les projets accompagnés » (hameaux-legers.org/projets, lue le 2026-11-20
+  par WebFetch puis par curl depuis la machine, textes identiques) : 28 cartes de projets, chacune avec
+  région, département, nombre de foyers et niveau d''avancement — Habité : Le Placis (Saint-André-des-Eaux,
+  22, 8 foyers), Pont Rialland (Plessé, 44, 12), Guipel (35, 9), Kerlisette (Plouigneau, 29, 7), Commana
+  (29, 7, « hameau du Ti Dourig »), Trignac (44, 4) ; En chantier : Trémargat (22, 8), Cormorance (La
+  Ville-ès-Nonais, 35, 4), Les Cabanes Inspirées (Potelle, 59, 8), Kenvevan (Combrit Sainte-Marine, 29,
+  8) ; En conception : Paimpol (22, 6), Rocles (07, 9), Saffré (44, 9), Guichen (35, 5), Brandivy (56,
+  9), Saint-Julien-Molin-Molette (42, 10), Penmarc''h (29, 9), Limogne-en-Quercy (46, 8), Botmeur (29,
+  8), Tiyourca (Le Bourget-du-Lac, 73, 11), La Sablière (Dieulefit, 26, 8), Suze (26, foyers non affichés)
+  ; À l''étude : Pérignat-sur-Allier (63, 5), Saint-Quay-Perros (22, 6), Plouër-sur-Rance (22, 6) ; En
+  recherche de collectif : Pluherlin (56, 6), Poilley (35, 7), Binic-Étables-sur-Mer (22, 15). La page
+  n''affiche ni total de projets ni total de foyers : « 28 projets » et « 212 foyers » sont des comptes
+  de l''annuaire. Xavier Gisserot cofondateur, douze communes accompagnées en Bretagne, habitant·es «
+  propriétaires de leur habitat, mais pas du terrain », bail emphytéotique de longue durée, hameau de
+  Commana sur un terrain communal (Reporterre, 10 avril 2024, lue depuis la machine) ; une dizaine de
+  salarié·es, une dizaine de communes accompagnées (L''Info durable, 20 mai 2023). Non confirmé : statuts,
+  RNA, nombre d''adhérent·es, comptes, charte, modèle de bail ; l''écart entre « depuis 2017 » (site)
+  et l''immatriculation de novembre 2018 (registre) n''est pas expliqué par les sources. Correction du
+  2026-11-20 après vérification aveugle : la version précédente de cette fiche attribuait à la page /projets
+  « quatre hameaux, six projets, 27 foyers » et des statuts permutés ; valeurs remplacées par celles lues
+  ce jour.
+
+  '
+dossier:
+  identite:
+    siren: '844725440'
+    adresse: 3 Le Champ aux Moines, 22630 Saint-André-des-Eaux
+  echelle:
+    personnes: null
+    lieux: Vingt-huit projets listés sur hameaux-legers.org/projets au 2026-11-20 (six habités, quatre
+      en chantier, douze en conception, trois à l'étude, trois en recherche de collectif), 212 foyers
+      affichés au total sur vingt-sept cartes (somme calculée, non affichée par la page) ; un seul est
+      fiché au corpus (Le Placis). Commana (hameau du Ti Dourig, 7 foyers, habité) figure sur la page.
+    surface_ha: null
+  pieces:
+  - type: presentation
+    statut: public
+    url: https://hameaux-legers.org/association
+    note: 'Page « L''association » : mission, intérêt général, gouvernance partagée.'
+  - type: liste_membres
+    statut: public
+    url: https://hameaux-legers.org/projets
+    note: 'Page « Les projets accompagnés » : 28 projets avec région, département, foyers et niveau d''avancement
+      (consultée le 2026-11-20).'
+  - type: statuts
+    statut: inconnu
+  - type: charte
+    statut: inconnu
+    note: Aucune charte ni modèle de bail publiés sur le site.
+  - type: rapport_financier
+    statut: inconnu
+membres:
+- le-placis-saint-andre-des-eaux
+sources:
+- titre: Hameaux Légers — site officiel
+  url: https://hameaux-legers.org/
+  consulte: '2026-11-20'
+- titre: Hameaux Légers — L'association
+  url: https://hameaux-legers.org/association
+  consulte: '2026-11-20'
+- titre: Hameaux Légers — Hameau léger du Placis (page du projet)
+  url: https://hameaux-legers.org/projets/placis
+  consulte: '2026-11-20'
+- titre: Hameaux Légers — Les projets accompagnés (28 projets listés)
+  url: https://hameaux-legers.org/projets
+  consulte: '2026-11-20'
+- titre: Reporterre — Caravanes, tiny houses… En Bretagne, on teste les hameaux légers, 10 avril 2024
+  url: https://reporterre.net/Caravanes-tiny-houses-En-Bretagne-on-teste-les-hameaux-legers
+  consulte: '2026-11-20'
+- titre: L'Info durable — Dans un village breton, une autre façon d'habiter, 20 mai 2023
+  url: https://www.linfodurable.fr/dans-un-village-breton-une-autre-facon-dhabiter-38528
+  consulte: '2026-11-20'
+- titre: Annuaire des entreprises (API recherche-entreprises) — HAMEAUX LEGERS, SIREN 844725440
+  url: https://recherche-entreprises.api.gouv.fr/search?q=HAMEAUX%20LEGERS
+  consulte: '2026-11-20'

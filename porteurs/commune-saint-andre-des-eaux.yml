@@ -1,0 +1,182 @@
+uid: commune-saint-andre-des-eaux
+categorie: porteur
+nom: "Commune de Saint-André-des-Eaux (Côtes-d'Armor)"
+sous_titre: "Commune propriétaire du terrain du hameau léger du Placis, confié par bail emphytéotique de 80 ans"
+statut_fiche: publie
+forme_juridique: "Collectivité territoriale (commune)"
+nature_interet: non_lucrative
+localisation:
+  commune: "Saint-André-des-Eaux"
+  departement: "Côtes-d'Armor (22)"
+  region: "Bretagne"
+annee: 2019
+url: "https://www.banquedesterritoires.fr/la-formule-gagnante-de-saint-andre-des-eaux-22"
+resume: >
+  Commune rurale d'environ 400 habitant·es à une dizaine de kilomètres de
+  Dinan. Après l'adoption d'un PLUi limitant l'extension urbaine, la mairie
+  préempte en 2019 un terrain de centre-bourg avec une bâtisse (5 000 m² dans
+  le corps de l'article de la Banque des Territoires, 4 500 m² dans son
+  encadré, « environ 4 700 m² » sur la page du projet). Elle vote le 29 juin
+  2021 son soutien à un projet de hameau léger porté par un groupe de huit
+  jeunes adultes rencontré·es au sein de l'association Hameaux Légers, accorde
+  une autorisation d'occupation temporaire, obtient un permis d'aménager en
+  avril 2022 et des permis de construire en août 2022, puis acte en juillet
+  2022 la location du terrain par un bail emphytéotique de 80 ans pour
+  5 000 euros par an. La commune reste propriétaire du sol ; les habitant·es
+  sont propriétaires de leur habitat réversible, non du terrain. Elle engage
+  en parallèle 250 000 euros de travaux sur le café-épicerie du bourg, repris
+  en coopérative par le même groupe.
+montage:
+  type: propriete_protegee
+  description: >
+    La commune détient le terrain (domaine privé communal) et le confie par un
+    bail emphytéotique de 80 ans, voté par le conseil municipal en juillet
+    2022, au collectif du hameau, pour un loyer de 5 000 euros par an (environ
+    50 euros par mois et par foyer). La dissociation est explicite : le sol
+    reste public, le bâti appartient à chaque foyer. La délibération et le
+    bail ne sont pas publiés en ligne ; l'identité exacte du preneur n'est pas
+    nommée par les sources consultées.
+integrite_montage:
+  niveau: ig_institue
+  commentaire: >
+    Personne publique structurellement non lucrative, à gouvernance
+    représentative élue. Le sol est tenu hors marché par la domanialité et par
+    un bail de 80 ans ; les conditions d'usage sont fixées par la municipalité
+    et le bail, non par un dispositif associant statutairement les habitant·es
+    à la décision foncière.
+grille:
+  - critere: inalienabilite
+    valeur: partiel
+    note: "Terrain du domaine privé communal, aliénable par délibération mais grevé d'un bail emphytéotique de 80 ans ; aucune clause d'inaliénabilité ni affectation statutaire permanente n'est documentée."
+  - critere: parts_non_cessibles
+    valeur: oui
+    note: "Une commune est une personne morale de droit public sans capital ni parts : aucun titre cessible."
+  - critere: nature_protectrice
+    valeur: oui
+    note: "Personne publique : degré le plus protecteur de l'échelle (personne publique > fondation RUP > fonds de dotation > société civile)."
+  - critere: clause_devolution
+    valeur: oui
+    note: "Une collectivité territoriale ne se dissout pas au profit de personnes privées ; son patrimoine n'est pas dévolu à des membres."
+  - critere: forme_non_lucrative
+    valeur: oui
+    note: "Personne morale de droit public structurellement non lucrative (catégorie juridique 7210 au répertoire national)."
+  - critere: non_lucrativite_effective
+    valeur: oui
+    note: "Aucun capital rémunéré ; le loyer de 5 000 euros par an, soit environ 50 euros par mois et par foyer, est présenté comme modéré et non comme un revenu de marché."
+  - critere: gestion_desinteressee
+    valeur: oui
+    note: "Mandat municipal encadré et non lucratif."
+  - critere: independance_rendement
+    valeur: oui
+    note: "Pas d'investisseur attendant une plus-value ; la préemption répond à un objectif de politique locale (accueil d'habitant·es, limitation de l'étalement urbain)."
+  - critere: ca_collegial
+    valeur: partiel
+    note: "Conseil municipal collégial et élu, mais instance politique représentative, non un conseil associant les parties prenantes du foncier."
+  - critere: parties_prenantes
+    valeur: partiel
+    note: "Le projet a été construit avec le collectif et l'association Hameaux Légers (accord de principe fin 2020, vote de soutien le 29 juin 2021) ; aucune instance permanente associant les habitant·es aux décisions foncières n'est documentée."
+  - critere: autogestion_usagers
+    valeur: non
+    note: "Porteur public : les conditions d'usage (bail, loyer) sont fixées par le conseil municipal ; aucun dispositif statutaire donnant aux habitant·es voix délibérative sur le foncier n'est documenté."
+  - critere: transparence
+    valeur: partiel
+    note: "Obligations légales de publicité des délibérations et des comptes ; la délibération de juillet 2022 et le bail n'ont pas été retrouvés en ligne."
+  - critere: objet_foncier_protecteur
+    valeur: partiel
+    note: "Affectation du terrain à un habitat réversible accessible, décidée en politique locale ; aucun objet statutaire permanent de protection foncière."
+  - critere: agrement_ig
+    valeur: oui
+    note: "Personne publique relevant par nature de l'intérêt général."
+  - critere: risque_requalification
+    valeur: oui
+    note: "Aucun risque de requalification fiscale pour une commune."
+  - critere: redevabilite_publique
+    valeur: oui
+    note: "Reddition de comptes au public, délibérations et comptes soumis à publicité légale."
+  - critere: vivant_finalite
+    valeur: non
+    note: "Finalité : accueil d'habitant·es en centre-bourg et limitation de l'artificialisation ; aucune finalité de biodiversité affichée dans le portage. Un « espace naturel préservé » au nord-ouest du terrain est mentionné par la page du projet, sans dispositif."
+  - critere: regime_usage_offert
+    valeur: oui
+    note: "Bail emphytéotique de 80 ans à 5 000 euros par an pour huit foyers : conditions non rentières, hors marché locatif."
+  - critere: securite_usage_offerte
+    valeur: oui
+    note: "Bail emphytéotique de 80 ans : titre d'usage long et sécurisé."
+analyse:
+  forces:
+    - "Personne publique : sol hors marché, sans parts, redevable."
+    - "Bail emphytéotique de 80 ans à loyer modéré (5 000 euros par an pour huit foyers)."
+    - "Préemption volontariste en centre-bourg, cohérente avec le PLUi et la lutte contre l'étalement urbain."
+  fragilites:
+    - "Terrain du domaine privé communal : aliénable par délibération au-delà du bail ; aucune affectation permanente."
+    - "Délibération et bail non publiés en ligne ; preneur non nommé par les sources."
+    - "Gouvernance représentative : pas de voix délibérative des habitant·es sur le foncier."
+  leviers:
+    - "Publier la délibération de juillet 2022 et les clauses du bail (destination, revente des habitats, retour du terrain)."
+    - "Inscrire l'affectation du terrain dans un cadre opposable au-delà du bail."
+    - "Associer le collectif habitant à une instance de suivi du lieu."
+  synthese: >
+    La commune de Saint-André-des-Eaux tient le maillon porteur du hameau du
+    Placis comme la commune de Flocques celui des logements Chênelet : une
+    personne publique qui préempte, garde le sol et le confie par bail
+    emphytéotique long à des conditions non rentières. La solidité tient à la
+    nature publique du portage ; la limite, à une affectation de politique
+    locale, non statutaire, et à des actes non publiés.
+fiabilite: >
+  Faits vérifiés le 2026-11-20 : commune de 380 habitant·es à 10 km de Dinan,
+  préemption décidée en 2019 d'un terrain de 5 000 m² avec bâtisse (4 500 m²
+  dans l'encadré), bail emphytéotique de 80 ans acté par le conseil municipal
+  en juillet 2022, loyer annuel de 5 000 euros, permis d'aménager en avril
+  2022, permis de construire pour 5 logements et un local commun en août 2022,
+  autorisation d'occupation temporaire, 8 logements à terme, 250 000 euros de
+  travaux sur le café (Banque des Territoires, 18 janvier 2023) ; loyer de
+  50 euros par mois et par maison, huit maisons, « personne n'est propriétaire
+  de son terrain » (L'Info durable, 20 mai 2023) ; terrain communal d'environ
+  4 700 m², accord de principe fin 2020, vote de soutien du 29 juin 2021,
+  loyer de 5 000 euros par an soit environ 50 euros par foyer et par mois
+  (hameaux-legers.org, page du Placis) ; SIREN de la commune 212 202 741,
+  catégorie 7210, code postal 22630 (recherche-entreprises.api.gouv.fr) ;
+  population 409, centre -2.0131, 48.3745 (geo.api.gouv.fr). Non confirmé :
+  délibération de juillet 2022 (non retrouvée en ligne), texte du bail,
+  identité du preneur, surface exacte (trois valeurs divergentes), références
+  cadastrales.
+voir_aussi: [commune-flocques]
+dossier:
+  identite:
+    siren: "212202741"
+    adresse: "Mairie, 22630 Saint-André-des-Eaux"
+  echelle:
+    lieux: "un terrain de centre-bourg d'environ 4 500 à 5 000 m² (sources divergentes) accueillant huit habitats réversibles et une maison commune"
+  pieces:
+    - type: statuts
+      statut: inconnu
+      note: "Collectivité territoriale : pas de statuts au sens d'une personne morale de droit privé."
+    - type: reglement_interieur
+      statut: inconnu
+    - type: charte
+      statut: inconnu
+    - type: acte_montage
+      statut: non_public
+      note: "Délibération du conseil municipal de juillet 2022 approuvant le bail emphytéotique de 80 ans ; non retrouvée en ligne le 2026-11-20 (recherche sur politique.pappers.fr et data.gouv.fr : le jeu « délibérations de Saint-André-des-Eaux » publié sur data.gouv.fr concerne l'homonyme de Loire-Atlantique)."
+    - type: rapport_financier
+      statut: inconnu
+      note: "Comptes communaux soumis à publicité légale ; détail de l'opération non publié."
+    - type: bail
+      statut: non_public
+      note: "Bail emphytéotique de 80 ans, 5 000 euros par an ; texte non publié."
+sources:
+  - titre: "Banque des Territoires — La formule gagnante de Saint-André-des-Eaux (22), 18 janvier 2023"
+    url: "https://www.banquedesterritoires.fr/la-formule-gagnante-de-saint-andre-des-eaux-22"
+    consulte: "2026-11-20"
+  - titre: "L'Info durable — Dans un village breton, une autre façon d'habiter, 20 mai 2023"
+    url: "https://www.linfodurable.fr/dans-un-village-breton-une-autre-facon-dhabiter-38528"
+    consulte: "2026-11-20"
+  - titre: "Hameaux Légers — Hameau léger du Placis (page du projet)"
+    url: "https://hameaux-legers.org/projets/placis"
+    consulte: "2026-11-20"
+  - titre: "Annuaire des entreprises (API recherche-entreprises) — COMMUNE DE SAINT ANDRE DES EAUX, SIREN 212202741"
+    url: "https://recherche-entreprises.api.gouv.fr/search?q=COMMUNE%20DE%20SAINT-ANDRE-DES-EAUX"
+    consulte: "2026-11-20"
+  - titre: "geo.api.gouv.fr — communes du code postal 22630"
+    url: "https://geo.api.gouv.fr/communes?codePostal=22630&fields=nom,code,codeDepartement,centre,population&format=json"
+    consulte: "2026-11-20"
